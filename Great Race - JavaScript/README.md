@@ -1,7 +1,7 @@
 # The Great Race
 
 This program is meant to show knowledge of Javascript and CSS (Hide, Show, position properties).  
-It's literally Mario and Yoshi racing randomly based on On click events of an star.  
+It's literally Mario and Yoshi racing randomly based On click events of a star.  
 
 ## Example Output
 
