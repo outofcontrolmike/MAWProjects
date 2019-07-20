@@ -8,6 +8,7 @@ The point of this program is to utilize capabilitties of the Visual Studio's Win
 
 ## Analysis Steps
 Main - Create a Survey form that's realted to Programming.
+
 	1)  Start with a Wireframe 
 	2)  Start dragging and dropping controls based on the Window's design.
 	3)  Make sure to implement on click for submit button and checkboxes/radio buttons
