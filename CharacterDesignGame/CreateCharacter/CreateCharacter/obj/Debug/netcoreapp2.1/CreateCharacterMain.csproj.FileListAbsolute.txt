@@ -1,0 +1,55 @@
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.deps.json
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.json
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.dev.json
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfoInputs.cache
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfo.cs
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\source\repos\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.deps.json
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.json
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.dev.json
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfoInputs.cache
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfo.cs
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.deps.json
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.json
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.dev.json
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfoInputs.cache
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfo.cs
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\TextBasedCharacerDesign\TextBasedCharacerDesign\TextBasedCharacerDesign\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.deps.json
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.json
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.dev.json
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfoInputs.cache
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfo.cs
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.deps.json
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.json
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.dev.json
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csprojAssemblyReference.cache
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csproj.CoreCompileInputs.cache
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfoInputs.cache
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfo.cs
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.pdb
