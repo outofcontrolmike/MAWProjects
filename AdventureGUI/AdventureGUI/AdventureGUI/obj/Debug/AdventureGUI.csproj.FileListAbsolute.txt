@@ -1,0 +1,10 @@
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\bin\Debug\AdventureGUI.exe.config
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\bin\Debug\AdventureGUI.exe
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\bin\Debug\AdventureGUI.pdb
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\obj\Debug\AdventureGUI.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\obj\Debug\AdventureGUI.Form1.resources
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\obj\Debug\AdventureGUI.Properties.Resources.resources
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\obj\Debug\AdventureGUI.csproj.GenerateResource.cache
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\obj\Debug\AdventureGUI.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\obj\Debug\AdventureGUI.exe
+C:\Users\Michael Wilson\Source\Repos\outofcontrolmike\AdventureGUI\AdventureGUI\AdventureGUI\obj\Debug\AdventureGUI.pdb
