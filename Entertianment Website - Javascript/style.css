@@ -9,11 +9,14 @@
     text-align: center;
 }
 
+
+h2{
+  text-align: center;
+}
+
 body{
     background-color: burlywood;
 }
-
-
 
 ul {
     position: fixed;
@@ -46,8 +49,48 @@ ul {
     background-color: #111;
   
   }
+  
 
   .PageLayout
   {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
   }
+
+.aboutImage
+{
+  position: fixed;
+  top: 140px;
+  right:100px;
+  border-style: outset;
+  border-color: coral;
+  border-width: 7px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.photoTutorial
+{
+  
+  position: fixed;
+  top: 100px;
+  border-style: outset;
+  border-color: coral;
+  font-size: 24px;
+  border-width: 7px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+
+.row 
+{
+
+    width: 20%;
+  
+}
+
+.footer
+{
+  bottom: 0px;
+}
