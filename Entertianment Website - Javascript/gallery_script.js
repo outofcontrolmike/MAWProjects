@@ -5,7 +5,7 @@
 
 
 // created an Array of images
-var galleryPics = ["naturecenter.jpg", "seqouia.jpg", "yosemitie.jpg", "wilson.jpg", "deathValley.jpg"];
+var galleryPics = ["images/naturecenter.jpg", "images/seqouia.jpg", "images/yosemitie.jpg", "images/wilson.jpg", "images/deathValley.jpg"];
 var galleryId = ["0", "1", "2", "3", "4"];
 
 // Array for image descriptions.
