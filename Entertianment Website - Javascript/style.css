@@ -1,17 +1,12 @@
-.footer
-{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
 
+/*Every page CSS--------------------------------------*/
 
 h2{
   text-align: center;
+  position: relative;
+  padding-top: 30px;
+  
+  
 }
 
 body{
@@ -19,12 +14,12 @@ body{
 }
 
 ul {
-    position: fixed;
-    position: sticky;
+    position: absolute;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
+    padding-bottom: 0px;
     left: 0;
     top: 0;
     overflow: hidden;
@@ -46,7 +41,8 @@ ul {
   }
   
   li a:hover {
-    background-color: #111;
+    background-color: thistle;
+    opacity: 0.5;
   
   }
   
@@ -57,25 +53,42 @@ ul {
     font-family: 'Courier New', Courier, monospace;
   }
 
-.aboutImage
+  .footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/*Gallery Page CSS*-----------------------------------------------------------------------------------*/
+
+#aboutImage
 {
   position: fixed;
   top: 140px;
   right:100px;
-  border-style: outset;
+  border-style: inset;
   border-color: coral;
+  background-color: lemonchiffon;
   border-width: 7px;
+
+  font-size: 24px;
   max-width: 300px;
   word-wrap: break-word;
 }
 
-.photoTutorial
+#photoTutorial
 {
   
   position: fixed;
   top: 100px;
-  border-style: outset;
+  border-style: inset;
   border-color: coral;
+  background-color: lemonchiffon;
   font-size: 24px;
   border-width: 7px;
   max-width: 300px;
@@ -86,11 +99,19 @@ ul {
 .row 
 {
 
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 0px;
     width: 20%;
+    
   
 }
 
-.footer
+/*Home Page Styling-----------------------------------*/
+#certs
 {
-  bottom: 0px;
+  max-width: 400px;
+  word-wrap: break-word;
+
 }
+
