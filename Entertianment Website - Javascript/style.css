@@ -111,19 +111,40 @@ ul {
 /*Home Page Styling-----------------------------------*/
 #certs
 {
-  max-width: 400px;
-  word-wrap: break-word;
 
+  position: fixed;
+  left: 500px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-style: inset;
+  border-width: 4px;
+  border-color: blanchedalmond;
 }
 
 #myself
 {
   position: fixed;
-  left: 0;
-  height: 200px;
+  left: 10px;
+  top: 50px;
+  width: 250px;
+  height:400px;
   border-style: inset;
-  border-width: 7px;
+  border-color: blanchedalmond;
+  border-width: 4px;
   max-width: 300px;
   word-wrap: break-word;
+  margin-right: 20px;
+}
+
+.HomeLayout
+{
+  position: fixed;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  word-wrap: break-word;
+  max-width: 800px;
+  left: 300px;;
+
 }
 
