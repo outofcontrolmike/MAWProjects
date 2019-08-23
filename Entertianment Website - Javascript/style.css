@@ -128,13 +128,29 @@ ul {
   left: 10px;
   top: 50px;
   width: 250px;
-  height:400px;
+  height:300px;
   border-style: inset;
   border-color: blanchedalmond;
   border-width: 4px;
   max-width: 300px;
   word-wrap: break-word;
   margin-right: 20px;
+}
+
+#campus
+{
+  position: fixed;
+  right: 10px;
+  top: 75px;
+  width: 400px;
+  height:300px;
+  border-style: inset;
+  border-color: blanchedalmond;
+  border-width: 4px;
+  max-width: 300px;
+  margin-right: 20px;
+  transform: rotate(90deg);
+
 }
 
 .HomeLayout
@@ -148,3 +164,12 @@ ul {
 
 }
 
+
+/*SurveyPage CSS**************************************************************************************/
+textarea
+{
+  min-height: 200px;
+  max-height: 400px;
+  min-width: 100px;
+  max-width: 500px;
+}
