@@ -1,0 +1,62 @@
+.container{
+    background-image: url("imagesGreatRace/background.jpg");
+     /* Full height */
+     height: 100%; 
+
+     /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+
+}
+
+ div.container > #yoshi{
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    right: 500px;
+    bottom:0px;
+}
+
+div.container > #mario{
+    width: 150x;
+    height: 200px;
+    position: absolute;
+    left: 500px;
+    top: 420px;
+}
+
+div.container > #star{
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    left: 550px;
+    top: 0px;
+}
+
+div.container > #flag {
+    width: 200px;
+    height: 600px;
+    right: 300px;
+    bottom: 0px;
+    position: fixed;
+}
+
+div.container > #yoshiWin {
+    width: 150px;
+    height: 200px;
+    right: 500px;
+    top: 300px;
+    position: fixed;
+    visibility: hidden;
+}
+
+div.container > #winMario {
+    width: 150px;
+    height: 200px;
+    right: 600px; 
+    top: 300px;
+    position: fixed;
+    visibility: hidden;
+}

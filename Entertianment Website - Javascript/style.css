@@ -1,20 +1,24 @@
 
 /*Every page CSS--------------------------------------*/
 
+html{
+  box-sizing: border-box;
+}
 h2{
   text-align: center;
   position: relative;
-  padding-top: 30px;
+  padding-top: 20px; 
   
   
 }
 
 body{
     background-color: burlywood;
+    
 }
 
 ul {
-    position: absolute;
+    position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -96,8 +100,6 @@ ul {
     padding-top: 30px;
     padding-bottom: 0px;
     width: 20%;
-    
-  
 }
 
 /*Home Page Styling-----------------------------------*/
@@ -105,7 +107,7 @@ ul {
 {
 
   position: fixed;
-  left: 500px;
+  float: center;
   margin-top: 20px;
   text-align: center;
   background-color: whitesmoke;
@@ -114,29 +116,152 @@ ul {
   border-color: blanchedalmond;
 }
 
+.left
+{
+    position: fixed;
+    top: 200px;
+    float: left;
+    width: 40%;
+}
+
 #myself
 {
-  position: fixed;
-  left: 10px;
-  top: 50px;
-  width: 250px;
-  height:400px;
+ 
+  height:300px;
+}
+#campus
+{
+  position: relative;
+  float: right;
+  top: 100px;
+  width: 20%;
+  right: 30px;
+  height:300px;
   border-style: inset;
   border-color: blanchedalmond;
   border-width: 4px;
-  max-width: 300px;
+  max-width: 240px;
   word-wrap: break-word;
-  margin-right: 20px;
+  margin-left: 40px;
+  transform: rotate(90deg);
+
 }
 
 .HomeLayout
 {
-  position: fixed;
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+  
+
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+
+
+/*SurveyPage CSS**************************************************************************************/
+textarea
+{
+  min-height: 200px;
+  max-height: 400px;
+  min-width: 100px;
+  max-width: 500px;
+
+}
+
+
+/*---------------Shop CSS------------------------*/
+h1 {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   word-wrap: break-word;
   max-width: 800px;
   left: 50%;
 
+  display: block;
+  
+}
+#desc {
+  width: 400px;
+  display: block;
+  font-size: 22px;
 }
 
+
+#head, #top{
+  width: 100%;
+}
+
+table, th, td, #head, #grandTotal {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  vertical-align: bottom;
+  background-color:mediumpurple;
+}
+
+#left 
+{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  vertical-align: bottom;
+  background-color: mediumpurple;
+}
+
+#btext, #l3ft, #head
+{
+    font-size: 20px;
+}
+
+#app
+{
+    background-color:silver;
+    font-family: serif;
+    font-size: 18px;
+
+}
+
+#Red
+{
+  color: yellow;
+  display: block;
+  width:200px;
+}
+
+
+#mario 
+{
+  position: absolute;
+  top: 100px;
+  right: 200px;
+}
+.gname
+{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+#styleMe 
+{
+  text-align: horizontal;
+  align-content: flex-end;
+  width: 100%;
+border-style: groove;
+}}
