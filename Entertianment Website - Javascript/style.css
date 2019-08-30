@@ -124,28 +124,6 @@ ul {
     width: 40%;
 }
 
-#myself
-{
- 
-  height:300px;
-}
-#campus
-{
-  position: relative;
-  float: right;
-  top: 100px;
-  width: 20%;
-  right: 30px;
-  height:300px;
-  border-style: inset;
-  border-color: blanchedalmond;
-  border-width: 4px;
-  max-width: 240px;
-  word-wrap: break-word;
-  margin-left: 40px;
-  transform: rotate(90deg);
-
-}
 
 .HomeLayout
 {

@@ -5,18 +5,18 @@ body {
   }
   /*--- navigation bar ---*/
   .navbar {
-    background:#6ab446;
+    background:azure;
   }
   .nav-link,
   .navbar-brand {
-    color: #fff;
+    color:black;
     cursor: pointer;
   }
   .nav-link {
     margin-right: 1em !important;
   }
   .nav-link:hover {
-    color: #000;
+    color: teal;
   }
   .navbar-collapse {
     justify-content: flex-end;
@@ -24,21 +24,14 @@ body {
 
   /*---Header---*/
   .header {
-    background-image: url("images/practice.jpg");
+    background: #ffd89b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-position: center;
     position: relative;
   }
 
-  .overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-
-  }
 
   /*---Mark up for body content and Title of page---*/
   .description {
@@ -48,27 +41,13 @@ body {
     transform: translate(-50%, -55%);
     text-align: center;
   }
-  .description h1 {
-    color: #6ab446;
+  .description h2 {
+    color:White;
   }
   .description p {
     color: #fff;
     font-size: 1.3rem;
     line-height: 1.5;
-  }
-
-  /*--Button CSS --*/
-
-  .description button {
-    
-    background:teal;
-    border-radius: 0;
-    color:#fff;
-  }
-  .description button:hover {
-    border:1px solid #fff;
-    background:#fff;
-    color:#000;
   }
 
 /*---CSS For Grid ---*/
@@ -141,3 +120,4 @@ body {
         margin: 0;
       }
   }
+  

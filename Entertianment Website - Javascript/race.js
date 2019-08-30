@@ -1,4 +1,4 @@
-
+///
 
 // Declaring variables for events
     let stopLight = document.getElementById('star');
