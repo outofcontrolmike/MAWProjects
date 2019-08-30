@@ -46,14 +46,6 @@ ul {
   
   }
   
-
-  .PageLayout
-  {
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    word-wrap: break-word;
-  }
-
   .footer
 {
     position: fixed;
@@ -144,7 +136,7 @@ ul {
   font-family: 'Courier New', Courier, monospace;
   word-wrap: break-word;
   max-width: 800px;
-  left: 300px;;
+  left: 50%;
 
 }
 
