@@ -1,1 +1,1 @@
-# This porfolio is currently under work.
+# This project is currently under work
