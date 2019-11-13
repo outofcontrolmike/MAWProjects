@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<characters>    <!--Create records of characters-->
+ 
+   <character id = "1">
+        <name>Quina Quen</name>
+        <personallity>Hungry</personallity>
+        <weapon>Fork</weapon>
+        <special>Blue Magic</special>
+        <gender>???</gender>
+        <game>IX</game>
+    </character>
+     <character id = "2">
+        <name>Ramzda Beoulve</name>
+        <personallity>Leader</personallity>
+        <weapon>Sword</weapon>
+        <special>Guts</special>
+        <gender>Male</gender>
+        <game>Tactics</game>
+    </character>
+  <character id = "3">
+        <name>Tifa Lockhart</name>
+        <personallity>Brawler</personallity>
+        <weapon>Knuckles</weapon>
+        <special>Final Heaven</special>
+        <gender>Female</gender>
+        <game>VII</game>
+    </character>
+     <character id = "4">
+        <name>Freya Crescent</name>
+        <personallity>Honorable</personallity>
+        <weapon>Lance</weapon>
+        <special>Dragon Breath</special>
+        <gender>Female</gender>
+        <game>IX</game>
+    </character>
+  <character id = "5">
+        <name>Cecil Harvey</name>
+        <personallity>Advantageous</personallity>
+        <weapon>Dark Sword</weapon>
+        <special>Darkness</special>
+        <gender>Male</gender>
+        <game>IV</game>
+    </character>
+  <character id = "6">
+        <name>Shadow Kohlingen</name>
+        <personallity>Mysterious</personallity>
+        <weapon>Sword</weapon>
+        <special>Throw</special>
+        <gender>Male</gender>
+        <game>VI</game>
+    </character>
+    <character id = "7">
+        <name>Cloud Strife</name>
+        <personallity>Lost</personallity>
+        <weapon>Buster</weapon>
+        <special>Omnislash</special>
+        <gender>Male</gender>
+        <game>VII</game>
+    </character>
+    <character id = "8">
+        <name>Squall Leonhart</name>
+        <personallity>LoneWolf</personallity>
+        <weapon>Gun Blade</weapon>
+        <special>Renzouken</special> 
+        <gender>Male</gender>
+        <game>VIII</game>
+    </character>
+    <character id = "9">
+        <name>Zidane Tribal</name>
+        <personallity>Optomistic</personallity>
+        <weapon>Ultima Weapon</weapon>
+        <special>Dyne</special>
+        <gender>Male</gender>
+        <game>IV</game>
+    </character>
+    <character id = "10">
+        <name>Tidus </name>
+        <personallity>Fun</personallity>
+        <weapon>Sword</weapon>
+        <special>SwordPlay</special>
+        <gender>Male</gender>
+        <game>X</game>
+    </character>
+</characters>
