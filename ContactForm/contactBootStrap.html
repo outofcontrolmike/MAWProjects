@@ -1,0 +1,68 @@
+<!--Mike Wilson
+    Contact Form with BootStrap Demonstration
+    10/16/2019
+    Create a responsive form
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div class="container">
+            <h1> Need to Contact us?</h1>
+            <p>Use the form below to get ahold of us</p>
+        <form class="was-validated">
+
+        
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input placeholder="Your name goes here" maxlength="30" type="name" class="form-control w-25" id="name" required>
+            <div class="valid-feedback">Valid!</div>
+            <div class="invalid-feedback">Please fill in your name.</div>
+        </div>
+        <div class="form-group">
+            <label for "email">Your Email:</label>
+            <input placeholder="Email here" maxlength="30" type="email" class="form-control w-25" id="email" required>
+            <div class="valid-feedback">Valid!</div>
+            <div class="invalid-feedback">Please fill in your name.</div>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject Regarding:</label>
+            <input maxlength="30" type="subject" class="form-control w-25">
+        </div>
+        <div class="form-group">
+            <label for="comment">Leave a comment:</label>
+            <textarea class="form-control w-100" id="comment" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+                <button class="btn btn-dark w-100">Submit Form</button>
+        </div>
+        </form>
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26167.36579983112!2d-93.29330908201001!3d37.204884973278105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf62dd87d6e81f%3A0x76db2ff4de702b77!2sOzarks%20Technical%20Community%20College!5e0!3m2!1sen!2sus!4v1571248102440!5m2!1sen!2sus"
+                width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        
+    </div>
+</body>
+
+</html>

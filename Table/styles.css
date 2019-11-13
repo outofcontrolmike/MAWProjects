@@ -1,0 +1,46 @@
+body {
+    background-color: whitesmoke;
+  }
+  table {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: solid black 2px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    padding: 8px;
+    border-radius: 10%;
+  }
+  td,
+  tr {
+    border: 1px solid darkslategrey;
+    text-align: left;
+    padding: 8px;
+    height: 40px;
+  }
+  th {
+      background-color: burlywood;
+  }
+
+  td {
+      background-color: lavender;
+  }
+  td:hover {
+      
+      color: white;
+      background-color: black;
+      opacity: .7;
+      
+}
+
+
+  .container{
+      text-align: center;
+  }
+
+  
+
+  .tableOutline{
+      display:inline-block;
+      width: 60%;
+    
+  }
