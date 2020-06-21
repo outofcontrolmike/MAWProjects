@@ -1,0 +1,79 @@
+<!-- Implentation of a bootstrap card for practice-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+      .container {
+          width:450px;
+          height:100%;
+          position: relative;
+          text-align: center;
+    
+      }
+        .card {
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.20s;
+  border-radius: px; /* 5px rounded corners */
+            
+        }
+
+      
+      img {
+        height: 350px;
+        width: 350px;
+         object-fit: contain;
+      }
+
+      body {
+        background-color: #FBAB7E;
+background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+      }
+      
+      .card-body {
+        background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+
+      }
+
+      .btn-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%)}
+.btn-grad:hover { background-position: right center; }
+
+.btn:hover
+{
+    position: relative;
+    left:20px;
+}
+  </style>
+</head>
+
+<body>
+    <div style="margin-top: 50px;" class="container">
+    <div style="width:100%;" class="card">
+        <img class="card-img-top" src="Mr_Turner_main_page.png">
+        <div class="card-body">
+            <h4 class="card-title">Happy Fathers Day!</h4>
+            <p class="card-text">Thanks to all the great dad's out there!</p>
+            <a href="#" class="btn btn-grad btn-secondary">Send Your dad this card</a>
+        </div>
+    </div>        
+    </di>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
