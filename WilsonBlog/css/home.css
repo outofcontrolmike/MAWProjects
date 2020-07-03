@@ -1,1 +1,18 @@
-/* Styles for the home page /*
+/* Styles for the home page */
+.all{
+    background-color: azure;
+    height: 1000px;
+    
+}
+
+.header {
+    background-color:beige;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+}
