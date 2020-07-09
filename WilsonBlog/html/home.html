@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/home.css" />
+    <link rel="stylesheet" type="text/css" href="../css/gallery.css" />
 
-  <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
-
-<body class="all">
+  <body class="all">
     <!-- Begin content for page-->
     <div class="container-fluid" style="width:100%;">
-        <!-- Header of the page-->
-        <header class="header">
-          <h1 style="text-align: center;">Welcome to the beginning</h1>
-          <ul>
-            <li>Home</li>
-            <li>Hikes</li>
-            <li>Recipies</li>
-            <li>Contact</li>
-            <li>About</li>       
-          </ul>
-        </header>
-        <div clas="row">
-        <div class="container col-2">
-            <div class="card">
-              This should be to the left - will be a slideshow eventually
+      <!-- Header of the page-->
+      <header class="header">
+        <h1 style="text-align: center;">Welcome to the beginning</h1>
+        <ul>
+          <li>Home</li>
+          <li>Hikes</li>
+          <li>Recipies</li>
+          <li>Contact</li>
+          <li>About</li>
+        </ul>
+      </header>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <!-- about me -- content -->
+          <div class="col-12 d-flex justify-content-center">
+          <div class="card" style="text-align:center; height:500px;width:600px">
+            <img
+              class="card-img-top"
+              src="img/me.jpg"
+              alt="Card image"
+              style="width:100%"
+            />
+            <div class="card-body">
+              <h4 class="card-title">Mike Wilson</h4>
+              <p class="card-text">
+                Mike is working towards being a jack of all trades in his life.
+              </p>
+              <a href="hikes.html" class="btn btn-info stretched-link">See More about Mike</a>
             </div>
-    </div>
-    <div class="container col-2">
-      <div class="card">
-        <p>This should be to the right *About myself - a Little biography about me</p>
+          </div>
+          <!-- End second column-->
+        </div>
       </div>
-    </div>
-    </div>
-    <div class="container-fluid footer">
-      <h1>Footer - this will be some copyright faker stuff</h1>
-    </div>
-    
+
+      <div class="container-fluid footer">
+        <h1>Wilson Blog - Created Summer 2020</h1>
+      </div>
     </div>
     <!-- End content-->
 
     <!-- end content for page-->
 
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

@@ -1,1 +1,10 @@
 /* Styles for each gallery page /*
+
+  <style>
+  /* Make the image fully responsive 
+  .carousel-inner img {
+    width: 50%;
+    height: 50%;
+  }
+  */
+  
