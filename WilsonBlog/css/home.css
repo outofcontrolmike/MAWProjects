@@ -1,6 +1,6 @@
 /* Styles for the home page */
-.all {
-  height: 1000px;
+body {
+  height: 1500px;
   background-color: #fbab7e;
   background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
@@ -15,9 +15,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
+  color: white;
   text-align: center;
-  background-color: #fbab7e;
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 .card-body:hover {
     background-color:black;
@@ -28,8 +27,11 @@
 .btn:hover {
     color:red;
     background-color:black;
-    position: relative;
-    top:1px;
+  
+}
+li:hover {
+  position:relative;
+  top:2px;
 }
 
 h1,li { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
