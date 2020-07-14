@@ -16,3 +16,9 @@ function getRandomColor() {
   function setRandomColor() {
     $("#colorpad").css("background-color", getRandomColor());
   }
+
+  //change opacity of background
+  function cardHover(){
+    var changeMe = document.getElementById('changeOpacity');
+    changeMe.style.backgroundColor = "white";
+  }

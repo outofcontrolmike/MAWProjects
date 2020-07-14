@@ -18,13 +18,13 @@
       crossorigin="anonymous"/>
   </head>
 
-  <body class="all">
+  <body id="changeOpacity" class="all">
     <!-- Begin content for page-->
     
       <!-- Header of the page-->
       <header class="header">
         <!-- start nav bar-->
-        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top mx-auto">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top justify-content-center">
           <ul class="navbar-nav mr-4">
             <li class="nav-item" id="colorpad" onfocus="setRandomColor()">
               <a class="nav-link" id="colorpad" onfocus="setRandomColor()" href="home.html">Home</a>
@@ -66,15 +66,15 @@
               <p class="card-text">
                 Mike is working towards being a jack of all trades in his life.
               </p>
-              <a href="hikes.html" class="btn btn-info stretched-link">See More about Mike</a>
+              <a href="hikes.html" class="btn btn-info stretched-link"  onmouseover="document.getElementById('changeOpacity').style.opacity = '.9'" onmouseout="document.getElementById('changeOpacity').style.opacity = '1'">See More about Mike</a>
             </div>
           </div>
           <!-- End second column-->
         </div>
       </div>
 
-      <div class="footer navbar fixed-bottom navbar-light bg-dark" >
-        <h1>Wilson Blog - Created Summer 2020</h1>
+      <div class="footer navbar fixed-bottom navbar-light bg-dark justify-content-center" >
+        <h3>Wilson Blog - Created Summer 2020</h3>
       </div>
     
     <!-- End content-->
