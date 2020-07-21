@@ -1,7 +1,7 @@
 //functions for my blog
 
 //Alerts
-onload(alert("Testing 123"));
+//onload(alert("Testing 123"));
 
 //changing nav bar
 function getRandomColor() {
