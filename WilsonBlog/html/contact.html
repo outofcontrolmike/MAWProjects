@@ -35,7 +35,7 @@
             <a class="nav-link" href="form.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="privacy.html">About</a>
+            <a class="nav-link" href="contact.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Misc</a>
@@ -45,8 +45,33 @@
       </nav>
       <!-- end nav bar-->
 
-  <p>Hello, world!</p>
-
+      <div class="row" style="height:500px; margin-top:5%;">
+        <div class="container  bg-light mt-4" style="border-radius: 3%;">
+          <!-- form should go here-->
+          <form>
+            <div class="form-group mt-4">
+              <label for="name">Your Name</label>
+              <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Enter Name">
+              <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Your email">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Please leave a comment!</label>
+              <textarea class="form-control text-primary" id="exampleFormControlTextarea1" rows="5">I really like your site dude, keep up the good work!</textarea>
+            </div>
+            <button id="formButton" type="submit;"style="margin-left:25%;" class="btn btn-danger w-50 justify-content-center">Submit</button>
+            
+          </form>
+          
+        </div>
+      </div>
+      <div class="footer navbar fixed-bottom navbar-light bg-dark justify-content-center" >
+        <h3>Wilson Blog - Created Summer 2020</h3>
+        <i class="fa fa-github ml-4"><a href="https://github.com/outofcontrolmike/MAWProjects"></a></i>
+      </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
