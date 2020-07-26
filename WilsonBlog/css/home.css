@@ -3,21 +3,57 @@
 body {
   background-color: rgb(207, 116, 116);
 }
+
+/* Footer */
 .footer {
   position: fixed;
-  
   width: 100%;
-  color: white;
   text-align: center;
-}
-header {
+  border-top: solid 2px black;
 
-  background-color:burlywood;
 }
-.btn:hover {
+
+/* navigation */
+
+
+nav {
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+nav ul a {
+  color:black;
+  margin:20px;
+
+}
+
+.logo {
+  height:75px;
+  width:100px;
+  object-fit: contain;
+  margin:0px;
+}
+/* header */
+
+
+/* Home Page - Exclusive */
+.home {
+background-image: url("../html/img/Yosemite.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+filter: brightness(85%);
+}
+
+.home_statement {
+  text-align:center;
+  padding-top:100px;
+  color:black;
+  z-index: 999;
    
-  
 }
+
+/* Images */
+
 img {
   vertical-align: middle;
   border-style: solid;
@@ -42,18 +78,19 @@ img {
 }
 
 
-
 li:hover {
   position:relative;
   top:2px;
+  color:yellow;
 }
 
 #formButton:hover {
   position: relative;
   top:4px;
   color:black;
-  background-color: aquamarine;
 }
+
+/* Fonts */
 h1,li { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
 h3 { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 

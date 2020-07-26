@@ -17,15 +17,14 @@
       crossorigin="anonymous"/>
   </head>
 
-  <body id="changeOpacity" class="all">
+  <body class="all">
     <!-- Begin content for page-->
     
       <!-- Header of the page-->
       <header class="header">
         <!-- start nav bar-->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-          <a class="navbar-brand" href="#">Logo</a>
-          <ul class="navbar-nav">
+        <nav class="navbar navbar-expand-sm">
+          <ul class="navbar-nav col-11">
             <li class="nav-item">
               <a class="nav-link" href="home.html">Home</a>
             </li>
@@ -56,36 +55,20 @@
               <a class="nav-link" href="#">Misc</a>
             </li>
           </ul>
-        </div>  
+          <a class="navbar-brand col-1" href="#"><span><img class="logo" src="img/Yosemite_logo.jpg" alt="logo"></span></a>
         </nav>
         <!-- end nav bar-->
       </header>
-        <div class="container-fluid" style="background-color: antiquewhite;">
-          
-          <!-- about me -- content -->
-          <div class="container vh-100 d-flex justify-content-center" style="background-color: black;">
-          <div class="card" style="align-self:center; text-align:center; height: 600px;width:600px;">
-            <img
-              class="card-img-top"
-              src="img/me.jpg"
-              alt="Card image"
-              style="width:100%;"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Mike Wilson</h4>
-              <p class="card-text">
-                Mike is working towards being a jack of all trades in his life.
-              </p>
-              <a href="hikes.html" class="btn btn-info stretched-link" onmouseover="document.getElementById('changeOpacity').style.opacity = '.9'" onmouseout="document.getElementById('changeOpacity').style.opacity = '1'">See More about Mike</a>
-            </div>
-          </div>
-          <!-- End second column-->
+      <div class="row home">
+        <div class="col-12 width:200px; vh-100 home_statement" >
+          <h1 class="mt-4 display-one text-dark">Life Is Not a Waiting Room</h1>   
         </div>
-      
+      </div>
 
-      <div class="footer navbar fixed-bottom navbar-light bg-dark justify-content-center" >
-        <h3>Wilson Blog - Created Summer 2020</h3>
-        <i class="fa fa-github ml-4"><a href="https://github.com/outofcontrolmike/MAWProjects"></a></i>
+      <div class="footer navbar fixed-bottom bg-light text-black justify-content-center" >
+        <h3 class="col-11">Wilson Site - Created Summer 2020</h3>
+        <span class="col-1"><a href="https://github.com/outofcontrolmike/MAWProjects" class="fa fa-github" style="color:black"></a>
+        </span>
       </div>
     
     <!-- End content-->
