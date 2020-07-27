@@ -1,0 +1,11 @@
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\netcoreapp2.1\Rock Paper Scissors.deps.json
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\netcoreapp2.1\Rock Paper Scissors.runtimeconfig.json
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\netcoreapp2.1\Rock Paper Scissors.runtimeconfig.dev.json
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\netcoreapp2.1\Rock Paper Scissors.dll
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\bin\Debug\netcoreapp2.1\Rock Paper Scissors.pdb
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\netcoreapp2.1\Rock Paper Scissors.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\netcoreapp2.1\Rock Paper Scissors.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\netcoreapp2.1\Rock Paper Scissors.AssemblyInfoInputs.cache
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\netcoreapp2.1\Rock Paper Scissors.AssemblyInfo.cs
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\netcoreapp2.1\Rock Paper Scissors.dll
+C:\Users\Michael Wilson\source\repos\MAWProjects\Rock Paper Scissors\Rock Paper Scissors\obj\Debug\netcoreapp2.1\Rock Paper Scissors.pdb
