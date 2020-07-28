@@ -6,50 +6,131 @@ namespace Rock_Paper_Scissors
     {
         static string name = "Rob";
         static bool one_two = true;
-        static int choice = 0;
+        static string choice = "0";
+        static int pWin = 0;
+        static int cWin = 0;
+        static string pChoice = "0";
+        static string cChoice = "0";
         static void Main(string[] args)
         {
-            
-                intro();
-            Console.ReadKey();
+            getChoice();
+            Console.WriteLine("Testing");
+
         }
 
-        public static void intro()
+        /// <summary>
+        /// Goes through intro and set's up name
+        /// </summary>
+        public static void getChoice()
         {
             firstQuestion();
-            while (one_two)
-            {
+            askName();
+        }
 
-                if (choice == 1)
+        public static void game()
+        {
+
+        }
+        /// <summary>
+        ///Decides Player's move
+        /// </summary>
+        public static void pMove()
+        {
+            string num = "0";
+            while (num!= "1" || num != "2" || num != "3")
+            {
+                Console.WriteLine("Press 1 for Rock" +
+             "Press 2 for Paper" +
+             "Press 3 for Scissors");
+                num = Console.ReadLine();
+                if (num == "1")
                 {
-                    askName();
-                    choice = 3;
+                    pChoice = "Rock";
+                    
                 }
-                if (choice == 2)
+                if(num == "2")
                 {
-                    printRules();
-                    askName();
-                    choice = 3;
+                    pChoice = "Paper";
+                    pChoice = "Paper";
+                }
+                if(num == "3")
+                {
+                    pChoice = "Scissors";
+                }
+                else
+                {
+                    Console.WriteLine("Please enter 1, 2 or 3 as an option");
                 }
             }
+            Console.WriteLine("You chose: " + pChoice);
+           
+        }
 
+        /// <summary>
+        /// Will auto generate the computer's decision
+        /// </summary>
+        public static void cMove()
+        {
 
-            }//end intro
-            public static void firstQuestion()
+        }
+
+       
+        public static void gameChecker()
+        {
+            //check all scenarios of rock paper scissors
+            //rock rock  = draw
+            //scis scis  = draw
+            //pap  pap   = draw
+            //rock paper = win
+            //paper rock = win
+            //scis paper = win
+            //rock paper = lose
+            //scis rock  = lose
+            //paper scis = lose
+
+            // if Choice
+
+        }
+
+      
+        /// <summary>
+        /// Goes through initial menu
+        /// </summary>
+        public static void firstQuestion()
+        {
+            while (choice != "1" || choice != "2")
             {
                 Console.WriteLine("Welcome to the Rock Paper Scissors!\n\n" +
                     "Press 1 to start the game.\n" +
                     "Press 2 for the rules\n");
-                choice = Convert.ToInt32(Console.ReadLine());
-                if (choice == 1 || choice == 2)
+                choice = Console.ReadLine();
+                if (choice == "1")
                 {
-                    one_two = true;
+                    Console.WriteLine("Let's begin the game!");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+                    
+                }
+                if (choice == "2")
+                {
+                    Console.WriteLine("No rules yet!");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
                 }
                 else
                 {
-                    one_two = false;
+                    Console.WriteLine("Enter a correct option");
+                    Console.ReadLine();
+                    Console.ReadKey();
+                    Console.Clear();
                 }
+            }//end while
         }
+        /// <summary>
+        /// Asks's user and computer name
+        /// </summary>
         public static void askName()
         {
             Console.WriteLine("Please enter your name!");
@@ -60,10 +141,11 @@ namespace Rock_Paper_Scissors
             if(choice != "yes")
             {
                 Console.WriteLine("The computer's name will be: " + name);
+                Console.Beep(120, 2000);
             }
             else
             {
-                Console.WriteLine("Please enter the computers name");
+                Console.WriteLine("Please enter the computers name\n");
                 name = Console.ReadLine();
                 Console.WriteLine("You decided to name the computer: " + name);
                 Console.WriteLine("\n Press any key to continue");
@@ -74,6 +156,9 @@ namespace Rock_Paper_Scissors
 
         }
 
+        /// <summary>
+        /// Prints rules
+        /// </summary>
         public static void printRules()
         {
             Console.WriteLine("No rules yet");
