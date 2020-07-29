@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michael Wilson\\Source\\Repos\\CharacterDesignGame\\CreateCharacter\\CreateCharacter\\CreateCharacterMain.csproj",
+      "projectUniqueName": "C:\\Users\\Michael Wilson\\Source\\Repos\\MAWProjects\\CharacterDesignGame\\CreateCharacter\\CreateCharacter\\CreateCharacterMain.csproj",
       "projectName": "CreateCharacterMain",
-      "projectPath": "C:\\Users\\Michael Wilson\\Source\\Repos\\CharacterDesignGame\\CreateCharacter\\CreateCharacter\\CreateCharacterMain.csproj",
+      "projectPath": "C:\\Users\\Michael Wilson\\Source\\Repos\\MAWProjects\\CharacterDesignGame\\CreateCharacter\\CreateCharacter\\CreateCharacterMain.csproj",
       "packagesPath": "C:\\Users\\Michael Wilson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michael Wilson\\Source\\Repos\\CharacterDesignGame\\CreateCharacter\\CreateCharacter\\obj\\",
+      "outputPath": "C:\\Users\\Michael Wilson\\Source\\Repos\\MAWProjects\\CharacterDesignGame\\CreateCharacter\\CreateCharacter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

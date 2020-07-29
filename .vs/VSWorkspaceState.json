@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Rock Paper Scissors - C#",
-    "\\SurveyFormProject3 - C#\\SurveyFormProject3"
+    "\\AdventureGUI\\AdventureGUI",
+    "\\CharacterDesignGame",
+    "\\CharacterDesignGame\\CreateCharacter"
   ],
-  "SelectedNode": "\\Rock Paper Scissors - C#",
+  "SelectedNode": "\\CharacterDesignGame\\CreateCharacter\\CreateCharacter.sln",
   "PreviewInSolutionExplorer": false
 }

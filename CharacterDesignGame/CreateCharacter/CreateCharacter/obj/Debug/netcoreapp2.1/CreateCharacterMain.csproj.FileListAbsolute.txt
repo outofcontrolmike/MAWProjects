@@ -53,3 +53,14 @@ C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharact
 C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfo.cs
 C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.dll
 C:\Users\wilsonmi\Source\Repos\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.deps.json
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.json
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.runtimeconfig.dev.json
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\bin\Debug\netcoreapp2.1\CreateCharacterMain.pdb
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfoInputs.cache
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.AssemblyInfo.cs
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.dll
+C:\Users\Michael Wilson\Source\Repos\MAWProjects\CharacterDesignGame\CreateCharacter\CreateCharacter\obj\Debug\netcoreapp2.1\CreateCharacterMain.pdb
