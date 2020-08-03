@@ -47,25 +47,93 @@
     </nav>
     <!-- end nav bar-->
   </header>
-      <div class="row" style="height:500px; margin-top:5%;">
-        <div class="container  bg-light mt-4" style="border-radius: 3%;">
+        <div class="container form bg-light mt-4" style="border-radius: 3%; height:600px;">
           <!-- form should go here-->
           <form>
-            <div class="form-group mt-4">
-              <label for="name">Your Name</label>
-              <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Enter Name">
-              <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div class="row">
+            <div class="col-6">
+              <div class="form-group mt-4">
+                <label for="name">Your Name</label>
+                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Enter Name">
+                <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group mt-4">
+                <label for="email">Your Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Your email">
+              </div>
             </div>
+           <div class="col-6 mt-4">
             <div class="form-group">
-              <label for="email">Your Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Your email">
+              <label for="checkboxes">Which area should I focus more on?</label>
+              <br>
+              <div class="custom-control custom-radio custom-control-inline">
+               <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+               <label class="custom-control-label" for="customRadioInline1">Front End Development</label>
+             </div>
+             <div class="custom-control custom-radio custom-control-inline">
+               <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+               <label class="custom-control-label" for="customRadioInline2">Back End Development</label>
+             </div>
+             <div class="custom-control custom-radio custom-control-inline">
+               <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+               <label class="custom-control-label" for="customRadioInline3">Full Stack</label>
+             </div>
             </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Please leave a comment!</label>
-              <textarea class="form-control text-primary" id="exampleFormControlTextarea1" rows="5">I really like your site dude, keep up the good work!</textarea>
+                <!-- start languages known-->
+               
+                    <div class="form-group">
+                     <label for="">What Programming languages do you know?</label>
+                     <br>
+                     <div class="col-10">
+                     <div class="custom-control custom-checkbox custom-control-inline">
+                       <input type="checkbox" class="custom-control-input" id="PHP">
+                       <label class="custom-control-label" for="PHP">PHP</label>
+                     </div>
+                     <div class="custom-control custom-checkbox custom-control-inline ">
+                       <input type="checkbox" class="custom-control-input" id="JavaScript">
+                       <label class="custom-control-label" for="JavaScript">Javascript</label>
+                     </div>
+                     <div class="custom-control custom-checkbox custom-control-inline">
+                       <input type="checkbox" class="custom-control-input" id="C#">
+                       <label class="custom-control-label" for="C#">C#</label>
+                     </div>
+                     <div class="custom-control custom-checkbox custom-control-inline">
+                       <input type="checkbox" class="custom-control-input" id="C++">
+                       <label class="custom-control-label" for="C++">C++</label>
+                     </div>
+                     <div class="custom-control custom-checkbox custom-control-inline">
+                       <input type="checkbox" class="custom-control-input" id="Java">
+                       <label class="custom-control-label" for="Java">Java</label>
+                     </div>
+                     <div class="custom-control custom-checkbox custom-control-inline ">
+                       <input type="checkbox" class="custom-control-input" id="Ruby">
+                       <label class="custom-control-label" for="Ruby">Ruby</label>
+                     </div>
+                     <div class="custom-control custom-checkbox custom-control-inline ">
+                       <input type="checkbox" class="custom-control-input" id="Kotlin">
+                       <label class="custom-control-label" for="Kotlin">Kotlin</label>
+                     </div>
+                    </div>
+                    </div> 
+                  
+                
+                <!-- end languages-->
+             </div>
+             </div> 
+             <!--end first row -->
+             <div class="row" style="border-top: double;">
+             <span class="col-12">
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Please leave a comment!</label>
+                <textarea class="form-control text-primary" id="exampleFormControlTextarea1" rows="5">I really like your site dude, keep up the good work!</textarea>
+              </div>
+              </div>
+              <button id="formButton" type="submit;" class="btn btn-outline-info w-100 mx-auto justify-content-center">Submit</button>
+             </span>   
+             <div class="alert alert-success mt-4" role="alert">
+              Form successfully submitted!
             </div>
-            <button id="formButton" type="submit;"style="margin-left:25%;" class="btn btn-danger w-50 justify-content-center">Submit</button>
-            
+                     
           </form>
           
         </div>

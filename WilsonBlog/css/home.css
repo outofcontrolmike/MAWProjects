@@ -47,30 +47,6 @@ color:blue;
 }
 /* header */
 
-
-/* Home Page - Exclusive */
-.home {
-background-image: url("../html/img/Yosemite.jpg");
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-filter: brightness(85%);
-
-}
-
-.home_statement {
-  text-align:center;
-  padding-top:100px;
-  color:black;
-  z-index: 999;
-   
-}
-
-
-/* About me page */
-.bio {
-  border-left-style:double;
-}
 /* Images */
 
 .myCard {
@@ -130,3 +106,35 @@ li:hover {
 h1,li { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
 h3 { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
+
+
+/* Home Page - Exclusive */
+.home {
+background-image: url("../html/img/Yosemite.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+filter: brightness(85%);
+
+}
+
+.home_statement {
+  text-align:center;
+  padding-top:100px;
+  color:black;
+  z-index: 999;
+   
+}
+
+
+/* About me page */
+.bio {
+  border-left-style:double;
+}
+
+/*Form */
+
+.form {
+  border-style:groove;
+  border-width: 1rem;
+}
