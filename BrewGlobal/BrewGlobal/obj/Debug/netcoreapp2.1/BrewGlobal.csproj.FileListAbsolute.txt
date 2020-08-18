@@ -1,0 +1,11 @@
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\bin\Debug\netcoreapp2.1\BrewGlobal.deps.json
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\bin\Debug\netcoreapp2.1\BrewGlobal.runtimeconfig.json
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\bin\Debug\netcoreapp2.1\BrewGlobal.runtimeconfig.dev.json
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\bin\Debug\netcoreapp2.1\BrewGlobal.dll
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\bin\Debug\netcoreapp2.1\BrewGlobal.pdb
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\obj\Debug\netcoreapp2.1\BrewGlobal.csprojAssemblyReference.cache
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\obj\Debug\netcoreapp2.1\BrewGlobal.csproj.CoreCompileInputs.cache
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\obj\Debug\netcoreapp2.1\BrewGlobal.AssemblyInfoInputs.cache
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\obj\Debug\netcoreapp2.1\BrewGlobal.AssemblyInfo.cs
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\obj\Debug\netcoreapp2.1\BrewGlobal.dll
+C:\Users\Michael Wilson\Desktop\Coding\Repo\MAWProjects\BrewGlobal\BrewGlobal\obj\Debug\netcoreapp2.1\BrewGlobal.pdb
