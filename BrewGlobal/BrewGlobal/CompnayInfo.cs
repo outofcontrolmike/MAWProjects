@@ -17,6 +17,11 @@ namespace BrewGlobal
         string state;
         string zipcode;
         //constructor
+
+        public CompanyInfo()
+        {
+
+        }
         public CompanyInfo(string cName, string fName, string streetAdd, string City, string State, string Zipcode)
         {
             companyName = cName;
@@ -40,7 +45,8 @@ namespace BrewGlobal
         //Print out of company info
         public override string ToString()
         {
-            return "";
+            return "testing";
+            Console.ReadKey();
         }
     }
 }
