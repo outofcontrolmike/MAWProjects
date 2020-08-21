@@ -9,15 +9,13 @@ namespace BrewGlobal
     class questions
 
     {
-        // variables
+       
      
-        static string city;
-        static string zip;
+        //Company Questions
+
+        // create our company object
         static CompanyInfo c1 = new CompanyInfo();
         //1.  Ask for name and company info
-        /// <summary>
-        /// Asking for compnay name
-        /// </summary>
         public static void AskCompName()
         {
             string name;
@@ -97,7 +95,7 @@ namespace BrewGlobal
                 city = ReadLine();
                 if (city == "")
                 {
-                    city = "You didn't give us the city you are loacted";
+                    city = "You didn't give us the city you are located in";
                 }
                 WriteLine("Is '" + city + "' the name of your city?\n");
                 WriteLine("Enter 1 to continue, enter any other key to rename.");
@@ -141,7 +139,86 @@ namespace BrewGlobal
             Console.BackgroundColor = ConsoleColor.DarkYellow;
             ReadKey();
         }
-        
+
+        //Start Brew Questions
+
+        public static void IntroBeverage()
+        {
+            WriteLine("Okay, we have you set up in our system as a supplier.  Press any key to continue to the Beverage upload.");
+            ReadKey();
+            Clear();
+            WriteLine("We carry three types of products:  Beer, Wine And Mead.\n\n");
+
+        }
+
+        public static void AddingBeverages()
+        {
+            WriteLine("Press 1 to enter a Beer\n" +
+                "Press 2 to enter a Wine\n" +
+                "Press 3 to enter a Mead\n" +
+                "Press 9 to exit product adding");
+                ReadKey();
+            Clear();
+
+            //logic for entries
+            string choice = ReadLine();
+            do
+            {
+                if (choice == "1")
+                {
+                    EnterBeer();
+                }
+                else if (choice == "2")
+                {
+                    EnterWine();
+                }
+
+                else if (choice == "3")
+                {
+                    EnterMead();
+                }
+            } while (choice != "9");
+
+            //implement a count of the beverages added
+            
+        }//end adding beverages
+
+        public static void EnterMead()
+        {
+            
+        }
+
+        public static void EnterWine()
+        {
+
+        }
+
+        public static void EnterBeer()
+        {
+            int beerCount = 0;
+            string choice = "";
+            do
+            {
+                WriteLine("Press 1 to enter a Beer. Press 5 to exit adding beers at any time.");
+                choice = ReadLine();
+                if(choice == "1")
+                {
+                    // instantiate a new beer object each time a beer is entered
+
+                    do
+                    {
+                        WriteLine("What is the name of this beer?:");
+                        string name = ReadLine();
+                        WriteLine("\nDoes " + name.ToUpper() + "look correct for this beer?");
+                        WriteLine("press 1 to continue, press 2 to rename");
+                        string decision = ReadLine();
+                        beerCount++;
+                    } while (decision != "1");
+                }
+            } while (choice != "5");
+            }
+
+
         public static void CompanyQuestions()
         {
             AskCompName();
@@ -151,8 +228,8 @@ namespace BrewGlobal
             GrabZip();
             c1.ToString();
             CompanyDetails();
-
-
+            IntroBeverage();
+            AddingBeverages();
         }
     }
 
