@@ -196,7 +196,7 @@ namespace BrewGlobal
         public static void EnterBeer()
         {
             int beerCount = 0;
-            string choice = "";
+            string choice;
             do
             {
                 WriteLine("Press 1 to enter a Beer. Press 5 to exit adding beers at any time.");
@@ -205,17 +205,24 @@ namespace BrewGlobal
                 {
                     // instantiate a new beer object each time a beer is entered
 
+                    string decision;
+                    Clear();
                     do
                     {
-                        WriteLine("What is the name of this beer?:");
+                        WriteLine("What is the name of this beer?:\n");
                         string name = ReadLine();
-                        WriteLine("\nDoes " + name.ToUpper() + "look correct for this beer?");
+                        Clear();
+                        WriteLine("\n" + name.ToUpper() + "\n\nIs this the correct for this beer?\n");
                         WriteLine("press 1 to continue, press 2 to rename");
-                        string decision = ReadLine();
-                        beerCount++;
+                        decision = ReadLine();
+                        Clear();
                     } while (decision != "1");
+                    beerCount++;
+                    Clear();
                 }
             } while (choice != "5");
+            WriteLine("you've entered " + beerCount + " beers");
+            ReadKey();
             }
 
 
