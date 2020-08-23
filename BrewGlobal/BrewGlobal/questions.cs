@@ -197,35 +197,153 @@ namespace BrewGlobal
         {
             int beerCount = 0;
             string choice;
+            
+
             do
             {
-                WriteLine("Press 1 to enter a Beer. Press 5 to exit adding beers at any time.");
+                WriteLine("Press 1 to enter a Beer. Press 5 exit beer entry.\n");
                 choice = ReadLine();
-                if(choice == "1")
+                if (choice == "1")
                 {
                     // instantiate a new beer object each time a beer is entered
-
+                    Beer beer = new Beer();
                     string decision;
                     Clear();
+                    //name
                     do
                     {
+                        
                         WriteLine("What is the name of this beer?:\n");
                         string name = ReadLine();
                         Clear();
                         WriteLine("\n" + name.ToUpper() + "\n\nIs this the correct for this beer?\n");
-                        WriteLine("press 1 to continue, press 2 to rename");
+                        WriteLine("press 1 to continue, press 2 to rename\n");
                         decision = ReadLine();
                         Clear();
                     } while (decision != "1");
+
+
+                    //type
+                    do
+                    {
+                        WriteLine("What type of beer is this?  For example, Ale, Ipa, stout.. ect.:\n");
+                        string type = ReadLine();
+                        Clear();
+                        WriteLine("\n" + type.ToUpper() + "\n\nIs this type for this beer?\n");
+                        WriteLine("press 1 to continue, press 2 to edit.\n");
+                        decision = ReadLine();
+                        Clear();
+                    } while (decision != "1");
+
+                    //ABV
+                    do
+                    {
+                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
+                        string abv = ReadLine();
+                        Clear();
+                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
+                        WriteLine("press 1 to continue, press 2 to edit.\n");
+                        decision = ReadLine();
+                        Clear();
+                    } while (decision != "1");
+
+                    //Parings
+
+                    do
+                    {
+                        WriteLine("What pairs well with " + beer.Title + "\n");
+                        string pair = ReadLine();
+                        Clear();
+                        WriteLine("\n" + pair.ToUpper() + "\n\nAre these the correct parings?\n");
+                        WriteLine("press 1 to continue, press 2 to edit.\n");
+                        decision = ReadLine();
+                        Clear();
+                    } while (decision != "1");
+
+                    //Size
+                    do
+                    {
+                        WriteLine("What are the sizes this beer will be offered in?  For 5.2%, 10.5%, ect.:\n");
+                        string abv = ReadLine();
+                        Clear();
+                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
+                        WriteLine("press 1 to continue, press 2 to edit.\n");
+                        decision = ReadLine();
+                        Clear();
+                    } while (decision != "1");
+
+                    //Color
+                    do
+                    {
+                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
+                        string abv = ReadLine();
+                        Clear();
+                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
+                        WriteLine("press 1 to continue, press 2 to edit.\n");
+                        decision = ReadLine();
+                        Clear();
+                    } while (decision != "1");
+
+                    //Ingredients
+                    do
+                    {
+                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
+                        string abv = ReadLine();
+                        Clear();
+                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
+                        WriteLine("press 1 to continue, press 2 to edit.\n");
+                        decision = ReadLine();
+                        Clear();
+                    } while (decision != "1");
+
+                    //Price
+
+                    do
+                    {
+                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
+                        string abv = ReadLine();
+                        Clear();
+                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
+                        WriteLine("press 1 to continue, press 2 to edit.\n");
+                        decision = ReadLine();
+                        Clear();
+                    } while (decision != "1");
+
+                    WriteLine("\n\n" + name.ToUpper() + " succesffully added to your Beer Collection");
+                    ReadKey();
+                    Clear();
+
                     beerCount++;
                     Clear();
                 }
+
+             //end of outer loop
             } while (choice != "5");
             WriteLine("you've entered " + beerCount + " beers");
             ReadKey();
             }
 
 
+
+        public static void shortCutQuestion(string first, string buildObject)
+        {
+            string decision;
+
+            do
+            {
+                WriteLine("What is the " + first + " of this beer?:\n");
+                string noun = ReadLine();
+                Clear();
+                WriteLine("\n" + noun.ToUpper() + "\n\nIs this correct?\n");
+                WriteLine("press 1 to continue, press 2 to rename\n");
+                decision = ReadLine();
+                Clear();
+            } while (decision != "1");
+            // beer[i].first = ;
+            // beer object title should be set to whatever name is
+
+            //after a beer is succcesfully enteredsomehow another object should be created and added to an array
+        }
         public static void CompanyQuestions()
         {
             AskCompName();
