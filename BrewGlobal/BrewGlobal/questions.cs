@@ -197,11 +197,12 @@ namespace BrewGlobal
         {
             int beerCount = 0;
             string choice;
-            
 
             do
             {
-                WriteLine("Press 1 to enter a Beer. Press 5 exit beer entry.\n");
+                string[] beers;
+
+                WriteLine("Press 1 to enter a Beer. Press any other key to exit\n");
                 choice = ReadLine();
                 if (choice == "1")
                 {
@@ -209,140 +210,59 @@ namespace BrewGlobal
                     Beer beer = new Beer();
                     string decision;
                     Clear();
+
                     //name
-                    do
-                    {
-                        
-                        WriteLine("What is the name of this beer?:\n");
-                        string name = ReadLine();
-                        Clear();
-                        WriteLine("\n" + name.ToUpper() + "\n\nIs this the correct for this beer?\n");
-                        WriteLine("press 1 to continue, press 2 to rename\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
-
-                    //type
-                    do
-                    {
-                        WriteLine("What type of beer is this?  For example, Ale, Ipa, stout.. ect.:\n");
-                        string type = ReadLine();
-                        Clear();
-                        WriteLine("\n" + type.ToUpper() + "\n\nIs this type for this beer?\n");
-                        WriteLine("press 1 to continue, press 2 to edit.\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
+                    ShortCutQuestion("What is the name of this beer?",beer.Title);
+                    //Type
+                    ShortCutQuestion("What type of beer is this? ", beer.Type);
                     //ABV
-                    do
-                    {
-                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
-                        string abv = ReadLine();
-                        Clear();
-                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
-                        WriteLine("press 1 to continue, press 2 to edit.\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
-                    //Parings
-
-                    do
-                    {
-                        WriteLine("What pairs well with " + beer.Title + "\n");
-                        string pair = ReadLine();
-                        Clear();
-                        WriteLine("\n" + pair.ToUpper() + "\n\nAre these the correct parings?\n");
-                        WriteLine("press 1 to continue, press 2 to edit.\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
-                    //Size
-                    do
-                    {
-                        WriteLine("What are the sizes this beer will be offered in?  For 5.2%, 10.5%, ect.:\n");
-                        string abv = ReadLine();
-                        Clear();
-                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
-                        WriteLine("press 1 to continue, press 2 to edit.\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
+                    ShortCutQuestion("How much alcohol content will this beer contain?", beer.Abv.ToString());
+                    //Pairngs
+                    ShortCutQuestion("What food does this beer compliment?  (Pairngs)", beer.Parings);
+                    //Sizes
+                    ShortCutQuestion("What sizes will this beer be avaialbe in? List in values seperated by commas please. ", beer.Size.ToString());
                     //Color
-                    do
-                    {
-                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
-                        string abv = ReadLine();
-                        Clear();
-                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
-                        WriteLine("press 1 to continue, press 2 to edit.\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
+                    ShortCutQuestion("What color does this beer appear to be?", beer.Color);
                     //Ingredients
-                    do
-                    {
-                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
-                        string abv = ReadLine();
-                        Clear();
-                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
-                        WriteLine("press 1 to continue, press 2 to edit.\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
+                    ShortCutQuestion("What are the ingredients of this craft?", beer.Ingredients);
                     //Price
+                    ShortCutQuestion("What will the pricing be for this beer?  List in values seperated by commas please", beer.Price.ToString());
 
-                    do
-                    {
-                        WriteLine("What is the alcohol content of this beer?  For 5.2%, 10.5%, ect.:\n");
-                        string abv = ReadLine();
-                        Clear();
-                        WriteLine("\n" + abv.ToUpper() + "\n\nIs this the correct content?\n");
-                        WriteLine("press 1 to continue, press 2 to edit.\n");
-                        decision = ReadLine();
-                        Clear();
-                    } while (decision != "1");
-
-                    WriteLine("\n\n" + name.ToUpper() + " succesffully added to your Beer Collection");
+                    //beers.Add[beer[i]];
+                                                                   
                     ReadKey();
                     Clear();
-
+                    
                     beerCount++;
                     Clear();
                 }
-
              //end of outer loop
-            } while (choice != "5");
+            } while (choice == "1");
             WriteLine("you've entered " + beerCount + " beers");
+            //display list of beers? 
             ReadKey();
             }
-
-
-
-        public static void shortCutQuestion(string first, string buildObject)
+        //
+        public static void ShortCutQuestion(string first, string buildObject)
         {
             string decision;
-
             do
             {
-                WriteLine("What is the " + first + " of this beer?:\n");
+                WriteLine("\n" + first);
                 string noun = ReadLine();
                 Clear();
                 WriteLine("\n" + noun.ToUpper() + "\n\nIs this correct?\n");
-                WriteLine("press 1 to continue, press 2 to rename\n");
+                WriteLine("press 1 to continue, press 2 to edit your entry.\n");
                 decision = ReadLine();
                 Clear();
+                buildObject = noun;
+                Console.WriteLine("Testing printing object properties");
+                Console.WriteLine(buildObject);
+                ReadKey();
             } while (decision != "1");
             // beer[i].first = ;
-            // beer object title should be set to whatever name is
 
-            //after a beer is succcesfully enteredsomehow another object should be created and added to an array
+            //after a beer is succcesfully entered somehow another object should be created and added to an array
         }
         public static void CompanyQuestions()
         {

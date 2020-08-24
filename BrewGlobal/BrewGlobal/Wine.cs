@@ -7,9 +7,9 @@ namespace BrewGlobal
     class Wine: ICraftBeverage
     {
         //main constructor for a Wine
-        public Wine(string name, string type, double abv, string parings, double size, string color, string ingredients, double price)
+        public Wine(string title, string type, double abv, string parings, double size, string color, string ingredients, double price)
         {
-            name = name;
+            Title = title;
             Type = type;
             Abv = abv;
             Parings = parings;
@@ -19,7 +19,7 @@ namespace BrewGlobal
             Price = price;
         }
 
-        public string name
+        public string Title
         {
             get;
             set;
