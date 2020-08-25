@@ -197,39 +197,51 @@ namespace BrewGlobal
         {
             int beerCount = 0;
             string choice;
+            int i = 0;
+            List<string> beers = new List<string>();
 
             do
             {
-                string[] beers;
-
                 WriteLine("Press 1 to enter a Beer. Press any other key to exit\n");
                 choice = ReadLine();
                 if (choice == "1")
                 {
                     // instantiate a new beer object each time a beer is entered
                     Beer beer = new Beer();
-                    string decision;
                     Clear();
-
                     //name
                     ShortCutQuestion("What is the name of this beer?",beer.Title);
+                    string name = beer.Title;
                     //Type
                     ShortCutQuestion("What type of beer is this? ", beer.Type);
+                    string type = beer.Type;
                     //ABV
                     ShortCutQuestion("How much alcohol content will this beer contain?", beer.Abv.ToString());
+                    double abv = beer.Abv;
                     //Pairngs
                     ShortCutQuestion("What food does this beer compliment?  (Pairngs)", beer.Parings);
+                    string parings = beer.Parings;
                     //Sizes
                     ShortCutQuestion("What sizes will this beer be avaialbe in? List in values seperated by commas please. ", beer.Size.ToString());
+                    double size = beer.Size;
                     //Color
                     ShortCutQuestion("What color does this beer appear to be?", beer.Color);
+                    string color = beer.Color;
                     //Ingredients
                     ShortCutQuestion("What are the ingredients of this craft?", beer.Ingredients);
+                    string ingredients = beer.Ingredients;
                     //Price
                     ShortCutQuestion("What will the pricing be for this beer?  List in values seperated by commas please", beer.Price.ToString());
+                    double price = beer.Price;
 
-                    //beers.Add[beer[i]];
-                                                                   
+                    //Create object by instantiating a new beer and passing the parameters to constructor
+                    Beer beerBuilder = new Beer(name, type, abv, parings, size, color, ingredients, price);
+                    //add beerBuilder to an array
+                    beers.Add(beerBuilder.ToString());
+
+                    //object in array 
+                    WriteLine(beers[0]);
+                    //Use the classes to string method to make a print out of the details
                     ReadKey();
                     Clear();
                     
@@ -239,7 +251,14 @@ namespace BrewGlobal
              //end of outer loop
             } while (choice == "1");
             WriteLine("you've entered " + beerCount + " beers");
-            //display list of beers? 
+            WriteLine("Fetching amount of beers in array " + beers.Count);
+
+            
+            foreach(string beer in beers)
+            {
+                WriteLine("Test");
+                WriteLine(beer.ToString());
+            }
             ReadKey();
             }
         //
