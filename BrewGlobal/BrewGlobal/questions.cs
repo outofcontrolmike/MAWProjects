@@ -6,129 +6,90 @@ using static System.Console;
 
 namespace BrewGlobal
 {
+    /// <summary>
+    /// Auth: Michael Wilson
+    /// Date: 08/15/2020
+    /// Purpose: Create a simple program that signs a user up and let's them add products to a list
+    /// Theme: Hard Beverages
+    /// </summary>
+    
     class questions
 
     {
-       
-     
-        //Company Questions
-
         // create our company object
         static CompanyInfo c1 = new CompanyInfo();
-        //1.  Ask for name and company info
-        public static void AskCompName()
+
+
+        //Building Questions
+        public static void CompanyInfo(string q1, string noun, string objectProperty)
         {
-            string name;
-            string num;
+            string num = "";
+            string entry;
             do
             {
-                WriteLine("Please enter your compaines name:\n");
-                name = ReadLine();
-                if (name == "")
+                WriteLine(q1 + "\n");
+                entry = ReadLine();
+                if (entry == "")
                 {
-                    name = "You didn't give us a name.";
+                    entry = "You didn't give us " + noun + ".";
+                    ReadKey();
+                    Clear();
                 }
-                WriteLine("Does '" + name + "' look correct for your company name?\n");
-                WriteLine("Enter 1 to continue, enter any other key to rename.");
-                num = ReadLine();
+                else
+                {
+                    Clear();
+                    WriteLine("Does '" + entry + "' look correct for " + noun + "?\n");
+                    WriteLine("Enter 1 to continue, enter any other key to re enter.");
+                    num = ReadLine();
+                    Clear();
+                }
             } while (num != "1");
-            c1.CompanyName = name;
-            WriteLine("\nsuccess to your company name: " + c1.CompanyName);
+            objectProperty = entry;
+            WriteLine("\nYou set your " + noun + " to " + entry);
             ReadKey();
-        }
-
-        /// <summary>
-        /// Ask for Owners Name
-        /// </summary>
-        public static void OwnerName()
-        {
-            string cName;
-            string num;
-            do {
             Clear();
-            WriteLine("Please enter the full name of the owner of your company:\n");
-            cName = ReadLine();
-            if (cName == "")
-            {
-                cName = "You didn't give us the owners name.";
-            }
-            WriteLine("Does '" + cName + "' look correct for your company name?\n");
-            WriteLine("Enter 1 to continue, enter any other key to rename.");
-            num = ReadLine();
-        } while (num != "1" );
-            c1.FullName = cName;
-            WriteLine("\nYou set your company name to: " + c1.FullName);
+            WriteLine("\nTesting Company object's property of " + noun + " = " + objectProperty);
             ReadKey();
-    }
-
-        //Grab street
-        public static void GrabStreet()
+        }//End co info
+        public static void ShortCutQuestion(string first, string buildObject)
         {
-            string street;
-            string num;
+            string decision;
             do
             {
+                WriteLine("\n" + first);
+                string noun = ReadLine();
                 Clear();
-                WriteLine("Please enter the street address of your company:\n");
-                street = ReadLine();
-                if (street == "")
-                {
-                    street = "You didn't provide a street address!";
-                }
-                WriteLine("Does '" + street + "' fit your street description?\n");
-                WriteLine("Enter 1 to continue, enter any other key to reenter.");
-                num = ReadLine();
-            } while (num != "1");
-            c1.StreetAddress = street;
-            WriteLine("\nYou set your street address to: " + c1.StreetAddress);
-            ReadKey();
+                WriteLine("\n" + noun.ToUpper() + "\n\nIs this correct?\n");
+                WriteLine("press 1 to continue, press 2 to edit your entry.\n");
+                decision = ReadLine();
+                Clear();
+                buildObject = noun;
+                Console.WriteLine("Testing printing object properties");
+                Console.WriteLine(buildObject);
+                ReadKey();
+            } while (decision != "1");
+            // beer[i].first = ;
+
+            //after a beer is succcesfully entered somehow another object should be created and added to an array
         }
 
-        public static void GrabCity()
+        //Actual Program
+        public static void CompanyQuestions()
         {
-            string city;
-            string num;
-            do
-            {
-                Clear();
-                WriteLine("Please enter the city your company resides in:\n");
-                city = ReadLine();
-                if (city == "")
-                {
-                    city = "You didn't give us the city you are located in";
-                }
-                WriteLine("Is '" + city + "' the name of your city?\n");
-                WriteLine("Enter 1 to continue, enter any other key to rename.");
-                num = ReadLine();
-            } while (num != "1");
-            c1.City = city;
-            WriteLine("\nYou set your city address to: " + c1.City);
+            CompanyInfo("What is your compaines name?", "name", c1.CompanyName);
+            CompanyInfo("What is full name of the owner of ?" + c1.CompanyName, "Owner's name", c1.FullName);
+            CompanyInfo("What is the street address of " + c1.CompanyName, "Street Address", c1.StreetAddress);
+            CompanyInfo("What is the City of " + c1.CompanyName, "City", c1.City);
+            CompanyInfo("What is the Zip code of " + c1.CompanyName, "Zip Code", c1.Zipcode);
+
+            //Call c1 toString method
+            c1.ToString();
+            WriteLine("Okay, we have you set up in our system as a supplier.  Press any key to continue to the Beverage upload.");
             ReadKey();
+            Clear();
+            WriteLine("We carry three types of products:  Beer, Wine And Mead.\n\n");
+            AddingBeverages();
         }
-
-        public static void GrabZip()
-        {
-            string zip;
-            string num;
-            do
-            {
-                Clear();
-                WriteLine("Please enter the zipcode your company resides in:\n");
-                zip = ReadLine();
-                if (zip == "")
-                {
-                    zip = "You didn't give us the zipcode you are located in";
-                }
-                WriteLine("Is '" + zip + "' the correct zip code?\n");
-                WriteLine("Enter 1 to continue, enter any other key re enter zip.");
-                num = ReadLine();
-            } while (num != "1");
-            c1.Zipcode = zip;
-            WriteLine("\nYou set your Zip code to " + c1.Zipcode);
-            ReadKey();
-        }
-
-
         public static void CompanyDetails()
         {
             Clear();
@@ -141,16 +102,6 @@ namespace BrewGlobal
         }
 
         //Start Brew Questions
-
-        public static void IntroBeverage()
-        {
-            WriteLine("Okay, we have you set up in our system as a supplier.  Press any key to continue to the Beverage upload.");
-            ReadKey();
-            Clear();
-            WriteLine("We carry three types of products:  Beer, Wine And Mead.\n\n");
-
-        }
-
         public static void AddingBeverages()
         {
             WriteLine("Press 1 to enter a Beer\n" +
@@ -261,40 +212,9 @@ namespace BrewGlobal
             }
             ReadKey();
             }
-        //
-        public static void ShortCutQuestion(string first, string buildObject)
-        {
-            string decision;
-            do
-            {
-                WriteLine("\n" + first);
-                string noun = ReadLine();
-                Clear();
-                WriteLine("\n" + noun.ToUpper() + "\n\nIs this correct?\n");
-                WriteLine("press 1 to continue, press 2 to edit your entry.\n");
-                decision = ReadLine();
-                Clear();
-                buildObject = noun;
-                Console.WriteLine("Testing printing object properties");
-                Console.WriteLine(buildObject);
-                ReadKey();
-            } while (decision != "1");
-            // beer[i].first = ;
 
-            //after a beer is succcesfully entered somehow another object should be created and added to an array
-        }
-        public static void CompanyQuestions()
-        {
-            AskCompName();
-            OwnerName();
-            GrabStreet();
-            GrabCity();
-            GrabZip();
-            c1.ToString();
-            CompanyDetails();
-            IntroBeverage();
-            AddingBeverages();
-        }
+        //Refactor productAdding - layout all the variables that could be dynamic
+   
     }
 
         //    Verify that it's all correct
