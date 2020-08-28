@@ -14,7 +14,7 @@ namespace BrewGlobal
 
         }
         //main constructor for a beer
-        public Beer(string title, string type, double abv, string parings, double size, string color, string ingredients, double price)
+        public Beer(string title, string type, double abv, string parings, string size, string color, string ingredients, double price)
         {
             Title = title;
             Type = type;
@@ -50,7 +50,7 @@ namespace BrewGlobal
             set;
         }
 
-        public double Size
+        public string Size
         {
             get;
             set;

@@ -7,7 +7,7 @@ namespace BrewGlobal
     class Mead: ICraftBeverage
     {
         //main constructor for a Mead
-        public Mead(string title, string type, double abv, string parings, double size, string color, string ingredients, double price)
+        public Mead(string title, string type, double abv, string parings, string size, string color, string ingredients, double price)
         {
             Title = title;
             Type = type;
@@ -43,7 +43,7 @@ namespace BrewGlobal
             set;
         }
 
-        public double Size
+        public string Size
         {
             get;
             set;

@@ -12,7 +12,7 @@ namespace BrewGlobal
     /// Purpose: Create a simple program that signs a user up and let's them add products to a list
     /// Theme: Hard Beverages
     /// </summary>
-    
+
     class questions
 
     {
@@ -73,6 +73,7 @@ namespace BrewGlobal
             //after a beer is succcesfully entered somehow another object should be created and added to an array
         }
 
+
         //Actual Program
         public static void CompanyQuestions()
         {
@@ -108,16 +109,14 @@ namespace BrewGlobal
                 "Press 2 to enter a Wine\n" +
                 "Press 3 to enter a Mead\n" +
                 "Press 9 to exit product adding");
-                ReadKey();
-            Clear();
-
+            ReadKey();
             //logic for entries
             string choice = ReadLine();
             do
             {
                 if (choice == "1")
                 {
-                    EnterBeer();
+                    AddProduct("beer");
                 }
                 else if (choice == "2")
                 {
@@ -131,12 +130,12 @@ namespace BrewGlobal
             } while (choice != "9");
 
             //implement a count of the beverages added
-            
+
         }//end adding beverages
 
         public static void EnterMead()
         {
-            
+
         }
 
         public static void EnterWine()
@@ -144,91 +143,78 @@ namespace BrewGlobal
 
         }
 
-        public static void EnterBeer()
+
+        public static void AddProduct(string changeableProduct)
         {
-            int beerCount = 0;
+            //example call RefactorProduct(beers,beer,Beer,
+            int productCount = 0;
             string choice;
             int i = 0;
-            List<string> beers = new List<string>();
-
+            List<string> productList = new List<string>();
             do
             {
-                WriteLine("Press 1 to enter a Beer. Press any other key to exit\n");
+                WriteLine("Press 1 to enter a " + changeableProduct + "  Press any other key to exit\n");
                 choice = ReadLine();
                 if (choice == "1")
                 {
-                    // instantiate a new beer object each time a beer is entered
-                    Beer beer = new Beer();
+                    // instantiate a new product object each time an is entered
+                    Beer product = new Beer();
                     Clear();
                     //name
-                    ShortCutQuestion("What is the name of this beer?",beer.Title);
-                    string name = beer.Title;
+                    ShortCutQuestion("What is the name of this " + changeableProduct + "?", product.Title);
+                    string name = product.Title;
                     //Type
-                    ShortCutQuestion("What type of beer is this? ", beer.Type);
-                    string type = beer.Type;
+                    ShortCutQuestion("What type of " + changeableProduct + " is this? ", product.Type);
+                    string type = product.Type;
                     //ABV
-                    ShortCutQuestion("How much alcohol content will this beer contain?", beer.Abv.ToString());
-                    double abv = beer.Abv;
+                    ShortCutQuestion("How much alcohol content will this " + changeableProduct + " contain?", product.Abv.ToString());
+                    double abv = product.Abv;
                     //Pairngs
-                    ShortCutQuestion("What food does this beer compliment?  (Pairngs)", beer.Parings);
-                    string parings = beer.Parings;
+                    ShortCutQuestion("What food does this " + changeableProduct + " compliment?  (Pairngs)", product.Parings);
+                    string parings = product.Parings;
                     //Sizes
-                    ShortCutQuestion("What sizes will this beer be avaialbe in? List in values seperated by commas please. ", beer.Size.ToString());
-                    double size = beer.Size;
+                    ShortCutQuestion("What sizes will this" + changeableProduct + " be avaialbe in? List in values seperated by commas please. ", product.Size);
+                    string size = product.Size;
+                    ReadKey();
                     //Color
-                    ShortCutQuestion("What color does this beer appear to be?", beer.Color);
-                    string color = beer.Color;
+                    ShortCutQuestion("What color does this " + changeableProduct + " appear to be?", product.Color);
+                    string color = product.Color;
                     //Ingredients
-                    ShortCutQuestion("What are the ingredients of this craft?", beer.Ingredients);
-                    string ingredients = beer.Ingredients;
+                    ShortCutQuestion("What are the ingredients of this craft?", product.Ingredients);
+                    string ingredients = product.Ingredients;
                     //Price
-                    ShortCutQuestion("What will the pricing be for this beer?  List in values seperated by commas please", beer.Price.ToString());
-                    double price = beer.Price;
+                    ShortCutQuestion("What will the pricing be for this " + changeableProduct + "? " + "\n\n Here is a list of the sizes you listed earlier\n { " + product.Size +  " }\nList in values seperated by commas please", product.Price.ToString());
+                    double price = product.Price;
+                    ReadKey();
 
                     //Create object by instantiating a new beer and passing the parameters to constructor
                     Beer beerBuilder = new Beer(name, type, abv, parings, size, color, ingredients, price);
                     //add beerBuilder to an array
-                    beers.Add(beerBuilder.ToString());
+                    productList.Add(beerBuilder.ToString());
 
                     //object in array 
-                    WriteLine(beers[0]);
+                    WriteLine(productList[0]);
                     //Use the classes to string method to make a print out of the details
                     ReadKey();
                     Clear();
-                    
-                    beerCount++;
+
+                    productCount++;
                     Clear();
                 }
-             //end of outer loop
+                //end of outer loop
             } while (choice == "1");
-            WriteLine("you've entered " + beerCount + " beers");
-            WriteLine("Fetching amount of beers in array " + beers.Count);
+            WriteLine("you've entered " + productCount + " " + changeableProduct + "s");
+            WriteLine("Fetching amount of productList. in array " + productList.Count);
+            ReadKey();
 
-            
-            foreach(string beer in beers)
+
+            foreach (string beer in productList)
             {
                 WriteLine("Test");
                 WriteLine(beer.ToString());
             }
             ReadKey();
-            }
-
-        //Refactor productAdding - layout all the variables that could be dynamic
-   
+        }
     }
-
-        //    Verify that it's all correct
-
-        //2.  Ask User if they want to enter a beer in
-
-        //    Ask for info and verify
-
-        //3.  Keep in a loop and continue asking, until user types exit
-
-        //4.  Print all the types
-
-        //5.  **Bonus - make this downloadable**
-
-        //6
-    }
-
+        
+}

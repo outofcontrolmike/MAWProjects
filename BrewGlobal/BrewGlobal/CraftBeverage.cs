@@ -33,7 +33,7 @@ namespace BrewGlobal
             set;
         }
 
-        double Size
+        string Size
         {
             get;
             set;

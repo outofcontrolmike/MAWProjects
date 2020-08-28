@@ -8,8 +8,9 @@ namespace BrewGlobal
         {
             Console.WriteLine("Thank you for chosing Brew Global!\n");
 
-            CompanyQuestions();
-            //EnterBeer();
+            //CompanyQuestions();
+            AddProduct("beer");
+            Console.ReadKey();
         }
     }
 }
