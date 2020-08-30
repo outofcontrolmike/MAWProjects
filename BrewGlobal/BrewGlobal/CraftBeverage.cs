@@ -57,7 +57,6 @@ namespace BrewGlobal
             set;
         }
 
-        
-
+       
     }
 }

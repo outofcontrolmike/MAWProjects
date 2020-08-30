@@ -51,22 +51,18 @@ namespace BrewGlobal
             WriteLine("\nTesting Company object's property of " + noun + " = " + objectProperty);
             ReadKey();
         }//End co info
-        public static void ShortCutQuestion(string first, string buildObject)
+        public static void ShortCutQuestion(string first)
         {
             string decision;
             do
             {
-                WriteLine("\n" + first);
+                WriteLine("\n" + first +"\n");
                 string noun = ReadLine();
                 Clear();
-                WriteLine("\n" + noun.ToUpper() + "\n\nIs this correct?\n");
+                WriteLine("\n" + "Is " + noun + " correct?\n");
                 WriteLine("press 1 to continue, press 2 to edit your entry.\n");
                 decision = ReadLine();
-                Clear();
-                buildObject = noun;
-                Console.WriteLine("Testing printing object properties");
-                Console.WriteLine(buildObject);
-                ReadKey();
+                Clear();        
             } while (decision != "1");
             // beer[i].first = ;
 
@@ -153,42 +149,49 @@ namespace BrewGlobal
             List<string> productList = new List<string>();
             do
             {
-                WriteLine("Press 1 to enter a " + changeableProduct + "  Press any other key to exit\n");
+                WriteLine("Press 1 to enter a " + changeableProduct + "  Press any other key to exit\n\n");
                 choice = ReadLine();
+                WriteLine(choice);
                 if (choice == "1")
                 {
                     // instantiate a new product object each time an is entered
                     Beer product = new Beer();
                     Clear();
                     //name
-                    ShortCutQuestion("What is the name of this " + changeableProduct + "?", product.Title);
+                    ShortCutQuestion("What is the name of this " + changeableProduct + "?");
+                    
                     string name = product.Title;
                     //Type
-                    ShortCutQuestion("What type of " + changeableProduct + " is this? ", product.Type);
+                    ShortCutQuestion("What type of " + changeableProduct + " is this? ");
                     string type = product.Type;
                     //ABV
-                    ShortCutQuestion("How much alcohol content will this " + changeableProduct + " contain?", product.Abv.ToString());
+                    ShortCutQuestion("How much alcohol content will this " + changeableProduct + " contain?");
                     double abv = product.Abv;
                     //Pairngs
-                    ShortCutQuestion("What food does this " + changeableProduct + " compliment?  (Pairngs)", product.Parings);
+                    ShortCutQuestion("What food does this " + changeableProduct + " compliment?  (Pairngs)");
                     string parings = product.Parings;
                     //Sizes
-                    ShortCutQuestion("What sizes will this" + changeableProduct + " be avaialbe in? List in values seperated by commas please. ", product.Size);
+                    ShortCutQuestion("What sizes will this" + changeableProduct + " be avaialbe in? List in values seperated by commas please. ");
                     string size = product.Size;
                     ReadKey();
                     //Color
-                    ShortCutQuestion("What color does this " + changeableProduct + " appear to be?", product.Color);
+                    ShortCutQuestion("What color does this " + changeableProduct + " appear to be?");
                     string color = product.Color;
                     //Ingredients
-                    ShortCutQuestion("What are the ingredients of this craft?", product.Ingredients);
+                    ShortCutQuestion("What are the ingredients of this craft?");
                     string ingredients = product.Ingredients;
                     //Price
-                    ShortCutQuestion("What will the pricing be for this " + changeableProduct + "? " + "\n\n Here is a list of the sizes you listed earlier\n { " + product.Size +  " }\nList in values seperated by commas please", product.Price.ToString());
+                    ShortCutQuestion("What will the pricing be for this " + changeableProduct + "? " + "\n\n Here is a list of the sizes you listed earlier\n { " + product.Size +  " }\nList in values seperated by commas please");
                     double price = product.Price;
                     ReadKey();
 
+                    Clear();
+                    //Testing of product stuff
+
                     //Create object by instantiating a new beer and passing the parameters to constructor
                     Beer beerBuilder = new Beer(name, type, abv, parings, size, color, ingredients, price);
+                    beerBuilder.ToString();
+                    ReadKey();
                     //add beerBuilder to an array
                     productList.Add(beerBuilder.ToString());
 

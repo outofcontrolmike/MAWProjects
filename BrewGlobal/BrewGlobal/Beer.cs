@@ -74,5 +74,11 @@ namespace BrewGlobal
             set;
         }
 
+        public override string ToString()
+        {
+            return Title + Type + Abv + Parings + Size + Color + Ingredients + Price;
+
+        }
+
     }
 }
