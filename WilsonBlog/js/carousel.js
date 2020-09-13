@@ -29,18 +29,32 @@ var bryceAlbum = document.getElementById("bryceImg").addEventListener('click',br
 var yosemiteAlbum = document.getElementById("yosemiteImg").addEventListener('click',yosemite);
 var wilsonsAlbum = document.getElementById("wilsonsImg").addEventListener('click',wilsonsCreek);
 
+var imgSwap,imgSwap2,imgSwap3,imgSwap4;
+
+imgSwap = document.getElementById('imgSwap');
+imgSwap2 = document.getElementById('imgSwap2');
+imgSwap3 = document.getElementById('imgSwap3');
+imgSwap4 = document.getElementById('imgSwap4');
+
 //replace album information
 function grandCanyonInfo(){
 
     name.innerHTML = names[0];
     description.innerHTML = desc[0];
     console.log('test');
+
+    imgSwap.src = "../html/img/grandcanyon.JPG";
+    imgSwap2.src = "../html/img/grand2.jpg";
+    imgSwap3.src = "../html/img/grand3.jpg";
     //Figure out how to set images in carrousel through DOM Manipulation
 }
 
 function bryceCanyon(){
     name.innerHTML = names[1];
     description.innerHTML = desc[1];
+    imgSwap.src = "../html/img/bryce.jpg";
+    imgSwap2.src = "../html/img/bryce2.jpg";
+    imgSwap3.src = "../html/img/bryce3.jpg";
     console.log('test');
 }
 
@@ -48,6 +62,9 @@ function yosemite(){
     name.innerHTML = names[2];
     description.innerHTML = desc[2];
     console.log('test');
+    imgSwap.src = "../html/img/yos1.jpg";
+    imgSwap2.src = "../html/img/yos2.jpg";
+    imgSwap3.src = "../html/img/yos3";
 }
 
 function wilsonsCreek(){
