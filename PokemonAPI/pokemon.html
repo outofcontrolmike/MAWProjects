@@ -12,17 +12,37 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+
+    <style>
+      .myCard {
+        vertical-align: middle;
+        border-width: unset;
+        border-radius: 3%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+        .container {
+          background-color: ghostwhite;;
+        }
+      body {
+        background-color:papayawhip;
+      }
+    </style>
   </head>
 
   <body>
     <div class="container">
-      <div class="row">
-        <div class="title container col-12 text-center border border-dark mb-4">
-          <h1 class="display1">This will be the heading of the page</h1>
+      <div class="row border border-dark mb-4">
+        <div class="col-1">
+          <img class="mt-2 mr-4"src="pk.png" style="width:25px; height:25px;"></img>
+        </div>
+        <div class="title col-11">
+          <h1 class=>This will be the heading of the page</h1>
         </div>
       </div>
       <div class="row mb-4 border border-danger">
-        <div class="col-9">
+        <div class="col-8">
           <div class="input-group mb-4 mt-4">
             <div class="input-group-prepend">
               <span class="input-group-text" id="entry"
@@ -37,30 +57,45 @@
               aria-describedby="entry"
             />
           </div>
-          <button type="button" class="btn btn-outline-primary btn-lg">
+          <button
+            id="catchID"
+            type="button"
+            class="btn btn-outline-primary btn-lg"
+          >
             Catch ID
           </button>
-          <button type="button" class="btn btn-outline-secondary btn-lg">
+          <button
+            id="catchList"
+            type="button"
+            class="btn btn-outline-secondary btn-lg"
+          >
             Catch a list
           </button>
-          <button type="button" class="btn btn-outline-success btn-lg">
+          <button
+            id="catchRandom"
+            type="button"
+            class="btn btn-outline-success btn-lg"
+          >
             Catch a random list
           </button>
         </div>
         <!--Example Card-->
-        <div class="col-3 mb-3 mt-4">
-          <div class="card">
+        <div class="col-4 mb-3 mt-4">
+          <div class="card border border-dark myCard">
             <img
               id="pImg"
               class="img-top-card"
-              style=" height:250px; width:250px;"
+              style=""
               src="likitongue.jpg"
               alt="card_Image_caption"
             />
             <div class="card-body">
               <h4 id="pName" class="card-title">Likitongue</h4>
-              <p class="card-text">A weird pokemon from the fist generation. This is a test pokemon.</p>
-              <a href="#" class="btn btn-outline-danger">View Stats</a>
+              <p class="card-text">
+                A weird pokemon from the fist generation. This is a test
+                pokemon.
+              </p>
+              <a id="getStats" href="#" class="btn btn-warning">View Stats</a>
             </div>
           </div>
         </div>

@@ -15,3 +15,10 @@ function fetchKantoPokemon(){
   }
 
   console.log(fetchKantoPokemon());
+
+
+//Grab pokemon 
+
+function fetchID() {
+  
+}
