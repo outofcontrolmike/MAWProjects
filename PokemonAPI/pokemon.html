@@ -3,46 +3,87 @@
 <!-- Michael Wilson's Great Race project-->
 <!-- 09/14/2020-->
 <html>
-
-<head>
-    <meta charset = "UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Pokemon API</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"/>
-</head>
+      crossorigin="anonymous"
+    />
+  </head>
 
-
-<body>  
-    <div class="row">
+  <body>
+    <div class="container">
+      <div class="row">
         <div class="title container col-12 text-center border border-dark mb-4">
-           <h1 class="display1">This will be the heading of the page</h1>
+          <h1 class="display1">This will be the heading of the page</h1>
         </div>
-    </div>      
-       <div class="row mb-4 border border-danger">
-           <div class="col-10">
-               <h4>The input search will go here and buttons</h4>
-           </div>
-           <div class="col-2">
-            <h4>This will be the example pokemon card</h4>
+      </div>
+      <div class="row mb-4 border border-danger">
+        <div class="col-9">
+          <div class="input-group mb-4 mt-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="entry"
+                >Enter Pokemon ID or Number of catches</span
+              >
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="....try me out please!"
+              aria-label="....try me out please!"
+              aria-describedby="entry"
+            />
+          </div>
+          <button type="button" class="btn btn-outline-primary btn-lg">
+            Catch ID
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-lg">
+            Catch a list
+          </button>
+          <button type="button" class="btn btn-outline-success btn-lg">
+            Catch a random list
+          </button>
         </div>
-       </div>
-
-       <div class="row text-center mt-4 border border-success">
-               <div class="col-4">
-                   card 1
-               </div>
-               <div class="col-4">
-                card 2
+        <!--Example Card-->
+        <div class="col-3 mb-3 mt-4">
+          <div class="card">
+            <img
+              id="pImg"
+              class="img-top-card"
+              style=" height:250px; width:250px;"
+              src="likitongue.jpg"
+              alt="card_Image_caption"
+            />
+            <div class="card-body">
+              <h4 id="pName" class="card-title">Likitongue</h4>
+              <p class="card-text">A weird pokemon from the fist generation. This is a test pokemon.</p>
+              <a href="#" class="btn btn-outline-danger">View Stats</a>
             </div>
-            <div class="col-4">
-                card 3
-            </div>
-       </div>
+          </div>
+        </div>
+      </div>
 
-       <script src="pokemon.js"></script>
-       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+      <div class="row text-center mt-4 border border-success">
+        <div class="col-4">
+          card 1
+        </div>
+        <div class="col-4">
+          card 2
+        </div>
+        <div class="col-4">
+          card 3
+        </div>
+      </div>
+    </div>
+
+    <script src="pokemon.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
