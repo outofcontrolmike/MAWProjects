@@ -1,5 +1,12 @@
-//Need to make a xml request to access this api
+//variables
+var list = document.getElementById('test');
+var buttonToggle = document.getElementById("getKanto")
+//event listeners
+document.getElementById('getKanto').addEventListener("click",getPokemon);
+document.getElementById('clear').addEventListener("click",clearList);
+document.getElementById('catchOne').addEventListener("click",getSingle);
 
+//Need to make a xml request to access this api
 //1.  Set up our request to grab data and then return it
 
 //Builds a request for accessing the api. Passes in "Get and the url as a paramter in the Requests open method.  Then sends.  "
@@ -25,18 +32,27 @@ http.onreadystatechange = (e) => {
 // use the then method again and pass in an anyonmys function that expects - allPokemon as a parameter
 // within the method use the results property of the allPokemon parameter and call a for each method(pass in another anoynmous function(pokemon) and call fetchpkomeon fucntion with pokemon as a parameter)
 
+function getSingle() {
+    
+    fetch('https://pokeapi.co/api/v2/pokemon/141')
+    .then(response => response.json())
+    .then(function(single){
+        single.results.forEach(function(single){
+            fetchSingle(single);
+    })
+})
+console.log("passed through single");
+}
+
 function getPokemon(){
     fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
     .then(response => response.json())
     .then(function(allPokemon){
         allPokemon.results.forEach(function(pokemon){
-            fetchPokemonData(pokemon);
+            fetchPokemonData(pokemon);            
         })
     })
 }
-
-getPokemon();
-
 
 //2nd function
 
@@ -53,6 +69,19 @@ function fetchPokemonData(pokemon) {
     .then(response => response.json())
     .then(function(pokeData){
         renderPokemon(pokeData);
+
+        
+    })
+}
+
+function fetchSingle(pokemon) {
+    let url = pokemon.url;
+    fetch(url)
+    .then(response => response.json())
+    .then(function(pokeData){
+        createSingle(pokeData);
+
+        
     })
 }
 
@@ -75,10 +104,26 @@ function renderPokemon(pokeData) {
     var pokeContainer = document.createElement("div");
     var pokeName = document.createElement('h3');
     var pokeId = document.createElement('p');
-
     pokeName.innerHTML = pokeData.name;
     pokeId.innerHTML = `#${pokeData.id}`;
 
     pokeContainer.append(pokeName,pokeId);
     container.appendChild(pokeContainer);
+    buttonToggle.disabled = true;
+} 
+
+function createSingle(pokeData) {
+    document.getElementById('pImg').src = "";
+    document.getElementById('pName').innerHTML = pokeData.name;
+    document.getElementById('id').innerHTML = `#${pokeData.id}`;
+    document.getElementById('ptype').innerHTML = pokeData.type;
+    document.getElementById('height').innerHTML = "Height";
+    document.getElementById('generation').innerHTML = "Kanto";
+    document.getElementById('bestMoves').innerHTML = "Fire Punch";
+}
+
+function clearList()
+{
+    document.getElementById('test').innerHTML= "";
+    buttonToggle.disabled = false;
 }

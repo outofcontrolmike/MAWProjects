@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-
-<!-- Michael Wilson's Great Race project-->
 <!-- 09/14/2020-->
+
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -58,11 +57,18 @@
             />
           </div>
           <button
-            id="catchID"
+            id="catchOne"
             type="button"
             class="btn btn-outline-primary btn-lg"
           >
             Catch ID
+          </button>
+          <button
+            id="getKanto"
+            type="button"
+            class="btn btn-outline-warning btn-lg"
+          >
+            Catch 151 Kanto
           </button>
           <button
             id="catchList"
@@ -78,6 +84,13 @@
           >
             Catch a random list
           </button>
+          <button
+          id="clear"
+          type="button"
+          class="btn btn-outline-danger btn-lg"
+        >
+          Clear List
+        </button>
         </div>
         <!--Example Card-->
         <div class="col-4 mb-3 mt-4" id="poke-container">
@@ -91,11 +104,22 @@
             />
             <div class="card-body">
               <h4 id="pName" class="card-title">Likitongue</h4>
-              <p class="card-text">
-                A weird pokemon from the fist generation. This is a test
-                pokemon.
+              <h5 id="pkId" class="card-title">Id</h5>
+              <p class="card-text" id="pName">
+                Pokemon's Name
               </p>
-              <a id="getStats" href="#" class="btn btn-warning">View Stats</a>
+              <p class="card-text" id="pType">
+                Type:
+              </p>
+              <p class="card-text" id="height">
+                Height:
+              </p>
+              <p class="card-text" id="generation">
+                Generation:
+              </p>
+              <p class="card-text" id="bestMoves">
+                Best Moves:
+              </p>
             </div>
           </div>
         </div>
