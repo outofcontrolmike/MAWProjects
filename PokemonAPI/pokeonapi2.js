@@ -1,24 +1,16 @@
 //variables
 var list = document.getElementById('test');
-var buttonToggle = document.getElementById("getKanto")
+var toggleID = document.getElementById("catchOne");
+var toggleCatch = document.getElementById("catchList");
+var input = document.getElementById('searchValue').value;
 //event listeners
-document.getElementById('getKanto').addEventListener("click",getPokemon);
+document.getElementById('catchRandom').addEventListener("click",catchRandom);
+document.getElementById('catchList').addEventListener("click",catchList);
 document.getElementById('clear').addEventListener("click",clearList);
-document.getElementById('catchOne').addEventListener("click",getSingle);
+document.getElementById('catchOne').addEventListener("click",catchSingle);
 
 //Need to make a xml request to access this api
 //1.  Set up our request to grab data and then return it
-
-//Builds a request for accessing the api. Passes in "Get and the url as a paramter in the Requests open method.  Then sends.  "
-const http = new XMLHttpRequest();
-const url = "https://pokeapi.co/api/v2/pokemon/141";
-http.open("GET", url);
-http.send();
-
-// checking the on Ready state, if it's envokable.  Log the response of the object
-http.onreadystatechange = (e) => {
-    console.log(http.responseText);
-}
 
 //*****************************************************************************
 //2. We want to get all pokemon and access to their data
@@ -32,27 +24,47 @@ http.onreadystatechange = (e) => {
 // use the then method again and pass in an anyonmys function that expects - allPokemon as a parameter
 // within the method use the results property of the allPokemon parameter and call a for each method(pass in another anoynmous function(pokemon) and call fetchpkomeon fucntion with pokemon as a parameter)
 
-function getSingle() {
-    
-    fetch('https://pokeapi.co/api/v2/pokemon/141')
+function catchSingle() {
+    var input = document.getElementById('searchValue').value;
+    console.log(input);
+    fetch('https://pokeapi.co/api/v2/pokemon/' + input + "/")
     .then(response => response.json())
-    .then(function(single){
-        single.results.forEach(function(single){
-            fetchSingle(single);
-    })
+    .then(function(pokemon){
+        createSingle(pokemon);            
+
 })
-console.log("passed through single");
 }
 
-function getPokemon(){
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+//Catch up to a certain value
+function catchList() {
+    console.log();
+    var input = document.getElementById('searchValue').value;
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=' + input)
     .then(response => response.json())
     .then(function(allPokemon){
-        allPokemon.results.forEach(function(pokemon){
+        console.log(input);
+        console.log("catchList worked");
+        allPokemon.results.forEach(function(pokemon){ 
             fetchPokemonData(pokemon);            
         })
     })
 }
+
+//randomized list
+function catchRandom(){
+    
+    var alg = Math.floor(Math.random(1) * 650); 
+    console.log(alg);
+    console.log("catchRandom Works");
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=' + alg)
+    .then(response => response.json())
+    .then(function(allPokemon){
+        allPokemon.results.forEach(function(pokemon){ 
+            fetchPokemonData(pokemon);            
+        })
+    })
+}
+
 
 //2nd function
 
@@ -109,21 +121,25 @@ function renderPokemon(pokeData) {
 
     pokeContainer.append(pokeName,pokeId);
     container.appendChild(pokeContainer);
-    buttonToggle.disabled = true;
 } 
 
 function createSingle(pokeData) {
     document.getElementById('pImg').src = "";
     document.getElementById('pName').innerHTML = pokeData.name;
-    document.getElementById('id').innerHTML = `#${pokeData.id}`;
+    document.getElementById('id').innerHTML = pokeData.id;
     document.getElementById('ptype').innerHTML = pokeData.type;
-    document.getElementById('height').innerHTML = "Height";
-    document.getElementById('generation').innerHTML = "Kanto";
+    document.getElementById('height').innerHTML = pokeData.height;
+    document.getElementById('generation').innerHTML = pokeData.generation;
     document.getElementById('bestMoves').innerHTML = "Fire Punch";
 }
 
 function clearList()
 {
     document.getElementById('test').innerHTML= "";
-    buttonToggle.disabled = false;
+    document.getElementById('searchValue').value = "";
+    
+}
+
+function setButtons(){
+    toggleCatch,toggleID.disabled = false;
 }
