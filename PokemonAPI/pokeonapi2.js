@@ -6,7 +6,6 @@ var input = document.getElementById("searchValue").value;
 //event listeners
 document.getElementById("catchRandom").addEventListener("click", catchRandom);
 document.getElementById("invertColors").addEventListener("click", invertColors);
-document.getElementById("invertBack").addEventListener("click", invertBack);
 document.getElementById("catchList").addEventListener("click", catchList);
 document.getElementById("clear").addEventListener("click", clearList);
 document.getElementById("catchOne").addEventListener("click", catchSingle);
@@ -38,7 +37,7 @@ function catchSingle() {
 
 //Catch up to a certain value
 function catchList() {
-  console.log();
+  console.log("catchList was hit");
   var input = document.getElementById("searchValue").value;
   fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
     .then((response) => response.json())
@@ -121,9 +120,9 @@ function renderPokemon(pokeData) {
 function createSingle(pokeData) {
   document.getElementById("pImg").src = "";
   document.getElementById("pName").innerHTML = pokeData.name;
-  document.getElementById("id").innerHTML = pokeData.id;
-  document.getElementById("ptype").innerHTML = pokeData.type;
-  document.getElementById("height").innerHTML = pokeData.height;
+  document.getElementById("pkId").innerText = `#${pokeData.id}`;
+  document.getElementById("height").innerHTML = `${pokeData.base_experience}`;
+  document.getElementById("pType").innerHTML = pokeData.type;
   document.getElementById("generation").innerHTML = pokeData.generation;
   document.getElementById("bestMoves").innerHTML = "Fire Punch";
 }
