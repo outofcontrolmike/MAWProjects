@@ -1,13 +1,15 @@
 //variables
-var list = document.getElementById('test');
+var list = document.getElementById("test");
 var toggleID = document.getElementById("catchOne");
 var toggleCatch = document.getElementById("catchList");
-var input = document.getElementById('searchValue').value;
+var input = document.getElementById("searchValue").value;
 //event listeners
-document.getElementById('catchRandom').addEventListener("click",catchRandom);
-document.getElementById('catchList').addEventListener("click",catchList);
-document.getElementById('clear').addEventListener("click",clearList);
-document.getElementById('catchOne').addEventListener("click",catchSingle);
+document.getElementById("catchRandom").addEventListener("click", catchRandom);
+document.getElementById("invertColors").addEventListener("click", invertColors);
+document.getElementById("invertBack").addEventListener("click", invertBack);
+document.getElementById("catchList").addEventListener("click", catchList);
+document.getElementById("clear").addEventListener("click", clearList);
+document.getElementById("catchOne").addEventListener("click", catchSingle);
 
 //Need to make a xml request to access this api
 //1.  Set up our request to grab data and then return it
@@ -25,46 +27,43 @@ document.getElementById('catchOne').addEventListener("click",catchSingle);
 // within the method use the results property of the allPokemon parameter and call a for each method(pass in another anoynmous function(pokemon) and call fetchpkomeon fucntion with pokemon as a parameter)
 
 function catchSingle() {
-    var input = document.getElementById('searchValue').value;
-    console.log(input);
-    fetch('https://pokeapi.co/api/v2/pokemon/' + input + "/")
-    .then(response => response.json())
-    .then(function(pokemon){
-        createSingle(pokemon);            
-
-})
+  var input = document.getElementById("searchValue").value;
+  console.log(input);
+  fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
+    .then((response) => response.json())
+    .then(function(pokemon) {
+      createSingle(pokemon);
+    });
 }
 
 //Catch up to a certain value
 function catchList() {
-    console.log();
-    var input = document.getElementById('searchValue').value;
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=' + input)
-    .then(response => response.json())
-    .then(function(allPokemon){
-        console.log(input);
-        console.log("catchList worked");
-        allPokemon.results.forEach(function(pokemon){ 
-            fetchPokemonData(pokemon);            
-        })
-    })
+  console.log();
+  var input = document.getElementById("searchValue").value;
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
+    .then((response) => response.json())
+    .then(function(allPokemon) {
+      console.log(input);
+      console.log("catchList worked");
+      allPokemon.results.forEach(function(pokemon) {
+        fetchPokemonData(pokemon);
+      });
+    });
 }
 
 //randomized list
-function catchRandom(){
-    
-    var alg = Math.floor(Math.random(1) * 650); 
-    console.log(alg);
-    console.log("catchRandom Works");
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=' + alg)
-    .then(response => response.json())
-    .then(function(allPokemon){
-        allPokemon.results.forEach(function(pokemon){ 
-            fetchPokemonData(pokemon);            
-        })
-    })
+function catchRandom() {
+  var alg = Math.floor(Math.random(1) * 650);
+  console.log(alg);
+  console.log("catchRandom Works");
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=" + alg)
+    .then((response) => response.json())
+    .then(function(allPokemon) {
+      allPokemon.results.forEach(function(pokemon) {
+        fetchPokemonData(pokemon);
+      });
+    });
 }
-
 
 //2nd function
 
@@ -76,25 +75,21 @@ function catchRandom(){
 // create an anonomys function that calls renderPokemon data - * be sure to create renderPokemon
 
 function fetchPokemonData(pokemon) {
-    let url = pokemon.url;
-    fetch(url)
-    .then(response => response.json())
-    .then(function(pokeData){
-        renderPokemon(pokeData);
-
-        
-    })
+  let url = pokemon.url;
+  fetch(url)
+    .then((response) => response.json())
+    .then(function(pokeData) {
+      renderPokemon(pokeData);
+    });
 }
 
 function fetchSingle(pokemon) {
-    let url = pokemon.url;
-    fetch(url)
-    .then(response => response.json())
-    .then(function(pokeData){
-        createSingle(pokeData);
-
-        
-    })
+  let url = pokemon.url;
+  fetch(url)
+    .then((response) => response.json())
+    .then(function(pokeData) {
+      createSingle(pokeData);
+    });
 }
 
 //Functionallity for rendering the pokemon data
@@ -112,34 +107,52 @@ function fetchSingle(pokemon) {
 // append the pokecontainer to the container variable
 
 function renderPokemon(pokeData) {
-    let container = document.getElementById('test');
-    var pokeContainer = document.createElement("div");
-    var pokeName = document.createElement('h3');
-    var pokeId = document.createElement('p');
-    pokeName.innerHTML = pokeData.name;
-    pokeId.innerHTML = `#${pokeData.id}`;
+  let container = document.getElementById("test");
+  var pokeContainer = document.createElement("div");
+  var pokeName = document.createElement("h3");
+  var pokeId = document.createElement("p");
+  pokeName.innerHTML = pokeData.name;
+  pokeId.innerHTML = `#${pokeData.id}`;
 
-    pokeContainer.append(pokeName,pokeId);
-    container.appendChild(pokeContainer);
-} 
+  pokeContainer.append(pokeName, pokeId);
+  container.appendChild(pokeContainer);
+}
 
 function createSingle(pokeData) {
-    document.getElementById('pImg').src = "";
-    document.getElementById('pName').innerHTML = pokeData.name;
-    document.getElementById('id').innerHTML = pokeData.id;
-    document.getElementById('ptype').innerHTML = pokeData.type;
-    document.getElementById('height').innerHTML = pokeData.height;
-    document.getElementById('generation').innerHTML = pokeData.generation;
-    document.getElementById('bestMoves').innerHTML = "Fire Punch";
+  document.getElementById("pImg").src = "";
+  document.getElementById("pName").innerHTML = pokeData.name;
+  document.getElementById("id").innerHTML = pokeData.id;
+  document.getElementById("ptype").innerHTML = pokeData.type;
+  document.getElementById("height").innerHTML = pokeData.height;
+  document.getElementById("generation").innerHTML = pokeData.generation;
+  document.getElementById("bestMoves").innerHTML = "Fire Punch";
 }
 
-function clearList()
-{
-    document.getElementById('test').innerHTML= "";
-    document.getElementById('searchValue').value = "";
-    
+function clearList() {
+  document.getElementById("test").innerHTML = "";
+  document.getElementById("searchValue").value = "";
 }
 
-function setButtons(){
-    toggleCatch,toggleID.disabled = false;
+function setButtons() {
+  toggleCatch, (toggleID.disabled = false);
+}
+
+function invertColors() {
+  console.log("hello");
+  document.getElementById("background").style.backgroundColor = "black";
+  document.getElementById("background2").style.backgroundColor = "black";
+  document.getElementById("h1").style.color = "red";
+  var change = document.getElementById("invertColors");
+  change.id = "invertBack";
+  console.log(change.id);
+}
+
+function invertBack() {
+
+    console.log("made it here");
+    var change = document.getElementById("invertBack");
+  change.id = "invertColors";
+  document.getElementById("background").style.backgroundColor = "white";
+  document.getElementById("background2").style.backgroundColor = "white";
+  document.getElementById("h1").style.color = "black";
 }

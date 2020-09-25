@@ -25,19 +25,19 @@
           background-color: ghostwhite;;
         }
       body {
-        background-color:papayawhip;
+        background-color:white;
       }
     </style>
   </head>
 
-  <body>
-    <div class="container">
+  <body id="background">
+    <div class="container" id="background2">
       <div class="row border border-dark mb-4">
         <div class="col-1">
           <img class="mt-2 mr-4"src="pk.png" style="width:25px; height:25px;"></img>
         </div>
         <div class="title col-11">
-          <h1 class=>This will be the heading of the page</h1>
+          <h1 id="h1"class="h1">This will be the heading of the page</h1>
         </div>
       </div>
       <div class="row mb-4 border border-danger">
@@ -85,6 +85,13 @@
         >
           Clear List
         </button>
+        <button
+        id="invertColors"
+        type="button"
+        class="btn btn-outline-warning btn-lg"
+      >
+        Invert Colors
+      </button>
         </div>
         <!--Example Card-->
         <div class="col-4 mb-3 mt-4" id="poke-container">
@@ -99,19 +106,19 @@
             <div class="card-body">
               <h4 id="pName" class="card-title">Likitongue</h4>
               <h5 id="pkId" class="card-title">Id</h5>
-              <p class="card-text" id="pName">
+              <p class="card-text" id="pName p">
                 Pokemon's Name
               </p>
-              <p class="card-text" id="pType">
+              <p class="card-text" id="pType p">
                 Type:
               </p>
-              <p class="card-text" id="height">
+              <p class="card-text" id="height p">
                 Height:
               </p>
-              <p class="card-text" id="generation">
+              <p class="card-text" id="generation p">
                 Generation:
               </p>
-              <p class="card-text" id="bestMoves">
+              <p class="card-text" id="bestMoves p">
                 Best Moves:
               </p>
             </div>
@@ -120,10 +127,10 @@
       </div>
 
       <div class="row text-center mt-4 border border-success">
-        <div class="col-4">
+        <div class="col-4 p">
           card 1
         </div>
-        <div class="col-4">
+        <div class="col-4 p">
           card 2
         </div>
         <div class="col-4">
