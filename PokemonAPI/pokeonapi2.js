@@ -39,6 +39,8 @@ function catchSingle() {
 function catchList() {
   console.log("catchList was hit");
   var input = document.getElementById("searchValue").value;
+  console.log(input.value);
+  if(input > 0 ) {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
     .then((response) => response.json())
     .then(function(allPokemon) {
@@ -48,6 +50,16 @@ function catchList() {
         fetchPokemonData(pokemon);
       });
     });
+      input.value = "";
+      document.getElementById("searchValue").value = "";
+
+}
+else {
+  alert("Please enter a value over 0",)
+  input.value = "";
+  document.getElementById("searchValue").value = "";
+
+}
 }
 
 //randomized list
