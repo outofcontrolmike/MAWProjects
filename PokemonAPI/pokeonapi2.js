@@ -37,6 +37,7 @@ function catchSingle() {
     document.getElementById("searchValue").value = "";
 
 }
+
 else {
   alert("Please enter a value over 0",)
   input.value = "";
@@ -96,6 +97,7 @@ function catchRandom() {
 // create an anonomys function that calls renderPokemon data - * be sure to create renderPokemon
 
 function fetchPokemonData(pokemon) {
+ 
   let url = pokemon.url;
   fetch(url)
     .then((response) => response.json())
@@ -140,7 +142,8 @@ function renderPokemon(pokeData) {
 }
 
 function createSingle(pokeData) {
-  document.getElementById("pImg").src = "";
+  document.getElementById("pImg").src = `https://pokeres.bastionbot.org/images/pokemon/${pokeData}.png`;
+
   document.getElementById("pName").innerHTML = pokeData.name;
   document.getElementById("pkId").innerText = `#${pokeData.id}`;
   document.getElementById("height").innerHTML = `${pokeData.base_experience}`;
