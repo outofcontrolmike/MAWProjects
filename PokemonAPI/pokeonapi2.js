@@ -28,11 +28,21 @@ document.getElementById("catchOne").addEventListener("click", catchSingle);
 function catchSingle() {
   var input = document.getElementById("searchValue").value;
   console.log(input);
+  if(input > 0) {
   fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
     .then((response) => response.json())
     .then(function(pokemon) {
       createSingle(pokemon);
     });
+    document.getElementById("searchValue").value = "";
+
+}
+else {
+  alert("Please enter a value over 0",)
+  input.value = "";
+  document.getElementById("searchValue").value = "";
+
+}
 }
 
 //Catch up to a certain value
