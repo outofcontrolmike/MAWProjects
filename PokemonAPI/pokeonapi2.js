@@ -23,12 +23,12 @@ document.getElementById("catchOne").addEventListener("click", catchSingle);
 // create a function name getPokemon.  fetch the following url using the fetch method - https://pokeapi.co/api/v2/pokemon?limit=151
 // use the then method to turn that response into json
 // use the then method again and pass in an anyonmys function that expects - allPokemon as a parameter
-// within the method use the results property of the allPokemon parameter and call a for each method(pass in another anoynmous function(pokemon) and call fetchpkomeon fucntion with pokemon as a parameter)
+// within the method use the results property of the allPokemon parameter and call a for each method(pass in another anoynmous function(pokemon) and call fetchpkomeon fucntion with pokemon as a parameter
 
 function catchSingle() {
   var input = document.getElementById("searchValue").value;
   console.log(input);
-  if(input > 0) {
+  if(input > 0 && input <= 893) {
   fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
     .then((response) => response.json())
     .then(function(pokemon) {
@@ -38,13 +38,34 @@ function catchSingle() {
 
 }
 
+if(input != "") {
+  var LowerInput = input.toLowerCase(0);
+  console.log(input);
+  fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
+    .then((response) => response.json())
+    .then(function(pokemon) {
+      createSingle(pokemon);
+    });
+    document.getElementById("searchValue").value = "";
+}
+
 else {
-  alert("Please enter a value over 0",)
+  if(input <= 0) {
+  alert("Please enter a value over 0");
+  }
+  else if(input >= 894) {
+    alert("Please enter a value lesser than 893");
+  }
+  else {
+    alert("Please enter pokemons name correctly.")
+  }
   input.value = "";
   document.getElementById("searchValue").value = "";
 
 }
-}
+}//end catchSingle
+
+
 
 //Catch up to a certain value
 function catchList() {
@@ -53,7 +74,7 @@ function catchList() {
   console.log(input.value);
   if(input > 0 ) {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
-    .then((response) => response.json())
+    .then((response) => response.json ())
     .then(function(allPokemon) {
       console.log(input);
       console.log("catchList worked");
@@ -144,12 +165,15 @@ function renderPokemon(pokeData) {
 function createSingle(pokeData) {
   document.getElementById("pImg").src = `https://pokeres.bastionbot.org/images/pokemon/${pokeData}.png`;
 
+  //convert decimeters to feet and Hectometers for weight
+  var heightMath = (pokeData.height / 3.048).toFixed(2);
+  var weightMath = (pokeData.weight / 4.536).toFixed(2);
   document.getElementById("pName").innerHTML = pokeData.name;
   document.getElementById("pkId").innerText = `#${pokeData.id}`;
-  document.getElementById("height").innerHTML = `${pokeData.base_experience}`;
-  document.getElementById("pType").innerHTML = pokeData.type;
-  document.getElementById("generation").innerHTML = pokeData.generation;
-  document.getElementById("bestMoves").innerHTML = "Fire Punch";
+  document.getElementById("pType").innerHTML = "Types: " + pokeData.types.map(el => el.type.name);
+  document.getElementById("height").innerHTML ="Height: " + heightMath + " Feet";
+  document.getElementById("generation").innerHTML = "Weight: " + weightMath + " lbs";
+  document.getElementById("bestMoves").innerHTML = "";  //Figure out another thing to map
 }
 
 function clearList() {
