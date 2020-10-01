@@ -151,14 +151,27 @@ function fetchSingle(pokemon) {
 // append the pokecontainer to the container variable
 
 function renderPokemon(pokeData) {
+  
+  var heightMath = (pokeData.height / 3.048).toFixed(2);
+  var weightMath = (pokeData.weight / 4.536).toFixed(2);
+  var baseStat = pokeData.base_experience;
+
   let container = document.getElementById("test");
-  var pokeContainer = document.createElement("div");
+  let pokeContainer = document.createElement("div");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
+  var poketypes = document.createElement("p");
+  var pokeHeight = document.createElement("p");
+  var pokeWeight = document.createElement("p");
+  var baseStats = document.createElement("p");
+
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
-
-  pokeContainer.append(pokeName, pokeId);
+  poketypes.innerHTML = "Types: " + pokeData.types.map(el => el.type.name);
+  pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
+  pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
+  baseStats.innerHTML =  "Base Stat: " + baseStat;
+  pokeContainer.append(pokeName, pokeId, poketypes, pokeHeight, pokeWeight, baseStats);
   container.appendChild(pokeContainer);
 }
 
@@ -168,12 +181,14 @@ function createSingle(pokeData) {
   //convert decimeters to feet and Hectometers for weight
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
+  var baseStat = pokeData.base_experience;
+  console.log(baseStat);
   document.getElementById("pName").innerHTML = pokeData.name;
   document.getElementById("pkId").innerText = `#${pokeData.id}`;
   document.getElementById("pType").innerHTML = "Types: " + pokeData.types.map(el => el.type.name);
   document.getElementById("height").innerHTML ="Height: " + heightMath + " Feet";
   document.getElementById("generation").innerHTML = "Weight: " + weightMath + " lbs";
-  document.getElementById("bestMoves").innerHTML = "";  //Figure out another thing to map
+  document.getElementById("bestMoves").innerHTML = "Base Stat: " + baseStat ;  
 }
 
 function clearList() {
