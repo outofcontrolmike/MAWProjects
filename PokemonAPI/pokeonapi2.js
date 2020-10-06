@@ -133,7 +133,9 @@ function fetchSingle(pokemon) {
     .then((response) => response.json())
     .then(function(pokeData) {
       createSingle(pokeData);
-    });
+    })
+    console.log(counter);
+  
 }
 
 //Functionallity for rendering the pokemon data
@@ -158,6 +160,7 @@ function renderPokemon(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
+  var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
   var poketypes = document.createElement("p");
@@ -165,30 +168,46 @@ function renderPokemon(pokeData) {
   var pokeWeight = document.createElement("p");
   var baseStats = document.createElement("p");
 
+  pokeImage.height = "250";
+  pokeImage.width = "250";
+
+  //image
+    //image for pokemon
+    var pkId = pokeData.id;
+    var pkImg = pokeData.srcset ='https://pokeres.bastionbot.org/images/pokemon/' + pkId +'.png';
+  
+    
+   console.log(pkImg);
+   //end image
+
+  pokeImage.src = pkImg;
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map(el => el.type.name);
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML =  "Base Stat: " + baseStat;
-  pokeContainer.append(pokeName, pokeId, poketypes, pokeHeight, pokeWeight, baseStats);
+  pokeContainer.append(pokeImage, pokeName, pokeId, poketypes, pokeHeight, pokeWeight, baseStats);
   container.appendChild(pokeContainer);
-}
 
+}
 function createSingle(pokeData) {
-  document.getElementById("pImg").src = `https://pokeres.bastionbot.org/images/pokemon/${pokeData}.png`;
+  var pkId = pokeData.id;
+   var pkImg = pokeData.srcset ='https://pokeres.bastionbot.org/images/pokemon/' + pkId +'.png';
+
+  console.log(pkImg);
+  document.getElementById("pImg").src = pkImg;
 
   //convert decimeters to feet and Hectometers for weight
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
   var baseStat = pokeData.base_experience;
-  console.log(baseStat);
   document.getElementById("pName").innerHTML = pokeData.name;
   document.getElementById("pkId").innerText = `#${pokeData.id}`;
   document.getElementById("pType").innerHTML = "Types: " + pokeData.types.map(el => el.type.name);
   document.getElementById("height").innerHTML ="Height: " + heightMath + " Feet";
   document.getElementById("generation").innerHTML = "Weight: " + weightMath + " lbs";
-  document.getElementById("bestMoves").innerHTML = "Base Stat: " + baseStat ;  
+  document.getElementById("bestMoves").innerHTML = "Experience for defeating: " + baseStat ;  
 }
 
 function clearList() {
