@@ -3,6 +3,7 @@ var list = document.getElementById("test");
 var toggleID = document.getElementById("catchOne");
 var toggleCatch = document.getElementById("catchList");
 var input = document.getElementById("searchValue").value;
+var pCount = document.getElementById('count');
 //event listeners
 document.getElementById("catchRandom").addEventListener("click", catchRandom);
 document.getElementById("invertColors").addEventListener("click", invertColors);
@@ -28,76 +29,67 @@ document.getElementById("catchOne").addEventListener("click", catchSingle);
 function catchSingle() {
   var input = document.getElementById("searchValue").value;
   console.log(input);
-  if(input > 0 && input <= 893) {
-  fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
-    .then((response) => response.json())
-    .then(function(pokemon) {
-      createSingle(pokemon);
-    });
+  if (input > 0 && input <= 893) {
+    fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
+      .then((response) => response.json())
+      .then(function(pokemon) {
+        createSingle(pokemon);
+      });
     document.getElementById("searchValue").value = "";
+  }
 
-}
-
-if(input != "") {
-  var LowerInput = input.toLowerCase(0);
-  console.log(input);
-  fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
-    .then((response) => response.json())
-    .then(function(pokemon) {
-      createSingle(pokemon);
-    });
+  else if (input != "") {
+    var LowerInput = input.toLowerCase(0);
+    console.log(input);
+    fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
+      .then((response) => response.json())
+      .then(function(pokemon) {
+        createSingle(pokemon);
+      });
     document.getElementById("searchValue").value = "";
-}
-
-else {
-  if(input <= 0) {
-  alert("Please enter a value over 0");
+  } else {
+    if (input <= 0) {
+      alert("Please enter a value over 0");
+    } else if (input >= 894) {
+      alert("Please enter a value lesser than 893");
+    } else {
+      alert("Please enter pokemons name correctly.");
+    }
+    input.value = "";
+    document.getElementById("searchValue").value = "";
   }
-  else if(input >= 894) {
-    alert("Please enter a value lesser than 893");
-  }
-  else {
-    alert("Please enter pokemons name correctly.")
-  }
-  input.value = "";
-  document.getElementById("searchValue").value = "";
-
-}
-}//end catchSingle
-
-
+} //end catchSingle
 
 //Catch up to a certain value
 function catchList() {
   console.log("catchList was hit");
   var input = document.getElementById("searchValue").value;
   console.log(input.value);
-  if(input > 0 ) {
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
-    .then((response) => response.json ())
-    .then(function(allPokemon) {
-      console.log(input);
-      console.log("catchList worked");
-      allPokemon.results.forEach(function(pokemon) {
-        fetchPokemonData(pokemon);
+  if (input > 0) {
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
+      .then((response) => response.json())
+      .then(function(allPokemon) {
+        console.log(input);
+        pCount.innerHTML = input + " Pokemon caught!";
+        console.log("catchList worked");
+        allPokemon.results.forEach(function(pokemon) {
+          fetchPokemonData(pokemon);
+        });
       });
-    });
-      input.value = "";
-      document.getElementById("searchValue").value = "";
-
-}
-else {
-  alert("Please enter a value over 0",)
-  input.value = "";
-  document.getElementById("searchValue").value = "";
-
-}
+    input.value = "";
+    document.getElementById("searchValue").value = "";
+  } else {
+    alert("Please enter a value over 0");
+    input.value = "";
+    document.getElementById("searchValue").value = "";
+  }
 }
 
 //randomized list
 function catchRandom() {
   var alg = Math.floor(Math.random(1) * 650);
   console.log(alg);
+  pCount.innerHTML = alg + " Pokemon caught!";
   console.log("catchRandom Works");
   fetch("https://pokeapi.co/api/v2/pokemon?limit=" + alg)
     .then((response) => response.json())
@@ -118,7 +110,6 @@ function catchRandom() {
 // create an anonomys function that calls renderPokemon data - * be sure to create renderPokemon
 
 function fetchPokemonData(pokemon) {
- 
   let url = pokemon.url;
   fetch(url)
     .then((response) => response.json())
@@ -127,16 +118,6 @@ function fetchPokemonData(pokemon) {
     });
 }
 
-function fetchSingle(pokemon) {
-  let url = pokemon.url;
-  fetch(url)
-    .then((response) => response.json())
-    .then(function(pokeData) {
-      createSingle(pokeData);
-    })
-    console.log(counter);
-  
-}
 
 //Functionallity for rendering the pokemon data
 
@@ -153,13 +134,13 @@ function fetchSingle(pokemon) {
 // append the pokecontainer to the container variable
 
 function renderPokemon(pokeData) {
-  
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
   var baseStat = pokeData.base_experience;
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
+  pokeContainer.classList.add("col-3-sm","card","m-4");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
@@ -172,47 +153,84 @@ function renderPokemon(pokeData) {
   pokeImage.width = "250";
 
   //image
-    //image for pokemon
-    var pkId = pokeData.id;
-    var pkImg = pokeData.srcset ='https://pokeres.bastionbot.org/images/pokemon/' + pkId +'.png';
-  
-    
-   console.log(pkImg);
-   //end image
+  //image for pokemon
+  var pkId = pokeData.id;
+  var pkImg = (pokeData.srcset =
+    "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
+
+  //end image
 
   pokeImage.src = pkImg;
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
-  poketypes.innerHTML = "Types: " + pokeData.types.map(el => el.type.name);
+  poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
-  baseStats.innerHTML =  "Base Stat: " + baseStat;
-  pokeContainer.append(pokeImage, pokeName, pokeId, poketypes, pokeHeight, pokeWeight, baseStats);
+  baseStats.innerHTML = "Base Stat: " + baseStat;
+  pokeContainer.append(
+    pokeImage,
+    pokeName,
+    pokeId,
+    poketypes,
+    pokeHeight,
+    pokeWeight,
+    baseStats
+  );
   container.appendChild(pokeContainer);
-
 }
+
+
 function createSingle(pokeData) {
-  var pkId = pokeData.id;
-   var pkImg = pokeData.srcset ='https://pokeres.bastionbot.org/images/pokemon/' + pkId +'.png';
-
-  console.log(pkImg);
-  document.getElementById("pImg").src = pkImg;
-
-  //convert decimeters to feet and Hectometers for weight
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
   var baseStat = pokeData.base_experience;
-  document.getElementById("pName").innerHTML = pokeData.name;
-  document.getElementById("pkId").innerText = `#${pokeData.id}`;
-  document.getElementById("pType").innerHTML = "Types: " + pokeData.types.map(el => el.type.name);
-  document.getElementById("height").innerHTML ="Height: " + heightMath + " Feet";
-  document.getElementById("generation").innerHTML = "Weight: " + weightMath + " lbs";
-  document.getElementById("bestMoves").innerHTML = "Experience for defeating: " + baseStat ;  
-}
+
+  let container = document.getElementById("test");
+  let pokeContainer = document.createElement("div");
+  pokeContainer.classList.add("col-3-sm","card","m-4");
+  var pokeImage = document.createElement("img");
+  var pokeName = document.createElement("h3");
+  var pokeId = document.createElement("p");
+  var poketypes = document.createElement("p");
+  var pokeHeight = document.createElement("p");
+  var pokeWeight = document.createElement("p");
+  var baseStats = document.createElement("p");
+
+  pokeImage.height = "250";
+  pokeImage.width = "250";
+
+  //image
+  //image for pokemon
+  var pkId = pokeData.id;
+  var pkImg = (pokeData.srcset =
+    "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
+
+  //end image
+
+  pokeImage.src = pkImg;
+  pokeName.innerHTML = pokeData.name;
+  pokeId.innerHTML = `#${pokeData.id}`;
+  poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
+  pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
+  pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
+  baseStats.innerHTML = "Base Stat: " + baseStat;
+  pokeContainer.append(
+    pokeImage,
+    pokeName,
+    pokeId,
+    poketypes,
+    pokeHeight,
+    pokeWeight,
+    baseStats
+  );
+  container.appendChild(pokeContainer);
+
+}// end single catch -- Should be able to combine single and multi, pass in a paramter to differ between the two
 
 function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
+  pCount.innerHTML = "";
 }
 
 function setButtons() {
@@ -230,9 +248,8 @@ function invertColors() {
 }
 
 function invertBack() {
-
-    console.log("made it here");
-    var change = document.getElementById("invertBack");
+  console.log("made it here");
+  var change = document.getElementById("invertBack");
   change.id = "invertColors";
   document.getElementById("background").style.backgroundColor = "white";
   document.getElementById("background2").style.backgroundColor = "white";
