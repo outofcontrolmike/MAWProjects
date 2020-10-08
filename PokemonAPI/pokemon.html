@@ -31,19 +31,61 @@
   </head>
 
   <body id="background">
-    <div class="container" id="background2">
-      <div class="row border border-dark mb-4">
-        <div class="col-1">
-          <img class="mt-2 mr-4"src="pk.png" style="width:25px; height:25px;"></img>
-        </div>
-        <div class="title col-11-sm">
-          <h1 id="h1"class="h1">MAW Pokemon API Call</h1>
-          <p id="count" class="border border-bottom border-dark"></p>
+
+      <!-- revamp -->
+      <!--header nav-->
+     <!-- <header class="header">
+        start nav bar
+        <nav class="navbar navbar-expand-sm">
+          <ul class="navbar-nav col-11">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hikes</a>
+            </li>
+    <li class="nav-item dropdown">
+    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Projects
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <a href="../Projects/RPC.html" class="dropdown-item ml-0">Rock Paper Scissors</a>
+      <a href="../Projects/CharacterCreate.html" class="dropdown-item ml-0">Create a Character</a>
+      <a href="../Projects/GuessNum.html" class="dropdown-item ml-0">Guess the number!</a> 
+    </div>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">About</a>
+            </li>
+          </ul>
+          <a class="navbar-brand col-1" href="#"><span><img class="logo" src="img/Yosemite_logo.jpg" alt="logo"></span></a>
+        </nav>
+      -->
+        <!--end nav bar--> 
+      <!-- </header> -->
+      <!--end header-->
+      
+
+
+
+      <!-- header of content-->
+      <div class="row mb-4 text-center">
+        <div class="title col-12 .col-xs-6 .col-sm-3
+        text-center">
+          <h1 id="h1"class="h1 text-center">PokeDex API Call</h1>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col-8-sm">
-          <div class="input-group mb-4 mt-4">
+      <!-- end header of content-->
+
+      <!--body-->
+      <!--Input and buttons-->
+        <!--1st row -->
+      <div class="row justify-content-around mb-4">
+        <div class="col-5">
+          <div class="input-group mb-4">
             <div class="input-group-prepend">
               <span class="input-group-text" id="entry"
                 >Enter Name, ID or number of catches</span
@@ -59,31 +101,37 @@
               aria-describedby="entry"
             />
           </div>
+         
+        </div>
+        <div class="col-4">
           <button
             id="catchOne"
             type="button"
-            class="btn btn-outline-primary btn-lg"
+            class="btn btn-outline-primary btn-lg mr-4"
           >
-            Catch ID
+            Single Catch
           </button>
+            
           <button
             id="catchList"
             type="button"
-            class="btn btn-outline-secondary btn-lg"
+            class="btn btn-outline-secondary btn-lg mr-4 ml-4"
           >
-            Catch a list
+            Multiple Catch
           </button>
           <button
             id="catchRandom"
             type="button"
-            class="btn btn-outline-success btn-lg"
+            class="btn btn-outline-success btn-lg mr-4 ml-4"
           >
-            Catch a random list
+            Random Catch
           </button>
+        </div>
+        <div class="col-2 float-right">
           <button
           id="clear"
           type="button"
-          class="btn btn-outline-danger btn-lg"
+          class=" btn btn-outline-danger btn-lg mr-4"
         >
           Clear List
         </button>
@@ -95,8 +143,38 @@
         Invert Colors
       </button>
         </div>
+      </div>
+        <!--end 1st-->
+        <!--2nd row-->
+        <div class="row text-center display-4 border-bottom border-secondary">
+        <div class="col-12">
+          <p id="count" class=""></p>
+        </div>
+        </div>
+        <!--end 2nd-->
+      <!--Input and buttons-->
+
+      <!--end search options-->
+
+      <!-- Display of pokemon-->
+
+      <!-- end Display-->
+
+      <!--end body-->
+  
+    <!-- end revamp-->
+  
+        <div class="col-6">
+      
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+         
+      </div>
+        </div>
         <!--Example Card-->
-      </div> 
+      
          <div class="row text-center justify-content-center" id="test">
     </div>
     </div>

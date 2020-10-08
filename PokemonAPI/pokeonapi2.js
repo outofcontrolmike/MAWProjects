@@ -4,6 +4,7 @@ var toggleID = document.getElementById("catchOne");
 var toggleCatch = document.getElementById("catchList");
 var input = document.getElementById("searchValue").value;
 var pCount = document.getElementById('count');
+var counter = 1;
 //event listeners
 document.getElementById("catchRandom").addEventListener("click", catchRandom);
 document.getElementById("invertColors").addEventListener("click", invertColors);
@@ -34,7 +35,10 @@ function catchSingle() {
       .then((response) => response.json())
       .then(function(pokemon) {
         createSingle(pokemon);
+        counter++;
       });
+      pCount.innerHTML = counter + " Pokemon Caught";
+
     document.getElementById("searchValue").value = "";
   }
 
@@ -140,7 +144,7 @@ function renderPokemon(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-3-sm","card","m-4");
+  pokeContainer.classList.add("col-6-m","card", "m-4");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
@@ -149,8 +153,8 @@ function renderPokemon(pokeData) {
   var pokeWeight = document.createElement("p");
   var baseStats = document.createElement("p");
 
-  pokeImage.height = "250";
-  pokeImage.width = "250";
+  pokeImage.height = "300";
+  pokeImage.width = "300";
 
   //image
   //image for pokemon
@@ -187,7 +191,7 @@ function createSingle(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-3-sm","card","m-4");
+  pokeContainer.classList.add("col-3","card","m-4");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
@@ -231,6 +235,7 @@ function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
   pCount.innerHTML = "";
+  counter = 1;
 }
 
 function setButtons() {
@@ -245,6 +250,7 @@ function invertColors() {
   var change = document.getElementById("invertColors");
   change.id = "invertBack";
   console.log(change.id);
+  pCount.innerHTML = "You inverted the colors!";
 }
 
 function invertBack() {
