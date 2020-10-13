@@ -4,13 +4,17 @@ var toggleID = document.getElementById("catchOne");
 var toggleCatch = document.getElementById("catchList");
 var input = document.getElementById("searchValue").value;
 var pCount = document.getElementById('count');
+
+var mainPkCount = 1;
 var counter = 1;
 //event listeners
-document.getElementById("catchRandom").addEventListener("click", catchRandom);
-document.getElementById("invertColors").addEventListener("click", invertColors);
-document.getElementById("catchList").addEventListener("click", catchList);
+var btnRandom = document.getElementById("catchRandom").addEventListener("click", catchRandom);
+var btnInvert = document.getElementById("invertColors").addEventListener("click", invertColors);
+var btnCatchMult =document.getElementById("catchList").addEventListener("click", catchList);
 document.getElementById("clear").addEventListener("click", clearList);
-document.getElementById("catchOne").addEventListener("click", catchSingle);
+var btnSingle = document.getElementById("catchOne").addEventListener("click", catchSingle);
+
+
 
 //Need to make a xml request to access this api
 //1.  Set up our request to grab data and then return it
@@ -35,23 +39,24 @@ function catchSingle() {
       .then((response) => response.json())
       .then(function(pokemon) {
         createSingle(pokemon);
-        counter++;
       });
-      pCount.innerHTML = counter + " Pokemon Caught";
-
-    document.getElementById("searchValue").value = "";
+      pCount.innerHTML = mainPkCount + " Pokemon Caught";
+    disableButtons("true");
   }
 
   else if (input != "") {
     var LowerInput = input.toLowerCase(0);
-    console.log(input);
-    fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
+    var fetcher = fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
       .then((response) => response.json())
       .then(function(pokemon) {
         createSingle(pokemon);
-      });
+      }); 
     document.getElementById("searchValue").value = "";
-  } else {
+      disableButtons("");
+
+  }//usually never hits this unless search is a integer
+   else {
+    
     if (input <= 0) {
       alert("Please enter a value over 0");
     } else if (input >= 894) {
@@ -70,6 +75,7 @@ function catchList() {
   var input = document.getElementById("searchValue").value;
   console.log(input.value);
   if (input > 0) {
+     
     fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
       .then((response) => response.json())
       .then(function(allPokemon) {
@@ -82,6 +88,7 @@ function catchList() {
       });
     input.value = "";
     document.getElementById("searchValue").value = "";
+    disableButtons("true");
   } else {
     alert("Please enter a value over 0");
     input.value = "";
@@ -102,17 +109,8 @@ function catchRandom() {
         fetchPokemonData(pokemon);
       });
     });
+    disableButtons("true");
 }
-
-//2nd function
-
-//create a function that will fetch the url of a pokemon
-// start with defining a function that accepts a pokemon parameter
-//create a variable that will store that pokemon parameter url property
-// use the fetch method and pass in the url
-// turn that fetch into json
-// create an anonomys function that calls renderPokemon data - * be sure to create renderPokemon
-
 function fetchPokemonData(pokemon) {
   let url = pokemon.url;
   fetch(url)
@@ -121,22 +119,6 @@ function fetchPokemonData(pokemon) {
       renderPokemon(pokeData);
     });
 }
-
-
-//Functionallity for rendering the pokemon data
-
-//first we want to create a function for rendering data that gets passed the pokedata
-// We'll be creating some html elements through javascript
-// a whole container for all of the pokemon
-// a individual container for pokemon
-// a field for a name of the pokemon
-// create a field for Id of the pokemon
-
-//set the inner text of the name field with the parameter property of name
-// set the inner text of the id as well, should be able to pass by reference `#${}`
-// add the variables to the pokecontainer
-// append the pokecontainer to the container variable
-
 function renderPokemon(pokeData) {
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
@@ -155,9 +137,6 @@ function renderPokemon(pokeData) {
 
   pokeImage.height = "300";
   pokeImage.width = "300";
-
-  //image
-  //image for pokemon
   var pkId = pokeData.id;
   var pkImg = (pokeData.srcset =
     "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
@@ -185,6 +164,7 @@ function renderPokemon(pokeData) {
 
 
 function createSingle(pokeData) {
+  console.log(pokeData);
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
   var baseStat = pokeData.base_experience;
@@ -228,16 +208,25 @@ function createSingle(pokeData) {
     baseStats
   );
   container.appendChild(pokeContainer);
-
+ 
+  console.log(container.innerHTML);
 }// end single catch -- Should be able to combine single and multi, pass in a paramter to differ between the two
 
+
+
+
+//misc functions 
 function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
+  document.getElementById("catchRandom").disabled = false;
+  document.getElementById('catchList').disabled = false;
+  document.getElementById('catchOne').disabled = false;
+
   pCount.innerHTML = "";
   counter = 1;
+  mainPkCount = 1;
 }
-
 function setButtons() {
   toggleCatch, (toggleID.disabled = false);
 }
@@ -261,3 +250,10 @@ function invertBack() {
   document.getElementById("background2").style.backgroundColor = "white";
   document.getElementById("h1").style.color = "black";
 }
+
+ function disableButtons(status) {
+  document.getElementById('catchRandom').disabled = status;
+  document.getElementById('catchList').disabled = status;
+  document.getElementById('catchOne').disabled = status;
+ }
+
