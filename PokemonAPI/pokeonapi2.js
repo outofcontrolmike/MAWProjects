@@ -1,36 +1,34 @@
-//variables
+//global variables
 var list = document.getElementById("test");
 var toggleID = document.getElementById("catchOne");
 var toggleCatch = document.getElementById("catchList");
 var input = document.getElementById("searchValue").value;
-var pCount = document.getElementById('count');
-
+var pCount = document.getElementById("count");
+var inputReader = document.getElementById("searchValue");
+var btnRand = document.getElementById("catchRandom");
 var mainPkCount = 1;
 var counter = 1;
+
 //event listeners
-var btnRandom = document.getElementById("catchRandom").addEventListener("click", catchRandom);
-var btnInvert = document.getElementById("invertColors").addEventListener("click", invertColors);
-var btnCatchMult =document.getElementById("catchList").addEventListener("click", catchList);
+var btnRandom = document
+  .getElementById("catchRandom")
+  .addEventListener("click", catchRandom);
+var btnInvert = document
+  .getElementById("invertColors")
+  .addEventListener("click", invertColors);
+var btnCatchMult = document
+  .getElementById("catchList")
+  .addEventListener("click", catchList);
 document.getElementById("clear").addEventListener("click", clearList);
-var btnSingle = document.getElementById("catchOne").addEventListener("click", catchSingle);
+var btnSingle = document
+  .getElementById("catchOne")
+  .addEventListener("click", catchSingle);
 
+//Fetching Functions //
+//****************************************************************************************************************************** */
+//Strech goals functions
 
-
-//Need to make a xml request to access this api
-//1.  Set up our request to grab data and then return it
-
-//*****************************************************************************
-//2. We want to get all pokemon and access to their data
-
-//Requires two functions.. one for the fetch and for each
-
-//First function
-
-// create a function name getPokemon.  fetch the following url using the fetch method - https://pokeapi.co/api/v2/pokemon?limit=151
-// use the then method to turn that response into json
-// use the then method again and pass in an anyonmys function that expects - allPokemon as a parameter
-// within the method use the results property of the allPokemon parameter and call a for each method(pass in another anoynmous function(pokemon) and call fetchpkomeon fucntion with pokemon as a parameter
-
+//Fetch information for one pokemon
 function catchSingle() {
   var input = document.getElementById("searchValue").value;
   console.log(input);
@@ -40,23 +38,21 @@ function catchSingle() {
       .then(function(pokemon) {
         createSingle(pokemon);
       });
-      pCount.innerHTML = mainPkCount + " Pokemon Caught";
-    disableButtons("true");
+    pCount.innerHTML = mainPkCount + " Pokemon Caught";
   }
-
+  //if not a number
   else if (input != "") {
     var LowerInput = input.toLowerCase(0);
     var fetcher = fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
       .then((response) => response.json())
       .then(function(pokemon) {
         createSingle(pokemon);
-      }); 
+      });
     document.getElementById("searchValue").value = "";
-      disableButtons("");
-
-  }//usually never hits this unless search is a integer
-   else {
-    
+    disableButtons("");
+  }
+  //error handling
+  else {
     if (input <= 0) {
       alert("Please enter a value over 0");
     } else if (input >= 894) {
@@ -69,13 +65,12 @@ function catchSingle() {
   }
 } //end catchSingle
 
-//Catch up to a certain value
+//Fetch Multiple Pokemon
 function catchList() {
   console.log("catchList was hit");
   var input = document.getElementById("searchValue").value;
   console.log(input.value);
   if (input > 0) {
-     
     fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
       .then((response) => response.json())
       .then(function(allPokemon) {
@@ -94,9 +89,9 @@ function catchList() {
     input.value = "";
     document.getElementById("searchValue").value = "";
   }
-}
+} //end Multi
 
-//randomized list
+//Fetch Random Amount
 function catchRandom() {
   var alg = Math.floor(Math.random(1) * 650);
   console.log(alg);
@@ -109,7 +104,7 @@ function catchRandom() {
         fetchPokemonData(pokemon);
       });
     });
-    disableButtons("true");
+  disableButtons("true");
 }
 function fetchPokemonData(pokemon) {
   let url = pokemon.url;
@@ -119,6 +114,11 @@ function fetchPokemonData(pokemon) {
       renderPokemon(pokeData);
     });
 }
+
+//Rending Pokemon Data//
+//****************************************************************************************************************************** */
+
+//Render for multiple pokemon
 function renderPokemon(pokeData) {
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
@@ -126,7 +126,7 @@ function renderPokemon(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-6-m","card", "m-4");
+  pokeContainer.classList.add("col-3", "card", "m-4");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
@@ -160,9 +160,9 @@ function renderPokemon(pokeData) {
     baseStats
   );
   container.appendChild(pokeContainer);
-}
+} //end multi
 
-
+//Render Single Pokemon
 function createSingle(pokeData) {
   console.log(pokeData);
   var heightMath = (pokeData.height / 3.048).toFixed(2);
@@ -171,7 +171,7 @@ function createSingle(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-3","card","m-4");
+  pokeContainer.classList.add("col-3", "card", "m-4");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
@@ -183,13 +183,10 @@ function createSingle(pokeData) {
   pokeImage.height = "250";
   pokeImage.width = "250";
 
-  //image
   //image for pokemon
   var pkId = pokeData.id;
   var pkImg = (pokeData.srcset =
     "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
-
-  //end image
 
   pokeImage.src = pkImg;
   pokeName.innerHTML = pokeData.name;
@@ -208,29 +205,27 @@ function createSingle(pokeData) {
     baseStats
   );
   container.appendChild(pokeContainer);
- 
+
   console.log(container.innerHTML);
-}// end single catch -- Should be able to combine single and multi, pass in a paramter to differ between the two
+} // end single catch -- Should be able to combine single and multi, pass in a paramter to differ between the two
 
+//Misc Functions//
+//****************************************************************************************************************************** */
 
-
-
-//misc functions 
+//Clear out pokemon display and reset values
 function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
   document.getElementById("catchRandom").disabled = false;
-  document.getElementById('catchList').disabled = false;
-  document.getElementById('catchOne').disabled = false;
+  document.getElementById("catchList").disabled = false;
+  document.getElementById("catchOne").disabled = false;
 
   pCount.innerHTML = "";
   counter = 1;
   mainPkCount = 1;
 }
-function setButtons() {
-  toggleCatch, (toggleID.disabled = false);
-}
 
+//Invert colors (Should take in a couple parameters..for some type of functionallity)
 function invertColors() {
   console.log("hello");
   document.getElementById("background").style.backgroundColor = "black";
@@ -242,6 +237,7 @@ function invertColors() {
   pCount.innerHTML = "You inverted the colors!";
 }
 
+//Invert back to normal UI
 function invertBack() {
   console.log("made it here");
   var change = document.getElementById("invertBack");
@@ -251,9 +247,9 @@ function invertBack() {
   document.getElementById("h1").style.color = "black";
 }
 
- function disableButtons(status) {
-  document.getElementById('catchRandom').disabled = status;
-  document.getElementById('catchList').disabled = status;
-  document.getElementById('catchOne').disabled = status;
- }
-
+//Disabling buttons
+function disableButtons() {
+  document.getElementById("catchRandom").disabled = false;
+  document.getElementById("catchList").disabled = status;
+  document.getElementById("catchOne").disabled = status;
+}
