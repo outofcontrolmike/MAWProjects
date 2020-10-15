@@ -1,4 +1,4 @@
-//global variables
+//variables
 var list = document.getElementById("test");
 var toggleID = document.getElementById("catchOne");
 var toggleCatch = document.getElementById("catchList");
@@ -8,6 +8,7 @@ var inputReader = document.getElementById("searchValue");
 var btnRand = document.getElementById("catchRandom");
 var mainPkCount = 1;
 var counter = 1;
+var prevUrl = "";
 
 //event listeners
 var btnRandom = document
@@ -33,16 +34,22 @@ function catchSingle() {
   var input = document.getElementById("searchValue").value;
   console.log(input);
   if (input > 0 && input <= 893) {
+    var pURL = input;
+    while(prevUrl != pURL) {
     fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
       .then((response) => response.json())
       .then(function(pokemon) {
         createSingle(pokemon);
       });
     pCount.innerHTML = mainPkCount + " Pokemon Caught";
+    document.getElementById("searchValue").value = "";
+    prevUrl = pURL;
+    }
   }
   //if not a number
   else if (input != "") {
     var LowerInput = input.toLowerCase(0);
+    while(prevUrl != input) {
     var fetcher = fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
       .then((response) => response.json())
       .then(function(pokemon) {
@@ -50,16 +57,12 @@ function catchSingle() {
       });
     document.getElementById("searchValue").value = "";
     disableButtons("");
+    prevUrl = input;
+    }
   }
   //error handling
   else {
-    if (input <= 0) {
-      alert("Please enter a value over 0");
-    } else if (input >= 894) {
-      alert("Please enter a value lesser than 893");
-    } else {
-      alert("Please enter pokemons name correctly.");
-    }
+    alert("Please try again");
     input.value = "";
     document.getElementById("searchValue").value = "";
   }
@@ -182,6 +185,7 @@ function createSingle(pokeData) {
 
   pokeImage.height = "250";
   pokeImage.width = "250";
+  pokeImage.style = "margin-left: 24%";
 
   //image for pokemon
   var pkId = pokeData.id;
@@ -252,4 +256,8 @@ function disableButtons() {
   document.getElementById("catchRandom").disabled = false;
   document.getElementById("catchList").disabled = status;
   document.getElementById("catchOne").disabled = status;
+}
+
+function disableRandomButton(status) {
+  document.getElementById("catchRandom").disabled = status;
 }
