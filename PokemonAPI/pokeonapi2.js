@@ -129,7 +129,8 @@ function renderPokemon(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-3", "card", "m-4");
+  pokeContainer.classList.add("col-lg-3", "m-4","pb-4", "card", "align-content-center");
+  container.classList.add("ui", "segment");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
@@ -137,15 +138,13 @@ function renderPokemon(pokeData) {
   var pokeHeight = document.createElement("p");
   var pokeWeight = document.createElement("p");
   var baseStats = document.createElement("p");
-
   pokeImage.height = "300";
   pokeImage.width = "300";
+  pokeImage.style.alignSelf = "center";
   var pkId = pokeData.id;
   var pkImg = (pokeData.srcset =
     "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
-
   //end image
-
   pokeImage.src = pkImg;
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
@@ -174,7 +173,7 @@ function createSingle(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-3", "card", "m-4");
+  pokeContainer.classList.add("col-lg-3", "card", "m-4", "pb-4" ,"align-content-center");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h3");
   var pokeId = document.createElement("p");
@@ -185,7 +184,8 @@ function createSingle(pokeData) {
 
   pokeImage.height = "250";
   pokeImage.width = "250";
-  pokeImage.style = "margin-left: 24%";
+  pokeImage.style.alignSelf = "center";
+
 
   //image for pokemon
   var pkId = pokeData.id;
@@ -232,7 +232,7 @@ function clearList() {
 //Invert colors (Should take in a couple parameters..for some type of functionallity)
 function invertColors() {
   console.log("hello");
-  document.getElementById("background").style.backgroundColor = "black";
+  document.getElementById("content").style.backgroundColor = "black";
   document.getElementById("background2").style.backgroundColor = "black";
   document.getElementById("h1").style.color = "red";
   var change = document.getElementById("invertColors");

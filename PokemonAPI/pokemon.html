@@ -11,6 +11,14 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+      <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
     <style>
       .myCard {
         vertical-align: middle;
@@ -28,7 +36,7 @@
       }
     </style>
   </head>
-  <body id="background">
+  <body id="background" class="ui">
       <!-- revamp -->
       <!--header nav-->
      <!-- <header class="header">
@@ -66,44 +74,36 @@
       <!--end header-->
     
       <!-- header of content-->
+      <div id="content">
+      <div class="segment ui">
       <div class="row mb-4 text-center">
-        <div class="title col-12 .col-xs-6 .col-sm-3
-        text-center">
-          <h1 id="h1"class="h1 text-center">PokeDex API Call</h1>
-        </div>
+        <h2 class="ui container header">
+          <img class="ui image" src="pk.png">
+          <div class="content">
+            Pokedex API
+          </div>
+        </h2>
       </div>
+  
       <!-- end header of content-->
 
       <!--body-->
       <!--Input and buttons-->
         <!--1st row -->
-      <div class="row justify-content-around mb-4">
-        <div class="col-5">
-          <div class="input-group mb-4">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="entry"
-                >Enter Name, ID or number of catches</span
-              >
+        <div class="row ui-container">
+        <div class="col-6">
+          <div class="ui labeled input">
+            <div class="ui label">
+              Enter either a Name or ID of pokemon, Or a collection.
             </div>
-            <input
-            oninput="disableRandomButton(true)"
-            
-             id="searchValue"
-              type="text"
-              class="form-control"
-              maxlength="25"
-              placeholder="....try me out please!"
-              aria-label="....try me out please!"
-              aria-describedby="entry"
-            />
+            <input onkeydown="disableRandomButton(true)" id="searchValue" type="text" placeholder="Felling lucky?">
           </div>
-         
         </div>
-        <div class="col-4">
+          <div class="col-6 float-right">
           <button
             id="catchOne"
             type="button"
-            class="btn btn-outline-primary btn-lg mr-4"
+            class="ui inverted orange button large"
           >
             Single Catch
           </button>
@@ -111,23 +111,21 @@
           <button
             id="catchList"
             type="button"
-            class="btn btn-outline-secondary btn-lg mr-4 ml-4"
+            class="ui inverted primary button large"
           >
             Multiple Catch
           </button>
           <button
             id="catchRandom"
             type="button"
-            class="btn btn-outline-success btn-lg mr-4 ml-4"
+            class="ui inverted green button large"
           >
             Random Catch
           </button>
-        </div>
-        <div class="col-2 float-right">
           <button
           id="clear"
           type="button"
-          class=" btn btn-outline-danger btn-lg mr-4"
+          class="ui inverted red button large"
         >
         <!-- Should implement a button group here to toggle the classes-->
           Clear List
@@ -135,46 +133,22 @@
         <button
         id="invertColors"
         type="button"
-        class="btn btn-outline-warning btn-lg"
+        class="ui button olive large inverted"
       >
         Invert Colors
       </button>
         </div>
-      </div>
-        <!--end 1st-->
+        </div>
+      </div>        <!--end 1st-->
         <!--2nd row-->
-        <div class="row text-center display-4 border-bottom border-secondary">
+        <div class="row text-center display-4 border-secondary">
         <div class="col-12">
           <p id="count" class=""></p>
         </div>
         </div>
-        <!--end 2nd-->
-      <!--Input and buttons-->
-
-      <!--end search options-->
-
-      <!-- Display of pokemon-->
-
-      <!-- end Display-->
-
-      <!--end body-->
-  
-    <!-- end revamp-->
-  
-        <div class="col-6">
-      
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-         
-      </div>
-        </div>
-        <!--Example Card-->
-      
-         <div class="row text-center justify-content-center" id="test">
+         <div class="row text-center justify-content-center mb-4 ml-4 mr-4" id="test">
     </div>
-    </div>
+      </div>
     <div class="footer navbar fixed-bottom bg-light text-black justify-content-center col-12 mt-4" >
       <h3 class="">Wilson Site - Created Summer 2020</h3>
       <a href="https://github.com/outofcontrolmike/MAWProjects" class="fa fa-github" style="color:black"></a>
