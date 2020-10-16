@@ -93,13 +93,13 @@
         <div class="row ui-container">
         <div class="col-6">
           <div class="ui labeled input">
-            <div class="ui label">
+            <div data-position="bottom center" data-tooltip="Make sure to enter name correctly"  class="ui label">
               Enter either a Name or ID of pokemon, Or a collection.
             </div>
-            <input onkeydown="disableRandomButton(true)" id="searchValue" type="text" placeholder="Felling lucky?">
+            <input  onkeydown="disableRandomButton(true)" maxlength="15" id="searchValue" type="text" placeholder="Felling lucky?">
           </div>
         </div>
-          <div class="col-6 float-right">
+          <div class="col-6-l float-right">
           <button
             id="catchOne"
             type="button"
@@ -130,13 +130,11 @@
         <!-- Should implement a button group here to toggle the classes-->
           Clear List
         </button>
-        <button
-        id="invertColors"
-        type="button"
-        class="ui button olive large inverted"
-      >
-        Invert Colors
-      </button>
+        <div class="ui buttons">
+          <button class="ui button large inverted purple">Night</button>
+          <div class="or" data-text="or"></div>
+          <button id="invertColors" class="ui button inverted yellow large">Day</button>
+        </div>
         </div>
         </div>
       </div>        <!--end 1st-->

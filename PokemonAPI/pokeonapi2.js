@@ -36,11 +36,24 @@ function catchSingle() {
   if (input > 0 && input <= 893) {
     var pURL = input;
     while(prevUrl != pURL) {
-    fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
-      .then((response) => response.json())
-      .then(function(pokemon) {
-        createSingle(pokemon);
+ /////////////////Fetch
+      fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
+      .then((response) => {
+        if (response.status >= 200 && response.status <= 299) {
+          return response.json();
+        } else {
+          throw Error(response.statusText);
+        }
+      })
+
+      .then((pokemon) => {
+        createSingle(pokemon) ;
+      }).catch((error) => {
+        // Handle the error
+        console.log("should be an error for a 404");
+        console.log(error);
       });
+////////////////////end fetch
     pCount.innerHTML = mainPkCount + " Pokemon Caught";
     document.getElementById("searchValue").value = "";
     prevUrl = pURL;
@@ -72,14 +85,11 @@ function catchSingle() {
 function catchList() {
   console.log("catchList was hit");
   var input = document.getElementById("searchValue").value;
-  console.log(input.value);
   if (input > 0) {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
       .then((response) => response.json())
       .then(function(allPokemon) {
-        console.log(input);
         pCount.innerHTML = input + " Pokemon caught!";
-        console.log("catchList worked");
         allPokemon.results.forEach(function(pokemon) {
           fetchPokemonData(pokemon);
         });
@@ -97,9 +107,7 @@ function catchList() {
 //Fetch Random Amount
 function catchRandom() {
   var alg = Math.floor(Math.random(1) * 650);
-  console.log(alg);
   pCount.innerHTML = alg + " Pokemon caught!";
-  console.log("catchRandom Works");
   fetch("https://pokeapi.co/api/v2/pokemon?limit=" + alg)
     .then((response) => response.json())
     .then(function(allPokemon) {
@@ -166,7 +174,6 @@ function renderPokemon(pokeData) {
 
 //Render Single Pokemon
 function createSingle(pokeData) {
-  console.log(pokeData);
   var heightMath = (pokeData.height / 3.048).toFixed(2);
   var weightMath = (pokeData.weight / 4.536).toFixed(2);
   var baseStat = pokeData.base_experience;
