@@ -28,15 +28,12 @@
         transition: 0.4s;
         border-radius: 5px;
       }
-        .container {
-          
-        }
       body {
         background-color:white;
       }
     </style>
   </head>
-  <body id="background" class="ui">
+  <body id="background">
       <!-- revamp -->
       <!--header nav-->
      <!-- <header class="header">
@@ -74,13 +71,12 @@
       <!--end header-->
     
       <!-- header of content-->
-      <div id="content">
-      <div class="segment ui">
-      <div class="row mb-4 text-center">
+      <div id="content" class="segment ui" style="padding-bottom: 0%;">
+      <div id="header" class="row text-center">
         <h2 class="ui container header">
-          <img class="ui image" src="pk.png">
+          <img class="ui image pb-4" src="pk.png">
           <div class="content">
-            Pokedex API
+           <p id="title"> Pokedex API</p>
           </div>
         </h2>
       </div>
@@ -90,16 +86,16 @@
       <!--body-->
       <!--Input and buttons-->
         <!--1st row -->
-        <div class="row ui-container">
+        <div id="menu" class="row pb-4">
         <div class="col-6">
           <div class="ui labeled input">
             <div data-position="bottom center" data-tooltip="Make sure to enter name correctly"  class="ui label">
               Enter either a Name or ID of pokemon, Or a collection.
             </div>
-            <input  onkeydown="disableRandomButton(true)" maxlength="15" id="searchValue" type="text" placeholder="Felling lucky?">
+            <input class="container" onkeydown="disableRandomButton(true)" maxlength="15" id="searchValue" type="text" placeholder="Felling lucky?">
           </div>
         </div>
-          <div class="col-6-l float-right">
+          <div class="col-5-sm ml-3 float-right">
           <button
             id="catchOne"
             type="button"
@@ -130,27 +126,25 @@
         <!-- Should implement a button group here to toggle the classes-->
           Clear List
         </button>
-        <div class="ui buttons">
-          <button id="night" class="ui button large inverted purple">Night</button>
-          <div class="or" data-text="or"></div>
+        <div class="ui buttons ml-4">
           <button id="day" class="ui button inverted yellow large">Day</button>
+          <div class="or" data-text="or"></div>
+          <button id="night" class="ui button large inverted purple">Night</button>
         </div>
         </div>
         </div>
-      </div>        <!--end 1st-->
+      </div>        <!--end 1st row-->
         <!--2nd row-->
-        <div class="row text-center display-4 border-secondary">
+        <div id="displayCount" class="text-center row">
         <div class="col-12">
-          <p id="count" class=""></p>
+          <p id="count" class="container display-4"></p>
         </div>
         </div>
          <div class="row text-center justify-content-center mb-4 ml-4 mr-4" id="test">
     </div>
-      </div>
-    <div class="footer navbar fixed-bottom bg-light text-black justify-content-center col-12 mt-4" >
-      <h3 class="">Wilson Site - Created Summer 2020</h3>
+    <div id="footer" class="footer navbar fixed-bottom justify-content-center col-12 mt-4" >
+      <h3 id="footerText">Wilson Site - Created Summer 2020</h3>
       <a href="https://github.com/outofcontrolmike/MAWProjects" class="fa fa-github" style="color:black"></a>
-      </span>
     </div>
 
     <!--<script src="pokemon.js"></script> -->
