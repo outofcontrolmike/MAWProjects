@@ -15,7 +15,7 @@ var btnRandom = document
   .getElementById("catchRandom")
   .addEventListener("click", catchRandom);
 var btnInvert = document
-  .getElementById("invertColors")
+  .getElementById("night")
   .addEventListener("click", invertColors);
 var btnCatchMult = document
   .getElementById("catchList")
@@ -242,17 +242,11 @@ function invertColors() {
   document.getElementById("content").style.backgroundColor = "black";
   document.getElementById("background2").style.backgroundColor = "black";
   document.getElementById("h1").style.color = "red";
-  var change = document.getElementById("invertColors");
-  change.id = "invertBack";
-  console.log(change.id);
   pCount.innerHTML = "You inverted the colors!";
 }
 
 //Invert back to normal UI
 function invertBack() {
-  console.log("made it here");
-  var change = document.getElementById("invertBack");
-  change.id = "invertColors";
   document.getElementById("background").style.backgroundColor = "white";
   document.getElementById("background2").style.backgroundColor = "white";
   document.getElementById("h1").style.color = "black";
