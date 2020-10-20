@@ -18,6 +18,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="poke.css" />
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
     <style>
       .myCard {
@@ -51,7 +52,7 @@
       Projects
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-      <a href="../Projects/RPC.html" class="dropdown-item ml-0">Rock Paper Scissors</a>
+      <a href="../../PokemonAPI/pokemon.html" class="dropdown-item ml-0">Rock Paper Scissors</a>
       <a href="../Projects/CharacterCreate.html" class="dropdown-item ml-0">Create a Character</a>
       <a href="../Projects/GuessNum.html" class="dropdown-item ml-0">Guess the number!</a> 
     </div>
@@ -87,15 +88,17 @@
       <!--Input and buttons-->
         <!--1st row -->
         <div id="menu" class="row pb-4">
-        <div class="col-6">
-          <div class="ui labeled input">
+        <div class="col-12">
+          <div class="ui labeled input w-25">
             <div data-position="bottom center" data-tooltip="Make sure to enter name correctly"  class="ui label">
               Enter either a Name or ID of pokemon, Or a collection.
             </div>
             <input class="container" onkeydown="disableRandomButton(true)" maxlength="15" id="searchValue" type="text" placeholder="Felling lucky?">
           </div>
         </div>
-          <div class="col-5-sm ml-3 float-right">
+        </div>
+        <div class="row">
+          <div class="col-8 w-25 mb-4">
           <button
             id="catchOne"
             type="button"
@@ -126,10 +129,11 @@
         <!-- Should implement a button group here to toggle the classes-->
           Clear List
         </button>
-        <div class="ui buttons ml-4">
+        <div class="ui buttons ml-4 pr-4 pl-4">
           <button id="day" class="ui button inverted yellow large">Day</button>
           <div class="or" data-text="or"></div>
           <button id="night" class="ui button large inverted purple">Night</button>
+        </div>
         </div>
         </div>
         </div>

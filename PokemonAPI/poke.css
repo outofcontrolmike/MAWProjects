@@ -1,0 +1,25 @@
+#content,#header {
+    background: ghostwhite;
+    
+
+}
+
+
+#test {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+#background {
+    background-color: ghostwhite;
+
+    
+    }
+
+    .myCard {
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    }
+
+
+
+
+

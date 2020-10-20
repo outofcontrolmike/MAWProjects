@@ -41,23 +41,27 @@ function catchSingle() {
     while(prevUrl != pURL) {
       mainPkCount += 1;
  /////////////////Fetch
-      fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
-      .then((response) => {
-        if (response.status >= 200 && response.status <= 299) {
-          return response.json();
-        } else {
-          throw Error(response.statusText);
-        }
-      })
+ fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
+.then(response => {
+  if (!response.ok) {
+    throw new Error("Network response was not okay");
+  }
+  return response.json();
+})
 
-      .then((pokemon) => {
-        createSingle(pokemon) ;
-      }).catch((error) => {
-        // Handle the error
-        console.log("should be an error for a 404");
-        console.log(error);
-      });
-////////////////////end fetch
+.then((pokemon) => {
+  createSingle(pokemon) ;
+})
+
+.catch((error) => {
+  // Handle the error
+  console.log("should be an error for a 404");
+  console.log(error);
+  alert("error!");
+});
+
+   
+//////////end fetch
     pCount.innerHTML = mainPkCount + " Pokemon Caught";
     document.getElementById("searchValue").value = "";
     prevUrl = pURL;
@@ -143,7 +147,7 @@ function renderPokemon(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-lg-3", "m-4","pb-4", "card", "align-content-center");
+  pokeContainer.classList.add("col-m-6", "m-4","pb-4", "card", "align-content-center", "success");
   container.classList.add("ui", "segment");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h1");
@@ -160,6 +164,7 @@ function renderPokemon(pokeData) {
     "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
   //end image
   pokeImage.src = pkImg;
+  pokeContainer.style.backgroundColor = "mintcream";
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
@@ -186,7 +191,7 @@ function createSingle(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-lg-3", "card", "m-4", "pb-4" ,"align-content-center");
+  pokeContainer.classList.add("col-m-6", "card", "m-4", "pb-4" ,"align-content-center");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h1");
   var pokeId = document.createElement("p");
@@ -195,9 +200,11 @@ function createSingle(pokeData) {
   var pokeWeight = document.createElement("p");
   var baseStats = document.createElement("p");
 
-  pokeImage.height = "250";
-  pokeImage.width = "250";
+  pokeImage.height = "300";
+  pokeImage.width = "300";
   pokeImage.style.alignSelf = "center";
+  pokeContainer.style.backgroundColor = "mintcream";
+
 
 
   //image for pokemon
@@ -212,6 +219,7 @@ function createSingle(pokeData) {
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML = "EXP earned: " + baseStat;
+  pokeContainer.style.backgroundColor = "background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)";
   pokeContainer.append(
     pokeImage,
     pokeName,
