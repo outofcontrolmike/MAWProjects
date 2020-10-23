@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>Form</title>
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>About</title>
 
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../css/home.css" />
-</head>
-<body class="all">
+      <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
 
-  <header class="header">
-    <!-- start nav bar-->
-    <nav class="navbar navbar-expand-sm">
-      <ul class="navbar-nav col-11">
-        <li class="nav-item">
-          <a class="nav-link" href="home.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="hikes.html">Hikes</a>
-        </li>
-<li class="nav-item dropdown">
-<a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Projects
-</a>
-<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-  <a href="../../PokemonAPI/pokemon.html" class="dropdown-item ml-0">Pokedex API Call</a>
-</div>
-      </li>
-        <li class="nav-item">
-          <a class="nav-link" href="form.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-      <a class="navbar-brand col-1" href="#"><span><img class="logo" src="img/Yosemite_logo.jpg" alt="logo"></span></a>
-    </nav>
-    <!-- end nav bar-->
-  </header>
-  <div class="footer navbar fixed-bottom bg-light text-black justify-content-center col-12" >
-    <h3 class="">Wilson Site - Created Summer 2020</h3>
-    <a href="https://github.com/outofcontrolmike/MAWProjects" class="fa fa-github" style="color:black"></a>
-    </span>
-  </div>
+    <style>
+        
+  footer {
+        background-color: black;;
+    
+  }
+  a {
+      font-size: medium;
+  }
+  .ui.menu .item img.logo {
+    margin-right: 1.5em;
+    padding: 1em 0em;
+  }
+  .main.container {
+    margin-top: 7em;
+  }
 
-  <!-- About me start -->
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-6">
-        <div class="card myCard mx-auto ">
-          <img class="card-img-top" src="../html/img/myImgae.jpg" alt="michael wilson image">
-          <div class="card-body align-items-center d-flex justify-content-center"">
-            <p  class="card-text display-5">Developer</p>
-          </div>
+  .ui.footer.segment {
+    
+    padding: 5em 0em;
+  }
+    </style>
+  </head>
+  <!DOCTYPE html>
+<body>
+  
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            
+            <a href="#" class="header item">
+                <img class="logo" src="img/Yosemite_logo.jpg" style="padding-right:10px;">
+                logo
+            </a>
+            <a href="#" class="item">
+                Home
+            </a>
+            <a href="about.html" class="item">
+                About
+            </a>
+            <a href="projects.html" class="item">
+                Projects
+            </a>
+            <a href="form.html" class="item">
+                Contact
+            </a>
         </div>
-      </div>
-      <!-- end 1st column-->
-      <!-- start 2nd column-->
-      <div class="col-6 bio">
-        <p class="display-4">Michael A. Wilson</p>
-        <h2>My path and story</h2>
+    </div>
+
+    <!-- Info about me-->
+      <div class="ui segment" style="margin-top: 100px;">
+        <div class="ui two column very relaxed grid">
+          <div class="column">
+            <div class="ui card centered">
+                <div class="ui slide masked reveal image">
+                  <img src="img/myImgae.jpg" class="visible content">
+                  <img src="img/hercules.jpg" class="hidden content fluid" style="object-fit:cover; height:750px;">
+                </div>
+                <div class="content">
+                  <a class="header">Michael Wilson</a>
+                  <div class="meta">
+                    <span class="date">Graduated Fall 2019</span>
+                    <p class="date">Associates of Applied Science Computer Information Science</p>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="users icon"></i>
+                    2 Members
+                  </a>
+                </div>
+              </div>
+          </div>
+          <div class="column">
+        <h1>My Journey So Far</h1>
         <p class="mt-4">Hello there!  You can call me Mike or Michael.  I'm not a very experienced programmer or Web Developer, however I am working my way towards learning the necessary skills to become either one.  I recently graudated with a Computer Information Science degree from a growing community college named Ozark's Technical Community College, December of 2019.  I started my journey in Web Development in the Spring of 2018.  I obtained rounded knowledge about what goes into building websites and programming.  I also learned about how to interact with a client and how to configure their needs for a project.
         </p>
         <p>
@@ -76,18 +96,78 @@
           I'm hoping before the year 2023 I'll be able to make dynamic websites and systems for real world problems. 
         </p>
         <i>Thanks for reading about me!</i>
+        <div class="ui divider">
+            <div class="segment">
+                La test
+            </div>
+        </div>
+          </div>
+        </div>
+        <div class="ui vertical divider">
+          
+
+        </div>
       </div>
-      <!-- end 2nd column-->
+    
+      <!--Footer-->
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+          <div class="ui stackable inverted divided grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">Resources Used</h4>
+              <div class="ui inverted link list">
+                <a href="https://www.w3schools.com/" class="item">W3 Schools</a>
+                <a href="https://fomantic-ui.com" class="item">Fomantic</a>
+                <a href="https://getbootstrap.com" class="item">BootStrap</a>
+                <a href="https://stackoverflow.com" class="item">StackOverflow</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Projects</h4>
+              <div class="ui inverted link list">
+                <a href="../../PokemonAPI/pokemon.html" class="item">Pokedex API Call</a>
+                <a href="#" class="item">The Great Race</a>
+                <a href="#" class="item">Rocket Launch</a>
+                <a href="#" class="item">Gallery</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Projects Extended</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Link One</a>
+                <a href="#" class="item">Link Two</a>
+                <a href="#" class="item">Link Three</a>
+                <a href="#" class="item">Link Four</a>
+              </div>
+            </div>
+            <div class="seven wide column">
+                <!--contact card-->
+              <h4 class="ui inverted header">Quick Contact</h4>
+              <p><div class="ui card inverted"style="text-align:center; margin-left:18%;">
+  <div class="content">
+    <div class="center aligned header">Michael A. Wilson</div>
+    <div class="center aligned description">
+      <p>Email: outofcontrolmike@gmail.com</p>
     </div>
   </div>
-  <!-- end content-->
+  <div class="extra content">
+    <div class="center aligned author">
+      <a href="https://github.com/outofcontrolmike/MAWProjects"><img class="ui avatar image massive" src="img/GitHub-Mark.png"> </a>
 
-
-  <script src="../js/script.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </div>
+  </div>
+</div>
+</p>
+<!-- End contact card-->
+            </div>
+          </div>
+          <div class="ui inverted section divider"></div>
+          <div class="ui horizontal inverted small divided link list">
+            <p class="item">&#169;MAW Project October 2020</p>
+          </div>
+        </div>
+      </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
