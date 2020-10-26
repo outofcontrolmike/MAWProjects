@@ -9,34 +9,67 @@
 -->
 
 <html>
-
-<head>
-    <meta charset = "UTF-8">
-    <link href="race.css" rel="stylesheet" >
+  <head>
+    <meta charset="UTF-8" />
+    <link href="race.css" rel="stylesheet" />
     <title>The Great Race Between Mario and Yoshi</title>
-  <!-- You MUST include jQuery before Fomantic -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
-  />
-  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
-</head>
+    <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+  </head>
 
-<body> 
-        <div class="ui segment" style="text-align: center; background-image:url(background.jpg); background-position: center;
+  <body>
+    <!-- Really isn't much to the page besides a container for all the images-->
+    <div
+      class="ui segment"
+      style="text-align: center; background-image:url(background.jpg); background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;">
-            <h1 class="ui massive">The Great Race!</h1>
-            <img class="ui image small centered" id="star"src="off.png" alt="blackstar">
-            <img class="ui image small" id="mario"src="mario.png" alt="mariostanding">
-            <img class="ui image small" id="yoshi" src="yoshi.png" alt="yoshistanding">
-            <img class="ui image medium" id="flag" src="flag.png" alt="finishflag">
-            <img class="ui image small centered" id="winMario" src="marioWin.png" alt="MarioShows">
-            <img class="ui image small centered" id="yoshiWin" src="yoshiwin.png" alt="YoshiShows">
-        </div>
+        background-size: cover;"
+    >
+      <h1 class="ui massive">The Great Race!</h1>
+      <div id="scores" class="ui container segment" style="text-align: left; height:100px; width:150px; float: left;">
+      <p id="mscore">Mario: 0</p>
+      <p id="yoshiscore">Yoshi: 0</p>
+      </div>
+      <img
+        class="ui image small centered"
+        id="star"
+        src="off.png"
+        alt="blackstar"
+      />
+      <img
+        class="ui image small"
+        id="mario"
+        src="mario.png"
+        alt="mariostanding"
+      />
+      <img
+        class="ui image small"
+        id="yoshi"
+        src="yoshi.png"
+        alt="yoshistanding"
+      />
+      <img class="ui image medium" id="flag" src="flag.png" alt="finishflag" />
+      <img
+        class="ui image small centered"
+        id="winMario"
+        src="marioWin.png"
+        alt="MarioShows"
+      />
+      <img
+        class="ui image small centered"
+        id="yoshiWin"
+        src="yoshiwin.png"
+        alt="YoshiShows"
+      />
+    </div>
+    <!-- end content-->
 
-        <script src="race.js"></script>
-</body>
+    <script src="race.js"></script>
+  </body>
 </html>

@@ -1,103 +1,89 @@
-
-
 // Declaring variables for events
-    let stopLight = document.getElementById('star');
-    let marioRun = document.getElementById('mario');
-    let yoshiRun = document.getElementById('yoshi');
-    let yoshiWin = document.getElementById('yoshiWin');
-    let marioWin = document.getElementById('winMario');
-
-
-
+var marioRun = document.getElementById("mario");
+var yoshiRun = document.getElementById("yoshi");
+var yoshiWin = document.getElementById("yoshiWin");
+var marioWin = document.getElementById("winMario");
 
 // onlick event for starting race by clicking stopLight variable
-    document.getElementById('star').addEventListener("click", startRace);
-    yoshiWin.addEventListener("click", restartRace);
-    marioWin.addEventListener("click", restartRace);
+document.getElementById("star").addEventListener("click", startRace);
+yoshiWin.addEventListener("click", restartRace);
+marioWin.addEventListener("click", restartRace);
+
 
 //get flag position
-var flagPosition = document.getElementById('flag');
-    var stopper = flagPosition.getBoundingClientRect();
-    console.log(stopper);
+var flagPosition = document.getElementById("flag");
+var stopper = flagPosition.getBoundingClientRect();
+console.log(stopper);
+var myTime;
 
-// function that runs the click event and swaps images and styles the racers to the left.
-function startRace() 
-{
+// handle starting the race
+function startRace() {
+  document.getElementById("star").src = "on.png";
+  marioRun = document.getElementById("mario").src = "mariorun.png";
+  yoshiRun = document.getElementById("yoshi").src = "yoshirun.png";
+  document.getElementById("mario").style.left = "0px";
+  document.getElementById("yoshi").style.left = "0px";
+  console.log("testing");
+  myTime = setInterval(takeOff, 10);
+  takeOff();
 
-    stopLight = document.getElementById('star').src = "on.png";
-     marioRun = document.getElementById('mario').src = "mariorun.png";
-     yoshiRun = document.getElementById('yoshi').src = "yoshirun.png";
-     document.getElementById('mario').style.left = "0px";
-     document.getElementById('yoshi').style.left = "0px";
+}
+  function takeOff() {
+    var rand = Math.round(Math.random() * 20);
+    var rand2 = Math.round(Math.random() * 20);
+    var marioRacer = document.getElementById("mario").style.left;
+    var yoshiRacer = document.getElementById("yoshi").style.left;
 
-     var myTime = setInterval(takeOff, 10); 
-
-        function takeOff() 
-    {
-
-        var rand = Math.round(Math.random() * 20);
-        var rand2 = Math.round(Math.random() * 20);
-        let marioRacer = document.getElementById('mario').style.left
-        let yoshiRacer = document.getElementById('yoshi').style.left
-    
-        marioRacer = document.getElementById('mario').style.left = (parseInt(document.getElementById('mario').style.left) + rand) + "px";
-        yoshiRacer = document.getElementById('yoshi').style.left = (parseInt(document.getElementById('yoshi').style.left) + rand2) + "px";
-
+    marioRacer = document.getElementById("mario").style.left =
+      parseInt(document.getElementById("mario").style.left) + rand + "px";
+    yoshiRacer = document.getElementById("yoshi").style.left =
+      parseInt(document.getElementById("yoshi").style.left) + rand2 + "px";
 
     //if statment to stop racer at finsh point
-        if (parseInt(marioRacer) >= 1600) {
-        myStop();
-        document.getElementById("yoshi").style.visibility = "hidden";
-        document.getElementById('mario').style.visibility = "hidden";
-        document.getElementById("winMario").style.visibility = "visible";
-        return;
-
-        }   else if (parseInt(yoshiRacer) >= 1600) 
-        {
-        myStop();
-        document.getElementById("yoshi").style.visibility = "hidden";
-        document.getElementById('mario').style.visibility = "hidden";
-        document.getElementById('yoshiWin').style.visibility = "visible";
- 
-        }
+    if (parseInt(marioRacer) >= 1600) {
+      myStop();
+      document.getElementById("yoshi").style.visibility = "hidden";
+      document.getElementById("mario").style.visibility = "hidden";
+      document.getElementById("winMario").style.visibility = "visible";
+      return;
+    } else if (parseInt(yoshiRacer) >= 1600) {
+      myStop();
+      document.getElementById("yoshi").style.visibility = "hidden";
+      document.getElementById("mario").style.visibility = "hidden";
+      document.getElementById("yoshiWin").style.visibility = "visible";
 
     }
+    yoshiWin.addEventListener("click", revealImages);
+    marioWin.addEventListener("click", revealImages);
+  }
 
-yoshiWin.addEventListener("click", revealImages);
-marioWin.addEventListener("click", revealImages);
 
-// function that reveals images
-function revealImages()
-{
+  // function that reveals images
+  function revealImages() {
     document.getElementById("yoshi").style.visibility = "visible";
     document.getElementById("mario").style.visibility = "visible";
     document.getElementById("winMario").style.visibility = "hidden";
     document.getElementById("yoshiWin").style.visibility = "hidden";
-    document.getElementById('star').src = "off.png";
+    document.getElementById("star").src = "off.png";
+  }
+
+  // This stops the interval
+  function myStop() {
+    clearInterval(myTime);
+  }
+
+  // this function will style the oriiginal back to the left and insert the running images.
+
+function restartRace() {
+  document.getElementById("mario").src = "mariorun.png";
+  document.getElementById("yoshi").src = "yoshirun.png";
+  document.getElementById("star").src = "on.png";
+  document.getElementById("mario").style.left = "0px";
+  document.getElementById("yoshi").style.left = "0px";
+  document.getElementById("star").addEventListener("click", startRace);
+  takeOff();
 
 }
-
-// This stops the interval
-function myStop() 
-{
-    clearInterval(myTime)
-
-}
-
-// this function will style the oriiginal back to the left and insert the running images. 
-document.getElementById('star').addEventListener("click", restartRace);
-
-}
-function restartRace()
-{
-    document.getElementById('mario').src = "mariorun.png";
-     document.getElementById('yoshi').src = "yoshirun.png";
-     document.getElementById('star').src = "on.png";
-     document.getElementById('mario').style.left = "0px";
-     document.getElementById('yoshi').style.left = "0px";
-
-}
-
 
 /*  Everything should be running well know.  I'd like to list out what I had struggles with;
 

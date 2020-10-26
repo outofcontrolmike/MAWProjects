@@ -1,3 +1,5 @@
+
+/*Setting the background image for race*/
 div.segment {
     background-image: url("background.jpg");
      /* Full height */
@@ -7,19 +9,17 @@ div.segment {
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-
+     height:1000px;
 }
 
-.segment {
-    height:1200px;
-    background-color: aquamarine;
-}
+/*setting position of flag*/
 .segment > #flag {
     float:right;
     bottom:630px;
     position: relative;
 }
 
+/*Handling of YoshiWin image*/
 .segment > #yoshiWin {
     width: 150px;
     height: 200px;
@@ -28,7 +28,7 @@ div.segment {
     position: fixed;
     visibility: hidden;
 }
-
+/*Handling of mario winning image*/
 .segment > #winMario {
     width: 150px;
     height: 200px;
