@@ -1,4 +1,4 @@
-html {
+div.segment {
     background-image: url("background.jpg");
      /* Full height */
      height: 100%; 
@@ -7,43 +7,20 @@ html {
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-     background-attachment: fixed;
 
 }
 
- div.container > #yoshi{
-    width: 150px;
-    height: 200px;
-    position: absolute;
-    right: 500px;
-    bottom:0px;
+.segment {
+    height:1200px;
+    background-color: aquamarine;
+}
+.segment > #flag {
+    float:right;
+    bottom:630px;
+    position: relative;
 }
 
-div.container > #mario{
-    width: 150x;
-    height: 200px;
-    position: absolute;
-    left: 500px;
-    top: 420px;
-}
-
-div.container > #star{
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    left: 550px;
-    top: 0px;
-}
-
-div.container > #flag {
-    width: 200px;
-    height: 600px;
-    right: 300px;
-    bottom: 0px;
-    position: fixed;
-}
-
-div.container > #yoshiWin {
+.segment > #yoshiWin {
     width: 150px;
     height: 200px;
     right: 500px;
@@ -52,7 +29,7 @@ div.container > #yoshiWin {
     visibility: hidden;
 }
 
-div.container > #winMario {
+.segment > #winMario {
     width: 150px;
     height: 200px;
     right: 600px; 

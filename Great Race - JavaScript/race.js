@@ -8,10 +8,17 @@
     let marioWin = document.getElementById('winMario');
 
 
+
+
 // onlick event for starting race by clicking stopLight variable
     document.getElementById('star').addEventListener("click", startRace);
     yoshiWin.addEventListener("click", restartRace);
     marioWin.addEventListener("click", restartRace);
+
+//get flag position
+var flagPosition = document.getElementById('flag');
+    var stopper = flagPosition.getBoundingClientRect();
+    console.log(stopper);
 
 // function that runs the click event and swaps images and styles the racers to the left.
 function startRace() 
@@ -38,14 +45,14 @@ function startRace()
 
 
     //if statment to stop racer at finsh point
-        if (parseInt(marioRacer) >= 1400) {
+        if (parseInt(marioRacer) >= 1600) {
         myStop();
         document.getElementById("yoshi").style.visibility = "hidden";
         document.getElementById('mario').style.visibility = "hidden";
         document.getElementById("winMario").style.visibility = "visible";
         return;
 
-        }   else if (parseInt(yoshiRacer) >= 1400) 
+        }   else if (parseInt(yoshiRacer) >= 1600) 
         {
         myStop();
         document.getElementById("yoshi").style.visibility = "hidden";
@@ -69,7 +76,6 @@ function revealImages()
     document.getElementById('star').src = "off.png";
 
 }
-
 
 // This stops the interval
 function myStop() 

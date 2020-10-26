@@ -11,7 +11,7 @@
 
 }
 
- div.container > #yoshi{
+ .segment > #yoshi{
     width: 150px;
     height: 200px;
     position: absolute;
@@ -19,7 +19,7 @@
     bottom:0px;
 }
 
-div.container > #mario{
+.segment > #mario{
     width: 150x;
     height: 200px;
     position: absolute;
@@ -27,7 +27,7 @@ div.container > #mario{
     top: 420px;
 }
 
-div.container > #star{
+.segment > #star{
     width: 200px;
     height: 200px;
     position: fixed;
@@ -35,7 +35,7 @@ div.container > #star{
     top: 0px;
 }
 
-div.container > #flag {
+.segment > #flag {
     width: 200px;
     height: 600px;
     right: 300px;
@@ -43,7 +43,7 @@ div.container > #flag {
     position: fixed;
 }
 
-div.container > #yoshiWin {
+.segment > #yoshiWin {
     width: 150px;
     height: 200px;
     right: 500px;
@@ -52,7 +52,7 @@ div.container > #yoshiWin {
     visibility: hidden;
 }
 
-div.container > #winMario {
+.segment > #winMario {
     width: 150px;
     height: 200px;
     right: 600px; 
