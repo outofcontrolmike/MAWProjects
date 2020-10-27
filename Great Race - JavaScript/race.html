@@ -31,11 +31,12 @@
         background-repeat: no-repeat;
         background-size: cover;"
     >
-      <h1 class="ui massive">The Great Race!</h1>
-      <div id="scores" class="ui container segment" style="text-align: left; height:100px; width:150px; float: left;">
-      <p id="mscore">Mario: 0</p>
-      <p id="yoshiscore">Yoshi: 0</p>
+      <h1 id="header" class="ui massive">The Great Race!  Click on the star to get started.</h1>
+      <div id="scores" class="ui container segment" style="text-align: left; height:140px; width:150px; float: left;">
+      <p>Mario:<span id="marioScore" class="ui red text large" style="padding-left:10px;"></span> </p>
+      <p>Yoshi:<span id="yoshiScore" class="ui green text large" style="padding-left:10px;"></span> </p>
       </div>
+      
       <img
         class="ui image small centered"
         id="star"
@@ -43,7 +44,7 @@
         alt="blackstar"
       />
       <img
-        class="ui image small"
+        class="ui image small" style="margin-top:100px;"
         id="mario"
         src="mario.png"
         alt="mariostanding"
