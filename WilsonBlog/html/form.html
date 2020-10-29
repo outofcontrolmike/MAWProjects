@@ -15,8 +15,7 @@
     <style>
 
     body {
-      background-color:indianred;
-    }
+      background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
     body > .grid {
       height: 100%;
     }
@@ -75,10 +74,10 @@
 
   <div class="ui middle aligned center aligned grid">
     <div class="column">
-      <h2 class="ui teal image header">
-        <img src="assets/images/logo.png" class="image">
+      <h2 class="ui black image header">
+        <img src="img/write.jpg" class="image massive">
         <div class="content">
-          Send me a message please!
+          Leave me a comment!
         </div>
       </h2>
       <form class="ui large form">
@@ -91,19 +90,29 @@
           </div>
           <div class="field">
             <div class="ui left icon input">
-              <i class="lock icon"></i>
-              <input type="password" name="password" placeholder="Password">
+              <i class="user icon"></i>
+              <input type="user" name="name" placeholder="Name">
             </div>
           </div>
-          <div class="ui fluid large teal submit button">Login</div>
+          <div class="field">
+            <div class="ui icon textarea">
+              <div class="field">
+                <label style="float:left">Text</label>
+                <textarea rows="10" placeholder="What did you like best about my site?"></textarea>
+            </div>
+            </div>
+          </div>
+          <div class="ui fluid large black submit button">Submit</div>
         </div>
   
-        <div class="ui error message"></div>
+        <div class="ui error message">
+          There was a problem submitting the form
+        </div>
   
       </form>
   
       <div class="ui message">
-        New to us? <a href="#">Sign Up</a>
+        <p class="text">*This is an example comment form.  A real one will replace this later.</p>
       </div>
     </div>
   </div>
