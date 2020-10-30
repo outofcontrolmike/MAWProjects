@@ -1,73 +1,102 @@
-<!-- Creating a website again-->
+<!-- 
+Project: Rocket Launch API Connection
+Purpose: This page will show information regarding Rocket Launch schedules, the user will be able to interact with it to view different schedules
+Author:  Michael Wilson
+Original project date: 09/15/2018
+Rewrite Date:  10/29/2020
+-->
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Home</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
     <link href="style.css" rel="stylesheet">
+        <!-- Fomantic Usage-->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
 
-    
+        <style>
+
+        </style>
 </head>
 
-<body id= "weatherBody">
-    <nav>
-        <ul>
-                <li><a class="active" href="home.html">Home</a></li>
-                <li><a href="game.html">Game</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="RocketLaunch.html">Rocket Schedule</a></li>
-                <li><a href="survey.html">Survey</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-    <div id = "weatherPage">
+<body>
+    <div class="ui header centered text teal" style="background-color: antiquewhite;">
+        <h1>Rocket Launch API Schedule</h1>
+    </div>
 
-        <div id="title">
-            <h2>Rocket Launch Schedule</h2>
-          </div>
-          </br>
-          <div id="buttons">
-            <fieldset>
-              <button type="button" id="falcon" value="next 5 Launches">Next Five Falcon Launches</button>
-              <button type="button" id="launcherone">Next Five Launcherone Launches</button>
-              <button type="button" id="ariane">Next Five ariane</button>
-              <button type="button" id="nextFive">Next Five Launches</button>
-            </fieldset>
-          </div>
-          <div id="countdownSection">
-            <p>Counting Down</p>
-          </div>
-          
-        <div class="rowContainer">
-            <p id="myHeading"></p>
-        
-          <section id="launchRow" style="padding-left: 15px;">
-          </section><br>
+    <div class="ui segment container">
+    <div class="ui two column doubling stackable grid segment" style="background-color: burlywood;">
+        <div class="column">
+            <div class="ui card">
+                <div class="ui image medium" style="object-fit: contain;">
+                  <img src="images/rocket.gif">
+                </div>
+                <div class="content">
+                  <a class="header">Next Five Launches</a>
+                  <div class="meta">
+                    <span class="date">Description</span>
+                  </div>
+                  <div class="description">
+                    Description about Rockets
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="rocket icon"></i>
+                    View Api Source
+                  </a>
+                </div>
+              </div>
         </div>
-        
-        
-          </section>
-          
-          <img src="images/rocket.gif" id="ff7" alt="Captain Cid">
-          <br>
-          <br>
-          <br>
-          <script src="rocket.js"></script>
+        <div class="column">
+            <div class="ui container" style="display:inline-block;">
+            <h3>Buttons Schedule</h3>
+            <button class="ui button blue large">launch</button>
+            <button class="ui button blue large">launch</button>
+            <button class="ui button blue large">launch</button>
+            <button class="ui button blue large">launch</button>
+            <button class="ui button blue large">launch</button>
+        </div>
     </div>
-
+    <!-- end columns-->
+    <div class="ui column">
+        <h1>test</h1>
+        <table class="ui celled table">
+            <thead>
+              <tr><th>Name</th>
+              <th>Age</th>
+              <th>Job</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td data-label="Name">James</td>
+                <td data-label="Age">24</td>
+                <td data-label="Job">Engineer</td>
+              </tr>
+              <tr>
+                <td data-label="Name">Jill</td>
+                <td data-label="Age">26</td>
+                <td data-label="Job">Engineer</td>
+              </tr>
+              <tr>
+                <td data-label="Name">Elyse</td>
+                <td data-label="Age">24</td>
+                <td data-label="Job">Designer</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    </div>
+    <!-- end segment-->
     
 
-    <div class="footer">
-        <p> Footer Here </p>
-    </div>
-    
 </body>
-
-
-</html>
