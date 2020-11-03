@@ -1,154 +1,51 @@
+/*
+    Project: Rocket Launch API
+    Purpose: Access data from a Rocket Launch schedule API
+    Date: 11/02/2020
+    Author: Michael Wilson
+*/
 
+//Functionallity List
+/*
+ 1. Access the api by an Http request
+ 2. Manipulate that data and turn it into JSON Format
+ 3. Create a function that inserts replaces the html of the rocket launch card
+ 4. Function that loads data into the Launch table
+ 5. Function for the buttons (maybe pass in button id as a paramter?)
 
-//Array of rocket images
-var galleryPics = ["images/falcon.jpg", "images/launcherone.gif", "images/otherRocket.jpg", "images/rocket.gif"];
-var galleryId = ["0", "1", "2", "3"];
+*/
 
-//#region Variables 
-var rocketReport; // Used in the aFunction - will eventually be turned into response data as a string
-var x; //Variable x clears the timer 
+//Onload events
+window.addEventListener('load', nextFive);
+//Event listeners
+var btnDefault = document.getElementById('btnDefault').addEventListener('click', cardManip);
+var btnOne = document.getElementById('btnOne').addEventListener('click', cardManip);
+var btnTwo = document.getElementById('btnTwo').addEventListener('click', cardManip);
+var btnThree = document.getElementById('btnThree').addEventListener('click', cardManip);
+var btnFour = document.getElementById('btnFour').addEventListener('click', cardManip);
 
-var launchInfoRow = document.getElementById("launchRow"); //Grabs your launcher data row
+//Variables
+var httpRequest = new XMLHttpRequest();
 
-
-
-// This will instert info into the heading of each rocket launch
-var myHeading = document.getElementById("myHeading");
-
-// variables that will eventually display launch info
-var pageLoadRequest = window;
-var falconRequest = document.getElementById("falcon"); // grabs the falcon button - Launch info should swap for falcon
-var launcheroneRequest = document.getElementById("launcherone"); // grabs launcherone button - just like previous
-var arianeRequest = document.getElementById("ariane"); // grabs ariane button - and again
-var defaultRequest = document.getElementById("nextFive"); // grabs the nextFive button - This will display the oringinal 
-var launchObject;
-
-//#endregion
-
-//Events that are supposed to insert the API info into a certain div
-falconRequest.addEventListener("click", loadFalcon); // When Falcon button is clicked - loadFalcon is run
-launcheroneRequest.addEventListener("click", loadLauncherOne); // when Launcher one is clicked - loadLauncherOne is referenced
-arianeRequest.addEventListener("click", loadAriane); // when ariane is clicked - loadAriane is ran
-defaultRequest.addEventListener("click", loadLaunches);
-pageLoadRequest.addEventListener("load", launchDisplay);
-
-
-
-var httpRequest = new XMLHttpRequest(); // creates a variable that makes a  HMLHttpRequest  it will request data from where it's sent
-
-function launchDisplay()
-{
-    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
+//api call for the next 5 luanches
+function nextFive() {
+    httpRequest.open("get","https://ll.thespacedevs.com/2.0.0/launch/upcoming/?limit=5");
     httpRequest.send();
-    myHeading.innerHTML = "'<h1>Next Launches<h1>";
-    httpRequest.onreadystatechange = aFunction;
-
-}
-
-// function that displays original 5 launches
-function loadLaunches() 
-{
-    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
-    httpRequest.send();
-    myHeading.innerHTML = "<h1>Upcoming Launches<h1>";
-    httpRequest.onreadystatechange = aFunction;
-    document.getElementById('ff7').src = galleryPics[3];
+    console.log(httpRequest);
+    console.log(httpRequest.name);
+    console.log('test');
 }
 
 
-// function that switches to next five from falcon
-function loadFalcon() 
-{
-    httpRequest.open("get", " https://launchlibrary.net/1.4/launch?next=5&name=falcon"); //specifies the type of request, get's the info from API
-    httpRequest.send(); // Sends the request string to the server
-    myHeading.innerHTML = "<h1>Next Falcon Launches<h1>";
-    httpRequest.onreadystatechange = aFunction; //When the status of XMLHttpRequest is finished it will run to aFunction
-    document.getElementById('ff7').src = galleryPics[0];
-  
+
+//function for buttons
+function buttonAction(btnId) {
+    
 }
 
-
-// function that swithces to next launches form launcherone 
-function loadLauncherOne() 
-{
-
-    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
-    httpRequest.send();
-    myHeading.innerHTML = "'<h1>Next LauncherOne Launches<h1>";
-    httpRequest.onreadystatechange = aFunction; // This will run aFunction
-    document.getElementById('ff7').src = galleryPics[1];
+//function for card manipulation
+function cardManip() {
+    console.log('hello/testing');
 }
 
-//function that swithces to launches from ariane
-function loadAriane() // same as above but for ariane
-{
-    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=ariane&next=5");
-    httpRequest.send();
-    myHeading.innerHTML = "'<h1>Next Ariane Launches<h1>";
-    httpRequest.onreadystatechange = aFunction;
-    document.getElementById('ff7').src = galleryPics[2];
-}
-
-//function converts string into an object and accesses the first launch and name of it. 
-function aFunction() {
-    if (httpRequest.readyState === 4 && httpRequest.status === 200) // this only runs if the readyStae of the request client is Done === 4.  :)
-    {
-        rocketReport = httpRequest.responseText; // stores response text in a variable
-        console.log(rocketReport); // this logs the variable that holds response text
-        launchObject = JSON.parse(rocketReport); // converts this string of data that is returned to an object that we can later access
-        console.log(launchObject.launches[0].name); // accesses the array first value from the array and it's name value.
-
-        renderHTML(launchObject);//Runs function we created for placing the data requested in your html
-        timer(launchObject); // timer takes the info from launchObject
-    }
-
-
-
-    // Creating a timer - w3 Schools
-    function timer(launchObject) // Timer function that will run when launchObject is passed
-    {
-        clearInterval(x); // Method that clears our timer incase there are no more launches
-
-        // Set the date we're counting down to
-        countDownDate = new Date(launchObject.launches[0].net).getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get todays date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="demo"
-            document.getElementById("countdownSection").innerHTML ="Countdown Until Next Launch - " + days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
-
-            // If the count down is finished, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdownSection").innerHTML = "Rocket Launched";
-            }
-        }, 1000);
-
-    }
-
-
-    function renderHTML(data) {
-        launchInfoRow.innerHTML = ""; //Clears data from previous request
-        var htmlString = "";//Sets an empty string where your launch data will be added
-
-        for (i = 0; i < data.launches.length; i++) {//Loops through launches and adds each line to the empty string created
-            htmlString += "<p>" + data.launches[i].net + data.launches[i].name + "</p>";
-        } //end of for
-
-        launchInfoRow.insertAdjacentHTML("beforeend", htmlString);//Inserts data to html element we want it in
-    }
-}
+//function for buttons

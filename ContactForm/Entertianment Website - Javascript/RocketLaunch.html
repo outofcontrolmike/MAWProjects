@@ -9,7 +9,7 @@ Rewrite Date:  10/29/2020
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Rocket Launch API</title>
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,24 +24,30 @@ Rewrite Date:  10/29/2020
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
 
         <style>
+          body {
+            background: black;
+          }
 
+          .button {
+            margin-bottom: 5px;
+          }
         </style>
 </head>
 
 <body>
-    <div class="ui header centered text teal" style="background-color: antiquewhite;">
+    
+    <div class="ui segment container two column doubling stackable grid" >
+      <div class="ui header centered text" style="width:100%;">
         <h1>Rocket Launch API Schedule</h1>
+        <hr>
     </div>
-
-    <div class="ui segment container">
-    <div class="ui two column doubling stackable grid segment" style="background-color: burlywood;">
         <div class="column">
             <div class="ui card">
                 <div class="ui image medium" style="object-fit: contain;">
                   <img src="images/rocket.gif">
                 </div>
                 <div class="content">
-                  <a class="header">Next Five Launches</a>
+                  <a class="header">Launch schedule for next five</a>
                   <div class="meta">
                     <span class="date">Description</span>
                   </div>
@@ -58,45 +64,59 @@ Rewrite Date:  10/29/2020
               </div>
         </div>
         <div class="column">
-            <div class="ui container" style="display:inline-block;">
-            <h3>Buttons Schedule</h3>
-            <button class="ui button blue large">launch</button>
-            <button class="ui button blue large">launch</button>
-            <button class="ui button blue large">launch</button>
-            <button class="ui button blue large">launch</button>
-            <button class="ui button blue large">launch</button>
+            <div class="ui container" style="display: inline;">
+            <h3>Launches Available</h3>
+            <div class="button group" style="display:grid">
+            <button id="btnDefault" class="ui button blue large" style="margin-bottom: 5px;">Next 5 for any</button>
+            <button id="btnOne" class="ui button green large" style="margin-bottom: 5px;" >1st</button>
+            <button id="btnTwo" class="ui button red large" style="margin-bottom: 5px;">2nd</button>
+            <button id="btnThree" class="ui button yellow large" style="margin-bottom: 5px;">3rd</button>
+            <button id="btnFour" class="ui button pink large" style="margin-bottom: 5px;">4th</button>
         </div>
+            </div>
     </div>
     <!-- end columns-->
-    <div class="ui column">
-        <h1>test</h1>
-        <table class="ui celled table">
+    <hr>
+    <div class="ui column"  style="width:100%">
+        <h1>Name of Launch</h1>
+
+        <table class="ui celled table inverted">
             <thead>
-              <tr><th>Name</th>
-              <th>Age</th>
-              <th>Job</th>
+              <tr><th>Launch ID</th>
+              <th>Date</th>
+              <th>Time</th>
             </tr></thead>
             <tbody>
               <tr>
-                <td data-label="Name">James</td>
-                <td data-label="Age">24</td>
-                <td data-label="Job">Engineer</td>
+                <td data-label="Name" id="id"></td>
+                <td data-label="Age" id="Date">24</td>
+                <td data-label="Job" id="time">Engineer</td>
               </tr>
               <tr>
-                <td data-label="Name">Jill</td>
-                <td data-label="Age">26</td>
-                <td data-label="Job">Engineer</td>
+                <td data-label="Name" id="id"></td>
+                <td data-label="Age" id="Date">24</td>
+                <td data-label="Job" id="time">Engineer</td>
               </tr>
               <tr>
-                <td data-label="Name">Elyse</td>
-                <td data-label="Age">24</td>
-                <td data-label="Job">Designer</td>
+                <td data-label="Name" id="id"></td>
+                <td data-label="Age" id="Date">24</td>
+                <td data-label="Job" id="time">Engineer</td>
+              </tr>
+              <tr>
+                <td data-label="Name" id="id"></td>
+                <td data-label="Age" id="Date"></td>
+                <td data-label="Job" id="time">E</td>
+              </tr>
+              <tr>
+                <td data-label="Name" id="id"></td>
+                <td data-label="Age" id="Date">24</td>
+                <td data-label="Job" id="time">Engineer</td>
               </tr>
             </tbody>
           </table>
     </div>
-    </div>
     <!-- end segment-->
+    <script src="rocket.js"></script>
     
 
 </body>
