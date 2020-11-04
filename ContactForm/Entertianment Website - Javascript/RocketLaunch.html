@@ -44,12 +44,12 @@ Rewrite Date:  10/29/2020
         <div class="column">
             <div class="ui card">
                 <div class="ui image medium" style="object-fit: contain;">
-                  <img src="images/rocket.gif">
+                  <img style="height:300px; width:300px;" id="rocketImage" src="images/rocket.gif">
                 </div>
                 <div class="content">
                   <a class="header">Launch schedule for next five</a>
                   <div class="meta">
-                    <span class="date">Description</span>
+                    <span id="countdown" class="date">Description</span>
                   </div>
                   <div class="description">
                     Description about Rockets
@@ -67,19 +67,17 @@ Rewrite Date:  10/29/2020
             <div class="ui container" style="display: inline;">
             <h3>Launches Available</h3>
             <div class="button group" style="display:grid">
-            <button id="btnDefault" class="ui button blue large" style="margin-bottom: 5px;">Next 5 for any</button>
-            <button id="btnOne" class="ui button green large" style="margin-bottom: 5px;" >1st</button>
-            <button id="btnTwo" class="ui button red large" style="margin-bottom: 5px;">2nd</button>
-            <button id="btnThree" class="ui button yellow large" style="margin-bottom: 5px;">3rd</button>
-            <button id="btnFour" class="ui button pink large" style="margin-bottom: 5px;">4th</button>
+            <button id="falcon" class="ui button blue large" style="margin-bottom: 5px;">Falcon</button>
+            <button id="launcherone" class="ui button green large" style="margin-bottom: 5px;">LauncherOne</button>
+            <button id="ariane" class="ui button red large" style="margin-bottom: 5px;">Ariane</button>
+            <button id="nextFive" class="ui button yellow large" style="margin-bottom: 5px;">Next Five</button>
         </div>
             </div>
     </div>
     <!-- end columns-->
     <hr>
     <div class="ui column"  style="width:100%">
-        <h1>Name of Launch</h1>
-
+        <h1 id="myHeading">Name of Launch</h1>
         <table class="ui celled table inverted">
             <thead>
               <tr><th>Launch ID</th>

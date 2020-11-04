@@ -5,12 +5,9 @@ var galleryPics = ["images/falcon.jpg", "images/launcherone.gif", "images/otherR
 var galleryId = ["0", "1", "2", "3"];
 
 //#region Variables 
-var rocketReport; // Used in the aFunction - will eventually be turned into response data as a string
+var rocketReport; // Used in the rocketRender - will eventually be turned into response data as a string
 var x; //Variable x clears the timer 
-
-var launchInfoRow = document.getElementById("launchRow"); //Grabs your launcher data row
-
-
+var launchInfoRow = document.getElementById("launchRow"); 
 
 // This will instert info into the heading of each rocket launch
 var myHeading = document.getElementById("myHeading");
@@ -41,7 +38,7 @@ function launchDisplay()
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
     httpRequest.send();
     myHeading.innerHTML = "'<h1>Next Launches<h1>";
-    httpRequest.onreadystatechange = aFunction;
+    httpRequest.onreadystatechange = rocketRender;
 
 }
 
@@ -51,7 +48,7 @@ function loadLaunches()
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
     httpRequest.send();
     myHeading.innerHTML = "<h1>Upcoming Launches<h1>";
-    httpRequest.onreadystatechange = aFunction;
+    httpRequest.onreadystatechange = rocketRender;
     document.getElementById('ff7').src = galleryPics[3];
 }
 
@@ -62,7 +59,7 @@ function loadFalcon()
     httpRequest.open("get", " https://launchlibrary.net/1.4/launch?next=5&name=falcon"); //specifies the type of request, get's the info from API
     httpRequest.send(); // Sends the request string to the server
     myHeading.innerHTML = "<h1>Next Falcon Launches<h1>";
-    httpRequest.onreadystatechange = aFunction; //When the status of XMLHttpRequest is finished it will run to aFunction
+    httpRequest.onreadystatechange = rocketRender; //When the status of XMLHttpRequest is finished it will run to rocketRender
     document.getElementById('ff7').src = galleryPics[0];
   
 }
@@ -75,7 +72,7 @@ function loadLauncherOne()
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
     httpRequest.send();
     myHeading.innerHTML = "'<h1>Next LauncherOne Launches<h1>";
-    httpRequest.onreadystatechange = aFunction; // This will run aFunction
+    httpRequest.onreadystatechange = rocketRender; // This will run rocketRender
     document.getElementById('ff7').src = galleryPics[1];
 }
 
@@ -85,12 +82,12 @@ function loadAriane() // same as above but for ariane
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=ariane&next=5");
     httpRequest.send();
     myHeading.innerHTML = "'<h1>Next Ariane Launches<h1>";
-    httpRequest.onreadystatechange = aFunction;
+    httpRequest.onreadystatechange = rocketRender;
     document.getElementById('ff7').src = galleryPics[2];
 }
 
 //function converts string into an object and accesses the first launch and name of it. 
-function aFunction() {
+function rocketRender() {
     if (httpRequest.readyState === 4 && httpRequest.status === 200) // this only runs if the readyStae of the request client is Done === 4.  :)
     {
         rocketReport = httpRequest.responseText; // stores response text in a variable
