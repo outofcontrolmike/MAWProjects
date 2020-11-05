@@ -42,29 +42,16 @@ Rewrite Date:  10/29/2020
         <hr>
     </div>
         <div class="column">
-            <div class="ui card">
-                <div class="ui image medium" style="object-fit: contain;">
-                  <img style="height:300px; width:300px;" id="rocketImage" src="images/rocket.gif">
-                </div>
-                <div class="content">
-                  <a class="header">Launch schedule for next five</a>
-                  <div class="meta">
-                    <span id="countdown" class="date">Description</span>
-                  </div>
-                  <div class="description">
-                    Description about Rockets
-                  </div>
-                </div>
-                <div class="extra content">
-                  <a>
-                    <i class="rocket icon"></i>
-                    View Api Source
-                  </a>
-                </div>
+                <div class="ui image large" style="object-fit: contain;">
+                  <img style="height:450px; width:600px;" id="rocketImage" src="images/rocket.gif">
+              
+                
+             
               </div>
         </div>
         <div class="column">
             <div class="ui container" style="display: inline;">
+              <h2>Next Launch:<span id="countdown" class="date"></span></h2>
             <h3>Launches Available</h3>
             <div class="button group" style="display:grid">
             <button id="falcon" class="ui button blue large" style="margin-bottom: 5px;">Falcon</button>
@@ -75,43 +62,16 @@ Rewrite Date:  10/29/2020
             </div>
     </div>
     <!-- end columns-->
-    <hr>
     <div class="ui column"  style="width:100%">
-        <h1 id="myHeading">Name of Launch</h1>
-        <table class="ui celled table inverted">
-            <thead>
-              <tr><th>Launch ID</th>
-              <th>Date</th>
-              <th>Time</th>
-            </tr></thead>
-            <tbody>
-              <tr>
-                <td data-label="Name" id="id"></td>
-                <td data-label="Age" id="Date">24</td>
-                <td data-label="Job" id="time">Engineer</td>
-              </tr>
-              <tr>
-                <td data-label="Name" id="id"></td>
-                <td data-label="Age" id="Date">24</td>
-                <td data-label="Job" id="time">Engineer</td>
-              </tr>
-              <tr>
-                <td data-label="Name" id="id"></td>
-                <td data-label="Age" id="Date">24</td>
-                <td data-label="Job" id="time">Engineer</td>
-              </tr>
-              <tr>
-                <td data-label="Name" id="id"></td>
-                <td data-label="Age" id="Date"></td>
-                <td data-label="Job" id="time">E</td>
-              </tr>
-              <tr>
-                <td data-label="Name" id="id"></td>
-                <td data-label="Age" id="Date">24</td>
-                <td data-label="Job" id="time">Engineer</td>
-              </tr>
-            </tbody>
-          </table>
+       
+        <div class="ui segment">
+          <p style="text-align: center;" id="myHeading">Name of Launch</p>
+          <hr>
+            <div id="launchRow">
+
+            </div>
+
+        </div>
     </div>
     <!-- end segment-->
     <script src="rocket.js"></script>

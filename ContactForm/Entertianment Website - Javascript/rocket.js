@@ -52,7 +52,7 @@ function launchDisplay()
 {
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
     httpRequest.send();
-    myHeading.innerHTML = "<h1>Next Launches<h1>";
+    myHeading.innerHTML = "Next Launches";
     httpRequest.onreadystatechange = rocketRender;
 }
 
@@ -61,20 +61,22 @@ function loadLaunches()
 {
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
     httpRequest.send();
-    myHeading.innerHTML = "<h1>Upcoming Launches<h1>";
-    httpRequest.onreadystatechange = rocketRender();
+    myHeading.innerHTML = "Upcoming Launches";
+    httpRequest.onreadystatechange = rocketRender;
     document.getElementById('rocketImage').src = galleryPics[3];
+
 }
 
 
 // function that switches to next five from falcon
-function loadFalcon() 
+function loadFalcon(name) 
 {
     httpRequest.open("get", " https://launchlibrary.net/1.4/launch?next=5&name=falcon"); //specifies the type of request, get's the info from API
     httpRequest.send(); // Sends the request string to the server
-    myHeading.innerHTML = "<h1>Next Falcon Launches<h1>";
-    httpRequest.onreadystatechange = rocketRender(); //When the status of XMLHttpRequest is finished it will run to rocketRender
+    myHeading.innerHTML = "Next Falcon Launches";
+    httpRequest.onreadystatechange = rocketRender; //When the status of XMLHttpRequest is finished it will run to rocketRender
     document.getElementById('rocketImage').src = galleryPics[0];
+    console.log("works");
   
 }
 
@@ -83,8 +85,8 @@ function loadLauncherOne()
 {
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
     httpRequest.send();
-    myHeading.innerHTML = "<h1>Next LauncherOne Launches<h1>";
-    httpRequest.onreadystatechange = rocketRender(); // This will run rocketRender
+    myHeading.innerHTML = "Next LauncherOne Launches";
+    httpRequest.onreadystatechange = rocketRender; // This will run rocketRender
     document.getElementById('rocketImage').src = galleryPics[1];
 }
 
@@ -93,14 +95,16 @@ function loadAriane() // same as above but for ariane
 {
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=ariane&next=5");
     httpRequest.send();
-    myHeading.innerHTML = "<h1>Next Ariane Launches<h1>";
-    httpRequest.onreadystatechange = rocketRender();
+    myHeading.innerHTML = "Next Ariane Launches";
+    httpRequest.onreadystatechange = rocketRender;
     document.getElementById('rocketImage').src = galleryPics[2];
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 function rocketRender() {
-    if (httpRequest.readyState === 4 && httpRequest.status === 200) // this only runs if the readyStae of the request client is Done === 4.  :)
+    if (httpRequest.readyState === 4 && httpRequest.status === 200)
     {
         rocketReport = httpRequest.responseText;
         console.log(rocketReport);
@@ -135,23 +139,25 @@ function rocketRender() {
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Display the result in the element with id="demo"
-            countdown.innerHTML = "Countdown Until Next Launch - " + days + "d " + hours + "h " +
+            countdown.innerHTML = " - " + days + "d " + hours + "h " +
                 minutes + "m " + seconds + "s ";
 
             // If the count down is finished, write some text 
             if (distance < 0) {
                 clearInterval(x);
-                countdown.innerHTML = "Rocket Launched";
+                countdown.innerHTML= "Rocket Launched";
             }
         }, 1000);
 
-    }
+    }//end timer
 
     function renderHTML(data) {
         launchInfoRow.innerHTML = "";
         var htmlString = "";
+        var num = 0;
         for (i = 0; i < data.launches.length; i++) {
-            htmlString += "<p>" + data.launches[i].net + data.launches[i].name + "</p>";
+            num++;
+            htmlString += "<p> #" + num + " " + data.launches[i].net + "<span>||</span> "  + data.launches[i].name + "</p>";
         }
 
         launchInfoRow.insertAdjacentHTML("beforeend", htmlString);
