@@ -13,7 +13,6 @@ Rewrite Date:  10/29/2020
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
         <!-- Fomantic Usage-->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
         <link
@@ -36,7 +35,7 @@ Rewrite Date:  10/29/2020
 
 <body>
     
-    <div class="ui segment container two column doubling stackable grid" >
+    <div class="ui segment container two column doubling stackable grid">
       <div class="ui header centered text" style="width:100%;">
         <h1>Rocket Launch API Schedule</h1>
         <hr>
@@ -50,14 +49,18 @@ Rewrite Date:  10/29/2020
               </div>
         </div>
         <div class="column">
+          <h2 >Next Launch:<span id="countdown" class="date"></span></h2>       
+
             <div class="ui container" style="display: inline;">
-              <h2>Next Launch:<span id="countdown" class="date"></span></h2>
+              <div class="ui segment">
+               <button id="oldView" class="ui button purple large" style="float: right;"><a href="RocketLaunchOld.html" style="color:white;">Old View</a></button>
             <h3>Launches Available</h3>
             <div class="button group" style="display:grid">
             <button id="falcon" class="ui button blue large" style="margin-bottom: 5px;">Falcon</button>
             <button id="launcherone" class="ui button green large" style="margin-bottom: 5px;">LauncherOne</button>
             <button id="ariane" class="ui button red large" style="margin-bottom: 5px;">Ariane</button>
-            <button id="nextFive" class="ui button yellow large" style="margin-bottom: 5px;">Next Five</button>
+            <button id="nextFive" class="ui button yellow large" style="margin-bottom: 5px;">Next Five</button>  
+            </div>
         </div>
             </div>
     </div>
@@ -65,7 +68,7 @@ Rewrite Date:  10/29/2020
     <div class="ui column"  style="width:100%">
        
         <div class="ui segment">
-          <p style="text-align: center;" id="myHeading">Name of Launch</p>
+          <h1 style="text-align: center;" id="myHeading">Name of Launch</h1>
           <hr>
             <div id="launchRow">
 
