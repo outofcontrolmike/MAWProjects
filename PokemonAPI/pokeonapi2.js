@@ -67,7 +67,7 @@ function catchSingle() {
     prevUrl = pURL;
     }
   }
-  //if not a number
+  //if not an interger or empty string
   else if (input != "") {
     var LowerInput = input.toLowerCase(0);
     while(prevUrl != input) {

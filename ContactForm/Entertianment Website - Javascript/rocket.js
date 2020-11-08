@@ -1,7 +1,8 @@
 /*
     Project: Rocket Launch API
     Purpose: Access data from a Rocket Launch schedule API
-    Date: 11/02/2020
+    Rewrite Date: 11/02/2020
+    Original project date: 09/15/2018
     Author: Michael Wilson
 */
 
@@ -42,21 +43,16 @@ falconRequest.addEventListener("click", loadFalcon); // When Falcon button is cl
 launcheroneRequest.addEventListener("click", loadLauncherOne); // when Launcher one is clicked - loadLauncherOne is referenced
 arianeRequest.addEventListener("click", loadAriane); // when ariane is clicked - loadAriane is ran
 defaultRequest.addEventListener("click", loadLaunches);
-pageLoadRequest.addEventListener("load", launchDisplay);
+pageLoadRequest.addEventListener("load", loadLaunches);
 
 
+// creates a variable that makes a  HMLHttpRequest  it will request data from where it's sent
+var httpRequest = new XMLHttpRequest(); 
 
-var httpRequest = new XMLHttpRequest(); // creates a variable that makes a  HMLHttpRequest  it will request data from where it's sent
+//
 
-function launchDisplay()
-{
-    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
-    httpRequest.send();
-    myHeading.innerHTML = "Next Launches";
-    httpRequest.onreadystatechange = rocketRender;
-}
 
-// function that displays original 5 launches
+//displays original 5 launches
 function loadLaunches() 
 {
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5?");
@@ -64,12 +60,11 @@ function loadLaunches()
     myHeading.innerHTML = "Upcoming Launches";
     httpRequest.onreadystatechange = rocketRender;
     document.getElementById('rocketImage').src = galleryPics[3];
-
 }
 
 
-// function that switches to next five from falcon
-function loadFalcon(name) 
+//switches to next five from falcon
+function loadFalcon() 
 {
     httpRequest.open("get", " https://launchlibrary.net/1.4/launch?next=5&name=falcon"); //specifies the type of request, get's the info from API
     httpRequest.send(); // Sends the request string to the server
@@ -80,7 +75,7 @@ function loadFalcon(name)
   
 }
 
-// function that swithces to next launches form launcherone 
+//switches to next launches form launcherone 
 function loadLauncherOne() 
 {
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
@@ -90,7 +85,7 @@ function loadLauncherOne()
     document.getElementById('rocketImage').src = galleryPics[1];
 }
 
-//function that swithces to launches from ariane
+//function that switches to launches from ariane
 function loadAriane() // same as above but for ariane
 {
     httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=ariane&next=5");
@@ -101,8 +96,7 @@ function loadAriane() // same as above but for ariane
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+//Converts the call back function's object into JSON, calls 2 other functions that create html and start the timer
 function rocketRender() {
     if (httpRequest.readyState === 4 && httpRequest.status === 200)
     {
@@ -151,6 +145,7 @@ function rocketRender() {
 
     }//end timer
 
+    //converts information from launches object into html
     function renderHTML(data) {
         launchInfoRow.innerHTML = "";
         var htmlString = "";

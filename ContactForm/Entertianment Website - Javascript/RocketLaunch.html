@@ -34,23 +34,21 @@ Rewrite Date:  10/29/2020
 </head>
 
 <body>
-    
     <div class="ui segment container two column doubling stackable grid">
       <div class="ui header centered text" style="width:100%;">
         <h1>Rocket Launch API Schedule</h1>
         <hr>
     </div>
+    <!--Content for Rocket image-->
         <div class="column">
                 <div class="ui image large" style="object-fit: contain;">
-                  <img style="height:450px; width:600px;" id="rocketImage" src="images/rocket.gif">
-              
-                
-             
+                  <img style="height:450px; width:600px;" id="rocketImage" src="images/rocket.gif">  
               </div>
         </div>
+        <!-- end Rocket Image-->
+        <!--User Buttons content-->
         <div class="column">
           <h2 >Next Launch:<span id="countdown" class="date"></span></h2>       
-
             <div class="ui container" style="display: inline;">
               <div class="ui segment">
                <button id="oldView" class="ui button purple large" style="float: right;"><a href="RocketLaunchOld.html" style="color:white;">Old View</a></button>
@@ -64,19 +62,18 @@ Rewrite Date:  10/29/2020
         </div>
             </div>
     </div>
-    <!-- end columns-->
+    <!-- end Buttons-->
+    <!-- Rocket Launch Info-->
     <div class="ui column"  style="width:100%">
        
         <div class="ui segment">
           <h1 style="text-align: center;" id="myHeading">Name of Launch</h1>
           <hr>
             <div id="launchRow">
-
             </div>
-
         </div>
     </div>
-    <!-- end segment-->
+    <!-- end Rocket info-->
     <script src="rocket.js"></script>
     
 
