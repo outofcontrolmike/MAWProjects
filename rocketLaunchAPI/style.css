@@ -1,0 +1,245 @@
+
+/*Every page CSS--------------------------------------*/
+
+html{
+  box-sizing: border-box;
+}
+h2{
+  text-align: center;
+  position: relative;
+  padding-top: 20px; 
+  
+  
+}
+
+body{
+    background-color: burlywood;
+    
+}
+
+ul {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding-bottom: 0px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+  }
+  
+  li a:hover {
+    background-color: thistle;
+    opacity: 0.5;
+  
+  }
+  
+  .footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/*Gallery Page CSS*-----------------------------------------------------------------------------------*/
+
+#aboutImage
+{
+  position: fixed;
+  top: 140px;
+  right:100px;
+  border-style: inset;
+  border-color: coral;
+  background-color: lemonchiffon;
+  border-width: 7px;
+
+  font-size: 24px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+#photoTutorial
+{
+  
+  position: fixed;
+  top: 100px;
+  border-style: inset;
+  border-color: coral;
+  background-color: lemonchiffon;
+  font-size: 24px;
+  border-width: 7px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+
+.row 
+{
+
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    width: 20%;
+}
+
+/*Home Page Styling-----------------------------------*/
+#certs
+{
+
+  position: fixed;
+  float: center;
+  margin-top: 20px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-style: inset;
+  border-width: 4px;
+  border-color: blanchedalmond;
+}
+
+.left
+{
+    position: fixed;
+    top: 200px;
+    float: left;
+    width: 40%;
+}
+
+
+.HomeLayout
+{
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+  
+
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+
+
+/*SurveyPage CSS**************************************************************************************/
+textarea
+{
+  min-height: 200px;
+  max-height: 400px;
+  min-width: 100px;
+  max-width: 500px;
+
+}
+
+
+/*---------------Shop CSS------------------------*/
+h1 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  word-wrap: break-word;
+  max-width: 800px;
+  left: 50%;
+
+  display: block;
+  
+}
+#desc {
+  width: 400px;
+  display: block;
+  font-size: 22px;
+}
+
+
+#head, #top{
+  width: 100%;
+}
+
+table, th, td, #head, #grandTotal {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  vertical-align: bottom;
+  background-color:mediumpurple;
+}
+
+#left 
+{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  vertical-align: bottom;
+  background-color: mediumpurple;
+}
+
+#btext, #l3ft, #head
+{
+    font-size: 20px;
+}
+
+#app
+{
+    background-color:silver;
+    font-family: serif;
+    font-size: 18px;
+
+}
+
+#Red
+{
+  color: yellow;
+  display: block;
+  width:200px;
+}
+
+
+#mario 
+{
+  position: absolute;
+  top: 100px;
+  right: 200px;
+}
+.gname
+{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+#styleMe 
+{
+  text-align: horizontal;
+  align-content: flex-end;
+  width: 100%;
+border-style: groove;
+}}
