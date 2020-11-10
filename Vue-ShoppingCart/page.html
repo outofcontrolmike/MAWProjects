@@ -17,15 +17,105 @@
         
       </style>
 </head>
-<body class="ui segment" style="background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);">
+<body class="ui segment stackable" style="background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);">
 
     <!--header for page-->
-    <div class="text header center" style="text-align: center;">
+    <div class="text header center container" style="text-align: center;">
         <h1>Welcome to the shopping cart</h1></div>
           <!--Product images / Add to option-->
-    <div class="ui segment">this is where the content of the product ordering should go</div>
+    <div class="ui link cards centered">
+      <div class="card" id="chrono">
+        <div class="image ui large">
+          <img src="img/chrono.jpg">
+        </div>
+        <div class="content">
+          <div class="header">{{title}}</div>
+          <div class="meta">
+            {{developer}}
+            <span class="right floated">
+              <i class="stock icon"></i>
+              Stock: {{stock}}
+            </span>
+            <hr>
+          </div>
+          <div class="description">
+           {{desc}}
+          </div>
+        </div>
+        <div class="extra content">
+          <span class="right floated">
+            <button class="ui button green tiny">Add</button>
+            <button class="ui button negative tiny">remove</button>
+          </span>
+          <span>
+            <i class="money icon"></i>
+            {{price}}
+          </span>
+        </div>
+      </div>
+      <div class="card" id="bof2">
+        <div class="image ui large">
+          <img src="img/Breathoffire2_box.jpg">
+        </div>
+        <div class="content">
+          <div class="header">{{title}}</div>
+          <div class="meta">
+            {{developer}}
+            <span class="right floated">
+              <i class="stock icon"></i>
+              Stock: {{stock}}
+            </span>
+            <hr>
+          </div>
+          <div class="description">
+           {{desc}}
+          </div>
+        </div>
+        <div class="extra content">
+          <span class="right floated">
+            <button class="ui button green tiny">Add</button>
+            <button class="ui button negative tiny">remove</button>
+          </span>
+          <span>
+            <i class="money icon"></i>
+            {{price}}
+          </span>
+        </div>
+      </div>
+      <div class="card" id="megaman">
+        <div class="image ui large">
+          <img src="img/megamanx3.jpg">
+        </div>
+        <div class="content">
+          <div class="header">{{title}}</div>
+          <div class="meta">
+            {{developer}}
+            <span class="right floated">
+              <i class="stock icon"></i>
+              Stock: {{stock}}
+            </span>
+            <hr>
+          </div>
+          <div class="description">
+           {{desc}}
+          </div>
+        </div>
+        <div class="extra content">
+          <span class="right floated">
+            <button class="ui button green tiny">Add</button>
+            <button class="ui button negative tiny">remove</button>
+          </span>
+          <span>
+            <i class="money icon"></i>
+            {{price}}
+          </span>
+        </div>
+      </div>
+    </div>
+      
     <!--Shopping cart content-->
     <div class="ui segment">this is where the content of the product ordering should go</div>
+    <script src="vue.js"></script>
 </body>
 
 
