@@ -17,104 +17,55 @@
         
       </style>
 </head>
-<body class="ui segment stackable" style="background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);">
+<body class="ui stackable" style="background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);"></body>
 
     <!--header for page-->
-    <div class="text header center container" style="text-align: center;">
-        <h1>Welcome to the shopping cart</h1></div>
+    <div class="text header center container" style="text-align: center; margin-bottom:25px;">
+        <h1>Vue Shopping Cart</h1></div>
           <!--Product images / Add to option-->
-    <div class="ui link cards centered">
-      <div class="card" id="chrono">
+    
+      <div id="app">
+        <div class="ui link cards centered">
+      <div v-for="game in games">
+      <div class="card ui" style="margin:25px; height:600px; width:400px;">
         <div class="image ui large">
-          <img src="img/chrono.jpg">
+          <img v-bind:src="game.imgSrc" style="height:300px; width:400px;">
+
         </div>
         <div class="content">
-          <div class="header">{{title}}</div>
+          <div class="header">{{game.name}}</div>
           <div class="meta">
-            {{developer}}
+            {{game.developer}}
             <span class="right floated">
-              <i class="stock icon"></i>
-              Stock: {{stock}}
+              <p v-if="game.stock > 0"> Stock: {{game.stock}}</p>
+              <p class="ui text red" v-if="game.stock <=0">Out of stock</p>
             </span>
             <hr>
           </div>
           <div class="description">
-           {{desc}}
+           {{game.description}}
           </div>
         </div>
         <div class="extra content">
           <span class="right floated">
-            <button class="ui button green tiny">Add</button>
-            <button class="ui button negative tiny">remove</button>
+            <button class="ui button green mini" v-if="game.stock > 0" v-on:click="addGame(game)"v-on:click="deductStock(game)" v-on:click="gameTotal(game)">Add Game</button>
+            <button class="ui button negative mini" v-if="game.stock < 5" v-on:click="removeGame(game)" v-on:click="addStock(game.stock)">Remove Game</button>
           </span>
           <span>
             <i class="money icon"></i>
-            {{price}}
+            {{game.price}}
           </span>
         </div>
       </div>
-      <div class="card" id="bof2">
-        <div class="image ui large">
-          <img src="img/Breathoffire2_box.jpg">
-        </div>
-        <div class="content">
-          <div class="header">{{title}}</div>
-          <div class="meta">
-            {{developer}}
-            <span class="right floated">
-              <i class="stock icon"></i>
-              Stock: {{stock}}
-            </span>
-            <hr>
-          </div>
-          <div class="description">
-           {{desc}}
-          </div>
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            <button class="ui button green tiny">Add</button>
-            <button class="ui button negative tiny">remove</button>
-          </span>
-          <span>
-            <i class="money icon"></i>
-            {{price}}
-          </span>
-        </div>
       </div>
-      <div class="card" id="megaman">
-        <div class="image ui large">
-          <img src="img/megamanx3.jpg">
-        </div>
-        <div class="content">
-          <div class="header">{{title}}</div>
-          <div class="meta">
-            {{developer}}
-            <span class="right floated">
-              <i class="stock icon"></i>
-              Stock: {{stock}}
-            </span>
-            <hr>
-          </div>
-          <div class="description">
-           {{desc}}
-          </div>
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            <button class="ui button green tiny">Add</button>
-            <button class="ui button negative tiny">remove</button>
-          </span>
-          <span>
-            <i class="money icon"></i>
-            {{price}}
-          </span>
-        </div>
       </div>
     </div>
+    <!--end products-->
       
     <!--Shopping cart content-->
-    <div class="ui segment">this is where the content of the product ordering should go</div>
+    <div class="ui segment">
+      <p style="text-align: center;"><span class="ui large red text center">Order Summary</span></p>
+    </div>
     <script src="vue.js"></script>
 </body>
 

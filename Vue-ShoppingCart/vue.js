@@ -1,41 +1,62 @@
 //Crash course on using Vue
-
-
-var app2 = new Vue({
-    el: '#chrono',
-    data: {
-        title: 'Chrono Trigger',
-        developer: 'SquareSoft',
-        desc: ' is a 1995 role-playing video game developed and published by Square for the Super Nintendo Entertainment System that began the Chrono series',
-        price: '121.99',
-        condition: 'used',
-        stock: 4,
-        orderCount: 0
-    }
-})
-
 var app = new Vue({
-    el: '#bof2',
-    data: {
-        title: 'Breath of fire 2',
-        developer: 'Capcom',
-        desc: 'is a role-playing video game developed and published by Capcom. First released in 1994, the game was licensed to Laguna for European release in 1996. It is the second entry in the Breath of Fire series',
-        price: '49.99',
-        condition: 'used',
-        stock: 10,
-        orderCount: 0
-    }
-})
-
-var app3 = new Vue({
-    el: '#megaman',
-    data: {
-        title: 'Megamanx3',
-        developer: 'Capcom',
-        desc: 'Mega Man X3, known as Rockman X3 (ロックマンX3) in Japan, is a video game released by Capcom for the Super Nintendo Entertainment System (SNES).',
-        price: '219.89',
-        stock: 2,
-        condition: 'used',
-        orderCount: 0
-    }
-})
+  el: "#app", // links Vue to the Div
+  data: {
+    cartItem: 0,
+    // first game
+    games: [
+      // this is an array filled with objects
+      {
+        name: "Breath of Fire II",
+        developer: "Capcom",
+        stock: 5,
+        price: "$" + 54.99,
+        price2: "$" + 54.99,
+        total: 54.99,
+        ordered: 0,
+        imgSrc: "img/Breathoffire2_box.jpg",
+        remove: "delete.jpg",
+        description:
+          "Breath of Fire II is a role-playing video game developed and published by Capcom. First released in 1994, the game was licensed to Laguna for European release in 1996. It is the second entry in the Breath of Fire series.",
+      },
+      {
+        name: "Chrono Trigger",
+        developer: "SquareSoft",
+        stock: 5,
+        price: "$" + 104.95,
+        price2: "$" + 104.95,
+        total: 104.95,
+        ordered: 0,
+        imgSrc: "img/chrono.jpg",
+        description:
+          "Chrono Trigger (クロノ・トリガー Kurono Torigā?) is a console role-playing game developed and published by Square for the Super Nintendo Entertainment System (SNES) in 1995. The game's story follows a group of adventurers who travel through time to prevent a global catastrophe.",
+      },
+      {
+        name: "Megaman X3",
+        developer: "Capcom",
+        stock: 5,
+        price: "$" + 339.94,
+        price2: "$" + 339.94,
+        total: 339.94,
+        ordered: 0,
+        imgSrc: "img/megamanx3.jpg",
+        description:
+          "Mega Man X3, known as Rockman X3 in Japan, is a video game released by Capcom for the Super Nintendo Entertainment System. The game was originally released in Japan on December 1, 1995 and later in North American and PAL regions in 1996. It is the third game in the Mega Man X series and the last to appear on the SNES",
+      },
+    ], // an array that the inputs print to
+  },
+  methods: {
+    // these methods make adjustments to the shopping cart
+    addGame(theGame) {
+      theGame.ordered++;
+      theGame.stock--;
+    },
+    removeGame(theGame) {
+      theGame.stock++;
+      theGame.ordered--;
+    },
+    cartTotal(theGame) {
+      theGame.total;
+    },
+  },
+});
