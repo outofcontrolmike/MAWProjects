@@ -59,13 +59,42 @@
       </div>
       </div>
       </div>
-    </div>
     <!--end products-->
-      
     <!--Shopping cart content-->
-    <div class="ui segment">
+    <div class="ui segment ">
       <p style="text-align: center;"><span class="ui large red text center">Order Summary</span></p>
+
+<!-- Start table-->
+<table class="ui celled table">
+  <thead>
+    <tr>
+    <th>Game Ordered</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+  </tr></thead>
+  <tbody v-for="game in games">
+    <tr id="btext">
+      <td id="left" v-if="game.ordered > 0"> {{game.name}} </td>
+      <td id="head" v-if="game.ordered > 0"> {{game.price2}}</td>
+      <td id="head" v-if="game.ordered > 0">{{game.ordered}}</td>
+      <td id="head" v-if="game.ordered > 0">${{game.total * game.ordered}}</td>
+      <td v-if="game.orderd >0" cartTotal(game)>
+        
+      </td>
+  </tr>
+  <tr>
+    <td id="cartTotal" v-if="game.orderd > 0">
+      {{game.total += game.total}}
+    </td>
+    
+  </tr>
+  </tbody>
+</table>
+<!--end table-->
     </div>
+  </div>
+  <!--end app-->
     <script src="vue.js"></script>
 </body>
 

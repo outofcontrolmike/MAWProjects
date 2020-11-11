@@ -56,7 +56,7 @@ var app = new Vue({
       theGame.ordered--;
     },
     cartTotal(theGame) {
-      theGame.total;
+      theGame.total += theGame.total;
     },
   },
 });
