@@ -20,7 +20,7 @@
 <body class="ui stackable" style="background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);"></body>
 
     <!--header for page-->
-    <div class="text header center container" style="text-align: center; margin-bottom:25px;">
+    <div class="text header center container" style="text-align: center; margin-bottom:25px; margin:2%;">
         <h1>Vue Shopping Cart</h1></div>
           <!--Product images / Add to option-->
     
@@ -61,9 +61,8 @@
       </div>
     <!--end products-->
     <!--Shopping cart content-->
-    <div class="ui segment ">
+    <div class="ui segment" style="margin: 2%;">
       <p style="text-align: center;"><span class="ui large red text center">Order Summary</span></p>
-
 <!-- Start table-->
 <table class="ui celled table">
   <thead>
@@ -73,24 +72,19 @@
     <th>Quantity</th>
     <th>Total</th>
   </tr></thead>
-  <tbody v-for="game in games">
-    <tr id="btext">
+  <tbody id="grabMe">
+    <tr id="btext" v-for="game in games">
       <td id="left" v-if="game.ordered > 0"> {{game.name}} </td>
       <td id="head" v-if="game.ordered > 0"> {{game.price2}}</td>
       <td id="head" v-if="game.ordered > 0">{{game.ordered}}</td>
       <td id="head" v-if="game.ordered > 0">${{game.total * game.ordered}}</td>
-      <td v-if="game.orderd >0" cartTotal(game)>
-        
-      </td>
   </tr>
-  <tr>
-    <td id="cartTotal" v-if="game.orderd > 0">
-      {{game.total += game.total}}
-    </td>
-    
-  </tr>
+  
   </tbody>
+    </script>
+  </div>
 </table>
+
 <!--end table-->
     </div>
   </div>

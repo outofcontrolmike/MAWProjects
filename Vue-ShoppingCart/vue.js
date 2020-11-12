@@ -3,7 +3,7 @@ var app = new Vue({
   el: "#app", // links Vue to the Div
   data: {
     cartItem: 0,
-    // first game
+    cartTotal: 0,
     games: [
       // this is an array filled with objects
       {
@@ -44,19 +44,22 @@ var app = new Vue({
           "Mega Man X3, known as Rockman X3 in Japan, is a video game released by Capcom for the Super Nintendo Entertainment System. The game was originally released in Japan on December 1, 1995 and later in North American and PAL regions in 1996. It is the third game in the Mega Man X series and the last to appear on the SNES",
       },
     ], // an array that the inputs print to
+    
   },
+  
   methods: {
     // these methods make adjustments to the shopping cart
     addGame(theGame) {
       theGame.ordered++;
       theGame.stock--;
+      theGame.cartTotal += theGame.total;
     },
     removeGame(theGame) {
       theGame.stock++;
       theGame.ordered--;
+      theGame.cartTotal -= theGame.total;
     },
     cartTotal(theGame) {
-      theGame.total += theGame.total;
     },
   },
 });
