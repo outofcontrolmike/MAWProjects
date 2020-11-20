@@ -1,6 +1,7 @@
 <!-- File: templates/Articles/index.php -->
 
 <h1>Articles</h1>
+<p><?= $this->HTML->link('Add Article', ['action' => 'add']) ?></p>
 <table>
     <tr>
         <th>Title</th>
@@ -16,6 +17,10 @@
         </td>
         <td>
             <?= $article->created->format(DATE_RFC850) ?>
+        </td>
+        <td>
+        <?= $this->Html->link('Edit', ['action' => 'edit', $article->slug]) ?>
+
         </td>
     </tr>
     <?php endforeach; ?>
