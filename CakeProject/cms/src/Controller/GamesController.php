@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use App\Controller\AppController;
+
 class GamesController extends AppController
 {
     public function initialize(): void
