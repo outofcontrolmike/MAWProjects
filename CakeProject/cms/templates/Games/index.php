@@ -19,6 +19,12 @@
         </td>
         <td>
             <?= $this->Html->link('Edit', ['action' => 'edit', $game->slug]) ?>
+            <span style="color:red;"><?= $this->Form->postLink(
+                'Delete',
+                ['action' => 'delete', $game->slug],
+                ['confirm' => 'Are you sure?'])
+            ?>
+            <span>
         </td>
     </tr>
 <?php endforeach; ?>

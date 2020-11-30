@@ -61,5 +61,17 @@ class GamesController extends AppController
 
     $this->set('game', $game);
     }
+
+    //Delete
+    public function delete($slug)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+
+    $game = $this->Games->findBySlug($slug)->firstOrFail();
+    if ($this->Games->delete($game)) {
+        $this->Flash->success(__('The {0} game has been deleted.', $game->title));
+        return $this->redirect(['action' => 'index']);
+    }
+    }
 }
 ?>
