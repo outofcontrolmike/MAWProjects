@@ -42,7 +42,7 @@ class GamesController extends AppController
             $this->Flash->error(__('Unable to add your game.'));
         }
         $this->set('game', $game);
-    }
+    }//end add
 
     public function edit($slug)
     {
