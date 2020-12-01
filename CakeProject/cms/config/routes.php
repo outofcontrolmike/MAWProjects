@@ -58,6 +58,13 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->connect('/pages/*', 'Pages::display');
 
     /*
+    *  route for tagged action
+    */
+    $builder->scope('/games', function (RouteBuilder $builder) {
+        $builder->connect('/tagged/*', ['controller' => 'Games', 'action' => 'tags']);
+    });
+
+    /*
      * Connect catchall routes for all controllers.
      *
      * The `fallbacks` method is a shortcut for
