@@ -21,7 +21,10 @@ class GamesController extends AppController
 
     public function view($slug)
     {
-        $game = $this->Games->findBySlug($slug)->firstOrFail();
+        $game = $this->Games
+        ->findBySlug($slug)
+        ->contain('Tags')
+        ->firstOrFail();
         $this->set(compact('game'));
     }
 
@@ -54,10 +57,11 @@ class GamesController extends AppController
 
     public function edit($slug)
     {
-        $game = $this->Games
-        ->findBySlug($slug)
-        ->contain('Tags')
-        ->firstOrFail();
+        // Update this line
+    $game = $this->Games
+    ->findBySlug($slug)
+    ->contain('Tags')
+    ->firstOrFail();
 
     if ($this->request->is(['post', 'put'])) {
         $this->Games->patchEntity($game, $this->request->getData());
