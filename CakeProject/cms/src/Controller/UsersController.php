@@ -33,6 +33,9 @@ public function login()
             'controller' => 'Games',
             'action' => 'index',
         ]);
+        $this->Authorization->skipAuthorization();
+
+
 
         return $this->redirect($redirect);
     }
@@ -50,6 +53,8 @@ public function logout()
         $this->Authentication->logout();
         return $this->redirect(['controller' => 'Users', 'action' => 'login']);
     }
+    $this->Authorization->skipAuthorization();
+
 }
 
     /**
@@ -98,6 +103,8 @@ public function logout()
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+        $this->Authorization->skipAuthorization();
+
     }
 
     /**

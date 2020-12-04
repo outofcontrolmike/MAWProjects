@@ -16,6 +16,7 @@ class GamesController extends AppController
     public function index()
     {
         $games = $this->Paginator->paginate($this->Games->find());
+        $this->Authorization->skipAuthorization();
         $this->set(compact('games'));
     }
 
@@ -25,18 +26,19 @@ class GamesController extends AppController
         ->findBySlug($slug)
         ->contain('Tags')
         ->firstOrFail();
+        $this->Authorization->skipAuthorization();
         $this->set(compact('game'));
     }
 
     public function add()
     {
         $game = $this->Games->newEmptyEntity();
+        $this->Authorization->authorize($game);
         if ($this->request->is('post')) {
             $game = $this->Games->patchEntity($game, $this->request->getData());
 
-            // Hardcoding the user_id is temporary, and will be removed later
-            // when we build authentication out.
-            $game->user_id = 1;
+            //changed: set the user-id from the current user
+            $game->user_id = $this->request->getAttribute('identity')->getIdentifier();
 
             if ($this->Games->save($game)) {
                 $this->Flash->success(__('Your game has been saved.'));
@@ -57,28 +59,25 @@ class GamesController extends AppController
 
     public function edit($slug)
     {
-        // Update this line
-    $game = $this->Games
-    ->findBySlug($slug)
-    ->contain('Tags')
-    ->firstOrFail();
+        $game = $this->Games
+        ->findBySlug($slug)
+        ->contain('Tags') // load associated Tags
+        ->firstOrFail();
+    $this->Authorization->authorize($game);
 
     if ($this->request->is(['post', 'put'])) {
-        $this->Games->patchEntity($game, $this->request->getData());
+        $this->Games->patchEntity($games, $this->request->getData(), [
+            // Added: Disable modification of user_id.
+            'accessibleFields' => ['user_id' => false]
+        ]);
         if ($this->Games->save($game)) {
             $this->Flash->success(__('Your game has been updated.'));
             return $this->redirect(['action' => 'index']);
         }
-        $this->Flash->error(__('Unable to update your game  :('));
+        $this->Flash->error(__('Unable to update your game.'));
     }
-
-    // Get a list of tags.
     $tags = $this->Games->Tags->find('list')->all();
-
-    // Set tags to the view context
-    $this->set('tags', $tags);
-
-    $this->set('game', $game);
+    $this->set(compact('game', 'tags'));
     }
 
     //Delete
@@ -87,6 +86,7 @@ class GamesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
 
     $game = $this->Games->findBySlug($slug)->firstOrFail();
+    $this->Authorization->authorize($game);
     if ($this->Games->delete($game)) {
         $this->Flash->success(__('The {0} game has been deleted.', $game->title));
         return $this->redirect(['action' => 'index']);
@@ -99,6 +99,7 @@ class GamesController extends AppController
         // The 'pass' key is provided by CakePHP and contains all
         // the passed URL path segments in the request.
         $tags = $this->request->getParam('pass');
+        $this->Authorization->skipAuthorization();
     
         // Use the ArticlesTable to find tagged articles.
         $games = $this->Games->find('tagged', [
