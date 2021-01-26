@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Beast Wars Fun</title>
+    <style>
+
+  
+    </style>
+
+    <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+  </head>
+  <!DOCTYPE html>
+<body>
+
+    <!-- main content-->
+    <div class="ui segment" id="main">
+        <h1>Beast Wars Test</h1>
+        <h2>Info again</h2>
+        <div class="container" id="characterCard">
+            <p id="text"></p>
+        </div>
+    </div>
+
+  
+        <!-- end footer-->
+  <script>
+      //Create our characters array with Transfomer objects
+      const characters = [
+          {"name":"Optimus Primal","team": "Maxmial",
+           "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : ""},
+           {"name":"Rhinox","team": "Maxmial",
+           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : ""},
+           {"name":"Megatron","team": "Predacon",
+           "animal": "Dinosaur", "personallity" : "Meniachal", "role": "Predacon Leader", "img" : ""}, 
+      ];
+
+      
+        //function createCards =  forEach character in Characters go through details
+        
+      var card = document.createElement('card');
+      var symbol = document.createElement('i');
+      var title = document.createElement('h1');
+      var img = document.createElement('h1');
+      var details = document.createElement('h1');
+
+      title.innerText = characters[0].name;
+      details.innerText = characters[0].team;
+      document.getElementById('characterCard').appendChild(card,symbol,title,img,details);
+
+
+  </script>
+</body>
+
+</html>
