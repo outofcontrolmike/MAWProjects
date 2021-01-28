@@ -26,7 +26,9 @@
         <h2>Info again</h2>
         <div class ="ui cards">
         <div class="container" id="characterCard">
-            <p id="text">This is a test</p>
+            <div class="here">
+
+            </div>
         </div>
         </div>
     </div>
@@ -44,13 +46,11 @@
            "animal": "Dinosaur", "personallity" : "Meniachal", "role": "Predacon Leader", "img" : ""}, 
       ];
 
-      
-        //function createCards =  forEach character in Characters go through details
-
+    
       //Grab elements by ID
       var text = document.getElementById('text'); 
 
-      //Create our elements  
+      //create elements
       var card = document.createElement("div");
       var ImageContainer = document.createElement('div');
       var BeastImage = document.createElement('img');
@@ -61,7 +61,8 @@
       var desc = document.createElement('div');
       var extra = document.createElement('div');
       var icon = document.createElement('i');
-      
+
+      function addClasses() {
       //Add classes to elements
       card.classList.add('card');
       ImageContainer.classList.add('image');
@@ -72,17 +73,52 @@
       desc.classList.add('description');
       extra.classList.add('extra','content');
       icon.classList.add('user', 'icon');
+      }
 
-      //Style elements
-      card.style.backgroundColor = "black";
-      text.style.color = "blue";
+      //name,symbol,ect...
+      function cardDetails() {
+        BeastImage.src = "cards Image should go here";
+        header.innerHTML = characters.name;
+        subInfo.innerHTML = characters.personallity;
+        desc.innerHTML = characters.desc;
+        extra.innerHTML = characters.role;
+        card.innerHTML = "hello world";
+        BeastImage.innerHTML = "testing";
+      }
 
+      //sets symbol for trasformer
+      function setSymbol(sybmol) {
+        if(symbol == "maximal")
+        icon.src = "test";
+        else {
+          icon.src = "predacon";
+        }
+      }//end setSymbol
+
+      function appendElements() {
       //Append elements
-      
+      ImageContainer.appendChild(BeastImage);
+      content.appendChild(header);
+      meta.appendChild(subInfo);
+      card.appendChild(ImageContainer,content,meta);
       text.appendChild(card);
 
+      }
       //Misc
-      cardText.innerHTML = "hello world";
+      
+     
+
+      //main function
+      for(var i = 0; i <= characters.length; i++)
+      {
+        
+        addClasses();
+        cardDetails();
+        setSymbol();
+        appendElements();
+
+      }
+      
 
   </script>
 </body>
