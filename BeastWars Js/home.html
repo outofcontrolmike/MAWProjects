@@ -5,6 +5,11 @@
     <title>Beast Wars Fun</title>
     <style>
 
+image {
+  height:400px;
+  width:450px;
+  object-fit: contain;
+}
   
     </style>
 
@@ -24,7 +29,7 @@
     <div class="ui segment" id="main">
         <h1>Beast Wars Test</h1>
         <h2>Info again</h2>
-        <div class ="ui cards" id="here">
+        <div class ="ui cards medium" id="here">
           <!--print cards to here-->
           <p id="speech"></p>
         </div>
@@ -36,15 +41,15 @@
       //Create our characters array with Transfomer objects
       var characters = [
           {"name":"Optimus Primal","team": "Maxmial",
-           "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : ""},
+           "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : "optimus1.jpg"},
            {"name":"Rhinox","team": "Maxmial",
-           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : ""},
+           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : "rhinox1.jpg"},
            {"name":"Megatron","team": "Predacon",
-           "animal": "Dinosaur", "personallity" : "Meniachal", "role": "Predacon Leader", "img" : ""}, 
+           "animal": "Dinosaur", "personallity" : "Meniachal", "role": "Predacon Leader", "img" : "megatron11.jpg"}, 
       ];
 
     
-      //Grab elements by ID
+/*       //Grab elements by ID
       var text = document.getElementById('text'); 
 
       //create elements
@@ -100,7 +105,7 @@
       card.appendChild(ImageContainer,content,meta);
       text.appendChild(card);
 
-      }
+      } */
       //Misc
 
       window.onload = mainFunction;
@@ -108,7 +113,8 @@
       function mainFunction() {
       for(var i = 0; i <= characters.length; i++)
       {
-        var htmlCode = '<div class="ui card">' + '<div class="image"><img src="/images/avatar2large/kristy.png"></div><div class="content"><a class="header">Kristy</a><div class="meta"><span class="date">Joined in 2013</span></div><div class="description">Kristy is an art director living in New York.</div></div><div class="extra content"><a><i class="user icon"></i>22 Friends</a></div></div>'
+        //determine which symbol to use
+        var htmlCode = '<div class="ui card center">' + '<div class="ui image large"><img src=" ' + characters[i].img + '"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class="user icon"></i>22 Friends</a></div></div>'
         document.getElementById('here').innerHTML += htmlCode;
         console.log(htmlCode);
 
