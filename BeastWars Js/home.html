@@ -26,6 +26,7 @@
         <h2>Info again</h2>
         <div class ="ui cards" id="here">
           <!--print cards to here-->
+          <p id="speech"></p>
         </div>
     </div>
 
@@ -33,7 +34,7 @@
         <!-- end footer-->
   <script>
       //Create our characters array with Transfomer objects
-      const characters = [
+      var characters = [
           {"name":"Optimus Primal","team": "Maxmial",
            "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : ""},
            {"name":"Rhinox","team": "Maxmial",
@@ -101,37 +102,16 @@
 
       }
       //Misc
-      
-     
-      document.getElementById('here').innerText += mainFunction();
 
+      window.onload = mainFunction;
       //main function
       function mainFunction() {
       for(var i = 0; i <= characters.length; i++)
       {
-        console.log("testing");
-        console.log(characters.name);
-        '<div class="ui card">'
-            '<div class="image">'
-           /*  <img src="/images/avatar2/large/kristy.png">
-            </div>
-            <div class="content">
-              <a class="header"></a>
-              <div class="meta">
-                <span class="date"></span>
-              </div>
-              <div class="description">
-              </div>
-            </div>
-            <div class="extra content">
-              <a>
-                <i class="user icon"></i>
-              </a>
-            </div>
-          </div>'
-          */
-
-          '</div></div>'
+        var htmlCode = '<div class="ui card">' + '<div class="image"><img src="/images/avatar2large/kristy.png"></div><div class="content"><a class="header">Kristy</a><div class="meta"><span class="date">Joined in 2013</span></div><div class="description">Kristy is an art director living in New York.</div></div><div class="extra content"><a><i class="user icon"></i>22 Friends</a></div></div>'
+        document.getElementById('here').innerHTML = htmlCode;
+        console.log(htmlCode);
+        
       }
     }
 
