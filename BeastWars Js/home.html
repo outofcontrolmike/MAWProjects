@@ -5,10 +5,19 @@
     <title>Beast Wars Fun</title>
     <style>
 
+.ui
+ {
+  background: #f12711;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  background-color: black;
+}
+
 image {
-  height:400px;
-  width:450px;
-  object-fit: contain;
+  object-fit:cover;
 }
   
     </style>
@@ -23,7 +32,7 @@ image {
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
   </head>
   <!DOCTYPE html>
-<body>
+<body class="ui">
 
     <!-- main content-->
     <div class="ui segment" id="main">
@@ -40,14 +49,62 @@ image {
   <script>
       //Create our characters array with Transfomer objects
       var characters = [
+        //maximals
           {"name":"Optimus Primal","team": "Maxmial",
-           "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : "optimus1.jpg"},
-           {"name":"Rhinox","team": "Maxmial",
-           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : "rhinox1.jpg"},
-           {"name":"Megatron","team": "Predacon",
-           "animal": "Dinosaur", "personallity" : "Meniachal", "role": "Predacon Leader", "img" : "megatron11.jpg"}, 
-      ];
+           "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : "optimus1.jpg", "img2" : "optimus2.jpg"},
 
+           {"name":"Rhinox","team": "Maxmial",
+           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : "rhinox1.jpg", "img2" : ""},
+
+           {"name":"Cheetor","team": "Maxmial",
+           "animal": "Chettah", "personallity" : "In over his head", "role": "Scouter", "img" : "cheetor1.jpg", "img2" : "cheetor2.jpg"},
+           
+           {"name":"Rattrap","team": "Maxmial",
+           "animal": "Rat", "personallity" : "very cocky", "role": "Bomb specialist / spy", "img" : "rat1.jpg", "img2" : "rat2.jpg"},
+           
+           {"name":"Dinobot","team": "Maxmial",
+           "animal": "Velociraptor", "personallity" : "Honerable", "role": "Second in command", "img" : "dino1.jpg", "img2" : "dino2.jpg"},
+           
+           {"name":"Tigatron","team": "Maxmial",
+           "animal": "White Tiger", "personallity" : "Trustworthy", "role": "Backup spy", "img" : "tiga1.jpg", "img2" : "tiga2.jpg"},
+           
+           {"name":"Airazor","team": "Maxmial",
+           "animal": "Peregrine falcon", "personallity" : "Restoring", "role": "Navigator", "img" : "air1.jpg", "img2" : "air2.jpg"},
+           
+           {"name":"Silverbolt","team": "Maxmial",
+           "animal": "Timberwolf-golden eagle condor", "personallity" : "Galliant", "role": "Melee Fighter", "img" : "silver1.jpg", "img2" : "silver2.jpg"},
+
+           {"name":"Depth Charge","team": "Maxmial",
+           "animal": "Manta ray", "personallity" : "Egalitarian", "role": "Defender", "img" : "depth1.jpg", "img2" : "depth2.jpg"},
+         
+           //Predacons
+           {"name":"Megatron","team": "Predacon",
+           "animal": "Dinosaur", "personallity" : "Meniachal", "role": "Predacon Leader", "img" : "megatron11.jpg" , "img2" : "megatron1.jpg"},
+        
+           {"name":"Waspinator","team": "Predacon",
+           "animal": "Wasp", "personallity" : "Deceptable", "role": "Spy", "img" : "wasp1.jpg" , "img2" : "wasp2.jpg"},
+           
+           {"name":"Scorponok","team": "Predacon",
+           "animal": "Scorpion", "personallity" : "Sneaky", "role": "Missle Launcher", "img" : "scorp1.jpg" , "img2" : "scorp2.jpg"},
+
+           {"name":"Terrosaur","team": "Predacon",
+           "animal": "Pterodactyl", "personallity" : "Betraying", "role": "Scout", "img" : "p1.jpg" , "img2" : "p2.jpg"},
+
+           {"name":"Tarrantulas","team": "Predacon",
+           "animal": "Tarantula", "personallity" : "Mad Scientist", "role": "Predacon Leader", "img" : "tara1.jpg" , "img2" : "tara2.jpg"},
+
+           {"name":"Blackarachnia","team": "Predacon",
+           "animal": "Black Widow Spider", "personallity" : "Trickster", "role": "Maxmial in Disguise", "img" : "black1.jpg" , "img2" : "black2.jpg"},
+
+           {"name":"Inferno","team": "Predacon",
+           "animal": "Fire Ant", "personallity" : "Obnoxious", "role": "Cheif Commander", "img" : "inferno1.jpg" , "img2" : "inferno2.jpg"},
+
+           {"name":"Quickstrike","team": "Predacon",
+           "animal": "Scorpion / Cobra", "personallity" : "Loud", "role": "Fighter", "img" : "quick1.jpg" , "img2" : "quick2.jpg"},
+
+           {"name":"Rampage","team": "Predacon",
+           "animal": "Red King Crab", "personallity" : "Insane", "role": "Conscript", "img" : "rampage1.jpg" , "img2" : "rampage2.jpg"},
+  ]
     
 /*       //Grab elements by ID
       var text = document.getElementById('text'); 
@@ -113,11 +170,21 @@ image {
       function mainFunction() {
       for(var i = 0; i <= characters.length; i++)
       {
+        
         //determine which symbol to use
-        var htmlCode = '<div class="ui card center">' + '<div class="ui image large"><img src=" ' + characters[i].img + '"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class="user icon"></i>22 Friends</a></div></div>'
-        document.getElementById('here').innerHTML += htmlCode;
+        var htmlCode = '<div class="ui card">' + '<div class="ui slide masked reveal image"><img class="visible content" src=" ' + characters[i].img + '"><img class="hidden content" src=" ' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class="user icon"></i>22 Friends</a></div></div>'
+       var info = document.getElementById('here').innerHTML += htmlCode;
         console.log(htmlCode);
 
+        // //Seperate Maxmials from Preds
+        // var trigger = 0;
+        // while(trigger == 0) {
+        //   if(characters[i].team == 'predacon')
+        //   {
+        //     info.innerHTML += '<hr>';
+        //     trigger++;
+        //   }
+        // }
       }
     }
 
