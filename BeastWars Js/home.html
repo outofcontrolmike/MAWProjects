@@ -13,7 +13,9 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
 }
 
 .ui.card>.image>img {
-  max-height: 200px;
+  max-height: 250px;
+  object-fit: fill;
+  background-color: black;
   
 }
     </style>
@@ -32,13 +34,21 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
 
     <!-- main content-->
     <div class="ui segment" id="main">
-        <h1>Beast Wars Test</h1>
-        <h2>Info again</h2>
-        <div class ="ui cards huge" id="here">
+      <div class="ui segment inline">
+        <h1 class="text center">Beast Wars Test</h1>
+      </div>
+        <div class ="ui cards five stackable" id="here">
           <!--print cards to here-->
-          <p id="speech"></p>
+               
         </div>
+
+        <div class="ui segment">
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&mute=0">
+        </iframe>
     </div>
+    </div>
+    
 
   
         <!-- end footer-->
@@ -46,31 +56,31 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
       //Create our characters array with Transfomer objects
       var characters = [
         //maximals
-          {"name":"Optimus Primal","team": "Maxmial",
+          {"name":"Optimus Primal","team": "Maximal",
            "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : "optimus1.jpg", "img2" : "optimus2.jpg"},
 
-           {"name":"Rhinox","team": "Maxmial",
+           {"name":"Rhinox","team": "Maximal",
            "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : "rhinox1.jpg", "img2" : "rhinox2.jpg"},
 
-           {"name":"Cheetor","team": "Maxmial",
-           "animal": "Chettah", "personallity" : "In over his head", "role": "Scouter", "img" : "cheetor1.jpg", "img2" : "cheetor2.jpg"},
+           {"name":"Cheetor","team": "Maximal",
+           "animal": "Cheetah", "personallity" : "In over his head", "role": "Scouter", "img" : "cheetor1.jpg", "img2" : "cheetor2.jpg"},
            
-           {"name":"Rattrap","team": "Maxmial",
+           {"name":"Rattrap","team": "Maximal",
            "animal": "Rat", "personallity" : "very cocky", "role": "Bomb specialist / spy", "img" : "rat1.jpg", "img2" : "rat2.jpg"},
            
-           {"name":"Dinobot","team": "Maxmial",
+           {"name":"Dinobot","team": "Maximal",
            "animal": "Velociraptor", "personallity" : "Honerable", "role": "Second in command", "img" : "dino1.jpg", "img2" : "dino2.jpg"},
            
-           {"name":"Tigatron","team": "Maxmial",
+           {"name":"Tigatron","team": "Maximal",
            "animal": "White Tiger", "personallity" : "Trustworthy", "role": "Backup spy", "img" : "tiga1.jpg", "img2" : "tiga2.jpg"},
            
-           {"name":"Airazor","team": "Maxmial",
+           {"name":"Airazor","team": "Maximal",
            "animal": "Peregrine falcon", "personallity" : "Restoring", "role": "Navigator", "img" : "air1.jpg", "img2" : "air2.jpg"},
            
-           {"name":"Silverbolt","team": "Maxmial",
+           {"name":"Silverbolt","team": "Maximal",
            "animal": "Timberwolf-golden eagle condor", "personallity" : "Galliant", "role": "Melee Fighter", "img" : "silver1.jpg", "img2" : "silver2.jpg"},
 
-           {"name":"Depth Charge","team": "Maxmial",
+           {"name":"Depth Charge","team": "Maximal",
            "animal": "Manta ray", "personallity" : "Egalitarian", "role": "Defender", "img" : "depth1.jpg", "img2" : "depth2.jpg"},
          
            //Predacons
@@ -90,7 +100,7 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
            "animal": "Tarantula", "personallity" : "Mad Scientist", "role": "Predacon Leader", "img" : "tara1.jpg" , "img2" : "tara2.jpg"},
 
            {"name":"Blackarachnia","team": "Predacon",
-           "animal": "Black Widow Spider", "personallity" : "Trickster", "role": "Maxmial in Disguise", "img" : "black1.jpg" , "img2" : "black2.jpg"},
+           "animal": "Black Widow Spider", "personallity" : "Trickster", "role": "Maximal in Disguise", "img" : "black1.jpg" , "img2" : "black2.jpg"},
 
            {"name":"Inferno","team": "Predacon",
            "animal": "Fire Ant", "personallity" : "Obnoxious", "role": "Cheif Commander", "img" : "inferno1.jpg" , "img2" : "inferno2.jpg"},
@@ -162,25 +172,28 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
       //Misc
 
       window.onload = mainFunction;
-      //main function
+
+      
       function mainFunction() {
+        var team = "";
+
       for(var i = 0; i <= characters.length; i++)
       {
-        var team = "";
-        if(characters[i].team = "Maximal")
-        {
-          team = "maximal.jpg";
+        console.log(characters[i].team);
+      
+        if(characters[i].team === "Maximal") {
+        team = 'maximal.jpg';
+          
         }
         else {
-          team = "predacon.jpg";
+        team = 'predacon.jpg';
         }
-        
         //determine which symbol to use
-        var htmlCode = '<div class="ui card">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + characters[i].img + '"><img class="hidden content" src="img/' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/maximal.jpg"></i></a></div></div>'
+        var htmlCode = '<div class="ui card">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + characters[i].img + '"><img class="hidden content" src="img/' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i></a></div></div>'
        var info = document.getElementById('here').innerHTML += htmlCode;
         console.log(htmlCode);
 
-        // //Seperate Maxmials from Preds
+        // //Seperate Maximals from Preds
         // var trigger = 0;
         // while(trigger == 0) {
         //   if(characters[i].team == 'predacon')
