@@ -12,14 +12,10 @@ background: -webkit-linear-gradient(to left, #f5af19, #f12711);  /* Chrome 10-25
 background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-body {
-  background-color: black;
-}
-
-image {
-  object-fit:cover;
-}
+.ui.card>.image>img {
+  max-height: 200px;
   
+}
     </style>
 
     <!-- You MUST include jQuery before Fomantic -->
@@ -38,7 +34,7 @@ image {
     <div class="ui segment" id="main">
         <h1>Beast Wars Test</h1>
         <h2>Info again</h2>
-        <div class ="ui cards medium" id="here">
+        <div class ="ui cards huge" id="here">
           <!--print cards to here-->
           <p id="speech"></p>
         </div>
@@ -54,7 +50,7 @@ image {
            "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : "optimus1.jpg", "img2" : "optimus2.jpg"},
 
            {"name":"Rhinox","team": "Maxmial",
-           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : "rhinox1.jpg", "img2" : ""},
+           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : "rhinox1.jpg", "img2" : "rhinox2.jpg"},
 
            {"name":"Cheetor","team": "Maxmial",
            "animal": "Chettah", "personallity" : "In over his head", "role": "Scouter", "img" : "cheetor1.jpg", "img2" : "cheetor2.jpg"},
@@ -170,9 +166,17 @@ image {
       function mainFunction() {
       for(var i = 0; i <= characters.length; i++)
       {
+        var team = "";
+        if(characters[i].team = "Maximal")
+        {
+          team = "maximal.jpg";
+        }
+        else {
+          team = "predacon.jpg";
+        }
         
         //determine which symbol to use
-        var htmlCode = '<div class="ui card">' + '<div class="ui slide masked reveal image"><img class="visible content" src=" ' + characters[i].img + '"><img class="hidden content" src=" ' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class="user icon"></i>22 Friends</a></div></div>'
+        var htmlCode = '<div class="ui card">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + characters[i].img + '"><img class="hidden content" src="img/' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/maximal.jpg"></i></a></div></div>'
        var info = document.getElementById('here').innerHTML += htmlCode;
         console.log(htmlCode);
 
@@ -186,6 +190,8 @@ image {
         //   }
         // }
       }
+
+    
     }
 
   </script>
