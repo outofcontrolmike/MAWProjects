@@ -7,17 +7,27 @@
 
 .ui
  {
-  background: #f12711;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: black;
+
+font-family: 'Raleway', sans-serif;
 }
 
 .ui.card>.image>img {
-  max-height: 250px;
-  object-fit: fill;
-  background-color: black;
+ background-color: black;
   
 }
+
+.image {
+  height:180px;
+  width:250px;
+  background-color: white;
+  
+}
+
+ui, segment {
+  font-family: 'Raleway', sans-serif;
+}
+
     </style>
 
     <!-- You MUST include jQuery before Fomantic -->
@@ -28,20 +38,31 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
       href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap" rel="stylesheet">
   </head>
   <!DOCTYPE html>
 <body class="ui">
 
     <!-- main content-->
+     
     <div class="ui segment" id="main">
       <div class="ui segment inline">
+        <button onclick="sortByName()">Sort by Alphabetical</button>
+        <button onclick="sortMaximals()">Maximals Only</button>
+        <button onclick="sortPredacons()">Predacons Only</button>
+        <button onclick="sortByAnimal()">Sort by Animal</button>
+        <button onclick="sortRandom()">Sort Randomly</button>
+
         <h1 class="text center">Beast Wars Test</h1>
       </div>
-        <div class ="ui cards five stackable" id="here">
+      <div class="ui segment container">
+        <div class ="ui cards four stackable" id="here">
           <!--print cards to here-->
                
         </div>
-
+    </div>
         <div class="ui segment">
           <iframe width="420" height="315"
           src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&mute=0">
@@ -53,6 +74,9 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
   
         <!-- end footer-->
   <script>
+
+    //Variables
+    var team = "";
       //Create our characters array with Transfomer objects
       var characters = [
         //maximals
@@ -110,76 +134,44 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
 
            {"name":"Rampage","team": "Predacon",
            "animal": "Red King Crab", "personallity" : "Insane", "role": "Conscript", "img" : "rampage1.jpg" , "img2" : "rampage2.jpg"},
-  ]
+  ]      
+  
+  //on load events
+  window.onload = mainFunction;
+
+  //Sort by name
+  function sortByName() {
+    characters.sort((a, b) => a.name.localeCompare(b.name))
+    console.log(characters);
+
+    document.getElementById('here').innerText = "";
+    mainFunction();
+
+  }
+  //Sort by animal
+  function sortByAnimal() {
+    characters.sort((a, b) => a.animal.localeCompare(b.animal))
+    console.log(characters);
+
+    document.getElementById('here').innerText = "";
+    mainFunction();
+
+  }
+
+  //sort by Maxmials
+  function sortMaximals() {
     
-/*       //Grab elements by ID
-      var text = document.getElementById('text'); 
+    //Figure out sort for Maximals
+    document.getElementById('here').innerText = "";
+    mainFunction();
 
-      //create elements
-      var card = document.createElement("div");
-      var ImageContainer = document.createElement('div');
-      var BeastImage = document.createElement('img');
-      var content = document.createElement('div');
-      var header = document.createElement('h3');
-      var meta = document.createElement('div');
-      var subInfo = document.createElement('span');
-      var desc = document.createElement('div');
-      var extra = document.createElement('div');
-      var icon = document.createElement('i');
+  }
 
-      function addClasses() {
-      //Add classes to elements
-      card.classList.add('card');
-      ImageContainer.classList.add('image');
-      content.classList.add('content');
-      header.classList.add('header');
-      meta.classList.add('meta');
-      subInfo.classList.add('date');
-      desc.classList.add('description');
-      extra.classList.add('extra','content');
-      icon.classList.add('user', 'icon');
-      }
-
-      //name,symbol,ect...
-      function cardDetails() {
-        BeastImage.src = "cards Image should go here";
-        header.innerHTML = characters.name;
-        subInfo.innerHTML = characters.personallity;
-        desc.innerHTML = characters.desc;
-        extra.innerHTML = characters.role;
-        card.innerHTML = "hello world";
-        BeastImage.innerHTML = "testing";
-      }
-
-      //sets symbol for trasformer
-      function setSymbol(sybmol) {
-        if(symbol == "maximal")
-        icon.src = "test";
-        else {
-          icon.src = "predacon";
-        }
-      }//end setSymbol
-
-      function appendElements() {
-      //Append elements
-      ImageContainer.appendChild(BeastImage);
-      content.appendChild(header);
-      meta.appendChild(subInfo);
-      card.appendChild(ImageContainer,content,meta);
-      text.appendChild(card);
-
-      } */
-      //Misc
-
-      window.onload = mainFunction;
-
-      
-      function mainFunction() {
-        var team = "";
-
+  //functions    
+  function mainFunction() {
+    //Determine which symbol to use    
       for(var i = 0; i <= characters.length; i++)
       {
-        console.log(characters[i].team);
       
         if(characters[i].team === "Maximal") {
         team = 'maximal.jpg';
@@ -187,21 +179,13 @@ background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Fi
         }
         else {
         team = 'predacon.jpg';
+        
         }
-        //determine which symbol to use
-        var htmlCode = '<div class="ui card">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + characters[i].img + '"><img class="hidden content" src="img/' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> ' + characters[i].role + '</span></div><div class="description">' + characters[i].animal + '</div></div><div class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i></a></div></div>'
+        var htmlCode = '<div class="ui card medium">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + characters[i].img + '"><img class="hidden content" src="img/' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> '  + characters[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + characters[i].animal + '</div><div class="description">' +'Personallity: ' + characters[i].personallity + '</div></div><div id="symbolColor" class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i></a></div></div>'
        var info = document.getElementById('here').innerHTML += htmlCode;
         console.log(htmlCode);
-
-        // //Seperate Maximals from Preds
-        // var trigger = 0;
-        // while(trigger == 0) {
-        //   if(characters[i].team == 'predacon')
-        //   {
-        //     info.innerHTML += '<hr>';
-        //     trigger++;
-        //   }
-        // }
+      
+      
       }
 
     
