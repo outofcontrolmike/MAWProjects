@@ -5,18 +5,13 @@
     <title>Beast Wars Fun</title>
     <style>
 
+body .ui {
+
+}
 .ui
  {
-  background-color: black;
 
-font-family: 'Raleway', sans-serif;
 }
-
-.ui.card>.image>img {
- background-color: black;
-  
-}
-
 .image {
   height:180px;
   width:250px;
@@ -24,8 +19,16 @@ font-family: 'Raleway', sans-serif;
   
 }
 
-ui, segment {
+.segment {
   font-family: 'Raleway', sans-serif;
+background: #D38312;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ui >segment {
+  font-family: 'Raleway', sans-serif;
+  
 }
 
     </style>
@@ -43,25 +46,28 @@ ui, segment {
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap" rel="stylesheet">
   </head>
   <!DOCTYPE html>
-<body class="ui">
+<body class="ui" style="background-color: bisque;"><body>
 
     <!-- main content-->
      
-    <div class="ui segment" id="main">
-      <div class="ui segment inline">
-        <button onclick="sortByName()">Sort by Alphabetical</button>
-        <button onclick="sortMaximals()">Maximals Only</button>
-        <button onclick="sortPredacons()">Predacons Only</button>
-        <button onclick="sortByAnimal()">Sort by Animal</button>
-        <button onclick="sortRandom()">Sort Randomly</button>
+    <div class="ui container" id="main">
+      <div class="ui segment">
+        <div class="container">
+          <h3><p><span class="ui orange massive text center aligned header">Beast Wars</span></p></h3>
 
-        <h1 class="text center">Beast Wars Test</h1>
-      </div>
-      <div class="ui segment container">
-        <div class ="ui cards four stackable" id="here">
-          <!--print cards to here-->
-               
+          <hr>
+          <h1 class="text center ui">Sorting options</h1>
+          <button class=" button ui red large" onclick="sortByName()">Sort by Alphabetical</button>
+          <button class="button ui blue large" onclick="sortMaximals()">Maximals Only</button>
+          <button class="button ui yellow large" onclick="sortPredacons()">Predacons Only</button>
+          <button class="button ui green large" onclick="sortByAnimal()">Sort by Animal</button>
+          <button class="button ui black large" onclick="sortRandom()">Sort Randomly</button>
+          <i class="map signs icon huge float right"></i>
+
         </div>
+      </div>
+        <div class ="ui link cards four stackable" id="here">
+          <!--print cards to here-->
     </div>
         <div class="ui segment">
           <iframe width="420" height="315"
@@ -76,104 +82,115 @@ ui, segment {
   <script>
 
     //Variables
-    var team = "";
+  var team = "";
       //Create our characters array with Transfomer objects
       var characters = [
         //maximals
-          {"name":"Optimus Primal","team": "Maximal",
-           "animal": "Gorilla", "personallity" : "Well rounded behavior", "role": "Maximal Leader", "img" : "optimus1.jpg", "img2" : "optimus2.jpg"},
+          {name:"Optimus Primal",team: "Maximal",
+           animal: "Gorilla", personallity : "Well rounded behavior", role: "Maximal Leader", img : "optimus1.jpg", img2 : "optimus2.jpg"},
 
            {"name":"Rhinox","team": "Maximal",
-           "animal": "Rhinoceros", "personallity" : "Always lookingout for the team", "role": "Systems Admin", "img" : "rhinox1.jpg", "img2" : "rhinox2.jpg"},
+           animal: "Rhinoceros", personallity : "Always lookingout for the team", role: "Systems Admin", img : "rhinox1.jpg", img2 : "rhinox2.jpg"},
 
            {"name":"Cheetor","team": "Maximal",
-           "animal": "Cheetah", "personallity" : "In over his head", "role": "Scouter", "img" : "cheetor1.jpg", "img2" : "cheetor2.jpg"},
+           animal: "Cheetah", personallity : "In over his head", role: "Scouter", img : "cheetor1.jpg", img2 : "cheetor2.jpg"},
            
            {"name":"Rattrap","team": "Maximal",
-           "animal": "Rat", "personallity" : "very cocky", "role": "Bomb specialist / spy", "img" : "rat1.jpg", "img2" : "rat2.jpg"},
+           animal: "Rat", personallity : "very cocky", role: "Bomb specialist / spy", img : "rat1.jpg", img2 : "rat2.jpg"},
            
            {"name":"Dinobot","team": "Maximal",
-           "animal": "Velociraptor", "personallity" : "Honerable", "role": "Second in command", "img" : "dino1.jpg", "img2" : "dino2.jpg"},
+           animal: "Velociraptor", personallity : "Honerable", role: "Second in command", img : "dino1.jpg", img2 : "dino2.jpg"},
            
            {"name":"Tigatron","team": "Maximal",
-           "animal": "White Tiger", "personallity" : "Trustworthy", "role": "Backup spy", "img" : "tiga1.jpg", "img2" : "tiga2.jpg"},
+           animal: "White Tiger", personallity : "Trustworthy", role: "Backup spy", img : "tiga1.jpg", img2 : "tiga2.jpg"},
            
            {"name":"Airazor","team": "Maximal",
-           "animal": "Peregrine falcon", "personallity" : "Restoring", "role": "Navigator", "img" : "air1.jpg", "img2" : "air2.jpg"},
+           animal: "Peregrine falcon", personallity : "Restoring", role: "Navigator", img : "air1.jpg", img2 : "air2.jpg"},
            
            {"name":"Silverbolt","team": "Maximal",
-           "animal": "Timberwolf-golden eagle condor", "personallity" : "Galliant", "role": "Melee Fighter", "img" : "silver1.jpg", "img2" : "silver2.jpg"},
+           animal: "Timberwolf-golden eagle condor", personallity : "Galliant", role: "Melee Fighter", img : "silver1.jpg", img2 : "silver2.jpg"},
 
            {"name":"Depth Charge","team": "Maximal",
-           "animal": "Manta ray", "personallity" : "Egalitarian", "role": "Defender", "img" : "depth1.jpg", "img2" : "depth2.jpg"},
+           animal: "Manta ray", personallity : "Egalitarian", role: "Defender", img : "depth1.jpg", img2 : "depth2.jpg"},
          
            //Predacons
            {"name":"Megatron","team": "Predacon",
-           "animal": "Dinosaur", "personallity" : "Meniachal", "role": "Predacon Leader", "img" : "megatron11.jpg" , "img2" : "megatron1.jpg"},
+           animal: "Dinosaur", personallity : "Meniachal", role: "Predacon Leader", img : "megatron11.jpg" , img2 : "megatron1.jpg"},
         
            {"name":"Waspinator","team": "Predacon",
-           "animal": "Wasp", "personallity" : "Deceptable", "role": "Spy", "img" : "wasp1.jpg" , "img2" : "wasp2.jpg"},
+           animal: "Wasp", personallity : "Deceptable", role: "Spy", img : "wasp1.jpg" , img2 : "wasp2.jpg"},
            
            {"name":"Scorponok","team": "Predacon",
-           "animal": "Scorpion", "personallity" : "Sneaky", "role": "Missle Launcher", "img" : "scorp1.jpg" , "img2" : "scorp2.jpg"},
+           animal: "Scorpion", personallity : "Sneaky", role: "Missle Launcher", img : "scorp1.jpg" , img2 : "scorp2.jpg"},
 
            {"name":"Terrosaur","team": "Predacon",
-           "animal": "Pterodactyl", "personallity" : "Betraying", "role": "Scout", "img" : "p1.jpg" , "img2" : "p2.jpg"},
+           animal: "Pterodactyl", personallity : "Betraying", role: "Scout", img : "p1.jpg" , img2 : "p2.jpg"},
 
            {"name":"Tarrantulas","team": "Predacon",
-           "animal": "Tarantula", "personallity" : "Mad Scientist", "role": "Predacon Leader", "img" : "tara1.jpg" , "img2" : "tara2.jpg"},
+           animal: "Tarantula", personallity : "Mad Scientist", role: "Predacon Leader", img : "tara1.jpg" , img2 : "tara2.jpg"},
 
            {"name":"Blackarachnia","team": "Predacon",
-           "animal": "Black Widow Spider", "personallity" : "Trickster", "role": "Maximal in Disguise", "img" : "black1.jpg" , "img2" : "black2.jpg"},
+           animal: "Black Widow Spider", personallity : "Trickster", role: "Maximal in Disguise", img : "black1.jpg" , img2 : "black2.jpg"},
 
            {"name":"Inferno","team": "Predacon",
-           "animal": "Fire Ant", "personallity" : "Obnoxious", "role": "Cheif Commander", "img" : "inferno1.jpg" , "img2" : "inferno2.jpg"},
+           animal: "Fire Ant", personallity : "Obnoxious", role: "Cheif Commander", img : "inferno1.jpg" , img2 : "inferno2.jpg"},
 
            {"name":"Quickstrike","team": "Predacon",
-           "animal": "Scorpion / Cobra", "personallity" : "Loud", "role": "Fighter", "img" : "quick1.jpg" , "img2" : "quick2.jpg"},
+           animal: "Scorpion / Cobra", personallity : "Loud", role: "Fighter", img : "quick1.jpg" , img2 : "quick2.jpg"},
 
            {"name":"Rampage","team": "Predacon",
-           "animal": "Red King Crab", "personallity" : "Insane", "role": "Conscript", "img" : "rampage1.jpg" , "img2" : "rampage2.jpg"},
+           animal: "Red King Crab", personallity : "Insane", role: "Conscript", img : "rampage1.jpg" , img2 : "rampage2.jpg"},
   ]      
   
   //on load events
-  window.onload = mainFunction;
+  window.onload = mainFunction(characters);
 
+  //Sort by Random
+  function sortRandom() {
+    document.getElementById('here').innerText = "";
+    var shuffleArray = characters;
+    shuffleArray.sort(() => Math.random() - 0.5);
+    mainFunction(shuffleArray);
+  }
   //Sort by name
   function sortByName() {
-    characters.sort((a, b) => a.name.localeCompare(b.name))
-    console.log(characters);
-
+    var name = characters.sort((a, b) => a.name.localeCompare(b.name))
     document.getElementById('here').innerText = "";
-    mainFunction();
+    mainFunction(name);
 
   }
   //Sort by animal
   function sortByAnimal() {
-    characters.sort((a, b) => a.animal.localeCompare(b.animal))
-    console.log(characters);
-
+    var animals = characters.sort((a, b) => a.animal.localeCompare(b.animal))
     document.getElementById('here').innerText = "";
-    mainFunction();
+    mainFunction(animals);
 
   }
 
   //sort by Maxmials
   function sortMaximals() {
-    
-    //Figure out sort for Maximals
+    var maximals = characters.filter(function(maximal){
+      return maximal.team === "Maximal";
+    });
+    console.log(maximals);
     document.getElementById('here').innerText = "";
-    mainFunction();
+    mainFunction(maximals);
+  }
 
+  function sortPredacons() {
+    var predacons = characters.filter(function(predacon){
+      return predacon.team === "Predacon";
+    });
+    document.getElementById('here').innerText = "";
+    mainFunction(predacons);
   }
 
   //functions    
-  function mainFunction() {
+  function mainFunction(sort) {
     //Determine which symbol to use    
-      for(var i = 0; i <= characters.length; i++)
+      for(var i = 0; i < sort.length; i++)
       {
-      
-        if(characters[i].team === "Maximal") {
+        if(sort[i].team === 'Maximal') {
         team = 'maximal.jpg';
           
         }
@@ -181,10 +198,8 @@ ui, segment {
         team = 'predacon.jpg';
         
         }
-        var htmlCode = '<div class="ui card medium">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + characters[i].img + '"><img class="hidden content" src="img/' + characters[i].img2 +'"></div><div class="content"><a class="header">' + characters[i].name+ '</a><div class="meta"><span class="date"> '  + characters[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + characters[i].animal + '</div><div class="description">' +'Personallity: ' + characters[i].personallity + '</div></div><div id="symbolColor" class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i></a></div></div>'
+        var htmlCode = '<div class="ui card fluid">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + sort[i].img + '"><img class="hidden content" src="img/' + sort[i].img2 +'"></div><div class="content"><a class="header">' + sort[i].name+ '</a><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i></a></div></div>'
        var info = document.getElementById('here').innerHTML += htmlCode;
-        console.log(htmlCode);
-      
       
       }
 
