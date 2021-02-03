@@ -5,13 +5,7 @@
     <title>Beast Wars Fun</title>
     <style>
 
-body .ui {
 
-}
-.ui
- {
-
-}
 .image {
   height:180px;
   width:250px;
@@ -57,7 +51,7 @@ ui >segment {
 
           <hr>
           <h1 class="text center ui">Sorting options</h1>
-          <button class=" button ui red large" onclick="sortByName()">Sort by Alphabetical</button>
+          <button class="button ui red large" onclick="sortByName()">Sort by Alphabetical</button>
           <button class="button ui blue large" onclick="sortMaximals()">Maximals Only</button>
           <button class="button ui yellow large" onclick="sortPredacons()">Predacons Only</button>
           <button class="button ui green large" onclick="sortByAnimal()">Sort by Animal</button>
@@ -206,6 +200,62 @@ ui >segment {
     
     }
 
+  </script>
+
+<!--Toast functionallity-->
+  <script>
+
+$('.red').click(() => { // arrow functions because es6
+  $('.red').toast({
+    title: 'Awesome!!!',
+    message: 'Alphabetical Sort',
+    class : 'red',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+
+$('.blue').click(() => { // arrow functions because es6
+  $('.blue').toast({
+    title: 'Maxamize!!!',
+    message: 'Maximals Sort',
+    class : 'blue',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+$('.yellow').click(() => { // arrow functions because es6
+  $('.yellow').toast({
+    title: 'Terrorize!!!',
+    message: 'Predacons Sort',
+    class : 'yellow',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+$('.green').click(() => { // arrow functions because es6
+  $('.green').toast({
+    title: 'Prime',
+    message: 'Animal Sorting',
+    class : 'green',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+$('.black').click(() => { 
+  $('.black').toast({
+    title: 'Nice!!',
+    message: 'Random Sort',
+    class : 'black',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
   </script>
 </body>
 
