@@ -69,6 +69,22 @@ ui >segment {
         </iframe>
     </div>
     </div>
+
+    <!--Modal-->
+
+    <div class="ui longer modal">
+      <i class="close icon"></i>
+      <div class="header">
+        <h2 id="name">TEst</h2>
+      </div>
+      <div class="image content">
+        <div class="ui medium image">
+          <img src="img/rampage2.jpg">
+        </div>
+        <div class="description">
+        </div>
+      </div>
+    </div>
     
 
   
@@ -148,8 +164,8 @@ ui >segment {
   }
   //Sort by name
   function sortByName() {
-    var name = characters.sort((a, b) => a.name.localeCompare(b.name))
-    document.getElementById('here').innerText = "";
+    var name = characters.sort((a, b) => a.name.localeCompare(b.name));
+    document.getElementById('here').innerHTML = "";
     mainFunction(name);
 
   }
@@ -179,7 +195,11 @@ ui >segment {
     mainFunction(predacons);
   }
 
-  //functions    
+  //***FUNCTIONS****//
+
+  //Main Function 
+  //Accepts a sorted array
+  //
   function mainFunction(sort) {
     //Determine which symbol to use    
       for(var i = 0; i < sort.length; i++)
@@ -192,17 +212,23 @@ ui >segment {
         team = 'predacon.jpg';
         
         }
-        var htmlCode = '<div class="ui card fluid">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + sort[i].img + '"><img class="hidden content" src="img/' + sort[i].img2 +'"></div><div class="content"><a class="header">' + sort[i].name+ '</a><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><a><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i></a></div></div>'
+        var htmlCode = '<div class="ui card fluid">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + sort[i].img + '"><img class="hidden content" src="img/' + sort[i].img2 +'"></div><div class="content"><a class="header">' + sort[i].name+ '</a><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i><button class="button ui small orange">Transformation</button></div></div>'
+
        var info = document.getElementById('here').innerHTML += htmlCode;
-      
-      }
 
-    
-    }
+//Trying to create a modal for each character
+/* document.createElement('div').innerHTML ='<div class="ui longer modal"><i class="close icon"></i><div class="header"><h2 id="name">TEst</h2></div><div class="image content"><div class="ui medium image"><img src="img/rampage2.jpg"></div><div class="description"></div></div></div>'; */
+       
+      }//end for
 
+      //This is placed here because it wouldn't work after any sorting happened... probably a state of the class change was conflicting.
+      $('.orange').click(() => {
+    $('.ui.longer.modal')
+  .modal('show')
+  });
+    }//end mainFunction
   </script>
-
-<!--Toast functionallity-->
+<!--JQuery-->
   <script>
 
 $('.red').click(() => { // arrow functions because es6
