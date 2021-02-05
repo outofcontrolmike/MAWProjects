@@ -7,25 +7,24 @@
 
 
 .image {
-  height:180px;
-  width:250px;
-  background-color: white;
-  
+height:375px;
+width:400px;
+  object-fit: contain;
+  object-fit: cover;
+  width:fit-content;
 }
 
-.segment {
+.ui > .segment, .ui > p {
   font-family: 'Raleway', sans-serif;
 background: #D38312;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+ </style>
 
-ui >segment {
-  font-family: 'Raleway', sans-serif;
-  
-}
-
-    </style>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+  </style>
 
     <!-- You MUST include jQuery before Fomantic -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -38,6 +37,8 @@ ui >segment {
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
   </head>
   <!DOCTYPE html>
 <body class="ui" style="background-color: bisque;"><body>
@@ -47,7 +48,7 @@ ui >segment {
     <div class="ui container" id="main">
       <div class="ui segment">
         <div class="container">
-          <h3><p><span class="ui orange massive text center aligned header">Beast Wars</span></p></h3>
+          <h3><p><span class="ui massive text center aligned header">Beast Wars</span></p></h3>
 
           <hr>
           <h1 class="text center ui">Sorting options</h1>
@@ -212,7 +213,7 @@ ui >segment {
         team = 'predacon.jpg';
         
         }
-        var htmlCode = '<div class="ui card fluid">' + '<div class="ui slide masked reveal image"><img class="visible content" src="img/' + sort[i].img + '"><img class="hidden content" src="img/' + sort[i].img2 +'"></div><div class="content"><a class="header">' + sort[i].name+ '</a><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i><button class="button ui small orange">Transformation</button></div></div>'
+        var htmlCode = '<div class="ui card  fluid">' + '<div class="ui slide masked reveal"><img class="visible content image" src="img/' + sort[i].img + '"><img class="hidden content image" src="img/' + sort[i].img2 +'"></div><div class="content"><a class="header">' + sort[i].name+ '</a><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i><button style="float:right;" class="button ui small orange">Transformation</button></div></div>'
 
        var info = document.getElementById('here').innerHTML += htmlCode;
 
