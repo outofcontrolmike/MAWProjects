@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <title>Beast Wars Fun</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
     <style>
-
-
+p{
+  font-family: 'Creepster', cursive;
+  text-shadow: 2px 2px orange;
+  color:black;
+  font-weight: bolder;
+}
 .image {
 height:375px;
 width:400px;
@@ -20,11 +27,16 @@ background: #D38312;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
- </style>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-  </style>
+.container {
+  margin-top: 2%;
+}
+
+footer {
+  margin-bottom:10%;
+}
+
+ </style>
 
     <!-- You MUST include jQuery before Fomantic -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -41,22 +53,21 @@ background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, F
 
   </head>
   <!DOCTYPE html>
-<body class="ui" style="background-color: bisque;"><body>
+<body style="background-color: bisque;"><body>
 
     <!-- main content-->
      
-    <div class="ui container" id="main">
+    <div class="ui container raised very padded" id="main">
       <div class="ui segment">
         <div class="container">
-          <h3><p><span class="ui massive text center aligned header">Beast Wars</span></p></h3>
-
+          <p><span class="ui text massive center">Beast Wars</span></p>
           <hr>
-          <h1 class="text center ui">Sorting options</h1>
-          <button class="button ui red large" onclick="sortByName()">Sort by Alphabetical</button>
-          <button class="button ui blue large" onclick="sortMaximals()">Maximals Only</button>
-          <button class="button ui yellow large" onclick="sortPredacons()">Predacons Only</button>
-          <button class="button ui green large" onclick="sortByAnimal()">Sort by Animal</button>
-          <button class="button ui black large" onclick="sortRandom()">Sort Randomly</button>
+          <h2 class="text center ui">Sorting options</h2>
+          <button class="button ui red large redBtn" onclick="sortByName()">Sort by Alphabetical</button>
+          <button class="button ui blue large blueBtn" onclick="sortMaximals()">Maximals Only</button>
+          <button class="button ui yellow large yellowBtn" onclick="sortPredacons()">Predacons Only</button>
+          <button class="button ui green large greenBtn" onclick="sortByAnimal()">Sort by Animal</button>
+          <button class="button ui black large blackBtn" onclick="sortRandom()">Sort Randomly</button>
           <i class="map signs icon huge float right"></i>
 
         </div>
@@ -64,15 +75,11 @@ background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, F
         <div class ="ui link cards four stackable" id="here">
           <!--print cards to here-->
     </div>
-        <div class="ui segment">
-          <iframe width="420" height="315"
-          src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&mute=0">
-        </iframe>
     </div>
-    </div>
+    
 
+    <!--*Not used-->
     <!--Modal-->
-
     <div class="ui longer modal">
       <i class="close icon"></i>
       <div class="header">
@@ -86,14 +93,21 @@ background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, F
         </div>
       </div>
     </div>
-    
 
-  
+    <div class="content">
+      <!--video here-->
+      <div class="ui container" style="text-align: right;">
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&mute=0">
+      </iframe>
+  </div>
+    </div>
         <!-- end footer-->
   <script>
 
     //Variables
   var team = "";
+  var sort = "";
       //Create our characters array with Transfomer objects
       var characters = [
         //maximals
@@ -213,27 +227,22 @@ background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, F
         team = 'predacon.jpg';
         
         }
-        var htmlCode = '<div class="ui card  fluid">' + '<div class="ui slide masked reveal"><img class="visible content image" src="img/' + sort[i].img + '"><img class="hidden content image" src="img/' + sort[i].img2 +'"></div><div class="content"><a class="header">' + sort[i].name+ '</a><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i><button style="float:right;" class="button ui small orange">Transformation</button></div></div>'
-
+        var htmlCode = '<div class="ui card  fluid">' + '<div class="ui slide masked reveal"><img class="visible content image" src="img/' + sort[i].img + '"><img class="hidden content image" src="img/' + sort[i].img2 +'"></div><div class="content"><span class="header">' + sort[i].name+ '</span><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i><button style="float:right;"' //class="button ui small orange">Transformation</button></div></div>';
        var info = document.getElementById('here').innerHTML += htmlCode;
+             }//end for
 
-//Trying to create a modal for each character
-/* document.createElement('div').innerHTML ='<div class="ui longer modal"><i class="close icon"></i><div class="header"><h2 id="name">TEst</h2></div><div class="image content"><div class="ui medium image"><img src="img/rampage2.jpg"></div><div class="description"></div></div></div>'; */
-       
-      }//end for
-
-      //This is placed here because it wouldn't work after any sorting happened... probably a state of the class change was conflicting.
-      $('.orange').click(() => {
+  /*     console.log(sort);
+      $('.orange').click((e) => {
     $('.ui.longer.modal')
   .modal('show')
-  });
+  }); */
     }//end mainFunction
   </script>
 <!--JQuery-->
   <script>
 
-$('.red').click(() => { // arrow functions because es6
-  $('.red').toast({
+$('.redBtn').click(() => { // arrow functions because es6
+  $('.redBtn').toast({
     title: 'Awesome!!!',
     message: 'Alphabetical Sort',
     class : 'red',
@@ -243,8 +252,8 @@ $('.red').click(() => { // arrow functions because es6
   });
 });
 
-$('.blue').click(() => { // arrow functions because es6
-  $('.blue').toast({
+$('.blueBtn').click(() => { // arrow functions because es6
+  $('.blueBtn').toast({
     title: 'Maxamize!!!',
     message: 'Maximals Sort',
     class : 'blue',
@@ -253,8 +262,8 @@ $('.blue').click(() => { // arrow functions because es6
     }
   });
 });
-$('.yellow').click(() => { // arrow functions because es6
-  $('.yellow').toast({
+$('.yellowBtn').click(() => { // arrow functions because es6
+  $('.yellowBtn').toast({
     title: 'Terrorize!!!',
     message: 'Predacons Sort',
     class : 'yellow',
@@ -263,8 +272,8 @@ $('.yellow').click(() => { // arrow functions because es6
     }
   });
 });
-$('.green').click(() => { // arrow functions because es6
-  $('.green').toast({
+$('.greenBtn').click(() => { // arrow functions because es6
+  $('.greenBtn').toast({
     title: 'Prime',
     message: 'Animal Sorting',
     class : 'green',
@@ -273,8 +282,8 @@ $('.green').click(() => { // arrow functions because es6
     }
   });
 });
-$('.black').click(() => { 
-  $('.black').toast({
+$('.blackBtn').click(() => { 
+  $('.blackBtn').toast({
     title: 'Nice!!',
     message: 'Random Sort',
     class : 'black',
