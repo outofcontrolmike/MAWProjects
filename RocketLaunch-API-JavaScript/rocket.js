@@ -130,6 +130,7 @@ function aFunction() {
 
     // Frankie introduced me to this function.  Basically creates rows and adds info til the length of launches has been met.
     function renderHTML(data) {
+        if(data) {
         launchInfoRow.innerHTML = ""; //Clears data from previous request
         var htmlString = "";//Sets an empty string where your launch data will be added
 
@@ -138,5 +139,9 @@ function aFunction() {
         } //end of for
 
         launchInfoRow.insertAdjacentHTML("beforeend", htmlString);//Inserts data to html element we want it in
+    }
+    else {
+        launchInfoRow.innerHTML = "Sorry about the technical issues.";
+    }
     }
 }
