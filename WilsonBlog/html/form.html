@@ -1,179 +1,172 @@
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Contact</title>
+  <meta charset="UTF-8" />
+  <title>Contact</title>
 
-  
-    <!-- You MUST include jQuery before Fomantic -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
-    <style>
 
-    body {
-      background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
-    body > .grid {
-      height: 100%;
-    }
-    image
-     {
-      margin-top: -100px;
-    }
-    .column {
-      max-width: 450px;
-    }
-  
-  
+  <!-- You MUST include jQuery before Fomantic -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+  <style>
+
+  body {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+  body > .grid {
+    height: 100%;
+  }
+  image
+   {
+    margin-top: -100px;
+  }
+  .column {
+    max-width: 450px;
+  }
+
+
+      
+footer {
+      background-color: black;;
         
-  footer {
-        background-color: black;;
-          
-  }
+}
 
-  a {
-      font-size: medium;
-  }
-  .ui.menu .item img.logo {
-    margin-right: 1.5em;
-    padding: 1em 0em;
-  }
-  .main.container {
-    margin-top: 7em;
-  }
+a {
+    font-size: medium;
+}
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+  padding: 1em 0em;
+}
+.main.container {
+  margin-top: 7em;
+}
 
-  .ui.footer.segment {
-    
-    padding: 5em 0em;
-  }
-    </style>
-  </head>
+.ui.footer.segment {
+  
+  padding: 5em 0em;
+}
+  </style>
+</head>
 
 <div class="ui fixed inverted menu">
-    <div class="ui container">
-        
-        <a href="homeNew.html" class="header item">
-            <img class="logo small" src="img/logo2.jpg" style="padding-right:10px; height:75px; width:75px;">
-            Home
-        </a>
-        <a href="about.html" class="item">
-            About
-        </a>
-        <a href="projects.html" class="item">
-            Projects
-        </a>
-        <a href="form.html" class="item">
-            Contact
-        </a>
-    </div>
+  <div class="ui container">
+      
+      <a href="homeNew.html" class="header item">
+          <img class="logo small" src="img/logo2.jpg" style="padding-right:10px; height:75px; width:75px;">
+          Home
+      </a>
+      <a href="about.html" class="item">
+          About
+      </a>
+      <a href="projects.html" class="item">
+          Projects
+      </a>
+      <a href="form.html" class="item">
+          Contact
+      </a>
+  </div>
 </div>
 
 
-  <div class="ui middle aligned center aligned grid">
-    <div class="column">
-      <h2 class="ui black image header">
-        <img src="img/write.jpg" class="image massive">
-        <div class="content">
-          Leave me a comment!
-        </div>
-      </h2>
-      <form class="ui large form">
-        <div class="ui stacked segment">
-          <div class="field">
-            <div class="ui left icon input">
-              <i class="user icon"></i>
-              <input type="text" name="email" placeholder="E-mail address">
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui left icon input">
-              <i class="user icon"></i>
-              <input type="user" name="name" placeholder="Name">
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui icon textarea">
-              <div class="field">
-                <label style="float:left">Text</label>
-                <textarea rows="10" placeholder="What did you like best about my site?"></textarea>
-            </div>
-            </div>
-          </div>
-          <div class="ui fluid large black submit button">Submit</div>
-        </div>
-  
-        <div class="ui error message">
-          There was a problem submitting the form
-        </div>
-  
-      </form>
-  
-      <div class="ui message">
-        <p class="text">*This is an example comment form.  A real one will replace this later.</p>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui black image header">
+      <img src="img/write.jpg" class="image massive">
+      <div class="content">
+        Leave me a comment!
       </div>
+    </h2>
+    <form action="thankyou.php" method="post" class="ui large form">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="E-mail address">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="name" name="name" placeholder="Name">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui icon textarea">
+            <div class="field">
+              <label style="float:left">Text</label>
+    <textarea id="name" name="desc" type="desc" rows="10" placeholder="What did you like best about my site?"></textarea>
     </div>
+          </div>
+        </div>
+    <input type="submit" class="ui fluid large black button"></input>
+      </div>
+
+      <div class="ui error message">
+        There was a problem submitting the form
+      </div>
+    </form>
   </div>
-  
-  
-  
- <!--Footer-->
- <div class="ui inverted vertical footer segment">
-    <div class="ui center aligned container">
-      <div class="ui stackable inverted divided grid">
-        <div class="three wide column">
-          <h4 class="ui inverted header">Resources Used</h4>
-          <div class="ui inverted link list">
-            <a href="https://www.w3schools.com/" class="item">W3 Schools</a>
-            <a href="https://fomantic-ui.com" class="item">Fomantic</a>
-            <a href="https://getbootstrap.com" class="item">BootStrap</a>
-            <a href="https://stackoverflow.com" class="item">StackOverflow</a>
-          </div>
+</div>
+
+<!--Footer-->
+<div class="ui inverted vertical footer segment">
+  <div class="ui center aligned container">
+    <div class="ui stackable inverted divided grid">
+      <div class="three wide column">
+        <h4 class="ui inverted header">Resources Used</h4>
+        <div class="ui inverted link list">
+          <a href="https://www.w3schools.com/" class="item">W3 Schools</a>
+          <a href="https://fomantic-ui.com" class="item">Fomantic</a>
+          <a href="https://getbootstrap.com" class="item">BootStrap</a>
+          <a href="https://stackoverflow.com" class="item">StackOverflow</a>
         </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Projects</h4>
-          <div class="ui inverted link list">
-            <a href="../../PokemonAPI/pokemon.html" class="item">Pokedex API Call</a>
-            <a href="../../Great Race - JavaScript/race.html"class="item">The Great Race</a>
-            <a href="../../rocketLaunchAPI/RocketLaunch.html" class="item">Rocket Launch Schedule</a>
-            <a href="hikes.html" class="item">Gallery</a>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header">Projects</h4>
+        <div class="ui inverted link list">
+          <a href="../../PokemonAPI/pokemon.html" class="item">Pokedex API Call</a>
+          <a href="../../Great Race - JavaScript/race.html"class="item">The Great Race</a>
+          <a href="../../rocketLaunchAPI/RocketLaunch.html" class="item">Rocket Launch Schedule</a>
+          <a href="hikes.html" class="item">Gallery</a>
+      </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header">Projects Extended</h4>
+        <div class="ui inverted link list">
+          <a href="../../Vue-ShoppingCart/page.html" class="item">Vue Shopping Cart</a>
+          <a href="../../BeastWars Js/home.html" class="item">Beast Wars</a>
         </div>
-        </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Projects Extended</h4>
-          <div class="ui inverted link list">
-            <a href="../../Vue-ShoppingCart/page.html" class="item">Vue Shopping Cart</a>
-            <a href="../../BeastWars Js/home.html" class="item">Beast Wars</a>
-          </div>
-        </div>
-        <div class="seven wide column">
-            <!--contact card-->
-          <h4 class="ui inverted header">Quick Contact</h4>
-          <div class="ui card inverted"style="text-align:center; margin-left:18%;">
+      </div>
+      <div class="seven wide column">
+          <!--contact card-->
+        <h4 class="ui inverted header">Quick Contact</h4>
+        <div class="ui card inverted"style="text-align:center; margin-left:18%;">
 <div class="content">
 <div class="center aligned header">Michael A. Wilson</div>
 <div class="center aligned description">
-  <p>Email: michaelwilsona2019@gmail.com</p>
+<p>Email: michaelwilsona2019@gmail.com</p>
 </div>
 </div>
 <div class="extra content">
 <div class="center aligned author">
-  <a href="https://github.com/outofcontrolmike/MAWProjects"><img class="ui avatar image massive" src="img/GitHub-Mark.png"> </a>
+<a href="https://github.com/outofcontrolmike/MAWProjects"><img class="ui avatar image massive" src="img/GitHub-Mark.png"> </a>
 
 </div>
 </div>
 </div>
 </div>
 <!-- End contact card-->
-      </div>
+    </div>
 <!-- end grid-->  
-      <div class="ui inverted section divider"></div>
-      <div class="ui horizontal inverted small divided link list">
-        <p class="item">&#169;MAW Project October 2020</p>
-      </div>
+    <div class="ui inverted section divider"></div>
+    <div class="ui horizontal inverted small divided link list">
+      <p class="item">&#169;MAW Project October 2020</p>
     </div>
   </div>
+</div>
 
-  <!-- end footer-->
+<!-- end footer-->
