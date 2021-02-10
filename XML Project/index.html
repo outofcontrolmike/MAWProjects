@@ -6,20 +6,32 @@
     <script defer src = "doStuff.js"></script>
 	
 <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
 
     </head>
     <body onload="displayResult(), displayImages()">
-            <h1>Final Fantasy Characters Rule!</h1>
-            <div><p id="demo"></p></div>
-        <div id= "fanArt">
-        </div>
-        <div style="position:fixed;" class="charBio">
+        <div class="ui">
+            <div class="ui segment" style="background-color:black;">
+                <h1 class="ui text massive inverted header">Final Fantasy Characters Rule!</h1>
+            </div>
+                <div class="ui fanArt" style="margin-bottom:200px;" id="fanArt">
+                    
+                </div>
+                <p id="demo" class=""></p>
+        <div style="position:fixed;" class="charBio ui segment">
             <h3>
                 Select any character portrait to display information about the character!  
             </h3>
-            <p id="charText">
-                
+            <p id="charText" class="ui segment padded">
             </p>
+        </div>
         </div>
     </body>
 </html>
