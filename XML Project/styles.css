@@ -1,25 +1,34 @@
 
-html 
-{background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);;
+.ui 
+{   background-color: black;
     max-height: 800px;
+
 }
+
+.ui > .fanArt {
+    position: relative;
+    bottom: -45px;
+    height:1000px;
+}
+
+html, ul, body {
+background-color: black;}
 
 h1
 {
     position: relative;
     text-align: center;
     padding: 25px;
-    border: solid 10px;
     margin: 20px;
     font-family: 'Yeon Sung', cursive;
+}
 
-
-
+font {
+    padding:2px;
 }
 
 .charBio
 {
-    position: fixed;
 	top:140px;
     text-align: center;
     max-width: 20%;
@@ -36,7 +45,7 @@ table
     text-align: center;
     height: 600px;
     left: 200px;
-    font-size: 36px;
+    font-size: 20px;
     padding: initial;
     margin: 20px;
 }

@@ -11,7 +11,7 @@
 
 <table  border='1'  width="65%" height="65%">
     <tr bgcolor="beige">
-        <th style="text-align:center">Character Name</th>
+        <th style="letter-spacing: 3px; padding-bottom:2px;">Character Name</th>
         <th style="text-allgn:left">Personallity</th>
         <th style="text-allgn:left">Weapon</th>
         <th>Special</th>
@@ -21,13 +21,13 @@
     <!--For each Chracter record in Characters -->
     <xsl:for-each select="characters/character">
     <xsl:sort select="name"/>
-    <tr>
+    <tr bgcolor="lightblue">
     <!--Grab the value of each character property -->
         <td><xsl:value-of select ="name"/></td>
         <td><xsl:value-of select ="personallity" /></td>
         <td><xsl:value-of select = "weapon"/></td>
         <td><xsl:value-of select = "special"/></td>
-        <td bgcolor="red"><xsl:value-of select = "gender"/></td>
+        <td bgcolor="whitesmoke"><xsl:value-of select = "gender"/></td>
         <td><xsl:value-of select = "game"/></td>
         
     </tr>
