@@ -2,11 +2,8 @@
     Project: Earth Fire Water
     Purpose: Learning experience with how to write a game in php.
     Date started: 02/10/2021
-
     -->
 <?php 
-
-
 //Runs game logic as long as Reset button isn't clicked. $sumibtted technically changes when the action method is called on button click
 if(isset($_POST['submitted']) == '1')
 {
@@ -67,7 +64,7 @@ if(isset($_POST['submitted']) == '1')
     {
         $draws++;
         $throwcount++;
-        $status = "You came to a draw";
+        $status = "Draw!";
         
     }
 
@@ -77,13 +74,13 @@ if(isset($_POST['submitted']) == '1')
         $playerImage = 'forest.jpg';
         $wins++;
         $throwcount++;
-        $status = "You won!";
+        $status = "Winning!";
     }
     if($playerchoice == "Fire" && $computerchoice =="Earth")
     {
         $wins++;
         $throwcount++;
-        $status = "You won!";
+        $status = "Winning!";
         $playerImage = 'fire.jpg';
 
     }
@@ -91,7 +88,7 @@ if(isset($_POST['submitted']) == '1')
     {
         $wins++;
         $throwcount++;
-        $status = "You won!";
+        $status = "Winning!";
         $playerImage = 'water.jpg';
 
 
@@ -102,23 +99,23 @@ if(isset($_POST['submitted']) == '1')
     {
         $losses++;
         $throwcount++;
-        $status = "You Lost!";
+        $status = "Losing!!";
     }
     if($computerchoice == "Fire" && $playerchoice =="Earth")
     {
         $losses++;
         $throwcount++;
-        $status = "You Lost!";
+        $status = "Losing!!";
 
     }
     if($computerchoice == "Water" && $playerchoice =="Fire")
     {
         $losses++;
         $throwcount++;
-        $status = "You Lost!";
+        $status = "Losing!!";
 
     }
-    $percentagecalc = ($wins / $throwcount) * 100; 
+    $percentagecalc = round(($wins / $throwcount) * 100,2); 
 
 
 }
@@ -134,12 +131,9 @@ $draws = 0;
 $status = "";
 $percentage = 0;
 $percentagecalc = 0;
-$playerImage = "";
-$computerImage = "";
-//grab percentage of games won
+$playerImage = "water.jpg";
+$computerImage = "fire.jpg";
 }
-
-//generates a rounded number between 1 & 3    
 ?>
 <html>
 <head>
@@ -151,30 +145,33 @@ $computerImage = "";
     href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
   />
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
-
   <link rel="stylesheet" href="styles.css">
+  <!--using google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+<!--application of google fonts-->
+<style>
+.ui, h1,h2,h3 {
+font-family: 'Reggae One', cursive;
+}
+</style>
 </head>
-
-
+<!--Header-->
 <div class="ui segment container" style=" text-align: -webkit-center; margin-top: 20px;">
-    <h1 class="ui header massive orange centered text" style="display: inline;">Welcome to Earth Fire Water</h1>
-    <button class="button ui purple large rules" style="display: inline; float: right;">Rules</button>
+    <h1 class="ui centered text" style="display: inline;"><span class="ui text green huge">Earth </span><span class="ui red text huge"> Fire</span><span class="blue text ui huge"> Water <span></h1>
 </div>
-
-</div>
+<!--Game Display-->
 <div class="ui segment container">
 <div class="ui segment">
   <div class="ui two column very relaxed grid">
     <div class="column">
         <h2>Player</h2>
         <hr>
-    <?php echo 'player threw: ' . $playerchoice ?>
-    <img class="ui medium circular image" src="<?php echo $playerImage;?>">
+    <img class="ui medium circular image" style="" src="<?php echo $playerImage;?>">
     </div>
     <div class="column">
       <h2>Computer</h2>
       <hr>
-      <?php echo 'computer threw: ' . $computerchoice ?>
       <img class="ui medium circular image" src="<?php echo $computerImage;?>">
     </div>
   </div>
@@ -182,7 +179,7 @@ $computerImage = "";
     VS
   </div>
 </div>
-<p><?php echo 'Game: ' . $status ?> </p>
+<p><?php echo 'Game Status: ' . $status ?> </p>
 
 <form action="" method="post" style="text-align:center">
 <input name ="submitted" type="hidden" value="1">
@@ -192,25 +189,36 @@ $computerImage = "";
 <input name="wins" type="hidden" value="<?php echo $wins; ?>" /> 
 <input name="losses" type="hidden" value="<?php echo $losses; ?>" />
 <input name="draws" type="hidden" value="<?php echo $draws; ?>" />
-    <input class="ui button large green" type="submit" name="playerchoice" value="Earth">
-    <input class="ui button large red" type="submit" name="playerchoice" value="Fire">
-    <input class="ui button large blue" type="submit" name="playerchoice" value="Water">
+<div class="ui three buttons">
+    <input class="ui button medium green inverted" type="submit" name="playerchoice" value="Earth">
+    <input class="ui button medium red inverted" type="submit" name="playerchoice" value="Fire">
+    <input class="ui button medium blue inverted" type="submit" name="playerchoice" value="Water">
+    </div>
 </form>
 </div>
+<!--End Game Display-->
+
+<!-- Stats Container-->
 <div class="ui segment container">
     <?php 
         echo '<h3>Game stats</h3>';
     ?>
     <p><?php echo 'Your wins: ' . $wins ?> </p>
     <p><?php echo 'Your loses: ' . $losses ?> </p>
-    <p><?php echo 'Draws...: ' . $draws ?> </p>
+    <p><?php echo 'Draws: ' . $draws ?> </p>
     <p><?php echo 'Rounds Played: ' . $throwcount; ?>
     <p><?php echo 'Winning ratio: ' . $percentagecalc;?> %</p>
-<hr>
+</div>
+<!-- End stats-->
+<!--Options Container-->
+<div class="ui segment container">
+<div class="ui buttons two">
     <FORM METHOD="GET" ACTION="main.php">
-<INPUT TYPE="submit" VALUE="RESET COUNT">
+<INPUT class="ui button black medium"TYPE="submit" VALUE="RESET COUNT">
 </FORM>
-
+<button class="ui button purple medium rules inverted">Rules</button>
+</div>
+<!-- End options-->
    <!--Modal-->
    <div class="ui longer modal">
       <i class="close icon"></i>
@@ -224,12 +232,12 @@ $computerImage = "";
         <div class="description">
         <div class="rules">
     <h3>Earth, Fire & Water rules</h3>
-    <p>This is basically the same thing as rock paper scissors, but based on elemental weaknesses</p>
+    <p>This is basically the same concept as rock paper scissors, but based on elements</p>
     <p> You choose either one of the three options and hope that your oppenent chooses the elemental weakness of your element<p>
     <ul>    
     <li> <span>Earth soaks up Water</span></li>
         <li> <span>Fire burns down Earth</span></li>
-        <li> <span>Water puts out fire</span></li>
+        <li> <span>Water puts out Fire</span></li>
 </ul>
     <p>The player stats keep track of how many games you've played along with the amount of wins,losses and draws you've had</p>
 </div><!-- end stats-->
@@ -238,6 +246,7 @@ $computerImage = "";
     </div>
     </html>
 <script>
+//Fomatic Jquery for showing of modal
 $('.rules').click((e) => {
     $('.ui.longer.modal')
   .modal('show')
