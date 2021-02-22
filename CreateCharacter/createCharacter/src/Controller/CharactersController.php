@@ -4,6 +4,14 @@
 
 namespace App\Controller;
 
-class charactersController extends AppController {
+class CharactersController extends AppController {
+
+    //View
+    public function index()
+    {
+        $this->loadComponent('Paginator');
+        $characters = $this->Paginator->paginate($this->Characters->find());
+        $this->set(compact('characters'));
+    }
 
 }
