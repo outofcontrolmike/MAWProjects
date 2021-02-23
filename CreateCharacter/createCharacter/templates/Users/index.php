@@ -22,7 +22,7 @@
 <th>Email</th>
 <?php foreach($users as $user) : ?>
 <tr>
-<td><?= $this->Html->link($user->name, ['action' => 'view'])?> </td>
+<td><?= $this->Html->link($user->name, ['action' => 'view', $user->slug])?> </td>
 <td><?= $user->email ?> </td>
 </tr>
 <?php endforeach; ?>

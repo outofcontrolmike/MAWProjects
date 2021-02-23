@@ -1,5 +1,6 @@
 
 <h1>Characters</h1>
+<?= $this->Html->link('Create Character', ['action' => 'create']) ?>
 <table>
     <tr>
         <th>Name</th>
@@ -16,7 +17,7 @@
     <tr>
         <td>
             <!--Sets up our names to link to the view of the character -->
-            <?= $this->Html->link($char->name, ['action' => 'view'])?>
+            <?= $this->Html->link($char->name, ['action' => 'view', $char->slug])?>
         </td>
         <td>
             <?= $char->timestamp ?>
