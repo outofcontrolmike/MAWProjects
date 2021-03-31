@@ -1,0 +1,59 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+<div id="vue-app">
+    <div>
+        <button v-on:click="getRandom()">Click to get random character</button>
+        <div>
+            <h1 style="color:#cc0000">Name: {{random.name}}</h1>
+            <h3 style="color:#cc0000">Origin: {{random.origin}}</h3>
+            <h3 style="color:#cc0000">Job/Class: {{random.job}}</h3>
+        </div>
+        <!-- The above is styled in red to signify it's random -->
+    </div>
+    <div v-for="character in characters">
+        <h1>{{character.name}}</h1>
+        <h3>{{character.origin}}</h3>
+        <h3>{{character.gender}}</h3>
+        <img src="{{character.pictures.url}}"></img>
+        <!-- Stuck getting the pictures to work-->
+        <p>{{character.pictures[0]}}</p>
+        <!-- ***NOTE*** The above would just produce a list of *ALL* the characters -->
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: "#vue-app",
+        mounted: function() {
+            this.getCharacters()
+        },
+        methods: {
+            getCharacters() {
+                axios.get("https://www.moogleapi.com/api/v1/characters")
+                .then(response => {this.characters = response.data})
+                console.log(characters)
+            },
+            getRandom() {
+                axios.get("https://www.moogleapi.com/api/v1/characters/random")
+                .then(response => {this.random = response.data})
+            }
+        },
+        data: {
+            random: [],
+            characters: [],
+        }
+    })
+
+var dataView = fetch("https://www.moogleapi.com/api/v1/characters")
+.then(response => {
+  if (!response.ok) {
+    throw new Error("Network response was not okay");
+  }
+  return response.json();
+})
+
+
+console.log(dataView)
+
+</script>
