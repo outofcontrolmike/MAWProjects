@@ -1,9 +1,21 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
 <div id="vue-app">
+    <template>
     <div>
-        <button v-on:click="getRandom()">Click to get random character</button>
+        <div class="my-2">
+            <v-btn v-on:click="getRandom()"
+                color="success"
+                dark
+                large>
+                Get Random
+            </v-btn>
+    </div>
         <div>
             <h1 style="color:#cc0000">Name: {{random.name}}</h1>
             <h3 style="color:#cc0000">Origin: {{random.origin}}</h3>
@@ -12,16 +24,23 @@
         <!-- The above is styled in red to signify it's random -->
     </div>
     <div v-for="character in characters">
+        <v-card
+        elevation="20">
         <h1>{{character.name}}</h1>
+        <h2>{{character.japaneseName}}</h2>
         <h3>{{character.origin}}</h3>
         <h3>{{character.gender}}</h3>
-        <img src="{{character.pictures.url}}"></img>
+            <h3>Picture: {{character.pictures[0[1]]}}</h3>
+         <img :src="character.pictures[0]"/>
         <!-- Stuck getting the pictures to work-->
-        <p>{{character.pictures[0]}}</p>
         <!-- ***NOTE*** The above would just produce a list of *ALL* the characters -->
+        </v-card>
     </div>
+    </template>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 <script>
     new Vue({
         el: "#vue-app",
@@ -32,7 +51,7 @@
             getCharacters() {
                 axios.get("https://www.moogleapi.com/api/v1/characters")
                 .then(response => {this.characters = response.data})
-                console.log(characters)
+
             },
             getRandom() {
                 axios.get("https://www.moogleapi.com/api/v1/characters/random")
@@ -42,6 +61,7 @@
         data: {
             random: [],
             characters: [],
+
         }
     })
 
@@ -52,8 +72,7 @@ var dataView = fetch("https://www.moogleapi.com/api/v1/characters")
   }
   return response.json();
 })
-
-
-console.log(dataView)
+    console.table(dataView)
+    console.log(dataView)
 
 </script>
