@@ -39,7 +39,6 @@ if(stateValue != "Select a State" && stateValue != "All")
 {
     stateFilter = '&by_state='+stateValue;
 }
-if(input != parseInt(input)) {
 
 fetch('https://api.openbrewerydb.org/breweries?by_'+filter+"="+input+brewFilter+stateFilter+'&per_page=50')
 .then(response => response.json())
@@ -50,12 +49,9 @@ fetch('https://api.openbrewerydb.org/breweries?by_'+filter+"="+input+brewFilter+
 .catch((error) => {
     console.error('Error:', error);
     console.log("error");
+    alert("testing");
 });
 ;
-}
-else {
-alert('Please enter a value containing letters.')
-}
 }
 
 function createBrew(brew) {
@@ -63,7 +59,10 @@ document.getElementById('breweries').innerHTML = "";
 brewCount = 0;
 brew.forEach(createCard)
 document.getElementById('count').innerHTML = brewCount;
+if(brewCount === 0) {
+    setTimeout(function(){ alert("Your search brought back no results, try again"); }, 3000);
 
+}
 }
 
 function createCard(item)
@@ -100,7 +99,7 @@ url = document.createElement('i');
 //find a way to pass all these in to a function that checks if empty
 breweryURL.href = item.website_url;
 
-if(breweryURL != "http://localhost:3000/null")
+if(breweryURL != "https://mawportfolio.online/MAWProjects/MAWProjects/Javascript_IntroProjects/brewery_Fetch/null")
 {
 breweryURL.innerHTML = breweryURL;
 }
@@ -128,7 +127,6 @@ column2.className = "column";
 breweryName.className = "ui header text massive container";
 breweryName.id ="header";
 breweryType.className = "floatMe";
-breweryType.style.color = "red";
 
 //add icons
 city.className = "city icon";
@@ -156,21 +154,3 @@ column1.append(breweryStreet,breweryCity,breweryState,breweryPostal);
 column2.append(breweryCountry,breweryPhone,breweryURL)
 document.getElementById('breweries').append(container);
 }
-
-//Set color with color picker
-let chosenColor = document.getElementById('colorpicker');
-
-function chooseColor() {
-let grabIcons = document.getElementsByTagName('i');
-
-
-for(let  i = 0; i <= grabIcons.length; i++)
-{
-grabIcons[i].style.color = chosenColor.value;
-
-}
-
-}
-chosenColor.addEventListener("input", chooseColor);
-let countColor = document.getElementById('count');
-countColor.style.color = chosenColor.value;

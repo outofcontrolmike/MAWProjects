@@ -43,9 +43,14 @@ i {
     background-color: ghostwhite;
 }
 
+
 #inputValue {
     background-color: lavender;
     font-size: 18px;
+}
+
+.floatMe {
+    color: red;
 }
 
 .input {
@@ -76,11 +81,10 @@ i {
 .floatMe {
     float: right;
     animation: blinker 4s linear infinite;
-
 }
 
 #breweries {
-    padding: 0px 150px 150px 150px;
+    padding: 0px 100px 100px 100px;
 }
 
 #brewCard {
@@ -98,7 +102,16 @@ i {
     }
 
     .floatMe {
-        padding-left: 30px;
+        float:left;
+        padding-top:25px;
+              color:blue;
+    }
+    i {
+        text-overflow: clip;
+    }
+
+    hr {
+        visibility: hidden;
     }
 
   }
