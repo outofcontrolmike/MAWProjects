@@ -1,0 +1,8 @@
+div {
+    background-color: aqua;
+}
+
+#list {
+ border:black 2px solid;
+ height: fit-content;
+}
