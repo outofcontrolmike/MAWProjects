@@ -3,6 +3,47 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+/*Components Required 
+
+*Card
+*Input
+*List
+*Header
+*App (main)
+*
+*
+
+*/
+
+class FFSearch extends React.Component {
+  render() {
+    return (
+      <form
+      className={"ui form"}>
+
+        <input
+        className={"ui input"}
+        id = {"form"}
+        label = {"testing"}
+        value = {"Input Value"}>
+        </input>
+      </form>
+    )
+  }
+}
+class Card extends React.Component {
+  render() {
+    return(
+      <div
+      className={"ui segment container"}
+      id ={"ffCard"}
+      >
+        <h1>Character Card</h1>
+        <p>character detail</p>
+      </div>
+    )
+  }
+}
 
 class PageHeader extends React.Component {
   render() {
@@ -12,6 +53,10 @@ class PageHeader extends React.Component {
       id={"header"}
       >
 <h1>Final Fantasy Character Search</h1>
+<FFSearch />
+<button
+id={"fetchFF"}
+>click me to Fetch</button>
       </div>
       
     )
@@ -25,12 +70,12 @@ class List extends React.Component {
       className={'ui segment container'}
       id={'list'}
       >
-        <h1>List</h1>
+        <Card />
 </div>
     )
   }
-
 }
+
 class App extends React.Component {
   render() {
     return (

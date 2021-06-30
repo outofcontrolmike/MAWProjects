@@ -2,7 +2,16 @@ div {
     background-color: aqua;
 }
 
-#list {
- border:black 2px solid;
+#list, #header, #ffCard {
+ border:black 10px solid;
  height: fit-content;
 }
+
+#form, #fetchFF {
+    padding: 25px;
+    margin:30px;
+}
+#ffCard {
+    margin: 200px;
+}
+
