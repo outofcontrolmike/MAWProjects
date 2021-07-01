@@ -15,6 +15,14 @@ import reportWebVitals from './reportWebVitals';
 
 */
 
+function ffFetch () {
+  fetch('https://www.moogleapi.com/api/v1/characters/search?name=cloud')
+  .then(response => response.json())
+  .then(data => console.log(data));
+}
+
+ffFetch();
+
 class FFSearch extends React.Component {
   render() {
     return (
