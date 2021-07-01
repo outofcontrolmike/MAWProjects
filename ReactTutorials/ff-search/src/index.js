@@ -19,6 +19,8 @@ function ffFetch () {
   fetch('https://www.moogleapi.com/api/v1/characters/search?name=cloud')
   .then(response => response.json())
   .then(data => console.log(data));
+
+  //Do something with the data
 }
 
 ffFetch();
