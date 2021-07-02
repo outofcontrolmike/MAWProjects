@@ -3,25 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-/*Components Required 
-
-*Card
-*Input
-*List
-*Header
-*App (main)
-*
-*
-
-*/
-  //handleClick Event
-  function handleClick(e) {
-    e.preventDefault();
-    ffFetch();
-  }
-
-function ffFetch () {
-  fetch('https://www.moogleapi.com/api/v1/characters/search?name=cloud')
+function ffFetch (value) {
+  console.log(value);
+  fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + value)
   .then(response => response.json())
   .then(data => console.log(data));
 
@@ -29,18 +13,44 @@ function ffFetch () {
 }
 
 class FFSearch extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+   handleClick(event) {
+    alert ('Characters Name is " ' + this.state.value);
+    event.preventDefault();
+    ffFetch(this.state.value);
+  }
+
   render() {
     return (
+      
       <form
       className={"ui form"}>
-
         <input
+        type='text'
+        onChange={this.handleChange}
         className={"ui input"}
-        id = {"form"}
-        label = {"testing"}
-        value = {"Input Value"}>
+        id = {"ffValue"}
+        label = {"testing"}>
         </input>
+        <button
+id={"fetchFF"}
+onClick={this.handleClick}
+>click me to Fetch</button>  
       </form>
+      
     )
   }
 }
@@ -68,10 +78,6 @@ class PageHeader extends React.Component {
       >
 <h1>Final Fantasy Character Search</h1>
 <FFSearch />
-<button
-id={"fetchFF"}
-onClick={handleClick}
->click me to Fetch</button>
       </div>
       
     )
