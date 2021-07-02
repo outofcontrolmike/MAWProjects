@@ -14,6 +14,11 @@ import reportWebVitals from './reportWebVitals';
 *
 
 */
+  //handleClick Event
+  function handleClick(e) {
+    e.preventDefault();
+    ffFetch();
+  }
 
 function ffFetch () {
   fetch('https://www.moogleapi.com/api/v1/characters/search?name=cloud')
@@ -22,8 +27,6 @@ function ffFetch () {
 
   //Do something with the data
 }
-
-ffFetch();
 
 class FFSearch extends React.Component {
   render() {
@@ -41,6 +44,7 @@ class FFSearch extends React.Component {
     )
   }
 }
+
 class Card extends React.Component {
   render() {
     return(
@@ -66,6 +70,7 @@ class PageHeader extends React.Component {
 <FFSearch />
 <button
 id={"fetchFF"}
+onClick={handleClick}
 >click me to Fetch</button>
       </div>
       
