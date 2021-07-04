@@ -15,11 +15,26 @@
         <div id="header" class="ui  header container">
             <h1 id="title" class="ui text blue">Final Fantasy Search</h1>
         </div>
-        <div id="list" class="ui text segment container stackable grid">
+        <div id="searchTools">
+            <label id="label" class="ui text">Enter Value</label>
+            <input type="text" id="input" class="ui input" label="Enter Value:">
+            <select>
+                <optgroup>
+                    <option>Name</option>
+                    <option>Enemy</option>
+                    <option>Game/Origin</option>
+                    <option>Race</option>
+                    <option>Job</option>
+                    <option>Gender</option>
+                </optgroup>
+            </select>
+            <button id="onSubmit" class='ui button medium blue'>Submit Request</button>
+        </div>
+        <div id="list" class="ui text segment container stackable grid raised">
             <p>Fetched characters should print to here.</p>
         </div>
         <footer>
-            <div class="ui footer segment text centerd container stackable">
+            <div class="ui footer segment text centerd container stackable raised">
                 <span>All Final Fantasy Info is based on Jack PF.  Special thanks to his Moogle API!</span>
             </div>
         </footer>
