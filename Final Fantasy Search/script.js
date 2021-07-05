@@ -37,8 +37,19 @@ function getFFData(character) {
   
   let name = character.name;
   let jName = character.japaneseName;
+  let origin = character.origin;
   let race = character.race;
-  
-  card.append(name,race);
-  document.getElementById('list').append(card);
+  let gender = character.gender;
+  let age = character.age;
+  let job = character.job;
+  let height = character.height;
+  let weight = character.weight;
+  let picture = character.pictures[0].url;
+  let description = character.description;
+
+  let imageHolder = document.createElement('img');
+  imageHolder.src = picture;
+
+  card.append(name,race,jName,origin,gender,age,job,height,weight,imageHolder,description);
+  document.getElementById('list').prepend(card);
 }
