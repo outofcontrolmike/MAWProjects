@@ -82,7 +82,7 @@ function getFFData(character) {
 
   container.append(column,column2);
 
-  column.append(name,race,jName,origin,gender,age,job,height,weight,divider,description);
-  column2.append(imageHolder);
+  column.append(name,race,jName,origin,gender,age,job,height,weight);
+  column2.append(imageHolder,divider,description);
   document.getElementById('list').prepend(container);
 }

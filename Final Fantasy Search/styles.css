@@ -1,3 +1,14 @@
 p {
-    font-size: 30px;
+    font-size: 22px;
 }
+
+#searchInput {
+    border: none;
+    border-bottom: 4px solid red;
+    font-size: x-large;
+}
+
+#inputContainer {
+    width: 75%;
+}
+
