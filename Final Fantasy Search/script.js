@@ -35,21 +35,54 @@ function getFFData(character) {
   card.className = "ui segment";
 
   
-  let name = character.name;
-  let jName = character.japaneseName;
-  let origin = character.origin;
-  let race = character.race;
-  let gender = character.gender;
-  let age = character.age;
-  let job = character.job;
-  let height = character.height;
-  let weight = character.weight;
-  let picture = character.pictures[0].url;
-  let description = character.description;
+  let name = document.createElement('p');
+  name.innerHTML= "<b>Name </b>: " + character.name;
 
+  let jName = document.createElement('p');
+  jName.innerHTML= "Japanese Name: " + character.japaneseName;
+
+  let origin = document.createElement('p');
+  origin.innerHTML= "Origin: " + character.origin;
+
+  let race = document.createElement('p');
+  race.innerHTML= "Race: " + character.race;
+
+  let gender = document.createElement('p');
+  gender.innerHTML= "Gender: " + character.gender;
+
+  let age = document.createElement('p');
+  age.innerHTML= "Age: " + character.age;
+
+  let job = document.createElement('p');
+  job.innerHTML= "Job: " + character.job;
+  
+  let height = document.createElement('p');
+  height.innerHTML= "<b>Height<b>: " + character.height;
+
+  let weight = document.createElement('p');
+  weight.innerHTML= "Weight: " +  character.weight;
+
+  let description = document.createElement('p');
+  description.innerHTML = character.description;
+
+  let picture = character.pictures[0].url;
   let imageHolder = document.createElement('img');
+  imageHolder.className = "ui large image";
   imageHolder.src = picture;
 
-  card.append(name,race,jName,origin,gender,age,job,height,weight,imageHolder,description);
-  document.getElementById('list').prepend(card);
+  let container = document.createElement('div');
+  container.className = "ui two column doubling stackable grid container segment";
+
+  let column = document.createElement('div');
+  column.className="ui column";
+  let column2 = document.createElement('div');
+  column2.className="ui column";
+
+  let divider = document.createElement('hr');
+
+  container.append(column,column2);
+
+  column.append(name,race,jName,origin,gender,age,job,height,weight,divider,description);
+  column2.append(imageHolder);
+  document.getElementById('list').prepend(container);
 }
