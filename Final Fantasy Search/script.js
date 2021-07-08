@@ -67,22 +67,28 @@ function getFFData(character) {
 
   let picture = character.pictures[0].url;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui large image";
+  imageHolder.className = "ui medium image";
   imageHolder.src = picture;
 
+  let mainContainer = document.createElement('div');
+  mainContainer.className = "ui segment"
   let container = document.createElement('div');
-  container.className = "ui two column doubling stackable grid container segment";
+  container.className = "ui two column doubling stackable grid container";
 
   let column = document.createElement('div');
   column.className="ui column";
   let column2 = document.createElement('div');
   column2.className="ui column";
+  let column3 = document.createElement('div');
+  column3.className="ui column";
 
   let divider = document.createElement('hr');
 
-  container.append(column,column2);
+  container.append(column,column2,divider,column3);
 
   column.append(name,race,jName,origin,gender,age,job,height,weight);
-  column2.append(imageHolder,divider,description);
-  document.getElementById('list').prepend(container);
+  column2.append(imageHolder);
+  column3.append(description);
+  mainContainer.append(container,divider,column3);
+  document.getElementById('list').prepend(mainContainer);
 }
