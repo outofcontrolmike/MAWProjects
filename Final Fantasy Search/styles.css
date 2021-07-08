@@ -1,14 +1,21 @@
 p {
     font-size: 22px;
+    font-family: 'EB Garamond', serif;
+
 }
 
 #searchInput {
     border: none;
     border-bottom: 4px solid red;
-    font-size: x-large;
+    font-size: xx-large;
+    font-family: 'EB Garamond', serif;
+
 }
 
 #inputContainer {
     width: 75%;
 }
 
+#footer {
+    font-family: 'EB Garamond', serif;
+}
