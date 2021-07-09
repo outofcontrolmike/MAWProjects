@@ -59,7 +59,6 @@ function createGameCard(game) {
 //Picture
 //Release Date
 //Description
-
 }
 
 //Create list and append
