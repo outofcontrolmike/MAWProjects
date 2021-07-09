@@ -13,7 +13,7 @@ p {
 }
 
 #inputContainer {
-    width: 75%;
+    /* width: 75%; */
 }
 
 #footer {
@@ -21,7 +21,6 @@ p {
     font-family: 'EB Garamond', serif;
 }
 #list {
-    margin: 2%;
     margin-bottom: 50px;
 }
 
