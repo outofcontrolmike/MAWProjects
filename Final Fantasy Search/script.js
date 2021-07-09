@@ -1,19 +1,111 @@
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
+document.getElementById('clear').addEventListener('click', clearList);
+document.getElementById('listGames').addEventListener('click', getGames);
+document.getElementById('random').addEventListener('click',getRandom);
+
+//ON Load functions
+getAllCharacters();
+getGames();
+
+function getRandom() {
+  fetch('https://www.moogleapi.com/api/v1/characters/random')
+  .then(response => response.json())
+  .then(character => {
+    getFFData(character);
+  })
+}
+
+
+function getAllCharacters() {
+  fetch('https://www.moogleapi.com/api/v1/characters')
+  .then(response => response.json())
+  .then(character => {
+    createRaceList(character);
+  })
+
+  function createRaceList(character) {
+      character.map(getRaces);
+  }
+
+  function getRaces(character) {
+    let option = document.createElement('option')
+    option.innerHTML = character.race
+    document.getElementById('races').append(option);
+  }
+}
+
+function clearList() {
+  document.getElementById('list').innerHTML = "";
+}
+
+
+//Fetch Games List
+function getGames() {
+fetch('https://www.moogleapi.com/api/v1/games/')
+.then(response => response.json())
+.then(games => {
+  createGameList(games);
+})
+
+//Create Games
+function createGameList(games) {
+  games.map(getList);
+  games.map(createGameCard);
+}
+
+///Create Game Cards
+function createGameCard(game) {
+//Title
+//Picture
+//Release Date
+//Description
+
+}
+
+//Create list and append
+function getList(game) {
+let gameTitle = game.title;
+let option = document.createElement('option');
+option.innerHTML = gameTitle;
+
+
+document.getElementById('game').append(option);
+}
+
+}
+
 
 function submitRequest() {
 let searchValue = document.getElementById('searchInput').value;
-
-
 fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue + '')
   .then(response => response.json())
   .then(data => 
   createCard(data) + console.log(data));
+
+  //There's only about a dozen enemies in the database
+  fetch('https://www.moogleapi.com/api/v1/monsters/search?name=' + searchValue + '')
+  .then(response => response.json())
+  .then(data => 
+  createMonster(data) + console.log(data));
+
 }
+
 
 function createCard(data) 
 {
   data.map(getFFData);  
 }
+
+function createMonster(data)
+{
+ data.map(mapMonsters);
+}
+
+function mapMonsters(monster)
+{
+  let list = document.getElementById('list');
+  list.append(monster.name);
+} 
 
 /*Character Props
 Name

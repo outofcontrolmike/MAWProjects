@@ -18,19 +18,36 @@
     <div id="app" class="ui container stackable">
         <div id="searchTools" class="ui">
             <div id="inputContainer"class="ui icon input">
-                <input type="text" id="searchInput" placeholder="Search...">
+                <input type="text" id="searchInput" placeholder="Search...Character Name">
                 <i class="inverted circular search link icon" id="onSubmit"></i>
               </div>
+              <span>
+                  <button id="random">
+                      Random Character
+                  </button>
+                  <button id="listGames">
+                      List Games
+                  </button>
+                  <button id="clear">
+                      Clear List
+                  </button>
+              </span>
             <select class="ui select massive">
                 <optgroup>
-                    <option>Name</option>
-                    <option>Enemy</option>
-                    <option>Game/Origin</option>
-                    <option>Race</option>
                     <option>Job</option>
                     <option>Gender</option>
                 </optgroup>
             </select>
+            <select class="ui select massive">
+                <optgroup id="races">
+                </optgroup>
+            </select>
+            <select class="ui select massive">
+                <optgroup id="game">
+                
+                </optgroup>
+            </select>
+            
         </div>
         <div id="list">
         </div>

@@ -1,5 +1,5 @@
 p {
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'EB Garamond', serif;
 
 }
@@ -17,5 +17,14 @@ p {
 }
 
 #footer {
+    margin-top: -2%;
     font-family: 'EB Garamond', serif;
+}
+#list {
+    margin: 2%;
+    margin-bottom: 50px;
+}
+
+body {
+    height: 100%;
 }
