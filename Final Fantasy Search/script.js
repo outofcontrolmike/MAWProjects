@@ -20,17 +20,17 @@ function getAllCharacters() {
   fetch('https://www.moogleapi.com/api/v1/characters')
   .then(response => response.json())
   .then(character => {
-    createRaceList(character);
+    createJobList(character);
   })
 
-  function createRaceList(character) {
-      character.map(getRaces);
+  function createJobList(character) {
+      character.map(getJobs);
   }
 
-  function getRaces(character) {
+  function getJobs(character) {
     let option = document.createElement('option')
-    option.innerHTML = character.race
-    document.getElementById('races').append(option);
+    option.innerHTML = character.job
+    document.getElementById('jobs').append(option);
   }
 }
 
@@ -64,14 +64,77 @@ function createGameCard(game) {
 
 //Create list and append
 function getList(game) {
-let gameTitle = game.title;
 let option = document.createElement('option');
-option.innerHTML = gameTitle;
 
-
+convertTitle(game);
+option.innerHTML = game.title;
 document.getElementById('game').append(option);
+}}
+
+function convertTitle(game) {
+if(game.title === "Final Fantasy 01") {
+  game.title = "Final Fantasy";
 }
 
+if(game.title === "Final Fantasy 02") {
+  game.title = "Final Fantasy II";
+}
+
+if(game.title === "Final Fantasy 03") {
+  game.title = "Final Fantasy III";
+}
+
+if(game.title === "Final Fantasy 04") {
+  game.title = "Final Fantasy IV";
+}
+
+if(game.title === "Final Fantasy 05") {
+  game.title = "Final Fantasy V";
+}
+
+if(game.title === "Final Fantasy 06") {
+  game.title = "Final Fantasy VI";
+}
+
+if(game.title === "Final Fantasy 07") {
+  game.title = "Final Fantasy VII";
+}
+
+if(game.title === "Final Fantasy 08") {
+  game.title = "Final Fantasy VIII";
+}
+
+if(game.title === "Final Fantasy 09") {
+  game.title = "Final Fantasy IX";
+}
+
+if(game.title === "Final Fantasy 10") {
+  game.title = "Final Fantasy X";
+}
+
+if(game.title === "Final Fantasy 11") {
+  game.title = "Final Fantasy XI";
+}
+
+if(game.title === "Final Fantasy 12") {
+  game.title = "Final Fantasy XII";
+}
+
+if(game.title === "Final Fantasy 13") {
+  game.title = "Final Fantasy XIII";
+}
+
+if(game.title === "Final Fantasy 13") {
+  game.title = "Final Fantasy XIII-2";
+}
+
+if(game.title === "Final Fantasy 15") {
+  game.title = "Final Fantasy XV";
+}
+
+if(game.title === "Final Fantasy Brave Exvius") {
+  game.title = "Final Fantasy";
+}
 }
 
 
@@ -81,13 +144,6 @@ fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue +
   .then(response => response.json())
   .then(data => 
   createCard(data) + console.log(data));
-
-  //There's only about a dozen enemies in the database
-  fetch('https://www.moogleapi.com/api/v1/monsters/search?name=' + searchValue + '')
-  .then(response => response.json())
-  .then(data => 
-  createMonster(data) + console.log(data));
-
 }
 
 
@@ -96,31 +152,6 @@ function createCard(data)
   data.map(getFFData);  
 }
 
-function createMonster(data)
-{
- data.map(mapMonsters);
-}
-
-function mapMonsters(monster)
-{
-  let list = document.getElementById('list');
-  list.append(monster.name);
-} 
-
-/*Character Props
-Name
-Japanese Name
-Origin (The game they originated in)
-Race
-Gender
-Age
-Job
-Height
-Weight
-Pictures (an array)
-Stats (an array)
-Description
-*/
 function getFFData(character) {
   console.log(character.name + character.race);
   let card = document.createElement('div');
