@@ -20,6 +20,7 @@
             <div id="inputContainer"class="ui icon input container column">
                 <input type="text" id="searchInput" placeholder="Search...Character Name">
                 <i class="inverted circular search link icon" id="onSubmit"></i>
+                <hr>
                 <button id="random">
                     Random Character
                 </button>
@@ -30,29 +31,55 @@
                     Clear List
                 </button>
               </div>
-              <!-- <div class="ui column">
+              <div class="ui column">
+                  <h1>Advanced Search</h1>
             <select class="ui select massive">
                 <optgroup id="jobs">
                 </optgroup>
             </select>
-            <select class="ui select massive">
-                <optgroup id="game">
+                 <select class="ui select massive">
+                <optgroup id="races">
                 
                 </optgroup>
             </select>
-            <span>
-                <div class="ui medium buttons row">
-                  <button class="ui button teal">Male</button>
-                  <div class="or" data-text="G"></div>
-                  <button class="ui button purple">Female</button>
+
+            <!--Start Gender Radio Buttons-->
+            <div class="ui form">
+                <div class="grouped fields">
+                  <label>Gender</label>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input id="??" type="radio" name="example2" checked="checked">
+                      <label>??</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input id="male"type="radio" name="example2">
+                      <label>Male</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input id="female"type="radio" name="example2">
+                      <label>Female</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="example2">
+                      <label>Don't Filter</label>
+                    </div>
+                  </div>
                 </div>
-            </span>
+              </div>
+              <!-- end radio buttons-->
             <div class="ui container">
                 <button>
-                    Fetch
+                    Fetch Characters
               </button>
             </div>
-            </div> -->
+            </div>
         </div>
         <div id="list">
         </div>
