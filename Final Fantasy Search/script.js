@@ -1,6 +1,6 @@
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
 document.getElementById('clear').addEventListener('click', clearList);
-document.getElementById('listGames').addEventListener('click', getGames);
+document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
 
 //ON Load functions
@@ -20,13 +20,11 @@ function getAllCharacters() {
   fetch('https://www.moogleapi.com/api/v1/characters')
   .then(response => response.json())
   .then(character => {
-    createJobList(character);
+    character.map(getJobs);
   })
 
-  function createJobList(character) {
-      character.map(getJobs);
-  }
 
+  //Make sure this works
   function getJobs(character) {
     let option = document.createElement('option')
     option.innerHTML = character.job
@@ -44,31 +42,76 @@ function getGames() {
 fetch('https://www.moogleapi.com/api/v1/games/')
 .then(response => response.json())
 .then(games => {
-  createGameList(games);
-})
+  games.map(populateGameList);
+})}
 
 //Create Games
-function createGameList(games) {
-  games.map(getList);
-  games.map(createGameCard);
+function createGameList() {
+    fetch('https://www.moogleapi.com/api/v1/games/')
+    .then(response => response.json())
+    .then(games => {
+      games.map(createGameCard);
+    })
 }
 
 ///Create Game Cards
 function createGameCard(game) {
-//Title
-//Picture
-//Release Date
-//Description
+
+  console.log(game.gameId);
+
+  let card = document.createElement('div');
+  card.className = "ui segment";
+
+  
+  let title = document.createElement('p');
+  title.innerHTML= "<b>Name </b>: " + game.title;
+
+  let platform = document.createElement('p');
+  platform.innerHTML= game.platform;
+
+  let releaseDate = document.createElement('p');
+  releaseDate.innerHTML= "Origin: " + game.releaseDate;
+
+  let description = document.createElement('p');
+  description.innerHTML = game.description;
+
+  let picture = game.picture;
+  let imageHolder = document.createElement('img');
+  imageHolder.className = "ui image";
+  imageHolder.src = picture;
+
+  let mainContainer = document.createElement('div');
+  mainContainer.className = "ui segment"
+  let container = document.createElement('div');
+  container.className = "ui two column doubling stackable grid container";
+
+  let column = document.createElement('div');
+  column.className="ui column";
+  let column2 = document.createElement('div');
+  column2.className="ui column";
+  let column3 = document.createElement('div');
+  column3.className="ui column";
+
+  let divider = document.createElement('hr');
+
+  container.append(column,column2,divider,column3);
+
+  column.append(title,platform,releaseDate,description);
+  column2.append(imageHolder);
+  column3.append(description);
+  mainContainer.append(container,divider,column3);
+  document.getElementById('list').append(mainContainer);
 }
 
 //Create list and append
-function getList(game) {
+function populateGameList(game) {
 let option = document.createElement('option');
 
 convertTitle(game);
 option.innerHTML = game.title;
 document.getElementById('game').append(option);
-}}
+console.log(game.title);
+}
 
 function convertTitle(game) {
 if(game.title === "Final Fantasy 01") {
@@ -142,13 +185,7 @@ let searchValue = document.getElementById('searchInput').value;
 fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue + '')
   .then(response => response.json())
   .then(data => 
-  createCard(data) + console.log(data));
-}
-
-
-function createCard(data) 
-{
-  data.map(getFFData);  
+  data.map(getFFData));
 }
 
 function getFFData(character) {
