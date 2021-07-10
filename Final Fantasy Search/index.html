@@ -16,30 +16,21 @@
 </head>
 <body>
     <div id="app" class="ui container stackable">
-        <div id="searchTools" class="ui">
-            <div id="inputContainer"class="ui icon input">
+        <div id="searchTools" class="ui two column stackable grid container segment">
+            <div id="inputContainer"class="ui icon input container column">
                 <input type="text" id="searchInput" placeholder="Search...Character Name">
                 <i class="inverted circular search link icon" id="onSubmit"></i>
+                <button id="random">
+                    Random Character
+                </button>
+                <button id="listGames">
+                    List Games
+                </button>
+                <button id="clear">
+                    Clear List
+                </button>
               </div>
-              <span>
-                  <button id="random">
-                      Random Character
-                  </button>
-                  <button id="listGames">
-                      List Games
-                  </button>
-                  <button id="clear">
-                      Clear List
-                  </button>
-                  <div class="ui medium buttons">
-                    <button class="ui button teal">Male</button>
-                    <div class="or" data-text="G"></div>
-                    <button class="ui button purple">Female</button>
-                  </div>
-              </span>
-              <button>
-                  Fetch
-            </button>
+              <div class="ui column">
             <select class="ui select massive">
                 <optgroup id="jobs">
                 </optgroup>
@@ -49,13 +40,25 @@
                 
                 </optgroup>
             </select>
-            
+            <span>
+                <div class="ui medium buttons row">
+                  <button class="ui button teal">Male</button>
+                  <div class="or" data-text="G"></div>
+                  <button class="ui button purple">Female</button>
+                </div>
+            </span>
+            <div class="ui container">
+                <button>
+                    Fetch
+              </button>
+            </div>
+            </div>
         </div>
         <div id="list">
         </div>
         <footer>
             <div id="footer" class="ui footer segment text centerd container stackable raised">
-                <span>All Final Fantasy Info is based on Jack PF.  Special thanks to his Moogle API!</span>
+                <span>All Final Fantasy Info is based on Jack PF.  Special thanks to their Moogle API!</span>
             </div>
         </footer>
     </div>
