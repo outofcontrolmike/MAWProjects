@@ -1,4 +1,6 @@
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
+document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
+
 document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
@@ -182,9 +184,13 @@ function createGameCard(game) {
 // }
 
 function advancedRequest() {
-  let gender = '&gender=female';
+  let gender = '&gender=male';
+  let race = ""
+  let job = ""
 
-  fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue + gender + '')
+  // three different functions for checking advanced options
+
+  fetch('https://www.moogleapi.com/api/v1/characters/search?'+ gender + '')
     .then(response => response.json())
     .then(data => 
     data.map(getFFData));
