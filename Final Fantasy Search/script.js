@@ -7,6 +7,7 @@ document.getElementById('random').addEventListener('click',getRandom);
 
 //ON Load functions
 getAllCharacters();
+populateGameList();
 
 function getRandom() {
   fetch('https://www.moogleapi.com/api/v1/characters/random')
@@ -21,7 +22,8 @@ function getAllCharacters() {
   fetch('https://www.moogleapi.com/api/v1/characters')
   .then(response => response.json())
   .then(character => {
-    character.map(getSelectValues);
+    let newChar = [...new Set(character)]
+    newChar.map(getSelectValues);
   })
 
 
@@ -29,7 +31,8 @@ function getAllCharacters() {
   function getSelectValues(character) {
     let option = document.createElement('option');
     let option2 = document.createElement('option');
-    option.innerHTML = character.job
+
+    option.innerHTML = character.job;
     option2.innerHTML = character.race;
     document.getElementById('jobs').append(option);
     document.getElementById('races').append(option2);
@@ -41,13 +44,13 @@ function clearList() {
 }
 
 
-// //Fetch Games List
-// function getGames() {
-// fetch('https://www.moogleapi.com/api/v1/games/')
-// .then(response => response.json())
-// .then(games => {
-//   games.map(populateGameList);
-// })}
+//Fetch Games List
+function getGames() {
+fetch('https://www.moogleapi.com/api/v1/games/')
+.then(response => response.json())
+.then(games => {
+  games.map(populateGameList);
+})}
 
 //Create Games
 function createGameList() {
@@ -108,89 +111,90 @@ function createGameCard(game) {
 }
 
 // //Create list and append
-// function populateGameList(game) {
-// let option = document.createElement('option');
+function populateGameList(game) {
+let option = document.createElement('option');
 
-// convertTitle(game);
-// option.innerHTML = game.title;
-// document.getElementById('game').append(option);
-// console.log(game.title);
-// }
+convertTitle(game);
+option.innerHTML = game.title;
+document.getElementById('game').append(option);
+console.log(game.title);
+}
 
-// function convertTitle(game) {
-// if(game.title === "Final Fantasy 01") {
-//   game.title = "Final Fantasy";
-// }
+function convertTitle(game) {
+if(game.title === "Final Fantasy 01") {
+  game.title = "Final Fantasy";
+}
 
-// if(game.title === "Final Fantasy 02") {
-//   game.title = "Final Fantasy II";
-// }
+if(game.title === "Final Fantasy 02") {
+  game.title = "Final Fantasy II";
+}
 
-// if(game.title === "Final Fantasy 03") {
-//   game.title = "Final Fantasy III";
-// }
+if(game.title === "Final Fantasy 03") {
+  game.title = "Final Fantasy III";
+}
 
-// if(game.title === "Final Fantasy 04") {
-//   game.title = "Final Fantasy IV";
-// }
+if(game.title === "Final Fantasy 04") {
+  game.title = "Final Fantasy IV";
+}
 
-// if(game.title === "Final Fantasy 05") {
-//   game.title = "Final Fantasy V";
-// }
+if(game.title === "Final Fantasy 05") {
+  game.title = "Final Fantasy V";
+}
 
-// if(game.title === "Final Fantasy 06") {
-//   game.title = "Final Fantasy VI";
-// }
+if(game.title === "Final Fantasy 06") {
+  game.title = "Final Fantasy VI";
+}
 
-// if(game.title === "Final Fantasy 07") {
-//   game.title = "Final Fantasy VII";
-// }
+if(game.title === "Final Fantasy 07") {
+  game.title = "Final Fantasy VII";
+}
 
-// if(game.title === "Final Fantasy 08") {
-//   game.title = "Final Fantasy VIII";
-// }
+if(game.title === "Final Fantasy 08") {
+  game.title = "Final Fantasy VIII";
+}
 
-// if(game.title === "Final Fantasy 09") {
-//   game.title = "Final Fantasy IX";
-// }
+if(game.title === "Final Fantasy 09") {
+  game.title = "Final Fantasy IX";
+}
 
-// if(game.title === "Final Fantasy 10") {
-//   game.title = "Final Fantasy X";
-// }
+if(game.title === "Final Fantasy 10") {
+  game.title = "Final Fantasy X";
+}
 
-// if(game.title === "Final Fantasy 11") {
-//   game.title = "Final Fantasy XI";
-// }
+if(game.title === "Final Fantasy 11") {
+  game.title = "Final Fantasy XI";
+}
 
-// if(game.title === "Final Fantasy 12") {
-//   game.title = "Final Fantasy XII";
-// }
+if(game.title === "Final Fantasy 12") {
+  game.title = "Final Fantasy XII";
+}
 
-// if(game.title === "Final Fantasy 13") {
-//   game.title = "Final Fantasy XIII";
-// }
+if(game.title === "Final Fantasy 13") {
+  game.title = "Final Fantasy XIII";
+}
 
-// if(game.title === "Final Fantasy 13") {
-//   game.title = "Final Fantasy XIII-2";
-// }
+if(game.title === "Final Fantasy 13") {
+  game.title = "Final Fantasy XIII-2";
+}
 
-// if(game.title === "Final Fantasy 15") {
-//   game.title = "Final Fantasy XV";
-// }
+if(game.title === "Final Fantasy 15") {
+  game.title = "Final Fantasy XV";
+}
 
-// if(game.title === "Final Fantasy Brave Exvius") {
-//   game.title = "Final Fantasy";
-// }
-// }
+if(game.title === "Final Fantasy Brave Exvius") {
+  game.title = "Final Fantasy";
+}
+}
 
 function advancedRequest() {
   let gender = '&gender=male';
-  let race = ""
-  let job = ""
+  let race = document.getElementById('races').nodeValue;
+  let job = document.getElementById('jobs').nodeValue;
+  let origin = document.getElementById('origin').nodeValue;
+
 
   // three different functions for checking advanced options
-
-  fetch('https://www.moogleapi.com/api/v1/characters/search?'+ gender + '')
+  fetch('https://www.moogleapi.com/api/v1/characters/search?'+ gender + '&' + race + '&' + job + '&' + origin)
     .then(response => response.json())
     .then(data => 
     data.map(getFFData));
@@ -198,7 +202,7 @@ function advancedRequest() {
 
 function submitRequest() {
 let searchValue = document.getElementById('searchInput').value;
-fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue + '&gender=female')
+fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue)
   .then(response => response.json())
   .then(data => 
   data.map(getFFData));
@@ -231,10 +235,17 @@ function getFFData(character) {
   job.innerHTML= "Job: " + character.job;
   
   let height = document.createElement('p');
-  height.innerHTML= "<b>Height<b>: " + character.height;
+  if(character.height != "???") {
+    character.height *= 3.281;
+  }
+  height.innerHTML= "<b>Height<b>: " + character.height + " ft";
 
   let weight = document.createElement('p');
-  weight.innerHTML= "Weight: " +  character.weight;
+  if (character.weight != "???")
+  {
+    character.weight *= 2.205;
+  }
+  weight.innerHTML= "Weight: " +  character.weight + " lbs";
 
   let description = document.createElement('p');
   description.innerHTML = character.description;
