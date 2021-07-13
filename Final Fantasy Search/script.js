@@ -74,10 +74,10 @@ function createGameCard(game) {
   title.innerHTML= "<b>Name </b>: " + game.title;
 
   let platform = document.createElement('p');
-  platform.innerHTML= game.platform;
+  platform.innerHTML= "<b>Platform:</b> " +  game.platform;
 
   let releaseDate = document.createElement('p');
-  releaseDate.innerHTML= "Origin: " + game.releaseDate;
+  releaseDate.innerHTML= "<b>Origin:</b> " + game.releaseDate;
 
   let description = document.createElement('p');
   description.innerHTML = game.description;
