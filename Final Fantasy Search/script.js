@@ -7,7 +7,7 @@ document.getElementById('random').addEventListener('click',getRandom);
 
 //ON Load functions
 getAllCharacters();
-populateGameList();
+getGames();
 
 function getRandom() {
   fetch('https://www.moogleapi.com/api/v1/characters/random')
@@ -113,11 +113,10 @@ function createGameCard(game) {
 // //Create list and append
 function populateGameList(game) {
 let option = document.createElement('option');
-
+console.log(game.title);
 convertTitle(game);
 option.innerHTML = game.title;
-document.getElementById('game').append(option);
-console.log(game.title);
+document.getElementById('games').append(option);
 }
 
 function convertTitle(game) {
@@ -235,17 +234,22 @@ function getFFData(character) {
   job.innerHTML= "Job: " + character.job;
   
   let height = document.createElement('p');
-  if(character.height != "???") {
-    character.height *= 3.281;
-  }
-  height.innerHTML= "<b>Height<b>: " + character.height + " ft";
-
-  let weight = document.createElement('p');
-  if (character.weight != "???")
+  if(character.height != "??")
   {
-    character.weight *= 2.205;
-  }
+    character.height *= 3.281
+    let cHeight = character.height.toFixed(2);
+  
+    height.innerHTML= "<b>Height<b>: " + cHeight + " ft";
+  }  
+
+  //Weight
+  let weight = document.createElement('p');
+
+  if(character.weight != "??")
+ {
+  character.weight *= 2.205;
   weight.innerHTML= "Weight: " +  character.weight + " lbs";
+ }
 
   let description = document.createElement('p');
   description.innerHTML = character.description;
