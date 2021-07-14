@@ -247,8 +247,7 @@ function getFFData(character) {
 
   if(character.weight != "??")
  {
-  character.weight *= 2.205;
-  weight.innerHTML= "Weight: " +  character.weight + " lbs";
+  weight.innerHTML= "Weight: " +  character.weight + " kg";
  }
 
   let description = document.createElement('p');
