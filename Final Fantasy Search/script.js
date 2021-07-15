@@ -264,11 +264,11 @@ function advancedRequest() {
   
    let game = document.getElementById('gameSelect');
    let gameText = game.options[game.selectedIndex].text;
-   origin = gameText;
+   origin = "origin=" + gameText;
    console.log(origin);
 
   // three different functions for checking advanced options
-  fetch('https://www.moogleapi.com/api/v1/characters/search?origin=' + origin)
+  fetch('https://www.moogleapi.com/api/v1/characters/search?' + origin)
     .then(response => response.json())
     .then(data => 
     data.map(getFFData));
@@ -280,7 +280,7 @@ function advancedRequest() {
     var oText = game.options[game.selectedIndex].text;
 
     origin = oText;
-    console.log(oText);
+    console.log(origin);
     return origin;
 
   }
