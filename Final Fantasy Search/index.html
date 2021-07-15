@@ -42,9 +42,9 @@
                 
                 </optgroup>
             </select>
-            <select class="ui select massive">
+            <select class="ui select massive" id="gameSelect">
               <optgroup id="games">
-              
+                <option value="All" selected="true">All</option>
               </optgroup>
           </select>
 
@@ -54,27 +54,27 @@
                   <label>Gender</label>
                   <div class="field">
                     <div class="ui radio checkbox">
-                      <input type="radio" name="example2" checked = "checked">
-                      <label>Don't Filter</label>
-                    </div>
-                  <div class="field">
-                    <div class="ui radio checkbox">
-                      <input id="??" type="radio" name="example2">
+                      <input id="??" type="radio" name="gender" value="??">
                       <label>??</label>
                     </div>
                   </div>
                   <div class="field">
                     <div class="ui radio checkbox">
-                      <input id="male"type="radio" name="example2">
+                      <input id="male" type="radio" name="gender" value="Male">
                       <label>Male</label>
                     </div>
                   </div>
                   <div class="field">
                     <div class="ui radio checkbox">
-                      <input id="female"type="radio" name="example2">
+                      <input id="female" type="radio" name="gender" value="Female">
                       <label>Female</label>
                     </div>
                   </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="gender" checked="checked" value="">
+                      <label>Don't Filter</label>
+                    </div>
                   </div>
                 </div>
               </div>

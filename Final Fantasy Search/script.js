@@ -181,23 +181,9 @@ if(game.title === "Final Fantasy 15") {
 }
 
 if(game.title === "Final Fantasy Brave Exvius") {
-  game.title = "Final Fantasy";
+  game.title = "Final Fantasy BE";
 }
 }
-
-function advancedRequest() {
-  let gender = '&gender=male';
-  let race = document.getElementById('races').nodeValue;
-  let job = document.getElementById('jobs').nodeValue;
-  let origin = document.getElementById('origin').nodeValue;
-
-
-  // three different functions for checking advanced options
-  fetch('https://www.moogleapi.com/api/v1/characters/search?'+ gender + '&' + race + '&' + job + '&' + origin)
-    .then(response => response.json())
-    .then(data => 
-    data.map(getFFData));
-  }
 
 function submitRequest() {
 let searchValue = document.getElementById('searchInput').value;
@@ -234,22 +220,12 @@ function getFFData(character) {
   job.innerHTML= "Job: " + character.job;
   
   let height = document.createElement('p');
-  if(character.height != "??")
-  {
-    character.height *= 3.281
-    let cHeight = character.height.toFixed(2);
-  
-    height.innerHTML= "<b>Height<b>: " + cHeight + " ft";
-  }  
+  height.innerHTML = "Height: " + character.height + " m";
 
   //Weight
   let weight = document.createElement('p');
+  weight.innerHTML= "Weight: " +  character.weight + " kg";
 
-  if(character.weight != "??")
- {
-  character.weight *= 2.205;
-  weight.innerHTML= "Weight: " +  character.weight + " lbs";
- }
 
   let description = document.createElement('p');
   description.innerHTML = character.description;
@@ -281,3 +257,51 @@ function getFFData(character) {
   mainContainer.append(container,divider,column3);
   document.getElementById('list').prepend(mainContainer);
 }
+
+//Advanced Search functions
+function advancedRequest() {
+   let gender,race,job,origin = "";
+  
+   let game = document.getElementById('gameSelect');
+   let gameText = game.options[game.selectedIndex].text;
+   origin = "origin=" + gameText;
+   console.log(origin);
+
+  // three different functions for checking advanced options
+  fetch('https://www.moogleapi.com/api/v1/characters/search?' + origin)
+    .then(response => response.json())
+    .then(data => 
+    data.map(getFFData));
+  }
+
+  function checkGame(origin) {
+    let game = document.getElementById('gameSelect');
+    // var oValue = game.options[game.selectedIndex].value;
+    var oText = game.options[game.selectedIndex].text;
+
+    origin = oText;
+    console.log(origin);
+    return origin;
+
+  }
+
+  function checkGender(gender) {
+    var male = document.getElementById('male').checked;
+    var female = document.getElementById('female').checked;
+    var unknown = document.getElementById('??').checked;
+
+    if(male) {
+      gender = "male";
+      console.log(gender);
+    }
+    if(female) {
+      gender = "female";
+      console.log(female, gender)
+    }
+    if(unknown) {
+      gender = "??";
+      console.log(gender);
+    }
+    return gender;
+
+  }
