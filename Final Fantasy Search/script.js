@@ -220,7 +220,7 @@ function getFFData(character) {
   job.innerHTML= "Job: " + character.job;
   
   let height = document.createElement('p');
-  height.innerHTML = "Height: " + character.height + " m";
+  height.innerHTML = "Height: " + character.height + " cm ";
 
   //Weight
   let weight = document.createElement('p');
