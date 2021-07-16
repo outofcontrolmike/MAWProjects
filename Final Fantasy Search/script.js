@@ -5,6 +5,9 @@ document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
 
+let count = 0;
+let counter = document.getElementById('counter');
+
 //ON Load functions
 getAllCharacters();
 getGames();
@@ -31,6 +34,7 @@ function getAllCharacters() {
 
 function clearList() {
   document.getElementById('list').innerHTML = "";
+  counter.innerHTML = "";
 }
 
 
@@ -245,6 +249,9 @@ function getFFData(character) {
   column3.append(description);
   mainContainer.append(container,divider,column3);
   document.getElementById('list').prepend(mainContainer);
+
+  count++;
+  counter.innerHTML = count;
 }
 
 //Advanced Search functions
