@@ -9,6 +9,8 @@ document.getElementById('random').addEventListener('click',getRandom);
 getAllCharacters();
 getGames();
 
+// I need something that will sort through the character array and grab characters that don't have the same property value as a previous one)
+
 function getRandom() {
   fetch('https://www.moogleapi.com/api/v1/characters/random')
   .then(response => response.json())
@@ -22,20 +24,17 @@ function getAllCharacters() {
   fetch('https://www.moogleapi.com/api/v1/characters')
   .then(response => response.json())
   .then(character => {
-    let newChar = [...new Set(character)]
-    newChar.map(getSelectValues);
+    console.log("sorted characters ", character);
+    character.map(getSelectValues);
+    character.sort();
   })
+
+  
 
 
   //Make sure this works
   function getSelectValues(character) {
-    let option = document.createElement('option');
-    let option2 = document.createElement('option');
-
-    option.innerHTML = character.job;
-    option2.innerHTML = character.race;
-    document.getElementById('jobs').append(option);
-    document.getElementById('races').append(option2);
+    console.log(character.race);
   }
 }
 
