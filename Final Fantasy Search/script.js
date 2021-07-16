@@ -183,8 +183,9 @@ function submitRequest() {
 let searchValue = document.getElementById('searchInput').value;
 fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue)
   .then(response => response.json())
-  .then(data => 
-  data.map(getFFData));
+  .then(data => {
+  data.map(getFFData);
+  })
 }
 
 function getFFData(character) {
@@ -279,7 +280,7 @@ function advancedRequest() {
     
    }
    else {
-     origin = "";
+     origin = ""
    }
 
    //jobText
@@ -312,8 +313,14 @@ function advancedRequest() {
       genderParam =  "";
     }
   
+    
   fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam)
     .then(response => response.json())
-    .then(data => 
-    data.map(getFFData));
+    .then(data => { 
+    data.map(getFFData);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      window.alert("No Results found");
+    });
   }
