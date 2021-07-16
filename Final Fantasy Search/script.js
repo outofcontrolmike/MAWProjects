@@ -113,7 +113,6 @@ function createGameCard(game) {
 // //Create list and append
 function populateGameList(game) {
 let option = document.createElement('option');
-console.log(game.title);
 convertTitle(game);
 option.innerHTML = game.title;
 document.getElementById('games').append(option);
@@ -265,7 +264,6 @@ function advancedRequest() {
    let game = document.getElementById('gameSelect');
    let gameText = game.options[game.selectedIndex].text;
    origin = "origin=" + gameText;
-   console.log(origin);
 
   // three different functions for checking advanced options
   fetch('https://www.moogleapi.com/api/v1/characters/search?' + origin)
@@ -280,7 +278,6 @@ function advancedRequest() {
     var oText = game.options[game.selectedIndex].text;
 
     origin = oText;
-    console.log(origin);
     return origin;
 
   }
