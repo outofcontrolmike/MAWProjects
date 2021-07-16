@@ -33,9 +33,9 @@
               </div>
               <div class="ui column">
                   <h1>Advanced Search</h1>
-            <select class="ui select massive">
-                <optgroup id="jobs">
-                  <option>??</option>
+            <select class="ui fluid selection dropdown" id="jobSelect">
+              <option value="" disabled selected="selected">Job Select</option>
+              <option>??</option>
                   <option>1 'Cie</option>
                   <option>Adventurer</option>
                   <option>Alchemist</option>
@@ -121,7 +121,7 @@
                   <option>SEED Strategist</option> 
                   <option>Sky Pirate</option>
                   <option>Soldier</option>
-                  <option>SOLIDER</option>
+                  <option>SOLDIER</option>
                   <option>Sorcerer</option>
                   <option>Sorceress</option>
                   <option>Specimen</option>
@@ -142,11 +142,9 @@
                   <option>Whtie Magus</option>
                   <option>Wizard</option>
                   <option>Zemus' Spirit</option>
-
-                </optgroup>
             </select>
-                 <select class="ui select massive">
-                <optgroup id="races">
+                 <select class="ui fluid selection dropdown" id="raceSelect">
+                  <option value="" disabled selected="selected">Race Select</option>
                   <option>??</option>
                   <option>Alien</option>
                   <option>Android</option>
@@ -174,45 +172,18 @@
                   <option>Tree</option>
                   <option>Viera</option>
                   <option>Yeti</option>
-                </optgroup>
             </select>
-            <select class="ui select massive" id="gameSelect">
-              <optgroup id="games">
-                <option value="All" selected="true">All</option>
-              </optgroup>
+            <select class="ui fluid selection dropdown" id="games">
+                <option value="" disabled selected="selected">Game Select</option>
           </select>
-
-            <!--Start Gender Radio Buttons-->
-            <div class="ui form">
-                <div class="grouped fields">
-                  <label>Gender</label>
-                  <div class="field">
-                    <div class="ui radio checkbox">
-                      <input id="??" type="radio" name="gender" value="??">
-                      <label>??</label>
-                    </div>
-                  </div>
-                  <div class="field">
-                    <div class="ui radio checkbox">
-                      <input id="male" type="radio" name="gender" value="Male">
-                      <label>Male</label>
-                    </div>
-                  </div>
-                  <div class="field">
-                    <div class="ui radio checkbox">
-                      <input id="female" type="radio" name="gender" value="Female">
-                      <label>Female</label>
-                    </div>
-                  </div>
-                  <div class="field">
-                    <div class="ui radio checkbox">
-                      <input type="radio" name="gender" checked="checked" value="">
-                      <label>Don't Filter</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end radio buttons-->
+          <select class="ui fluid selection dropdown" id="genderSelect">
+            <optgroup id="genders">
+              <option value="" disabled selected="selected">Gender Select</option>
+              <option>??</option>
+              <option>Male</option>
+              <option>Female</option>
+            </optgroup>
+        </select>
             <div class="ui container">
                 <button id="advancedSearch">
                     Fetch Characters

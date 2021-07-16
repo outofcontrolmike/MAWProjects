@@ -24,18 +24,9 @@ function getAllCharacters() {
   fetch('https://www.moogleapi.com/api/v1/characters')
   .then(response => response.json())
   .then(character => {
-    console.log("sorted characters ", character);
-    character.map(getSelectValues);
     character.sort();
+    console.log("sorted characters ", character);
   })
-
-  
-
-
-  //Make sure this works
-  function getSelectValues(character) {
-    console.log(character.race);
-  }
 }
 
 function clearList() {
@@ -258,14 +249,28 @@ function getFFData(character) {
 
 //Advanced Search functions
 function advancedRequest() {
-   let gender,race,job,origin = "";
+   let genderParam,raceParam,jobParam,origin = "";
   
-   let game = document.getElementById('gameSelect');
+   let game = document.getElementById('games');
    let gameText = game.options[game.selectedIndex].text;
-   origin = "origin=" + gameText;
+
+   let job = document.getElementById('jobSelect');
+   let jobText = job.options[job.selectedIndex].text;
+   
+   let race = document.getElementById('raceSelect');
+   let raceText = race.options[race.selectedIndex].text;
+
+   let gender = document.getElementById('genderSelect');
+   let genderText = gender.options[gender.selectedIndex].value;
+
+   
+   origin = "&origin=" + gameText;
+   jobParam ="&job=" + jobText;
+   raceParam ="race=" + raceText; 
+   genderParam = "&gender=" + genderText;
 
   // three different functions for checking advanced options
-  fetch('https://www.moogleapi.com/api/v1/characters/search?' + origin)
+  fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam)
     .then(response => response.json())
     .then(data => 
     data.map(getFFData));
