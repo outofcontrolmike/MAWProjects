@@ -275,34 +275,3 @@ function advancedRequest() {
     .then(data => 
     data.map(getFFData));
   }
-
-  function checkGame(origin) {
-    let game = document.getElementById('gameSelect');
-    // var oValue = game.options[game.selectedIndex].value;
-    var oText = game.options[game.selectedIndex].text;
-
-    origin = oText;
-    return origin;
-
-  }
-
-  function checkGender(gender) {
-    var male = document.getElementById('male').checked;
-    var female = document.getElementById('female').checked;
-    var unknown = document.getElementById('??').checked;
-
-    if(male) {
-      gender = "male";
-      console.log(gender);
-    }
-    if(female) {
-      gender = "female";
-      console.log(female, gender)
-    }
-    if(unknown) {
-      gender = "??";
-      console.log(gender);
-    }
-    return gender;
-
-  }
