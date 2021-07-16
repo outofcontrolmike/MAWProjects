@@ -35,6 +35,7 @@ function getAllCharacters() {
 function clearList() {
   document.getElementById('list').innerHTML = "";
   counter.innerHTML = "";
+  count = 0;
 }
 
 
@@ -311,7 +312,6 @@ function advancedRequest() {
       genderParam =  "";
     }
   
-  // three different functions for checking advanced options
   fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam)
     .then(response => response.json())
     .then(data => 
