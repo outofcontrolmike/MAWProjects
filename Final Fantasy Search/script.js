@@ -263,12 +263,47 @@ function advancedRequest() {
    let gender = document.getElementById('genderSelect');
    let genderText = gender.options[gender.selectedIndex].value;
 
-   
-   origin = "&origin=" + gameText;
-   jobParam ="&job=" + jobText;
-   raceParam ="race=" + raceText; 
-   genderParam = "&gender=" + genderText;
 
+   //gameTExt
+   if(gameText != "Game Select")
+   {
+    origin = "&origin=" + gameText;
+    
+   }
+   else {
+     origin = "";
+   }
+
+   //jobText
+   if(jobText != "Job Select")
+   {
+    jobParam ="&job=" + jobText;
+    
+   }
+   else {
+     jobParam =  "";
+   }
+
+   //raceText
+   if(raceText != "Race Select")
+   {
+    raceParam ="race=" + raceText; 
+    
+   }
+   else {
+     raceParam =  "";
+   }
+
+    //JobText
+    if(genderText != "Race Select")
+    {
+      genderParam = "&gender=" + genderText;
+     
+    }
+    else {
+      genderParam =  "";
+    }
+  
   // three different functions for checking advanced options
   fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam)
     .then(response => response.json())
