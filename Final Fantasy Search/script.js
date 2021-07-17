@@ -313,14 +313,30 @@ function advancedRequest() {
       genderParam =  "";
     }
   
-    
+  let color = "blue";
   fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam)
     .then(response => response.json())
     .then(data => { 
     data.map(getFFData);
-    })
+  })
     .catch((error) => {
       console.error('Error:', error);
-      window.alert("No Results found");
+      console.log("Error's Bro")
+    });
+  };
+
+  toastCharacters();
+  //Jquery
+
+  function toastCharacters() {
+    $('#advancedSearch').click(() => { 
+      $('#advancedSearch').toast({
+        title: 'Found:',
+        message: count + ' : Characters were found',
+        class : 'red',
+        className: {
+            toast: 'ui message'
+        }
+      });
     });
   }
