@@ -19,6 +19,7 @@ function getRandom() {
   .then(response => response.json())
   .then(character => {
     getFFData(character);
+    counter.innerHTML = count;
   })
 }
 
@@ -58,9 +59,6 @@ function createGameList() {
 
 ///Create Game Cards
 function createGameCard(game) {
-
-  console.log(game.gameId);
-
   let card = document.createElement('div');
   card.className = "ui segment";
 
@@ -89,8 +87,10 @@ function createGameCard(game) {
 
   let column = document.createElement('div');
   column.className="ui column";
+
   let column2 = document.createElement('div');
   column2.className="ui column";
+
   let column3 = document.createElement('div');
   column3.className="ui column";
 
@@ -154,6 +154,10 @@ if(game.title === "Final Fantasy 10") {
   game.title = "Final Fantasy X";
 }
 
+if(game.title === "Final Fantasy 10-2") {
+  game.title = "Final Fantasy X-2";
+}
+
 if(game.title === "Final Fantasy 11") {
   game.title = "Final Fantasy XI";
 }
@@ -166,7 +170,7 @@ if(game.title === "Final Fantasy 13") {
   game.title = "Final Fantasy XIII";
 }
 
-if(game.title === "Final Fantasy 13") {
+if(game.title === "Final Fantasy 13-2") {
   game.title = "Final Fantasy XIII-2";
 }
 
@@ -181,11 +185,20 @@ if(game.title === "Final Fantasy Brave Exvius") {
 
 function submitRequest() {
 let searchValue = document.getElementById('searchInput').value;
-fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue)
-  .then(response => response.json())
-  .then(data => {
-  data.map(getFFData);
+  fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      window.alert('No Results found.. Please try again');
+    }
   })
+  .then(data => {
+    data.map(getFFData);
+    counter.innerHTML = count;
+    })
+  .catch((error) => {
+    console.log(error)
+  });
 }
 
 function getFFData(character) {
@@ -253,7 +266,6 @@ function getFFData(character) {
   document.getElementById('list').prepend(mainContainer);
 
   count++;
-  counter.innerHTML = count;
 }
 
 //Advanced Search functions
@@ -312,31 +324,19 @@ function advancedRequest() {
     else {
       genderParam =  "";
     }
-  
-  let color = "blue";
-  fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam)
-    .then(response => response.json())
-    .then(data => { 
-    data.map(getFFData);
+
+  fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      window.alert('Advanced Search did not work.. Try changing your filters');
+    }
   })
-    .catch((error) => {
-      console.error('Error:', error);
-      console.log("Error's Bro")
-    });
-  };
-
-  toastCharacters();
-  //Jquery
-
-  function toastCharacters() {
-    $('#advancedSearch').click(() => { 
-      $('#advancedSearch').toast({
-        title: 'Found:',
-        message: count + ' : Characters were found',
-        class : 'red',
-        className: {
-            toast: 'ui message'
-        }
-      });
-    });
-  }
+  .then(data => {
+    data.map(getFFData);
+    counter.innerHTML = count;
+    })
+  .catch((error) => {
+    console.log(error)
+  })
+}
