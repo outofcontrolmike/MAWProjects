@@ -77,7 +77,7 @@ function createGameCard(game) {
 
   let picture = game.picture;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui image";
+  imageHolder.className = "ui medium image";
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');
@@ -240,7 +240,7 @@ function getFFData(character) {
 
   let picture = character.pictures[0].url;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui medium image";
+  imageHolder.className = "ui large image";
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');

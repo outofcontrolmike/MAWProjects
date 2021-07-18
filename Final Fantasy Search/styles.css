@@ -32,3 +32,8 @@ body {
 .ui.accordion {
     padding:20px;
 }
+
+.ui.fluid.dropdown{
+margin-bottom: 10px;
+padding-bottom: 1px;
+}
