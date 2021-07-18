@@ -4,6 +4,7 @@ document.getElementById('advancedSearch').addEventListener('click', advancedRequ
 document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
+document.getElementById('reset').addEventListener('click', resetfilters);
 
 let count = 0;
 let counter = document.getElementById('counter');
@@ -12,7 +13,6 @@ let counter = document.getElementById('counter');
 getAllCharacters();
 getGames();
 
-// I need something that will sort through the character array and grab characters that don't have the same property value as a previous one)
 
 function getRandom() {
   fetch('https://www.moogleapi.com/api/v1/characters/random')
@@ -21,6 +21,19 @@ function getRandom() {
     getFFData(character);
     counter.innerHTML = count;
   })
+}
+
+function resetfilters() {
+let game = document.getElementById('games');
+let job = document.getElementById('jobSelect');
+let race = document.getElementById('raceSelect');
+let gender = document.getElementById('genderSelect');
+
+job.options[job.selectedIndex].text = "Job Select";
+race.options[race.selectedIndex].text = "Race Select";
+gender.options[gender.selectedIndex].text = "Gender Select";
+game.options[game.selectedIndex].text = "Game Select";
+clearList();
 }
 
 
@@ -316,7 +329,7 @@ function advancedRequest() {
    }
 
     //JobText
-    if(genderText != "Race Select")
+    if(genderText != "Gender Select")
     {
       genderParam = "&gender=" + genderText;
      
@@ -339,6 +352,7 @@ function advancedRequest() {
   .catch((error) => {
     console.log(error)
   })
+
 }
 
 //Jquery
