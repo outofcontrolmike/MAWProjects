@@ -340,3 +340,9 @@ function advancedRequest() {
     console.log(error)
   })
 }
+
+//Jquery
+
+$('.ui.accordion')
+  .accordion()
+;
