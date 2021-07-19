@@ -216,7 +216,7 @@ let searchValue = document.getElementById('searchInput').value;
 
 function getFFData(character) {
   let card = document.createElement('div');
-  card.className = "ui segment";
+  card.className = "ui raised padded segment";
 
   
   let name = document.createElement('p');
