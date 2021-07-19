@@ -215,10 +215,7 @@ let searchValue = document.getElementById('searchInput').value;
 }
 
 function getFFData(character) {
-  let card = document.createElement('div');
-  card.className = "ui raised padded segment";
 
-  
   let name = document.createElement('p');
   name.innerHTML= "<b>Name </b>: " + character.name;
 
@@ -257,7 +254,7 @@ function getFFData(character) {
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');
-  mainContainer.className = "ui segment"
+  mainContainer.className = "ui segment raised padded"
   let container = document.createElement('div');
   container.className = "ui two column doubling stackable grid container";
 
