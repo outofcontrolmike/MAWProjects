@@ -29,10 +29,10 @@ let job = document.getElementById('jobSelect');
 let race = document.getElementById('raceSelect');
 let gender = document.getElementById('genderSelect');
 
-job.options[job.selectedIndex].text = "Job Select";
-race.options[race.selectedIndex].text = "Race Select";
-gender.options[gender.selectedIndex].text = "Gender Select";
-game.options[game.selectedIndex].text = "Game Select";
+job.selectedIndex = "Job Select";
+race.selectedIndex = "Race Select";
+gender.selectedIndex = "Gender Select";
+game.selectedIndex = "Game Select";
 clearList();
 }
 
