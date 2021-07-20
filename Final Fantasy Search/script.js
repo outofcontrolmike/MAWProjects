@@ -1,3 +1,10 @@
+//Refactoring
+//Use String interporlation for Parameter on filters
+//Use URL variables instead of the whole url
+//Cut down on repetive code - such as when creating paragraph elements.. should be able to $_ -> 
+//
+//
+
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
 document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
 
@@ -5,9 +12,6 @@ document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
 document.getElementById('reset').addEventListener('click', resetfilters);
-
-let count = 0;
-let counter = document.getElementById('counter');
 
 //ON Load functions
 getAllCharacters();
@@ -19,7 +23,6 @@ function getRandom() {
   .then(response => response.json())
   .then(character => {
     getFFData(character);
-    counter.innerHTML = count;
   })
 }
 
@@ -48,8 +51,6 @@ function getAllCharacters() {
 
 function clearList() {
   document.getElementById('list').innerHTML = "";
-  counter.innerHTML = "";
-  count = 0;
 }
 
 
@@ -207,7 +208,6 @@ let searchValue = document.getElementById('searchInput').value;
   })
   .then(data => {
     data.map(getFFData);
-    counter.innerHTML = count;
     })
   .catch((error) => {
     console.log(error)
@@ -216,11 +216,10 @@ let searchValue = document.getElementById('searchInput').value;
 
 function getFFData(character) {
 
-  let name = document.createElement('p');
-  let fLabel = document.createElement('span');
-  let words = "testing";
-  fLabel.innerHTML = words;
-  name.innerHTML = fLabel + character.name;
+  let name = document.createElement('h1');
+  let line = document.createElement('hr');
+  line.className = "line";
+  name.innerHTML = character.name;
 
   let jName = document.createElement('p');
   jName.innerHTML= "Japanese Name: " + character.japaneseName;
@@ -229,7 +228,7 @@ function getFFData(character) {
   origin.innerHTML= "Origin: " + character.origin;
 
   let race = document.createElement('p');
-  race.innerHTML= "Race: " + character.race;
+  race.innerHTML= "<br>Race: " + character.race;
 
   let gender = document.createElement('p');
   gender.innerHTML= "Gender: " + character.gender;
@@ -245,15 +244,15 @@ function getFFData(character) {
 
   //Weight
   let weight = document.createElement('p');
-  weight.innerHTML= "Weight: " +  character.weight;
+  weight.innerHTML= "Weight: " +  character.weight + "<br>";
 
 
   let description = document.createElement('p');
-  description.innerHTML = character.description;
+  description.innerHTML = '<br>' + character.description;
 
   let picture = character.pictures[0].url;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui large image";
+  imageHolder.className = "ui medium image";
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');
@@ -269,10 +268,11 @@ function getFFData(character) {
   column3.className="ui column";
 
   let divider = document.createElement('hr');
+  divider.className = "divider";
 
   container.append(column,column2,divider,column3);
 
-  column.append(fLabel,name,race,jName,origin,gender,age,job,height,weight);
+  column.append(name,line,race,jName,origin,gender,age,job,height,weight);
   column2.append(imageHolder);
   column3.append(description);
   mainContainer.append(container,divider,column3);
@@ -280,7 +280,6 @@ function getFFData(character) {
 
 
   document.getElementById('list').prepend(mainContainer);
-  count++;
 }
 
 function createHeader(count,genderParam,jobParam,raceParam,origin) {
@@ -364,7 +363,6 @@ function advancedRequest() {
   })
   .then(data => {
     data.map(getFFData);
-    counter.innerHTML = count;
     createHeader(count,gender,jobParam,raceParam,origin);
     "There are " + count + " " + genderParam + " " + raceParam +  "Members of " + jobParam + " in " + origin;"."
     })

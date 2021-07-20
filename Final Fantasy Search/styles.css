@@ -40,6 +40,18 @@ p {
     color:red;
 }
 
+.line {
+    border-color:springgreen;
+    width:50%;
+    float:left;
+}
+
+.divider {
+    border-color:rosybrown;
+    
+}
+
+
 body {
     background-color: black;
 }
