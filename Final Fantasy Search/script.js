@@ -217,7 +217,10 @@ let searchValue = document.getElementById('searchInput').value;
 function getFFData(character) {
 
   let name = document.createElement('p');
-  name.innerHTML= "<b>Name </b>: " + character.name;
+  let fLabel = document.createElement('span');
+  let words = "testing";
+  fLabel.innerHTML = words;
+  name.innerHTML = fLabel + character.name;
 
   let jName = document.createElement('p');
   jName.innerHTML= "Japanese Name: " + character.japaneseName;
@@ -269,7 +272,7 @@ function getFFData(character) {
 
   container.append(column,column2,divider,column3);
 
-  column.append(name,race,jName,origin,gender,age,job,height,weight);
+  column.append(fLabel,name,race,jName,origin,gender,age,job,height,weight);
   column2.append(imageHolder);
   column3.append(description);
   mainContainer.append(container,divider,column3);
