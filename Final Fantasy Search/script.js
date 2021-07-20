@@ -273,10 +273,27 @@ function getFFData(character) {
   column2.append(imageHolder);
   column3.append(description);
   mainContainer.append(container,divider,column3);
-  document.getElementById('list').prepend(mainContainer);
+  
 
+
+  document.getElementById('list').prepend(mainContainer);
   count++;
 }
+
+function createHeader(count,genderParam,jobParam,raceParam,origin) {
+        //Header for each character printout
+        let header = document.createElement('div');
+        header.className = "ui segment container";
+      
+        let headerText = document.createElement('p');
+        headerText.innerHTML =     "There are " + count + " " + genderParam + " " + raceParam +  "Members of " + jobParam + " in " + origin;"."
+
+      
+        header.append(headerText);
+      
+        document.getElementById('list').prepend(header);
+        header.setAttribute('id', 'header');
+};
 
 //Advanced Search functions
 function advancedRequest() {
@@ -345,6 +362,8 @@ function advancedRequest() {
   .then(data => {
     data.map(getFFData);
     counter.innerHTML = count;
+    createHeader(count,gender,jobParam,raceParam,origin);
+    "There are " + count + " " + genderParam + " " + raceParam +  "Members of " + jobParam + " in " + origin;"."
     })
   .catch((error) => {
     console.log(error)

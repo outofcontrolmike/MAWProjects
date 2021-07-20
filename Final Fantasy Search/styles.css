@@ -4,6 +4,11 @@ p {
 
 }
 
+#header {
+    background-color: yellow;
+    padding:10px;
+}
+
 #searchInput {
     border: none;
     border-bottom: 4px solid red;
