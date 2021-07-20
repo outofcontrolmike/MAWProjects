@@ -16,26 +16,15 @@
 </head>
 <body>
     <div id="app" class="ui container stackable">
-        <div id="searchTools" class="ui two column stackable grid container segment">
-            <div id="inputContainer"class="ui icon input container column">
+        <div id="searchTools" class="ui stackable grid segment container">
+          <div class="ui container">
+            <div id="inputContainer"class="ui icon input">
                 <input type="text" id="searchInput" placeholder="Search...Character Name">
                 <i class="inverted circular search link icon" id="onSubmit"></i>
-                <button id="random" class="ui violet button medium">
-                    Random Character
-                </button>
-                <button id="listGames" class="ui blue button medium">
-                    List Games
-                </button>
-                <button id="clear" class="ui red button medium">
-                    Clear List
-                </button>
-                <div>
-                  <span id="counter">0</span>
-                </div>
               </div>
-
-              <div class="ui column">
-                <hr>
+            <span id="counter">0</span>
+              </div>
+              <div class="ui container">
 
           <!-- Accordian -->
         <div class="ui accordion">
@@ -204,13 +193,24 @@
         </optgroup>
     </select>
             </p>
+
+            <!-- end accordian-->
             <div class="ui container">
-              <button id="advancedSearch" class="ui button medium purple">
+              <button id="advancedSearch" class="ui button medium blue">
                   Fetch Characters
             </button>
-            <button id="reset" class="ui button medium red">
+            <button id="reset" class="ui button medium orange">
               Reset Fitler
             </button>
+            <button style="float:right;" id="random" class="ui teal button medium">
+              Random Character
+          </button>
+            <button style="float: right;" id="listGames" class="ui green button medium">
+              List Games
+          </button>
+          <button id="clear" class="ui red button medium">
+            Clear List
+        </button>
           </div>
               
             </div>

@@ -13,7 +13,14 @@ p {
 }
 
 #inputContainer {
-    /* width: 75%; */
+    width: 80%;
+}
+
+#counter {
+    font-size: xxx-large;
+    position: relative;
+    top: 35%;
+    left:8%;
 }
 
 #footer {
