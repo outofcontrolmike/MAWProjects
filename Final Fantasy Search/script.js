@@ -12,7 +12,7 @@ document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
 document.getElementById('reset').addEventListener('click', resetfilters);
-
+let count = 0;
 //ON Load functions
 getAllCharacters();
 getGames();
@@ -51,6 +51,7 @@ function getAllCharacters() {
 
 function clearList() {
   document.getElementById('list').innerHTML = "";
+  count = 0;
 }
 
 
@@ -276,26 +277,11 @@ function getFFData(character) {
   column2.append(imageHolder);
   column3.append(description);
   mainContainer.append(container,divider,column3);
-  
-
 
   document.getElementById('list').prepend(mainContainer);
+
+  count++;
 }
-
-function createHeader(count,genderParam,jobParam,raceParam,origin) {
-        //Header for each character printout
-        let header = document.createElement('div');
-        header.className = "ui segment container";
-      
-        let headerText = document.createElement('p');
-        headerText.innerHTML =     "There are " + count + " " + genderParam + " " + raceParam +  "Members of " + jobParam + " in " + origin;"."
-
-      
-        header.append(headerText);
-      
-        document.getElementById('list').prepend(header);
-        header.setAttribute('id', 'header');
-};
 
 //Advanced Search functions
 function advancedRequest() {
@@ -363,14 +349,39 @@ function advancedRequest() {
   })
   .then(data => {
     data.map(getFFData);
-    createHeader(count,gender,jobParam,raceParam,origin);
-    "There are " + count + " " + genderParam + " " + raceParam +  "Members of " + jobParam + " in " + origin;"."
+    createHeader(count,genderText,jobText,raceText,gameText);
     })
   .catch((error) => {
     console.log(error)
   })
 
 }
+
+function createHeader(count,genderParam,jobParam,raceParam,origin) {
+  //Header for each character printout
+  let header = document.createElement('div');
+  header.className = "ui segment container";
+
+  let headerText = document.createElement('p');
+
+  console.log(count);
+  console.log("gender" ,jobParam);
+  console.log("race: " , raceParam);
+  console.log("origin: " ,origin);
+
+  if(jobParam = "Job Select")
+  {
+    jobParam = "";
+  }
+  headerText.innerHTML =     "There are " + count + " " + raceParam + " " + genderParam +  " " + jobParam + " in " + origin + ".";
+
+
+  header.append(headerText);
+
+  document.getElementById('list').prepend(header);
+  header.setAttribute('id', 'header');
+  count = 0;
+};
 
 //Jquery
 
