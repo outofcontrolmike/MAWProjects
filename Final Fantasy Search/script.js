@@ -288,13 +288,13 @@ function advancedRequest() {
    let genderParam,raceParam,jobParam,origin = "";
   
    let game = document.getElementById('games');
-   let gameText = game.options[game.selectedIndex].text;
+   let gameText = game.options[game.selectedIndex].value;
 
    let job = document.getElementById('jobSelect');
-   let jobText = job.options[job.selectedIndex].text;
+   let jobText = job.options[job.selectedIndex].value;
    
    let race = document.getElementById('raceSelect');
-   let raceText = race.options[race.selectedIndex].text;
+   let raceText = race.options[race.selectedIndex].value;
 
    let gender = document.getElementById('genderSelect');
    let genderText = gender.options[gender.selectedIndex].value;
@@ -350,6 +350,7 @@ function advancedRequest() {
   .then(data => {
     data.map(getFFData);
     createHeader(count,genderText,jobText,raceText,gameText);
+    count = 0;
     })
   .catch((error) => {
     console.log(error)
@@ -369,12 +370,13 @@ function createHeader(count,genderParam,jobParam,raceParam,origin) {
   console.log("race: " , raceParam);
   console.log("origin: " ,origin);
 
-  if(jobParam = "Job Select")
-  {
-    jobParam = "";
-  }
-  headerText.innerHTML =     "There are " + count + " " + raceParam + " " + genderParam +  " " + jobParam + " in " + origin + ".";
+  
+  // if(jobParam != "")
+  // {
+  //   jobParam = "These"
+  // }
 
+  headerText.innerHTML =     "There are " + count + " " + raceParam + " " + genderParam +  " Characters " + jobParam + " in " + origin + ".";
 
   header.append(headerText);
 
