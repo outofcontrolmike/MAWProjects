@@ -370,13 +370,24 @@ function createHeader(count,genderParam,jobParam,raceParam,origin) {
   console.log("race: " , raceParam);
   console.log("origin: " ,origin);
 
-  
-  // if(jobParam != "")
-  // {
-  //   jobParam = "These"
-  // }
+if(origin) {
+  origin = "These characters are all important in" + origin;
+}
 
-  headerText.innerHTML =     "There are " + count + " " + raceParam + " " + genderParam +  " Characters " + jobParam + " in " + origin + ".";
+if(jobParam) {
+  jobParam = "These characters all belong to the " + jobParam + " job.";
+}
+
+if(raceParam) {
+  raceParam = "Their race is " + raceParam + ".";
+}
+
+if(genderParam) {
+  genderParam = "They all happen to be: " + genderParam + ".";
+}
+
+
+  headerText.innerHTML =     "You pulled" + count + " Characters. " + raceParam + " " + genderParam +  jobParam  + origin + ".";
 
   header.append(headerText);
 
