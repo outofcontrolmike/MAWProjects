@@ -371,15 +371,15 @@ function createHeader(count,genderParam,jobParam,raceParam,origin) {
   console.log("origin: " ,origin);
 
 if(origin) {
-  origin = "These characters are all important in" + origin;
+  origin = " These characters are all important in " + origin;
 }
 
 if(jobParam) {
-  jobParam = "These characters all belong to the " + jobParam + " job.";
+  jobParam = " These characters all belong to the " + jobParam + " job.";
 }
 
 if(raceParam) {
-  raceParam = "Their race is " + raceParam + ".";
+  raceParam = " Their race is " + raceParam + ".";
 }
 
 if(genderParam) {
