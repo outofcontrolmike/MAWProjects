@@ -8,6 +8,9 @@
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
 document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
 
+//Possible input event listner to pull cards without searching
+document.getElementById('searchInput').addEventListener('change',submitRequest);
+
 document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
@@ -200,6 +203,7 @@ if(game.title === "Final Fantasy Brave Exvius") {
 
 function submitRequest() {
 let searchValue = document.getElementById('searchInput').value;
+
   fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue).then((response) => {
     if (response.ok) {
       return response.json();
