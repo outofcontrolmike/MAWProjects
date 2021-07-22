@@ -8,6 +8,9 @@
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
 document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
 
+//Possible input event listner to pull cards without searching
+//document.getElementById('searchInput').addEventListener('input',submitRequest);
+
 document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
