@@ -8,7 +8,7 @@
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
 document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
 
-document.getElementById('accordion').addEventListener('click',disableSearch);
+document.getElementById('title').addEventListener('click',disableSearch);
 //Possible input event listner to pull cards without searching
 document.getElementById('searchInput').addEventListener('change',submitRequest);
 
@@ -25,7 +25,6 @@ getGames();
 function disableSearch() {
   let search = document.getElementById('searchInput');
   let title = document.getElementById('title').className;
-  console.log(title);
   search.disabled = (title === "title") ? true : false; 
 }
 
