@@ -216,7 +216,7 @@ let searchValue = document.getElementById('searchInput').value;
     if (response.ok) {
       return response.json();
     } else {
-      window.alert('No Results found.. Please try again');
+      return;
     }
   })
   .then(data => {
@@ -357,7 +357,6 @@ function advancedRequest() {
     if (response.ok) {
       return response.json();
     } else {
-      window.alert('Advanced Search did not work.. Try changing your filters');
     }
   })
   .then(data => {
@@ -393,6 +392,7 @@ if(genderParam) {
 newCount = count;
 alertMessage = (origin + jobParam + raceParam + genderParam);
 
+  origin,jobParam,genderParam,raceParam = "";
   count = 0;
   newCount = 0;
 }
