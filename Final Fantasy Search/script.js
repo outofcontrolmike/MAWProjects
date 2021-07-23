@@ -8,6 +8,7 @@
 document.getElementById('onSubmit').addEventListener('click', submitRequest);
 document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
 
+document.getElementById('accordion').addEventListener('click',disableSearch);
 //Possible input event listner to pull cards without searching
 document.getElementById('searchInput').addEventListener('change',submitRequest);
 
@@ -15,10 +16,18 @@ document.getElementById('clear').addEventListener('click', clearList);
 document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
 document.getElementById('reset').addEventListener('click', resetfilters);
-let count = 0;
+
 //ON Load functions
 getAllCharacters();
 getGames();
+
+
+function disableSearch() {
+  let search = document.getElementById('searchInput');
+  let title = document.getElementById('title').className;
+  console.log(title);
+  search.disabled = (title === "title") ? true : false; 
+}
 
 function getRandom() {
   fetch('https://www.moogleapi.com/api/v1/characters/random')
