@@ -20,7 +20,6 @@ let count = 0;
 getAllCharacters();
 getGames();
 
-
 function getRandom() {
   fetch('https://www.moogleapi.com/api/v1/characters/random')
   .then(response => response.json())
