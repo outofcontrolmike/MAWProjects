@@ -21,6 +21,7 @@ document.getElementById('reset').addEventListener('click', resetfilters);
 getAllCharacters();
 getGames();
 
+let count = 0;
 
 function disableSearch() {
   let search = document.getElementById('searchInput');
@@ -102,7 +103,7 @@ function createGameCard(game) {
 
   let picture = game.picture;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui medium image";
+  imageHolder.className = "ui large centered image";
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');
@@ -231,32 +232,33 @@ function getFFData(character) {
   let name = document.createElement('h1');
   let line = document.createElement('hr');
   line.className = "line";
-  name.innerHTML = character.name;
+  character.name.toUpperCase();
+  name.innerHTML = "<em>" +character.name + "</em>";
 
   let jName = document.createElement('p');
-  jName.innerHTML= "Japanese Name: " + character.japaneseName;
+  jName.innerHTML= "<b>Japanese Name:</b> " + character.japaneseName;
 
   let origin = document.createElement('p');
-  origin.innerHTML= "Origin: " + character.origin;
+  origin.innerHTML= "<b>Origin:</b> " + character.origin;
 
   let race = document.createElement('p');
-  race.innerHTML= "<br>Race: " + character.race;
+  race.innerHTML= "<br><b>Race: </b>" + character.race;
 
   let gender = document.createElement('p');
-  gender.innerHTML= "Gender: " + character.gender;
+  gender.innerHTML= "<b>Gender: </b>" + character.gender;
 
   let age = document.createElement('p');
-  age.innerHTML= "Age: " + character.age;
+  age.innerHTML= "<b>Age: </b>" + character.age;
 
   let job = document.createElement('p');
-  job.innerHTML= "Job: " + character.job;
+  job.innerHTML= "<b>Job: </b>" + character.job;
   
   let height = document.createElement('p');
-  height.innerHTML = "Height: " + character.height;
+  height.innerHTML = "<b>Height: </b>" + character.height;
 
   //Weight
   let weight = document.createElement('p');
-  weight.innerHTML= "Weight: " +  character.weight + "<br>";
+  weight.innerHTML= "<b>Weight: </b>" +  character.weight + "<br>";
 
 
   let description = document.createElement('p');
@@ -264,7 +266,7 @@ function getFFData(character) {
 
   let picture = character.pictures[0].url;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui medium image";
+  imageHolder.className = "ui medium centered image";
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');
@@ -360,8 +362,8 @@ function advancedRequest() {
   })
   .then(data => {
     data.map(getFFData);
-    createHeader(count,genderText,jobText,raceText,gameText);
-    count = 0;
+    createAlert(count,genderText,jobText,raceText,gameText);
+    //count = 0;
     })
   .catch((error) => {
     console.log(error)
@@ -369,20 +371,12 @@ function advancedRequest() {
 
 }
 
-function createHeader(count,genderParam,jobParam,raceParam,origin) {
-  //Header for each character printout
-  let header = document.createElement('div');
-  header.className = "ui segment container";
-
-  let headerText = document.createElement('p');
-
-  console.log(count);
-  console.log("gender" ,jobParam);
-  console.log("race: " , raceParam);
-  console.log("origin: " ,origin);
+let alertMessage = "";
+let newCount = 0;
+function createAlert(count,genderParam,jobParam,raceParam,origin) {
 
 if(origin) {
-  origin = " These characters are all important in " + origin;
+  origin = " These characters originate from " + origin;
 }
 
 if(jobParam) {
@@ -396,19 +390,34 @@ if(raceParam) {
 if(genderParam) {
   genderParam = "They all happen to be: " + genderParam + ".";
 }
+newCount = count;
+alertMessage = (origin + jobParam + raceParam + genderParam);
 
-
-  headerText.innerHTML =     "You pulled" + count + " Characters. " + raceParam + " " + genderParam +  jobParam  + origin + ".";
-
-  header.append(headerText);
-
-  document.getElementById('list').prepend(header);
-  header.setAttribute('id', 'header');
   count = 0;
-};
+  newCount = 0;
+}
+
+//Crazy shit
+$('.advancedSearch').click(() => { 
+  setTimeout(() => {
+    $('.advancedSearch').toast({
+      title: 'You search contains ' + count + " Characters!" ,
+      message: alertMessage,
+      class : 'blue',
+      displayTime: 30000,
+      className: {
+          toast: 'ui message'
+      }
+    });
+    count = 0;
+  }, 1000);   
+});
+
+
 
 //Jquery
 
 $('.ui.accordion')
   .accordion()
 ;
+  
