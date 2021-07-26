@@ -21,6 +21,7 @@ document.getElementById('reset').addEventListener('click', resetfilters);
 getAllCharacters();
 getGames();
 
+let color = "blue";
 let count = 0;
 
 function disableSearch() {
@@ -374,6 +375,10 @@ function advancedRequest() {
     //count = 0;
     })
   .catch((error) => {
+  if(count === 0)
+  {
+    color = "red";
+  }
     console.log(error)
   })
 
@@ -401,10 +406,14 @@ if(genderParam) {
 newCount = count;
 alertMessage = (origin + jobParam + raceParam + genderParam);
 
+  color = "blue"
   origin,jobParam,genderParam,raceParam = "";
   count = 0;
   newCount = 0;
 }
+
+
+
 
 //Crazy shit
 $('.advancedSearch').click(() => { 
@@ -412,7 +421,7 @@ $('.advancedSearch').click(() => {
     $('.advancedSearch').toast({
       title: 'You search contains ' + count + " Characters!" ,
       message: alertMessage,
-      class : 'blue',
+      class : color,
       displayTime: 30000,
       className: {
           toast: 'ui message'
