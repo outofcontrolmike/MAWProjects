@@ -256,7 +256,6 @@ function getFFData(character) {
   let height = document.createElement('p');
   height.innerHTML = "<b>Height: </b>" + character.height;
 
-  //Weight
   let weight = document.createElement('p');
   weight.innerHTML= "<b>Weight: </b>" +  character.weight + "<br>";
 
@@ -264,10 +263,20 @@ function getFFData(character) {
   let description = document.createElement('p');
   description.innerHTML = '<br>' + character.description;
 
-  let picture = character.pictures[0].url;
   let imageHolder = document.createElement('img');
   imageHolder.className = "ui medium centered image";
-  imageHolder.src = picture;
+
+  let test = character.pictures;
+  let picture;
+
+  if (test.length === 0 ) {
+    imageHolder.src = "noImage.jpg";
+  }
+else  {
+    picture = character.pictures[0].url;
+    imageHolder.src = picture;
+  }
+
 
   let mainContainer = document.createElement('div');
   mainContainer.className = "ui segment raised padded"
