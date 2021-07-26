@@ -9,6 +9,9 @@ b,h1 {
     font-weight: 600;
     font-variant: petite-caps;
 }
+h1 {
+    letter-spacing: 15px;
+}
 
 
 #header {
@@ -20,6 +23,7 @@ b,h1 {
     border: none;
     border-bottom: 4px solid red;
     font-size: xx-large;
+    letter-spacing: 15px;
     font-family: 'EB Garamond', serif;
     text-align: center;
 }
@@ -50,7 +54,7 @@ b,h1 {
 
 .line {
     border-color:springgreen;
-    width:50%;
+    width:75%;
     float:left;
 }
 
