@@ -51,7 +51,7 @@ game.selectedIndex = "Game Select";
 clearList();
 }
 
-
+//Grabs and sets up all character data we need to set up our advanced search selects
 function getAllCharacters() {
   fetch('https://www.moogleapi.com/api/v1/characters')
   .then(response => response.json())
@@ -104,7 +104,7 @@ function createGameCard(game) {
 
   let picture = game.picture;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui large centered image";
+  imageHolder.className = "ui large centered middle aligned image";
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');
@@ -265,7 +265,7 @@ function getFFData(character) {
   description.innerHTML = '<br>' + character.description;
 
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui medium centered image";
+  imageHolder.className = "ui centered medium image";
 
   let test = character.pictures;
   let picture;
