@@ -58,6 +58,9 @@ h1 {
     
 }
 
+.ui.medium.image {
+        margin-top:14%;
+}
 
 body {
     background: #757F9A;  /* fallback for old browsers */

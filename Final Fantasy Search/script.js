@@ -104,7 +104,7 @@ function createGameCard(game) {
 
   let picture = game.picture;
   let imageHolder = document.createElement('img');
-  imageHolder.className = "ui large centered middle aligned image";
+  imageHolder.className = "ui large centered middle aligned image characterImage";
   imageHolder.src = picture;
 
   let mainContainer = document.createElement('div');
