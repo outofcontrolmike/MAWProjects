@@ -260,10 +260,14 @@ function getFFData(character) {
   let weight = document.createElement('p');
   weight.innerHTML= "<b>Weight: </b>" +  character.weight + "<br>";
 
+  let bio = document.createElement('h1');
+  bio.innerHTML = "Details";
+  bio.className = "details";
+
 
   let description = document.createElement('p');
-  description.innerHTML = '<br>' + character.description;
-
+  description.innerHTML =  character.description;
+  
   let imageHolder = document.createElement('img');
   imageHolder.className = "ui centered medium image";
 
@@ -298,7 +302,7 @@ else  {
 
   column.append(name,line,race,jName,origin,gender,age,job,height,weight);
   column2.append(imageHolder);
-  column3.append(description);
+  column3.append(bio,description);
   mainContainer.append(container,divider,column3);
 
   document.getElementById('list').prepend(mainContainer);
