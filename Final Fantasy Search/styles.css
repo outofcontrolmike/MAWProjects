@@ -24,9 +24,14 @@ p {
     font-style: oblique;
 }
 
+option {
+    font-weight: 400;
+    font-variant: petite-caps;
+    font-weight: 200;
+    opacity: .8;
+}
 
-
-b,h1 {
+b,h1,button,a,select,#title {
     font-weight: 600;
     font-variant: petite-caps;
 }
@@ -77,6 +82,8 @@ font-size: large;
 }
 
 #searchInput {
+    font-weight: 600;
+    font-variant: petite-caps;
     border: none;
     border-bottom: 2px solid skyblue;
     font-size: xx-large;

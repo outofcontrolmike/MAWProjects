@@ -391,6 +391,7 @@ function advancedRequest() {
   .catch((error) => {
   if(count === 0)
   {
+    alertMessage = "";
     color = "red";
   }
     console.log(error)
@@ -400,7 +401,6 @@ function advancedRequest() {
 
 //Set up Alert
 function createAlert(count,genderParam,jobParam,raceParam,origin) {
-
 if(origin) {
   origin = " These characters originate from " + origin;
 }
