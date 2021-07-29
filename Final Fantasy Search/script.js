@@ -17,12 +17,15 @@ document.getElementById('listGames').addEventListener('click', createGameList);
 document.getElementById('random').addEventListener('click',getRandom);
 document.getElementById('reset').addEventListener('click', resetfilters);
 
-//ON Load functions
-getAllCharacters();
+//ON Load functions  ************************************************************************************
 getGames();
 
+//Parent Variables  *************************************************************************************
 let color = "blue";
+let alertMessage = "";
 let count = 0;
+
+//Resesting and Disabling DOM elements ******************************************************************
 
 function disableSearch() {
   let search = document.getElementById('searchInput');
@@ -30,6 +33,49 @@ function disableSearch() {
   search.disabled = (title === "title") ? true : false; 
 }
 
+//Resets the dropdown menus
+function resetfilters() {
+  let game = document.getElementById('games');
+  let job = document.getElementById('jobSelect');
+  let race = document.getElementById('raceSelect');
+  let gender = document.getElementById('genderSelect');
+  
+  job.selectedIndex = "Job Select";
+  race.selectedIndex = "Race Select";
+  gender.selectedIndex = "Gender Select";
+  game.selectedIndex = "Game Select";
+  clearList();
+  }
+
+  //Simply clears the list
+  function clearList() {
+    document.getElementById('list').innerHTML = "";
+    count = 0;
+  }
+
+
+//Fetches - Characters *************************************************************************
+
+//Handles user character name input
+function submitRequest() {
+  let searchValue = document.getElementById('searchInput').value;
+  
+    fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue).then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        return;
+      }
+    })
+    .then(data => {
+      data.map(getFFData);
+      })
+    .catch((error) => {
+      console.log(error)
+    });
+  }
+
+//Grabs random character - provided by api
 function getRandom() {
   fetch('https://www.moogleapi.com/api/v1/characters/random')
   .then(response => response.json())
@@ -38,44 +84,10 @@ function getRandom() {
   })
 }
 
-function resetfilters() {
-let game = document.getElementById('games');
-let job = document.getElementById('jobSelect');
-let race = document.getElementById('raceSelect');
-let gender = document.getElementById('genderSelect');
 
-job.selectedIndex = "Job Select";
-race.selectedIndex = "Race Select";
-gender.selectedIndex = "Gender Select";
-game.selectedIndex = "Game Select";
-clearList();
-}
+//Fetches - Games  ***************************************************************************
 
-//Grabs and sets up all character data we need to set up our advanced search selects
-function getAllCharacters() {
-  fetch('https://www.moogleapi.com/api/v1/characters')
-  .then(response => response.json())
-  .then(character => {
-    character.sort();
-    console.log("sorted characters ", character);
-  })
-}
-
-function clearList() {
-  document.getElementById('list').innerHTML = "";
-  count = 0;
-}
-
-
-//Fetch Games List
-function getGames() {
-fetch('https://www.moogleapi.com/api/v1/games/')
-.then(response => response.json())
-.then(games => {
-  games.map(populateGameList);
-})}
-
-//Create Games
+//Create Game cards
 function createGameList() {
     fetch('https://www.moogleapi.com/api/v1/games/')
     .then(response => response.json())
@@ -84,7 +96,97 @@ function createGameList() {
     })
 }
 
-///Create Game Cards
+  //Fetch Game List to pull 
+  function getGames() {
+    fetch('https://www.moogleapi.com/api/v1/games/')
+    .then(response => response.json())
+    .then(games => {
+      games.map(populateGameList);
+    })}
+
+// Set up Game filter for advanced search
+function populateGameList(game) {
+  let option = document.createElement('option');
+  convertTitle(game);
+  option.innerHTML = game.title;
+  document.getElementById('games').append(option);
+  }
+  
+// Converts game titles to work around API
+  function convertTitle(game) {
+  if(game.title === "Final Fantasy 01") {
+    game.title = "Final Fantasy";
+  }
+  
+  if(game.title === "Final Fantasy 02") {
+    game.title = "Final Fantasy II";
+  }
+  
+  if(game.title === "Final Fantasy 03") {
+    game.title = "Final Fantasy III";
+  }
+  
+  if(game.title === "Final Fantasy 04") {
+    game.title = "Final Fantasy IV";
+  }
+  
+  if(game.title === "Final Fantasy 05") {
+    game.title = "Final Fantasy V";
+  }
+  
+  if(game.title === "Final Fantasy 06") {
+    game.title = "Final Fantasy VI";
+  }
+  
+  if(game.title === "Final Fantasy 07") {
+    game.title = "Final Fantasy VII";
+  }
+  
+  if(game.title === "Final Fantasy 08") {
+    game.title = "Final Fantasy VIII";
+  }
+  
+  if(game.title === "Final Fantasy 09") {
+    game.title = "Final Fantasy IX";
+  }
+  
+  if(game.title === "Final Fantasy 10") {
+    game.title = "Final Fantasy X";
+  }
+  
+  if(game.title === "Final Fantasy 10-2") {
+    game.title = "Final Fantasy X-2";
+  }
+  
+  if(game.title === "Final Fantasy 11") {
+    game.title = "Final Fantasy XI";
+  }
+  
+  if(game.title === "Final Fantasy 12") {
+    game.title = "Final Fantasy XII";
+  }
+  
+  if(game.title === "Final Fantasy 13") {
+    game.title = "Final Fantasy XIII";
+  }
+  
+  if(game.title === "Final Fantasy 13-2") {
+    game.title = "Final Fantasy XIII-2";
+  }
+  
+  if(game.title === "Final Fantasy 15") {
+    game.title = "Final Fantasy XV";
+  }
+  
+  if(game.title === "Final Fantasy Brave Exvius") {
+    game.title = "Final Fantasy BE";
+  }
+  }
+
+  
+
+//Card Creation - Games *********************************************************************
+//Create Game Cards
 function createGameCard(game) {
   let card = document.createElement('div');
   card.className = "ui segment";
@@ -132,101 +234,8 @@ function createGameCard(game) {
   document.getElementById('list').append(mainContainer);
 }
 
-// //Create list and append
-function populateGameList(game) {
-let option = document.createElement('option');
-convertTitle(game);
-option.innerHTML = game.title;
-document.getElementById('games').append(option);
-}
 
-function convertTitle(game) {
-if(game.title === "Final Fantasy 01") {
-  game.title = "Final Fantasy";
-}
-
-if(game.title === "Final Fantasy 02") {
-  game.title = "Final Fantasy II";
-}
-
-if(game.title === "Final Fantasy 03") {
-  game.title = "Final Fantasy III";
-}
-
-if(game.title === "Final Fantasy 04") {
-  game.title = "Final Fantasy IV";
-}
-
-if(game.title === "Final Fantasy 05") {
-  game.title = "Final Fantasy V";
-}
-
-if(game.title === "Final Fantasy 06") {
-  game.title = "Final Fantasy VI";
-}
-
-if(game.title === "Final Fantasy 07") {
-  game.title = "Final Fantasy VII";
-}
-
-if(game.title === "Final Fantasy 08") {
-  game.title = "Final Fantasy VIII";
-}
-
-if(game.title === "Final Fantasy 09") {
-  game.title = "Final Fantasy IX";
-}
-
-if(game.title === "Final Fantasy 10") {
-  game.title = "Final Fantasy X";
-}
-
-if(game.title === "Final Fantasy 10-2") {
-  game.title = "Final Fantasy X-2";
-}
-
-if(game.title === "Final Fantasy 11") {
-  game.title = "Final Fantasy XI";
-}
-
-if(game.title === "Final Fantasy 12") {
-  game.title = "Final Fantasy XII";
-}
-
-if(game.title === "Final Fantasy 13") {
-  game.title = "Final Fantasy XIII";
-}
-
-if(game.title === "Final Fantasy 13-2") {
-  game.title = "Final Fantasy XIII-2";
-}
-
-if(game.title === "Final Fantasy 15") {
-  game.title = "Final Fantasy XV";
-}
-
-if(game.title === "Final Fantasy Brave Exvius") {
-  game.title = "Final Fantasy BE";
-}
-}
-
-function submitRequest() {
-let searchValue = document.getElementById('searchInput').value;
-
-  fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue).then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      return;
-    }
-  })
-  .then(data => {
-    data.map(getFFData);
-    })
-  .catch((error) => {
-    console.log(error)
-  });
-}
+//Card Creation - Characters ****************************************************************
 
 function getFFData(character) {
 
@@ -367,6 +376,7 @@ function advancedRequest() {
       genderParam =  "";
     }
 
+  
   fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam).then((response) => {
     if (response.ok) {
       return response.json();
@@ -388,8 +398,7 @@ function advancedRequest() {
 
 }
 
-let alertMessage = "";
-let newCount = 0;
+//Set up Alert
 function createAlert(count,genderParam,jobParam,raceParam,origin) {
 
 if(origin) {
@@ -413,13 +422,9 @@ alertMessage = (origin + jobParam + raceParam + genderParam);
   color = "blue"
   origin,jobParam,genderParam,raceParam = "";
   count = 0;
-  newCount = 0;
 }
 
-
-
-
-//Crazy shit
+//Jquery -> displaying alert message
 $('.advancedSearch').click(() => { 
   setTimeout(() => {
     $('.advancedSearch').toast({
@@ -435,10 +440,7 @@ $('.advancedSearch').click(() => {
   }, 1000);   
 });
 
-
-
-//Jquery
-
+//Accordion 
 $('.ui.accordion')
   .accordion()
 ;
