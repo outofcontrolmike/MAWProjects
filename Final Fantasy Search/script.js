@@ -416,7 +416,7 @@ function advancedRequest() {
 //Set up Alert
 function createAlert(count,genderParam,jobParam,raceParam,origin) {
 if(origin) {
-  origin = `These characters originate from ${origin}.`;
+  origin = `These characters originate from ${origin}`;
 }
 
 if(jobParam) {
