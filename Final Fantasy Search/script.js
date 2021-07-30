@@ -1,34 +1,32 @@
-//Refactoring
-//Use String interporlation for Parameter on filters
-//Use URL variables instead of the whole url
-//Cut down on repetive code - such as when creating paragraph elements.. should be able to $_ -> 
-//
-//
-
-//ShortHand for grabbing element by ID
-var $ = function( id ) {return document.getElementById( id ); };
-
-//Doesn't work with even lsitner I don't think
-$(' onSubmit ').addEventListener('click', submitRequest);
-
-document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
-
-document.getElementById('title').addEventListener('click',disableSearch);
-//Possible input event listner to pull cards without searching
-document.getElementById('searchInput').addEventListener('change',submitRequest);
-
-document.getElementById('clear').addEventListener('click', clearList);
-document.getElementById('listGames').addEventListener('click', createGameList);
-document.getElementById('random').addEventListener('click',getRandom);
-document.getElementById('reset').addEventListener('click', resetfilters);
+/*
+Try to throw some of this functionallity into modules.
+*/
 
 //ON Load functions  ************************************************************************************
 getGames();
+onLoadListeners();
 
 //Parent Variables  *************************************************************************************
 let color = "blue";
 let alertMessage = "";
 let count = 0;
+let gameListFetch = false;
+
+//Set up listener events *******************************************************************************
+
+function onLoadListeners() {
+  document.getElementById('onSubmit').addEventListener('click', submitRequest);
+  document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
+  
+  document.getElementById('title').addEventListener('click',disableSearch);
+  document.getElementById('searchInput').addEventListener('change',submitRequest);
+  
+  document.getElementById('clear').addEventListener('click', clearList);
+  document.getElementById('listGames').addEventListener('click', createGameList);
+  document.getElementById('random').addEventListener('click',getRandom);
+  document.getElementById('reset').addEventListener('click', resetfilters);
+  
+}
 
 //Resesting and Disabling DOM elements ******************************************************************
 
@@ -40,10 +38,12 @@ function disableSearch() {
 
 //Resets the dropdown menus
 function resetfilters() {
-  let game = document.getElementById('games');
-  let job = document.getElementById('jobSelect');
-  let race = document.getElementById('raceSelect');
-  let gender = document.getElementById('genderSelect');
+  var reset = function( id ) {return document.getElementById( id ); };
+
+  let game = reset('games');
+  let job = reset('jobSelect');
+  let race = reset('raceSelect');
+  let gender = reset('genderSelect');
   
   job.selectedIndex = "Job Select";
   race.selectedIndex = "Race Select";
@@ -58,14 +58,16 @@ function resetfilters() {
     count = 0;
   }
 
-
-//Fetches - Characters *************************************************************************
+//Fetches for characters - Characters *************************************************************************
 
 //Handles user character name input
 function submitRequest() {
   let searchValue = document.getElementById('searchInput').value;
-  
-    fetch('https://www.moogleapi.com/api/v1/characters/search?name=' + searchValue).then((response) => {
+  if(searchValue)
+  {
+
+  let url = "https://www.moogleapi.com/api/v1/characters/search?name="
+    fetch(url + searchValue).then((response) => {
       if (response.ok) {
         return response.json();
       } else {
@@ -79,10 +81,12 @@ function submitRequest() {
       console.log(error)
     });
   }
+}
 
 //Grabs random character - provided by api
 function getRandom() {
-  fetch('https://www.moogleapi.com/api/v1/characters/random')
+  let url = 'https://www.moogleapi.com/api/v1/characters/random';
+  fetch(url)
   .then(response => response.json())
   .then(character => {
     getFFData(character);
@@ -94,16 +98,19 @@ function getRandom() {
 
 //Create Game cards
 function createGameList() {
-    fetch('https://www.moogleapi.com/api/v1/games/')
+  let url = 'https://www.moogleapi.com/api/v1/games/';
+    fetch(url)
     .then(response => response.json())
     .then(games => {
       games.map(createGameCard);
+    
     })
 }
 
   //Fetch Game List to pull 
   function getGames() {
-    fetch('https://www.moogleapi.com/api/v1/games/')
+    let url = "https://www.moogleapi.com/api/v1/games/"
+    fetch(url)
     .then(response => response.json())
     .then(games => {
       games.map(populateGameList);
@@ -119,116 +126,117 @@ function populateGameList(game) {
   
 // Converts game titles to work around API
   function convertTitle(game) {
-  if(game.title === "Final Fantasy 01") {
-    game.title = "Final Fantasy";
+    let g = game;
+  if(g.title === "Final Fantasy 01") {
+    g.title = "Final Fantasy";
   }
   
-  if(game.title === "Final Fantasy 02") {
-    game.title = "Final Fantasy II";
+  if(g.title === "Final Fantasy 02") {
+    g.title = "Final Fantasy II";
   }
   
-  if(game.title === "Final Fantasy 03") {
-    game.title = "Final Fantasy III";
+  if(g.title === "Final Fantasy 03") {
+    g.title = "Final Fantasy III";
   }
   
-  if(game.title === "Final Fantasy 04") {
-    game.title = "Final Fantasy IV";
+  if(g.title === "Final Fantasy 04") {
+    g.title = "Final Fantasy IV";
   }
   
-  if(game.title === "Final Fantasy 05") {
-    game.title = "Final Fantasy V";
+  if(g.title === "Final Fantasy 05") {
+    g.title = "Final Fantasy V";
   }
   
-  if(game.title === "Final Fantasy 06") {
-    game.title = "Final Fantasy VI";
+  if(g.title === "Final Fantasy 06") {
+    g.title = "Final Fantasy VI";
   }
   
-  if(game.title === "Final Fantasy 07") {
-    game.title = "Final Fantasy VII";
+  if(g.title === "Final Fantasy 07") {
+    g.title = "Final Fantasy VII";
   }
   
-  if(game.title === "Final Fantasy 08") {
-    game.title = "Final Fantasy VIII";
+  if(g.title === "Final Fantasy 08") {
+    g.title = "Final Fantasy VIII";
   }
   
-  if(game.title === "Final Fantasy 09") {
-    game.title = "Final Fantasy IX";
+  if(g.title === "Final Fantasy 09") {
+    g.title = "Final Fantasy IX";
   }
   
-  if(game.title === "Final Fantasy 10") {
-    game.title = "Final Fantasy X";
+  if(g.title === "Final Fantasy 10") {
+    g.title = "Final Fantasy X";
   }
   
-  if(game.title === "Final Fantasy 10-2") {
-    game.title = "Final Fantasy X-2";
+  if(g.title === "Final Fantasy 10-2") {
+    g.title = "Final Fantasy X-2";
   }
   
-  if(game.title === "Final Fantasy 11") {
-    game.title = "Final Fantasy XI";
+  if(g.title === "Final Fantasy 11") {
+    g.title = "Final Fantasy XI";
   }
   
-  if(game.title === "Final Fantasy 12") {
-    game.title = "Final Fantasy XII";
+  if(g.title === "Final Fantasy 12") {
+    g.title = "Final Fantasy XII";
   }
   
-  if(game.title === "Final Fantasy 13") {
-    game.title = "Final Fantasy XIII";
+  if(g.title === "Final Fantasy 13") {
+    g.title = "Final Fantasy XIII";
   }
   
-  if(game.title === "Final Fantasy 13-2") {
-    game.title = "Final Fantasy XIII-2";
+  if(g.title === "Final Fantasy 13-2") {
+    g.title = "Final Fantasy XIII-2";
   }
   
-  if(game.title === "Final Fantasy 15") {
-    game.title = "Final Fantasy XV";
+  if(g.title === "Final Fantasy 15") {
+    g.title = "Final Fantasy XV";
   }
   
-  if(game.title === "Final Fantasy Brave Exvius") {
-    game.title = "Final Fantasy BE";
+  if(g.title === "Final Fantasy Brave Exvius") {
+    g.title = "Final Fantasy BE";
   }
   }
 
   
-
 //Card Creation - Games *********************************************************************
 //Create Game Cards
 function createGameCard(game) {
-  let card = document.createElement('div');
+  let create = function( el ) {return document.createElement( el ); };
+
+  let card = create('div');
   card.className = "ui segment";
 
-  
-  let title = document.createElement('p');
+  let title = create('p');
   title.innerHTML= "<b>Name </b>: " + game.title;
 
-  let platform = document.createElement('p');
+  let platform = create('p');
   platform.innerHTML= "<b>Platform:</b> " +  game.platform;
 
-  let releaseDate = document.createElement('p');
+  let releaseDate = create('p');
   releaseDate.innerHTML= "<b>Origin:</b> " + game.releaseDate;
 
-  let description = document.createElement('p');
+  let description = create('p');
   description.innerHTML = game.description;
 
   let picture = game.picture;
-  let imageHolder = document.createElement('img');
+  let imageHolder = create('img');
   imageHolder.className = "ui large centered middle aligned image characterImage";
   imageHolder.src = picture;
 
-  let mainContainer = document.createElement('div');
+  let mainContainer = create('div');
   mainContainer.className = "ui segment"
-  let container = document.createElement('div');
+  let container = create('div');
   container.className = "ui two column doubling stackable grid container";
 
-  let column = document.createElement('div');
+  let column = create('div');
   column.className="ui column";
 
-  let column2 = document.createElement('div');
+  let column2 = create('div');
   column2.className="ui column";
 
-  let column3 = document.createElement('div');
+  let column3 = create('div');
   column3.className="ui column";
 
-  let divider = document.createElement('hr');
+  let divider = create('hr');
 
   container.append(column,column2,divider,column3);
 
@@ -239,10 +247,10 @@ function createGameCard(game) {
   document.getElementById('list').append(mainContainer);
 }
 
-
 //Card Creation - Characters ****************************************************************
 
 function getFFData(character) {
+  let create = function( el ) {return document.getElementById( el ); };
 
   let name = document.createElement('h1');
   let line = document.createElement('hr');
@@ -326,18 +334,20 @@ else  {
 
 //Advanced Search functions
 function advancedRequest() {
+  var request = function( id ) {return document.getElementById( id ); };
+
    let genderParam,raceParam,jobParam,origin = "";
   
-   let game = document.getElementById('games');
+   let game = request('games');
    let gameText = game.options[game.selectedIndex].value;
 
-   let job = document.getElementById('jobSelect');
+   let job = request('jobSelect');
    let jobText = job.options[job.selectedIndex].value;
    
-   let race = document.getElementById('raceSelect');
+   let race = request('raceSelect');
    let raceText = race.options[race.selectedIndex].value;
 
-   let gender = document.getElementById('genderSelect');
+   let gender = request('genderSelect');
    let genderText = gender.options[gender.selectedIndex].value;
 
 
@@ -381,8 +391,8 @@ function advancedRequest() {
       genderParam =  "";
     }
 
-  
-  fetch('https://www.moogleapi.com/api/v1/characters/search?' + raceParam + origin + jobParam + genderParam).then((response) => {
+  let url = "https://www.moogleapi.com/api/v1/characters/search?";
+  fetch(url + raceParam + origin + jobParam + genderParam).then((response) => {
     if (response.ok) {
       return response.json();
     } else {
@@ -407,19 +417,19 @@ function advancedRequest() {
 //Set up Alert
 function createAlert(count,genderParam,jobParam,raceParam,origin) {
 if(origin) {
-  origin = " These characters originate from " + origin;
+  origin = `These characters originate from ${origin}.`;
 }
 
 if(jobParam) {
-  jobParam = " These characters all belong to the " + jobParam + " job.";
+  jobParam = `These characters all belong to the ${jobParam} job.` ;
 }
 
 if(raceParam) {
-  raceParam = " Their race is " + raceParam + ".";
+  raceParam = `Their race is ${raceParam}.`;
 }
 
 if(genderParam) {
-  genderParam = "They all happen to be: " + genderParam + ".";
+  genderParam = `They all happen to be ${genderParam}.`;
 }
 newCount = count;
 alertMessage = (origin + jobParam + raceParam + genderParam);
@@ -433,7 +443,7 @@ alertMessage = (origin + jobParam + raceParam + genderParam);
 $('.advancedSearch').click(() => { 
   setTimeout(() => {
     $('.advancedSearch').toast({
-      title: 'You search contains ' + count + " Characters!" ,
+      title: `Your search contains ${count} Characters!` ,
       message: alertMessage,
       class : color,
       displayTime: 30000,
