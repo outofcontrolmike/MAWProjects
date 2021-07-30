@@ -5,7 +5,12 @@
 //
 //
 
-document.getElementById('onSubmit').addEventListener('click', submitRequest);
+//ShortHand for grabbing element by ID
+var $ = function( id ) {return document.getElementById( id ); };
+
+//Doesn't work with even lsitner I don't think
+$(' onSubmit ').addEventListener('click', submitRequest);
+
 document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
 
 document.getElementById('title').addEventListener('click',disableSearch);
