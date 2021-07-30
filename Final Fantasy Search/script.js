@@ -250,7 +250,6 @@ function createGameCard(game) {
 //Card Creation - Characters ****************************************************************
 
 function getFFData(character) {
-  let create = function( el ) {return document.getElementById( el ); };
 
   let name = document.createElement('h1');
   let line = document.createElement('hr');
@@ -421,7 +420,7 @@ if(origin) {
 }
 
 if(jobParam) {
-  jobParam = `These characters all belong to the ${jobParam} job.` ;
+  jobParam = `These characters belong to the ${jobParam} job.` ;
 }
 
 if(raceParam) {
