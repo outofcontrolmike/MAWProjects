@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Starter</title>
+  <link rel="stylesheet" href="style.css">
+
+<!-- You MUST include jQuery before Fomantic -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  img {
+    height:300px;
+    width:300px;
+    object-fit: contain;
+    margin-top:50px;
+  }
+  html {
+    background-color: black;
+  }
+ body {
+   background-color: black;
+ }
+  .ui {
+      background-color: black;
+  }
+
+  .ui > segment {
+    background-color: black;
+  }
+
+  .ui > container {
+    background-color: black;
+  }
+
+  h1 {
+    text-align: center;
+    color: silver;
+  }
+
+  #pNum {
+    position: relative;
+    font-size: large;
+  }
+  #playerDetails{
+    border-style:solid;
+    border-top-width: 1.5em;
+    border-bottom: 1.5em;
+  }
+  p,h1 {
+    color: goldenrod;
+    font-family: 'Press Start 2P', cursive;
+    color: snow;
+    text-shadow: 2px 2px steelblue;
+  }
+  p {
+    font-size :16px;
+  }
+
+  #blink {
+    animation: blinker 2s linear infinite; 
+  }
+
+  @keyframes blinker {
+    50% {opacity : 0;}
+  }
+
+  #players {
+    border-right: 1em;
+    border: snow;
+    border-style: solid;
+  }
+  #turtleGroup {
+    margin-top: 30px;
+  }
+
+</style>
+</head>
+
+<body class="ui container">
+  <!--Start Project-->
+<div id="project" class="ui" style="height: 700px;">
+
+  <!--Players-->
+  <div class="ui two column doubling stackable grid container segment" style="margin-top: 50px;">
+    
+    <!-- first player-->
+      <div class="column ui" id="players">
+    <p id="pNum">1UP</p>
+    <div id="playerDetails playerOne">
+      <div class="ui two column grid container">
+        <p class="column ui" id="name"></p>
+        <p class="column ui" id="score"></p>
+      </div>
+      <div class="ui two column grid container">
+    <div class="ui column">
+        <p id="lives"></p>
+        </div>  
+        <div class="ui column">
+    <p id="health"></p>
+        </div>
+      </div>
+    </div>
+      </div>
+    <!-- second player-->
+    <div class="column ui" id="players">
+      <p id="pNum">2 UP</p>
+    <div id="playerDetails">
+      <p id="blink">Press Start to Play</p>
+      </div>
+  </div>
+  </div>
+      <!--End Players-->
+
+      <!--Header display-->
+      <h1 style="text-align: center; background-color: black;">Select Your Turtle</h1>
+      <!--End Header-->
+
+      <!--Display turtles-->
+      <div id="turtleGroup" class="ui four column doubling stackable grid">
+        <div id="leo" class="column leo" data-content="Add users to your feed">
+          <img class="turtle" src="assets/leo.png" >
+        </div>
+        <div id="mike" class="column">
+          <img class="turtle"src="assets/mike.png">
+        </div>
+        <div id="don" class="column">
+          <img class="turtle" src="assets/don.png">
+        </div>
+        <div id="raph" class="column">
+          <img class="turtle"src="assets/raph.png">
+        </div>
+      </div>
+      <!--End Turtle Display-->
+<div class="ui two column stackable grid container">
+  
+<div class="ui column float right" style="float: right;">
+  <button class="ui grey basic button medium inverted" id="addLives">Add Lives</button>
+  <button class="ui inverted positive basic button medium" id="addPoints">Add Points</button>
+  <button class="ui negative basic button medium inverted" id="minusPoints">Minus Points</button>
+  <button class="ui blue basic button medium" id="resetStats">Reset Stats</button>
+
+</div>
+<div class="ui column">
+  <p>
+    <audio autoplay controls style="background-color: black;">
+    <source src="assets/TMNT4Select.mp3" type="audio/mpeg">
+  </audio></p>
+</div>
+<footer>
+  <div class="ui" style="margin-top: 100px;">
+    <p> *All images and song are not owned by me. </p>
+   </div>
+</footer> 
+</div>
+  <!--End Project-->
+
+<script src="script.js">
+</script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Calculator</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+
+<head>
+  <!-- You MUST include jQuery before Fomantic -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<style>
+  * {
+    font-family: 'KoHo', sans-serif;
+  }
+
+  .ui>.container {
+    margin-top: 25px;
+  }
+
+  input {
+       height:40px;
+       width:210px;
+    }
+
+    label,input,button,span {
+        margin-bottom: 20px;
+        margin-left: 5px;
+    }
+
+  .ui.selection.dropdown {
+    padding: 8px;
+  }
+
+  #mainBack {
+    background-color:black;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+  }
+
+  #bmrRef {
+    background-color: lightsteelblue;
+  }
+  #normalCards, #footer {
+    background-color: honeydew;
+  }
+</style>
+
+<body class=""">
+    <div id="mainBack" class="ui segment">
+  <!-- First segment-->
+  <div class="ui two column doubling stackable grid very padded">
+    <!--BMI-->
+    <div class="ui column container">
+      <div id="normalCards" class="ui raised very padded text container segment">
+        <h1 style="text-align: center;">Body Mass Index Calculation</h1>
+        <hr>
+        <div>
+          <div class="ui two column">
+            <div class="ui column">
+              <label>Height (in)</label>
+              <input id="bmiHeight" type="tel" id="ft" maxlength="2" class="input">
+            </div>
+            <div class="ui column">
+              <span>
+                <label>Weight(lbs)</label>
+                <input id="bmiWeight" type="tel" id="weight" maxlength="3" max="3">
+              </span>
+              <span class="ui container"> <button class="ui primary button" id="bmiCalc">Calculate BMI</button>
+              </span>
+            </div>
+          </div>
+          <hr>
+          <div id="bmiInfo">
+            Fill out this form to get your BMI
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End BMI-->
+
+    <!-- BMR-->
+    <div class="ui column container">
+      <div id="normalCards" class="ui raised very padded text container segment">
+        <h1 style="text-align: center;">Basil Metabolic Rate Calculation</h1>
+        <hr>
+        <div>
+          <div class="ui container column">
+            <label>Height</label>
+            <input placeholder="inches" id="bmrHeight" type="tel" maxlength="2" class="input">
+            <span> <label>Weight</label>
+              <input placeholder="lbs" type="tel" id="bmrWeight" maxlength="3" max="3"></span>
+          </div> 
+                
+        </div>
+        <div>
+          <label>Age</label>
+          <input type="tel" id="bmrAge" maxlength="3" max="110">
+          <span><label>Gender</label>
+            <select id="genders" class="ui medium selection dropdown">
+              <option id="male" value="0">Male</option>
+              <option id="female" value="1">Female</option>
+            </select></span>
+          <span><button id="bmrCalc" class="ui primary button">Calculate BMR</button>
+          </span>
+        </div>
+        <hr>
+        <div id="bmrInfo">
+          Fill out this form to get your BMR
+        </div>
+      </div>
+  </div>
+  </div>
+  <!-- End BMR-->
+  <!-- Second Segment-->
+  <!-- Daily Caloric needs-->
+  <div class="ui three column doubling stackable grid">
+    <div class="ui column container">
+      <div id="normalCards" class="ui container segment raised">
+        <h1>Daily Caloric Needs</h1>
+        <div>
+          <label>Select your activitey level</label>
+          <select id="activity" class="ui medium selection dropdown">
+            <option value="0">Sedentary</option>
+            <option value="1">Lightly Active</option>
+            <option value="2">Active</option>
+            <option value="3">Moderatly Active</option>
+            <option value="4">Athletic</option>
+          </select>
+          <span>
+            <button class="ui primary button" id="calorieBtn">Daily Needs</button>
+
+          </span>
+        </div>
+        <hr>
+        <h5 id="dailyNeeds">*Be sure to determine your BMR first</h5>
+      </div>
+    </div>
+    <!-- end first column-->
+    <div class="ui column container">
+      <div id="bmrRef" class="ui container segment raised">
+        <h1>BMI Reference Chart</h1>
+        <table class="ui celled table">
+          <thead>
+            <tr>
+              <th>BMI Value</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Name">Less than 18.5</td>
+              <td>Thin</td>
+            </tr>
+            <tr>
+              <td data-label="Name">18.6 - 24.9</td>
+              <td>Healthy</td>
+            </tr>
+            <tr>
+              <td data-label="Name">25-29.9</td>
+              <td>Overweight</td>
+            </tr>
+            <tr>
+              <td data-label="Name">More than 30</td>
+              <td>Obese</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="ui column container">
+      <div id="bmrRef" class="ui container segment raised">
+        <h1>Activity Reference Chart</h1>
+        <table class="ui celled table">
+          <thead>
+            <tr>
+              <th>Activity Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Name">Sedentary: little or no excercise</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Exercise 1-3 times/week:</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Exercise 4-5 times/week</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Daily exercsising or intense exercise 3-4 times/week</td>
+            </tr>
+            <tr>
+              <td data-label="Name">Intense exercise 6-7 times/week</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="ui segment">
+    <footer>
+      Disclaimer!!!
+      *I do not claim to be accuarte with determining your BMI, BMR and Daily Caloric Needs. All the math is based on
+      what I researched through google.
+    </footer>
+  </div>
+  </div>
+
+  <!--end second segment-->
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>

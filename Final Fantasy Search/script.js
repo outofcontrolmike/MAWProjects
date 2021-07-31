@@ -102,6 +102,8 @@ function createGameList() {
     fetch(url)
     .then(response => response.json())
     .then(games => {
+      let list =  document.getElementById("list");
+    list.innerHTML = "";
       games.map(createGameCard);
     
     })
