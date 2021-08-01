@@ -41,8 +41,6 @@
   <!DOCTYPE html>
 <body>
 <?php include "../components/header.php" ?>
-
-
     <div class="ui segment container" style="margin-top: 140px;">
         <h1 style="text-align: center;">Projects</h1>
         <div class="ui divider"></div>

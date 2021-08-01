@@ -85,7 +85,6 @@ height:100%;
 
       <!-- end main content-->
       <?php include "../components/footer.php" ?>      
-  <script src="js/script.js"></script>
 </body>
 
 </html>
