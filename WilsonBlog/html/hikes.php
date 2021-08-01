@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-sm">
       <ul class="navbar-nav col-11">
         <li class="nav-item">
-          <a class="nav-link" href="homeNew.html">Home</a>
+          <a class="nav-link" href="homeNew.php">Home</a>
         </li>
       </ul>
       <a class="navbar-brand col-1" href="#"><span><img class="logo" src="img/Yosemite_logo.jpg" alt="logo"></span></a>

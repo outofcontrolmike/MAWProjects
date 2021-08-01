@@ -3,7 +3,8 @@
     Purpose: Learning experience with how to write a game in php.
     Date started: 02/10/2021
     -->
-<?php 
+<?php
+ 
 //Runs game logic as long as Reset button isn't clicked. $sumibtted technically changes when the action method is called on button click
 if(isset($_POST['submitted']) == '1')
 {
@@ -231,7 +232,7 @@ font-family: 'Reggae One', cursive;
         </div>
         <div class="description">
         <div class="rules">
-    <h3>Earth, Fire & Water rules</h3>
+    <h3 class="header">Earth, Fire & Water rules</h3>
     <p>This is basically the same concept as rock paper scissors, but based on elements</p>
     <p> You choose either one of the three options and hope that your oppenent chooses the elemental weakness of your element<p>
     <ul>    
@@ -252,3 +253,8 @@ $('.rules').click((e) => {
   .modal('show')
   }); 
 </script>
+<?php 
+echo "<script type='text/javascript'>
+alert('Javascript is working');
+</script>"
+?>
