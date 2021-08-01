@@ -68,7 +68,7 @@ height:100%;
   <!DOCTYPE html>
 <body>
   
-<?php include "../components/header.php" ?>
+<?php include "components/header.html" ?>
 
 
     <!-- main content-->
@@ -84,7 +84,7 @@ height:100%;
       </div>
 
       <!-- end main content-->
-      <?php include "../components/footer.php" ?>      
+      <?php include "components/footer.html" ?>      
 </body>
 
 </html>

@@ -53,7 +53,7 @@
   </head>
   <!DOCTYPE html>
 <body>
-<?php include "../components/header.php" ?>
+<?php include "components/header.html" ?>
 
     <!-- Info about me-->
       <div class="ui segment" style=" margin-top: 140px; padding-bottom: 200px;">
@@ -159,7 +159,7 @@
         <div class="ui vertical divider">
         </div>
       </div>
-      <?php include "../components/footer.php" ?>
+      <?php include "components/footer.html" ?>
         <script src="js/script.js"></script>
 </body>
 

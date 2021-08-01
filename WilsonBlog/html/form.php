@@ -53,7 +53,7 @@ a {
 </head>
 
 
-<?php include "../components/header.php" ?>
+<?php include "components/header.html" ?>
 
 <div class="ui middle aligned center aligned grid">
   <div class="column">
@@ -95,4 +95,4 @@ a {
   </div>
 </div>
 
-<?php include "../components/footer.php" ?>
+<?php include "components/footer.html" ?>

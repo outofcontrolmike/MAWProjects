@@ -40,7 +40,7 @@
   </head>
   <!DOCTYPE html>
 <body>
-<?php include "../components/header.php" ?>
+<?php include "components/header.html" ?>
     <div class="ui segment container" style="margin-top: 140px;">
         <h1 style="text-align: center;">Projects</h1>
         <div class="ui divider"></div>
@@ -344,7 +344,7 @@
               </div>
               <!-- end projects-->
     </div>
-    <?php include "../components/footer.php" ?>      <!-- end footer-->
+    <?php include "components/footer.html" ?>      <!-- end footer-->
   <script src="js/script.js"></script>
 </body>
 
