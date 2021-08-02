@@ -41,7 +41,7 @@
   <!DOCTYPE html>
 <body>
 <?php include "components/header.html" ?>
-    <div class="ui segment container" style="margin-top: 140px;">
+    <div class="ui segment container" id="list" style="margin-top: 140px;">
         <h1 style="text-align: center;">Projects</h1>
         <div class="ui divider"></div>
         <!-- First Project-->
@@ -345,7 +345,7 @@
               <!-- end projects-->
     </div>
     <?php include "components/footer.html" ?>      <!-- end footer-->
-  <script src="js/script.js"></script>
+  <script src="projects.js"></script>
 </body>
 
 </html>
