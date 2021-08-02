@@ -41,11 +41,11 @@
   <!DOCTYPE html>
 <body>
 <?php include "components/header.html" ?>
-    <div class="ui segment container" id="list" style="margin-top: 140px;">
+    <div class="ui segment container"  style="margin-top: 140px;">
         <h1 style="text-align: center;">Projects</h1>
         <div class="ui divider"></div>
         <!-- First Project-->
-        <div class="ui link cards centered">
+        <div class="ui link cards centered" id="list">
             <div class="card">
               <div class="ui image">
                 <a href="hikes.php"><img style="height:200px; width:300px; object-fit: contain;" src="img/bryce.jpg"></a>
@@ -69,6 +69,8 @@
                 </span>
               </div>
             </div>
+
+            
             <!-- end first project-->
             <div class="card">
                 <div class="ui image">

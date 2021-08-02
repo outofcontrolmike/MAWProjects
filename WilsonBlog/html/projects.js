@@ -114,10 +114,54 @@ FF_Search = {
 //Continue adding to above over time
 
 
-console.log(projects);
-document.getElementById('list').append(projects);
-projects.map(createProjectCard());
+//document.getElementById('list').append(projects);
+projects.map(createProjectCard(project));
 
-function createProjectCard() {
+function createProjectCard(project) {
 
+   let container = document.createElement('div');
+   container.className = "ui card";
+
+   let imageContainer = document.createElement('div');
+   imageContainer.className = "ui image";
+
+   let projectLink = document.createElement('a');
+   
+   let image = document.createElement('img');
+   image.src = project.image;
+    image.className = "ui image medium";
+
+   let content = document.createElement('div');
+   content.className = "content";
+
+   let header = document.createElement('div');
+   header.className = "header";
+
+   let metaContainer = document.createElement('div');
+   metaContainer.className = "meta";
+
+   let metaInfo = document.createElement('p');
+   metaContainer.append(metaInfo);
+
+   let descContainer = document.createElement('div');
+   descContainer.className = "description";
+   descContainer.innerHTML = project.desc;
+
+   let extraContent = document.createElement('div');
+   extraContent.className = "extra content";
+
+   let contentInfo = document.createElement('span');
+   contentInfo.className = "right floated";
+   contentInfo.innerHTML = project.created;
+
+   let gitHub = document.createElement('span');
+   let gitLink = document.createElement('a');
+    github.append(gitLink);
+
+   gitLink.innerHTML = project.github;
+   extraContent.append(contentInfo,gitHub);
+   
+
+   container.append(imageContainer,content,extraContent);
+   document.getElementById('list').append(container);
 }
