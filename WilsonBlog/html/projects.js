@@ -1,4 +1,3 @@
-alert("testingjjflk!");
 let projects = [
 
   Pokemon = {
