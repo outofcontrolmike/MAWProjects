@@ -103,7 +103,7 @@ Calc = {
 FF_Search = {
     img: "img/ff_search.JPG",
     href: "../../Final Fantasy Search/index.html",
-    name: "Cool Calculator",
+    name: "Final Fantasy Search",
     meta: "JS,Fomantic and Google Fonts",
     desc: "A flashy basic Calculator.",
     created: "Wrote May 3th 2021",
@@ -119,7 +119,7 @@ projects.map(createProjectCard);
 function createProjectCard(project) {
 
    let container = document.createElement('div');
-   container.className = "ui card";
+   container.className = "card";
 
    let imageContainer = document.createElement('div');
    imageContainer.className = "ui image medium";
@@ -130,7 +130,6 @@ function createProjectCard(project) {
    let image = document.createElement('img');
    image.src = project.img;
     image.className = "ui image medium";
-    image.style.objectFit = "contain";
     projectLink.append(image);
     imageContainer.append(projectLink);
 

@@ -10,19 +10,25 @@
     background-color: #1b1c1d;
     
   }
+  footer, body {
+        background-color: black;;
+          
+  }
+
   a {
       font-size: medium;
   }
+  
   .ui.menu .item img.logo {
     margin-right: 1.5em;
     padding: 1em 0em;
   }
+  
   .main.container {
     margin-top: 7em;
   }
 
   .ui.footer.segment {
-    
     padding: 5em 0em;
   }
   .buttonContent {
