@@ -52,7 +52,7 @@ FinalFantasyXML = {
 
 EarthWaterFire = {
     img: "img/EFW.JPG",
-    href: "../../EarthWaterFire/main.php",
+    href: "../../EarthFireWater/main.php",
     name: "Earth Water Fire",
     meta: "PHP & Fomantic",
     desc: "A different theme of rock paper scissors, dealing with elements",

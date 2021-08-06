@@ -254,7 +254,5 @@ $('.rules').click((e) => {
   }); 
 </script>
 <?php 
-echo "<script type='text/javascript'>
-alert('Javascript is working');
-</script>"
+
 ?>
