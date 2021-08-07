@@ -1,20 +1,20 @@
 import React from 'react';
 
-const Characters = ({ characters }) => {
+const Episodes = ({ episodes }) => {
     return (
         <div>
-            <center><h1>Xmen Characters List</h1></center>
-            {characters.map((character) => (
+            <center><h1>Xmen Episode List</h1></center>
+            {episodes.map((episode) => (
                   <div class="ui card fluid">
                   <div class="ui content">
                     <div class="ui header">
-                        {character.name}
+                        {episode.title}
                     </div>
                     <div class="ui meta">
-                    {character.alias}
+                    {episode.number}
                     </div>
                     <div class="ui description">
-                        {character.description}
+                        {episode.plot}
                     </div>
                   </div>
                 </div>
@@ -23,4 +23,4 @@ const Characters = ({ characters }) => {
     )
 };
 
-export default Characters
+export default Episodes
