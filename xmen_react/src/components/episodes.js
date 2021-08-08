@@ -3,6 +3,7 @@ import React from 'react';
 const Episodes = ({ episodes }) => {
     return (
         <div>
+            <button>Testing</button>
             <center><h1>Xmen Episode List</h1></center>
             {episodes.map((episode) => (
                   <div class="ui card fluid">
