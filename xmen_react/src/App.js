@@ -13,21 +13,49 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let url = "https://xmenapiheroku.herokuapp.com/api/characters";
-    let  url2 = "https://xmenapiheroku.herokuapp.com/api/episodes";
-    fetch(url2)
+    let  url = "https://xmenapiheroku.herokuapp.com/api/characters";
+    fetch(url)
     .then(res => res.json())
     .then((data) => {
-      this.setState({ episodes: data.results})
+      this.setState({ characters: data.results})
+      console.log(data);
     })
-    .catch(console.log)
   }
 
+    componentWillUnmount() {
+      this._isMounted = false;
+    }
+
+    componentDidUpdate() {
+      let  url = "https://xmenapiheroku.herokuapp.com/api/episodes";
+      fetch(url)
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ episodes: data.results})
+        console.log(data);
+      })
+    }
+
+
+  // fetchCharacters() {
+  //   console.log("we made it to fetch characters");
+  //   let url = "https://xmenapiheroku.herokuapp.com/api/characters";
+  //   fetch(url)
+  //   .then(res => res.json())
+  //   .then((data) => {
+  //     this.forceUpdate({ characters: data.results})
+  //     this.state = this;
+  //   })
+  //   .catch(console.log)
+  // }
+
+  
+
   render() {
-    return (   
-      // <Characters characters={this.state.characters} />
+    return (
+      <Characters characters={this.state.characters} />,
       <Episodes episodes={this.state.episodes} />
-    )
+      )
   }
 }
 
