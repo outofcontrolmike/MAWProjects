@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import './App.css';
 import Characters from './components/characters';
-import Episodes from './components/episodes';
 
 class App extends Component {
 
@@ -26,15 +25,15 @@ class App extends Component {
       this._isMounted = false;
     }
 
-    componentDidUpdate() {
-      let  url = "https://xmenapiheroku.herokuapp.com/api/episodes";
-      fetch(url)
-      .then(res => res.json())
-      .then((data) => {
-        this.setState({ episodes: data.results})
-        console.log(data);
-      })
-    }
+    // componentDidUpdate() {
+    //   let  url = "https://xmenapiheroku.herokuapp.com/api/episodes";
+    //   fetch(url)
+    //   .then(res => res.json())
+    //   .then((data) => {
+    //     this.setState({ episodes: data.results})
+    //     console.log(data);
+    //   })
+    // }
 
 
   // fetchCharacters() {
@@ -53,8 +52,7 @@ class App extends Component {
 
   render() {
     return (
-      <Characters characters={this.state.characters} />,
-      <Episodes episodes={this.state.episodes} />
+      <Characters characters={this.state.characters} />
       )
   }
 }

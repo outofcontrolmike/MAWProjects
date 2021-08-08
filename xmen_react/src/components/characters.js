@@ -4,6 +4,7 @@ const Characters = ({ characters }) => {
     return (
         <div>
             <center><h1>Xmen Characters List</h1></center>
+            <input  class="ui fluid input" type="text" name="name"></input>
             {characters.map((character) => (
                   <div class="ui card fluid">
                   <div class="ui content">
