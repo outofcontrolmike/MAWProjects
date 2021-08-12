@@ -1,34 +1,43 @@
 import React, {Component} from 'react'
 
+//functional component
+const TableHeader = () => {
+return(
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Job</th>
+    </tr>
+  </thead>
+)
+
+}
+
+//functional component
+const TableBody = (props) => {
+    const rows = props.characterInfo.map((row,index) => {
+        return(
+            <tr key={index}>
+                <td>{row.name}</td>
+                <td>{row.job}</td>
+            </tr>
+        )
+    })
+    return <tbody>{rows}</tbody> 
+}
+
+//Class Component - includes functional components
+//Can only return one parent element - (Most of the time we would use a div)
 class Table extends Component {
     render() {
-        return (
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Job</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Charlie</td>
-                <td>Janitor</td>
-              </tr>
-              <tr>
-                <td>Mac</td>
-                <td>Bouncer</td>
-              </tr>
-              <tr>
-                <td>Dee</td>
-                <td>Aspiring actress</td>
-              </tr>
-              <tr>
-                <td>Dennis</td>
-                <td>Bartender</td>
-              </tr>
-            </tbody>
-          </table>
+
+        //do something with characterInfo prop
+        const {characterInfo} = this.props;
+        return(
+            <table>
+                <TableHeader />
+                <TableBody characterInfo={characterInfo}/>
+            </table>
         )
     }
 }
