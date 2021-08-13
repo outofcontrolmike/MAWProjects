@@ -1,4 +1,3 @@
-import React, {Component} from 'react'
 
 //functional component
 const TableHeader = () => {
@@ -7,6 +6,7 @@ return(
     <tr>
       <th>Name</th>
       <th>Job</th>
+      <th>Delete</th>
     </tr>
   </thead>
 )
@@ -20,6 +20,9 @@ const TableBody = (props) => {
             <tr key={index}>
                 <td>{row.name}</td>
                 <td>{row.job}</td>
+                <td>
+                    <button onClick={() => props.removeCharacter(index)}>Delete</button>
+                </td>
             </tr>
         )
     })
@@ -28,18 +31,18 @@ const TableBody = (props) => {
 
 //Class Component - includes functional components
 //Can only return one parent element - (Most of the time we would use a div)
-class Table extends Component {
-    render() {
 
+
+const Table = (props) =>  {  
         //do something with characterInfo prop
-        const {characterInfo} = this.props;
+        const {characterInfo, removeCharacter} = props;
+        
         return(
             <table>
                 <TableHeader />
-                <TableBody characterInfo={characterInfo}/>
+                <TableBody characterInfo={characterInfo} removeCharacter={removeCharacter}/>
             </table>
         )
     }
-}
 
 export default Table
