@@ -3,6 +3,10 @@
     Purpose: Learning experience with how to write a game in php.
     Date started: 02/10/2021
     -->
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
 <?php
  
 //Runs game logic as long as Reset button isn't clicked. $sumibtted technically changes when the action method is called on button click
