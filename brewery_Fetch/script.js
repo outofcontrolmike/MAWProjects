@@ -95,11 +95,12 @@ postal = document.createElement('i');
 country = document.createElement('i');
 phone = document.createElement('i');
 url = document.createElement('i');
-
 //find a way to pass all these in to a function that checks if empty
-breweryURL.href = item.website_url;
 
-if(breweryURL != "https://mawportfolio.online/MAWProjects/MAWProjects/Javascript_IntroProjects/brewery_Fetch/null")
+breweryURL.href = item.website_url;
+breweryURL.href.className = "wrapURL";
+
+if(breweryURL != "https://mawportfolio.online/MAWProjects/brewery_Fetch/null")
 {
 breweryURL.innerHTML = breweryURL;
 }

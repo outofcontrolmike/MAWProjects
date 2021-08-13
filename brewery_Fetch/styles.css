@@ -116,5 +116,17 @@ i {
 
   }
 
+  @media only screen and (max-width: 500px) {
+     .input{
+         padding: 0px;  
+    }
+    
+    .floatMe {
+        margin-top:3%;
+        margin-bottom: 3%;
+    }
+
+  }
+
 
 
