@@ -31,7 +31,6 @@
         border-radius: 5px;
       }
       body {
-        background-color:white;
       }
     </style>
   </head>
@@ -73,7 +72,7 @@
       <!--end header-->
     
       <!-- header of content-->
-      <div id="content" class="segment ui" style="padding-bottom: 0%;">
+      <div id="content" class="ui container" style="padding-bottom: 0%;">
       <div id="header" class="row text-center">
         <h2 class="ui container header">
           <a href="../WilsonBlog/html/homeNew.php"><img class="ui image tiny centered pb-4" src="pk.png"></a>
@@ -91,15 +90,15 @@
         <div id="menu" class="row pb-4">
         <div class="col-12">
           <div class="ui labeled input w-25">
-            <div data-position="bottom center" data-tooltip="Make sure to enter name correctly"  class="ui label">
-              Enter either a Name or ID of pokemon, Or a collection.
+            <div id="label" data-position="bottom center" data-tooltip="Make sure to enter name correctly"  class="ui label">
+              Accepts Name,Id, or amount
             </div>
             <input class="container" onkeydown="disableRandomButton(true)" maxlength="15" id="searchValue" type="text" placeholder="Feeling Lucky?">
           </div>
         </div>
         </div>
         <div class="row">
-          <div class="col-8 w-25 mb-4">
+          <div class="col-8 mb-4">
           <button
             id="catchOne"
             type="button"
@@ -127,14 +126,11 @@
           type="button"
           class="ui inverted red button large"
         >
+        Clear</button>
+        <button id="day" class="ui button inverted yellow large">Day</button>
+        <button id="night" class="ui button large inverted purple">Night</button>
+
         <!-- Should implement a button group here to toggle the classes-->
-          Clear List
-        </button>
-        <div class="ui buttons ml-4 pr-4 pl-4">
-          <button id="day" class="ui button inverted yellow large">Day</button>
-          <div class="or" data-text="or"></div>
-          <button id="night" class="ui button large inverted purple">Night</button>
-        </div>
         </div>
         </div>
         </div>

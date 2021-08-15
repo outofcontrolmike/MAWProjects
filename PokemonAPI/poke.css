@@ -1,19 +1,18 @@
-#content,#header {
-    background: ghostwhite;
-    
 
-}
 
 
 #test {
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
-#background {
-    background-color: ghostwhite;
+#header {
+    margin-top:3%;
+}
 
-    
-    }
+#title {
+    margin-bottom:10%;
+}
+
 
     .myCard {
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -22,6 +21,7 @@
     @media only screen and (max-width: 600px) {
         #header {
           padding-left: 30%;
+          
 
         }
         #title {
@@ -36,14 +36,24 @@
 
         .ui.buttons {
             
-            margin-top:20%;
+            margin-top:10%;
+            margin-left:30%;
 
+        }
+
+        .ui.buttons.button{
+            background-color: blue;
         }
 
         .ui.label {
             width:275%;
-        }
       }
 
-
-
+      #count {
+        margin-bottom: 10%;
+        margin-top: 5%;
+      }
+      #label {
+        margin-left:10%;
+      }
+    }

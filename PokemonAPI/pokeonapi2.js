@@ -147,8 +147,8 @@ function renderPokemon(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-m-6", "m-4","pb-4", "card", "align-content-center", "success");
-  container.classList.add("ui", "segment");
+  pokeContainer.classList.add("col-m-6", "m-4","pb-4", "align-content-center", "success");
+  container.classList.add("ui");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h1");
   var pokeId = document.createElement("p");
@@ -164,7 +164,7 @@ function renderPokemon(pokeData) {
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + pkId + ".png");
   //end image
   pokeImage.src = pkImg;
-  pokeContainer.style.backgroundColor = "mintcream";
+  pokeContainer.style.backgroundColor = "#d5e0da";
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
@@ -203,7 +203,7 @@ function createSingle(pokeData) {
   pokeImage.height = "300";
   pokeImage.width = "300";
   pokeImage.style.alignSelf = "center";
-  pokeContainer.style.backgroundColor = "mintcream";
+  pokeContainer.style.backgroundColor = "#d5e0da";
 
 
 
