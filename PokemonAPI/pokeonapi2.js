@@ -161,7 +161,7 @@ function renderPokemon(pokeData) {
   pokeImage.style.alignSelf = "center";
   var pkId = pokeData.id;
   var pkImg = (pokeData.srcset =
-    "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + pkId + ".png");
   //end image
   pokeImage.src = pkImg;
   pokeContainer.style.backgroundColor = "mintcream";
@@ -210,7 +210,7 @@ function createSingle(pokeData) {
   //image for pokemon
   var pkId = pokeData.id;
   var pkImg = (pokeData.srcset =
-    "https://pokeres.bastionbot.org/images/pokemon/" + pkId + ".png");
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + pkId + ".png");
 
   pokeImage.src = pkImg;
   pokeName.innerHTML = pokeData.name;
