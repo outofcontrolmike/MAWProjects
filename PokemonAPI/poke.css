@@ -19,7 +19,31 @@
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     }
 
+    @media only screen and (max-width: 600px) {
+        #header {
+          padding-left: 30%;
 
+        }
+        #title {
+            margin-bottom:10%;
+        }
+
+        .ui.button {
+            width:100%;
+            margin-left: 30%;
+            margin-bottom: 5%;
+        }
+
+        .ui.buttons {
+            
+            margin-top:20%;
+
+        }
+
+        .ui.label {
+            width:275%;
+        }
+      }
 
 
 

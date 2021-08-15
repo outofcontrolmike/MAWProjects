@@ -1,0 +1,140 @@
+/* Styles for the home page */
+
+body {
+  background-color: azure;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  border-top: solid 2px black;
+  height:50px;
+
+}
+
+.footer a {
+  position: absolute;
+  right:50px;
+}
+
+/* navigation */
+
+
+nav {
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  background-color: white;;
+}
+nav ul a {
+  color:black;
+  margin-left:20px;
+  padding-right:20px;
+
+}
+
+.dropdown-item:hover {
+color:blue;
+}
+
+
+.logo {
+  height:75px;
+  width:100px;
+  object-fit: contain;
+  margin:0px;
+}
+/* header */
+
+/* Images */
+
+.myCard {
+  vertical-align: middle;
+  border-width: unset;
+  border-radius: 3%;
+  margin:20px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.myCard:hover {
+  box-shadow: 0 16px 16px 0 rgba(0,0,0,0.6);
+}
+
+/* images for Hikes 
+img {
+  vertical-align: middle;
+  border-style: solid;
+  border-width: unset;
+  border-radius: 3%;
+  height: 250px;
+  width: 200px;
+  object-fit: contain;
+}
+*/
+
+.bounceleft:hover {
+  position: relative;
+  top:10px;
+  right:10px;
+}
+
+.bounceright:hover {
+  position: relative;
+  top:10px;
+  left:10px;
+}
+
+
+li:hover {
+  position:relative;
+  top:2px;
+  color:yellow;
+}
+
+#formButton:hover {
+  position: relative;
+  top:4px;
+  color:black;
+}
+
+/* Fonts */
+h1,li { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+h3 { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
+
+
+/* Home Page - Exclusive */
+.home {
+background-image: url("../html/img/Yosemite.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+filter: brightness(85%);
+
+}
+
+.home_statement {
+  text-align:center;
+  padding-top:100px;
+  color:black;
+  z-index: 999;
+   
+}
+
+
+/* About me page */
+.bio {
+  border-left-style:double;
+}
+
+/*Form */
+
+.form {
+  border-style:groove;
+  border-width: 1rem;
+}
