@@ -111,7 +111,7 @@ function catchList() {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
       .then((response) => response.json())
       .then(function(allPokemon) {
-        pCount.innerHTML = input + " Random Pokemon Fetched!";
+        pCount.innerHTML = input + " Pokemon Fetched!";
         allPokemon.results.forEach(function(pokemon) {
           fetchPokemonData(pokemon);
           
@@ -129,7 +129,7 @@ function catchList() {
 //Fetch Random Amount
 function catchRandom() {
   var alg = Math.floor(Math.random(1) * 650);
-  pCount.innerHTML = alg + " Pokemon caught!";
+  pCount.innerHTML = alg + " Random Pokemon Fetched!";
   fetch("https://pokeapi.co/api/v2/pokemon?limit=" + alg)
     .then((response) => response.json())
     .then(function(allPokemon) {
