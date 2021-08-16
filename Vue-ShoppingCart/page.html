@@ -15,8 +15,9 @@
       />
       <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
 </head>
-<body class="ui stackable" style="background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);"></body>
+<body class="ui container" style="height:fit-content; background-color: black;"></body>
 
+<div class="ui container stackable segment" style="margin-top:5%; background-color: gray;">
     <!--header for page-->
     <div class="text header center container" style="text-align: center; margin-bottom:25px; margin:2%;">
         <h1>Vue Shopping Cart</h1></div>
@@ -25,10 +26,9 @@
       <div id="app">
         <div class="ui link cards centered">
       <div v-for="game in games">
-      <div class="card ui" style="margin:25px; height:600px; width:400px;">
-        <div class="image ui large">
-          <img v-bind:src="game.imgSrc" style="height:300px; width:400px;">
-
+      <div class="card ui" style="margin:25px; height: fit-content; width:300px;">
+        <div class="image ui medium">
+          <img v-bind:src="game.imgSrc">
         </div>
         <div class="content">
           <div class="header">{{game.name}}</div>
@@ -44,10 +44,10 @@
            {{game.description}}
           </div>
         </div>
-        <div class="extra content">
+        <div class="extra content fluid">
           <span class="right floated">
-            <button class="ui button green mini" v-if="game.stock > 0" v-on:click="addGame(game)"v-on:click="deductStock(game)" v-on:click="gameTotal(game)">Add Game</button>
             <button class="ui button negative mini" v-if="game.stock < 5" v-on:click="removeGame(game)" v-on:click="addStock(game.stock)">Remove Game</button>
+            <button class="ui button green mini" v-if="game.stock > 0" v-on:click="addGame(game)"v-on:click="deductStock(game)" v-on:click="gameTotal(game)">Add Game</button>
           </span>
           <span>
             <i class="money icon"></i>
@@ -59,8 +59,9 @@
       </div>
     <!--end products-->
     <!--Shopping cart content-->
-    <div class="ui segment" style="margin: 2%;">
-      <p style="text-align: center;"><span class="ui large red text center">Order Summary</span></p>
+    <hr>
+    <div class="ui " style="height:fit-content; margin-bottom:100px;">
+      <p style="text-align: center;"><span class="ui big text center">Order Summary</span></p>
 <!-- Start table-->
 <table class="ui celled table">
   <thead>
@@ -73,19 +74,28 @@
   <tbody id="grabMe">
     <tr id="btext" v-for="game in games">
       <td id="left" v-if="game.ordered > 0"> {{game.name}} </td>
-      <td id="head" v-if="game.ordered > 0"> {{game.price2}}</td>
-      <td id="head" v-if="game.ordered > 0">{{game.ordered}}</td>
-      <td id="head" v-if="game.ordered > 0">${{game.total * game.ordered}}</td>
+      <td id="" v-if="game.ordered > 0"> {{game.price2}}</td>
+      <td id="" v-if="game.ordered > 0">{{game.ordered}}</td>
+      <td id="totalAmount" v-if="game.ordered > 0">${{game.total * game.ordered}}</td>
+  </tr>
+  <tr>
+    <td><b>total purchase</b></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   
   </tbody>
     </script>
   </div>
 </table>
-
+</div>
 <!--end table-->
     </div>
   </div>
+<footer class="ui footer container" style="margin-top:500px; margin-bottom: 200px;">
+  
+</footer>
   <!--end app-->
     <script src="vue.js"></script>
 </body>

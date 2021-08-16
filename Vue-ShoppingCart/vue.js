@@ -1,9 +1,12 @@
+let totalAmount = 0;
+
 //Crash course on using Vue
 var app = new Vue({
   el: "#app", // links Vue to the Div
   data: {
     cartItem: 0,
     cartTotal: 0,
+    total: 0,
     games: [
       // this is an array filled with objects
       {
@@ -53,13 +56,16 @@ var app = new Vue({
       theGame.ordered++;
       theGame.stock--;
       theGame.cartTotal += theGame.total;
+      // totalAmount += theGame.total;
+      // document.getElementById('totalAmount').innerHTML += totalAmount;
     },
     removeGame(theGame) {
       theGame.stock++;
       theGame.ordered--;
-      theGame.cartTotal -= theGame.total;
+ 
     },
-    cartTotal(theGame) {
-    },
+
+    // cartTotal(theGame) {
+    // },
   },
 });
