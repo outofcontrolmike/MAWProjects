@@ -41,11 +41,16 @@
     
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 420px) {
         #header {
-          margin-left:22%;
+          margin-left: 40px;
         }
+
+        @media only screen and (max-width: 375px) {
+          #header {
+            margin-left: 0px;
+          }
         
-    
+        }
     }
 
