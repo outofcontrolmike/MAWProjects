@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon API</title>
+    <title>Pokedex JS</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -77,7 +77,7 @@
         <h2 class="ui container header">
           <a href="../WilsonBlog/html/homeNew.php"><img class="ui image tiny centered pb-4" src="pk.png"></a>
           <div class="content">
-           <p id="title"> Pokedex API</p>
+           <p id="title"> Pokedex JS</p>
           </div>
         </h2>
       </div>
@@ -88,21 +88,20 @@
       <!--Input and buttons-->
         <!--1st row -->
         <div id="menu" class="row pb-4">
-        <div class="col-12">
-          <div class="ui labeled input w-25">
-            <div id="label" data-position="bottom center" data-tooltip="Make sure to enter name correctly"  class="ui label">
-              Accepts Name,Id, or amount
+        <div class="container ml-3 mr-3">
+          <div class="ui labeled input large fluid">
+            <div id="label" data-position="top left" data-tooltip="Accepts Name, Id, or a collection amount of pokemon"  class="ui label">
+              Search
             </div>
             <input class="container" onkeydown="disableRandomButton(true)" maxlength="15" id="searchValue" type="text" placeholder="Feeling Lucky?">
           </div>
         </div>
         </div>
-        <div class="row">
-          <div class="col-8 mb-4">
+        <div class="ui container">
           <button
             id="catchOne"
             type="button"
-            class="ui inverted orange button large"
+            class="ui orange button large fluid"
           >
             Single Catch
           </button>
@@ -110,25 +109,25 @@
           <button
             id="catchList"
             type="button"
-            class="ui inverted primary button large"
+            class="ui primary button large fluid"
           >
             Multiple Catch
           </button>
           <button
             id="catchRandom"
             type="button"
-            class="ui inverted green button large"
+            class="ui green button large fluid"
           >
-            Random Catch
+            Random Amount Catch
           </button>
           <button
           id="clear"
           type="button"
-          class="ui inverted red button large"
+          class="ui red button large fluid"
         >
         Clear</button>
-        <button id="day" class="ui button inverted yellow large">Day</button>
-        <button id="night" class="ui button large inverted purple">Night</button>
+        <button id="day" class="ui button yellow large fluid">Day</button>
+        <button id="night" class="ui button large purple fluid">Night</button>
 
         <!-- Should implement a button group here to toggle the classes-->
         </div>

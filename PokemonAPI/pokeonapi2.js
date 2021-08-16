@@ -1,16 +1,19 @@
+//on Page Load
+window.onload = invertColors;
+
 //variables
 var list = document.getElementById("test");
 var toggleID = document.getElementById("catchOne");
 var toggleCatch = document.getElementById("catchList");
 var input = document.getElementById("searchValue").value;
 var pCount = document.getElementById("count");
-var inputReader = document.getElementById("searchValue");
 var btnRand = document.getElementById("catchRandom");
 var mainPkCount = 0;
 var counter = 1;
 var prevUrl = "";
 
 //event listeners
+var searchInput = document.getElementById('searchValue');
 var btnRandom = document
   .getElementById("catchRandom")
   .addEventListener("click", catchRandom);
@@ -27,6 +30,17 @@ document.getElementById("clear").addEventListener("click", clearList);
 var btnSingle = document
   .getElementById("catchOne")
   .addEventListener("click", catchSingle);
+
+  // Execute a function when the user releases a key on the keyboard
+searchInput.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("myBtn").click();
+  }
+});
 
 //Fetching Functions //
 //****************************************************************************************************************************** */
@@ -62,7 +76,7 @@ function catchSingle() {
 
    
 //////////end fetch
-    pCount.innerHTML = mainPkCount + " Pokemon Caught";
+    pCount.innerHTML = mainPkCount + " Pokemon Fetched";
     document.getElementById("searchValue").value = "";
     prevUrl = pURL;
     }
@@ -77,7 +91,6 @@ function catchSingle() {
         createSingle(pokemon);
       });
     document.getElementById("searchValue").value = "";
-    disableButtons("");
     prevUrl = input;
     mainPkCount += 1;
     }
@@ -98,7 +111,7 @@ function catchList() {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
       .then((response) => response.json())
       .then(function(allPokemon) {
-        pCount.innerHTML = input + " Pokemon caught!";
+        pCount.innerHTML = input + " Randome Pokemon Fetched!";
         allPokemon.results.forEach(function(pokemon) {
           fetchPokemonData(pokemon);
           
@@ -106,7 +119,6 @@ function catchList() {
       });
     input.value = "";
     document.getElementById("searchValue").value = "";
-    disableButtons("true");
   } else {
     alert("Please enter a value over 0");
     input.value = "";
@@ -125,7 +137,6 @@ function catchRandom() {
         fetchPokemonData(pokemon);
       });
     });
-  disableButtons("true");
 }
 function fetchPokemonData(pokemon) {
   let url = pokemon.url;
@@ -180,7 +191,7 @@ function renderPokemon(pokeData) {
     pokeWeight,
     baseStats
   );
-  container.appendChild(pokeContainer);
+  container.append(pokeContainer);
 } //end multi
 
 //Render Single Pokemon
@@ -229,9 +240,8 @@ function createSingle(pokeData) {
     pokeWeight,
     baseStats
   );
-  container.appendChild(pokeContainer);
+  container.prepend(pokeContainer);
 
-  console.log(container.innerHTML);
 } // end single catch -- Should be able to combine single and multi, pass in a paramter to differ between the two
 
 //Misc Functions//
