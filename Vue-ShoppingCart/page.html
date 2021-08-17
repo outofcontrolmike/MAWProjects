@@ -80,19 +80,14 @@
       <td id="totalAmount" v-if="game.ordered > 0">${{(game.total * game.ordered).toFixed(2)}}</td>
   </tr>
   <tr style="background-color: mediumpurple;">
-    <td>
-      Grand Totals: 
+    <td style="background-color: grey;">
     </td>
-    <td>
+    <td style="background-color: grey;"></td>
+    <td style="background-color: grey;">
 
     </td>
-    <td>
-        n/a
-    </td>
-    <td>
-      {{quantity}}
-    </td>
-    <td  style="float: right; width:100%;"><b>${{total.toFixed(2)}}</b></td>
+    <td><b>Game Quantity: {{quantity}}</b></td>
+    <td><b>Grand Total: ${{total.toFixed(2)}}</b></td>
   </tr>
   
   </tbody>
