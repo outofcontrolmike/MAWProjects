@@ -12,7 +12,7 @@ let projects = [
 
 GreatRace = {
     img: "img/greatrace1.JPG",
-    href: "../../Great Race - Javascript/race.html",
+    href: "../../Great Race - JavaScript/race.html",
     name: "The Great Race",
     meta: "Javascript and Fomantic",
     desc: "A race between Yoshi and Mario. Who will win???",
