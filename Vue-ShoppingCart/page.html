@@ -17,16 +17,16 @@
 </head>
 <body class="ui container" style="height:fit-content; background-color: black;"></body>
 
-<div class="ui container stackable segment" style="margin-top:5%; background-color: gray;">
+<div class="ui container stackable segment" style="margin-top:2%; background-color: gray; border-radius: 10%; margin-bottom: 10%;">
     <!--header for page-->
-    <div class="text header center container" style="text-align: center; margin-bottom:25px; margin:2%;">
-        <h1>Vue Shopping Cart</h1></div>
+    <div class="text header center container" style="text-align: center;  margin:2%;">
+        <h2>Vue Shopping Cart</h2></div>
           <!--Product images / Add to option-->
     
       <div id="app">
         <div class="ui link cards centered">
       <div v-for="game in games">
-      <div class="card ui" style="margin:25px; height: fit-content; width:300px;">
+      <div class="card ui padded" style="margin:15px; height: fit-content; width:300px;">
         <div class="image ui medium">
           <img v-bind:src="game.imgSrc">
         </div>
@@ -59,9 +59,8 @@
       </div>
     <!--end products-->
     <!--Shopping cart content-->
-    <hr>
-    <div class="ui " style="height:fit-content; margin-bottom:100px;">
-      <p style="text-align: center;"><span class="ui big text center">Order Summary</span></p>
+    <div class="ui " style="height:fit-content; margin-bottom:5%;">
+      <p style="text-align: center;"><span class="ui big text center" >Order Summary</span></p>
 <!-- Start table-->
 <table class="ui celled table">
   <thead>
@@ -80,7 +79,7 @@
       <td id="" v-if="game.ordered > 0">{{game.ordered}}</td>
       <td id="totalAmount" v-if="game.ordered > 0">${{(game.total * game.ordered).toFixed(2)}}</td>
   </tr>
-  <tr style="background-color: antiquewhite;">
+  <tr style="background-color: mediumpurple;">
     <td>
       Grand Totals: 
     </td>
