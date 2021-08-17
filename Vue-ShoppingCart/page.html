@@ -51,7 +51,7 @@
           </span>
           <span>
             <i class="money icon"></i>
-            {{game.price}}
+            {{game.total}}
           </span>
         </div>
       </div>
@@ -76,11 +76,11 @@
     <tr id="btext" v-for="game in games">
       <td id="left" v-if="game.ordered > 0"> {{game.name}} </td>
       <td id="" v-if="game.ordered > 0"> {{game.developer}} </td>
-      <td id="" v-if="game.ordered > 0"> {{game.price2}}</td>
+      <td id="" v-if="game.ordered > 0"> ${{game.total}}</td>
       <td id="" v-if="game.ordered > 0">{{game.ordered}}</td>
-      <td id="totalAmount" v-if="game.ordered > 0">${{game.total * game.ordered}}</td>
+      <td id="totalAmount" v-if="game.ordered > 0">${{(game.total * game.ordered).toFixed(2)}}</td>
   </tr>
-  <tr>
+  <tr style="background-color: antiquewhite;">
     <td>
       Grand Totals: 
     </td>
@@ -93,7 +93,7 @@
     <td>
       {{quantity}}
     </td>
-    <td  style="float: right; width:100%;"><b>${{total}}</b></td>
+    <td  style="float: right; width:100%;"><b>${{total.toFixed(2)}}</b></td>
   </tr>
   
   </tbody>

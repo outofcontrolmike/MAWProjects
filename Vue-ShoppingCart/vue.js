@@ -4,7 +4,6 @@ let totalAmount = 0;
 var app = new Vue({
   el: "#app", // links Vue to the Div
   data: {
-    cartItem: 0,
     total: 0,
     quantity: 0,
     games: [
@@ -13,8 +12,6 @@ var app = new Vue({
         name: "Breath of Fire II",
         developer: "Capcom",
         stock: 5,
-        price: "$" + 54.99,
-        price2: "$" + 54.99,
         total: 54.99,
         ordered: 0,
         imgSrc: "img/Breathoffire2_box.jpg",
@@ -26,8 +23,6 @@ var app = new Vue({
         name: "Chrono Trigger",
         developer: "SquareSoft",
         stock: 5,
-        price: "$" + 104.95,
-        price2: "$" + 104.95,
         total: 104.95,
         ordered: 0,
         imgSrc: "img/chrono.jpg",
@@ -38,8 +33,6 @@ var app = new Vue({
         name: "Megaman X3",
         developer: "Capcom",
         stock: 5,
-        price: "$" + 339.94,
-        price2: "$" + 339.94,
         total: 339.94,
         ordered: 0,
         imgSrc: "img/megamanx3.jpg",
@@ -56,7 +49,7 @@ var app = new Vue({
       if(theGame.stock > 0)
       theGame.ordered++;
       theGame.stock--;
-      this.total += theGame.total;
+      (this.total += theGame.total).toFixed(2);
       this.quantity++;
       // totalAmount += theGame.total;
       // document.getElementById('totalAmount').innerHTML += totalAmount;
@@ -64,7 +57,7 @@ var app = new Vue({
     removeGame(theGame) {
       theGame.stock++;
       theGame.ordered--;
-      this.total -= theGame.total;
+      (this.total -= theGame.total).toFixed(2);
       this.quantity--;
 
     },
