@@ -5,8 +5,8 @@ var app = new Vue({
   el: "#app", // links Vue to the Div
   data: {
     cartItem: 0,
-    cartTotal: 0,
     total: 0,
+    quantity: 0,
     games: [
       // this is an array filled with objects
       {
@@ -53,19 +53,25 @@ var app = new Vue({
   methods: {
     // these methods make adjustments to the shopping cart
     addGame(theGame) {
+      if(theGame.stock > 0)
       theGame.ordered++;
       theGame.stock--;
-      theGame.cartTotal += theGame.total;
+      this.total += theGame.total;
+      this.quantity++;
       // totalAmount += theGame.total;
       // document.getElementById('totalAmount').innerHTML += totalAmount;
     },
     removeGame(theGame) {
       theGame.stock++;
       theGame.ordered--;
- 
+      this.total -= theGame.total;
+      this.quantity--;
+
     },
 
     // cartTotal(theGame) {
     // },
   },
 });
+
+console.log(app);

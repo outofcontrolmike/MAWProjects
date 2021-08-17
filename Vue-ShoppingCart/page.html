@@ -67,22 +67,33 @@
   <thead>
     <tr>
     <th>Game Ordered</th>
+    <th>Developer</th>
     <th>Price</th>
     <th>Quantity</th>
     <th>Total</th>
   </tr></thead>
-  <tbody id="grabMe">
+  <tbody>
     <tr id="btext" v-for="game in games">
       <td id="left" v-if="game.ordered > 0"> {{game.name}} </td>
+      <td id="" v-if="game.ordered > 0"> {{game.developer}} </td>
       <td id="" v-if="game.ordered > 0"> {{game.price2}}</td>
       <td id="" v-if="game.ordered > 0">{{game.ordered}}</td>
       <td id="totalAmount" v-if="game.ordered > 0">${{game.total * game.ordered}}</td>
   </tr>
   <tr>
-    <td><b>total purchase</b></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>
+      Grand Totals: 
+    </td>
+    <td>
+
+    </td>
+    <td>
+        n/a
+    </td>
+    <td>
+      {{quantity}}
+    </td>
+    <td  style="float: right; width:100%;"><b>${{total}}</b></td>
   </tr>
   
   </tbody>
