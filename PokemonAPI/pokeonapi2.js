@@ -4,28 +4,19 @@ window.onload = invertColors;
 //variables
 var list = document.getElementById("test");
 var toggleID = document.getElementById("catchOne");
-var toggleCatch = document.getElementById("catchList");
 var input = document.getElementById("searchValue").value;
 var pCount = document.getElementById("count");
-var btnRand = document.getElementById("catchRandom");
 var mainPkCount = 0;
 var counter = 1;
 var prevUrl = "";
 
 //event listeners
 var searchInput = document.getElementById('searchValue');
-var btnRandom = document
-  .getElementById("catchRandom")
-  .addEventListener("click", catchRandom);
-var btnInvert = document
-  .getElementById("night")
-  .addEventListener("click", invertColors);
+
  var dayInvert= document
   .getElementById("day")
   .addEventListener("click",revertColors);
-var btnCatchMult = document
-  .getElementById("catchList")
-  .addEventListener("click", catchList);
+
 document.getElementById("clear").addEventListener("click", clearList);
 var btnSingle = document
   .getElementById("catchOne")
@@ -251,8 +242,6 @@ function createSingle(pokeData) {
 function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
-  document.getElementById("catchRandom").disabled = false;
-  document.getElementById("catchList").disabled = false;
   document.getElementById("catchOne").disabled = false;
 
   pCount.innerHTML = "";
@@ -298,11 +287,10 @@ document.getElementById('footerText').style.color = "black";
 
 //Disabling buttons
 function disableButtons() {
-  document.getElementById("catchRandom").disabled = true;
-  document.getElementById("catchList").disabled = true;
   document.getElementById("catchOne").disabled = true;
 }
 
-function disableRandomButton(status) {
-  document.getElementById("catchRandom").disabled = status;
-}
+//Accordion 
+$('.ui.accordion')
+  .accordion()
+;

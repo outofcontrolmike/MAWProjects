@@ -33,41 +33,6 @@
     </style>
   </head>
   <body id="background">
-      <!-- revamp -->
-      <!--header nav-->
-     <!-- <header class="header">
-        start nav bar
-        <nav class="navbar navbar-expand-sm">
-          <ul class="navbar-nav col-11">
-            <li class="nav-item">
-              <a class="nav-link" href="home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hikes</a>
-            </li>
-    <li class="nav-item dropdown">
-    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Projects
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-      <a href="../../PokemonAPI/pokemon.html" class="dropdown-item ml-0">Rock Paper Scissors</a>
-      <a href="../Projects/CharacterCreate.html" class="dropdown-item ml-0">Create a Character</a>
-      <a href="../Projects/GuessNum.html" class="dropdown-item ml-0">Guess the number!</a> 
-    </div>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="form.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">About</a>
-            </li>
-          </ul>
-          <a class="navbar-brand col-1" href="#"><span><img class="logo" src="img/Yosemite_logo.jpg" alt="logo"></span></a>
-        </nav>
-      -->
-        <!--end nav bar--> 
-      <!-- </header> -->
-      <!--end header-->
     
       <!-- header of content-->
       <div id="content" class="ui container" style="padding-bottom: 0%;">
@@ -82,9 +47,89 @@
   
       <!-- end header of content-->
 
-      <!--body-->
+      <!-- NEW Menu-- ****************************************************-->
+      <div class="ui">
+        <div id="searchTools" class="ui stackable segment container">
+          <div class="ui container">
+            <div id="inputContainer"class="ui icon input fluid">
+                <input class="searchInput" type="text" id="searchValue" placeholder="Search Pokemon Name...">
+                <i class="inverted circular search link icon" tabindex="0" type="submit" id="catchOne"></i>
+              </div>
+              </div>
+              <hr>
+              <div class="ui container">
+
+
+          <!-- Accordian -->
+        <div class="ui accordion" id="accordion">
+          <div class="title" id="">
+            <i class="dropdown icon"></i>
+            Advanced Options
+          </div>
+          <div class="content">
+            <div class="transition hidden">
+            <p>
+            </p>
+            <!-- end accordian-->
+            <div class="ui form">
+              <div class="grouped fields">
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="example2" checked="checked">
+                    <label>Name</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="example2">
+                    <label>ID</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox fluid">
+                    <input class="ui fluid" type="radio" name="example2">
+                    <label>Collection</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox fluid">
+                    <input class="ui fluid" type="radio" name="example2">
+                    <label>Random</label>
+                  </div>
+                </div>
+<hr>
+<button
+            id="clear"
+              type="button"
+              class="ui red button large"
+            >
+            Reset</button>
+            <button
+            id="help"
+            type="button"
+            class="ui blue button large">Help</button>
+              </button>   
+              <div class="ui toggle checkbox" id="day" style="float:right;">
+                <input type="checkbox" name="public">
+                <label>Brighten</label>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                  </div>
+                  
+          </div>
+      </div>
+
+
+      <!-- End new Menu-- **************************************************-->>
+
+
       <!--Input and buttons-->
         <!--1st row -->
+
+
         <div id="menu" class="row pb-4">
         <div class="container ml-3 mr-3">
           <div class="ui labeled input large fluid">
@@ -96,37 +141,7 @@
         </div>
         </div>
         <div class="ui container">
-          <button
-            id="catchOne"
-            type="button"
-            class="ui orange button large fluid"
-          >
-            Single Catch
-          </button>
-            
-          <button
-            id="catchList"
-            type="button"
-            class="ui primary button large fluid"
-          >
-            Multiple Catch
-          </button>
-          <button
-            id="catchRandom"
-            type="button"
-            class="ui green button large fluid"
-          >
-            Random Amount Catch
-          </button>
-          <button
-          id="clear"
-          type="button"
-          class="ui red button large fluid"
-        >
-        Clear</button>
-        <button id="day" class="ui button yellow large fluid">Day</button>
-        <button id="night" class="ui button large purple fluid">Night</button>
-
+  
         <!-- Should implement a button group here to toggle the classes-->
         </div>
         </div>
@@ -143,6 +158,5 @@
 
     <!--<script src="pokemon.js"></script> -->
     <script src="pokeonapi2.js"></script>
-
   </body>
 </html>
