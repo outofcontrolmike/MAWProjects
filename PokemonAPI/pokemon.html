@@ -40,8 +40,6 @@
         <h2 class="ui container header">
           <div class="content">
            <p id="title"> Pokedex JS</p>
-                     <a href="../WilsonBlog/html/homeNew.php"><img class="ui image tiny centered pb-4" src="pk.png"></a>
-
           </div>
         </h2>
       </div>
@@ -49,13 +47,15 @@
       <!-- end header of content-->
 
       <!-- NEW Menu-- ****************************************************-->
-      <div class="ui" id="menu">
+      <div class="ui inverted" id="menu">
         <div id="searchTools" class="ui stackable segment container">
           <div class="ui container">
-            <div id="inputContainer"class="ui icon input fluid">
+            <div id="inputContainer"class="ui icon input w-75">
                 <input class="searchInput" type="text" id="searchValue" placeholder="Search Pokemon Name...">
-                <i class="inverted circular search link icon" tabindex="0" type="submit" id="catchOne"></i>
+                <i class="inverted circular search link icon" tabindex="0" type="submit" id="search"></i>
               </div>
+              <span style="float: right;" onclick="catchRandom()"><img class="ui image tiny centered" src="pk.png"></span>
+
               </div>
               <hr>
               <div class="ui container">
@@ -76,28 +76,17 @@
               <div class="grouped fields">
                 <div class="field">
                   <div class="ui radio checkbox">
-                    <input type="radio" name="example2" checked="checked">
-                    <label>Name</label>
-                  </div>
-                </div>
-                <div class="field">
-                  <div class="ui radio checkbox">
-                    <input type="radio" name="example2">
-                    <label>ID</label>
+                    <input type="radio" name="example2" checked="checked" id="name">
+                    <label>Name/ID</label>
                   </div>
                 </div>
                 <div class="field">
                   <div class="ui radio checkbox fluid">
-                    <input class="ui fluid" type="radio" name="example2">
+                    <input class="ui fluid" type="radio" name="example2" id="collection">
                     <label>Collection</label>
                   </div>
                 </div>
-                <div class="field">
-                  <div class="ui radio checkbox fluid">
-                    <input class="ui fluid" type="radio" name="example2">
-                    <label>Random</label>
-                  </div>
-                </div>
+
 <hr>
 <button
             id="clear"

@@ -10,17 +10,28 @@ var mainPkCount = 0;
 var counter = 1;
 var prevUrl = "";
 
+
+//SUPER IMPORTANT
+let search = document.getElementById('search');
+search.addEventListener('click',catchSingle)
+
+let collection = document.getElementById('collection');
+collection.addEventListener('change',fetchStatus);
+
+let single = document.getElementById('name');
+single.addEventListener('change',fetchStatus);
+
+
 //event listeners
 var searchInput = document.getElementById('searchValue');
 
  var dayInvert= document
   .getElementById("day")
-  .addEventListener("click",revertColors);
+  .addEventListener("click",invertColors);
+
 
 document.getElementById("clear").addEventListener("click", clearList);
-var btnSingle = document
-  .getElementById("catchOne")
-  .addEventListener("click", catchSingle);
+
 
   // Execute a function when the user releases a key on the keyboard
 searchInput.addEventListener("keyup", function(event) {
@@ -28,15 +39,29 @@ searchInput.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
     event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("myBtn").click();
   }
 });
 
+function fetchStatus() {
+let pokeSearch = document.getElementById('search');
+let single = document.getElementById('name');
+let collection = document.getElementById('collection');
+
+  if(single.checked){
+    pokeSearch.removeEventListener('click',catchList);
+    pokeSearch.addEventListener('click',catchSingle);
+    console.log("we are checking single");
+  }
+
+  if(collection.checked){
+    pokeSearch.removeEventListener('click',catchSingle);
+    pokeSearch.addEventListener('click',catchList);
+    console.log("collection is checked");
+  }  
+}
+
 //Fetching Functions //
 //****************************************************************************************************************************** */
-//Strech goals functions
-
 //Fetch information for one pokemon
 function catchSingle() {
   var input = document.getElementById("searchValue").value;
@@ -76,7 +101,7 @@ function catchSingle() {
   else if (input != "") {
     var LowerInput = input.toLowerCase(0);
     while(prevUrl != input) {
-    var fetcher = fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
+    fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
       .then((response) => response.json())
       .then(function(pokemon) {
         createSingle(pokemon);
@@ -119,16 +144,15 @@ function catchList() {
 
 //Fetch Random Amount
 function catchRandom() {
-  var alg = Math.floor(Math.random(1) * 650);
-  pCount.innerHTML = alg + " Random Pokemon Fetched!";
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=" + alg)
+  var alg = Math.floor(Math.random(1) * 650); {
+  fetch("https://pokeapi.co/api/v2/pokemon/" + alg)
     .then((response) => response.json())
-    .then(function(allPokemon) {
-      allPokemon.results.forEach(function(pokemon) {
-        fetchPokemonData(pokemon);
-      });
+    .then(function(pokemon) {
+      createSingle(pokemon);
     });
+  }
 }
+
 function fetchPokemonData(pokemon) {
   let url = pokemon.url;
   fetch(url)
@@ -182,7 +206,7 @@ function renderPokemon(pokeData) {
     pokeWeight,
     baseStats
   );
-  container.append(pokeContainer);
+  container.prepend(pokeContainer);
 } //end multi
 
 //Render Single Pokemon
@@ -263,8 +287,6 @@ pCount.style.color = "white";
 //container that pokemon are held on
 document.getElementById("content").style.backgroundColor = "black";
 document.getElementById("test").style.backgroundColor = "black";
-document.getElementById("footer").style.backgroundColor = "black";
-document.getElementById('footerText').style.color = "white";
 }
 
 //Invert back to normal UI
