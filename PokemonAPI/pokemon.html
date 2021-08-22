@@ -54,7 +54,7 @@
                 <input class="searchInput" type="text" id="searchValue" placeholder="Search Pokemon Name...">
                 <i class="inverted circular search link icon" tabindex="0" type="submit" id="search"></i>
               </div>
-              <span style="float: right;" onclick="catchRandom()"><img class="ui image tiny centered" src="pk.png"></span>
+              <span style="float: right;" onclick="catchRandom()"><img class="ui image tiny centered" alt="randomCatch" src="pk.png"></span>
 
               </div>
               <hr>
@@ -127,7 +127,45 @@
          <div class="row text-center justify-content-center mb-4 ml-4 mr-4" id="test">
     </div>
 
-    <!--<script src="pokemon.js"></script> -->
-    <script src="pokeonapi2.js"></script>
+     <!--Modal-->
+ <div class="ui modal" style="width:75%; margin-left:13%;">
+  <i class="close icon"></i>
+  <div class="header">
+    <h2 id="name">Helpful Info</h2>
+  </div>
+  <div class="content">
+    <div class="description">
+    <div class="rules">
+<h3>Pokdex Javascript Info</h3>
+<p>Weclome to this small web app!  The first option you have avaiable is searching by pokemon name.  You can also enter a pokemon's ID if you know it.  Once you filled out the input field you can either press enter or select the search icon.</p>
+  <b>Beware:</b><p>If you enter a pokemon's name incorrectly, you won't get any results back.</p>
+<hr>
+<h3>Search Options</h3>
+<p>
+  You also have the option to retreive a list of pokemon.  To do this you'll select the Collection option in the advanced Search.  Once selected, enter the number of pokemon you want to receive and the list should generate the amount of pokemon you entered.  It tries it's best to list them out in order but doesn't always work.
+</p>
+<hr>
+<h3>Reseting page</h3>
+<p>You can easily clear the list of pokemon by clicking Reset. </p>
+<hr>
+<h3>Brigtening the Page</h3>
+<p>It's possible to invert the colors of this site. Feel free to toggle between Dark and Bright with the toggle switch</p>
+<hr>
+<h3>Sourcing Pokemon Information</h3>
+<p>Any information about the pokemon and access to it's data is provided by the <a target="_blank" href="https://pokeapi.co/">PokeDex API (Application Programming Interface</a></p>
+</div>
+    </div>
+  </div>
   </body>
 </html>
+
+<script>
+  //Fomatic Jquery for showing of modal
+  $('.blue').click((e) => {
+  $('.ui.modal')
+  .modal('show')
+  }); 
+  </script>
+
+    <!--<script src="pokemon.js"></script> -->
+    <script src="pokeonapi2.js"></script>

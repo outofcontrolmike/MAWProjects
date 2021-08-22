@@ -12,6 +12,9 @@ var prevUrl = "";
 
 
 //SUPER IMPORTANT
+document.getElementById('searchValue').addEventListener('change',fetchStatus);
+
+
 let search = document.getElementById('search');
 search.addEventListener('click',catchSingle)
 
@@ -20,6 +23,7 @@ collection.addEventListener('change',fetchStatus);
 
 let single = document.getElementById('name');
 single.addEventListener('change',fetchStatus);
+
 
 
 //event listeners
@@ -39,6 +43,7 @@ searchInput.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
     event.preventDefault();
+    document.getElementById('search').click();
   }
 });
 
@@ -46,17 +51,18 @@ function fetchStatus() {
 let pokeSearch = document.getElementById('search');
 let single = document.getElementById('name');
 let collection = document.getElementById('collection');
+let placeholder = document.getElementById('searchValue');
 
   if(single.checked){
     pokeSearch.removeEventListener('click',catchList);
     pokeSearch.addEventListener('click',catchSingle);
-    console.log("we are checking single");
+    placeholder.placeholder = "Enter Name or ID";
   }
 
   if(collection.checked){
     pokeSearch.removeEventListener('click',catchSingle);
     pokeSearch.addEventListener('click',catchList);
-    console.log("collection is checked");
+    placeholder.placeholder = "Enter Amount";
   }  
 }
 
@@ -266,8 +272,7 @@ function createSingle(pokeData) {
 function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
-  document.getElementById("catchOne").disabled = false;
-
+  document.getElementById("catchOne").disabled = false;  
   pCount.innerHTML = "";
   counter = 1;
   mainPkCount = 0;
@@ -305,11 +310,6 @@ document.getElementById("content").style.backgroundColor = "white";
 document.getElementById("test").style.backgroundColor = "white";
 document.getElementById("footer").style.backgroundColor = "white";
 document.getElementById('footerText').style.color = "black";
-}
-
-//Disabling buttons
-function disableButtons() {
-  document.getElementById("catchOne").disabled = true;
 }
 
 //Accordion 
