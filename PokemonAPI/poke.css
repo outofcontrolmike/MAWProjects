@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+#searchTools {
+  margin-top:1%;
+}
+
 #header {
     margin-top:3%;
 }
@@ -28,6 +32,11 @@ h1::first-letter {
 
 .ui.modal {
   width:100%;
+}
+
+
+.card {
+  border-radius: 50px;
 }
 
 

@@ -29,11 +29,6 @@ single.addEventListener('change', fetchStatus);
 //event listeners
 var searchInput = document.getElementById('searchValue');
 
-var dayInvert = document
-  .getElementById("day")
-  .addEventListener("click", invertColors);
-
-
 document.getElementById("clear").addEventListener("click", clearList);
 
 
@@ -177,7 +172,7 @@ function renderPokemon(pokeData) {
 
   let container = document.getElementById("test");
   let pokeContainer = document.createElement("div");
-  pokeContainer.classList.add("col-m-6", "m-4", "pb-4", "align-content-center", "success");
+  pokeContainer.classList.add("col-m-6", "card", "m-4", "pb-4", "align-content-center", "success");
   container.classList.add("ui");
   var pokeImage = document.createElement("img");
   var pokeName = document.createElement("h1");
@@ -238,7 +233,6 @@ function createSingle(pokeData) {
   pokeImage.height = "300";
   pokeImage.width = "300";
   pokeImage.style.alignSelf = "center";
-  pokeContainer.style.backgroundColor = "#d5e0da";
 
 
 
@@ -255,7 +249,6 @@ function createSingle(pokeData) {
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML = "EXP earned: " + baseStat;
-  pokeContainer.style.backgroundColor = "background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)";
   pokeContainer.append(
     pokeImage,
     pokeName,
@@ -265,6 +258,7 @@ function createSingle(pokeData) {
     pokeWeight,
     baseStats
   );
+  pokeContainer.style.borderRadius = "50px;";
 
   let colorType = pokeData.types[0].type.name;
   setColor(colorType, pokeContainer);
@@ -351,37 +345,14 @@ function clearList() {
 //Invert colors (Should take in a couple parameters..for some type of functionallity)
 function invertColors() {
   //navigation bar
-  document.getElementById('header').style.backgroundColor = "black";
-  document.getElementById('title').style.color = "white";
-  document.getElementById('title').style.backgroundcolor = "black";
-  document.getElementById('menu').style.backgroundColor = "black";
+ 
   document.getElementById('background').style.backgroundColor = "black";
   //change display pokemon count color
   document.getElementById("displayCount").style.backgroundColor = "black";
   pCount.style.color = "white";
   //container that pokemon are held on
-  document.getElementById("content").style.backgroundColor = "black";
   document.getElementById("test").style.backgroundColor = "black";
 }
-
-//Invert back to normal UI
-function revertColors() {
-  //navigation bar
-  document.getElementById('header').style.backgroundColor = "white";
-  document.getElementById('title').style.color = "black";
-  document.getElementById('title').style.backgroundcolor = "white";
-  document.getElementById('menu').style.backgroundColor = "white";
-  document.getElementById('background').style.backgroundColor = "white";
-  //change display pokemon count color
-  document.getElementById("displayCount").style.backgroundColor = "white";
-  pCount.style.color = "black";
-  //container that pokemon are held on
-  document.getElementById("content").style.backgroundColor = "white";
-  document.getElementById("test").style.backgroundColor = "white";
-  document.getElementById("footer").style.backgroundColor = "white";
-  document.getElementById('footerText').style.color = "black";
-}
-
 //Accordion 
 $('.ui.accordion')
   .accordion()

@@ -2,66 +2,46 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex JS</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-      <!-- You MUST include jQuery before Fomantic -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="poke.css" />
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
-    <style>
-      .myCard {
-        vertical-align: middle;
-        border-width: unset;
-        border-radius: 3%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-        transition: 0.4s;
-        border-radius: 5px;
-      }
-    </style>
-  </head>
-  <body id="background">
-    
-      <!-- header of content-->
-      <div id="content" class="ui container" style="padding-bottom: 0%;">
-      <div id="header" class="row text-center">
-        <h2 class="ui container header">
-          <div class="content">
-           <p id="title"> Pokedex JS</p>
-          </div>
-        </h2>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex JS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <!-- You MUST include jQuery before Fomantic -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css" />
+  <link rel="stylesheet" type="text/css" href="poke.css" />
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body id="background">
+
+  <!-- header of content--
   
       <!-- end header of content-->
 
-      <!-- NEW Menu-- ****************************************************-->
-      <div class="ui inverted" id="menu">
-        <div id="searchTools" class="ui stackable segment container">
-          <div class="ui container">
-            <div id="inputContainer"class="ui icon input w-75">
-                <input class="searchInput" type="text" id="searchValue" placeholder="Search Pokemon Name...">
-                <i class="inverted circular search link icon" tabindex="0" type="submit" id="search"></i>
-              </div>
-              <span style="float: right;" onclick="catchRandom()"><img class="ui image tiny centered" alt="randomCatch" src="pk.png"></span>
+  <!-- NEW Menu-- ****************************************************-->
+  <div class="ui inverted" id="menu">
+    <div id="searchTools" class="ui stackable segment container">
+      <div class="ui container">
+        <div id="inputContainer" class="ui icon input w-75">
+          <input class="searchInput" type="text" id="searchValue" placeholder="Search Pokemon Name...">
+          <i class="inverted circular search link icon" tabindex="0" type="submit" id="search"></i>
+        </div>
+        <span style="float: right;" onclick="catchRandom()"><img class="ui image tiny centered" alt="randomCatch"
+            src="pk.png"></span>
 
-              </div>
-              <hr>
-              <div class="ui container">
+      </div>
+      <hr>
+      <div class="ui container">
 
 
-          <!-- Accordian -->
+        <!-- Accordian -->
         <div class="ui accordion" id="accordion">
           <div class="title" id="">
             <i class="dropdown icon"></i>
@@ -69,103 +49,104 @@
           </div>
           <div class="content">
             <div class="transition hidden">
-            <p>
-            </p>
-            <!-- end accordian-->
-            <div class="ui form">
-              <div class="grouped fields">
-                <div class="field">
-                  <div class="ui radio checkbox">
-                    <input type="radio" name="example2" checked="checked" id="name">
-                    <label>Name/ID</label>
+              <p>
+              </p>
+              <!-- end accordian-->
+              <div class="ui form">
+                <div class="grouped fields">
+                  <h3>Filters</h3>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="example2" checked="checked" id="name">
+                      <label>Name/ID</label>
+                    </div>
                   </div>
-                </div>
-                <div class="field">
-                  <div class="ui radio checkbox fluid">
-                    <input class="ui fluid" type="radio" name="example2" id="collection">
-                    <label>Collection</label>
+                  <div class="field">
+                    <div class="ui radio checkbox fluid">
+                      <input class="ui fluid" type="radio" name="example2" id="collection">
+                      <label>Collection</label>
+                    </div>
                   </div>
-                </div>
+                  <hr>
+                  <h3>Other</h3>
+                  <button id="clear" type="button" class="ui red button large">
+                    Reset</button>
+                  <button id="help" type="button" class="ui blue button large">Help</button>
+                  </button>
 
-<hr>
-<button
-            id="clear"
-              type="button"
-              class="ui red button large"
-            >
-            Reset</button>
-            <button
-            id="help"
-            type="button"
-            class="ui blue button large">Help</button>
-              </button>   
-              <div class="ui toggle checkbox" id="day" style="float:right;">
-                <input type="checkbox" name="public">
-                <label>Brighten</label>
-              </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-                  </div>
-                  
-          </div>
+
       </div>
-
-
-      <!-- End new Menu-- **********-->
-
-        </div>
-        </div>
-      </div>        <!--end 1st row-->
-        <!--2nd row-->
-        <div id="displayCount" class="text-center row">
-        <div class="col-12">
-          <p id="count" class="container display-4"></p>
-        </div>
-        </div>
-         <div class="row text-center justify-content-center mb-4 ml-4 mr-4" id="test">
     </div>
 
-     <!--Modal-->
- <div class="ui modal" style="width:75%; margin-left:13%;">
-  <i class="close icon"></i>
-  <div class="header">
-    <h2 id="name">Helpful Info</h2>
+
+    <!-- End new Menu-- **********-->
+
   </div>
-  <div class="content">
-    <div class="description">
-    <div class="rules">
-<h3>Pokdex Javascript Info</h3>
-<p>Weclome to this small web app!  The first option you have avaiable is searching by pokemon name.  You can also enter a pokemon's ID if you know it.  Once you filled out the input field you can either press enter or select the search icon.</p>
-  <b>Beware:</b><p>If you enter a pokemon's name incorrectly, you won't get any results back.</p>
-<hr>
-<h3>Search Options</h3>
-<p>
-  You also have the option to retreive a list of pokemon.  To do this you'll select the Collection option in the advanced Search.  Once selected, enter the number of pokemon you want to receive and the list should generate the amount of pokemon you entered.  It tries it's best to list them out in order but doesn't always work.
-</p>
-<hr>
-<h3>Reseting page</h3>
-<p>You can easily clear the list of pokemon by clicking Reset. </p>
-<hr>
-<h3>Brigtening the Page</h3>
-<p>It's possible to invert the colors of this site. Feel free to toggle between Dark and Bright with the toggle switch</p>
-<hr>
-<h3>Sourcing Pokemon Information</h3>
-<p>Any information about the pokemon and access to it's data is provided by the <a target="_blank" href="https://pokeapi.co/">PokeDex API (Application Programming Interface</a></p>
-</div>
+  </div>
+  </div>
+  <!--end 1st row-->
+  <!--2nd row-->
+  <div id="displayCount" class="text-center row">
+    <div class="col-12">
+      <p id="count" class="container display-4"></p>
     </div>
   </div>
-  </body>
+  <div class="row text-center justify-content-center mb-4 ml-4 mr-4" id="test">
+  </div>
+
+  <!--Modal-->
+  <div class="ui modal" style="width:75%; margin-left:13%;">
+    <i class="close icon"></i>
+    <div class="header">
+      <h2 id="name">Helpful Info</h2>
+    </div>
+    <div class="content">
+      <div class="description">
+        <div class="rules">
+          <h3>Pokdex Javascript Info</h3>
+          <p>Weclome to this small web app! The first option you have avaiable is searching by pokemon name. You can
+            also enter a pokemon's ID if you know it. Once you filled out the input field you can either press enter or
+            select the search icon.</p>
+          <b>Beware:</b>
+          <p>If you enter a pokemon's name incorrectly, you won't get any results back.</p>
+          <hr>
+          <h3>Search Options</h3>
+          <p>
+            You also have the option to retreive a list of pokemon. To do this you'll select the Collection option in
+            the advanced Search. Once selected, enter the number of pokemon you want to receive and the list should
+            generate the amount of pokemon you entered. It tries it's best to list them out in order but doesn't always
+            work.
+          </p>
+          <hr>
+          <h3>Reseting page</h3>
+          <p>You can easily clear the list of pokemon by clicking Reset. </p>
+          <hr>
+          <h3>Brigtening the Page</h3>
+          <p>It's possible to invert the colors of this site. Feel free to toggle between Dark and Bright with the
+            toggle switch</p>
+          <hr>
+          <h3>Sourcing Pokemon Information</h3>
+          <p>Any information about the pokemon and access to it's data is provided by the <a target="_blank"
+              href="https://pokeapi.co/">PokeDex API (Application Programming Interface</a></p>
+        </div>
+      </div>
+    </div>
+</body>
+
 </html>
 
 <script>
   //Fomatic Jquery for showing of modal
   $('.blue').click((e) => {
-  $('.ui.modal')
-  .modal('show')
-  }); 
-  </script>
+    $('.ui.modal')
+      .modal('show')
+  });
+</script>
 
-    <!--<script src="pokemon.js"></script> -->
-    <script src="pokeonapi2.js"></script>
+<!--<script src="pokemon.js"></script> -->
+<script src="pokeonapi2.js"></script>
