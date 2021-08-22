@@ -336,7 +336,6 @@ function setColor(color, pokeContainer) {
 function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
-  document.getElementById("catchOne").disabled = false;
   pCount.innerHTML = "";
   counter = 1;
   mainPkCount = 0;
