@@ -229,6 +229,13 @@ function createSingle(pokeData) {
   var pokeHeight = document.createElement("p");
   var pokeWeight = document.createElement("p");
   var baseStats = document.createElement("p");
+  
+  var abilities = document.createElement('p');
+  var gameIndices = document.createElement('p');
+
+  var line = document.createElement('hr');
+
+
 
   pokeImage.height = "300";
   pokeImage.width = "300";
@@ -242,10 +249,11 @@ function createSingle(pokeData) {
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + pkId + ".png");
 
   pokeImage.src = pkImg;
-  pokeName.innerHTML = pokeData.name;
+  pokeName.innerHTML = pokeData.name + "<hr>";
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
-  // checkTypes();
+  abilities.innerHTML = "<hr><b>Abilities:</b><hr> " + pokeData.abilities.map((el) => el.ability.name);
+  gameIndices.innerHTML = "<hr><b>Game Indices:</b> <hr>" + pokeData.game_indices.map((el) => el.version.name);
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML = "EXP earned: " + baseStat;
@@ -256,8 +264,13 @@ function createSingle(pokeData) {
     poketypes,
     pokeHeight,
     pokeWeight,
-    baseStats
+    baseStats,
+    abilities,
+    gameIndices
   );
+
+  gameIndices.style.maxWidth = "350px";
+  abilities.style.maxWidth = "350px;";
   pokeContainer.style.borderRadius = "50px;";
 
   let colorType = pokeData.types[0].type.name;

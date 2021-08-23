@@ -1,13 +1,21 @@
+@font-face {
+  font-family: pokemon;
+  src: url('fonts.ttf');
+}
+
+body, h1,h3,.icon, .ui.button, .searchInput, #searchValue,span {
+  font-family: pokemon;
+}
+
 
 
 
 .searchInput {
   font-weight: 600;
-  font-variant: petite-caps;
   border: none;
-  font-size: xx-large;
-  letter-spacing: 15px;
-  font-family: 'EB Garamond', serif;
+  font-size: large;
+  letter-spacing: 5px;
+  font-family: pokemon;
   text-align: center;
 }
 
