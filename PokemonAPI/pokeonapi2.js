@@ -181,6 +181,9 @@ function renderPokemon(pokeData) {
   var pokeHeight = document.createElement("p");
   var pokeWeight = document.createElement("p");
   var baseStats = document.createElement("p");
+  var abilities = document.createElement('p');
+  var gameIndices = document.createElement('p');
+
   pokeImage.height = "300";
   pokeImage.width = "300";
   pokeImage.style.alignSelf = "center";
@@ -193,6 +196,8 @@ function renderPokemon(pokeData) {
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
+  abilities.innerHTML = "<hr><b>Abilities:</b><hr> " + pokeData.abilities.map((el) => el.ability.name);
+  gameIndices.innerHTML = "<b>Game Indices:</b> <hr>" + pokeData.game_indices.map((el) => el.version.name);
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML = "EXP earned:" + baseStat;
@@ -203,10 +208,14 @@ function renderPokemon(pokeData) {
     poketypes,
     pokeHeight,
     pokeWeight,
-    baseStats
+    baseStats,
+    abilities,
+    gameIndices
   );
 
   let colorType = pokeData.types[0].type.name;
+  gameIndices.style.maxWidth = "350px";
+  abilities.style.maxWidth = "350px;";
   setColor(colorType, pokeContainer);
 
   container.append(pokeContainer);
@@ -233,15 +242,9 @@ function createSingle(pokeData) {
   var abilities = document.createElement('p');
   var gameIndices = document.createElement('p');
 
-  var line = document.createElement('hr');
-
-
-
   pokeImage.height = "300";
   pokeImage.width = "300";
   pokeImage.style.alignSelf = "center";
-
-
 
   //image for pokemon
   var pkId = pokeData.id;
@@ -253,7 +256,7 @@ function createSingle(pokeData) {
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
   abilities.innerHTML = "<hr><b>Abilities:</b><hr> " + pokeData.abilities.map((el) => el.ability.name);
-  gameIndices.innerHTML = "<hr><b>Game Indices:</b> <hr>" + pokeData.game_indices.map((el) => el.version.name);
+  gameIndices.innerHTML = "<b>Game Indices:</b> <hr>" + pokeData.game_indices.map((el) => el.version.name);
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML = "EXP earned: " + baseStat;

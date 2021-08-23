@@ -3,12 +3,13 @@
   src: url('fonts.ttf');
 }
 
-body, h1,h3,.icon, .ui.button, .searchInput, #searchValue,span {
+h1,#count {
   font-family: pokemon;
 }
 
-
-
+p {
+  font-size: medium;
+}
 
 .searchInput {
   font-weight: 600;
