@@ -20,8 +20,16 @@ p {
   text-align: center;
 }
 
+.ui.button {
+  border-radius: 25px;
+}
+
 #searchTools {
   margin-top:1%;
+  background: #FF4E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 #header {
@@ -33,6 +41,11 @@ p {
     border: rgb(161, 117, 51);
     border-style: solid;
     font-size:xxx-large;
+}
+
+#advanced, h3 {
+    font-size: larger;
+    font-weight: bold;
 }
 
 h1::first-letter {

@@ -143,7 +143,7 @@ function catchList() {
 
 //Fetch Random Amount
 function catchRandom() {
-  var alg = Math.floor(Math.random(1) * 650); {
+  var alg = Math.floor(Math.random(1) * 898); {
     fetch("https://pokeapi.co/api/v2/pokemon/" + alg)
       .then((response) => response.json())
       .then(function (pokemon) {
@@ -182,7 +182,6 @@ function renderPokemon(pokeData) {
   var pokeWeight = document.createElement("p");
   var baseStats = document.createElement("p");
   var abilities = document.createElement('p');
-  var gameIndices = document.createElement('p');
 
   pokeImage.height = "300";
   pokeImage.width = "300";
@@ -196,8 +195,7 @@ function renderPokemon(pokeData) {
   pokeName.innerHTML = pokeData.name;
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
-  abilities.innerHTML = "<hr><b>Abilities:</b><hr> " + pokeData.abilities.map((el) => el.ability.name);
-  gameIndices.innerHTML = "<b>Game Indices:</b> <hr>" + pokeData.game_indices.map((el) => el.version.name);
+  abilities.innerHTML = "<hr><b>Abilities:<br></b> " + pokeData.abilities.map((el) => el.ability.name);
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML = "EXP earned:" + baseStat;
@@ -210,12 +208,11 @@ function renderPokemon(pokeData) {
     pokeWeight,
     baseStats,
     abilities,
-    gameIndices
   );
 
   let colorType = pokeData.types[0].type.name;
-  gameIndices.style.maxWidth = "350px";
-  abilities.style.maxWidth = "350px;";
+  abilities.style.wordWrap = "break-word";
+  abilities.style.maxWidth = "200px;";
   setColor(colorType, pokeContainer);
 
   container.append(pokeContainer);
@@ -240,7 +237,6 @@ function createSingle(pokeData) {
   var baseStats = document.createElement("p");
   
   var abilities = document.createElement('p');
-  var gameIndices = document.createElement('p');
 
   pokeImage.height = "300";
   pokeImage.width = "300";
@@ -255,8 +251,7 @@ function createSingle(pokeData) {
   pokeName.innerHTML = pokeData.name + "<hr>";
   pokeId.innerHTML = `#${pokeData.id}`;
   poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
-  abilities.innerHTML = "<hr><b>Abilities:</b><hr> " + pokeData.abilities.map((el) => el.ability.name);
-  gameIndices.innerHTML = "<b>Game Indices:</b> <hr>" + pokeData.game_indices.map((el) => el.version.name);
+  abilities.innerHTML = "<hr><b>Abilities:<br></b> " + pokeData.abilities.map((el) => el.ability.name);
   pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
   pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
   baseStats.innerHTML = "EXP earned: " + baseStat;
@@ -269,11 +264,10 @@ function createSingle(pokeData) {
     pokeWeight,
     baseStats,
     abilities,
-    gameIndices
   );
 
-  gameIndices.style.maxWidth = "350px";
-  abilities.style.maxWidth = "350px;";
+  abilities.style.maxWidth = "200px;";
+  abilities.style.wordWrap = "break-word";
   pokeContainer.style.borderRadius = "50px;";
 
   let colorType = pokeData.types[0].type.name;
