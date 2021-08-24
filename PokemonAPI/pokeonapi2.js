@@ -5,9 +5,6 @@ window.onload = invertColors;
 var list = document.getElementById("test");
 var toggleID = document.getElementById("catchOne");
 var input = document.getElementById("searchValue").value;
-var pCount = document.getElementById("count");
-var mainPkCount = 0;
-var counter = 1;
 var prevUrl = "";
 
 
@@ -69,7 +66,6 @@ function catchSingle() {
   if (input > 0 && input <= 893) {
     var pURL = input;
     while (prevUrl != pURL) {
-      mainPkCount += 1;
       /////////////////Fetch
       fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
         .then(response => {
@@ -92,7 +88,6 @@ function catchSingle() {
 
 
       //////////end fetch
-      pCount.innerHTML = mainPkCount + " Pokemon Fetched";
       document.getElementById("searchValue").value = "";
       prevUrl = pURL;
     }
@@ -108,7 +103,6 @@ function catchSingle() {
         });
       document.getElementById("searchValue").value = "";
       prevUrl = input;
-      mainPkCount += 1;
     }
   }
   //error handling
@@ -126,7 +120,6 @@ function catchList() {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
       .then((response) => response.json())
       .then(function (allPokemon) {
-        pCount.innerHTML = input + " Pokemon Fetched!";
         allPokemon.results.forEach(function (pokemon) {
           fetchPokemonData(pokemon);
 
@@ -215,7 +208,7 @@ function renderPokemon(pokeData) {
   abilities.style.maxWidth = "200px;";
   setColor(colorType, pokeContainer);
 
-  container.append(pokeContainer);
+  container.prepend(pokeContainer);
 } //end multi
 
 //Render Single Pokemon
@@ -346,19 +339,13 @@ function setColor(color, pokeContainer) {
 function clearList() {
   document.getElementById("test").innerHTML = "";
   document.getElementById("searchValue").value = "";
-  pCount.innerHTML = "";
-  counter = 1;
-  mainPkCount = 0;
 }
 
 //Invert colors (Should take in a couple parameters..for some type of functionallity)
 function invertColors() {
+  
   //navigation bar
- 
   document.getElementById('background').style.backgroundColor = "black";
-  //change display pokemon count color
-  document.getElementById("displayCount").style.backgroundColor = "black";
-  pCount.style.color = "white";
   //container that pokemon are held on
   document.getElementById("test").style.backgroundColor = "black";
 }
