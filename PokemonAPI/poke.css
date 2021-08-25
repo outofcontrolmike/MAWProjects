@@ -3,6 +3,15 @@
   src: url('fonts.ttf');
 }
 
+body {
+  background-image: url("ash.jpg");
+  background-color: #cccccc;
+  height:fit-content;
+  background-repeat:repeat-y;
+  background-size: cover;
+  position: relative;
+}
+
 h1,#count {
   font-family: pokemon;
   margin-top:20px;
