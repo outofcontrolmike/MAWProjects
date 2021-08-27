@@ -1,0 +1,22 @@
+
+
+a {
+  font-size: medium;
+}
+
+.ui.footer.segment {
+  padding: 5em 0em;
+}
+
+
+@media only screen and (max-width: 750px) {
+ #main {
+    margin-top:225px;
+  }
+  #about {
+    margin-top:100px;
+  }
+  div.ui.vertical.divider {
+    position:unset;
+  }
+}

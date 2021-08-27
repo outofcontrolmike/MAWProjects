@@ -4,34 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    
+    <link rel="stylesheet" href="../css/mediaQueries.css">
     <style>
-        
-  body {
-    background-color: #1b1c1d;
-    
-  }
-  footer, body {
-        background-color: black;;
-          
-  }
-
-  a {
-      font-size: medium;
-  }
-  
   .ui.menu .item img.logo {
     margin-right: 1.5em;
     padding: 1em 0em;
   }
   
-  .main.container {
-    margin-top: 7em;
-  }
-
-  .ui.footer.segment {
-    padding: 5em 0em;
-  }
   .buttonContent {
     position: fixed;
   top: 50%;
@@ -48,18 +27,16 @@
   
   }
   .button {
-    border-radius: 4%;
+    border-radius: 25%;
   }
 
   #main{
     background-image: url("../html/img/Yosemite.jpg");
 background-repeat: no-repeat;
-background-attachment: fixed;
 background-position: center;
 filter: brightness(85%);
 height:100%;
   }
-  
   
     </style>
 

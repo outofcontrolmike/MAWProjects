@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="../css/mediaQueries.css">
+
 
       <!-- You MUST include jQuery before Fomantic -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -57,8 +59,8 @@
 <?php include "components/header.html" ?>
 
     <!-- Info about me-->
-      <div class="ui segment" style=" margin-top: 140px; padding-bottom: 200px;">
-        <div class="ui four column very relaxed grid stackable">
+      <div class="ui segment" style="margin-top:140px; padding-bottom: 15px;">
+        <div class="ui four column very relaxed grid stackable" id="about" >
           <div id="cardHover" class="column">
             <div class="ui card centered" style="width: fit-content;">
                 <div class="ui slide masked reveal image">
