@@ -3,14 +3,14 @@
   src: url('fonts.ttf');
 }
 
-body {
+/* body {
   background-image: url("ash.jpg");
   background-color: #cccccc;
   height:fit-content;
   background-repeat:repeat-y;
   background-size: cover;
   position: relative;
-}
+} */
 
 h1,#count {
   font-family: pokemon;
@@ -73,6 +73,7 @@ h1::first-letter {
 
 .ui.modal {
   width:100%;
+  height:fit-content;
 }
 
 
@@ -85,36 +86,22 @@ h1::first-letter {
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     }
 
-    @media only screen and (max-width: 800px) {
-    
-        #title {
-            margin-bottom:10%;
-        }
 
-      #count {
-        margin-bottom: 10%;
-        margin-top: 5%;
+
+    @media only screen and (max-width: 600px) {
+      img.ui.image {
+        position: absolute;
+
       }
-    }
+      .mobileImage {
+        height:150px;
+        width:150px;
+      }
+      .ui.input,#searchValue {
+        font-size: xx-small;
+        height:30px;
+      }
 
-
-    @media only screen and (max-width: 550px) {
-        #header {
-          margin-left:28%;
-        }
     
-    }
-
-    @media only screen and (max-width: 420px) {
-        #header {
-          margin-left: 40px;
-        }
-
-        @media only screen and (max-width: 375px) {
-          #header {
-            margin-left: 0px;
-          }
-        
-        }
     }
 
