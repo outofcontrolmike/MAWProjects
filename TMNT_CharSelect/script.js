@@ -190,11 +190,7 @@ initiateVars();
 function playerInfo(lives, score, health) {
 lives.innerHTML = "0" + variables.lives
 score.innerHTML = variables.score
-let builder= "|";
-
-for(i = 0; i<=3; i++) {;
-    builder += builder;
-}
+let builder= "||||||||||||||";
 
 health.innerHTML = builder;
 console.log(builder);
