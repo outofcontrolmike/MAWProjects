@@ -7,6 +7,9 @@ a {
 .ui.footer.segment {
   padding: 5em 0em;
 }
+#projects {
+  margin-top:140px;
+}
 
 
 @media only screen and (max-width: 750px) {
@@ -15,6 +18,9 @@ a {
   }
   #about {
     margin-top:100px;
+  }
+  #projects {
+    margin-top: 250px;
   }
   div.ui.vertical.divider {
     position:unset;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <link rel="stylesheet" href="../css/mediaQueries.css">
 
       <!-- You MUST include jQuery before Fomantic -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -37,9 +38,6 @@
     padding: 1em 0em;
   }
   
-  .main.container {
-    margin-top: 7em;
-  }
 
   .ui.footer.segment {
     padding: 5em 0em;
@@ -50,7 +48,7 @@
   <!DOCTYPE html>
 <body>
 <?php include "components/header.html" ?>
-    <div class="ui segment container"  style="margin-top: 140px;">
+    <div class="ui segment container" id="projects">
         <h1 style="text-align: center;">Projects</h1>
         <div class="ui divider"></div>
         <div class="ui link cards centered vertical" id="list">
