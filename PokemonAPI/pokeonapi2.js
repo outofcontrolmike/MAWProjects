@@ -168,6 +168,7 @@ function renderPokemon(pokeData) {
   pokeContainer.classList.add("col-m-6", "card", "m-4", "pb-4", "align-content-center", "success");
   container.classList.add("ui");
   var pokeImage = document.createElement("img");
+  pokeImage.classList.add('mobileImage');
   var pokeName = document.createElement("h1");
   var pokeId = document.createElement("p");
   var poketypes = document.createElement("p");
@@ -205,6 +206,7 @@ function renderPokemon(pokeData) {
 
   let colorType = pokeData.types[0].type.name;
   abilities.style.wordWrap = "break-word";
+  abilities.style.padding = "20px;"
   abilities.style.maxWidth = "200px;";
   setColor(colorType, pokeContainer);
 
@@ -222,6 +224,7 @@ function createSingle(pokeData) {
   let pokeContainer = document.createElement("div");
   pokeContainer.classList.add("col-m-6", "card", "m-4", "pb-4", "align-content-center");
   var pokeImage = document.createElement("img");
+  pokeImage.classList.add('mobileImage');
   var pokeName = document.createElement("h1");
   var pokeId = document.createElement("p");
   var poketypes = document.createElement("p");
@@ -260,6 +263,7 @@ function createSingle(pokeData) {
   );
 
   abilities.style.maxWidth = "200px;";
+  abilities.style.padding = "20px;"
   abilities.style.wordWrap = "break-word";
   pokeContainer.style.borderRadius = "50px;";
 
