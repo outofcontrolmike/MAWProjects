@@ -38,6 +38,14 @@ filter: brightness(85%);
 height:100%;
   }
   
+  a {
+    font-size: medium;
+}
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+  padding: 1em 0em;
+}
+
     </style>
 
     <!-- You MUST include jQuery before Fomantic -->
