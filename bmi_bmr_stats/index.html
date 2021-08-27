@@ -17,10 +17,18 @@
 <style>
   * {
     font-family: 'KoHo', sans-serif;
+    font-size:24px;
+  }
+  h1 {
+    text-align: center;
   }
 
   .ui>.container {
     margin-top: 25px;
+  }
+
+  .ui.button {
+    float:right;
   }
 
   input {
@@ -38,7 +46,6 @@
   }
 
   #mainBack {
-    background-color:black;
     margin-bottom: 100px;
     padding-bottom: 100px;
   }
@@ -49,44 +56,49 @@
   #normalCards, #footer {
     background-color: honeydew;
   }
+
+  @media only screen and (max-width: 900px) {
+      input {
+        width:100%;
+        margin:10px;
+      }
+      .ui.button {
+        margin:40px;
+        
+      }
+
+    
+    }
+
 </style>
 
-<body class=""">
-    <div id="mainBack" class="ui segment">
-  <!-- First segment-->
-  <div class="ui two column doubling stackable grid very padded">
-    <!--BMI-->
-    <div class="ui column container">
-      <div id="normalCards" class="ui raised very padded text container segment">
-        <h1 style="text-align: center;">Body Mass Index Calculation</h1>
+<body class="ui">
+    <div id="mainBack" class="ui container">
+      <div class="ui row container ">
+      <div id="normalCards" class="ui raised very padded text segment">
+        <h1>Body Mass Index Calculation</h1>
         <hr>
         <div>
-          <div class="ui two column">
+          <div class="ui two columns">
             <div class="ui column">
               <label>Height (in)</label>
               <input id="bmiHeight" type="tel" id="ft" maxlength="2" class="input">
-            </div>
-            <div class="ui column">
               <span>
                 <label>Weight(lbs)</label>
                 <input id="bmiWeight" type="tel" id="weight" maxlength="3" max="3">
               </span>
-              <span class="ui container"> <button class="ui primary button" id="bmiCalc">Calculate BMI</button>
+              <span class="ui"> <button class="ui primary button" style="float:right;" id="bmiCalc">Calculate BMI</button>
               </span>
             </div>
-          </div>
-          <hr>
-          <div id="bmiInfo">
-            Fill out this form to get your BMI
+            <div class="ui column">
+              <div id="bmiInfo">
+                *Fill out this form to get your BMI
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End BMI-->
-
-    <!-- BMR-->
-    <div class="ui column container">
-      <div id="normalCards" class="ui raised very padded text container segment">
+      <div id="normalCards" class="ui raised very padded text segment">
         <h1 style="text-align: center;">Basil Metabolic Rate Calculation</h1>
         <hr>
         <div>
@@ -106,7 +118,7 @@
               <option id="male" value="0">Male</option>
               <option id="female" value="1">Female</option>
             </select></span>
-          <span><button id="bmrCalc" class="ui primary button">Calculate BMR</button>
+          <span><button id="bmrCalc" class="ui primary button" style="float:right;">Calculate BMR</button>
           </span>
         </div>
         <hr>
@@ -114,15 +126,11 @@
           Fill out this form to get your BMR
         </div>
       </div>
-  </div>
-  </div>
-  <!-- End BMR-->
-  <!-- Second Segment-->
-  <!-- Daily Caloric needs-->
-  <div class="ui three column doubling stackable grid">
-    <div class="ui column container">
-      <div id="normalCards" class="ui container segment raised">
+
+      <!-- Caloric needs -->
+      <div id="normalCards" class="ui text segment raised">
         <h1>Daily Caloric Needs</h1>
+        <hr>
         <div>
           <label>Select your activitey level</label>
           <select id="activity" class="ui medium selection dropdown">
@@ -137,12 +145,8 @@
 
           </span>
         </div>
-        <hr>
         <h5 id="dailyNeeds">*Be sure to determine your BMR first</h5>
       </div>
-    </div>
-    <!-- end first column-->
-    <div class="ui column container">
       <div id="bmrRef" class="ui container segment raised">
         <h1>BMI Reference Chart</h1>
         <table class="ui celled table">
@@ -172,10 +176,8 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="ui column container">
       <div id="bmrRef" class="ui container segment raised">
-        <h1>Activity Reference Chart</h1>
+        <h1 style="text-align: center;">Activity Reference Chart</h1>
         <table class="ui celled table">
           <thead>
             <tr>
@@ -201,6 +203,16 @@
           </tbody>
         </table>
       </div>
+
+  <!-- Daily Caloric needs-->
+  <div class="ui three column doubling stackable grid">
+
+    <!-- end first column-->
+    <div class="ui column container">
+    
+    </div>
+    <div class="ui column container">
+  
     </div>
   </div>
   <div id="footer" class="ui segment">
