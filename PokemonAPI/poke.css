@@ -19,7 +19,7 @@ h1,#count {
 
 p, span,  h3,  label {
   font-size: medium;
-  font-family: cursive;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .searchInput {
@@ -39,7 +39,7 @@ p, span,  h3,  label {
 
 .ui.button {
   border-radius: 25px;
-  font-family: cursive;
+  font-family:'Times New Roman', Times, serif;
 
 }
 
