@@ -1,12 +1,12 @@
 let projects = [
 
   Pokemon = {
-    img: "img/pokemon.JPG",
+    img: "img/pokemonProject.JPG",
     href: "../../PokemonAPI/pokemon.html",
     name: "Pokedex API Call",
     meta: "Javascript, Bootstrap & Fomantic",
     desc: "Want to look at pokemon art and information about pokemon? Test this project out!.",
-    created: "Crafted in September 2020",
+    created: "Crafted in September 2020. Reworked August 26th",
     github: "https://github.com/outofcontrolmike/MAWProjects/tree/master/PokemonAPI"  
 },
 
@@ -105,9 +105,9 @@ FF_Search = {
     href: "../../Final Fantasy Search/index.html",
     name: "Final Fantasy Search",
     meta: "JS,Fomantic and Google Fonts",
-    desc: "A flashy basic Calculator.",
-    created: "Wrote May 3th 2021",
-    github: "https://github.com/outofcontrolmike/MAWProjects/tree/master/coolCalculator",  
+    desc: "A system for fetching Final Fantasy Characters and game information.",
+    created: "Wrote June 28th 2021",
+    github: "https://github.com/outofcontrolmike/MAWProjects/tree/master/Final%20Fantasy%20Search",  
 },
 ];
 
