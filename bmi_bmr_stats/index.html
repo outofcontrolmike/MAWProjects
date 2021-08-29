@@ -35,14 +35,18 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
   }
 
   .ui.button {
-    float:right;
     color:whitesmoke;
     background-color: #302b63;
+    width:75%;
   }
 
   input {
        height:40px;
        width:210px;
+    }
+
+    select {
+      margin-bottom: 30px;
     }
 
     label,input,button,span {
@@ -86,12 +90,12 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
 
 <body class="ui">
     <div id="mainBack" class="ui container">
-      <div class="ui row container ">
+      <div class="ui row container">
       <div id="normalCards" class="ui raised very padded text segment">
         <h1>Body Mass Index Calculation</h1>
         <hr>
-        <div>
-            <div class="ui column">
+        <div class="ui two column doubling stackable grid container">
+            <div class="ui column grid">
               <label>Height (in)</label>
               <input id="bmiHeight" type="tel" id="ft" maxlength="2" class="input">
               <span>
@@ -101,45 +105,42 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
               <span class="ui"> <button class="ui button" id="bmiCalc">Calculate BMI</button>
               </span>
             </div>
-              <div id="bmiInfo">
+              <div class="ui column" id="bmiInfo">
                 *Fill out this form to get your BMI
             </div>
           </div>
       </div>
       <div id="normalCards" class="ui raised very padded text segment">
-        <h1 style="text-align: center;">Basil Metabolic Rate Calculation</h1>
+        <h1>Basil Metabolic Rate Calculation</h1>
         <hr>
-        <div>
-          <div class="ui container column">
+          <div class="ui two column doubling stackable grid container">
+            <div class="ui column grid">
             <label>Height (in)</label>
             <input id="bmrHeight" type="tel" maxlength="2" class="input">
-            <span> <label>Weight (lbs)</label>
+            <span> <label>Weight(lbs)</label>
               <input type="tel" id="bmrWeight" maxlength="3" max="3"></span>
-          </div> 
-                
-        </div>
-        <div class="ui container column">
+              <p>
           <label>Age</label>
-          <input type="tel" id="bmrAge" maxlength="3" max="110">
+          <input type="tel" id="bmrAge" maxlength="3" max="110"></p>
           <span id="gender"><label>Gender</label>
             <select id="genders" class="ui medium selection dropdown">
               <option id="male" value="0">Male</option>
               <option id="female" value="1">Female</option>
             </select></span>
-          <button id="bmrCalc" class="ui button" style="float:right;">Calculate BMR</button>
-          
-        </div>
-        <div id="bmrInfo">
+          <button id="bmrCalc" class="ui button">Calculate BMR</button>
+          </div>
+        <div class="ui column" id="bmrInfo">
           *Fill out this form to get your BMR
         </div>
       </div>
-
+      </div>
       <!-- Caloric needs -->
-      <div id="normalCards" class="ui text segment raised">
+      <div id="normalCards" class="ui raised very padded text segment">
         <h1>Daily Caloric Needs</h1>
         <hr>
-        <div>
-          <label>Select your activity level</label>
+        <div class="ui two column doubling stackable grid container">
+          <div class='ui column grid'>
+          <label>Activity Level</label>
           <select id="activity" class="ui medium selection dropdown">
             <option value="0">Sedentary</option>
             <option value="1">Lightly Active</option>
@@ -149,10 +150,10 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
           </select>
           <span>
             <button class="ui button" id="calorieBtn">Daily Needs</button>
-
           </span>
-        </div>
+          </div>
         <h3 id="dailyNeeds">*Be sure to determine your BMR first</h3>
+      </div>
       </div>
       <div id="bmrRef" class="ui container segment raised">
         <h1>BMI Reference Chart</h1>
