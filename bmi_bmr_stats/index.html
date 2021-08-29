@@ -91,7 +91,6 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
         <h1>Body Mass Index Calculation</h1>
         <hr>
         <div>
-          <div class="ui two columns">
             <div class="ui column">
               <label>Height (in)</label>
               <input id="bmiHeight" type="tel" id="ft" maxlength="2" class="input">
@@ -102,13 +101,10 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
               <span class="ui"> <button class="ui button" id="bmiCalc">Calculate BMI</button>
               </span>
             </div>
-            <div class="ui column">
               <div id="bmiInfo">
                 *Fill out this form to get your BMI
-              </div>
             </div>
           </div>
-        </div>
       </div>
       <div id="normalCards" class="ui raised very padded text segment">
         <h1 style="text-align: center;">Basil Metabolic Rate Calculation</h1>
@@ -122,7 +118,7 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
           </div> 
                 
         </div>
-        <div>
+        <div class="ui container column">
           <label>Age</label>
           <input type="tel" id="bmrAge" maxlength="3" max="110">
           <span id="gender"><label>Gender</label>
