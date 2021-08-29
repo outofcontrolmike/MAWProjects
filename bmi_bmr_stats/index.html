@@ -40,6 +40,13 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
     width:75%;
   }
 
+  h3 {
+    align-self: center;
+
+    text-align: center;
+    font-size:large;
+  }
+
   input {
        height:40px;
        width:210px;
@@ -79,10 +86,6 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
         margin:40px;
         
       }
-      #bmrInfo {
-        margin-bottom:10px;
-      }
-
     
     }
 
@@ -105,8 +108,11 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
               <span class="ui"> <button class="ui button" id="bmiCalc">Calculate BMI</button>
               </span>
             </div>
-              <div class="ui column" id="bmiInfo">
-                *Fill out this form to get your BMI
+              <div class="ui column grid" id="bmiInfo">
+                <h3>
+                  *Fill out this form to get your BMI
+
+                </h3>
             </div>
           </div>
       </div>
@@ -129,8 +135,10 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
             </select></span>
           <button id="bmrCalc" class="ui button">Calculate BMR</button>
           </div>
-        <div class="ui column" id="bmrInfo">
-          *Fill out this form to get your BMR
+        <div class="ui column grid" id="bmrInfo">
+          <h3>
+            *Fill out this form to get your BMR
+          </h3>
         </div>
       </div>
       </div>
@@ -152,7 +160,9 @@ background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, F
             <button class="ui button" id="calorieBtn">Daily Needs</button>
           </span>
           </div>
+          <div class="ui column grid">
         <h3 id="dailyNeeds">*Be sure to determine your BMR first</h3>
+            </div>  
       </div>
       </div>
       <div id="bmrRef" class="ui container segment raised">
