@@ -18,6 +18,13 @@
   * {
     font-family: 'KoHo', sans-serif;
     font-size:24px;
+    
+  }
+  body {
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   h1 {
     text-align: center;
@@ -29,6 +36,8 @@
 
   .ui.button {
     float:right;
+    color:whitesmoke;
+    background-color: #302b63;
   }
 
   input {
@@ -49,15 +58,15 @@
     margin-bottom: 100px;
     padding-bottom: 100px;
   }
+  #normalCards,#bmrRef, #footer {
+    background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  #bmrRef {
-    background-color: lightsteelblue;
-  }
-  #normalCards, #footer {
-    background-color: honeydew;
+
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1000px) {
       input {
         width:100%;
         margin:10px;
@@ -65,6 +74,9 @@
       .ui.button {
         margin:40px;
         
+      }
+      #bmrInfo {
+        margin-bottom:10px;
       }
 
     
@@ -87,7 +99,7 @@
                 <label>Weight(lbs)</label>
                 <input id="bmiWeight" type="tel" id="weight" maxlength="3" max="3">
               </span>
-              <span class="ui"> <button class="ui primary button" style="float:right;" id="bmiCalc">Calculate BMI</button>
+              <span class="ui"> <button class="ui button" id="bmiCalc">Calculate BMI</button>
               </span>
             </div>
             <div class="ui column">
@@ -103,27 +115,26 @@
         <hr>
         <div>
           <div class="ui container column">
-            <label>Height</label>
-            <input placeholder="inches" id="bmrHeight" type="tel" maxlength="2" class="input">
-            <span> <label>Weight</label>
-              <input placeholder="lbs" type="tel" id="bmrWeight" maxlength="3" max="3"></span>
+            <label>Height (in)</label>
+            <input id="bmrHeight" type="tel" maxlength="2" class="input">
+            <span> <label>Weight (lbs)</label>
+              <input type="tel" id="bmrWeight" maxlength="3" max="3"></span>
           </div> 
                 
         </div>
         <div>
           <label>Age</label>
           <input type="tel" id="bmrAge" maxlength="3" max="110">
-          <span><label>Gender</label>
+          <span id="gender"><label>Gender</label>
             <select id="genders" class="ui medium selection dropdown">
               <option id="male" value="0">Male</option>
               <option id="female" value="1">Female</option>
             </select></span>
-          <span><button id="bmrCalc" class="ui primary button" style="float:right;">Calculate BMR</button>
-          </span>
+          <button id="bmrCalc" class="ui button" style="float:right;">Calculate BMR</button>
+          
         </div>
-        <hr>
         <div id="bmrInfo">
-          Fill out this form to get your BMR
+          *Fill out this form to get your BMR
         </div>
       </div>
 
@@ -132,7 +143,7 @@
         <h1>Daily Caloric Needs</h1>
         <hr>
         <div>
-          <label>Select your activitey level</label>
+          <label>Select your activity level</label>
           <select id="activity" class="ui medium selection dropdown">
             <option value="0">Sedentary</option>
             <option value="1">Lightly Active</option>
@@ -141,11 +152,11 @@
             <option value="4">Athletic</option>
           </select>
           <span>
-            <button class="ui primary button" id="calorieBtn">Daily Needs</button>
+            <button class="ui button" id="calorieBtn">Daily Needs</button>
 
           </span>
         </div>
-        <h5 id="dailyNeeds">*Be sure to determine your BMR first</h5>
+        <h3 id="dailyNeeds">*Be sure to determine your BMR first</h3>
       </div>
       <div id="bmrRef" class="ui container segment raised">
         <h1>BMI Reference Chart</h1>

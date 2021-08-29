@@ -61,6 +61,9 @@ function bmiCalc() {
     bmi = (weight / (Math.pow(height,2))) * 703;
     console.log(bmi);
     document.getElementById('bmiInfo').innerText = "Your BMI is : " + bmi;
+    document.getElementById('bmrWeight').value = weight;
+    document.getElementById('bmrHeight').value = height;
+
 }
 
 function bmrCalc() {
