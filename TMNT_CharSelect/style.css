@@ -12,6 +12,10 @@ body {
  background-color: black;
 }
 
+audio {
+  display: none;
+}
+
 .ui {
     background-color: black;
 }
