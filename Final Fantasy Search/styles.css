@@ -3,23 +3,23 @@ body {
     background: #757F9A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+}
+
+#app {
+    padding-bottom: 20px;
 }
 
 
 #footer {
     position: relative;
-  margin-top: 22%;
-}
-
-#list {
-    padding-bottom: 100px;
+  margin-top: 75%;
+  
 }
 
 
 /*Fonts */
 p {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-family: 'EB Garamond', serif;
     font-style: oblique;
 }
@@ -108,6 +108,10 @@ font-size: large;
     .ui.button {
         width:100%;
         margin-bottom: 5px;
+    }
+
+    p {
+        font-size:20px;
     }
    
   }
