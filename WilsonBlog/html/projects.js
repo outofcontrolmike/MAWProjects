@@ -21,7 +21,7 @@ GreatRace = {
 },
 
 SnesShopping = {
-    img: "img/vue_shoppingcart.JPG",
+    img: "img/vueImage.JPG",
     href: "../../Vue-ShoppingCart/page.html",
     name: "Snes Shopping Cart",
     meta: "Vue & Fomantic",
@@ -71,7 +71,7 @@ Tmnt = {
 },
 
  Bmi = {
-    img: "img/bmr.JPG",
+    img: "img/bmi.JPG",
     href: "../../bmi_bmr_stats/index.html",
     name: "BMI BMR Calculator",
     meta: "Javascript & Fomantic",
@@ -91,7 +91,7 @@ Brewery = {
 },
 
 Calc = {
-    img: "img/coolCalc.JPG",
+    img: "img/calc.JPG",
     href: "../../coolCalculator/index.html",
     name: "Cool Calculator",
     meta: "JS,Fomantic and Google Fonts",
