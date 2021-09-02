@@ -49,7 +49,7 @@ function clearStats() {
     variables.lives = 2;
     lifeReset = variables.lives;
     lifeReset = 2;
-    lives.innerHTML = "0" +lifeReset;
+    lives.innerHTML = "" +lifeReset;
     variables.score = 0;
     score.innerHTML = 0;
 }
@@ -188,7 +188,7 @@ initiateVars();
 
 //set up player info
 function playerInfo(lives, score, health) {
-lives.innerHTML = "0" + variables.lives
+lives.innerHTML = "" + variables.lives
 score.innerHTML = variables.score
 let builder= "||||||||||||||";
 

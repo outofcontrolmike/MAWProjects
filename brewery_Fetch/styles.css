@@ -55,7 +55,7 @@ i {
 
 .input {
     position: relative;
-    padding-left:15%;
+    width:83%;
 }
 
 #count {
@@ -116,13 +116,14 @@ i {
 
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 950px) {
      .input{
          padding: 0px;  
     }
     
     .floatMe {
-        margin-top:3%;
+        padding-top:0px;
+        float: right;
         margin-bottom: 3%;
     }
 
