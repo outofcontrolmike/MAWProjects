@@ -79,14 +79,18 @@
           <div class="column">
               <div class=" ui section text" style="width:fit-content; text-align: center; font-size: large; ">
         <h1>My Journey So Far</h1>
-        <p>Hello there! I have been working in the field of Web Development for a little over a year.  I recently graudated with a Computer Information Science degree from a growing community college named Ozark's Technical Community College, December of 2019.  I started my journey in Web Development in the Spring of 2018.  I obtained rounded knowledge about what goes into building websites and programming.  I also learned about how to interact with a client and how to configure their needs for a project.
+        <p>Hello there! I have been working in the field of Web Development since November 2019.  I've graudated with a Computer Information Science degree from a college named Ozark's Technical Community College, December of 2019.
+          <p>Throughout my time in college, I learned about what goes into building websites and programming.  I also learned about how to interact with a client and how to configure their needs for a project.
+</p>
+<p>
+At my current workplace I utilize React JS by fixing small bugs and attemtping to implement new features.  I'm still learning a lot about the benefits of react. 
+</p>
         </p>
         <p>
-            In my study time I work on drafting project ideas and implementing them. My programming language of choice is Javascript.  However, I do have experience with PHP, Java and C Sharp.  
+            In my study time I work on drafting project ideas and implementing them. My programming language of choice is Javascript.
         </p>
         <p>
-            When I'm not at my desk, I enjoy adventuring outdoors and taking pictures of nature, which is a huge inpsiration to my project ideas.  Ideally I would love to work on websites that are centered around photography.    
-        </p>
+            When I'm not at my desk, I enjoy adventuring outdoors and taking pictures of nature, which is a huge inpsiration to my project ideas.
               </div>
           </div>
           <!--About me-->
