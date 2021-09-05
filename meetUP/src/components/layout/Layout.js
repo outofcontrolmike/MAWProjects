@@ -8,8 +8,6 @@ function Layout(props) {
             {props.children}
         </main>
         </div>
-
-
     )
 }
 
