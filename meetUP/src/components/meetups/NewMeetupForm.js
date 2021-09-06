@@ -24,7 +24,8 @@ function NewMeetupForm(props) {
           description: enteredDescription,
         };
 
-        console.log("Testing",meetupData);
+        //send meetupData to an actual database
+        props.onAddMeetup(meetupData);
   }
 
   return (
