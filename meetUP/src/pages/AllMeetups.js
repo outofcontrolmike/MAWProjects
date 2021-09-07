@@ -7,12 +7,23 @@ const [loadedMeetups, setLoadedMeetups] = useState([]);
 
   let url = "https://meetup-react-17321-default-rtdb.firebaseio.com/meetups.json";
 
-  useeEffect(() => {
+  useEffect(() => {
+    setIsLoading(true);
     fetch(url).then(response => {
       return response.json();
      }).then(data => {
+       const meetups = [];
+       for(const key in data) {
+         const meetup = {
+            id: key,
+            ...data[key]
+         };
+
+         meetups.push(meetup);
+
+       }
        setIsLoading(false);
-       setLoadedMeetups(data);
+       setLoadedMeetups(meetups);
      });
   }, []);
 
