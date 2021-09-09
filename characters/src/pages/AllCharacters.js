@@ -1,7 +1,7 @@
 function AllCharacters() {
 return(
     <div>
-        
+Test
     </div>
 )
 }
