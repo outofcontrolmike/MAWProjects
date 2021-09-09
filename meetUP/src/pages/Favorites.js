@@ -12,9 +12,10 @@ function FavoritesPage() {
         content = <p>You have no favorites yet. Start adding some?</p>
     }
     else {
-        content =<MeetupList  meetups={favoritesCtx}/>
+        content = <MeetupList  meetups={favoritesCtx}/>
 
     }
+
     return(<section>
         <h1>My favorites</h1>
         {content}
