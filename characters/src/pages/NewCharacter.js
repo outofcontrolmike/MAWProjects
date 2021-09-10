@@ -1,6 +1,6 @@
 function NewCharacterPage() {
     return(
-        <div>Testing Characters</div>
+        <div>Testing New characters Pagse</div>
     )
 }
 

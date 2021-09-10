@@ -1,10 +1,12 @@
 import {Route, Switch} from 'react-router-dom'
 import AllCharacters from './pages/AllCharacters';
-import NewCharacterPage from './pages/Favorites';
+import NewCharacterPage from './pages/NewCharacter';
 import Favorites from './pages/Favorites';
+import Layout from './components/layout/layout';
 
 function App() {
   return (
+    <Layout>
     <Switch>
       <Route path='/' exact={true}>
         <AllCharacters />
@@ -16,6 +18,7 @@ function App() {
         <Favorites />
       </Route>
     </Switch>
+    </Layout>
   );
 }
 
