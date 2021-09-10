@@ -16,6 +16,9 @@ return <header>
             <li>
             <Link to ='/favorites'>Favorite Characters</Link>
             </li>
+            <li>
+                <button>Help</button>
+            </li>
         </ul>
     </nav>
 </header>
