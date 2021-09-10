@@ -1,6 +1,8 @@
+import NewCharacterForm from "../components/characters/NewCharacterForm";
 function NewCharacterPage() {
     return(
-        <div>Testing New characters Pagse</div>
+        <div>        <NewCharacterForm></NewCharacterForm>
+        </div>
     )
 }
 
