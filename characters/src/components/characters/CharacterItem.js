@@ -17,6 +17,7 @@ function CharacterItem(props) {
         else {
             favoritesCtx.addFavorite({
                 id: props.id,
+                image: props.image,
                 name: props.name,
                 age: props.age,
                 gender: props.gender,
