@@ -31,7 +31,7 @@ function submitHandler(event)
 }
 
   return (
-    <div>
+    <div className="ui">
       <form onSubmit={submitHandler}>
         <div>
           <label>Character Name</label>

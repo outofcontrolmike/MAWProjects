@@ -30,7 +30,7 @@ function CharacterItem(props) {
     return(
         <li>
             
-            <div>
+            <div className="segment container">
                 <img src={props.image} alt={props.name} />
             </div>
             <div>

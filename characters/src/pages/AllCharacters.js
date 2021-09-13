@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'; 
 import CharacterList  from "../components/characters/CharacterList";
-
 function AllCharactersPage() {
 const [isLoading,setIsLoading] = useState(true);
 const [loadedCharacters, setLoadedCharacters] = useState([]);
@@ -39,7 +38,7 @@ const [loadedCharacters, setLoadedCharacters] = useState([]);
 
 
  return(<section>
-     <h1>All The Characters</h1>
+     <h1 className={"ui segment"}>All The Characters</h1>
       <CharacterList characters={loadedCharacters}/>
  </section>)
 }
