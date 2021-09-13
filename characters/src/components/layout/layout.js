@@ -2,7 +2,7 @@ import MainNavigation from "./MainNavigation";
 
 function Layout(props) {
     return(
-        <div>
+        <div className="ui segment container stackable very padded raised">
             <MainNavigation />
             <main>
                 {props.children}

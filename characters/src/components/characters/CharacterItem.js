@@ -28,9 +28,8 @@ function CharacterItem(props) {
     }
 
     return(
-        <li>
-            
-            <div className="segment container">
+        <div className="ui segment">            
+            <div className="">
                 <img src={props.image} alt={props.name} />
             </div>
             <div>
@@ -43,7 +42,7 @@ function CharacterItem(props) {
             <div>
                 <button onClick={toggleFavoriteStatus}>{itemIsFavorite ? 'Remove From Favorites' : "Add To Fravorites"}</button>
             </div>
-        </li>
+        </div>
     )
 
 }
