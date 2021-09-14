@@ -6,12 +6,12 @@ import FavoritesContext from '../../store/favorites-context';
 
 function CharacterItem(props) {
 
-   const favoritesCtx = useContext(FavoritesContext);
+    const favoritesCtx = useContext(FavoritesContext);
 
-   const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
+    const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
 
     function toggleFavoriteStatus() {
-        if(itemIsFavorite) {
+        if (itemIsFavorite) {
             favoritesCtx.removeFavorite(props.id);
         }
         else {
@@ -27,21 +27,26 @@ function CharacterItem(props) {
         }
     }
 
-    return(
-        <div className="ui segment">            
-            <div className="">
-                <img src={props.image} alt={props.name} />
+    return (
+        <div className="card">
+            <div className="ui image medium">
+                <img style={{ height: "350px", objectFit: "cover", }} src={props.image} />
             </div>
-            <div>
-                <h3>{props.name}</h3>
-                <p> {props.gender}</p>
-                <p> {props.age}</p>
-                <p> {props.origin}</p>
-                <p>{props.description}</p>
+            <div className="content">
+                <div className="header">{props.name}</div>
+                <div className="ui meta">
+                    <div>{props.origin}</div>
+                    <div>{props.gender}, {props.age} years of age</div>
+                </div>
+                <div class="description">
+                    {props.description}
+                </div>
             </div>
-            <div>
-                <button onClick={toggleFavoriteStatus}>{itemIsFavorite ? 'Remove From Favorites' : "Add To Fravorites"}</button>
+            <div class="extra content">
+            <span id="favoriteBtn" onClick={toggleFavoriteStatus}>{itemIsFavorite ? <button className="ui button basic red small">Remove From Favorites</button> : <button className="ui button basic blue small">Add To Fravorites</button>}</span>
+
             </div>
+       
         </div>
     )
 

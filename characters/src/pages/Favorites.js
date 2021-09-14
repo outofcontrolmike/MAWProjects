@@ -16,7 +16,6 @@ function FavoritesPage() {
     }
     return(
     <section>
-        <h1>My Favorite Characters</h1>
         {content}
     </section>
     );

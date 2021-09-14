@@ -2,7 +2,7 @@ import CharacterItem from "./CharacterItem";
 
 function CharacterList(props) {
   return (
-    <ul >
+    <div className="ui link cards container centered" style={{marginTop:"1.4rem"}}>
       {props.characters.map((character) => (
         <CharacterItem 
         key={character.id}
@@ -15,7 +15,7 @@ function CharacterList(props) {
         description={character.description}
         />
       ))}
-    </ul>
+    </div>
   );
 }
 

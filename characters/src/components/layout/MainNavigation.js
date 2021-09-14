@@ -5,17 +5,14 @@ import FavoritesContext from '../../store/favorites-context';
 function MainNavigation() {
     const favoritesCtx = useContext(FavoritesContext);
 
-return <header>
-<div className="ui borderless main menu">
-    <div className="ui text container">
-      <div className="header item">
-        <image className="logo" src="assets/images/logo.png"/>
-        Characters
-      </div>
+return <header style={{marginTop:"1.4rem"}}>
+<div className="ui menu four item secondary">
+    <div className="ui container">
+
       <a className="item"><Link to ='/'>All Characters</Link></a>
       <a className="item"><Link to ='/new-character'>New Character</Link></a>
-      <a className="item"><Link to ='/favorites'>Favorites</Link></a>
-      <a className="ui right floated dropdown item" tabindex="0">
+      <a className="item"><Link to ='/favorites'>Favorites <span>{favoritesCtx.totalFavorites}</span></Link></a>
+      <a className="item" tabindex="0">
         <Link to = "/">Help</Link>
       </a>
     </div>

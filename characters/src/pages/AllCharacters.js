@@ -38,7 +38,6 @@ const [loadedCharacters, setLoadedCharacters] = useState([]);
 
 
  return(<section>
-     <h1>All The Characters</h1>
       <CharacterList characters={loadedCharacters}/>
  </section>)
 }
