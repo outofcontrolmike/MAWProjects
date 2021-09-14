@@ -5,7 +5,7 @@ import FavoritesContext from '../../store/favorites-context';
 function MainNavigation() {
     const favoritesCtx = useContext(FavoritesContext);
 
-return <header style={{marginTop:"1.4rem"}}>
+return <header style={{ marginBottom:"2rem"}}>
 <div className="ui menu four item secondary">
     <div className="ui container">
 

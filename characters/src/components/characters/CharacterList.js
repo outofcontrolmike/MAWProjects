@@ -2,7 +2,7 @@ import CharacterItem from "./CharacterItem";
 
 function CharacterList(props) {
   return (
-    <div className="ui link cards container centered" style={{marginTop:"1.4rem"}}>
+    <div className="ui link cards container centered">
       {props.characters.map((character) => (
         <CharacterItem 
         key={character.id}
