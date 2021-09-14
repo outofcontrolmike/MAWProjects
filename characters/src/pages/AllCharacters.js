@@ -30,8 +30,7 @@ const [loadedCharacters, setLoadedCharacters] = useState([]);
   if(isLoading) {
     return (
       <section>
-        <p>Loading...</p>
-      </section>
+             </section>
     );
   }
     //get a list of Characters

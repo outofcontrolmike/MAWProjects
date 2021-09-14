@@ -58,7 +58,7 @@ function submitHandler(event)
           <textarea type="text" rows="5" required id="description" ref={descriptionRef} />
         </div>
         <div>
-            <button className="ui button primary raised">Add Character!</button>
+            <button className="ui button primary raised">Add Character</button>
         </div>
       </form>
     </div>

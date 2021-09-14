@@ -8,7 +8,12 @@ function FavoritesPage() {
     let content;
 
     if(favoritesCtx.totalFavorites === 0) {
-       content =  <p>Start adding some Favorites</p>
+       content =  <div class="ui container red message">
+       <div class="header">
+        There were no favorites found!!
+       </div>
+       <p>Please add some favorites by viewing All Characters</p>
+     </div>
         
     }
     else {
