@@ -6,7 +6,7 @@ function MainNavigation() {
     const favoritesCtx = useContext(FavoritesContext);
 
 return <header style={{ marginBottom:"2rem"}}>
-<div className="ui menu four item secondary">
+<div className="ui menu four item secondary pointing">
     <div className="ui container">
 
       <a className="item"><Link to ='/'>All Characters</Link></a>
