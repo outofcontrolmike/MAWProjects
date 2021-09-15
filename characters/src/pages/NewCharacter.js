@@ -21,7 +21,7 @@ function NewCharacterPage() {
     }
 
     return(
-       <section className="ui segment container padded raised stackable">
+       <section className="ui piled segment container padded raised stackable"  id="form">
           <NewCharacterForm onAddCharacter={addCharacterHandler} />
        </section>
 
