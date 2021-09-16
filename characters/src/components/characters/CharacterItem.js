@@ -43,7 +43,7 @@ function CharacterItem(props) {
                 </div>
             </div>
             <div class="extra content">
-            <span id="favoriteBtn" onClick={toggleFavoriteStatus}>{itemIsFavorite ? <button className="ui button basic red small">Remove From Favorites</button> : <button className="ui button basic blue small">Add To Fravorites</button>}</span>
+            <span id="favoriteBtn" onClick={toggleFavoriteStatus}>{itemIsFavorite ? <button className="ui button inverted red small">Remove From Favorites</button> : <button className="ui button inverted blue small">Add To Fravorites</button>}</span>
 
             </div>
        
