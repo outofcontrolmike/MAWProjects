@@ -3,7 +3,7 @@ import CharacterItem from "./CharacterItem";
 function CharacterList(props) {
 
   return (
-    <div className="ui link cards container centered">
+    <div className="ui link cards centered">
       {props.characters.map((character) => (
         <CharacterItem 
         key={character.id}

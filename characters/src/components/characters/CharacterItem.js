@@ -30,7 +30,7 @@ function CharacterItem(props) {
     return (
         <div className="card">
             <div className="ui image medium">
-                <img style={{ height: "350px", objectFit: "cover", }} src={props.image} />
+                <img style={{ height: "350px", objectFit: "fill", }} src={props.image} />
             </div>
             <div className="content">
                 <div className="header">{props.name}</div>
