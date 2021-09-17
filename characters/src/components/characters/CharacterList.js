@@ -1,6 +1,7 @@
 import CharacterItem from "./CharacterItem";
 
 function CharacterList(props) {
+
   return (
     <div className="ui link cards container centered">
       {props.characters.map((character) => (
