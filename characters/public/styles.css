@@ -3,7 +3,7 @@
     font-size: 20px;
   }
 
-  a {
+  a,#characterTotal {
     color: white;
   }
   .description {
@@ -36,4 +36,12 @@ height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+  #characterTotal {
+    animation: blinker 5s linear infinite; 
+  }
+  
+  @keyframes blinker {
+    50% {opacity : 0;}
   }

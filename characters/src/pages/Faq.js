@@ -28,7 +28,7 @@ function Faq() {
 
                     <h2 class="ui header">How was this site built? </h2>
                     <p>
-                    I built this site with React Js.  Also with the inspiration from a React Crash Course Tuotrial I found on YouTube. I highly recomend this tutorial.
+                    I built this site with React Js and Fomantic UI.  Also with the inspiration from a React Crash Course Tuotrial I found on YouTube. I highly recomend this tutorial.
                     </p>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Dorf8i6lCuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <hr></hr>
@@ -36,12 +36,12 @@ function Faq() {
                 <h1 class="ui header">
 Why doesn't the character number update after adding a character?
 </h1>
-                    <p>The page doesn't show the update until the page itself refreshes.  Simply refresh your browser page.
+                    <p>The page doesn't show the update until the page itself refreshes.  Simply refresh your browser.
                         </p>
         <hr></hr>
 
         <h1 class="ui header">Why does my Favorites list reset to 0?</h1>
-                    <p>Unfortuantely this app won't hold on to the favorite characters list.  That's more of an advanced React concept that I'm not ready for yet. Maybe some day.
+                    <p>Unfortunately this app won't hold on to the favorite characters list. That's more of an advanced React concept that I'm not ready for yet. Maybe someday.
                         </p>
 
                 </div>

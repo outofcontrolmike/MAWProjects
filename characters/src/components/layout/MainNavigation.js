@@ -91,7 +91,7 @@ function MainNavigation(props) {
           </a>
           <div className="item ui statistic">
             <div class="value" id="characterTotal"></div>
-            <div>Characters</div>
+            
           </div>
         </div>
       </div>
