@@ -30,6 +30,8 @@ const [loadedCharacters, setLoadedCharacters] = useState([]);
   if(isLoading) {
     return (
       <section>
+       <div class="ui active inline loader"></div>
+
              </section>
     );
   }

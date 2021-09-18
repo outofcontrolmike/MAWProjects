@@ -81,16 +81,16 @@ function MainNavigation(props) {
               All Characters <span id="length"></span>
             </Link>
           </a>
-          <a className="item" id="newCharacter" onClick={handleNewCharacter}>
-            <Link to="/new-character">New Character</Link>
-          </a>
           <a className="item" id="favorites" onClick={handleFavorite}>
             <Link to="/favorites">
               Favorites <span>{favoritesCtx.totalFavorites}</span>
             </Link>
           </a>
-          <a className="item" id="help" tabindex="0">
-            <Link to="/">Help</Link>
+          <a className="item" id="newCharacter" onClick={handleNewCharacter}>
+            <Link to="/new-character">Add Character</Link>
+          </a>
+          <a className="item" id="faq" tabindex="0">
+            <Link to="/faq">FAQ</Link>
           </a>
           <div className="item ui statistic">
             <div class="value" id="characterTotal"></div>
