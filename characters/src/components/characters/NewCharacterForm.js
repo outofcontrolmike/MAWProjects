@@ -10,10 +10,11 @@ function NewCharacterForm(props) {
 
 function submitHandler(event)
 {
+  
     event.preventDefault();
     const enteredName = nameRef.current.value;
     const enteredAge = ageRef.current.value;
-    const enteredGender = genderRef.current.checked
+    const enteredGender = genderRef.current.value;
     const enteredOrigin = originRef.current.value;
     const enteredImage = imageRef.current.value;
     const enteredDescription = descriptionRef.current.value;
@@ -36,46 +37,29 @@ function submitHandler(event)
         <div className="grouped fields">
         <div className="field">
           <label>Character Name</label>
-          <input className="ui input" type="text" min="1" max="20" size="50" required id="title" ref={nameRef} style={{marginBottom: "1.3rem"}} />
+          <input className="ui input" type="text" min="1" max="20" size="50" required id="title" ref={nameRef}  />
         </div>
         <div className="field">
           <label>Age</label>
-          <input className="ui input"type="number" name="age" min='1' max='100' required id="age" ref={ageRef} style={{marginBottom: "1.3rem"}}/>
+          <input className="ui input"type="number" name="age" min='1' max='100' required id="age" ref={ageRef} />
         </div>
         {/* start gender */}
-        <div class="inline fields">
-    <label>Gender?</label>
-    <div class="field">
-      <div class="ui radio checkbox">
-        <input type="radio" id="male" ref={genderRef} name="gender" checked="checked"/>
-        <label>Male</label>
-      </div>
-    </div>
-    <div class="field">
-      <div class="ui radio checkbox">
-      <input type="radio" id="female" name="gender" ref={genderRef}/>
-        <label>Female</label>
-      </div>
-    </div>
-    <div class="field">
-      <div class="ui radio checkbox">
-      <input type="radio" id="??" name="gender" ref={genderRef}/>
-        <label>??</label>
-      </div>
-    </div>
-  </div>
+        <div className="field">
+          <label>Gender</label>
+          <input type="text" required id="origin" ref={genderRef}/>
+        </div>
         {/* end gender */}
-        <div>
+        <div className="field">
           <label>Origin</label>
-          <input type="text" required id="origin" ref={originRef} style={{marginBottom: "1.3rem"}}/>
+          <input type="text" required id="origin" ref={originRef} />
         </div>
-        <div>
+        <div className="field">
           <label>Image URL</label>
-          <input type="url" required id="image"ref={imageRef} style={{marginBottom: "1.3rem"}} />
+          <input type="url" required id="image"ref={imageRef}  />
         </div>
-        <div>
+        <div className="field"> 
           <label>Description/Bio</label>
-          <textarea type="text" rows="5" required id="description" ref={descriptionRef}style={{marginBottom: "1.3rem"}} />
+          <textarea type="text" rows="5" required id="description" ref={descriptionRef} />
         </div>
         <div>
             <button className="ui button primary raised fluid">Add Character to Database</button>
