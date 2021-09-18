@@ -30,7 +30,13 @@ const [loadedCharacters, setLoadedCharacters] = useState([]);
   if(isLoading) {
     return (
       <section>
-       <div class="ui active inline loader"></div>
+<div class="ui segment container">
+    <div class="ui active slow blue double loader"></div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+</div>
 
              </section>
     );
