@@ -30,10 +30,7 @@ function MainNavigation(props) {
         ++length;
       }
     }
-    console.log(length);
-    document.getElementById("length").innerHTML = length;
     document.getElementById("characterTotal").innerHTML = length;
-    return length;
   }
 
   function handleAllCharacters() {
@@ -78,7 +75,7 @@ function MainNavigation(props) {
             onClick={handleAllCharacters}
           >
             <Link to="/">
-              All Characters <span id="length"></span>
+              All Characters
             </Link>
           </a>
           <a className="item" id="favorites" onClick={handleFavorite}>
