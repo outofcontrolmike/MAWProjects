@@ -1,7 +1,7 @@
 function Projects() {
     return(
-    <div>
-        Testing
+    <div className="ui container segment">
+        Testingdd
     </div>
     )
 }
