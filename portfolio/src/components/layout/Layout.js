@@ -1,4 +1,5 @@
-import Navigation from "../layout/Navigation"
+import Navigation from "../layout/Navigation";
+import Footer from "../layout/Footer";
 
 function Layout(props) {
     return(
@@ -7,6 +8,7 @@ function Layout(props) {
             <main>
                 {props.children}
             </main>
+            <Footer />
         </div>
     )
 }
