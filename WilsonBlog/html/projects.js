@@ -109,6 +109,15 @@ FF_Search = {
     created: "Wrote June 28th 2021",
     github: "https://github.com/outofcontrolmike/MAWProjects/tree/master/Final%20Fantasy%20Search",  
 },
+FF_Search = {
+    img: "img/characters.JPG",
+    href: "../../characters/public/index.html",
+    name: "Characters",
+    meta: "React JS,Fomantic and Google Fonts",
+    desc: "A system for fetching character information and custom character uploading",
+    created: "Wrote September 18th 2021",
+    github: "https://github.com/outofcontrolmike/MAWProjects/tree/master/characters",  
+},
 ];
 
 //Continue adding to above over time
