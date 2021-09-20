@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navigation(props) {
     return (
-<div className="ui fixed inverted menu stackable collapsable">
+<div className="ui inverted menu stackable collapsable" id="navigation">
   <div className="ui container">
       <a className="header item">
           <img className="logo small" alt="logo" src="img/logo2.jpg"       
