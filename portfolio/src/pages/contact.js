@@ -1,7 +1,7 @@
 function Contact() {
     
     return(
-        <div className="ui segment container very padded  raised">
+        <div className="ui segment container very padded raised">
         <div className="content">
             <div className="ui">
 

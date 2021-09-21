@@ -2,11 +2,9 @@ import { Link } from "react-router-dom";
 
 function Navigation(props) {
     return (
-<div className="ui inverted menu stackable collapsable" id="navigation">
+<div className="ui secondary pointing menu" id="navigation">
   <div className="ui container">
-      <a className="header item">
-          <img className="logo small" alt="logo" src="img/logo2.jpg"       
-          />
+      <a className="active item">
           <Link to="/">
               Home
               </Link>

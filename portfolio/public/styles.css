@@ -1,46 +1,32 @@
-/*Home page*/
-.ui.menu .item img.logo {
-    margin-right: 1.5em;
-    padding: 1em 0em;
-  }
-  
-  .buttonContent {
-    position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  font-size: 40px;
-  padding: 5px;
-  z-index: 100;
-  opacity: .9;
-  
-  }
-  .button {
-    border-radius: 25%;
-  }
-
-  #main{
-    background-image: url("../src/assets/img/Yosemite.jpg");
-background-repeat: no-repeat;
-background-position: center;
-filter: brightness(85%);
-height:100%;
-  }
-  
-  a {
-    font-size: medium;
-}
-.ui.menu .item img.logo {
-  margin-right: 1.5em;
-  padding: 1em 0em;
-}
 
 /*Navigation*/
 
-#navigation {
-  padding-bottom: 20px
+#navigation, #footer, #footer > div > a {
+  background-color:#41AEA9;
+  
+}
+
+a{
+  padding:1rem;
+  color: #213E3B;
+}
+
+
+/*layout*/
+
+#layout {
+  background-color: #A6F6F1;
+}
+
+/*Pages*/
+
+#view, .column {
+  background-color: #E8FFFF;
+}
+
+.column {
+  background-color: ;
+}
+h1 {
+  color: #213E3B;
 }
