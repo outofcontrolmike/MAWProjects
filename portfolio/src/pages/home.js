@@ -1,8 +1,10 @@
+import picture from '../assets/img/landingPage.jpg';
+
 function Home() {
     return(
-    <div>
-        Testing
-    </div>
+  <div class="column">
+        <img src={picture} className="ui image fluid" id="landingpageImage"></img>
+  </div>
     )
 }
 

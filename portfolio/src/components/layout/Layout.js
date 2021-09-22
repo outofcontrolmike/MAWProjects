@@ -3,12 +3,10 @@ import Footer from "../layout/Footer";
 
 function Layout(props) {
     return(
-        <div className="ui row stackable very padded raised">
-            <Navigation />
-            <main>
+        <div className="ui">
+            <main id="layout">
                 {props.children}
             </main>
-            <Footer />
         </div>
     )
 }

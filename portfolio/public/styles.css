@@ -1,0 +1,29 @@
+
+/*Navigation & Footer*/
+
+#navigation, #footer {
+  background-color: ghostwhite;
+  
+}
+
+a{
+  padding:1rem;
+  color: #213E3B;
+}
+
+
+/*layout*/
+
+#layout {
+  background-color: #A6F6F1;
+}
+/* #landingPageImage {
+  margin
+} */
+
+/*Pages*/
+
+#view {
+  background-color: #E8FFFF;
+}
+
