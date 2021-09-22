@@ -1,8 +1,8 @@
 
-/*Navigation*/
+/*Navigation & Footer*/
 
-#navigation, #footer, #footer > div > a {
-  background-color:#41AEA9;
+#navigation, #footer {
+  background-color: ghostwhite;
   
 }
 
@@ -17,16 +17,13 @@ a{
 #layout {
   background-color: #A6F6F1;
 }
+/* #landingPageImage {
+  margin
+} */
 
 /*Pages*/
 
-#view, .column {
+#view {
   background-color: #E8FFFF;
 }
 
-.column {
-  background-color: ;
-}
-h1 {
-  color: #213E3B;
-}

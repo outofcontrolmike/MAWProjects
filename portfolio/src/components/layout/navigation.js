@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navigation(props) {
     return (
-<div className="ui secondary pointing menu" id="navigation">
+<div className="ui menu" id="navigation">
   <div className="ui container">
       <a className="active item">
           <Link to="/">

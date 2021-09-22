@@ -1,6 +1,10 @@
+import Navigation from "../components/layout/Navigation";
+
 function Contact() {
     
     return(
+        <> 
+        <Navigation/>
         <div className="ui segment container very padded raised">
         <div className="content">
             <div className="ui">
@@ -44,6 +48,7 @@ Why doesn't the character number update after adding a character?
 
         </div>
     </div>
+    </>
     )
 }
 
