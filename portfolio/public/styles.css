@@ -1,29 +1,48 @@
 
 /*Navigation & Footer*/
 
-#navigation, #footer {
-  background-color: ghostwhite;
-  
+
+
+
+/*Landing Page */
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+  padding: 1em 0em;
 }
 
-a{
-  padding:1rem;
-  color: #213E3B;
+#landingPageText {
+  color:white;
+  position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+font-size: 40px;
+padding: 5px;
+z-index: 100;
+opacity: .9;
+
+}
+.button {
+  border-radius: 25%;
 }
 
 
-/*layout*/
 
-#layout {
-  background-color: #A6F6F1;
+#landingPage {
+  background-size: contain;
+  height: 100vh;
+  color: #f5f5f5;
+  object-fit: none;
+  filter: brightness(70%);
 }
-/* #landingPageImage {
-  margin
-} */
-
-/*Pages*/
-
-#view {
-  background-color: #E8FFFF;
+a {
+  font-size: medium;
 }
-
+.ui.menu .item img.logo {
+margin-right: 1.5em;
+padding: 1em 0em;
+}
