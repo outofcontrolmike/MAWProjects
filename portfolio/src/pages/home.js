@@ -8,7 +8,7 @@ function Home() {
             <img className="ui image fluid" id="landingPage" src={picture}/>
             <a>
                 <Link to="/about">
-        <h1 id="landingPageText">What do business owners and developers have in common?  We both strive for adventure...Click here to start again</h1>
+        <h1 id="landingPageText">You and I both looking to reach milestones. Let's do this together</h1>
             </Link></a>
         </div>
     
