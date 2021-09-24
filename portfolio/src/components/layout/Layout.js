@@ -1,4 +1,4 @@
-import Navigation from "../layout/Navigation";
+import Navigation from "./Navigation";
 import Footer from "../layout/Footer";
 
 function Layout(props) {
