@@ -6,9 +6,10 @@ function Home() {
     return(
         <div id="overlay">
             <img className="ui image fluid" id="landingPage" src={picture}/>
-            <a>
+            <a id="landingPageText">
                 <Link to="/about">
-        <h1 id="landingPageText">You and I both looking to reach milestones. Let's do this together</h1>
+        <h1>You and I are both working to complete projects.  Why not accomplish these things together?</h1>
+        <p id="clickHere">Click here to learn more</p>
             </Link></a>
         </div>
     
