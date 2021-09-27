@@ -15,7 +15,19 @@ function About() {
       <div className="ui " id="about">
         <div className="ui two column doubling stackable grid padded" id="about" >
           <div className="ui column">
-            <img className="ui image" src={secondPicture} />
+          <div className="ui card centered" style={{width: "fit-content"}}>
+                <div className="ui slide masked reveal image">
+                  <img src={myPicture} className="visible content" style={{objectFit: "cover", height: "700px"}}/>
+                  <img src={secondPicture} className="hidden content fluid" style={{objectFit: "cover", height: "400px"}}/>
+                </div>
+                <div className="content">
+                  <a className="header">Michael Wilson</a>
+                  <div className="meta">
+                    <span className="date">Graduated Fall 2019</span>
+                    <p className="date">Associates of Applied Science Computer Information Science</p>
+                  </div>
+                </div>
+              </div>
           </div>
           <div className="ui column">
               <h1>Who am I?</h1>
