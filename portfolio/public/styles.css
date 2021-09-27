@@ -3,10 +3,6 @@
 font-size:20px;
 font-family: Arial, Helvetica, sans-serif;
 }
-/*Navigation & Footer*/
-
-
-
 
 /*Landing Page */
 .ui.menu .item img.logo {
@@ -15,7 +11,6 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #landingPageText {
-  color:white;
   position: fixed;
 top: 50%;
 left: 50%;
@@ -24,15 +19,18 @@ transform: translate(-50%, -50%);
 -moz-transform: translate(-50%, -50%);
 -o-transform: translate(-50%, -50%);
 -ms-transform: translate(-50%, -50%);
-font-size: 40px;
-padding: 5px;
-z-index: 100;
-opacity: .9;
+}
 
+a {
+  color: whitesmoke;
 }
-.button {
-  border-radius: 25%;
+a:hover {
+  color:black;
+  text-decoration: underline;
+  animation: blinker
 }
+
+
 
 
 
@@ -43,10 +41,11 @@ opacity: .9;
   object-fit: none;
   filter: brightness(50%);
 }
-a {
-  font-size: medium;
+
+#blink {
+  animation: blinker 10s linear infinite; 
 }
-.ui.menu .item img.logo {
-margin-right: 1.5em;
-padding: 1em 0em;
+
+@keyframes blinker {
+  50% {opacity : 0;}
 }

@@ -3,13 +3,23 @@ import { Link } from "react-router-dom";
 
 
 function Home() {
+
+    function handleHover() {
+        document.getElementById('landingPage').style.filter = "brightness(100%)";
+        document.getElementById('blink').style.animation = "blinker 0s linear infinite"
+    }
+    function handleLeave() {
+        document.getElementById('landingPage').style.filter = "brightness(50%)";
+        document.getElementById('blink').style.animation = "blinker 10s linear infinite"
+
+    }
+
     return(
         <div id="overlay">
             <img className="ui image fluid" id="landingPage" src={picture}/>
-            <a id="landingPageText">
+            <a id="landingPageText"className="ui">
                 <Link to="/about">
-        <h1>You and I are both working to complete projects.  Why not accomplish these things together?</h1>
-        <p id="clickHere">Click here to learn more</p>
+        <h1><span className="ui text large" id="blink" onMouseOver={handleHover} onMouseLeave={handleLeave} >Let's Acheive Goals Together!</span></h1>
             </Link></a>
         </div>
     
