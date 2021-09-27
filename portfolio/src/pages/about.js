@@ -13,37 +13,32 @@ function About() {
     <>
       <Navigation />
       <div className="ui " id="about">
-        <div className="ui four column doubling stackable grid padded" id="about" >
+        <div className="ui two column doubling stackable grid padded" id="about" >
           <div className="ui column">
             <img className="ui image" src={secondPicture} />
           </div>
           <div className="ui column">
-            <h1>Intro</h1>
-            <hr></hr>
+              <h1>Who am I?</h1>
+              <hr></hr>          
             <p>
-              Hello, my name is <span className="ui text large">Michael Wilson.</span><br></br>
-              
+              <span className="ui text large">Michael Wilson</span><br></br><br></br>
+
               <p>I have been involved with WebDevelopment and programming since 2018.</p>
             </p>
             <p>
               I originally gained interest for Web development during a previous job I had, managing an online vitamin store through woo commerce.  I found it interesting to use tools through wordpress to alter the front end of my company's website.
 
             </p>
-          </div>
-          <div className="ui column">
+            <p>
             <h1>What I Do</h1>
             <hr></hr>
-            <p>
-
-              Currently I work with react Js. I patch bugs and work on feature requests. I also work on turning new ideas Into react projects.
-              I also enjoy learning about Web Design and trying to find creative ways to present my projects.
-
+              Currently I work with react Js in a proffesional sense. During my work hours I fix bugs and implement feature requests among a few of my compaines projects built with the react library<span>REACT Sybmol**</span>
             </p>
-          </div>    <div className="ui column">
+            <p>With some of my free time I try to build projects with React so I keep up to date with work.</p>
             <h1>Besides Coding</h1>
             <hr></hr>
             <p>
-            I really love hiking and traveling. I also enjoy photography and writing. I try to be with family and friends as much as I can since conversations with them can spark ideas for new projects to work on.
+              I really love hiking and traveling. I also enjoy photography and writing. I try to be with family and friends as much as I can since conversations with them can spark ideas for new projects to work on.
 
             </p>
           </div>
