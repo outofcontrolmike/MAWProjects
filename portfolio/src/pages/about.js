@@ -13,12 +13,13 @@ function About() {
     <>
       <Navigation />
       <div className="ui " id="about">
-        <div className="ui four column doubling stackable grid" id="about" >
+        <div className="ui four column doubling stackable grid padded" id="about" >
           <div className="ui column">
             <img className="ui image" src={secondPicture} />
           </div>
           <div className="ui column">
-            <h1>Intro:</h1>
+            <h1>Intro</h1>
+            <hr></hr>
             <p>
               Hello, my name is <span className="ui text large">Michael Wilson.</span><br></br>
               
@@ -30,7 +31,8 @@ function About() {
             </p>
           </div>
           <div className="ui column">
-            <h1>What I Do:</h1>
+            <h1>What I Do</h1>
+            <hr></hr>
             <p>
 
               Currently I work with react Js. I patch bugs and work on feature requests. I also work on turning new ideas Into react projects.
@@ -38,7 +40,8 @@ function About() {
 
             </p>
           </div>    <div className="ui column">
-            <h1>Besides Coding:</h1>
+            <h1>Besides Coding</h1>
+            <hr></hr>
             <p>
             I really love hiking and traveling. I also enjoy photography and writing. I try to be with family and friends as much as I can since conversations with them can spark ideas for new projects to work on.
 
