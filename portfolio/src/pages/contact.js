@@ -5,7 +5,7 @@ function Contact() {
     return(
         <> 
         <Navigation/>
-        <div className="ui segment container very padded raised">
+        <div className="ui segment container very padded raised piled">
         <div className="content">
             <div className="ui">
 
