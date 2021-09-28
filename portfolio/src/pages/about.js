@@ -1,6 +1,6 @@
 import Navigation from "../components/layout/Navigation";
 import Footer from "../components/layout/Footer";
-import myPicture from "../assets/img/profilePic.jpg";
+import myPicture from "../assets/img/profilePic-removebg-preview.png";
 import secondPicture from "../assets/img/tacos.jpg";
 
 import htmlCert from "../assets/img/html.png";
