@@ -15,6 +15,11 @@ function Navigation(props) {
               </Link>
       </a>
       <a className="item">
+      <Link to="/resume">
+              Resume
+              </Link>
+      </a>
+      <a className="item">
       <Link to="/projects">
               Projects
               </Link>      </a>
