@@ -1,4 +1,5 @@
 import Navigation from "../components/layout/Navigation";
+import Footer from "../components/layout/Footer";
 import myPicture from "../assets/img/profilePic.jpg";
 import secondPicture from "../assets/img/tacos.jpg";
 
@@ -41,6 +42,7 @@ function About() {
             </p>
           </div>
         </div>
+        <Footer/>
 
     </>
   );

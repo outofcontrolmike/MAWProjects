@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Beast Wars Fun</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <style>
+p{
+  font-family: 'Creepster', cursive;
+  text-shadow: 2px 2px orange;
+  color:black;
+  font-weight: bolder;
+}
+.image {
+height:375px;
+width:400px;
+  object-fit: contain;
+  object-fit: cover;
+  width:fit-content;
+}
+
+.ui > .segment, .ui > p {
+  font-family: 'Raleway', sans-serif;
+background: #D38312;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+  margin-top: 2%;
+}
+
+footer {
+  margin-bottom:10%;
+}
+
+ </style>
+
+    <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  </head>
+  <!DOCTYPE html>
+<body style="background-color: bisque;"><body>
+
+    <!-- main content-->
+     
+    <div class="ui container raised very padded" id="main">
+      <div class="ui segment">
+        <div class="container">
+          <p><span class="ui text massive center">Beast Wars</span></p>
+          <hr>
+          <h2 class="text center ui">Sorting options</h2>
+          <button class="button ui red large redBtn" onclick="sortByName()">Sort by Alphabetical</button>
+          <button class="button ui blue large blueBtn" onclick="sortMaximals()">Maximals Only</button>
+          <button class="button ui yellow large yellowBtn" onclick="sortPredacons()">Predacons Only</button>
+          <button class="button ui green large greenBtn" onclick="sortByAnimal()">Sort by Animal</button>
+          <button class="button ui black large blackBtn" onclick="sortRandom()">Sort Randomly</button>
+          <i class="map signs icon huge float right"></i>
+
+        </div>
+      </div>
+        <div class ="ui link cards four stackable" id="here">
+          <!--print cards to here-->
+    </div>
+    </div>
+
+    <!--*Not used-->
+    <!--Modal-->
+    <div class="ui longer modal">
+      <i class="close icon"></i>
+      <div class="header">
+        <h2 id="name">TEst</h2>
+      </div>
+      <div class="image content">
+        <div class="ui medium image">
+          <img src="img/rampage2.jpg">
+        </div>
+        <div class="description">
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <!--video here-->
+      <div class="ui container" style="text-align: right;">
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&mute=0">
+      </iframe>
+  </div>
+    </div>
+        <!-- end footer-->
+  <script>
+
+    //Variables
+  var team = "";
+  var sort = "";
+      //Create our characters array with Transfomer objects
+      var characters = [
+        //maximals
+          {name:"Optimus Primal",team: "Maximal",
+           animal: "Gorilla", personallity : "Well rounded behavior", role: "Maximal Leader", img : "optimus1.jpg", img2 : "optimus2.jpg"},
+
+           {"name":"Rhinox","team": "Maximal",
+           animal: "Rhinoceros", personallity : "Always lookingout for the team", role: "Systems Admin", img : "rhinox1.jpg", img2 : "rhinox2.jpg"},
+
+           {"name":"Cheetor","team": "Maximal",
+           animal: "Cheetah", personallity : "In over his head", role: "Scouter", img : "cheetor1.jpg", img2 : "cheetor2.jpg"},
+           
+           {"name":"Rattrap","team": "Maximal",
+           animal: "Rat", personallity : "very cocky", role: "Bomb specialist / spy", img : "rat1.jpg", img2 : "rat2.jpg"},
+           
+           {"name":"Dinobot","team": "Maximal",
+           animal: "Velociraptor", personallity : "Honerable", role: "Second in command", img : "dino1.jpg", img2 : "dino2.jpg"},
+           
+           {"name":"Tigatron","team": "Maximal",
+           animal: "White Tiger", personallity : "Trustworthy", role: "Backup spy", img : "tiga1.jpg", img2 : "tiga2.jpg"},
+           
+           {"name":"Airazor","team": "Maximal",
+           animal: "Peregrine falcon", personallity : "Restoring", role: "Navigator", img : "air1.jpg", img2 : "air2.jpg"},
+           
+           {"name":"Silverbolt","team": "Maximal",
+           animal: "Timberwolf-golden eagle condor", personallity : "Galliant", role: "Melee Fighter", img : "silver1.jpg", img2 : "silver2.jpg"},
+
+           {"name":"Depth Charge","team": "Maximal",
+           animal: "Manta ray", personallity : "Egalitarian", role: "Defender", img : "depth1.jpg", img2 : "depth2.jpg"},
+         
+           //Predacons
+           {"name":"Megatron","team": "Predacon",
+           animal: "Dinosaur", personallity : "Meniachal", role: "Predacon Leader", img : "megatron11.jpg" , img2 : "megatron1.jpg"},
+        
+           {"name":"Waspinator","team": "Predacon",
+           animal: "Wasp", personallity : "Deceptable", role: "Spy", img : "wasp1.jpg" , img2 : "wasp2.jpg"},
+           
+           {"name":"Scorponok","team": "Predacon",
+           animal: "Scorpion", personallity : "Sneaky", role: "Missle Launcher", img : "scorp1.jpg" , img2 : "scorp2.jpg"},
+
+           {"name":"Terrosaur","team": "Predacon",
+           animal: "Pterodactyl", personallity : "Betraying", role: "Scout", img : "p1.jpg" , img2 : "p2.jpg"},
+
+           {"name":"Tarrantulas","team": "Predacon",
+           animal: "Tarantula", personallity : "Mad Scientist", role: "Predacon Leader", img : "tara1.jpg" , img2 : "tara2.jpg"},
+
+           {"name":"Blackarachnia","team": "Predacon",
+           animal: "Black Widow Spider", personallity : "Trickster", role: "Maximal in Disguise", img : "black1.jpg" , img2 : "black2.jpg"},
+
+           {"name":"Inferno","team": "Predacon",
+           animal: "Fire Ant", personallity : "Obnoxious", role: "Cheif Commander", img : "inferno1.jpg" , img2 : "inferno2.jpg"},
+
+           {"name":"Quickstrike","team": "Predacon",
+           animal: "Scorpion / Cobra", personallity : "Loud", role: "Fighter", img : "quick1.jpg" , img2 : "quick2.jpg"},
+
+           {"name":"Rampage","team": "Predacon",
+           animal: "Red King Crab", personallity : "Insane", role: "Conscript", img : "rampage1.jpg" , img2 : "rampage2.jpg"},
+  ]      
+  
+  console.log("test");
+  //on load events
+  window.onload = mainFunction(characters);
+
+  //Sort by Random
+  function sortRandom() {
+    document.getElementById('here').innerText = "";
+    var shuffleArray = characters;
+    shuffleArray.sort(() => Math.random() - 0.5);
+    mainFunction(shuffleArray);
+  }
+  //Sort by name
+  function sortByName() {
+    var name = characters.sort((a, b) => a.name.localeCompare(b.name));
+    document.getElementById('here').innerHTML = "";
+    mainFunction(name);
+
+  }
+  //Sort by animal
+  function sortByAnimal() {
+    var animals = characters.sort((a, b) => a.animal.localeCompare(b.animal))
+    document.getElementById('here').innerText = "";
+    mainFunction(animals);
+
+  }
+
+  //sort by Maxmials
+  function sortMaximals() {
+    var maximals = characters.filter(function(maximal){
+      return maximal.team === "Maximal";
+    });
+    console.log(maximals);
+    document.getElementById('here').innerText = "";
+    mainFunction(maximals);
+  }
+
+  function sortPredacons() {
+    var predacons = characters.filter(function(predacon){
+      return predacon.team === "Predacon";
+    });
+    document.getElementById('here').innerText = "";
+    mainFunction(predacons);
+  }
+
+  //***FUNCTIONS****//
+
+  //Main Function 
+  //Accepts a sorted array
+  //
+  function mainFunction(sort) {
+    //Determine which symbol to use    
+      for(var i = 0; i < sort.length; i++)
+      {
+        if(sort[i].team === 'Maximal') {
+        team = 'maximal.jpg';
+          
+        }
+        else {
+        team = 'predacon.jpg';
+        
+        }
+        var htmlCode = '<div class="ui card  fluid">' + '<div class="ui slide masked reveal"><img class="visible content image" src="img/' + sort[i].img + '"><img class="hidden content image" src="img/' + sort[i].img2 +'"></div><div class="content"><span class="header">' + sort[i].name+ '</span><div class="meta"><span class="date"> '  + sort[i].role + '</span></div> ' + '<hr>' +' <div class="description">' +'Animal: ' + sort[i].animal + '</div><div class="description">' +'Personallity: ' + sort[i].personallity + '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/' + team +'"></i><button style="float:right;"' //class="button ui small orange">Transformation</button></div></div>';
+       var info = document.getElementById('here').innerHTML += htmlCode;
+             }//end for
+
+  /*     console.log(sort);
+      $('.orange').click((e) => {
+    $('.ui.longer.modal')
+  .modal('show')
+  }); */
+    }//end mainFunction
+  </script>
+<!--JQuery-->
+  <script>
+
+$('.redBtn').click(() => { // arrow functions because es6
+  $('.redBtn').toast({
+    title: 'Awesome!!!',
+    message: 'Alphabetical Sort',
+    class : 'red',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+
+$('.blueBtn').click(() => { // arrow functions because es6
+  $('.blueBtn').toast({
+    title: 'Maxamize!!!',
+    message: 'Maximals Sort',
+    class : 'blue',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+$('.yellowBtn').click(() => { // arrow functions because es6
+  $('.yellowBtn').toast({
+    title: 'Terrorize!!!',
+    message: 'Predacons Sort',
+    class : 'yellow',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+$('.greenBtn').click(() => { // arrow functions because es6
+  $('.greenBtn').toast({
+    title: 'Prime',
+    message: 'Animal Sorting',
+    class : 'green',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+$('.blackBtn').click(() => { 
+  $('.blackBtn').toast({
+    title: 'Nice!!',
+    message: 'Random Sort',
+    class : 'black',
+    className: {
+        toast: 'ui message'
+    }
+  });
+});
+  </script>
+</body>
+
+</html>
