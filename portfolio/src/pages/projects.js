@@ -1,6 +1,7 @@
 import Navigation from "../components/layout/Navigation";
 
-function Projects() {
+function Projects(props) {
+  
     return(
         <div>
             <Navigation/>
@@ -12,7 +13,7 @@ function Projects() {
          
               </div>
     </div>
-    </div>    
+    </div>  
     )
     }
 
