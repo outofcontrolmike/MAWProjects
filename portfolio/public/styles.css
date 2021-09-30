@@ -75,3 +75,15 @@ a:hover {
 hr {
   border-color: black;
 }
+
+/*Resume Page*/
+
+.slide > img {
+  height: 400px;
+  width: 400px;
+}
+
+.visible {
+  height: 225px;
+  background-color: aquamarine;
+}
