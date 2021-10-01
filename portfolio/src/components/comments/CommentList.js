@@ -9,7 +9,7 @@ function CommentList(props) {
           key={comment.id}
           id={comment.id}
           name={comment.name}
-          message={comment.message}
+          comment={comment.message}
         />
       ))}
     </div>

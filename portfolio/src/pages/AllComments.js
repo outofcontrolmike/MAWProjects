@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import CommentList from "../components/comments/CommentList";
-function AllCommentsPage(props) {
+function AllCommentsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedComments, setLoadedComments] = useState([]);
 
