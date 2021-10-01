@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-<title>Brewery Listing App</title>
+<title>Brewery Listing Appp</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="styles.css">
 <head>
@@ -110,9 +110,11 @@
         </select>
          </div>
     </div>
-    <div class="ui field">
+    <hr>
+    <div class="ui action input form" id="input">
+      <input id="inputValue" type="text" placeholder="Enter filter value">
+      <div id="submitFetch" class="ui button blue field">Search</div>     
     </div>
-      <div id="help" class="ui button yellow field">Help</div>
     </div>
   </form>
 
@@ -120,10 +122,6 @@
     <div class="column">
       <div class="container">
         <span type="color" id="count" class="huge ui text">0</span>
-        <div class="ui action input">
-          <input id="inputValue" type="text" placeholder="Enter filter value">
-          <div id="submitFetch" class="ui button blue field">Search</div>     
-        </div>
 
       </div>
       

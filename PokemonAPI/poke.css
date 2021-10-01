@@ -1,19 +1,85 @@
-#content,#header {
-    background: ghostwhite;
-    
+@font-face {
+  font-family: pokemon;
+  src: url('fonts.ttf');
+}
+
+/* body {
+  background-image: url("ash.jpg");
+  background-color: #cccccc;
+  height:fit-content;
+  background-repeat:repeat-y;
+  background-size: cover;
+  position: relative;
+} */
+
+h1,#count {
+  font-family: pokemon;
+  margin-top:20px;
+}
+
+p, span,  h3,  label {
+  font-size: medium;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.searchInput {
+  font-weight: 600;
+  border: none;
+  font-size: large;
+  letter-spacing: 5px;
+  font-family: cursive;
+  text-align: center;
+}
+
+#searchValue {
+  font-family: pokemon;
+  font-weight: bolder;
 
 }
 
+.ui.button {
+  border-radius: 25px;
+  font-family:'Times New Roman', Times, serif;
 
-#test {
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
-#background {
-    background-color: ghostwhite;
+#searchTools {
+  margin-top:1%;
+  background: #FF4E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    
-    }
+}
+
+#header {
+    margin-top:3%;
+}
+
+#title {
+    margin-bottom:10%;
+    border: rgb(161, 117, 51);
+    border-style: solid;
+    font-size:xxx-large;
+}
+
+#advanced, h3 {
+    font-size: larger;
+    font-weight: bold;
+}
+
+h1::first-letter {
+  text-transform: capitalize;
+}
+
+.ui.modal {
+  height:fit-content;
+}
+
+
+.card {
+  border-radius: 50px;
+}
+
 
     .myCard {
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -21,5 +87,20 @@
 
 
 
+    @media only screen and (max-width: 600px) {
+      img.ui.image {
+        position: absolute;
 
+      }
+      .mobileImage {
+        height:150px;
+        width:150px;
+      }
+      .ui.input,#searchValue {
+        font-size: xx-small;
+        height:30px;
+      }
+
+    
+    }
 

@@ -70,7 +70,7 @@ function multiply() {
 function divide() {
     declareNums()
     shownWork("/")
-    total.innerHTML = num1 / num2;
+    total.innerHTML = (num1 / num2).toFixed(2);
 }
 
 function clearValues() {

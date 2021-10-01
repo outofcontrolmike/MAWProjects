@@ -457,5 +457,4 @@ $(".advancedSearch").click(() => {
   }, 1000);
 });
 
-//Accordion
 $(".ui.accordion").accordion();

@@ -1,28 +1,28 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
-
-
   <!-- You MUST include jQuery before Fomantic -->
+  <link rel="stylesheet" href="../css/mediaQueries.css">
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <link
     rel="stylesheet"
     type="text/css"
     href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css"
   />
+
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
   <style>
+    
 
   body {
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
   body > .grid {
     height: 100%;
   }
-  image
-   {
-    margin-top: -100px;
-  }
+
   .column {
     max-width: 450px;
   }
@@ -41,9 +41,7 @@ a {
   margin-right: 1.5em;
   padding: 1em 0em;
 }
-.main.container {
-  margin-top: 7em;
-}
+
 
 .ui.footer.segment {
   
@@ -55,7 +53,7 @@ a {
 
 <?php include "components/header.html" ?>
 
-<div class="ui middle aligned center aligned grid">
+<div class="ui middle aligned center aligned grid" id="form">
   <div class="column">
     <h2 class="ui black image header">
       <img src="img/write.jpg" class="image massive">

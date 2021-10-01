@@ -55,7 +55,7 @@ i {
 
 .input {
     position: relative;
-    padding-left:15%;
+    width:83%;
 }
 
 #count {
@@ -112,6 +112,19 @@ i {
 
     hr {
         visibility: hidden;
+    }
+
+  }
+
+  @media only screen and (max-width: 950px) {
+     .input{
+         padding: 0px;  
+    }
+    
+    .floatMe {
+        padding-top:0px;
+        float: right;
+        margin-bottom: 3%;
     }
 
   }

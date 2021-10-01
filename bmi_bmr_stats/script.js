@@ -56,11 +56,19 @@ function bmiCalc() {
 
     weight = document.getElementById('bmiWeight').value
     height = document.getElementById('bmiHeight').value
+    let bmiText = document.getElementById('bmiInfo');
 
+    bmiText.style.alignSelf = "center";
+    bmiText.style.textAlign = "center";
+    bmiText.style.fontSize = "60px";
+    bmiText.style.textDecoration = "underline";
+    
     //Correct formula
-    bmi = (weight / (Math.pow(height,2))) * 703;
-    console.log(bmi);
-    document.getElementById('bmiInfo').innerText = "Your BMI is : " + bmi;
+    bmi = parseFloat((weight / (Math.pow(height,2))) * 703).toPrecision(2);
+    document.getElementById('bmiInfo').innerText = + bmi;
+    document.getElementById('bmrWeight').value = weight;
+    document.getElementById('bmrHeight').value = height;
+
 }
 
 function bmrCalc() {
@@ -76,9 +84,16 @@ height *= 2.54;
 genderMath();
 
 //Correct formula
- bmr = 10 * weight + 6.25 * height -5 * age + genderNumber;
-console.log("bmr :" + bmr);
-document.getElementById('bmrInfo').innerText = "Your Basil Metabolic Rate : " + bmr;
+ bmr = (10 * weight + 6.25 * height -5 * age + genderNumber).toFixed(2);
+
+ let bmrText = document.getElementById('bmrInfo');
+
+ bmrText.style.alignSelf = "center";
+ bmrText.style.textAlign = "center";
+ bmrText.style.fontSize = "60px";
+ bmrText.style.textDecoration = "underline";
+
+bmrText.innerText = bmr;
 toggleButtons(calorieButton, "false");
 }
 
@@ -93,10 +108,15 @@ function dailyNeedsCalc() {
 //----------------------HELPER FUNCTIONS -----------------------//
 //Daily Calorie Needs
 function caloireNeeds(bmr) {
-    let needs = bmr * multiplyer;
 
-console.log("Caloric needs : " + needs);
-document.getElementById('dailyNeeds').innerHTML = "Your daily Caloric needs : " + needs;
+let needs = (bmr * multiplyer).toFixed(2);
+let needsText = document.getElementById('dailyNeeds') 
+
+needsText.style.alignSelf = "center";
+needsText.style.textAlign = "center";
+needsText.style.fontSize = "60px";
+needsText.style.textDecoration = "underline";
+needsText.innerHTML = needs;
 
 }
 

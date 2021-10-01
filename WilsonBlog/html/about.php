@@ -2,7 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="../css/mediaQueries.css">
+
 
       <!-- You MUST include jQuery before Fomantic -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -56,8 +59,8 @@
 <?php include "components/header.html" ?>
 
     <!-- Info about me-->
-      <div class="ui segment" style=" margin-top: 140px; padding-bottom: 200px;">
-        <div class="ui four column very relaxed grid stackable">
+      <div class="ui segment" style="margin-top:140px; padding-bottom: 15px;">
+        <div class="ui four column very relaxed grid stackable" id="about" >
           <div id="cardHover" class="column">
             <div class="ui card centered" style="width: fit-content;">
                 <div class="ui slide masked reveal image">
@@ -76,14 +79,18 @@
           <div class="column">
               <div class=" ui section text" style="width:fit-content; text-align: center; font-size: large; ">
         <h1>My Journey So Far</h1>
-        <p>Hello there! I have been working in the field of Web Development for a little over a year.  I recently graudated with a Computer Information Science degree from a growing community college named Ozark's Technical Community College, December of 2019.  I started my journey in Web Development in the Spring of 2018.  I obtained rounded knowledge about what goes into building websites and programming.  I also learned about how to interact with a client and how to configure their needs for a project.
+        <p>Hello there! I have been working in the field of Web Development since November 2019.  I've graudated with a Computer Information Science degree from a college named Ozark's Technical Community College, December of 2019.
+          <p>Throughout my time in college, I learned about what goes into building websites and programming.  I also learned about how to interact with a client and how to configure their needs for a project.
+</p>
+<p>
+At my current workplace I utilize React JS by fixing small bugs and attemtping to implement new features.  I'm still learning a lot about the benefits of react. 
+</p>
         </p>
         <p>
-            In my study time I work on drafting project ideas and implementing them. My programming language of choice is Javascript.  However, I do have experience with PHP, Java and C Sharp.  
+            In my study time I work on drafting project ideas and implementing them. My programming language of choice is Javascript.
         </p>
         <p>
-            When I'm not at my desk, I enjoy adventuring outdoors and taking pictures of nature, which is a huge inpsiration to my project ideas.  Ideally I would love to work on websites that are centered around photography.    
-        </p>
+            When I'm not at my desk, I enjoy adventuring outdoors and taking pictures of nature, which is a huge inpsiration to my project ideas.
               </div>
           </div>
           <!--About me-->

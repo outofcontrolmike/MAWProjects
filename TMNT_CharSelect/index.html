@@ -14,71 +14,6 @@
 <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-  img {
-    height:300px;
-    width:300px;
-    object-fit: contain;
-    margin-top:50px;
-  }
-  html {
-    background-color: black;
-  }
- body {
-   background-color: black;
- }
-  .ui {
-      background-color: black;
-  }
-
-  .ui > segment {
-    background-color: black;
-  }
-
-  .ui > container {
-    background-color: black;
-  }
-
-  h1 {
-    text-align: center;
-    color: silver;
-  }
-
-  #pNum {
-    position: relative;
-    font-size: large;
-  }
-  #playerDetails{
-    border-style:solid;
-    border-top-width: 1.5em;
-    border-bottom: 1.5em;
-  }
-  p,h1 {
-    color: goldenrod;
-    font-family: 'Press Start 2P', cursive;
-    color: snow;
-    text-shadow: 2px 2px steelblue;
-  }
-  p {
-    font-size :16px;
-  }
-
-  #blink {
-    animation: blinker 2s linear infinite; 
-  }
-
-  @keyframes blinker {
-    50% {opacity : 0;}
-  }
-
-  #players {
-    border-right: 1em;
-    border: snow;
-    border-style: solid;
-  }
-  #turtleGroup {
-    margin-top: 30px;
-  }
 
 </style>
 </head>
@@ -102,7 +37,7 @@
     <div class="ui column">
         <p id="lives"></p>
         </div>  
-        <div class="ui column">
+        <div class="ui column" id="healthContainer">
     <p id="health"></p>
         </div>
       </div>
@@ -117,6 +52,14 @@
   </div>
   </div>
       <!--End Players-->
+      
+      <div class="ui column" id="buttonGroup">
+        <button class="ui grey basic button large inverted" id="addLives">Add Lives</button>
+        <button class="ui inverted positive basic button large" id="addPoints">Add Points</button>
+        <button class="ui negative basic button large inverted" id="minusPoints">Minus Points</button>
+        <button class="ui blue basic button large" id="resetStats">Reset Stats</button>
+      
+      </div>
 
       <!--Header display-->
       <h1 style="text-align: center; background-color: black;">Select Your Turtle</h1>
@@ -138,23 +81,16 @@
         </div>
       </div>
       <!--End Turtle Display-->
-<div class="ui two column stackable grid container">
+<div class="ui container">
   
-<div class="ui column float right" style="float: right;">
-  <button class="ui grey basic button medium inverted" id="addLives">Add Lives</button>
-  <button class="ui inverted positive basic button medium" id="addPoints">Add Points</button>
-  <button class="ui negative basic button medium inverted" id="minusPoints">Minus Points</button>
-  <button class="ui blue basic button medium" id="resetStats">Reset Stats</button>
-
-</div>
 <div class="ui column">
   <p>
-    <audio autoplay controls style="background-color: black;">
+    <audio controls autoplay style="background-color: black;">
     <source src="assets/TMNT4Select.mp3" type="audio/mpeg">
   </audio></p>
 </div>
 <footer>
-  <div class="ui" style="margin-top: 100px;">
+  <div  id="footer" class="ui">
     <p> *All images and song are not owned by me. </p>
    </div>
 </footer> 
