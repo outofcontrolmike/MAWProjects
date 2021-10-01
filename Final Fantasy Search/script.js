@@ -13,7 +13,6 @@ let count = 0;
 let gameListFetch = false;
 
 //Set up listener events *******************************************************************************
-
 function onLoadListeners() {
   document.getElementById('onSubmit').addEventListener('click', submitRequest);
   document.getElementById('advancedSearch').addEventListener('click', advancedRequest);
@@ -29,7 +28,6 @@ function onLoadListeners() {
 }
 
 //Resesting and Disabling DOM elements ******************************************************************
-
 function disableSearch() {
   let search = document.getElementById('searchInput');
   let title = document.getElementById('title').className;
@@ -456,7 +454,6 @@ $('.advancedSearch').click(() => {
   }, 1000);   
 });
 
-//Accordion 
 $('.ui.accordion')
   .accordion()
 ;
