@@ -7,7 +7,7 @@ function CommentItem(props) {
         <div className="metadata">
           <span className="date">Today at 5:42PM - Get current date</span>
         </div>
-        <div className="text">How artistic! - {content}</div>
+        <div className="text">How artistic!</div>
       </div>
     </div>
   );

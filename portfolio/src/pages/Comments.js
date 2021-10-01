@@ -1,7 +1,7 @@
 import Navigation from "../components/layout/Navigation";
 import { useHistory } from "react-router";
 import NewCommentForm from "../components/comments/NewCommentForm";
-
+import CommentList from "../components/comments/CommentList";
 function Messages() {
   const history = useHistory();
 
@@ -16,15 +16,13 @@ function Messages() {
       },
     }).then(() => {
       console.log("messageData", messageData);
-      history.replace("/messages");
+      history.push("/comments");
     });
   }
   return (
     <div>
       <Navigation />
-      <section className="ui " id="form">
-        <NewCommentForm onAddMessage={addMessageHandler} />
-      </section>
+      <CommentList />
     </div>
   );
 }
