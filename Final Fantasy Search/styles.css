@@ -1,125 +1,132 @@
 /*Main */
 body {
-    background: #757F9A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+  background: #757f9a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d7dde8,
+    #757f9a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d7dde8,
+    #757f9a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 #footer {
-    position: relative;
+  position: relative;
   margin-top: 22%;
 }
 
 #list {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
-
+/*End Main */
 
 /*Fonts */
 p {
-    font-size: 22px;
-    font-family: 'EB Garamond', serif;
-    font-style: oblique;
+  font-size: 22px;
+  font-family: "EB Garamond", serif;
+  font-style: oblique;
 }
 
 option {
-    font-weight: 400;
-    font-variant: petite-caps;
-    font-weight: 200;
-    opacity: .8;
+  font-weight: 400;
+  font-variant: petite-caps;
+  font-weight: 200;
+  opacity: 0.8;
 }
 
-b,h1,button,a,select,#title {
-    font-weight: 600;
-    font-variant: petite-caps;
+b,
+h1,
+button,
+a,
+select,
+#title {
+  font-weight: 600;
+  font-variant: petite-caps;
 }
 h1 {
-    letter-spacing: 15px;
+  letter-spacing: 15px;
 }
-
 
 /*Character Cards */
 
 .details {
-   font-weight: 200;
-   opacity: .8;
+  font-weight: 200;
+  opacity: 0.8;
 }
 
 .label {
-    font-size:x-large;
-    color:red;
+  font-size: x-large;
+  color: red;
 }
 
 .line {
-    border-color:springgreen;
-    width:75%;
-    float:left;
+  border-color: springgreen;
+  width: 75%;
+  float: left;
 }
 
 .divider {
-    border-color:springgreen;
-    margin-top:5%;
-    
+  border-color: springgreen;
+  margin-top: 5%;
 }
 
 .ui.medium.image {
-        margin-top:14%;
+  margin-top: 14%;
 }
 
 /*Search Menu*/
 
 .ui.accordion {
-    padding:20px;
+  padding: 20px;
 }
 
-
-.ui.fluid.dropdown{
-margin-bottom: 10px;
-padding-bottom: 1px;
-font-size: large;
+.ui.fluid.dropdown {
+  margin-bottom: 10px;
+  padding-bottom: 1px;
+  font-size: large;
 }
 
 #searchInput {
-    font-weight: 600;
-    font-variant: petite-caps;
-    border: none;
-    border-bottom: 2px solid skyblue;
-    font-size: xx-large;
-    letter-spacing: 15px;
-    font-family: 'EB Garamond', serif;
-    text-align: center;
+  font-weight: 600;
+  font-variant: petite-caps;
+  border: none;
+  border-bottom: 2px solid skyblue;
+  font-size: xx-large;
+  letter-spacing: 15px;
+  font-family: "EB Garamond", serif;
+  text-align: center;
 }
 
 #searchTools {
-    margin-top:3%;
+  margin-top: 3%;
 }
-
 
 /*Media Rules*/
 
 @media only screen and (max-width: 600px) {
-    .divider, .line {
-        width:100%;
-        border-color:lightblue;
-    }
-
-    .ui.button {
-        width:100%;
-        margin-bottom: 5px;
-    }
-   
+  .divider,
+  .line {
+    width: 100%;
+    border-color: lightblue;
   }
 
-  @media only screen and (max-width: 990px) {
-    .ui.medium.image {
-        margin-top:0;
+  .ui.button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
-    }
 
-  @media only screen and (max-width: 350px) {
-    .ui.fluid.dropdown {
-        padding:4px;
-    }
+@media only screen and (max-width: 990px) {
+  .ui.medium.image {
+    margin-top: 0;
   }
+}
+
+@media only screen and (max-width: 350px) {
+  .ui.fluid.dropdown {
+    padding: 4px;
+  }
+}

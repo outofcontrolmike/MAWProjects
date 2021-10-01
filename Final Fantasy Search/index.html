@@ -3,19 +3,28 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-    <!-- You MUST include jQuery before Fomantic -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <title>FF Search - Basic JS</title>
+
+    <!-- Styles-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fomantic CDN-->
+        <!-- You MUST include jQuery before Fomantic -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="app" class="ui container stackable">
+      <!-- Search Menu-->
         <div id="searchTools" class="ui stackable segment container">
           <div class="ui container">
             <div id="inputContainer"class="ui icon input fluid">
@@ -192,7 +201,6 @@
         </optgroup>
     </select>
             </p>
-
             <!-- end accordian-->
             <div class="ui container grid" style="margin-top:10px;">
               <button id="advancedSearch" class="ui button medium blue advancedSearch">
@@ -214,15 +222,18 @@
                 </div>
           </div>
         </div>
-          
           <!-- end accordian-->
+          
             </div>
           </div>
-        <!-- end search Tools-->
+        <!-- end search menu-->
+        <!--Container for FF characters-->
         <div id="list">
         </div>
+        <!-- end FF Container-->
     </div>
     </div>
+    <!-- end main content-->
     <footer id="footer" class="ui text container segment footer" style="color:black">
       <p>All Final Fantasy Info is sourced from <a href="https://www.moogleapi.com/">Moogle API Project.</a>
         If you want to help more with the dataset information or add any feedback, please reach out to them by following the link above!<p>
