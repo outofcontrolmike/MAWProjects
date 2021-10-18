@@ -1,20 +1,8 @@
 import React from "react";
-import "./assets/css/styles.css";
+import "./assets/css/tailwind.css";
 
-function App() {
-  return <div className="box">Hello from functional component</div>;
+function App({ title }) {
+  return <div className="bg-gray-600 text-white p-10">{title}</div>;
 }
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { title: "Hello React from the state" };
-//   }
-
-//   render() {
-//     let el = <div>{this.state.title}</div>;
-//     return el;
-//   }
-// }
 
 export default App;
