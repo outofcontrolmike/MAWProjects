@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import CommentList from "../components/comments/CommentList";
+import Navigation from "../components/layout/Navigation";
+import NewCommentForm from "../components/comments/NewCommentForm";
+
 function AllCommentsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedComments, setLoadedComments] = useState([]);
@@ -43,9 +46,20 @@ function AllCommentsPage() {
   }
 
   return (
-    <section>
+    <div>
+      <Navigation />
+    
+    <div className="ui two column doubling stackable grid segment">
+      <div className="column">
+      
       <CommentList comments={loadedComments} />
-    </section>
+      </div>
+      <div className="column">
+          <NewCommentForm />
+      </div>
+    </div>
+
+    </div>
   );
 }
 

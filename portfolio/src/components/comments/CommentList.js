@@ -1,9 +1,10 @@
 import CommentItem from "./CommentItem";
 
 function CommentList(props) {
+  console.log("props",props);
+  
   return (
     <div className="ui comments">
-      <h3 className="ui dividing header">Comments</h3>
       {props.comments.map((comment) => (
         <CommentItem
           key={comment.id}
@@ -12,6 +13,7 @@ function CommentList(props) {
           comment={comment.message}
         />
       ))}
+
     </div>
   );
 }

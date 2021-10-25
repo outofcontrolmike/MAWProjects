@@ -1,6 +1,9 @@
-import { useRef } from "react";
+import { setState, useRef } from "react";
+import { useHistory } from "react-router";
+
 
 function NewCommentForm(props) {
+  const history = useHistory();
   const nameRef = useRef();
   const messageRef = useRef();
 
@@ -14,13 +17,28 @@ function NewCommentForm(props) {
       message: enteredMessage,
     };
 
-    props.onAddMessage(messageData);
+    AddMessageHandler(messageData);
   }
+
+  function AddMessageHandler(messageData) {
+    let url =
+      "https://comments-8cd7f-default-rtdb.firebaseio.com/Comments.json";
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(messageData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(() => {
+      console.log("messageData", messageData);
+      
+    });
+  }
+
   return (
-    <div className="ui">
+    <div className="ui form">
       <form
         onSubmit={submitHandler}
-        style={{ marginTop: "2rem" }}
         className="ui form ui raised very padded text container segment"
       >
         <h1>Please Leave a Comment!</h1>

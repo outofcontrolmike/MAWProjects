@@ -1,10 +1,11 @@
 import { Link, Route, Switch } from "react-router-dom";
 import About from "./pages/About";
-import Comments from "./pages/Comments";
+import CommentForm from "./pages/CommentForm";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 
+import AllCommentsPage from "./pages/AllComments";
 import Layout from "./components/layout/Layout";
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           <Projects />
         </Route>
         <Route path="/comments">
-          <Comments />
+          <AllCommentsPage />
         </Route>
         <Route path="/resume">
           <Resume />
