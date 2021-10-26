@@ -11,6 +11,7 @@ function CommentList(props) {
           id={comment.id}
           name={comment.name}
           comment={comment.message}
+          timestamp={comment.timestamp}
         />
       ))}
 

@@ -1,20 +1,23 @@
 import { setState, useRef } from "react";
-import { useHistory } from "react-router";
 
 
 function NewCommentForm(props) {
-  const history = useHistory();
   const nameRef = useRef();
   const messageRef = useRef();
+
+  const commentDate = new Date();
+
 
   function submitHandler(event) {
     event.preventDefault();
     const enteredName = nameRef.current.value;
     const enteredMessage = messageRef.current.value;
-
+    
     let messageData = {
       name: enteredName,
       message: enteredMessage,
+      timestamp: commentDate,
+
     };
 
     AddMessageHandler(messageData);
@@ -31,6 +34,7 @@ function NewCommentForm(props) {
       },
     }).then(() => {
       console.log("messageData", messageData);
+      window.location.reload();
       
     });
   }

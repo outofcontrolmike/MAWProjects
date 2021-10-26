@@ -1,7 +1,7 @@
 import Navigation from "../components/layout/Navigation";
 
 function Projects(props) {
-  
+    
     return(
         <div>
             <Navigation/>

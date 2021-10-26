@@ -25,6 +25,7 @@ function AllCommentsPage() {
           };
 
           comments.push(comment);
+          comments.reverse();
         }
         setIsLoading(false);
         setLoadedComments(comments);
