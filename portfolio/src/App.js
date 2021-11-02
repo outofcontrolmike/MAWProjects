@@ -1,6 +1,6 @@
 import { Link, Route, Switch } from "react-router-dom";
 import About from "./pages/About";
-import CommentForm from "./pages/CommentForm";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
@@ -26,6 +26,9 @@ function App() {
         </Route>
         <Route path="/resume">
           <Resume />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
       </Switch>
     </Layout>

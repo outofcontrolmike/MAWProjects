@@ -16,7 +16,7 @@ function NewCommentForm(props) {
     let messageData = {
       name: enteredName,
       message: enteredMessage,
-      timestamp: commentDate,
+      timestamp: commentDate.toLocaleDateString()
 
     };
 

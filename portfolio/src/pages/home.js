@@ -1,5 +1,6 @@
 import picture from '../assets/img/Yosemite.jpg';
 import { Link } from "react-router-dom";
+import $ from 'jquery';
 
 
 function Home() {
@@ -22,8 +23,13 @@ function Home() {
         <h1><span className="ui text large" id="blink" onMouseOver={handleHover} onMouseLeave={handleLeave} >Let's Achieve Goals Together!</span></h1>
             </Link></a>
         </div>
+        
     
     )
+
 }
+
+
+
 
 export default Home;

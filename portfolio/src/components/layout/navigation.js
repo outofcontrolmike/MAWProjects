@@ -19,6 +19,9 @@ function Navigation(props) {
         <a className="item">
           <Link to="/comments">Comments</Link>
         </a>
+        <a className="item">
+          <Link to="/contact">Contact</Link>
+        </a>
       </div>
     </div>
   );

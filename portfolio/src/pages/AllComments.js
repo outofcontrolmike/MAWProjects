@@ -50,7 +50,7 @@ function AllCommentsPage() {
     <div>
       <Navigation />
     
-    <div className="ui two column doubling stackable grid segment">
+    <div className="ui two column doubling stackable grid padded">
       <div className="column">
       
       <CommentList comments={loadedComments} />
