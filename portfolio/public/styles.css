@@ -17,6 +17,13 @@ h1 {
   text-align: center;
 }
 
+a {
+  color: gold;
+
+  font-size: x-large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 .ui.menu .item img.logo {
   margin-right: 1.5em;
@@ -34,20 +41,14 @@ transform: translate(-50%, -50%);
 -ms-transform: translate(-50%, -50%);
 }
 
-#link {
-  color:whitesmoke;
-}
-#link:hover {
-  color:black;
-}
 
 #landingPageText {
   color: whitesmoke;
 }
+
 a:hover {
-  color:black;
+  color:red;
   text-decoration: underline;
-  animation: blinker
 }
 
 
@@ -63,11 +64,11 @@ a:hover {
 }
 
 #blink {
-  animation: blinker 10s linear infinite; 
+  animation: blinker 1s linear infinite; 
 }
 
 @keyframes blinker {
-  50% {opacity : 0;}
+  50% {opacity : 6;}
 }
 
 /*About page */

@@ -5,7 +5,7 @@ function Resume() {
     return (
         <div>
             <Navigation />
-            <div className="ui two column relaxed very padded segment piled stackable grid">
+            <div className="ui two column relaxed very padded stackable grid">
                 <div className="ui column">
                     <h1>Skills</h1>
                     <hr></hr>

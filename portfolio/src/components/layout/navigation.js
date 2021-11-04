@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navigation(props) {
   return (
-    <div className="ui inverted menu" id="navigation">
+    <div className="ui menu secondary" id="navigation" style={{backgroundColor: "black"}}>
       <div className="ui container">
         <a className="active item">
           <Link to="/">Home</Link>
