@@ -1,4 +1,4 @@
-import picture from '../assets/img/Yosemite.jpg';
+import picture from '../assets/img/guitar.jpg';
 import { Link } from "react-router-dom";
 import $ from 'jquery';
 
@@ -64,7 +64,8 @@ function Home() {
                     <h1 style={{textAlign:"left"}}>About section 1</h1>
                 </div>
                 <div className="ui column">
-                    <h1>Image of me will go here</h1>
+                    <img className="ui image large" src={picture}>
+                    </img>
                     </div>  
                     <div className="ui column">
                     <h1>About section 2</h1>

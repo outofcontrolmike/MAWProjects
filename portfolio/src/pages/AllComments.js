@@ -35,8 +35,8 @@ function AllCommentsPage() {
   if (isLoading) {
     return (
       <section>
-        <div class="ui segment container">
-          <div class="ui active slow blue double loader"></div>
+        <div className="ui segment container">
+          <div className="ui active slow blue double loader"></div>
           <br></br>
           <br></br>
           <br></br>
@@ -50,8 +50,8 @@ function AllCommentsPage() {
     <div>
       <Navigation />
     
-    <div className="ui two column doubling stackable grid padded">
-      <div className="column">
+    <div className="ui two column doubling stackable grid padded inverted">
+      <div className="ui column inverted">
       
       <CommentList comments={loadedComments} />
       </div>
