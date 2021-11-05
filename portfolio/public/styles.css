@@ -117,17 +117,26 @@ a {
   font-size: 26px;
 }
 
-#myName:hover {
+#myName:hover,
+#name:focus,
+#comment:focus {
   color: gold;
+  border-color: gold;
+}
+
+#submit:hover {
+  background-color: gold;
+  color: black;
+}
+
+hr:hover {
+  border-color: gold;
 }
 
 /*Comments Page */
-#input {
+#name,
+#comment {
   color: gold;
-  background-color: black;
-}
-
-element.style {
-  background-color: black;
-  color: white;
+  background: black;
+  border: 1px solid darkorange;
 }

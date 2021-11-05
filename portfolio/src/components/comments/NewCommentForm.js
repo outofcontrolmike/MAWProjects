@@ -42,7 +42,6 @@ function NewCommentForm(props) {
         className="ui form ui raised very padded text container"
       >
         <h1>Please Leave a Comment!</h1>
-        <hr></hr>
         <div className="field" id="input" style={{ backgroundcolor: "black" }}>
           <label style={{ backgroundcolor: "black" }}> Name or Alias</label>
           <input
@@ -71,7 +70,11 @@ function NewCommentForm(props) {
             placeholder="This site has potential to be cool!"
           />
         </div>
-        <button className="ui button orange fluid large" type="submit">
+        <button
+          className="ui button orange fluid large"
+          id="submit"
+          type="submit"
+        >
           Submit
         </button>
       </form>
