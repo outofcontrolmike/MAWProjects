@@ -1,29 +1,27 @@
 /*typography*/
 * {
-font-size:20px;
-font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Navigation */
 #navigation {
-  margin-bottom:0;
+  padding-left: 20rem;
 }
-
 
 /*Landing Page */
 
 h1 {
-  color:gold;
+  color: gold;
   text-align: center;
 }
 
 a {
   color: gold;
-
-  font-size: x-large;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 
 .ui.menu .item img.logo {
   margin-right: 1.5em;
@@ -32,28 +30,28 @@ a {
 
 #landingPageText {
   position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
--webkit-transform: translate(-50%, -50%);
--moz-transform: translate(-50%, -50%);
--o-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
-
 
 #landingPageText {
   color: whitesmoke;
 }
 
-a:hover {
-  color:red;
-  text-decoration: underline;
+i {
+  color: darkorange;
 }
 
-
-
-
+a:hover,
+i:hover {
+  color: orange;
+  opacity: 0.8;
+}
 
 #landingPage {
   background-size: contain;
@@ -64,24 +62,22 @@ a:hover {
 }
 
 #blink {
-  animation: blinker 1s linear infinite; 
+  animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
-  50% {opacity : 6;}
+  50% {
+    opacity: 6;
+  }
 }
 
 /*About page */
 #about {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); 
-}
-
-#pictureContainer {
-  margin-top:10px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 hr {
-  border-color: black;
+  border-color: darkorange;
 }
 
 /*Resume Page*/
@@ -93,5 +89,45 @@ hr {
 
 .visible {
   height: 225px;
-  background-color: aquamarine;
+  background-color: darkorange;
+}
+
+.visible > h1 {
+  color: black;
+}
+
+/*fomantic class additional stylings*/
+
+.column,
+.container {
+  background-color: black;
+  color: white;
+  border: white, 2rem, solid;
+}
+
+p,
+h1,
+a {
+  font-family: "Forum", cursive;
+}
+
+#myName {
+  color: darkorange;
+  font-family: "Forum", cursive;
+  font-size: 26px;
+}
+
+#myName:hover {
+  color: gold;
+}
+
+/*Comments Page */
+#input {
+  color: gold;
+  background-color: black;
+}
+
+element.style {
+  background-color: black;
+  color: white;
 }

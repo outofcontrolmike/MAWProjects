@@ -1,23 +1,20 @@
 import { setState, useRef } from "react";
 
-
 function NewCommentForm(props) {
   const nameRef = useRef();
   const messageRef = useRef();
 
   const commentDate = new Date();
 
-
   function submitHandler(event) {
     event.preventDefault();
     const enteredName = nameRef.current.value;
     const enteredMessage = messageRef.current.value;
-    
+
     let messageData = {
       name: enteredName,
       message: enteredMessage,
-      timestamp: commentDate.toLocaleDateString()
-
+      timestamp: commentDate.toLocaleDateString(),
     };
 
     AddMessageHandler(messageData);
@@ -35,21 +32,22 @@ function NewCommentForm(props) {
     }).then(() => {
       console.log("messageData", messageData);
       window.location.reload();
-      
     });
   }
 
   return (
-    <div className="ui form">
+    <div className="ui form" style={{ backgroundcolor: "black" }}>
       <form
         onSubmit={submitHandler}
-        className="ui form ui raised very padded text container segment"
+        className="ui form ui raised very padded text container"
       >
         <h1>Please Leave a Comment!</h1>
-        <div className="ui divider"></div>
-        <div className="field">
-          <label> Name or Alias</label>
+        <hr></hr>
+        <div className="field" id="input" style={{ backgroundcolor: "black" }}>
+          <label style={{ backgroundcolor: "black" }}> Name or Alias</label>
           <input
+            style={{ backgroundcolor: "black" }}
+            id="input"
             type="text"
             min="1"
             max="25"
@@ -63,6 +61,7 @@ function NewCommentForm(props) {
         <div className="field">
           <label>Comment</label>
           <textarea
+            style={{ backgroundcolor: "black" }}
             type="text"
             min="1"
             max="500"
@@ -72,7 +71,7 @@ function NewCommentForm(props) {
             placeholder="This site has potential to be cool!"
           />
         </div>
-        <button className="ui button primary fluid large" type="submit">
+        <button className="ui button orange fluid large" type="submit">
           Submit
         </button>
       </form>

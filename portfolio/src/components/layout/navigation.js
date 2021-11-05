@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 
 function Navigation(props) {
   return (
-    <div className="ui menu secondary" id="navigation" style={{backgroundColor: "black"}}>
+    <div
+      className="ui menu secondary stackable"
+      id="navigation"
+      style={{ backgroundColor: "black" }}
+    >
       <div className="ui container">
         <a className="active item">
           <Link to="/">Home</Link>
