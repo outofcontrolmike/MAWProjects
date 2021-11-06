@@ -119,7 +119,10 @@ a {
 
 #myName:hover,
 #name:focus,
-#comment:focus {
+#comment:focus
+,#email:focus,
+#category:focus,
+#message:focus {
   color: gold;
   border-color: gold;
 }
@@ -135,7 +138,7 @@ hr:hover {
 
 /*Comments Page */
 #name,
-#comment {
+#comment, #name, #email, #message, #category {
   color: gold;
   background: black;
   border: 1px solid darkorange;
