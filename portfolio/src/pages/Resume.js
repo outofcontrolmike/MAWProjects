@@ -10,37 +10,35 @@ function Resume() {
           <h3>Daily Tools</h3>
 
           <div className="ui list">
-            <i className="html5 icon huge"></i>
-            <i className="css3 icon huge"></i>
-            <i className="js icon huge"></i>
-            <i class="react icon huge"></i>
+            <i className="html5 icon big"></i>
+            <i className="css3 icon big"></i>
+            <i className="js icon big"></i>
+            <i class="react icon big"></i>
 
-            <i className="windows icon huge"></i>
+            <i className="windows icon big"></i>
           </div>
           <div className="ui list">
-            <i className="node js icon huge"></i>
-            <i className="npm icon huge"></i>
+            <i className="node js icon big"></i>
+            <i className="npm icon big"></i>
           </div>
           <h3>Knowledgeable</h3>
           <div className="ui list">
-            <i className="java icon huge"></i>
-            <i className="php icon huge"></i>
-            <i className="database icon huge"></i>
+            <i className="java icon big"></i>
+            <i className="php icon big"></i>
+            <i className="database icon big"></i>
           </div>
 
           <div className="ui list">
-            <i className="ubuntu icon huge"></i>
-            <i className="terminal icon huge"></i>
+            <i className="ubuntu icon big"></i>
+            <i className="terminal icon big"></i>
           </div>
           <div className="ui list">
-            <i className="file word icon huge"></i>
-            <i className="file excel icon huge"></i>
+            <i className="file word icon big"></i>
+            <i className="file excel icon big"></i>
           </div>
           <div className="ui list">
-            <i className="bootstrap icon huge"></i>
+            <i className="bootstrap icon big"></i>
           </div>
-        </div>
-        <div className="ui column">
           <h3>Certifications</h3>
           <div className="ui medium fluid images">
             <div className="ui slide masked reveal image">
@@ -80,6 +78,10 @@ function Resume() {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="ui column">
+          <h3>Resume</h3>
         </div>
       </div>
     </div>

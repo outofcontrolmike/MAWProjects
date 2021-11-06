@@ -31,7 +31,7 @@ function About() {
           </p>
           <p>
             I originally gained interest for Web development during a previous
-            job I had, managing an online vitamin store through woo commerce. I
+            job I had, managing an online vitamin store through WooCommerce. I
             found it interesting to use tools through wordpress to alter the
             front end of my company's website.
           </p>
