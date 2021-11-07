@@ -1,7 +1,7 @@
 let projects = [
   {
     img: "../img/pokemonProject.JPG",
-    href: "../../PokemonAPI/pokemon.html",
+    href: "/pokemon",
     name: "Pokedex API Call",
     meta: "Javascript, Bootstrap & Fomantic",
     desc: "Want to look at pokemon art and information about pokemon? Test this project out!.",
@@ -12,7 +12,7 @@ let projects = [
 
   {
     img: "img/greatrace1.JPG",
-    href: "../../Great Race - JavaScript/race.html",
+    href: "/great_race",
     name: "The Great Race",
     meta: "Javascript and Fomantic",
     desc: "A race between Yoshi and Mario. Who will win???",
@@ -23,7 +23,7 @@ let projects = [
 
   {
     img: "img/vueImage.JPG",
-    href: "../../Vue-ShoppingCart/page.html",
+    href: "/vue_shopping_cart",
     name: "Snes Shopping Cart",
     meta: "Vue & Fomantic",
     desc: "A basic shopping cart utlizing the core concepts of vue",
@@ -34,7 +34,7 @@ let projects = [
 
   {
     img: "img/beast.PNG",
-    href: "../../BeastWars Js/home.html",
+    href: "/beastwars",
     name: "Beast Wars JS",
     meta: "Vanilla JS, Jquery & Fomantic UI",
     desc: "A Beast Wars web application that displays the 1st generation of transformers from the 90's TV series. Also includes sorting options for the characters.",
@@ -43,20 +43,20 @@ let projects = [
       "https://github.com/outofcontrolmike/MAWProjects/tree/master/BeastWars%20Js",
   },
 
-  {
-    img: "img/ffXML.jpg",
-    href: "../../XML Project/index.html",
-    name: "Final Fantasy XML",
-    meta: "XML and JS",
-    desc: "A project I created around summer 2019.  Tried experimenting with XML and XSL styling.",
-    created: "Reworked Feburary 9th 2021",
-    github:
-      "https://github.com/outofcontrolmike/MAWProjects/tree/master/XML%20Project",
-  },
+  // {
+  //   img: "img/ffXML.jpg",
+  //   href: "../../XML Project/index.html",
+  //   name: "Final Fantasy XML",
+  //   meta: "XML and JS",
+  //   desc: "A project I created around summer 2019.  Tried experimenting with XML and XSL styling.",
+  //   created: "Reworked Feburary 9th 2021",
+  //   github:
+  //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/XML%20Project",
+  // },
 
   {
     img: "img/EFW.JPG",
-    href: "../../EarthFireWater/main.php",
+    href: "earth_water_fire",
     name: "Earth Water Fire",
     meta: "PHP & Fomantic",
     desc: "A different theme of rock paper scissors, dealing with elements",
@@ -67,7 +67,7 @@ let projects = [
 
   {
     img: "img/tmnt.JPG",
-    href: "../../TMNT_CharSelect/index.html",
+    href: "tmnt",
     name: "TMNT Character Select",
     meta: "Javascript & Fomantic",
     desc: "Heavily inspired by the Turtles in Time Character Select.",
@@ -78,7 +78,7 @@ let projects = [
 
   {
     img: "img/bmi.JPG",
-    href: "../../bmi_bmr_stats/index.html",
+    href: "/bmi",
     name: "BMI BMR Calculator",
     meta: "Javascript & Fomantic",
     desc: "A reference tool for determing BMI and BMR + Daily caloric Needs.",
@@ -89,7 +89,7 @@ let projects = [
 
   {
     img: "img/breweries.JPG",
-    href: "../../brewery_Fetch/index.html",
+    href: "/breweries",
     name: "Brewery Listing API",
     meta: "Javascript & Fomantic",
     desc: "A fun little project for listing breweries based on user needs.",
@@ -100,7 +100,7 @@ let projects = [
 
   {
     img: "img/calc.JPG",
-    href: "../../coolCalculator/index.html",
+    href: "/cool_calc",
     name: "Cool Calculator",
     meta: "JS,Fomantic and Google Fonts",
     desc: "A flashy basic Calculator.",
@@ -111,7 +111,7 @@ let projects = [
 
   {
     img: "img/ff_search.JPG",
-    href: "../../Final Fantasy Search/index.html",
+    href: "/ff_search",
     name: "Final Fantasy Search",
     meta: "JS,Fomantic and Google Fonts",
     desc: "A system for fetching Final Fantasy Characters and game information.",
@@ -121,7 +121,7 @@ let projects = [
   },
   {
     img: "img/characters.JPG",
-    href: "../../characters/public/index.html",
+    href: "/characters",
     name: "Characters",
     meta: "React JS,Fomantic and Google Fonts",
     desc: "A system for fetching character information and custom character uploading",
