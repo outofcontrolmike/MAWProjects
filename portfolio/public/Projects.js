@@ -136,7 +136,7 @@ let projects = [
 
 projects.map(createProjectCard);
 
-function createProjectCard(project) {
+ function createProjectCard(project) {
   let container = document.createElement("div");
   container.className = "card";
 

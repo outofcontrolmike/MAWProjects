@@ -35,8 +35,9 @@ function AllCommentsPage() {
   if (isLoading) {
     return (
       <section>
-        <div className="ui segment container">
+        <div className="ui segment container inverted">
           <div className="ui active slow blue double loader"></div>
+          <p>Loading comments :)</p>
           <br></br>
           <br></br>
           <br></br>

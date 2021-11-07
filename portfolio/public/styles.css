@@ -127,7 +127,7 @@ a {
   border-color: gold;
 }
 
-#submit:hover {
+#submit:hover, #thankYouButton:hover {
   background-color: gold;
   color: black;
 }

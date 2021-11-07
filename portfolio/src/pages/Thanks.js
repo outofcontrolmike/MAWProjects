@@ -17,7 +17,7 @@ function handleClick()
             <h3>I will be getting back to you as soon as I can!</h3>
             <div>
                 <br></br>
-  <button className="ui inverted orange button huge" onClick={handleClick}>Back to Home</button>
+  <button className="ui inverted orange button huge" id="thankYouButton" onClick={handleClick}>Back to Home</button>
             </div>
             </div>
             </div>
