@@ -23,9 +23,9 @@ function AllCommentsPage() {
             id: key,
             ...data[key],
           };
-
           comments.push(comment);
           comments.reverse();
+
         }
         setIsLoading(false);
         setLoadedComments(comments);

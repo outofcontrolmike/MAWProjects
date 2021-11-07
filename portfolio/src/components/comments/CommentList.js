@@ -8,6 +8,7 @@ function CommentList(props) {
       className="ui comments container"
       style={{ height: "100vh", overflowY: "auto" }}
     >
+      <h1>What people are saying..................</h1>
       {props.comments.map((comment) => (
         <CommentItem
           key={comment.id}
