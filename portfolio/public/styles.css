@@ -143,3 +143,10 @@ hr:hover {
   background: black;
   border: 1px solid darkorange;
 }
+
+
+/*Thank you page */
+#thankYou {
+  position: relative;
+  top:20rem;
+}

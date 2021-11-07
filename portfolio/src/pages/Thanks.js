@@ -1,17 +1,24 @@
-function Thanks() {
+import { Router, Route, Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
+
+function Thanks(props) {
+    let history = useHistory();
 
 function handleClick()
 {
-    console.log("button KNows it's being clicked")
-    window.open("http://localhost:3000/");
+    history.push("/");
 }
 
+
     return(
-        <div className="container ui relaxed padded">
-            <h1>Thank you so much, {"userName"}!!</h1>
+        <div className="ui middle aligned center aligned grid" id="thankYou"> 
+            <div className="column">
+            <h1>Thank you so much!!</h1>
             <h3>I will be getting back to you as soon as I can!</h3>
             <div>
-  <button className="ui inverted blue button huge" onClick={handleClick}>Back to Home</button>
+                <br></br>
+  <button className="ui inverted orange button huge" onClick={handleClick}>Back to Home</button>
+            </div>
             </div>
             </div>
     )
