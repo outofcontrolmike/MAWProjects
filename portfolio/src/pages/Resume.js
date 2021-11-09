@@ -82,7 +82,7 @@ function Resume() {
 
         <div className="ui column" id="resume" >
   
-          <h3><em>Work Experience</em></h3>
+          <h1>Work Experience</h1>
           <hr>
           </hr>
           <h3><b>Junior React Developer</b></h3>
@@ -139,7 +139,17 @@ function Resume() {
 </br>
 <p>All kinds of stuff.
 </p>
-        </div>
+<hr></hr>
+<h1>Education</h1>
+<h3><b>Associate in Applied Science - Computer Information Science</b></h3>
+<p>Ozarks Technical Community College - Springfield, MO</p>
+<span>January 2018 - December 2019</span>
+<br>
+</br>
+<h3><b>Associate of Arts - General Education</b></h3>
+<p>Ozarks Technical Community College - Springfield, MO</p>
+<span>August 2010 - May 2013</span>
+</div>
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
+
 export default function CoolCalc() {
  
 
     
     return(
-        <div className="ui segment two column container inverted" style={{width: "fit-content"}}>
+        <div className="ui segment two column container" style={{width: "fit-content", backgroundColor: "black"}}>
         <div className="ui column">
           <label>Num1</label>
           <input type="number" id="num1" maxlength="12" className="input inverted"/>

@@ -77,7 +77,7 @@ i:hover {
 }
 
 hr {
-  border-color: darkorange;
+  border-color: aqua;
 }
 
 /*Resume Page*/
@@ -89,7 +89,7 @@ hr {
 
 .visible {
   height: 225px;
-  background-color: darkorange;
+  background-color: aquamarine;
 }
 
 .visible > h1 {
@@ -117,7 +117,7 @@ a {
 }
 
 #myName {
-  color: darkorange;
+  color: aquamarine;
   font-family: "Forum", cursive;
   font-size: 26px;
 }
@@ -146,7 +146,7 @@ hr:hover {
 #comment, #name, #email, #message, #category {
   color: gold;
   background: black;
-  border: 1px solid darkorange;
+  border: 1px solid aquamarine;
 }
 
 
