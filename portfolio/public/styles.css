@@ -96,6 +96,11 @@ hr {
   color: black;
 }
 
+#resume {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 /*fomantic class additional stylings*/
 
 .column,
