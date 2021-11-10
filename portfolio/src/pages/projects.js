@@ -117,9 +117,9 @@ function Projects(props) {
       img: "img/calc.JPG",
       href: "/cool_calc",
       name: "Cool Calculator",
-      meta: "React,Fomant",
+      meta: "React,Fomantic",
       desc: "A flashy basic Calculator.",
-      created: "Wrote May 3th 2021 - rewrote November 9th 2021",
+      created: "Rewrote November 9th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/coolCalculator",
     },
