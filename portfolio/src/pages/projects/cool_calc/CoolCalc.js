@@ -1,7 +1,9 @@
 
 export default function CoolCalc() {
-
-
+ 
+  setTimeout(loadEverything, 5);
+  function loadEverything() {
+  
 //grand total
 let total = document.getElementById('total');
 let num1,num2;
@@ -19,9 +21,6 @@ let btnAdd = document.getElementById('add')
 let btnSub = document.getElementById('minus')
 let btnMult = document.getElementById('mult')
 let btnDivide = document.getElementById('divide')
- 
-//On page load
- toggleButtons("true");
 
 //event listeners
 num1.addEventListener('input', function () {
@@ -121,39 +120,41 @@ btnMult.disabled = handleToggle;
 btnDivide.disabled = handleToggle;
 }
 
-
+//On page load
+toggleButtons("true");
+  }
     return(
    
-      <body>
+      <body style={{marginTop: "100px"}}>
         <head>
           </head>
 
-        <div className="ui segment two column container" style={{width: "fit-content", backgroundColor: "black"}}>
+        <div className="ui segment two column container" style={{width: "fit-content", backgroundColor: "black", marginTop: "5rem"}}>
         <div className="ui column">
-          <label style={{}}>Num1</label>
-          <input type="number" id="num1" maxlength="12" className="input inverted"/>
+          <label style={{fontFamily:"fantasy"}}>Num1</label>
+          <input style={{height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num1" maxlength="12" className="input inverted"/>
           <label>Num2</label>
-          <input type="number" id="num2" maxlength="12" max="12"/>
+          <input style={{height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num2" maxlength="12" max="12"/>
           <div className="container">
-          <button id="add" type="button"  className="ui inverted green button" style={{fontFamily: "cursive"}}><span>Add</span></button>
-          <button id="minus" type="button" className="ui inverted red button"><span>Subtract</span></button>
-          <button id="mult" type="button" className="ui inverted purple button"><span>Multiply</span></button>
-          <button id="divide" type="number" className="ui inverted teal button"><span>Divide</span></button>
-          <button id="clear" type="number" className="ui inverted brown button"><span>Clear</span></button>
+          <button   id="add" type="button"  className="ui inverted green button" style={{fontFamily: "cursive"}}>  <span style={{fontFamily: 'fantasy'}} style={{fontFamily: 'fantasy'}}>Add</span></button>
+          <button   id="minus" type="button" className="ui inverted red button"> <span style={{fontFamily: 'fantasy'}}>Subtract</span></button>
+          <button   id="mult" type="button" className="ui inverted purple button"> <span style={{fontFamily: 'fantasy'}}>Multiply</span></button>
+          <button   id="divide" type="number" className="ui inverted teal button"> <span style={{fontFamily: 'fantasy'}}>Divide</span></button>
+          <button   id="clear" type="number" className="ui inverted brown button"> <span style={{fontFamily: 'fantasy'}}>Clear</span></button>
         </div>
       </div>
       <hr />
       <br></br>
       <div className="ui column" id="sum">
-          <span id="value1">
+           <span style={{fontFamily: 'fantasy'}} id="value1">
       
           </span>
-          <span id="operator">
+           <span style={{fontFamily: 'fantasy'}} id="operator">
       
           </span>
-          <span id="value2">
+           <span style={{fontFamily: 'fantasy'}} id="value2">
           </span>
-            <span className="blink" id="total">
+             <span style={{fontFamily: 'fantasy', color:"green", fontSize: "xx-large", marginLeft: "2%"}} className="blink" id="total">
               
             </span>
       
