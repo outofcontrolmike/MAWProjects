@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import Navigation from "../components/layout/Navigation";
-import { useHistory } from 'react-router';
 
 function Projects(props) {
 
@@ -118,9 +117,9 @@ function Projects(props) {
       img: "img/calc.JPG",
       href: "/cool_calc",
       name: "Cool Calculator",
-      meta: "JS,Fomantic and Google Fonts",
+      meta: "React,Fomant",
       desc: "A flashy basic Calculator.",
-      created: "Wrote May 3th 2021",
+      created: "Wrote May 3th 2021 - rewrote November 9th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/coolCalculator",
     },

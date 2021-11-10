@@ -1,7 +1,14 @@
+//Cool Calc Project - in React
+/*Originally wrote Febuarary 14th 2021
+  Rewrote November 9th 2021*/
 
+import HomeLink from "../../../components/links/Home"
 export default function CoolCalc() {
- 
+
+  //Had to set timeout because component wasn't rendering correctly
   setTimeout(loadEverything, 5);
+
+  //Loads all the functionallity
   function loadEverything() {
   
 //grand total
@@ -44,16 +51,15 @@ btnDivide.addEventListener('click', divide);
 document.getElementById('clear').addEventListener('click', clearValues);
 
 
-//Functions
-
+//disables arithmetic buttons if fields are empty
 function fieldCheck() {
     if(num1.value == "" || num2.value == "")
     {
-        console.log("testing");
         toggleButtons('true');
     }
 }
 
+//Sets up display values for Added values
 function addition() {
     declareNums();
     shownWork("+");
@@ -61,24 +67,28 @@ function addition() {
 
 }
 
+//Sets up display values for Subtracted values
 function subtraction() {
     declareNums();
     shownWork("-");
     total.innerHTML = num1 - num2;
 }
 
+//Sets up display values for Multiplied values
 function multiply() {
     declareNums()
     shownWork("*");
     total.innerHTML = num1 * num2;
 }
 
+//Sets up display values for Divided values
 function divide() {
     declareNums()
     shownWork("/")
     total.innerHTML = (num1 / num2).toFixed(2);
 }
 
+//Resets the form fields
 function clearValues() {
     declareNums();
     document.getElementById('num1').value= "";
@@ -87,10 +97,12 @@ function clearValues() {
     value1.innerText = "";
     value2.innerHTML = "";
     operator.innerHTML = "";
+    document.getElementById("calcBr").style.visibility = "hidden";
 
     toggleButtons("true");
 }
 
+//Sets the value elements with calculated values
 function shownWork(symbol) {
     declareNums();
     value1.innerHTML = num1;
@@ -99,11 +111,14 @@ function shownWork(symbol) {
 
 }
 
+//converts to number
 function declareNums() {
+  document.getElementById("calcBr").style.visibility = "visible";
     num1 = parseInt(document.getElementById('num1').value);
     num2 = parseInt(document.getElementById('num2').value);
 }
 
+//Handles toggling buttons
 function toggleButtons(handleToggle) {
 if(handleToggle === "false")
 {
@@ -123,19 +138,22 @@ btnDivide.disabled = handleToggle;
 //On page load
 toggleButtons("true");
   }
-    return(
-   
-      <body style={{marginTop: "100px"}}>
-        <head>
-          </head>
 
-        <div className="ui segment two column container" style={{width: "fit-content", backgroundColor: "black", marginTop: "5rem"}}>
-        <div className="ui column">
-          <label style={{fontFamily:"fantasy"}}>Num1</label>
-          <input style={{height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num1" maxlength="12" className="input inverted"/>
-          <label>Num2</label>
-          <input style={{height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num2" maxlength="12" max="12"/>
-          <div className="container">
+  
+    return(
+      <>
+      <HomeLink /><body style={{marginTop: "100px"}}>
+
+
+        <div className="ui two column container very padded relaxed" style={{width: "fit-content", marginTop: "5rem"}}>
+        <div className="ui column" style={{marign:"25px"}}>
+          <div style={{margin:"2rem"}}>
+          <label style={{fontFamily:"fantasy", marginRight:"1rem"}}>Num1</label>
+          <input style={{borderColor:"white",height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green",}} type="number" id="num1" maxlength="12" className="input field"/>
+          <label style={{marginLeft:"1rem", marginRight:"1rem"}}>Num2</label>
+          <input style={{borderColor:"white", height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num2" maxlength="12" max="12"/>
+          </div>
+          <div className="container" style={{textAlign: "center"}}>
           <button   id="add" type="button"  className="ui inverted green button" style={{fontFamily: "cursive"}}>  <span style={{fontFamily: 'fantasy'}} style={{fontFamily: 'fantasy'}}>Add</span></button>
           <button   id="minus" type="button" className="ui inverted red button"> <span style={{fontFamily: 'fantasy'}}>Subtract</span></button>
           <button   id="mult" type="button" className="ui inverted purple button"> <span style={{fontFamily: 'fantasy'}}>Multiply</span></button>
@@ -143,7 +161,7 @@ toggleButtons("true");
           <button   id="clear" type="number" className="ui inverted brown button"> <span style={{fontFamily: 'fantasy'}}>Clear</span></button>
         </div>
       </div>
-      <hr />
+      <hr id="calcBr"style={{borderColor:"white", visibility:"hidden"}} />
       <br></br>
       <div className="ui column" id="sum">
            <span style={{fontFamily: 'fantasy'}} id="value1">
@@ -161,6 +179,7 @@ toggleButtons("true");
       </div>
       </div>
       </body>
+      </>
 
     )
 }
