@@ -172,3 +172,43 @@ hr:hover {
   }
   /****************************************************/
   
+/*GREAT RACE */
+
+
+/*Setting the background image for race*/
+  #greatRaceBg {
+   /* Full height */
+   height: 100%; 
+
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 1000px;
+}
+
+/*setting position of flag*/
+.segment > #flag {
+  float:right;
+  bottom:630px;
+  position: relative;
+}
+
+/*Handling of YoshiWin image*/
+.segment > #yoshiWin {
+  width: 150px;
+  height: 200px;
+  right: 500px;
+  top: 300px;
+  position: fixed;
+  visibility: hidden;
+}
+/*Handling of mario winning image*/
+.segment > #winMario {
+  width: 150px;
+  height: 200px;
+  right: 600px; 
+  top: 300px;
+  position: fixed;
+  visibility: hidden;
+}
