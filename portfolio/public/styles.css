@@ -166,3 +166,9 @@ hr:hover {
   input[type=number] {
     -moz-appearance: textfield;
   }
+
+  #coolBtn  {
+    font-family: 'Rock Salt', cursive;
+  }
+  /****************************************************/
+  

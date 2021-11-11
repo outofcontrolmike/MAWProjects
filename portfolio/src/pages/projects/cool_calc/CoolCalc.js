@@ -3,6 +3,7 @@
   Rewrote November 9th 2021*/
 
 import HomeLink from "../../../components/links/Home"
+
 export default function CoolCalc() {
 
   //Had to set timeout because component wasn't rendering correctly
@@ -148,31 +149,31 @@ toggleButtons("true");
         <div className="ui two column container very padded relaxed" style={{width: "fit-content", marginTop: "5rem"}}>
         <div className="ui column" style={{marign:"25px"}}>
           <div style={{margin:"2rem"}}>
-          <label style={{fontFamily:"fantasy", marginRight:"1rem"}}>Num1</label>
-          <input style={{borderColor:"white",height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green",}} type="number" id="num1" maxlength="12" className="input field"/>
-          <label style={{marginLeft:"1rem", marginRight:"1rem"}}>Num2</label>
-          <input style={{borderColor:"white", height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num2" maxlength="12" max="12"/>
+          <label style={{ fontFamily: '\'Rock Salt\', cursive', marginRight:"1rem"}}>Num1</label>
+          <input style={{borderColor:"white",height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green", fontFamily: '\'Rock Salt\', cursive'}} type="number" id="num1" maxlength="12" className="input field"/> 
+          <label style={{fontFamily: '\'Rock Salt\', cursive', marginLeft:"1rem", marginRight:"1rem",  fontFamily: '\'Rock Salt\', cursive' }}>Num2</label>
+          <input style={{ fontFamily: '\'Rock Salt\', cursive' , borderColor:"white", height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num2" maxlength="12" max="12"/>
           </div>
           <div className="container" style={{textAlign: "center"}}>
-          <button   id="add" type="button"  className="ui inverted green button" style={{fontFamily: "cursive"}}>  <span style={{fontFamily: 'fantasy'}} style={{fontFamily: 'fantasy'}}>Add</span></button>
-          <button   id="minus" type="button" className="ui inverted red button"> <span style={{fontFamily: 'fantasy'}}>Subtract</span></button>
-          <button   id="mult" type="button" className="ui inverted purple button"> <span style={{fontFamily: 'fantasy'}}>Multiply</span></button>
-          <button   id="divide" type="number" className="ui inverted teal button"> <span style={{fontFamily: 'fantasy'}}>Divide</span></button>
-          <button   id="clear" type="number" className="ui inverted brown button"> <span style={{fontFamily: 'fantasy'}}>Clear</span></button>
+          <button   id="add" type="button"  className="ui inverted green button">  <span id="coolBtn" >Add</span></button>
+          <button   id="minus" type="button" className="ui inverted red button coolBtn"> <span id="coolBtn">Subtract</span></button>
+          <button   id="mult" type="button" className="ui inverted purple button coolBtn"> <span id="coolBtn">Multiply</span></button>
+          <button   id="divide" type="number" className="ui inverted teal button coolBtn"> <span id="coolBtn">Divide</span></button>
+          <button   id="clear" type="number" className="ui inverted brown button coolBtn"> <span  id="coolBtn">Clear</span></button>
         </div>
       </div>
       <hr id="calcBr"style={{borderColor:"white", visibility:"hidden"}} />
       <br></br>
-      <div className="ui column" id="sum">
-           <span style={{fontFamily: 'fantasy'}} id="value1">
+      <div className="ui column" id="sum" style={{height: "5rem"}}>
+           <span style={{fontFamily: '\'Rock Salt\', cursive'}} id="value1">
       
           </span>
-           <span style={{fontFamily: 'fantasy'}} id="operator">
+           <span style={{fontFamily: '\'Rock Salt\', cursive'}} id="operator">
       
           </span>
-           <span style={{fontFamily: 'fantasy'}} id="value2">
+           <span style={{fontFamily: '\'Rock Salt\', cursive'}} id="value2">
           </span>
-             <span style={{fontFamily: 'fantasy', color:"green", fontSize: "xx-large", marginLeft: "2%"}} className="blink" id="total">
+             <span style={{fontFamily: '\'Rock Salt\', cursive', color:"green", fontSize: "xx-large", marginLeft: "2%"}} className="blink" id="total">
               
             </span>
       
