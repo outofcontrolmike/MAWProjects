@@ -1,16 +1,13 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Navigation from "../components/layout/Navigation";
 
 function Projects(props) {
-
   //Fixes render issue - Function was mapping before the component rendered
   setTimeout(mapOver, 1);
 
-  function mapOver()
-  {
+  function mapOver() {
     document.getElementById("list").innerHTML = "";
     projects.map(createProjectCard);
-
   }
   //projects to map thorough
   let projects = [
@@ -24,18 +21,18 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/PokemonAPI",
     },
-  
+
     {
       img: "img/greatrace1.JPG",
       href: "/great_race",
       name: "The Great Race",
-      meta: "Javascript and Fomantic",
+      meta: "React & Fomantic",
       desc: "A race between Yoshi and Mario. Who will win???",
-      created: "Reworked October 2020",
+      created: "Reworked November 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/Great%20Race%20-%20JavaScript",
     },
-  
+
     {
       img: "img/vueImage.JPG",
       href: "/vue_shopping_cart",
@@ -46,7 +43,7 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/Vue-ShoppingCart",
     },
-  
+
     {
       img: "img/beast.PNG",
       href: "/beastwars",
@@ -57,7 +54,7 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/BeastWars%20Js",
     },
-  
+
     // {
     //   img: "img/ffXML.jpg",
     //   href: "../../XML Project/index.html",
@@ -68,7 +65,7 @@ function Projects(props) {
     //   github:
     //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/XML%20Project",
     // },
-  
+
     {
       img: "img/EFW.JPG",
       href: "earth_water_fire",
@@ -79,7 +76,7 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/EarthFireWater",
     },
-  
+
     {
       img: "img/tmnt.JPG",
       href: "tmnt",
@@ -90,7 +87,7 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/TMNT_CharSelect",
     },
-  
+
     {
       img: "img/bmi.JPG",
       href: "/bmi",
@@ -101,7 +98,7 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/bmi_bmr_stats",
     },
-  
+
     {
       img: "img/breweries.JPG",
       href: "/breweries",
@@ -112,7 +109,7 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/brewery_Fetch",
     },
-  
+
     {
       img: "img/calc.JPG",
       href: "/cool_calc",
@@ -123,7 +120,7 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/coolCalculator",
     },
-  
+
     {
       img: "img/ff_search.JPG",
       href: "/ff_search",
@@ -150,64 +147,62 @@ function Projects(props) {
   function createProjectCard(project) {
     let container = document.createElement("div");
     container.className = "card";
-  
+
     let imageContainer = document.createElement("div");
     imageContainer.className = "ui image medium";
-  
+
     let projectLink = document.createElement("a");
     projectLink.href = project.href;
-  
+
     let image = document.createElement("img");
     image.src = project.img;
     image.className = "ui image medium";
     image.style.maxHeight = "135px";
     projectLink.append(image);
     imageContainer.append(projectLink);
-  
+
     let content = document.createElement("div");
     content.className = "content";
-  
+
     let header = document.createElement("div");
     header.className = "header";
     header.innerHTML = project.name;
-  
+
     let metaContainer = document.createElement("div");
     metaContainer.className = "meta";
-  
+
     let metaInfo = document.createElement("p");
     metaInfo.innerHTML = project.meta;
     metaContainer.append(metaInfo);
-  
+
     let descContainer = document.createElement("div");
     descContainer.className = "description";
     descContainer.innerHTML = project.desc;
-  
+
     content.append(header, metaContainer, descContainer);
-  
+
     let extraContent = document.createElement("div");
     extraContent.className = "extra content";
-  
+
     let contentInfo = document.createElement("span");
     contentInfo.className = "right floated";
     contentInfo.innerHTML = project.created;
-  
+
     let gitHub = document.createElement("span");
     let gitLink = document.createElement("a");
     let icon = document.createElement("i");
     icon.className = "github icon blue";
     gitLink.append(icon);
     gitHub.append(gitLink);
-  
+
     gitLink.href = project.github;
-  
+
     extraContent.append(contentInfo, gitHub);
-  
+
     container.append(imageContainer, content, extraContent);
     console.log("gitLink", gitHub);
     document.getElementById("list").append(container);
   }
-
-
 
   return (
     <div>
@@ -219,8 +214,6 @@ function Projects(props) {
       </div>
     </div>
   );
-
-  
 }
 
 export default Projects;
