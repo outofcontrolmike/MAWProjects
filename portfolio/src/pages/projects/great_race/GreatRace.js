@@ -1,7 +1,11 @@
 import Images from "./Images";
-import background from "./images/background.jpg";
+
+//Great Race Project in React
 export default function GreatRace() {
+  //Loads script after initial render
   setTimeout(runScript, 5);
+
+  //Main Game script
   function runScript() {
     // Declaring variables for events
     var marioRun = document.getElementById("mario");
@@ -83,7 +87,7 @@ export default function GreatRace() {
       document.getElementById("mario").style.visibility = "visible";
       document.getElementById("winMario").style.visibility = "hidden";
       document.getElementById("yoshiWin").style.visibility = "hidden";
-      document.getElementById("star").src = "img/greatRace/off.png";
+      document.getElementById("star").src = "/img/greatRace/off.png";
       header.innerHTML = "Click the star for another round";
     }
 
@@ -92,20 +96,20 @@ export default function GreatRace() {
       clearInterval(myTime);
     }
 
-    // this function will style the oriiginal back to the left and insert the running images.
-
+    //Resets race positions
     function restartRace() {
-      document.getElementById("mario").src = "img/greatRace/mario.png";
-      document.getElementById("yoshi").src = "img/greatRace/yoshi.png";
-      document.getElementById("star").src = "img/greatRace/on.png";
+      document.getElementById("mario").src = "/img/greatRace/mario.png";
+      document.getElementById("yoshi").src = "/img/greatRace/yoshi.png";
+      document.getElementById("star").src = "/img/greatRace/on.png";
       document.getElementById("mario").style.left = "0px";
       document.getElementById("yoshi").style.left = "0px";
       document.getElementById("star").addEventListener("click", startRace);
       takeOff();
     }
   }
+
   return (
-    <div id="greatRaceBg" style={{ backgroundImage: `url(${background})` }}>
+    <div id="greatRaceBg">
       <div className="ui fluid">
         <h1
           id="header"
@@ -144,7 +148,7 @@ export default function GreatRace() {
           </p>
           <hr style={{ borderColor: "black" }} />
           <a style={{ color: "black" }} href="/projects">
-            <span class="ui text black medium">Home</span>
+            <span class="ui text info small">Projects</span>
           </a>
         </div>
         <Images />

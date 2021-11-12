@@ -62,11 +62,13 @@ i:hover {
 }
 
 .blink {
-  animation: blinker 4s linear infinite; 
+  animation: blinker 4s linear infinite;
 }
 
 @keyframes blinker {
-  50% {opacity : 0;}
+  50% {
+    opacity: 0;
+  }
 }
 
 /*About page */
@@ -122,15 +124,16 @@ a {
 
 #myName:hover,
 #name:focus,
-#comment:focus
-,#email:focus,
+#comment:focus,
+#email:focus,
 #category:focus,
 #message:focus {
   color: gold;
   border-color: gold;
 }
 
-#submit:hover, #thankYouButton:hover {
+#submit:hover,
+#thankYouButton:hover {
   background-color: gold;
   color: black;
 }
@@ -141,56 +144,59 @@ hr:hover {
 
 /*Comments Page */
 #name,
-#comment, #name, #email, #message, #category {
+#comment,
+#name,
+#email,
+#message,
+#category {
   color: gold;
   background: black;
   border: 1px solid aquamarine;
 }
 
-
 /*Thank you page */
 #thankYou {
   position: relative;
-  top:20rem;
+  top: 20rem;
 }
 
 /*Cool Calc Specifically/*
   /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  /* Firefox */
-  input[type=number] {
-    -moz-appearance: textfield;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  #coolBtn  {
-    font-family: 'Rock Salt', cursive;
-  }
-  /****************************************************/
-  
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#coolBtn {
+  font-family: "Rock Salt", cursive;
+}
+/****************************************************/
+
 /*GREAT RACE */
 
-
 /*Setting the background image for race*/
-  #greatRaceBg {
-   /* Full height */
-   height: 100%; 
+#greatRaceBg {
+  /* Full height */
+  height: 100%;
 
-   /* Center and scale the image nicely */
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 1000px;
+  background-image: url("./img/greatRace/background.jpg");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
 }
 
 /*setting position of flag*/
 #flag {
-  float:right;
-  bottom:630px;
+  float: right;
+  bottom: 630px;
   position: relative;
 }
 
@@ -207,7 +213,7 @@ hr:hover {
 #winMario {
   width: 150px;
   height: 200px;
-  right: 600px; 
+  right: 600px;
   top: 300px;
   position: fixed;
   visibility: hidden;
