@@ -188,14 +188,14 @@ hr:hover {
 }
 
 /*setting position of flag*/
-.segment > #flag {
+#flag {
   float:right;
   bottom:630px;
   position: relative;
 }
 
 /*Handling of YoshiWin image*/
-.segment > #yoshiWin {
+#yoshiWin {
   width: 150px;
   height: 200px;
   right: 500px;
@@ -204,7 +204,7 @@ hr:hover {
   visibility: hidden;
 }
 /*Handling of mario winning image*/
-.segment > #winMario {
+#winMario {
   width: 150px;
   height: 200px;
   right: 600px; 
