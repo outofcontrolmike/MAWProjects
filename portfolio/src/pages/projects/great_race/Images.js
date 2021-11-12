@@ -2,10 +2,9 @@ import mario from "./images/mario.png";
 import yoshi from "./images/yoshi.png";
 import marioWin from "./images/mariowin.png";
 import yoshiWin from "./images/yoshiwin.png";
-import marioRun from "./images/mariorun.png";
-import yoshiRun from "./images/yoshirun.png";
 
 import star from "./images/off.png";
+import flag from "./images/flag.png";
 
 export default function Images() {
     return(
@@ -28,7 +27,10 @@ export default function Images() {
         src={yoshi}
         alt="yoshistanding"
       />
-      <img className="ui image medium" id="flag" src="flag.png" alt="finishflag" />
+      <img className="ui image medium" 
+      id="flag" 
+      src={flag} 
+      alt="finishflag" />
       <img
         className="ui image small centered"
         id="winMario"
