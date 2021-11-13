@@ -1,7 +1,7 @@
 export default function BeastWars() {
   //Create our characters array with Transfomer objects
 
-  setTimeout(loadScript, 100);
+  setTimeout(loadScript, 10);
 
   function loadScript() {
      document.getElementById("here").innerHTML = "";
@@ -210,9 +210,6 @@ export default function BeastWars() {
         img2: "rampage2.jpg",
       },
     ];
-
-    // mainFunction(characters);
-
     //Variables
     var team = "";
 
@@ -268,10 +265,10 @@ export default function BeastWars() {
           team = "predacon.jpg";
         }
         var htmlCode =
-          '<div class="ui card  fluid">' +
-          '<div class="ui slide masked reveal"><img class="visible content image" src="img/beastWars/' +
+          '<div class="ui card">' +
+          '<div class="ui slide masked reveal"><img class="visible content image" id="beastImage" src="img/beastWars/' +
           sort[i].img +
-          '"><img class="hidden content image" src="img/beastWars/' +
+          '"><img class="hidden content image" id="beastImage"  src="img/beastWars/' +
           sort[i].img2 +
           '"></div><div class="content"><span class="header">' +
           sort[i].name +
@@ -291,20 +288,24 @@ export default function BeastWars() {
         var info = (document.getElementById("here").innerHTML += htmlCode);
       } //end for
     }
+
+    //Initial call for page load
     mainFunction(characters);
   }
 
   return (
-    <div>
+    <div className="ui container fluid very padded relaxed">
       {/* //main Content*/}
-      <div className="ui raised very padded" id="main"></div>
-      <div className="ui ">
-        <div className="container">
-          <p>
-            <span className="ui text massive center">Beast Wars</span>
+      <div className="ui " id="main"></div>
+      <div className="ui container ">
+        <div className="ui" id="">
+          <p id="beastP">
+            <span className="ui text massive center" id="beastP">Beast Wars</span>
           </p>
           <hr />
           <h2 className="text center ui">Sorting options</h2>
+          <div className=" ui container padded relaxed">
+
           <button className="button ui red large redBtn"
                 id="sortAlpha"
                       >
@@ -334,10 +335,12 @@ export default function BeastWars() {
           >
             Sort Randomly
           </button>
-          <i className="map signs icon huge float right"></i>
+          <i className="map signs icon huge"></i>
+          </div>
+
         </div>
       </div>
-      <div className="ui link cards four stackable" id="here">
+      <div className="ui link cards four stackable"  style={{marginLeft: "20rem", marginRight: "20rem"}}id="here">
         {/*Print cards here */}
       </div>
     </div>
