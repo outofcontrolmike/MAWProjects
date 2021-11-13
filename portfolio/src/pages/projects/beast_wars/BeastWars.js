@@ -341,6 +341,16 @@ export default function BeastWars() {
       <div className="ui cards stackable "  style={{marginLeft: "20rem"}}id="here">
         {/*Print cards here */}
       </div>
+      <div class="content">
+      {/* <!--video here--> */}
+      <div class="ui container" style={{textAlign: "right"}}>
+
+
+      <iframe width="560" height="315"
+src="https://www.youtube.com/embed/ffUXChZ13dE?&autoplay=1"frameborder="0" 
+allowfullscreen></iframe>
+  </div>
+    </div>
     </div>
     
   );
