@@ -68,4 +68,56 @@
   </body>
 </html>
 
-<script src="Projects.js"></script>
+<script>
+  $('.redBtn').click(() => { // arrow functions because es6
+$('.redBtn').toast({
+  title: 'Awesome!!!',
+  message: 'Alphabetical Sort',
+  class : 'red',
+  className: {
+      toast: 'ui small message'
+  }
+});
+});
+
+$('.blueBtn').click(() => { // arrow functions because es6
+$('.blueBtn').toast({
+  title: 'Maxamize!!!',
+  message: 'Maximals Sort',
+  class : 'blue',
+  className: {
+      toast: 'ui message',
+  }
+});
+});
+$('.yellowBtn').click(() => { // arrow functions because es6
+$('.yellowBtn').toast({
+  title: 'Terrorize!!!',
+  message: 'Predacons Sort',
+  class : 'yellow',
+  className: {
+      toast: 'ui message visible'
+  }
+});
+});
+$('.greenBtn').click(() => { // arrow functions because es6
+$('.greenBtn').toast({
+  title: 'Prime',
+  message: 'Animal Sorting',
+  class : 'green',
+  className: {
+      toast: 'ui message'
+  }
+});
+});
+$('.blackBtn').click(() => { 
+$('.blackBtn').toast({
+  title: 'Nice!!',
+  message: 'Random Sort',
+  class : 'black',
+  className: {
+      toast: 'ui message'
+  }
+});
+});
+</script>

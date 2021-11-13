@@ -42,7 +42,7 @@ function Resume() {
           <h3>Certifications</h3>
           <div className="ui medium fluid images">
             <div className="ui slide masked reveal image">
-              <div className="visible content">
+              <div className="visible content" id="resumeVisible">
                 <h1>HTML & CSS</h1>
               </div>
 
@@ -56,7 +56,7 @@ function Resume() {
             </div>
 
             <div className="ui slide masked reveal image">
-              <div className="visible content">
+              <div className="visible content" id="resumeVisible">
                 <h1>Javascript</h1>
               </div>
               <a
@@ -67,7 +67,7 @@ function Resume() {
               </a>
             </div>
             <div className="ui slide masked reveal image">
-              <div className="visible content">
+              <div className="visible content" id="resumeVisible">
                 <h1>SQL</h1>
               </div>
               <a

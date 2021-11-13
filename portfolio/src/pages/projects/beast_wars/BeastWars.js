@@ -251,11 +251,8 @@ export default function BeastWars() {
       mainFunction(maximals);
     }
 
-    //***FUNCTIONS****//
 
     //Main Function
-    //Accepts a sorted array
-    //
     function mainFunction(sort) {
       //Determine which symbol to use
       for (var i = 0; i < sort.length; i++) {
@@ -265,7 +262,7 @@ export default function BeastWars() {
           team = "predacon.jpg";
         }
         var htmlCode =
-          '<div class="ui card">' +
+          '<div class="ui card" id="beastCard">' +
           '<div class="ui slide masked reveal"><img class="visible content image" id="beastImage" src="img/beastWars/' +
           sort[i].img +
           '"><img class="hidden content image" id="beastImage"  src="img/beastWars/' +
@@ -289,23 +286,25 @@ export default function BeastWars() {
       } //end for
     }
 
+
+
     //Initial call for page load
-    mainFunction(characters);
+    mainFunction(characters);    
+
+    
+    
   }
 
   return (
-    <div className="ui container fluid very padded relaxed">
+    <div className="ui">
       {/* //main Content*/}
-      <div className="ui " id="main"></div>
-      <div className="ui container ">
-        <div className="ui" id="">
+      <div className="ui fluid" id="main"></div>
+      <div className="ui">
+        <div className="ui two column container" id="">
           <p id="beastP">
             <span className="ui text massive center" id="beastP">Beast Wars</span>
           </p>
-          <hr />
-          <h2 className="text center ui">Sorting options</h2>
-          <div className=" ui container padded relaxed">
-
+          <span>
           <button className="button ui red large redBtn"
                 id="sortAlpha"
                       >
@@ -336,13 +335,18 @@ export default function BeastWars() {
             Sort Randomly
           </button>
           <i className="map signs icon huge"></i>
-          </div>
-
-        </div>
+            </span>
+                  </div>
       </div>
-      <div className="ui link cards four stackable"  style={{marginLeft: "20rem", marginRight: "20rem"}}id="here">
+      <div className="ui cards stackable "  style={{marginLeft: "20rem"}}id="here">
         {/*Print cards here */}
       </div>
     </div>
+    
   );
+
+  
 }
+
+
+
