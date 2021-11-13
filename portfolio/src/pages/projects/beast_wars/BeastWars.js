@@ -2,8 +2,31 @@ export default function BeastWars() {
   //Create our characters array with Transfomer objects
 
   setTimeout(loadScript, 100);
+
   function loadScript() {
-    // document.getElementById("here").innerHTML = "";
+     document.getElementById("here").innerHTML = "";
+    
+
+     assignEventListeners();
+     //Assigning event listerns to sorting buttons
+     function assignEventListeners() {
+
+     let sortMaximalsBtn = document.getElementById('sortMaximals');
+     sortMaximalsBtn.addEventListener("click", () => {sortMaximals(characters)});
+
+     let sortPredaconsBtn = document.getElementById('sortPredacons');
+     sortPredaconsBtn.addEventListener("click", () => {sortPredacons(characters)});
+
+     let sortAlphaBtn = document.getElementById('sortAlpha');
+     sortAlphaBtn.addEventListener("click", () => {sortByName(characters)});
+
+     let sortRandomBtn = document.getElementById('sortRandom');
+     sortRandomBtn.addEventListener("click", () => {sortRandom(characters)});
+
+     let sortAnimalBtn = document.getElementById('sortAnimal');
+     sortAnimalBtn.addEventListener("click", () => {sortByAnimal(characters)});
+    }
+
     var characters = [
       //maximals
       {
@@ -212,22 +235,23 @@ export default function BeastWars() {
       document.getElementById("here").innerText = "";
       mainFunction(animals);
     }
-
-    //sort by Maxmials
-    function sortMaximals() {
-      var maximals = characters.filter(function (maximal) {
-        return maximal.team === "Maximal";
-      });
-      document.getElementById("here").innerText = "";
-      mainFunction(maximals);
-    }
-
-    function sortPredacons() {
+    
+     function sortPredacons() {
       var predacons = characters.filter(function (predacon) {
         return predacon.team === "Predacon";
       });
       document.getElementById("here").innerText = "";
       mainFunction(predacons);
+    }
+
+    //sort by Maxmials
+    function sortMaximals() {
+      console.log("working")
+      var maximals = characters.filter(function (maximal) {
+        return maximal.team === "Maximal";
+      });
+      document.getElementById("here").innerText = "";
+      mainFunction(maximals);
     }
 
     //***FUNCTIONS****//
@@ -281,30 +305,32 @@ export default function BeastWars() {
           </p>
           <hr />
           <h2 className="text center ui">Sorting options</h2>
-          <button className="button ui red large redBtn" onclick="sortByName()">
+          <button className="button ui red large redBtn"
+                id="sortAlpha"
+                      >
             Sort by Alphabetical
           </button>
           <button
             className="button ui blue large blueBtn"
-            onclick="sortMaximals"
+            id="sortMaximals"
           >
             Maximals Only
           </button>
           <button
             className="button ui yellow large yellowBtn"
-            onclick="sortPredacons()"
+            id="sortPredacons"
           >
             Predacons Only
           </button>
           <button
             className="button ui green large greenBtn"
-            onclick="sortByAnimal()"
+            id="sortAnimal"
           >
             Sort by Animal
           </button>
           <button
             className="button ui black large blackBtn"
-            onclick="sortRandom()"
+            id="sortRandom"
           >
             Sort Randomly
           </button>
