@@ -252,5 +252,39 @@ input[type="number"] {
 }
 
 
+#beastBackground,#beastMenu
+{
+  background-color: tan;
+  position: relative;
+  margin-top: 1rem;
+  background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+#beastContainer {
+  background-color:initial;
+}
+
+@media only screen and (max-width: 600px) {
+  #sortAlpha, #sortMaximals, #sortPredacons, #sortRandom, #sortAnimal {
+    width:100%;
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+
+  /*Figure this out */
+  #here {
+    
+  }
+}
+
+button:hover {
+  position: relative;
+  bottom:.25rem;
+}
+
 
 

@@ -296,65 +296,64 @@ export default function BeastWars() {
   }
 
   return (
-    <div className="ui" style={{backgroundColor:"beige"}}>
+    <div className="ui grid">
+    <div className="ui" id="beastBackground">
       {/* //main Content*/}
-      <div className="ui container" id="main"></div>
-      <div className="ui">
-        <div className="ui two column container segment padded" style={{backgroundColor:"white"}} id="">
+      <div className="ui" id="main"></div>
+        <div className="ui container fluid padded stackable" id="beastMenu">
           <p id="beastP">
-           <span className="ui text massive" id="beastP" style={{textAlign: "center"}}>Beast Wars</span>
+           <span className="ui text huge" id="beastP" style={{textAlign: "center"}}>Beast Wars</span>
           </p>
-          <span>
-          <button className="button ui red large redBtn"
+          <div className="ui center aligned container" id="beastContainer">
+          <button className="button ui red medium redBtn"
                 id="sortAlpha"
                       >
             Sort by Alphabetical
           </button>
           <button
-            className="button ui blue large blueBtn"
+            className="button ui blue medium blueBtn"
             id="sortMaximals"
           >
             Maximals Only
           </button>
           <button
-            className="button ui yellow large yellowBtn"
+            className="button ui yellow medium yellowBtn"
             id="sortPredacons"
           >
             Predacons Only
           </button>
           <button
-            className="button ui green large greenBtn"
+            className="button ui green medium greenBtn"
             id="sortAnimal"
           >
             Sort by Animal
           </button>
           <button
-            className="button ui black large blackBtn"
+            className="button ui black medium blackBtn"
             id="sortRandom"
           >
             Sort Randomly
           </button>
           <a class="ui" data-tooltip="Navigate back to projects" data-variation="large" href="/projects">
-          <i className="map signs icon huge"></i>
+          <i className="map signs icon huge black"></i>
           </a>
-            </span>
-                  </div>
+            </div>
       </div>
-      <div className="ui cards stackable "  style={{marginLeft: "20rem", marginTop: "2rem"}}id="here">
+      <div className="ui cards stackable"  style={{marginLeft: "20rem", marginTop: "2rem"}}id="here">
         {/*Print cards here */}
       </div>
       <div class="content">
       {/* <!--video here--> */}
-      <div class="ui container" style={{textAlign: "right"}}>
+      <div class="ui " style={{textAlign: "center", marginTop: "5rem", marginBottom:"5rem"}}>
 
 
-      <iframe width="560" height="315"
+      <iframe width="360" height="315"
 src="https://www.youtube.com/embed/ffUXChZ13dE?&autoplay=1" frameborder="0" 
 allowfullscreen></iframe>
   </div>
     </div>
     </div>
-    
+</div>    
   );
 
   
