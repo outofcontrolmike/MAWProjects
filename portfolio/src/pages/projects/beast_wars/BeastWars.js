@@ -334,17 +334,17 @@ export default function BeastWars() {
           >
             Sort Randomly
           </button>
-          <a class="ui" data-tooltip="Navigate back to projects" data-variation="large" href="/projects">
-          <i className="map signs icon huge black"></i>
+          <a className="ui" id="bIcon" data-tooltip="Navigate back to projects" data-inverted="" data-variation="large" href="/projects">
+          <i className="map signs icon huge black" style={{marginBottom: "1rem"}}></i>
           </a>
             </div>
       </div>
-      <div className="ui cards stackable"  style={{marginLeft: "20rem", marginTop: "2rem"}}id="here">
+      <div className="ui cards stackable"  style={{marginLeft: "2rem"}} id="here">
         {/*Print cards here */}
       </div>
-      <div class="content">
+      <div className="content">
       {/* <!--video here--> */}
-      <div class="ui " style={{textAlign: "center", marginTop: "5rem", marginBottom:"5rem"}}>
+      <div className="ui " style={{textAlign: "center", marginTop: "5rem", marginBottom:"5rem"}}>
 
 
       <iframe width="360" height="315"

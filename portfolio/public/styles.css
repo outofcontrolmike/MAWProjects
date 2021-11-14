@@ -4,6 +4,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+button:hover {
+  position: relative;
+  bottom:.25rem;
+}
+
 /*Navigation */
 #navigation {
   padding-left: 20rem;
@@ -50,7 +55,6 @@ i {
 a:hover,
 i:hover {
   color: orange;
-  opacity: 0.8;
 }
 
 #landingPage {
@@ -230,13 +234,8 @@ input[type="number"] {
 }
 
 #beastImage {
-  height:575px;
-    object-fit: cover;   
+  height: 300px;
     
-}
-
-#beastCard {
-  width:30rem;
 }
 
 #beastHr {
@@ -254,7 +253,6 @@ input[type="number"] {
 
 #beastBackground,#beastMenu
 {
-  background-color: tan;
   position: relative;
   margin-top: 1rem;
   background: #FF512F;  /* fallback for old browsers */
@@ -277,13 +275,15 @@ background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, F
 
   /*Figure this out */
   #here {
-    
+    margin-right:2rem;
   }
-}
 
-button:hover {
-  position: relative;
-  bottom:.25rem;
+  #beastImage {
+    height:350px;
+    object-fit: cover;
+  }
+
+
 }
 
 

@@ -50,7 +50,7 @@ function Projects(props) {
       name: "Beast Wars JS",
       meta: "Vanilla JS, Jquery & Fomantic UI",
       desc: "A Beast Wars web application that displays the 1st generation of transformers from the 90's TV series. Also includes sorting options for the characters.",
-      created: "Created Feburary 6th 2021",
+      created: "Created Feburary 6th 2021, reworte November 14th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/BeastWars%20Js",
     },
