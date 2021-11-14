@@ -226,6 +226,7 @@ input[type="number"] {
   text-shadow: 5px 5px orange;
   color:rgb(12, 8, 8);
   font-weight: bolder;
+  text-align: center;
 }
 
 #beastImage {
@@ -238,9 +239,18 @@ input[type="number"] {
   width:30rem;
 }
 
+#beastHr {
+  border-color: skyblue;
+}
+
 .ui > toast {
   width: 50px;
 }
+
+#sortAlpha, #sortMaximals, #sortPredacons, #sortRandom, #sortAnimal {
+  margin-right: 2rem;
+}
+
 
 
 

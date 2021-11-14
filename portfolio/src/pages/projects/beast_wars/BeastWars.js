@@ -1,7 +1,7 @@
 export default function BeastWars() {
   //Create our characters array with Transfomer objects
 
-  setTimeout(loadScript, 10);
+  setTimeout(loadScript, 100);
 
   function loadScript() {
      document.getElementById("here").innerHTML = "";
@@ -272,7 +272,7 @@ export default function BeastWars() {
           '</span><div class="meta"><span class="date"> ' +
           sort[i].role +
           "</span></div> " +
-          "<hr>" +
+          '<hr id="beastHr">' +
           ' <div class="description">' +
           "Animal: " +
           sort[i].animal +
@@ -296,13 +296,13 @@ export default function BeastWars() {
   }
 
   return (
-    <div className="ui">
+    <div className="ui" style={{backgroundColor:"beige"}}>
       {/* //main Content*/}
-      <div className="ui fluid" id="main"></div>
+      <div className="ui container" id="main"></div>
       <div className="ui">
-        <div className="ui two column container" id="">
+        <div className="ui two column container segment padded" style={{backgroundColor:"white"}} id="">
           <p id="beastP">
-            <span className="ui text massive center" id="beastP">Beast Wars</span>
+           <span className="ui text massive" id="beastP" style={{textAlign: "center"}}>Beast Wars</span>
           </p>
           <span>
           <button className="button ui red large redBtn"
@@ -334,11 +334,13 @@ export default function BeastWars() {
           >
             Sort Randomly
           </button>
+          <a class="ui" data-tooltip="Navigate back to projects" data-variation="large" href="/projects">
           <i className="map signs icon huge"></i>
+          </a>
             </span>
                   </div>
       </div>
-      <div className="ui cards stackable "  style={{marginLeft: "20rem"}}id="here">
+      <div className="ui cards stackable "  style={{marginLeft: "20rem", marginTop: "2rem"}}id="here">
         {/*Print cards here */}
       </div>
       <div class="content">
@@ -347,7 +349,7 @@ export default function BeastWars() {
 
 
       <iframe width="560" height="315"
-src="https://www.youtube.com/embed/ffUXChZ13dE?&autoplay=1"frameborder="0" 
+src="https://www.youtube.com/embed/ffUXChZ13dE?&autoplay=1" frameborder="0" 
 allowfullscreen></iframe>
   </div>
     </div>
