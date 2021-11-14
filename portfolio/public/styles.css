@@ -1,3 +1,10 @@
+/*This is a global style sheet for this whole portolio project.
+//There are also styles for individual projects as well.  Each section is labeled appropriatley.  
+//Also, there is inline styling as well for all the projects.  So don't think all the styling is controlled from this sheet.
+
+
+//***********************GLOBAL Styling***********************************************************/
+
 /*typography*/
 * {
   font-size: 20px;
@@ -75,8 +82,7 @@ i:hover {
   }
 }
 
-/*About page */
-#about {
+/*****************************About page ********************************************************/#about {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
@@ -84,8 +90,7 @@ hr {
   border-color: red;
 }
 
-/*Resume Page*/
-
+/**********************************Resume Page****************************************************/
 .slide > img {
   height: 400px;
   width: 400px;
@@ -146,7 +151,7 @@ hr:hover {
   border-color: gold;
 }
 
-/*Comments Page */
+/************************************Comments Page ***********************************************/
 #name,
 #comment,
 #name,
@@ -158,8 +163,7 @@ hr:hover {
   border: 1px solid aquamarine;
 }
 
-/*Thank you page */
-#thankYou {
+/********************Thank you page *************************************************************/#thankYou {
   position: relative;
   top: 20rem;
 }

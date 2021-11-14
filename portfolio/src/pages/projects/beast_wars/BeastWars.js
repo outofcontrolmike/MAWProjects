@@ -1,13 +1,14 @@
+//Beast wars functional component
 export default function BeastWars() {
-  //Create our characters array with Transfomer objects
+  
 
+  //Call to load all the functions for page
   setTimeout(loadScript, 100);
 
+  //Loads all of our functionallity
   function loadScript() {
      document.getElementById("here").innerHTML = "";
-    
-
-     assignEventListeners();
+         
      //Assigning event listerns to sorting buttons
      function assignEventListeners() {
 
@@ -27,6 +28,9 @@ export default function BeastWars() {
      sortAnimalBtn.addEventListener("click", () => {sortByAnimal(characters)});
     }
 
+    assignEventListeners();
+
+    //Transformers Array
     var characters = [
       //maximals
       {
@@ -210,7 +214,8 @@ export default function BeastWars() {
         img2: "rampage2.jpg",
       },
     ];
-    //Variables
+
+    //User for Transformer Icon
     var team = "";
 
     //Sort by Random
@@ -233,6 +238,7 @@ export default function BeastWars() {
       mainFunction(animals);
     }
     
+    //Sort predacons
      function sortPredacons() {
       var predacons = characters.filter(function (predacon) {
         return predacon.team === "Predacon";
@@ -251,8 +257,7 @@ export default function BeastWars() {
       mainFunction(maximals);
     }
 
-
-    //Main Function
+    //Handles Creation of Transformer card accepts a type of sort
     function mainFunction(sort) {
       //Determine which symbol to use
       for (var i = 0; i < sort.length; i++) {
@@ -281,23 +286,21 @@ export default function BeastWars() {
           sort[i].personallity +
           '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/beastWars/' +
           team +
-          '"></i><button style="float:right;"'; //class="button ui small orange">Transformation</button></div></div>';
+          '"></i><button style="float:right;"';
         var info = (document.getElementById("here").innerHTML += htmlCode);
       } //end for
     }
 
 
 
-    //Initial call for page load
-    mainFunction(characters);    
-
-    
-    
+    //Call for Initial Display of Transformers
+    mainFunction(characters);     
   }
 
   return (
     <div className="ui grid">
     <div className="ui" id="beastBackground">
+
       {/* //main Content*/}
       <div className="ui" id="main"></div>
         <div className="ui container fluid padded stackable" id="beastMenu">
@@ -345,18 +348,13 @@ export default function BeastWars() {
       <div className="content">
       {/* <!--video here--> */}
       <div className="ui " style={{textAlign: "center", marginTop: "5rem", marginBottom:"5rem"}}>
-
-
       <iframe width="360" height="315"
-src="https://www.youtube.com/embed/ffUXChZ13dE?&autoplay=1" frameborder="0" 
-allowfullscreen></iframe>
+src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&cc_load_policy=1"></iframe>
   </div>
     </div>
     </div>
 </div>    
   );
-
-  
 }
 
 
