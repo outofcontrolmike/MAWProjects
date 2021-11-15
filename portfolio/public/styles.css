@@ -2,6 +2,8 @@
 //There are also styles for individual projects as well.  Each section is labeled appropriatley.  
 //Also, there is inline styling as well for all the projects.  So don't think all the styling is controlled from this sheet.
 
+**Import URL's from googlefont**
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 //***********************GLOBAL Styling***********************************************************/
 
@@ -290,5 +292,84 @@ background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, F
 
 }
 
+/****************TMNT Character Select**********************/
 
+.turtle {
+  height:300px;
+  width:300px;
+  object-fit: contain;
+  margin-top:50px;
+}
+
+audio {
+  display: none;
+}
+
+#health {
+  word-break: break-all;
+  width:fit-content
+}
+#pNum {
+position: relative;
+font-size: large;
+}
+#playerDetails{
+border-style:solid;
+border-top-width: 1.5em;
+border-bottom: 1.5em;
+}
+
+#pTurtle,h1 {
+color: goldenrod;
+font-family: 'Press Start 2P', cursive;
+color: snow;
+text-shadow: 2px 2px steelblue;
+}
+
+#pTurtle {
+  font-size: 16px;
+}
+
+#pBlink {
+  animation: blinker 2s linear infinite; 
+}
+
+@keyframes blinker {
+  50% {opacity : 0;}
+}
+
+#tFooter {
+  padding-bottom: 50px;
+    margin-top: 100px;
+    text-align-last: center;
+}
+
+#players {
+  border-right: 1em;
+  border: snow;
+  border-style: solid;
+}
+#buttonGroup > .ui.button {
+margin-top:30px;
+text-align:center;
+}
+#turtleGroup {
+  margin-top: 30px;
+  margin-bottom:30px;
+}
+
+/* Media queries  */
+@media only screen and (max-width: 765px) {
+  #turtleGroup {
+    text-align: center;
+  }
+
+  .ui > button {
+      width:100%;
+      height:fit-content;
+  }
+  #project {
+      margin:51%;
+  }
+}
 
