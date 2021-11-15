@@ -307,31 +307,39 @@ audio {
 
 #health {
   word-break: break-all;
-  width:fit-content
+  width:fit-content;
+  font-family: 'Press Start 2P', cursive;
+
 }
 #pNum {
 position: relative;
 font-size: large;
+font-family: 'Press Start 2P', cursive;
+
 }
 #playerDetails{
 border-style:solid;
 border-top-width: 1.5em;
 border-bottom: 1.5em;
+font-family: 'Press Start 2P', cursive;
+
 }
 
-#pTurtle,h1 {
+#pTurtle, #h1Turtle {
 color: goldenrod;
 font-family: 'Press Start 2P', cursive;
 color: snow;
 text-shadow: 2px 2px steelblue;
 }
 
-#pTurtle {
+#pTurtle  {
   font-size: 16px;
 }
 
 #pBlink {
   animation: blinker 2s linear infinite; 
+  font-family: 'Press Start 2P', cursive;
+
 }
 
 @keyframes blinker {
@@ -342,16 +350,22 @@ text-shadow: 2px 2px steelblue;
   padding-bottom: 50px;
     margin-top: 100px;
     text-align-last: center;
+    font-family: 'Press Start 2P', cursive;
+
 }
 
 #players {
   border-right: 1em;
   border: snow;
   border-style: solid;
+  font-family: 'Press Start 2P', cursive;
+
 }
 #buttonGroup > .ui.button {
 margin-top:30px;
 text-align:center;
+font-family: 'Press Start 2P', cursive;
+
 }
 #turtleGroup {
   margin-top: 30px;
@@ -369,7 +383,7 @@ text-align:center;
       height:fit-content;
   }
   #project {
-      margin:51%;
+      margin:5%;
   }
 }
 
