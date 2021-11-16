@@ -3,7 +3,7 @@ import TurtleSelect from "../../../components/tmnt/TurtleSelect";
 
 export default function Tmnt(props) {
   //Functions here
-  setTimeout(loadAll, 5000);
+  setTimeout(loadAll, 5);
 
   function loadAll() {
     //Ninja Turtles array
@@ -166,10 +166,10 @@ export default function Tmnt(props) {
     }
 
     //Change player font
-    function playerStyle(color, lives, health) {
-      document.getElementById("pNum").style.color = color;
-      lives.style.color = color;
-      health.style.color = color;
+    function playerStyle(tColor, lives, health) {
+      document.getElementById("pNum").style.color = tColor;
+      document.getElementById('lives').style.color = tColor;
+      document.getElementById('health').style.color = tColor;
     }
 
     //Toggle character select color
