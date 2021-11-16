@@ -83,7 +83,7 @@ function Projects(props) {
       name: "TMNT Character Select",
       meta: "Javascript & Fomantic",
       desc: "Heavily inspired by the Turtles in Time Character Select.",
-      created: "Wrote May 3rd 2021",
+      created: "Wrote May 3rd 2021" + " Re-wrote November 15th 2021",
       github:
         "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/TMNT_CharSelect",
     },

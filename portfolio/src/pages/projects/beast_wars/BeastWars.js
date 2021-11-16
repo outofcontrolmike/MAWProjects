@@ -337,7 +337,7 @@ export default function BeastWars() {
           >
             Sort Randomly
           </button>
-          <a className="ui" id="bIcon" data-tooltip="Navigate back to projects" data-inverted="" data-variation="large" href="/projects">
+          <a className="ui" id="bIcon" data-tooltip="Navigate back to projects" data-inverted="" data-variation="large" data-position="top center" href="/projects">
           <i className="map signs icon huge black" style={{marginBottom: "1rem"}}></i>
           </a>
             </div>

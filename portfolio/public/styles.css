@@ -3,9 +3,10 @@
 //Also, there is inline styling as well for all the projects.  So don't think all the styling is controlled from this sheet.
 
 **Import URL's from googlefont**
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 //***********************GLOBAL Styling***********************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /*typography*/
 * {
@@ -117,7 +118,6 @@ hr {
 .column,
 .container {
   background-color: black;
-  color: white;
   border: white, 2rem, solid;
 }
 
@@ -154,7 +154,6 @@ hr:hover {
 }
 
 /************************************Comments Page ***********************************************/
-#name,
 #comment,
 #name,
 #email,
@@ -301,8 +300,10 @@ background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, F
   margin-top:50px;
 }
 
-audio {
-  display: none;
+#buttonGroup {
+  text-align: center;
+  margin-bottom: 3rem;
+  
 }
 
 #health {
@@ -317,15 +318,16 @@ font-size: large;
 font-family: 'Press Start 2P', cursive;
 
 }
-#playerDetails{
-border-style:solid;
-border-top-width: 1.5em;
-border-bottom: 1.5em;
+#playerDetails, #h1Turtle{
 font-family: 'Press Start 2P', cursive;
-
+color: white;
+text-align: center;
+}
+#players {
+  color:white;
 }
 
-#pTurtle, #h1Turtle {
+#pTurtle {
 color: goldenrod;
 font-family: 'Press Start 2P', cursive;
 color: snow;
@@ -351,7 +353,6 @@ text-shadow: 2px 2px steelblue;
     margin-top: 100px;
     text-align-last: center;
     font-family: 'Press Start 2P', cursive;
-
 }
 
 #players {
@@ -371,6 +372,23 @@ font-family: 'Press Start 2P', cursive;
   margin-top: 30px;
   margin-bottom:30px;
 }
+#tName {
+  color: white;
+  font-size: 23px;
+}
+
+.controls {
+  padding-top: 13rem;
+}
+
+#addLives, #minusPoints, #addPoints, #resetStats {
+ font-size: 1.5rem;
+margin-right: 3rem;
+position: relative;
+left:3rem
+}
+
+
 
 /* Media queries  */
 @media only screen and (max-width: 765px) {
@@ -385,5 +403,13 @@ font-family: 'Press Start 2P', cursive;
   #project {
       margin:5%;
   }
+
+  #addLives, #minusPoints, #addPoints, #resetStats {
+    left: 0px;
+  }
+
+
 }
+
+/**********************************************************************
 

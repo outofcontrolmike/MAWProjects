@@ -1,13 +1,14 @@
 import ButtonMenu from "../../../components/tmnt/TmntButtonMenu";
 import TurtleSelect from "../../../components/tmnt/TurtleSelect";
 
+import TMNTAudio from "../../../components/tmnt/TmntAudio"
 export default function Tmnt(props) {
   //Functions here
-  setTimeout(loadAll, 5);
+  setTimeout(loadAll, 50);
+  
 
   function loadAll() {
     //Ninja Turtles array
-    document.getElementById("project").style.backgroundColor = "";
     let turtles = [
       {
         name: "Leo",
@@ -43,7 +44,7 @@ export default function Tmnt(props) {
       lives: 2,
     };
 
-    let tName = document.getElementById("name");
+    let tName = document.getElementById("tName");
     // let details = document.getElementById("showDetails");
 
     let leo = document.getElementById("leo");
@@ -51,7 +52,6 @@ export default function Tmnt(props) {
     let don = document.getElementById("don");
     let raph = document.getElementById("raph");
 
-    initiateVars();
 
     function initiateVars() {
       //grab elements by id
@@ -146,15 +146,20 @@ export default function Tmnt(props) {
       score.innerHTML = 0;
     }
 
-    function addLives(lives) {
+    function addLives() {
+        let lives = document.getElementById('lives');
       if (lives.innerHTML <= 11) lives.innerHTML = variables.lives += 1;
     }
 
-    function addScore(score) {
+    function addScore() {
+        let score = document.getElementById("score");
+
       if (score.innerHTML <= 9999) score.innerHTML = variables.score += 200;
     }
 
-    function minusScore(score) {
+    function minusScore() {
+        let score = document.getElementById("score");
+
       if (score.innerHTML > 0) {
         score.innerHTML -= 200;
       }
@@ -167,8 +172,10 @@ export default function Tmnt(props) {
 
     //Change player font
     function playerStyle(tColor, lives, health) {
+      document.getElementById("tName").style.color = tColor;
       document.getElementById("pNum").style.color = tColor;
       document.getElementById('lives').style.color = tColor;
+      document.getElementById('score').style.color = tColor;
       document.getElementById('health').style.color = tColor;
     }
 
@@ -218,41 +225,40 @@ export default function Tmnt(props) {
     function playerInfo(lives, score, health) {
       lives.innerHTML = "" + variables.lives;
       score.innerHTML = variables.score;
-      let builder = "||||||||||||||";
+      let builder = "||||||||||||";
 
       health.innerHTML = builder;
     }
     //end playerInfo
+    
+    //initial page load
+    initiateVars();
 
-    //Handle Hiding Turtles - Should be on page load
-    function hideTurtles() {
-      let turtle = document.getElementsByClassName("turtle");
-      console.log(turtle);
-    }
+
   }
   return (
     <div>
       <div id="project" className="ui" style={{ height: "700px" }}>
         {/* // <!--Players--> */}
         <div
-          class="ui two column doubling stackable grid container segment"
+          className="ui two column doubling stackable grid container segment"
           style={{ marginTop: "50px;" }}
         >
           {/* <!-- first player--> */}
-          <div class="column ui" id="players">
+          <div className="column ui" id="players">
             <p id="pTurtle" id="pNum">
               1UP
             </p>
             <div id="playerDetails playerOne">
-              <div class="ui two column grid container">
-                <p id="pTurtle" class="column ui" id="name"></p>
-                <p id="pTurtle" class="column ui" id="score"></p>
+              <div className="ui two column grid container">
+                <p id="pTurtle" className="column ui" id="tName"></p>
+                <p id="pTurtle" className="column ui" id="score"></p>
               </div>
-              <div class="ui two column grid container">
-                <div class="ui column">
+              <div className="ui two column grid container">
+                <div className="ui column">
                   <p id="pTurtle" id="lives"></p>
                 </div>
-                <div class="ui column" id="healthContainer">
+                <div className="ui column" id="healthContainer">
                   <p id="pTurtle" id="health"></p>
                 </div>
               </div>
@@ -273,21 +279,18 @@ export default function Tmnt(props) {
         <ButtonMenu />
 
         {/* // <!--End Players--> */}
+
+        <a className="ui"  href="/projects" >
         <h1
+        data-tooltip="Navigate back to projects" data-variation="large" data-location="bottom center"
           id="h1Turtle"
           style={{ textAlign: "center", backgroundColor: "black" }}
         >
           Select Your Turtle
-        </h1>
+        </h1>          </a>
+
         <TurtleSelect />
-        <div className="ui container">
-          <div className="ui column">
-            <p>
-              <audio controls autoplay style={{ backgroundColor: "black" }}>
-                <source src="img/tmnt/TMNT4Select.mp3" type="audio/mpeg" />
-              </audio>
-            </p>
-          </div>
+        <TMNTAudio className="control" />
           <footer>
             <div id="tFooter" className="ui">
               <p> *All images and song are not owned by me. </p>
@@ -295,6 +298,5 @@ export default function Tmnt(props) {
           </footer>
         </div>
       </div>
-    </div>
   );
 }
