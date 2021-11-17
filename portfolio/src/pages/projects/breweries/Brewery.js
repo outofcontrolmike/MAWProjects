@@ -1,5 +1,6 @@
 import BrewMenu from "../../../components/brewereyFetch/BrewMenu"
 import BrewModal from "../../../components/brewereyFetch/BrewModal"
+import "brewStyles.css";
 export default function Brewery() {
 
     setTimeout(loadAll, 400)
@@ -63,7 +64,7 @@ export default function Brewery() {
         function createBrew(brew) {
             document.getElementById('breweries').innerHTML = "";
             brewCount = 0;
-            brew.forEach(createCard)
+            brew.map(createCard)
             document.getElementById('count').innerHTML = brewCount;
             if (brewCount === 0) {
                 setTimeout(function () { alert("Your search brought back no results, try again"); }, 3000);
@@ -103,14 +104,14 @@ export default function Brewery() {
             //find a way to pass all these in to a function that checks if empty
 
             breweryURL.href = item.website_url;
-            breweryURL.href.className = "wrapURL";
+            // breweryURL.href.className = "wrapURL";
 
             if (breweryURL != "https://mawportfolio.online/breweries") {
                 breweryURL.innerHTML = breweryURL;
             }
             else {
-                breweryURL.innerHTML = "N/A";
-                breweryURL.id = "disableLink";
+                // breweryURL.innerHTML = "N/A";
+                // breweryURL.id = "disableLink";
             }
 
             breweryStreet.innerHTML = item.street;
