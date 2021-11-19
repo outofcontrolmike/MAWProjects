@@ -116,11 +116,10 @@ hr {
 
 /*fomantic class additional stylings*/
 
-.column,
+/* .column,
 .container {
-  background-color: black;
-  border: white, 2rem, solid;
-}
+  /* background-color: black;
+  border: white, 2rem, solid; */
 
 p,
 h1,
@@ -424,6 +423,9 @@ input[type="number"] {
 
 /******BREWERY FETCH****************************************************************/
 
+#brewContainer {
+  background-color: aliceblue;
+}
 #brewP,
 #brewA {
   font-size: 24px;
@@ -470,6 +472,7 @@ input[type="number"] {
   font-size: 150px;
   animation: blinker 4s linear infinite;
   margin-bottom: 10%;
+  color: lavender;
 }
 @keyframes blinker {
   50% {
@@ -490,6 +493,12 @@ input[type="number"] {
 #brewCard {
   padding: 20px;
   background-color: orange;
+}
+
+#brewHeader {
+  color: black;
+  font-size: xx-large;
+  text-align: left;
 }
 
 @media only screen and (max-width: 1000px) {

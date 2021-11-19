@@ -178,14 +178,8 @@ export default function Brewery() {
   }
 
   return (
-    <body class="ui container" id="contain">
-      <div
-        style={{ backgroundColor: "aliceblue", marginTop: "50px" }}
-        class="ui segment"
-      >
-        <BrewMenu />
-        <div class="ui vertical divider" id="divider"></div>
-      </div>
+    <body class="ui" style={{ backgroundColor: "black", height: "100vh" }}>
+      <BrewMenu />
       <div id="breweries" class="ui" style={{ marginTop: "50px" }}></div>
       {/* Brew Modal */}
       <BrewModal />
