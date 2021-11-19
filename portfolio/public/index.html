@@ -41,24 +41,37 @@
     />
 
     <!--Besat wars google font-->
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Brewery Fetch Google Fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!-- Brewery Fetch Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
 
-<!--Google Fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Linden+Hill&display=swap" rel="stylesheet">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Linden+Hill&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Tmnt Google Font-->
+    <!-- Tmnt Google Font-->
 
     <title>Portfolio</title>
 
     <style>
       body {
         background-color: black;
+        color: white;
       }
     </style>
   </head>
@@ -79,62 +92,65 @@
 </html>
 
 <script>
-  $('.redBtn').click(() => { // arrow functions because es6
-$('.redBtn').toast({
-  title: 'Awesome!!!',
-  message: 'Alphabetical Sort',
-  class : 'red',
-  className: {
-      toast: 'ui small message'
-  }
-});
-});
+  $(".redBtn").click(() => {
+    // arrow functions because es6
+    $(".redBtn").toast({
+      title: "Awesome!!!",
+      message: "Alphabetical Sort",
+      class: "red",
+      className: {
+        toast: "ui small message",
+      },
+    });
+  });
 
-$('.blueBtn').click(() => { // arrow functions because es6
-$('.blueBtn').toast({
-  title: 'Maxamize!!!',
-  message: 'Maximals Sort',
-  class : 'blue',
-  className: {
-      toast: 'ui message',
-  }
-});
-});
-$('.yellowBtn').click(() => { // arrow functions because es6
-$('.yellowBtn').toast({
-  title: 'Terrorize!!!',
-  message: 'Predacons Sort',
-  class : 'yellow',
-  className: {
-      toast: 'ui message visible'
-  }
-});
-});
-$('.greenBtn').click(() => { // arrow functions because es6
-$('.greenBtn').toast({
-  title: 'Prime',
-  message: 'Animal Sorting',
-  class : 'green',
-  className: {
-      toast: 'ui message'
-  }
-});
-});
-$('.blackBtn').click(() => { 
-$('.blackBtn').toast({
-  title: 'Nice!!',
-  message: 'Random Sort',
-  class : 'black',
-  className: {
-      toast: 'ui message'
-  }
-});
-});
+  $(".blueBtn").click(() => {
+    // arrow functions because es6
+    $(".blueBtn").toast({
+      title: "Maxamize!!!",
+      message: "Maximals Sort",
+      class: "blue",
+      className: {
+        toast: "ui message",
+      },
+    });
+  });
+  $(".yellowBtn").click(() => {
+    // arrow functions because es6
+    $(".yellowBtn").toast({
+      title: "Terrorize!!!",
+      message: "Predacons Sort",
+      class: "yellow",
+      className: {
+        toast: "ui message visible",
+      },
+    });
+  });
+  $(".greenBtn").click(() => {
+    // arrow functions because es6
+    $(".greenBtn").toast({
+      title: "Prime",
+      message: "Animal Sorting",
+      class: "green",
+      className: {
+        toast: "ui message",
+      },
+    });
+  });
+  $(".blackBtn").click(() => {
+    $(".blackBtn").toast({
+      title: "Nice!!",
+      message: "Random Sort",
+      class: "black",
+      className: {
+        toast: "ui message",
+      },
+    });
+  });
 
-//Modal for Brewery
-//Fomatic Jquery for showing of modal
-$('.yellow').click((e) => {
-$('.ui.modal')
-.modal('show')
-}); 
+  //Modal for Brewery
+  //Fomatic Jquery for showing of modal
+  $(".yellow").click((e) => {
+    $(".ui.modal").modal("show");
+  });
 </script>

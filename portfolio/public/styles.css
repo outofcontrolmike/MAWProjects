@@ -6,7 +6,7 @@
 
 
 //***********************GLOBAL Styling***********************************************************/
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 /*typography*/
 * {
@@ -16,7 +16,7 @@
 
 button:hover {
   position: relative;
-  bottom:.25rem;
+  bottom: 0.25rem;
 }
 
 /*Navigation */
@@ -85,7 +85,8 @@ i:hover {
   }
 }
 
-/*****************************About page ********************************************************/#about {
+/*****************************About page ********************************************************/
+#about {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
@@ -164,7 +165,8 @@ hr:hover {
   border: 1px solid aquamarine;
 }
 
-/********************Thank you page *************************************************************/#thankYou {
+/********************Thank you page *************************************************************/
+#thankYou {
   position: relative;
   top: 20rem;
 }
@@ -231,16 +233,15 @@ input[type="number"] {
 /*******************BEAST WARS************************/
 
 #beastP {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   text-shadow: 5px 5px orange;
-  color:rgb(12, 8, 8);
+  color: rgb(12, 8, 8);
   font-weight: bolder;
   text-align: center;
 }
 
 #beastImage {
   height: 300px;
-    
 }
 
 #beastHr {
@@ -251,126 +252,134 @@ input[type="number"] {
   width: 50px;
 }
 
-#sortAlpha, #sortMaximals, #sortPredacons, #sortRandom, #sortAnimal {
+#sortAlpha,
+#sortMaximals,
+#sortPredacons,
+#sortRandom,
+#sortAnimal {
   margin-right: 2rem;
 }
 
-
-#beastBackground,#beastMenu
-{
+#beastBackground,
+#beastMenu {
   position: relative;
   margin-top: 1rem;
-  background: #FF512F;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 #beastContainer {
-  background-color:initial;
+  background-color: initial;
 }
 
 @media only screen and (max-width: 600px) {
-  #sortAlpha, #sortMaximals, #sortPredacons, #sortRandom, #sortAnimal {
-    width:100%;
+  #sortAlpha,
+  #sortMaximals,
+  #sortPredacons,
+  #sortRandom,
+  #sortAnimal {
+    width: 100%;
     margin-bottom: 1rem;
     font-size: 20px;
   }
 
   /*Figure this out */
   #here {
-    margin-right:2rem;
+    margin-right: 2rem;
   }
 
   #beastImage {
-    height:350px;
+    height: 350px;
     object-fit: cover;
   }
-
-
 }
 
 /****************TMNT Character Select**********************/
 
 .turtle {
-  height:300px;
-  width:300px;
+  height: 300px;
+  width: 300px;
   object-fit: contain;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 #buttonGroup {
   text-align: center;
   margin-bottom: 3rem;
-  
 }
 
 #health {
   word-break: break-all;
-  width:fit-content;
-  font-family: 'Press Start 2P', cursive;
-
+  width: fit-content;
+  font-family: "Press Start 2P", cursive;
 }
 #pNum {
-position: relative;
-font-size: large;
-font-family: 'Press Start 2P', cursive;
-
+  position: relative;
+  font-size: large;
+  font-family: "Press Start 2P", cursive;
 }
-#playerDetails, #h1Turtle{
-font-family: 'Press Start 2P', cursive;
-color: white;
-text-align: center;
+#playerDetails,
+#h1Turtle {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  text-align: center;
 }
 #players {
-  color:white;
+  color: white;
 }
 
 #pTurtle {
-color: goldenrod;
-font-family: 'Press Start 2P', cursive;
-color: snow;
-text-shadow: 2px 2px steelblue;
+  color: goldenrod;
+  font-family: "Press Start 2P", cursive;
+  color: snow;
+  text-shadow: 2px 2px steelblue;
 }
 
-#pTurtle  {
+#pTurtle {
   font-size: 16px;
 }
 
 #pBlink {
-  animation: blinker 2s linear infinite; 
-  font-family: 'Press Start 2P', cursive;
-
+  animation: blinker 2s linear infinite;
+  font-family: "Press Start 2P", cursive;
 }
 
 @keyframes blinker {
-  50% {opacity : 0;}
+  50% {
+    opacity: 0;
+  }
 }
 
 #tFooter {
   padding-bottom: 50px;
-    margin-top: 100px;
-    text-align-last: center;
-    font-family: 'Press Start 2P', cursive;
+  margin-top: 100px;
+  text-align-last: center;
+  font-family: "Press Start 2P", cursive;
 }
 
 #players {
   border-right: 1em;
   border: snow;
   border-style: solid;
-  font-family: 'Press Start 2P', cursive;
-
+  font-family: "Press Start 2P", cursive;
 }
 #buttonGroup > .ui.button {
-margin-top:30px;
-text-align:center;
-font-family: 'Press Start 2P', cursive;
-
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
 }
 #turtleGroup {
   margin-top: 30px;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 #tName {
   color: white;
@@ -381,14 +390,15 @@ font-family: 'Press Start 2P', cursive;
   padding-top: 13rem;
 }
 
-#addLives, #minusPoints, #addPoints, #resetStats {
- font-size: 1.5rem;
-margin-right: 3rem;
-position: relative;
-left:3rem
+#addLives,
+#minusPoints,
+#addPoints,
+#resetStats {
+  font-size: 1.5rem;
+  margin-right: 3rem;
+  position: relative;
+  left: 3rem;
 }
-
-
 
 /* Media queries  */
 @media only screen and (max-width: 765px) {
@@ -397,152 +407,124 @@ left:3rem
   }
 
   .ui > button {
-      width:100%;
-      height:fit-content;
+    width: 100%;
+    height: fit-content;
   }
   #project {
-      margin:5%;
+    margin: 5%;
   }
 
-  #addLives, #minusPoints, #addPoints, #resetStats {
+  #addLives,
+  #minusPoints,
+  #addPoints,
+  #resetStats {
     left: 0px;
   }
-
-
 }
 
 /******BREWERY FETCH****************************************************************/
 
-#container {
-    background-color: black;
-}
-
-#brewP,#brewA {
-    font-size: 24px;
-    font-family: 'Linden Hill', serif;
+#brewP,
+#brewA {
+  font-size: 24px;
+  font-family: "Linden Hill", serif;
 }
 
 #brewA {
-    margin-bottom: 200px;
+  margin-bottom: 200px;
 }
-
-i {
-    padding-right: 40px;
-    color: red;
-}
-
 #disableLink {
-    pointer-events: none;
-    color: black;
+  pointer-events: none;
+  color: black;
 }
-
 #eraseStyle {
-    color: goldenrod;
-    font-size: 100px;
+  color: goldenrod;
+  font-size: 100px;
 }
 
-#header {
-    text-transform: uppercase;
-    font-size: 30px;
-    color: black;
-
+#container,
+#filter,
+#stateFilter,
+#brewType {
+  height: fit-content;
 }
-
-
-#container, #filter, #stateFilter, #brewType {
-    height: fit-content;
-    
-}
-
-#filter,#stateFilter,#brewType, #inputValue {
-    background-color: ghostwhite;
-}
-
 
 #inputValue {
-    background-color: lavender;
-    font-size: 18px;
+  background-color: lavender;
+  font-size: 18px;
 }
 
 .floatMe {
-    color: red;
+  color: red;
 }
 
 .input {
-    position: relative;
-    width:83%;
+  position: relative;
+  width: 83%;
 }
-
 #count {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height:100px;
+  height: 100px;
   font-size: 150px;
   animation: blinker 4s linear infinite;
   margin-bottom: 10%;
 }
-  
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
-
-  #help {
-      float: right;
-      background-color: black;
-  }
+}
+#help {
+  float: right;
+  background-color: black;
+}
 .floatMe {
-    float: right;
-    animation: blinker 4s linear infinite;
+  float: right;
+  animation: blinker 4s linear infinite;
 }
-
 #breweries {
-    padding: 0px 100px 100px 100px;
+  padding: 0px 100px 100px 100px;
 }
-
 #brewCard {
-    padding:20px;
-    background-color: aliceblue;
+  padding: 20px;
+  background-color: orange;
 }
 
 @media only screen and (max-width: 1000px) {
-    #breweries {
-      padding: 0;
-    }
-
-    #divider {
-        visibility: hidden;
-    }
-
-    .floatMe {
-        float:left;
-        padding-top:25px;
-              color:blue;
-    }
-    i {
-        text-overflow: clip;
-    }
-
-    hr {
-        visibility: hidden;
-    }
-
+  #breweries {
+    padding: 0;
   }
 
-  @media only screen and (max-width: 950px) {
-     .input{
-         padding: 0px;  
-    }
-    
-    .floatMe {
-        padding-top:0px;
-        float: right;
-        margin-bottom: 3%;
-    }
-
+  #divider {
+    visibility: hidden;
   }
 
+  .floatMe {
+    float: left;
+    padding-top: 25px;
+    color: blue;
+  }
+  i {
+    text-overflow: clip;
+  }
 
+  hr {
+    visibility: hidden;
+  }
+}
 
+@media only screen and (max-width: 950px) {
+  .input {
+    padding: 0px;
+  }
+
+  .floatMe {
+    padding-top: 0px;
+    float: right;
+    margin-bottom: 3%;
+  }
+}
+
+/******************************************************************************************************/
