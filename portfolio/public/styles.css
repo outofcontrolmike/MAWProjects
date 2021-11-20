@@ -468,7 +468,7 @@ input[type="number"] {
   position: relative;
   width: 83%;
 }
-#count {
+/* #count {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -477,7 +477,7 @@ input[type="number"] {
   animation: blinker 4s linear infinite;
   margin-bottom: 10%;
   color: lavender;
-}
+} */
 @keyframes blinker {
   50% {
     opacity: 0;
