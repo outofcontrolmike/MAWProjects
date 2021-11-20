@@ -8,18 +8,23 @@ let url = "";
 
   function accordionOpen() {
     document.getElementById('brewInput').value = "Choose an advanced Filter";
-
     checkFilters();
 
   }
 
   function checkFilters() {
     //If state is selected
+    let url = "";
     let stateFilter = document.getElementById('stateFilter');
-  let stateFilterValue = stateFilter.options[stateFilter.selectedIndex].innerHTML
+    let stateFilterValue = stateFilter.options[stateFilter.selectedIndex].innerHTML;
+    let stateParam = "by_state=" + stateFilterValue;
 
-  getBreweries(stateFilterValue);
+    let brewType = document.getElementById('brewType')
+    let brewValue = brewType.options[brewType.selectedIndex].value;
+    let brewText = brewValue.toLowerCase()
+    let brewParam = "by_type=" + brewText;
 
+  getBreweries(stateParam, brewParam);
 
   }
   //Wipe out list when user hovers over input
@@ -35,32 +40,29 @@ let url = "";
         brewCount = 0;
         brew.map(createCard);
         document.getElementById("count").innerHTML = brewCount;
-        if (brewCount === 0) {
-            setTimeout(function () {
-                alert("Your search brought back no results, try again");
-            }, 3000);
-        }
+        // if (brewCount === 0) {
+        //     setTimeout(function () {
+        //         alert("Your search brought back no results, try again");
+        //     }, 3000);
+        // }
     }
     //Initial brewery submit
     function handleSubmit() {
         document.getElementById('breweries').innerHTML = "";
         let input = document.getElementById("brewInput").value;
-        grabFilters(input);
-    }
-
-    //Grab filters
-    function grabFilters(input) {
-            console.log("input from grabfilters", input)
-            getBreweries(input);
+        let url = "https://api.openbrewerydb.org/breweries/search?query=" + input;
+        getBreweries(url);
     }
 
       //get breweries based on search term
-      function getBreweries(input) {
-        let filter = input;
-        
+      function getBreweries(url,stateParam, brewParam) {
+        console.log("params", stateParam, brewParam);
+        if(stateParam != "state")
+        {
+          
+        }
         fetch(
-            "https://api.openbrewerydb.org/breweries/search?query=" +
-            filter
+            url
         )
             .then((response) => response.json())
             .then((brew) => {
@@ -68,8 +70,7 @@ let url = "";
             })
             .catch((error) => {
                 console.error("Error:", error);
-                console.log("error");
-                alert("testing");
+           
             });
     }
 
