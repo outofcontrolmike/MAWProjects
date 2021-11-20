@@ -426,6 +426,10 @@ input[type="number"] {
 #brewContainer {
   background-color: aliceblue;
 }
+
+#brewCard {
+  margin-bottom: 2rem;
+}
 #brewP,
 #brewA {
   font-size: 24px;
@@ -501,6 +505,11 @@ input[type="number"] {
   text-align: left;
 }
 
+#brewLabel {
+  color: bisque;
+  font-size: medium;
+}
+
 @media only screen and (max-width: 1000px) {
   #breweries {
     padding: 0;
@@ -535,5 +544,6 @@ input[type="number"] {
     margin-bottom: 3%;
   }
 }
+
 
 /******************************************************************************************************/
