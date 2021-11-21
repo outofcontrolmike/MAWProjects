@@ -8,23 +8,38 @@ let url = "";
 
   function accordionOpen() {
     document.getElementById('brewInput').value = "Choose an advanced Filter";
-    checkFilters();
+    advancedRequest();
 
   }
 
-  function checkFilters() {
+  function advancedRequest() {
     //If state is selected
     let url = "";
     let stateFilter = document.getElementById('stateFilter');
     let stateFilterValue = stateFilter.options[stateFilter.selectedIndex].innerHTML;
-    let stateParam = "by_state=" + stateFilterValue;
+    
+    console.log(stateFilterValue);
+    //State end point
+    if(stateFilterValue != "State")
+    {
+        url = "https://api.openbrewerydb.org/breweries?by_state=" + stateFilterValue
+    }
 
     let brewType = document.getElementById('brewType')
     let brewValue = brewType.options[brewType.selectedIndex].value;
-    let brewText = brewValue.toLowerCase()
-    let brewParam = "by_type=" + brewText;
+    let brewText = brewValue.toLowerCase();
 
-  getBreweries(stateParam, brewParam);
+    if(brewValue != "Brewery Type")
+    {
+        url = "https://api.openbrewerydb.org/breweries?by_type=" + brewText
+    }
+
+    if(stateFilterValue != "State" &&  brewValue != "Brewery Type")
+    {
+        url = "https://api.openbrewerydb.org/breweries?by_state=" + stateFilterValue + "&by_type=" + brewText;
+    }
+
+  getBreweries(url);
 
   }
   //Wipe out list when user hovers over input
@@ -40,6 +55,7 @@ let url = "";
         brewCount = 0;
         brew.map(createCard);
         document.getElementById("count").innerHTML = brewCount;
+    
         // if (brewCount === 0) {
         //     setTimeout(function () {
         //         alert("Your search brought back no results, try again");
@@ -55,12 +71,8 @@ let url = "";
     }
 
       //get breweries based on search term
-      function getBreweries(url,stateParam, brewParam) {
-        console.log("params", stateParam, brewParam);
-        if(stateParam != "state")
-        {
-          
-        }
+      function getBreweries(url) {
+        console.log("url", url);
         fetch(
             url
         )
