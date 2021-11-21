@@ -38,6 +38,8 @@ let url = "";
     {
         url = "https://api.openbrewerydb.org/breweries?by_state=" + stateFilterValue + "&by_type=" + brewText;
     }
+    document.getElementById('count').innerHTML = 0;
+
 
   getBreweries(url);
 
@@ -66,7 +68,7 @@ let url = "";
     function handleSubmit() {
         document.getElementById('breweries').innerHTML = "";
         let input = document.getElementById("brewInput").value;
-        let url = "https://api.openbrewerydb.org/breweries/search?query=" + input;
+        let url = "https://api.openbrewerydb.org/breweries/search?query=" + input + "&per_page=100'";
         getBreweries(url);
     }
 
@@ -78,6 +80,7 @@ let url = "";
         )
             .then((response) => response.json())
             .then((brew) => {
+                console.log("response",brew);
                  createBrew(brew);
             })
             .catch((error) => {
