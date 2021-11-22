@@ -22,7 +22,7 @@ let url = "";
     //State end point
     if(stateFilterValue != "State")
     {
-        url = "https://api.openbrewerydb.org/breweries?by_state=" + stateFilterValue
+        url = "https://api.openbrewerydb.org/breweries?by_state=" + stateFilterValue + "&per_page=600'"
     }
 
     let brewType = document.getElementById('brewType')
@@ -31,12 +31,12 @@ let url = "";
 
     if(brewValue != "Brewery Type")
     {
-        url = "https://api.openbrewerydb.org/breweries?by_type=" + brewText
+        url = "https://api.openbrewerydb.org/breweries?by_type=" + brewText + "&per_page=500'"
     }
 
     if(stateFilterValue != "State" &&  brewValue != "Brewery Type")
     {
-        url = "https://api.openbrewerydb.org/breweries?by_state=" + stateFilterValue + "&by_type=" + brewText;
+        url = "https://api.openbrewerydb.org/breweries?by_state=" + stateFilterValue + "&by_type=" + brewText + "&per_page=500'"
     }
     document.getElementById('count').innerHTML = 0;
 
@@ -64,11 +64,27 @@ let url = "";
         //     }, 3000);
         // }
     }
+
     //Initial brewery submit
     function handleSubmit() {
         document.getElementById('breweries').innerHTML = "";
         let input = document.getElementById("brewInput").value;
-        let url = "https://api.openbrewerydb.org/breweries/search?query=" + input + "&per_page=100'";
+        url = "https://api.openbrewerydb.org/breweries/search?query=" + input + "&per_page=500'";
+  
+
+        let radioCity = document.getElementById('radioCity');
+        let postalCity = document.getElementById('radioPostal');
+
+        if(radioCity.checked) {
+            console.log("testing from zipcodeOrcity")
+            url = "https://api.openbrewerydb.org/breweries?by_city=" + input + "&per_page=500'";
+        }
+
+        if(postalCity.checked) {
+            console.log("postal is checked")
+            url = "https://api.openbrewerydb.org/breweries?by_postal=" + input + "&per_page=500'";
+        }
+   console.log("url",url);
         getBreweries(url);
     }
 
@@ -194,6 +210,22 @@ let url = "";
       <div className="ui container relaxed very padded stackable">
                 <div className="ui transparent huge icon input">
                     <input onChange={handleChange} id="brewInput" type="text" className="ui" style={{ color: "gold" }} placeholder="Type in a Brewery name or keyword" />
+                    <div class="ui form">
+  <div class="inline fields">
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency" id="radioCity"/>
+        <label id="brewLabel">City</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency" id="radioPostal"/>
+        <label id="brewLabel">Postal</label>
+      </div>
+    </div>
+  </div>
+</div>
                     <button onClick={handleSubmit} className="ui button large basic yellow"><i className="beer icon large"></i></button>
                     <span type="color" id="count" className="text ui red">0</span>
 
@@ -274,17 +306,6 @@ let url = "";
                                     <option>Contract</option>
                                     <option>Proprietor</option>
                                     <option>Closed</option>
-                                </select>
-                            </div>
-                            <div className="field">
-                                <label id="brewLabel">Filter by City or Zipcode</label>
-                                <select id="filter" className="ui compact selection dropdown">
-                                    {/* <!-- Some type of label--> */}
-                                    <option disabled selected>Filter Type</option>
-                                    <option>None</option>
-                                    <option>Name</option>
-                                    <option>City</option>
-                                    <option>Postal</option>
                                 </select>
                             </div>
                         </form>
