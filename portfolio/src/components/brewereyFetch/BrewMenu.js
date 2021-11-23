@@ -7,7 +7,12 @@ function BrewMenu() {
   //Accordion click
 
   function accordionOpen() {
+    let search = document.getElementById("brewInput");
+    let select = document.getElementById("stateFilter").className;
+    search.disabled = select === "select" ? true : false;
+
     document.getElementById("brewInput").value = "Choose an advanced Filter";
+    document.getElementById('brewBtn').className = "ui button red disabled";
     advancedRequest();
   }
 
@@ -258,6 +263,7 @@ function BrewMenu() {
           <button
             onClick={handleSubmit}
             className="ui yellow button large basic"
+            id="brewBtn"
           >
             <i className="beer icon large"></i>
           </button>
@@ -266,9 +272,9 @@ function BrewMenu() {
           </span>
           <ProjectsLink />
         </div>
-        <div onClick={accordionOpen} className="ui inverted accordion">
+        <div  className="ui inverted accordion">
           <div className="title text small">
-            <i className="dropdown icon"></i>
+            <i  onClick={accordionOpen} className="dropdown icon"></i>
           </div>
           <div className="content ui container relaxed very padded stackable">
             <form className="ui form">
