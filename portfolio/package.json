@@ -12,6 +12,7 @@
     "react-audio-element": "^1.0.5",
     "react-audio-player": "^0.17.0",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.14.4",
     "react-router-dom": "^5.3.0",
     "react-script-tag": "^1.1.2",
     "react-scripts": "4.0.3",

@@ -1,8 +1,9 @@
 import React from 'react'
+import $ from 'jquery';
+
 
 function BrewModal() {
     return (
-        <div>
         <div>
             {/* // <!--Modal--> */}
 <div class="ui modal">
@@ -44,7 +45,6 @@ function BrewModal() {
  </div>
 </div>
 </div>
-        </div>
     )
 }
 

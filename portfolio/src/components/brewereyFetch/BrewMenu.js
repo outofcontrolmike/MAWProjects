@@ -1,3 +1,4 @@
+import ProjectsLink from "../../components/links/Home"
 import React from "react";
 
 function BrewMenu() {
@@ -216,7 +217,7 @@ function BrewMenu() {
 
   return (
     <>
-      <div className="ui container relaxed very padded stackable">
+      <div className="ui container relaxed very padded stackable fluid">
         <div className="ui transparent huge icon input">
           <div class="ui form">
             <div class="grouped fields">
@@ -256,13 +257,14 @@ function BrewMenu() {
 
           <button
             onClick={handleSubmit}
-            className="ui button large basic yellow"
+            className="ui yellow button large basic"
           >
             <i className="beer icon large"></i>
           </button>
           <span type="color" id="count" className="text ui red">
             0
           </span>
+          <ProjectsLink />
         </div>
         <div onClick={accordionOpen} className="ui inverted accordion">
           <div className="title text small">
@@ -349,7 +351,7 @@ function BrewMenu() {
 
             <button
               onClick=""
-              className="ui button basic yellow huge"
+              className="ui blue button brewHelp"
               style={{ padding: "1rem", marginTop: "2rem" }}
             >
               Help!
@@ -358,7 +360,7 @@ function BrewMenu() {
           </div>
         </div>
       </div>
-    </>
+        </>
   );
 }
 
