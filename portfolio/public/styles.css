@@ -510,6 +510,11 @@ input[type="number"] {
   font-size: medium;
 }
 
+#brewFooter {
+    position: relative;
+    margin-top: 32%;
+}
+
 @media only screen and (max-width: 1000px) {
   #breweries {
     padding: 0;

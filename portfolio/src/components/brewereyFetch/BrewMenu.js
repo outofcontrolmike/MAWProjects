@@ -8,11 +8,11 @@ function BrewMenu() {
 
   function accordionOpen() {
     let search = document.getElementById("brewInput");
-    let select = document.getElementById("stateFilter").className;
-    search.disabled = select === "select" ? true : false;
-
-    document.getElementById("brewInput").value = "Choose an advanced Filter";
-    document.getElementById('brewBtn').className = "ui button red disabled";
+    let title = document.getElementById("title").className;
+    search.disabled = title === "title" ? false : true;
+    search.value = "Search by an advanced filter";
+    
+    // document.getElementById('brewBtn').className = "ui button red disabled";
     advancedRequest();
   }
 
@@ -130,18 +130,18 @@ function BrewMenu() {
     let column1 = document.createElement("div");
     let column2 = document.createElement("div");
     let divider = document.createElement("hr");
+    let breweryType = document.createElement('p');
     let breweryName = document.createElement("p");
     let breweryStreet = document.createElement("p");
     let breweryCity = document.createElement("p");
     let breweryState = document.createElement("p");
     let breweryPostal = document.createElement("p");
     let breweryCountry = document.createElement("p");
-    let breweryType = document.createElement("span");
     let breweryPhone = document.createElement("p");
     let breweryURL = document.createElement("a");
 
     //icon elements
-    let street, city, state, postal, country, phone, url;
+    let street, city, state, postal, country, phone, url, type;
 
     street = document.createElement("i");
     city = document.createElement("i");
@@ -150,8 +150,9 @@ function BrewMenu() {
     country = document.createElement("i");
     phone = document.createElement("i");
     url = document.createElement("i");
+    type = document.createElement("i");
 
-    let icons = [street, city, state, postal, country, phone, url];
+    let icons = [street, city, state, postal, country, phone, url, type];
 
     icons.forEach((element) => {
       element.style.color = "red";
@@ -169,7 +170,7 @@ function BrewMenu() {
     } else {
       breweryURL.innerHTML = "N/A";
       breweryURL.style.pointerEvents = "none";
-    }
+    }    
 
     breweryStreet.innerHTML = item.street;
     breweryName.innerHTML = item.name;
@@ -180,6 +181,7 @@ function BrewMenu() {
     breweryType.innerHTML = item.brewery_type;
     breweryPhone.innerHTML = item.phone;
 
+    console.log(item.brewery_type);
     //Additional styling
 
     container.className = "ui two column grid container stackable";
@@ -187,11 +189,11 @@ function BrewMenu() {
     column1.className = "column";
     column2.className = "column";
     breweryName.className = "ui header text massive container";
-    breweryType.className = "floatMe";
 
     breweryName.style.color = "white";
     breweryName.style.fontSize = "30px";
     breweryName.style.textTransform = "uppercase";
+    breweryType.style.textTransform = "capitalize";
 
     //add icons
     city.className = "city icon";
@@ -201,8 +203,9 @@ function BrewMenu() {
     country.className = "globe icon";
     phone.className = "phone alternate icon";
     url.className = "linkify icon";
+    type.className = "beer icon"
 
-    breweryName.append(breweryType, divider);
+    breweryName.append(divider);
 
     container.append(breweryName, column1, column2);
 
@@ -214,17 +217,45 @@ function BrewMenu() {
     breweryCountry.prepend(country);
     breweryPhone.prepend(phone);
     breweryURL.prepend(url);
+    breweryType.prepend(type);
 
-    column1.append(breweryStreet, breweryCity, breweryState, breweryPostal);
-    column2.append(breweryCountry, breweryPhone, breweryURL);
+    column1.append(breweryType,breweryStreet, breweryCity, breweryState);
+    column2.append(breweryPostal,breweryCountry, breweryPhone, breweryURL);
     document.getElementById("breweries").append(container);
   }
 
   return (
     <>
-      <div className="ui container relaxed very padded stackable fluid">
+      <div className="ui container relaxed very padded stackable ">
         <div className="ui transparent huge icon input">
-          <div class="ui form">
+          <input
+            onChange={handleChange}
+            id="brewInput"
+            type="text"
+            className="ui"
+            style={{ color: "gold", textAlign: "center" }}
+            placeholder="Type in a Brewery name or keyword"
+          />
+
+          <button
+            onClick={handleSubmit}
+            className="ui yellow button large basic"
+            id="brewBtn"
+          >
+            <i className="beer icon large"></i>
+          </button>
+          <span type="color" id="count" className="text ui red large" style={{float : "right", marginLeft: "3rem"}}>
+            0
+          </span>
+        </div>
+        <div  className="ui inverted accordion">
+          <div className="title" id="title">
+            <i  onClick={accordionOpen} className="dropdown icon"></i>
+          </div>
+         <div className="content ui container relaxed very padded stackable">
+           <h1>Main filter</h1>
+           <hr/>
+           <div class="ui form">
             <div class="grouped fields">
               <div class="field">
                 <div class="ui radio checkbox">
@@ -251,32 +282,8 @@ function BrewMenu() {
               </div>
             </div>
           </div>
-          <input
-            onChange={handleChange}
-            id="brewInput"
-            type="text"
-            className="ui"
-            style={{ color: "gold" }}
-            placeholder="Type in a Brewery name or keyword"
-          />
-
-          <button
-            onClick={handleSubmit}
-            className="ui yellow button large basic"
-            id="brewBtn"
-          >
-            <i className="beer icon large"></i>
-          </button>
-          <span type="color" id="count" className="text ui red">
-            0
-          </span>
-          <ProjectsLink />
-        </div>
-        <div  className="ui inverted accordion">
-          <div className="title text small">
-            <i  onClick={accordionOpen} className="dropdown icon"></i>
-          </div>
-          <div className="content ui container relaxed very padded stackable">
+          <hr />
+          <h1>Advanced Filters</h1>
             <form className="ui form">
               <div className="field">
                 <label id="brewLabel">Filter by State</label>
@@ -354,7 +361,6 @@ function BrewMenu() {
                 </select>
               </div>
             </form>
-
             <button
               onClick=""
               className="ui blue button brewHelp"
@@ -362,10 +368,14 @@ function BrewMenu() {
             >
               Help!
             </button>
+            <button
+            className="ui purple basic button">
+<ProjectsLink />
+            </button>
             {/* <p className="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p> */}
           </div>
         </div>
-      </div>
+</div>
         </>
   );
 }
