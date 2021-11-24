@@ -1,4 +1,4 @@
-import ProjectsLink from "../../components/links/Home"
+import ProjectsLink from "../../components/links/Home";
 import React from "react";
 
 function BrewMenu() {
@@ -11,7 +11,7 @@ function BrewMenu() {
     let title = document.getElementById("title").className;
     search.disabled = title === "title" ? false : true;
     search.value = "Search by an advanced filter";
-    
+
     // document.getElementById('brewBtn').className = "ui button red disabled";
     advancedRequest();
   }
@@ -130,7 +130,7 @@ function BrewMenu() {
     let column1 = document.createElement("div");
     let column2 = document.createElement("div");
     let divider = document.createElement("hr");
-    let breweryType = document.createElement('p');
+    let breweryType = document.createElement("p");
     let breweryName = document.createElement("p");
     let breweryStreet = document.createElement("p");
     let breweryCity = document.createElement("p");
@@ -170,7 +170,7 @@ function BrewMenu() {
     } else {
       breweryURL.innerHTML = "N/A";
       breweryURL.style.pointerEvents = "none";
-    }    
+    }
 
     breweryStreet.innerHTML = item.street;
     breweryName.innerHTML = item.name;
@@ -203,7 +203,7 @@ function BrewMenu() {
     country.className = "globe icon";
     phone.className = "phone alternate icon";
     url.className = "linkify icon";
-    type.className = "beer icon"
+    type.className = "beer icon";
 
     breweryName.append(divider);
 
@@ -219,8 +219,8 @@ function BrewMenu() {
     breweryURL.prepend(url);
     breweryType.prepend(type);
 
-    column1.append(breweryType,breweryStreet, breweryCity, breweryState);
-    column2.append(breweryPostal,breweryCountry, breweryPhone, breweryURL);
+    column1.append(breweryType, breweryStreet, breweryCity, breweryState);
+    column2.append(breweryPostal, breweryCountry, breweryPhone, breweryURL);
     document.getElementById("breweries").append(container);
   }
 
@@ -244,46 +244,51 @@ function BrewMenu() {
           >
             <i className="beer icon large"></i>
           </button>
-          <span type="color" id="count" className="text ui red large" style={{float : "right", marginLeft: "3rem"}}>
+          <span
+            type="color"
+            id="count"
+            className="text ui red large"
+            style={{ float: "right", marginLeft: "3rem" }}
+          >
             0
           </span>
         </div>
-        <div  className="ui inverted accordion">
+        <div onClick={accordionOpen} className="ui inverted accordion">
           <div className="title" id="title">
-            <i  onClick={accordionOpen} className="dropdown icon"></i>
+            <i className="dropdown icon"></i>
           </div>
-         <div className="content ui container relaxed very padded stackable">
-           <h1>Main filter</h1>
-           <hr/>
-           <div class="ui form">
-            <div class="grouped fields">
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input
-                    type="radio"
-                    name="frequency"
-                    id="searchRadio"
-                    checked="checked"
-                  />
-                  <label id="brewLabel">Search Term</label>
+          <div className="content ui container relaxed very padded stackable">
+            <h1>Main filter</h1>
+            <hr />
+            <div class="ui form">
+              <div class="grouped fields">
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input
+                      type="radio"
+                      name="frequency"
+                      id="searchRadio"
+                      checked="checked"
+                    />
+                    <label id="brewLabel">Search Term</label>
+                  </div>
                 </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="frequency" id="radioCity" />
-                  <label id="brewLabel">City</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency" id="radioCity" />
+                    <label id="brewLabel">City</label>
+                  </div>
                 </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="frequency" id="radioPostal" />
-                  <label id="brewLabel">Postal</label>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="frequency" id="radioPostal" />
+                    <label id="brewLabel">Postal</label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <hr />
-          <h1>Advanced Filters</h1>
+            <hr />
+            <h1>Advanced Filters</h1>
             <form className="ui form">
               <div className="field">
                 <label id="brewLabel">Filter by State</label>
@@ -368,15 +373,14 @@ function BrewMenu() {
             >
               Help!
             </button>
-            <button
-            className="ui purple basic button">
-<ProjectsLink />
+            <button className="ui purple basic button">
+              <ProjectsLink />
             </button>
             {/* <p className="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p> */}
           </div>
         </div>
-</div>
-        </>
+      </div>
+    </>
   );
 }
 
