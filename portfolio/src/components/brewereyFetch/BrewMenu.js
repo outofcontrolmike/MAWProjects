@@ -9,27 +9,37 @@ function BrewMenu() {
   function accordionOpen() {
     let search = document.getElementById("brewInput");
     let title = document.getElementById("title").className;
+    let radioCity = document.getElementById("radioCity");
+
     search.disabled = title === "title" ? false : true;
     search.value = "Search by an advanced filter";
 
+    if (radioCity.checked) {
+      search.value = "Enter a city!";
+    }
+
+    let postalCity = document.getElementById("radioPostal");
+    if (postalCity.checked) {
+      search.value = "Enter a postal code";
+
+      // document.getElementById("stateFilter").value = "State";
+    }
     // document.getElementById('brewBtn').className = "ui button red disabled";
     advancedRequest();
   }
 
   function advancedRequest() {
-    //If state is selected
+    //Main Filter
     let url = "";
     let stateFilter = document.getElementById("stateFilter");
     let stateFilterValue =
       stateFilter.options[stateFilter.selectedIndex].innerHTML;
-
-    console.log(stateFilterValue);
     //State end point
     if (stateFilterValue != "State") {
       url =
         "https://api.openbrewerydb.org/breweries?by_state=" +
         stateFilterValue +
-        "&per_page=600'";
+        "&per_page=50'";
     }
 
     let brewType = document.getElementById("brewType");
@@ -40,7 +50,7 @@ function BrewMenu() {
       url =
         "https://api.openbrewerydb.org/breweries?by_type=" +
         brewText +
-        "&per_page=500'";
+        "&per_page=50'";
     }
 
     if (stateFilterValue != "State" && brewValue != "Brewery Type") {
@@ -51,6 +61,9 @@ function BrewMenu() {
         brewText +
         "&per_page=500'";
     }
+
+    //If main filter is not Search Term
+
     document.getElementById("count").innerHTML = 0;
 
     getBreweries(url);
@@ -63,12 +76,11 @@ function BrewMenu() {
 
   //Number of breweries related
   let brewCount = 0;
-  function createBrew(brew) {
+  function createBrew(brew, url) {
     document.getElementById("breweries").innerHTML = "";
     brewCount = 0;
     brew.map(createCard);
     document.getElementById("count").innerHTML = brewCount;
-
     // if (brewCount === 0) {
     //     setTimeout(function () {
     //         alert("Your search brought back no results, try again");
@@ -76,45 +88,75 @@ function BrewMenu() {
     // }
   }
 
-  //Initial brewery submit
-  function handleSubmit() {
+  //IF !SearchTerm ... build URL completley differently
+
+  //Initial brewery submit for Basic Search
+  function handleSubmit(url) {
     document.getElementById("breweries").innerHTML = "";
+
+    //radio check and input
+    let searchRadio = document.getElementById("searchRadio");
     let input = document.getElementById("brewInput").value;
-    url =
-      "https://api.openbrewerydb.org/breweries/search?query=" +
-      input +
-      "&per_page=500'";
 
-    let radioCity = document.getElementById("radioCity");
-    let postalCity = document.getElementById("radioPostal");
+    let stateFilter = document.getElementById("stateFilter");
+    let stateFilterValue =
+      stateFilter.options[stateFilter.selectedIndex].innerHTML;
 
-    if (radioCity.checked) {
-      console.log("testing from zipcodeOrcity");
+    if (input != "") {
       url =
-        "https://api.openbrewerydb.org/breweries?by_city=" +
+        "https://api.openbrewerydb.org/breweries/search?query=" +
         input +
         "&per_page=500'";
     }
 
-    if (postalCity.checked) {
-      console.log("postal is checked");
-      url =
-        "https://api.openbrewerydb.org/breweries?by_postal=" +
-        input +
-        "&per_page=500'";
+    //Advanced search
+    if (!searchRadio.checked) {
+      url = "https://api.openbrewerydb.org/breweries?";
+
+      //Radio buttons
+      let radioCity = document.getElementById("radioCity");
+      let postalCity = document.getElementById("radioPostal");
+
+      //State value
+      let stateFilter = document.getElementById("stateFilter");
+      let stateFilterValue =
+        stateFilter.options[stateFilter.selectedIndex].innerHTML;
+
+      //Brewery type value
+      let brewType = document.getElementById("brewType");
+      let brewValue = brewType.options[brewType.selectedIndex].value;
+      let brewText = brewValue.toLowerCase();
+
+      if (radioCity.checked) {
+        console.log("do I know if I'm checked?");
+        url += "by_city=" + input + "&";
+      }
+
+      if (postalCity.checked) {
+        url += "by_postal=" + input + "&";
+      }
+
+      if (stateFilterValue != "State") {
+        url += "by_state=" + stateFilterValue + "&";
+      }
+
+      if (brewValue != "Brewery Type") {
+        url += "by_type=" + brewText + "&";
+      }
+
+      url += "";
+      console.log("URL after build", url);
     }
-    console.log("url", url);
     getBreweries(url);
+    console.log("url", url);
   }
 
   //get breweries based on search term
   function getBreweries(url) {
-    console.log("url", url);
     fetch(url)
       .then((response) => response.json())
       .then((brew) => {
-        console.log("response", brew);
-        createBrew(brew);
+        createBrew(brew, url);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -181,7 +223,6 @@ function BrewMenu() {
     breweryType.innerHTML = item.brewery_type;
     breweryPhone.innerHTML = item.phone;
 
-    console.log(item.brewery_type);
     //Additional styling
 
     container.className = "ui two column grid container stackable";
@@ -376,6 +417,10 @@ function BrewMenu() {
             <button className="ui purple basic button">
               <ProjectsLink />
             </button>
+            <h4 className="ui text white">
+              *The max allowed item results has a limit of 50*... I'm still
+              working on figuring out how to bypass this.
+            </h4>
             {/* <p className="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p> */}
           </div>
         </div>
