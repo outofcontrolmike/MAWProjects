@@ -511,8 +511,13 @@ input[type="number"] {
 }
 
 #brewFooter {
-    position: relative;
-    margin-top: 32%;
+  position: relative;
+  margin-top: 32%;
+}
+
+.beer {
+  position: relative;
+  left: 0.3rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -549,6 +554,5 @@ input[type="number"] {
     margin-bottom: 3%;
   }
 }
-
 
 /******************************************************************************************************/
