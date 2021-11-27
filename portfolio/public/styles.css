@@ -494,9 +494,10 @@ input[type="number"] {
 #breweries {
   padding: 0px 100px 100px 100px;
 }
+
 #brewCard {
   padding: 20px;
-  background-color: orange;
+  background-color: whitesmoke;
 }
 
 #brewHeader {

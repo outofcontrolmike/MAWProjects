@@ -4,91 +4,112 @@ import React from "react";
 function BrewMenu() {
   let url = "";
 
-  //Accordion click
+  let brewCount = 0;
+
+  function handleInput() {
+    document.getElementById("brewInput").value = "";
+    document.getElementById("brewInput").placeholder = "";
+  }
 
   function accordionOpen() {
     let search = document.getElementById("brewInput");
-    let title = document.getElementById("title").className;
     let radioCity = document.getElementById("radioCity");
+    let searchRadio = document.getElementById("searchRadio");
+
+    let title = document.getElementById("title").className;
 
     search.disabled = title === "title" ? false : true;
+
     search.value = "Search by an advanced filter";
 
     if (radioCity.checked) {
-      search.value = "Enter a city!";
+      search.value = "Enter a city";
     }
 
     let postalCity = document.getElementById("radioPostal");
     if (postalCity.checked) {
       search.value = "Enter a postal code";
+    }
 
-      // document.getElementById("stateFilter").value = "State";
+    if (searchRadio.checked) {
+      search.value = "Enter a Search Term";
     }
     // document.getElementById('brewBtn').className = "ui button red disabled";
     advancedRequest();
   }
 
   function advancedRequest() {
-    //Main Filter
-    let url = "";
-    let stateFilter = document.getElementById("stateFilter");
-    let stateFilterValue =
-      stateFilter.options[stateFilter.selectedIndex].innerHTML;
-    //State end point
-    if (stateFilterValue != "State") {
-      url =
-        "https://api.openbrewerydb.org/breweries?by_state=" +
-        stateFilterValue +
-        "&per_page=50'";
+    let radioPostal = document.getElementById("radioPostal");
+    if (!radioPostal.checked) {
+      //Main Filter
+
+      let url = "";
+      let stateFilter = document.getElementById("stateFilter");
+      let search = document.getElementById("brewInput");
+      let cityRadio = document.getElementById("radioCity");
+
+      let stateFilterValue =
+        stateFilter.options[stateFilter.selectedIndex].innerHTML;
+
+      //Determine State to filter by
+      if (stateFilterValue != "State") {
+        search.value = "Results for breweries in " + stateFilterValue;
+        url =
+          "https://api.openbrewerydb.org/breweries?by_state=" +
+          stateFilterValue +
+          "&per_page=50'";
+        if (cityRadio.checked) {
+          search.value =
+            "Enter a city name that belongs to " + stateFilterValue;
+        }
+      }
+
+      let brewType = document.getElementById("brewType");
+      let brewValue = brewType.options[brewType.selectedIndex].value;
+      let brewText = brewValue.toLowerCase();
+
+      if (brewValue != "Brewery Type") {
+        search.value = "Results for " + brewValue + " breweries";
+        url =
+          "https://api.openbrewerydb.org/breweries?by_type=" +
+          brewText +
+          "&per_page=50'";
+
+        if (cityRadio.checked) {
+          search.value = "Enter a city name for " + brewValue + " breweries";
+        }
+      }
+
+      if (stateFilterValue != "State" && brewValue != "Brewery Type") {
+        search.value =
+          "Results for " + brewValue + " breweries " + "in " + stateFilterValue;
+        url =
+          "https://api.openbrewerydb.org/breweries?by_state=" +
+          stateFilterValue +
+          "&by_type=" +
+          brewText +
+          "&per_page=500'";
+
+        if (cityRadio.checked) {
+          search.value =
+            "Results for " +
+            brewValue +
+            " breweries " +
+            "in " +
+            stateFilterValue;
+        }
+      }
     }
-
-    let brewType = document.getElementById("brewType");
-    let brewValue = brewType.options[brewType.selectedIndex].value;
-    let brewText = brewValue.toLowerCase();
-
-    if (brewValue != "Brewery Type") {
-      url =
-        "https://api.openbrewerydb.org/breweries?by_type=" +
-        brewText +
-        "&per_page=50'";
-    }
-
-    if (stateFilterValue != "State" && brewValue != "Brewery Type") {
-      url =
-        "https://api.openbrewerydb.org/breweries?by_state=" +
-        stateFilterValue +
-        "&by_type=" +
-        brewText +
-        "&per_page=500'";
-    }
-
-    //If main filter is not Search Term
 
     document.getElementById("count").innerHTML = 0;
 
     getBreweries(url);
   }
-  //Wipe out list when user hovers over input
+  //Wipe out list when user types into input field
   function handleChange() {
     document.getElementById("breweries").innerHTML = "";
     document.getElementById("count").innerHTML = 0;
   }
-
-  //Number of breweries related
-  let brewCount = 0;
-  function createBrew(brew, url) {
-    document.getElementById("breweries").innerHTML = "";
-    brewCount = 0;
-    brew.map(createCard);
-    document.getElementById("count").innerHTML = brewCount;
-    // if (brewCount === 0) {
-    //     setTimeout(function () {
-    //         alert("Your search brought back no results, try again");
-    //     }, 3000);
-    // }
-  }
-
-  //IF !SearchTerm ... build URL completley differently
 
   //Initial brewery submit for Basic Search
   function handleSubmit(url) {
@@ -128,7 +149,6 @@ function BrewMenu() {
       let brewText = brewValue.toLowerCase();
 
       if (radioCity.checked) {
-        console.log("do I know if I'm checked?");
         url += "by_city=" + input + "&";
       }
 
@@ -145,10 +165,8 @@ function BrewMenu() {
       }
 
       url += "";
-      console.log("URL after build", url);
     }
     getBreweries(url);
-    console.log("url", url);
   }
 
   //get breweries based on search term
@@ -163,7 +181,20 @@ function BrewMenu() {
       });
   }
 
-  //Create Brewery cards
+  //Maps through response data
+  function createBrew(brew, url) {
+    document.getElementById("breweries").innerHTML = "";
+    brewCount = 0;
+    brew.map(createCard);
+    document.getElementById("count").innerHTML = brewCount;
+    // if (brewCount === 0) {
+    //     setTimeout(function () {
+    //         alert("Your search brought back no results, try again");
+    //     }, 3000);
+    // }
+  }
+
+  //Create Brewery card elements
   function createCard(item) {
     brewCount++;
 
@@ -271,16 +302,17 @@ function BrewMenu() {
         <div className="ui transparent huge icon input">
           <input
             onChange={handleChange}
+            onClick={handleInput}
             id="brewInput"
             type="text"
             className="ui"
             style={{ color: "gold", textAlign: "center" }}
-            placeholder="Type in a Brewery name or keyword"
+            placeholder="Type in a Brewery name or filter keyword"
           />
 
           <button
             onClick={handleSubmit}
-            className="ui yellow button large basic"
+            className="ui black button large basic"
             id="brewBtn"
           >
             <i className="beer icon large"></i>
@@ -294,8 +326,8 @@ function BrewMenu() {
             0
           </span>
         </div>
-        <div onClick={accordionOpen} className="ui inverted accordion">
-          <div className="title" id="title">
+        <div className="ui inverted accordion">
+          <div onClick={accordionOpen} className="title" id="title">
             <i className="dropdown icon"></i>
           </div>
           <div className="content ui container relaxed very padded stackable">
@@ -418,8 +450,7 @@ function BrewMenu() {
               <ProjectsLink />
             </button>
             <h4 className="ui text white">
-              *The max allowed item results has a limit of 50*... I'm still
-              working on figuring out how to bypass this.
+              *The max allowed item results has a limit of 50*
             </h4>
             {/* <p className="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p> */}
           </div>
