@@ -553,11 +553,6 @@ input[type="number"] {
   #brewInput {
     margin-left: 0px;
   }
-  .floatMe {
-    padding-top: 0px;
-    float: right;
-    margin-bottom: 3%;
-  }
 
   #brewFooter {
     position: relative;
