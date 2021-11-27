@@ -41,8 +41,6 @@ function BrewMenu() {
   function advancedRequest() {
     let radioPostal = document.getElementById("radioPostal");
     if (!radioPostal.checked) {
-      //Main Filter
-
       let url = "";
       let stateFilter = document.getElementById("stateFilter");
       let search = document.getElementById("brewInput");
@@ -235,6 +233,13 @@ function BrewMenu() {
     //find a way to pass all these in to a function that checks if empty
 
     breweryURL.href = item.website_url;
+    breweryURL.style.color = "black";
+    breweryURL.addEventListener("mouseover", () => {
+      breweryURL.style.color = "blue";
+    });
+    breweryURL.addEventListener("mouseout", () => {
+      breweryURL.style.color = "red";
+    });
     let bUrl = breweryURL.href;
     // bUrl.className = "wrapURL";
 
@@ -262,9 +267,11 @@ function BrewMenu() {
     column2.className = "column";
     breweryName.className = "ui header text massive container";
 
-    breweryName.style.color = "white";
+    breweryName.style.color = "red";
     breweryName.style.fontSize = "30px";
     breweryName.style.textTransform = "uppercase";
+    breweryName.style.maxWidth = "none";
+
     breweryType.style.textTransform = "capitalize";
 
     //add icons
@@ -306,7 +313,7 @@ function BrewMenu() {
             id="brewInput"
             type="text"
             className="ui"
-            style={{ color: "gold", textAlign: "center" }}
+            style={{ color: "red", textAlign: "center", marginLeft: "15rem" }}
             placeholder="Type in a Brewery name or filter keyword"
           />
 
@@ -315,7 +322,7 @@ function BrewMenu() {
             className="ui black button large basic"
             id="brewBtn"
           >
-            <i className="beer icon large"></i>
+            <i className="beer icon large red"></i>
           </button>
           <span
             type="color"
@@ -328,11 +335,10 @@ function BrewMenu() {
         </div>
         <div className="ui inverted accordion">
           <div onClick={accordionOpen} className="title" id="title">
-            <i className="dropdown icon"></i>
+            <i className="dropdown icon red"></i>
           </div>
           <div className="content ui container relaxed very padded stackable">
-            <h1>Main filter</h1>
-            <hr />
+            <h2 style={{ color: "red" }}>Main Filter</h2>
             <div class="ui form">
               <div class="grouped fields">
                 <div class="field">
@@ -360,8 +366,7 @@ function BrewMenu() {
                 </div>
               </div>
             </div>
-            <hr />
-            <h1>Advanced Filters</h1>
+            <h2 style={{ color: "red" }}>Advanced Filtering</h2>
             <form className="ui form">
               <div className="field">
                 <label id="brewLabel">Filter by State</label>
@@ -441,16 +446,22 @@ function BrewMenu() {
             </form>
             <button
               onClick=""
-              className="ui blue button brewHelp"
+              className="ui red button basic brewHelp"
               style={{ padding: "1rem", marginTop: "2rem" }}
             >
               Help!
             </button>
-            <button className="ui purple basic button">
-              <ProjectsLink />
-            </button>
+            <a href="/projects">
+              <button
+                className="ui red basic button"
+                style={{ color: "red", padding: "1rem", marginTop: "2rem" }}
+              >
+                Back to Projects
+              </button>
+            </a>
             <h4 className="ui text white">
-              *The max allowed item results has a limit of 50*
+              *The max allowed item results has a limit of 50 for advanced
+              searches*
             </h4>
             {/* <p className="transition hidden">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p> */}
           </div>

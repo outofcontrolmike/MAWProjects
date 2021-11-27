@@ -497,7 +497,8 @@ input[type="number"] {
 
 #brewCard {
   padding: 20px;
-  background-color: whitesmoke;
+  background-color: white;
+  color: black;
 }
 
 #brewHeader {
@@ -507,8 +508,8 @@ input[type="number"] {
 }
 
 #brewLabel {
-  color: bisque;
   font-size: medium;
+  color: white;
 }
 
 #brewFooter {
