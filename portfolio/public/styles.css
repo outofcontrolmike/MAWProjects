@@ -507,14 +507,21 @@ input[type="number"] {
   text-align: left;
 }
 
+#brewInput {
+  margin-left: 15rem;
+}
+
 #brewLabel {
   font-size: medium;
   color: white;
 }
 
 #brewFooter {
-  position: relative;
-  margin-top: 32%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .beer {
@@ -531,11 +538,6 @@ input[type="number"] {
     visibility: hidden;
   }
 
-  .floatMe {
-    float: left;
-    padding-top: 25px;
-    color: blue;
-  }
   i {
     text-overflow: clip;
   }
@@ -550,6 +552,9 @@ input[type="number"] {
     padding: 0px;
   }
 
+  #brewInput {
+    margin-left: 0px;
+  }
   .floatMe {
     padding-top: 0px;
     float: right;

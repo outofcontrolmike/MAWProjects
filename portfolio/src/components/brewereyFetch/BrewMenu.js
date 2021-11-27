@@ -98,9 +98,6 @@ function BrewMenu() {
         }
       }
     }
-
-    document.getElementById("count").innerHTML = 0;
-
     getBreweries(url);
   }
   //Wipe out list when user types into input field
@@ -306,14 +303,14 @@ function BrewMenu() {
   return (
     <>
       <div className="ui container relaxed very padded stackable ">
-        <div className="ui transparent huge icon input">
+        <div className="ui transparent huge icon input stackable">
           <input
             onChange={handleChange}
             onClick={handleInput}
             id="brewInput"
             type="text"
             className="ui"
-            style={{ color: "red", textAlign: "center", marginLeft: "15rem" }}
+            style={{ color: "red", textAlign: "center" }}
             placeholder="Type in a Brewery name or filter keyword"
           />
 

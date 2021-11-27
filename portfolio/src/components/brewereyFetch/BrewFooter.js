@@ -3,11 +3,7 @@ import React from "react";
 function BrewFooter() {
   return (
     <div>
-      <footer
-        id="brewFooter"
-        className="ui text container footer"
-        style={{ color: "beige" }}
-      >
+      <footer id="brewFooter" className="ui" style={{ color: "whitesmoke" }}>
         <h3>The creator of this project is Michael A. Wilson</h3>
         <p>
           Special thanks to Chris J Mears and Wandering Leaf Studios LLC for
