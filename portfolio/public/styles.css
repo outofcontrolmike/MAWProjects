@@ -517,10 +517,8 @@ input[type="number"] {
 }
 
 #brewFooter {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  margin-top: 30%;
   text-align: center;
 }
 
@@ -559,6 +557,12 @@ input[type="number"] {
     padding-top: 0px;
     float: right;
     margin-bottom: 3%;
+  }
+
+  #brewFooter {
+    position: relative;
+    bottom: 0;
+    text-align: center;
   }
 }
 
