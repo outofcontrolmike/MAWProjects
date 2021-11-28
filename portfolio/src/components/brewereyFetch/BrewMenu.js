@@ -187,6 +187,9 @@ function BrewMenu() {
     //         alert("Your search brought back no results, try again");
     //     }, 3000);
     // }
+    if(brewCount === 0) {
+      window.alert("No results found.....Sorry")
+    }
   }
 
   //Create Brewery card elements
