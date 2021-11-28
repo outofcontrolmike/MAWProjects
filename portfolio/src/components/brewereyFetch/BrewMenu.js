@@ -2,7 +2,6 @@ import ProjectsLink from "../../components/links/Home";
 import React from "react";
 
 function BrewMenu() {
-  let url = "";
 
   let brewCount = 0;
 
@@ -12,6 +11,7 @@ function BrewMenu() {
   }
 
   function accordionOpen() {
+    let url = "";
     let search = document.getElementById("brewInput");
     let radioCity = document.getElementById("radioCity");
     let searchRadio = document.getElementById("searchRadio");
@@ -35,13 +35,12 @@ function BrewMenu() {
       search.value = "Enter a Search Term";
     }
     // document.getElementById('brewBtn').className = "ui button red disabled";
-    advancedRequest();
+    advancedRequest(url);
   }
 
-  function advancedRequest() {
+  function advancedRequest(url) {
     let radioPostal = document.getElementById("radioPostal");
     if (!radioPostal.checked) {
-      let url = "";
       let stateFilter = document.getElementById("stateFilter");
       let search = document.getElementById("brewInput");
       let cityRadio = document.getElementById("radioCity");
@@ -98,6 +97,7 @@ function BrewMenu() {
         }
       }
     }
+    console.log("url",url);
     getBreweries(url);
   }
   //Wipe out list when user types into input field
