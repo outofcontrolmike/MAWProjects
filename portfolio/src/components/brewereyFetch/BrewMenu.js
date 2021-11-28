@@ -1,5 +1,6 @@
-import ProjectsLink from "../../components/links/Home";
+
 import React from "react";
+import BrewModal from "./BrewModal";
 
 function BrewMenu() {
 
@@ -97,7 +98,7 @@ function BrewMenu() {
         }
       }
     }
-    console.log("url",url);
+    console.log("url", url);
     getBreweries(url);
   }
   //Wipe out list when user types into input field
@@ -187,8 +188,8 @@ function BrewMenu() {
     //         alert("Your search brought back no results, try again");
     //     }, 3000);
     // }
-    if(brewCount === 0) {
-      window.alert("No results found.....Sorry")
+    if (brewCount === 0) {
+      window.alert("Please try searching again")
     }
   }
 
@@ -339,10 +340,10 @@ function BrewMenu() {
           </div>
           <div className="content ui container relaxed very padded stackable">
             <h2 style={{ color: "red" }}>Main Filter</h2>
-            <div class="ui form">
-              <div class="grouped fields">
-                <div class="field">
-                  <div class="ui radio checkbox">
+            <div className="ui form">
+              <div className="grouped fields">
+                <div className="field">
+                  <div className="ui radio checkbox">
                     <input
                       type="radio"
                       name="frequency"
@@ -352,14 +353,14 @@ function BrewMenu() {
                     <label id="brewLabel">Search Term</label>
                   </div>
                 </div>
-                <div class="field">
-                  <div class="ui radio checkbox">
+                <div className="field">
+                  <div className="ui radio checkbox">
                     <input type="radio" name="frequency" id="radioCity" />
                     <label id="brewLabel">City</label>
                   </div>
                 </div>
-                <div class="field">
-                  <div class="ui radio checkbox">
+                <div className="field">
+                  <div className="ui radio checkbox">
                     <input type="radio" name="frequency" id="radioPostal" />
                     <label id="brewLabel">Postal</label>
                   </div>
@@ -444,13 +445,14 @@ function BrewMenu() {
                 </select>
               </div>
             </form>
-            <button
+            {/* <button
               onClick=""
               className="ui red button basic brewHelp"
               style={{ padding: "1rem", marginTop: "2rem" }}
             >
               Help!
-            </button>
+            </button> */}
+            <BrewModal />
             <a href="/projects">
               <button
                 className="ui red basic button"
