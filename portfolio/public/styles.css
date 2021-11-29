@@ -527,6 +527,10 @@ input[type="number"] {
   left: 0.3rem;
 }
 
+#brewP {
+  color: black;
+}
+
 @media only screen and (max-width: 1000px) {
   #breweries {
     padding: 0;

@@ -1,7 +1,6 @@
 import BrewMenu from "../../../components/brewereyFetch/BrewMenu";
-import BrewModal from "../../../components/brewereyFetch/BrewModal";
+// import BrewModal from "../../../components/brewereyFetch/BrewModal";
 import BrewFooter from "../../../components/brewereyFetch/BrewFooter";
-
 export default function Brewery() {
   return (
     <body
@@ -12,7 +11,6 @@ export default function Brewery() {
       <div id="breweries" className="ui" style={{ marginTop: "50px" }}></div>
       <BrewFooter />
       {/* Brew Modal */}
-      <BrewModal />
     </body>
   );
 }

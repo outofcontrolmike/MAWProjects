@@ -1,8 +1,8 @@
-import ProjectsLink from "../../components/links/Home";
+
 import React from "react";
+import BrewModal from "./BrewModal";
 
 function BrewMenu() {
-  let url = "";
 
   let brewCount = 0;
 
@@ -12,6 +12,7 @@ function BrewMenu() {
   }
 
   function accordionOpen() {
+    let url = "";
     let search = document.getElementById("brewInput");
     let radioCity = document.getElementById("radioCity");
     let searchRadio = document.getElementById("searchRadio");
@@ -35,13 +36,12 @@ function BrewMenu() {
       search.value = "Enter a Search Term";
     }
     // document.getElementById('brewBtn').className = "ui button red disabled";
-    advancedRequest();
+    advancedRequest(url);
   }
 
-  function advancedRequest() {
+  function advancedRequest(url) {
     let radioPostal = document.getElementById("radioPostal");
     if (!radioPostal.checked) {
-      let url = "";
       let stateFilter = document.getElementById("stateFilter");
       let search = document.getElementById("brewInput");
       let cityRadio = document.getElementById("radioCity");
@@ -98,6 +98,7 @@ function BrewMenu() {
         }
       }
     }
+    console.log("url", url);
     getBreweries(url);
   }
   //Wipe out list when user types into input field
@@ -187,6 +188,9 @@ function BrewMenu() {
     //         alert("Your search brought back no results, try again");
     //     }, 3000);
     // }
+    if (brewCount === 0) {
+      window.alert("Please try searching again")
+    }
   }
 
   //Create Brewery card elements
@@ -336,10 +340,10 @@ function BrewMenu() {
           </div>
           <div className="content ui container relaxed very padded stackable">
             <h2 style={{ color: "red" }}>Main Filter</h2>
-            <div class="ui form">
-              <div class="grouped fields">
-                <div class="field">
-                  <div class="ui radio checkbox">
+            <div className="ui form">
+              <div className="grouped fields">
+                <div className="field">
+                  <div className="ui radio checkbox">
                     <input
                       type="radio"
                       name="frequency"
@@ -349,14 +353,14 @@ function BrewMenu() {
                     <label id="brewLabel">Search Term</label>
                   </div>
                 </div>
-                <div class="field">
-                  <div class="ui radio checkbox">
+                <div className="field">
+                  <div className="ui radio checkbox">
                     <input type="radio" name="frequency" id="radioCity" />
                     <label id="brewLabel">City</label>
                   </div>
                 </div>
-                <div class="field">
-                  <div class="ui radio checkbox">
+                <div className="field">
+                  <div className="ui radio checkbox">
                     <input type="radio" name="frequency" id="radioPostal" />
                     <label id="brewLabel">Postal</label>
                   </div>
@@ -441,13 +445,14 @@ function BrewMenu() {
                 </select>
               </div>
             </form>
-            <button
+            {/* <button
               onClick=""
               className="ui red button basic brewHelp"
               style={{ padding: "1rem", marginTop: "2rem" }}
             >
               Help!
-            </button>
+            </button> */}
+            <BrewModal />
             <a href="/projects">
               <button
                 className="ui red basic button"
