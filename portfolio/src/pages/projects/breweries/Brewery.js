@@ -3,7 +3,7 @@ import BrewMenu from "../../../components/brewereyFetch/BrewMenu";
 import BrewFooter from "../../../components/brewereyFetch/BrewFooter";
 export default function Brewery() {
   return (
-    <body
+    <body id="brewBody"
       className="ui segment"
       style={{ backgroundColor: "black", height: "100vh" }}
     >
