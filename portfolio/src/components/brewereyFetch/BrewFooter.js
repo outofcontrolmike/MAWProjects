@@ -3,10 +3,11 @@ import React from "react";
 function BrewFooter() {
   return (
     <div>
-      <footer id="brewFooter" className="ui" style={{ color: "whitesmoke" }}>
-        <h3>The creator of this project is Michael A. Wilson</h3>
+      <footer id="brewFooter" className="ui" style={{ color: "white" }}>
         <p>
-          Special thanks to Chris J Mears and Wandering Leaf Studios LLC for
+          Special thanks to <a style={{ color: "gold" }}
+            href="https://chrisjmears.com/">Chris J Mears </a> and <a style={{ color: "gold" }}
+              href="https://wanderingleafstudios.com/">Wandering Leaf Studios LLC</a> for
           creating and maintaning the brewery information.
         </p>
         <p>

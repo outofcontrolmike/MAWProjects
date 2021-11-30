@@ -1,4 +1,3 @@
-
 import React from "react";
 import BrewModal from "./BrewModal";
 
@@ -189,8 +188,9 @@ function BrewMenu() {
     //     }, 3000);
     // }
     if (brewCount === 0) {
-      window.alert("Please try searching again")
-    }
+        window.alert("Better luck next time");
+  }
+
   }
 
   //Create Brewery card elements

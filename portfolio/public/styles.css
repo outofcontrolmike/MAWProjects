@@ -436,6 +436,10 @@ input[type="number"] {
   font-family: "Linden Hill", serif;
 }
 
+#brewh3, #breweryInfo {
+  color:black
+}
+
 #brewA {
   margin-bottom: 200px;
 }
@@ -562,9 +566,11 @@ input[type="number"] {
     float: right;
     margin-bottom: 3%;
   }
+}
 
+@media only screen and (max-width: 1300px) {
   #brewFooter {
-    position: relative;
+    position: absolute;
     bottom: 0;
     text-align: center;
   }
