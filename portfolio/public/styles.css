@@ -436,8 +436,9 @@ input[type="number"] {
   font-family: "Linden Hill", serif;
 }
 
-#brewh3, #breweryInfo {
-  color:black
+#brewh3,
+#breweryInfo {
+  color: black;
 }
 
 #brewA {
@@ -535,17 +536,27 @@ input[type="number"] {
   color: black;
 }
 
-#stateFilter, #brewType {
- 
-background: #bdc3c7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+#stateFilter,
+#brewType {
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   border: 1px solid whitesmoke;
-  color:black;
+  color: white;
 }
 
+option {
+  color: black;
+}
 
 @media only screen and (max-width: 1000px) {
   #breweries {
@@ -570,11 +581,9 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, F
     padding: 0px;
   }
 
-
-
   #brewInput {
     margin-left: 0px;
-    width:15ch;
+    width: 15ch;
   }
 
   .floatMe {
@@ -586,8 +595,6 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, F
   #brewFooter {
     margin-top: 120%;
   }
-
-
 }
 
 @media only screen and (max-width: 1300px) {
