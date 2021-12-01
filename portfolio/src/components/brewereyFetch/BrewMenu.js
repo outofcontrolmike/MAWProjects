@@ -323,7 +323,7 @@ function BrewMenu() {
             className="ui black button large basic"
             id="brewBtn"
           >
-            <i className="beer icon large red"></i>
+            <i className="beer icon large red" id="beerIcon"></i>
           </button>
           <span
             type="color"

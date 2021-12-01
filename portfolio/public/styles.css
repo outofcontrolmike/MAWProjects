@@ -558,23 +558,29 @@ input[type="number"] {
     padding: 0px;
   }
 
+
+
   #brewInput {
     margin-left: 0px;
+    width:15ch;
   }
-<<<<<<< HEAD
-=======
+
   .floatMe {
     padding-top: 0px;
     float: right;
     margin-bottom: 3%;
   }
+
+  #brewFooter {
+    margin-top: 120%;
+  }
+
+
 }
->>>>>>> 720374b69621819ae8292340a4f0a9365178e6e7
 
 @media only screen and (max-width: 1300px) {
   #brewFooter {
     position: absolute;
-    bottom: 0;
     text-align: center;
   }
 }
