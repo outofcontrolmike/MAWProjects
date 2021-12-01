@@ -5,11 +5,20 @@ function BrewMenu() {
 
   let brewCount = 0;
 
+  //Grab out brewInput after dom loads
+  function loadBrewInput() {
+    document.getElementById("brewInput").addEventListener('change', handleSubmit);
+  }
+  
+  setTimeout(loadBrewInput, 2000);
+
+  //Clears input value when user goes into type
   function handleInput() {
     document.getElementById("brewInput").value = "";
     document.getElementById("brewInput").placeholder = "";
   }
 
+  //Handles checking filtering status with some user interaction setup
   function accordionOpen() {
     let url = "";
     let search = document.getElementById("brewInput");
@@ -38,6 +47,7 @@ function BrewMenu() {
     advancedRequest(url);
   }
 
+  //Handles automatically fetching breweries if State and/or Brewery type is selected
   function advancedRequest(url) {
     let radioPostal = document.getElementById("radioPostal");
     if (!radioPostal.checked) {
@@ -161,6 +171,12 @@ function BrewMenu() {
 
       url += "";
     }
+    if(input === "") {
+      let count = document.getElementById("count")
+      count.innerHTML = 0;
+      window.alert("Please Make sure to enter a value before searching")
+      
+    }
     getBreweries(url);
   }
 
@@ -182,13 +198,9 @@ function BrewMenu() {
     brewCount = 0;
     brew.map(createCard);
     document.getElementById("count").innerHTML = brewCount;
-    // if (brewCount === 0) {
-    //     setTimeout(function () {
-    //         alert("Your search brought back no results, try again");
-    //     }, 3000);
-    // }
-    if (brewCount === 0) {
-        window.alert("Better luck next time");
+
+    if (brewCount === 0 ) {
+        window.alert("Invalid Search Request... did you spell your search correctly? Also, the brewery dataset may not have information about your brewery yet.");
   }
 
   }
@@ -234,12 +246,12 @@ function BrewMenu() {
     //find a way to pass all these in to a function that checks if empty
 
     breweryURL.href = item.website_url;
-    breweryURL.style.color = "black";
+    breweryURL.style.color = "blue";
     breweryURL.addEventListener("mouseover", () => {
-      breweryURL.style.color = "blue";
+      breweryURL.style.color = "red";
     });
     breweryURL.addEventListener("mouseout", () => {
-      breweryURL.style.color = "red";
+      breweryURL.style.color = "blue";
     });
     let bUrl = breweryURL.href;
     // bUrl.className = "wrapURL";
@@ -373,7 +385,7 @@ function BrewMenu() {
                 <label id="brewLabel">Filter by State</label>
                 <select
                   id="stateFilter"
-                  className="ui fluid search three column dropdown"
+                  className="ui fluid search three column dropdown inverted"
                   multiple=""
                 >
                   <option value="">State</option>
@@ -432,7 +444,7 @@ function BrewMenu() {
               </div>
               <div className="field">
                 <label id="brewLabel">Filter by Brewery Type</label>
-                <select className="ui compact selection dropdown" id="brewType">
+                <select className="ui selection dropdown" id="brewType">
                   <option>Brewery Type</option>
                   <option>Nano</option>
                   <option>Micro</option>
