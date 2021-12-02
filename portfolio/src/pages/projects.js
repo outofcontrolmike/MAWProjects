@@ -102,10 +102,10 @@ function Projects(props) {
     {
       img: "img/breweries.JPG",
       href: "/breweries",
-      name: "Brewery Listing API",
-      meta: "Javascript & Fomantic",
+      name: "Brewery Listings",
+      meta: "Javascript & Fomantic.. some React",
       desc: "A fun little project for listing breweries based on user needs.",
-      created: "Wrote June 16th 2021",
+      created: "Wrote June 16th 2021" + "Re-wrote December 1st 2021",
       github:
         "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/brewery_Fetch",
     },

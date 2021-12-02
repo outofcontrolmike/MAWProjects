@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Icon, Image, Modal } from 'semantic-ui-react'
 
+//Modal for Help option
 function BrewModal() {
     const [open, setOpen] = React.useState(false)
 

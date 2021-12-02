@@ -1,6 +1,7 @@
 import React from "react";
 import BrewModal from "./BrewModal";
 
+// the user interface for beer searching
 function BrewMenu() {
 
   let brewCount = 0;

@@ -1,6 +1,7 @@
 import BrewMenu from "../../../components/brewereyFetch/BrewMenu";
-// import BrewModal from "../../../components/brewereyFetch/BrewModal";
 import BrewFooter from "../../../components/brewereyFetch/BrewFooter";
+
+//Main component to render for Brewery App
 export default function Brewery() {
   return (
     <body id="brewBody"
