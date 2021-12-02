@@ -8,7 +8,7 @@ function BrewFooter() {
           Special thanks to <a style={{ color: "gold" }}
             href="https://chrisjmears.com/">Chris J Mears </a> and <a style={{ color: "gold" }}
               href="https://wanderingleafstudios.com/">Wandering Leaf Studios LLC</a> for
-          creating and maintaning the brewery information.
+          creating and maintaining the brewery information.
         </p>
         <p>
           The initial dataset is provided by{" "}

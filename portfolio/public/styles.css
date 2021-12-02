@@ -465,6 +465,11 @@ input[type="number"] {
   font-size: 18px;
 }
 
+.brewUrl {
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
 .floatMe {
   color: red;
 }
@@ -576,7 +581,7 @@ option {
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1350px) {
   .input {
     padding: 0px;
   }

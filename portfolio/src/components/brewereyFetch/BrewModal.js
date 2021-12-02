@@ -9,7 +9,7 @@ function BrewModal() {
             open={open}
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
-            trigger={<Button className="ui basic blue button large">Help!!!</Button>}
+            trigger={<Button className="ui inverted primary basic large">Help!!!</Button>}
         >
             <Modal.Header><div style={{textAlign: "center"}}>Brewery Fetching Help</div></Modal.Header>
             <Modal.Content image>
@@ -17,18 +17,17 @@ function BrewModal() {
                 <Modal.Description>
                     <div class="rules">
                         <h3 id="brewh3">Basic Searching</h3>
-                        <p id="brewP">You can choose to not enter anything into the input field and also choose not to select anything form the dropdowns.  This will print out a list of 50 breweries from the api dataset.
+                        <p id="brewP">By default the input filed will accept any keyword that you desire to type in.  For example you could type in Mother and you would see Mother's brewering Company from Springfield MO populate in the list.</p>
 
-                            <p id="brewP">Once you enter text, make sure to select a filter.</p>
-                        </p>
+                            <p id="brewP">Anytime you open up the advanced menu it will disable the input box and clear out the input field.</p>
                         <hr />
-                        <h3 id="brewh3" >Basic Filtering</h3>
+                        <h3 id="brewh3" >Main Filtering</h3>
                         <p id="brewP">
-                            You have the options to filter by Name, City or Zipcode on the first select dropdown menu.  Once you select the filter you want, you'll want to type in the search value.
+                            You have the options to filter by Search Term, City or Zipcode.  You can easily select to filter by a city and choose advanced filtering options for the state and brewery type, but it's not required.
                         </p>
                         <hr />
                         <h3 id="brewh3">State Filtering</h3>
-                        <p id="brewP">You can easily choose any state and submit a search based on your choice. Keep in mind that You won't be able to see every brewery in each state since we're limited to 50 items per request. *Adding multiple pages will be a stretch goal later on*</p>
+                        <p id="brewP">You can easily choose any state and submit a search based on your choice. Keep in mind that You won't be able to see every brewery in each state since we're limited to 50 items per request.</p>
                         <hr />
                         <h3 id="brewh3">Filtering by Brewery Type</h3>
                         <p id="brewP">It is possible to filter out certain Breweries by Type. Keep in mind your other filter setings when choosing this.</p>

@@ -200,7 +200,7 @@ function BrewMenu() {
     document.getElementById("count").innerHTML = brewCount;
 
     if (brewCount === 0 ) {
-        window.alert("Invalid Search Request... did you spell your search correctly? Also, the brewery dataset may not have information about your brewery yet.");
+        window.alert("Invalid Search Request... did you spell your search correctly? Also, the brewery dataset may not have information about your brewery yet.  That could lead to no results.");
   }
 
   }
@@ -253,8 +253,10 @@ function BrewMenu() {
     breweryURL.addEventListener("mouseout", () => {
       breweryURL.style.color = "blue";
     });
-    let bUrl = breweryURL.href;
-    // bUrl.className = "wrapURL";
+
+    breweryURL.style.overflow = "hidden";
+    breweryURL.className = "brewUrl";
+    breweryURL.style.maxWidth = "20px";
 
     if (breweryURL != "http://localhost:3000/null") {
       breweryURL.innerHTML = breweryURL;
@@ -457,18 +459,11 @@ function BrewMenu() {
                 </select>
               </div>
             </form>
-            {/* <button
-              onClick=""
-              className="ui red button basic brewHelp"
-              style={{ padding: "1rem", marginTop: "2rem" }}
-            >
-              Help!
-            </button> */}
             <BrewModal />
             <a href="/projects">
               <button
-                className="ui red basic button"
-                style={{ color: "red", padding: "1rem", marginTop: "2rem" }}
+                className="ui inverted red  basic button"
+                style={{ color: "", padding: "1rem", marginTop: "2rem" }}
               >
                 Back to Projects
               </button>
