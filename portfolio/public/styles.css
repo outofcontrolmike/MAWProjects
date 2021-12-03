@@ -613,4 +613,78 @@ option {
 
 /*******POKEMON Styles***********************************************************************************************/
 
+#pokeh1 {
+  font-family: pokemon;
+  margin-top: 20px;
+}
 
+#pokeP,
+#pokeSpan,
+.pokeSpan,
+#pokeH3,
+#pokeLabel {
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.pokeSearchInput {
+  font-weight: 600;
+  border: none;
+  font-size: large;
+  letter-spacing: 5px;
+  font-family: cursive;
+  text-align: center;
+}
+
+#pokeSearchValue {
+  font-family: pokemon;
+  font-weight: bolder;
+}
+
+#pokeSearchTools {
+  margin-top: 1%;
+  background: #ff4e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f9d423,
+    #ff4e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f9d423,
+    #ff4e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#pokeh1::first-letter {
+  text-transform: capitalize;
+}
+
+.ui.modal {
+  height: fit-content;
+}
+
+.pokeCard {
+  border-radius: 50px;
+}
+
+#pokeContainer {
+  margin: 4rem;
+  align-content: center;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+  img.ui.image {
+    position: absolute;
+  }
+  .mobileImage {
+    height: 150px;
+    width: 150px;
+  }
+  .ui.input,
+  #searchValue {
+    font-size: xx-small;
+    height: 30px;
+  }
+}
