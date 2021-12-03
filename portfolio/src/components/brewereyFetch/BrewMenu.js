@@ -3,14 +3,15 @@ import BrewModal from "./BrewModal";
 
 // the user interface for beer searching
 function BrewMenu() {
-
   let brewCount = 0;
 
   //Grab out brewInput after dom loads
   function loadBrewInput() {
-    document.getElementById("brewInput").addEventListener('change', handleSubmit);
+    document
+      .getElementById("brewInput")
+      .addEventListener("change", handleSubmit);
   }
-  
+
   setTimeout(loadBrewInput, 2000);
 
   //Clears input value when user goes into type
@@ -172,11 +173,10 @@ function BrewMenu() {
 
       url += "";
     }
-    if(input === "") {
-      let count = document.getElementById("count")
+    if (input === "") {
+      let count = document.getElementById("count");
       count.innerHTML = 0;
-      window.alert("Please Make sure to enter a value before searching")
-      
+      window.alert("Please Make sure to enter a value before searching");
     }
     getBreweries(url);
   }
@@ -200,10 +200,11 @@ function BrewMenu() {
     brew.map(createCard);
     document.getElementById("count").innerHTML = brewCount;
 
-    if (brewCount === 0 ) {
-        window.alert("Invalid Search Request... did you spell your search correctly? Also, the brewery dataset may not have information about your brewery yet.  That could lead to no results.");
-  }
-
+    if (brewCount === 0) {
+      window.alert(
+        "Invalid Search Request... did you spell your search correctly? Also, the brewery dataset may not have information about your brewery yet.  That could lead to no results."
+      );
+    }
   }
 
   //Create Brewery card elements
@@ -258,6 +259,7 @@ function BrewMenu() {
     breweryURL.style.overflow = "hidden";
     breweryURL.className = "brewUrl";
     breweryURL.style.maxWidth = "20px";
+    breweryURL.target = "_blank";
 
     if (breweryURL != "http://localhost:3000/null") {
       breweryURL.innerHTML = breweryURL;
