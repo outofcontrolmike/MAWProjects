@@ -13,11 +13,12 @@ export default function BrewModal() {
       trigger={
         <Button
           style={{
+            FontFace: "font-family: Press Start 2P, cursive;",
             backgroundColor: "white",
             borderRadius: "25px",
-            fontFamily: "Times New Roman', Times, serif",
           }}
           className="ui black button large basic"
+          id="pkBtn"
         >
           Help
         </Button>
@@ -29,7 +30,7 @@ export default function BrewModal() {
       <Modal.Content image>
         <Image wrapped />
         <Modal.Description>
-          <div>
+          <div id="pokeModalDesc">
             <h3 style={{ paddingTop: "10px" }}>Pokdex Javascript Info</h3>
             <p>
               Weclome to this small web app! The first option you have avaiable

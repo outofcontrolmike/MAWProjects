@@ -32,7 +32,7 @@ function PokemonMenu() {
     //event listeners
     var searchInput = document.getElementById("pokeSearchValue");
 
-    document.getElementById("clear").addEventListener("click", clearList);
+    document.getElementById("pkClear").addEventListener("click", clearList);
 
     // Execute a function when the user releases a key on the keyboard
     searchInput.addEventListener("keyup", function (event) {
@@ -87,9 +87,7 @@ function PokemonMenu() {
 
           .catch((error) => {
             // Handle the error
-            console.log("should be an error for a 404");
-            console.log(error);
-            alert("error!");
+            alert("error!", error);
           });
 
         //////////end fetch
@@ -111,11 +109,11 @@ function PokemonMenu() {
       }
     }
     //error handling
-    else {
-      alert("Please try again");
-      //   input.value = "";
-      //   document.getElementById("pokeSearchValue").value = "";
-    }
+    // else {
+    //   alert("Please try again");
+    //   //   input.value = "";
+    //   //   document.getElementById("pokeSearchValue").value = "";
+    // }
   } //end catchSingle
 
   //Fetch Multiple Pokemon
@@ -129,12 +127,6 @@ function PokemonMenu() {
             fetchPokemonData(pokemon);
           });
         });
-      input.value = "";
-      document.getElementById("pokeSearchValue").value = "";
-    } else {
-      alert("Please enter a value over 0");
-      input.value = "";
-      document.getElementById("pokeSearchValue").value = "";
     }
   } //end Multi
 
@@ -170,14 +162,9 @@ function PokemonMenu() {
 
     let container = document.getElementById("pokeTest");
     let pokeContainer = document.createElement("div");
-    pokeContainer.classList.add(
-      "col-m-6",
-      "pokeCard",
-      "m-4",
-      "pb-4",
-      "align-content-center",
-      "success"
-    );
+    pokeContainer.setAttribute("id", "pokeContainer");
+
+    pokeContainer.classList.add("col-m-6", "pokeCard");
     container.classList.add("ui");
     var pokeImage = document.createElement("img");
     pokeImage.classList.add("mobileImage");
@@ -189,8 +176,24 @@ function PokemonMenu() {
     var baseStats = document.createElement("p");
     var abilities = document.createElement("p");
 
-    // pokeImage.height = "300px";
-    // pokeImage.width = "300px";
+    let paragraphs = [
+      pokeName,
+      pokeId,
+      poketypes,
+      pokeHeight,
+      pokeWeight,
+      baseStats,
+      abilities,
+    ];
+
+    paragraphs.forEach((element) => {
+      element.setAttribute("id", "pokeP");
+    });
+
+    pokeName.setAttribute("id", "pokeh1");
+
+    pokeImage.height = "250";
+    pokeImage.width = "250";
     pokeImage.style.alignSelf = "center";
     var pkId = pokeData.id;
     var pkImg = (pokeData.srcset =
@@ -204,7 +207,7 @@ function PokemonMenu() {
     pokeId.innerHTML = `#${pokeData.id}`;
     poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
     abilities.innerHTML =
-      "<hr><b>Abilities:<br></b> " +
+      "<hr id='pokeHr' <b>Abilities:<br></b> " +
       pokeData.abilities.map((el) => el.ability.name);
     pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
     pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
@@ -222,8 +225,8 @@ function PokemonMenu() {
 
     let colorType = pokeData.types[0].type.name;
     abilities.style.wordWrap = "break-word";
-    abilities.style.padding = "20px;";
-    abilities.style.maxWidth = "200px;";
+    abilities.style.padding = "20";
+    abilities.style.maxWidth = "200";
     setColor(colorType, pokeContainer);
 
     container.prepend(pokeContainer);
@@ -238,13 +241,8 @@ function PokemonMenu() {
     let container = document.getElementById("pokeTest");
     let pokeContainer = document.createElement("div");
     pokeContainer.setAttribute("id", "pokeContainer");
-    pokeContainer.classList.add(
-      "col-m-6",
-      "pokeCard",
-      "m-4",
-      "pb-4",
-      "align-content-center"
-    );
+    pokeContainer.classList.add("pokeCard", "align-content-center");
+
     var pokeImage = document.createElement("img");
     pokeImage.classList.add("mobileImage");
     var pokeName = document.createElement("h1");
@@ -269,9 +267,8 @@ function PokemonMenu() {
       element.setAttribute("id", "pokeP");
     });
 
-    pokeImage.height = "300";
-    pokeImage.width = "300";
-    pokeImage.style.alignSelf = "center";
+    pokeImage.height = "250";
+    pokeImage.width = "250";
 
     //image for pokemon
     var pkId = pokeData.id;
@@ -281,11 +278,11 @@ function PokemonMenu() {
       ".png");
 
     pokeImage.src = pkImg;
-    pokeName.innerHTML = pokeData.name + "<hr>";
+    pokeName.innerHTML = pokeData.name;
     pokeId.innerHTML = `#${pokeData.id}`;
     poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
     abilities.innerHTML =
-      "<hr><b>Abilities:<br></b> " +
+      "<hr id='pokeHr' ><b>Abilities:<br></b> " +
       pokeData.abilities.map((el) => el.ability.name);
     pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
     pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
@@ -394,7 +391,7 @@ function PokemonMenu() {
   return (
     <div>
       <div className="ui inverted" id="menu">
-        <div id="pokeSearchTools" className="ui stackable segment container">
+        <div id="pokeSearchTools" className="ui stackable container fluid">
           <div className="ui container">
             <div id="inputContainer" className="ui icon input w-75">
               <input
@@ -419,6 +416,7 @@ function PokemonMenu() {
                 className="ui image tiny"
                 alt="randomCatch"
                 src="img/pk.png"
+                style={{ position: "absolute" }}
               />
             </span>
           </div>
@@ -427,7 +425,7 @@ function PokemonMenu() {
             <div className="ui accordion" id="accordion">
               <div className="title">
                 <i className="dropdown icon"></i>
-                <span id="advanced" className="pokeSpan">
+                <span id="advanced" className="pokeAdvanced">
                   Advanced Options
                 </span>
               </div>
@@ -462,14 +460,13 @@ function PokemonMenu() {
                       <hr />
                       <h3 id="pokeH3">Other</h3>
                       <button
-                        id="clear"
+                        id="pkClear"
                         type="button"
                         style={{
                           backgroundColor: "red",
                           borderRadius: "25px",
-                          fontFamily: "Times New Roman', Times, serif",
                         }}
-                        className="ui black button large basic"
+                        className="ui black button large basic pkBtn"
                       >
                         Reset
                       </button>

@@ -6,7 +6,7 @@ export default function Pokemon() {
     <div id="pBackground">
       <PokemonMenu />
       <div
-        className="row text-center justify-content-center mb-4 ml-4 mr-4"
+        className="row text-center justify-content-center"
         id="pokeTest"
       ></div>
     </div>

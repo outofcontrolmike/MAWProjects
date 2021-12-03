@@ -616,6 +616,7 @@ option {
 #pokeh1 {
   font-family: pokemon;
   margin-top: 20px;
+  color: black;
 }
 
 #pokeP,
@@ -625,6 +626,12 @@ option {
 #pokeLabel {
   font-size: x-large;
   font-family: "Times New Roman", Times, serif;
+  color: black;
+}
+
+#pokeP {
+  text-align: center;
+  word-break: break-all;
 }
 
 .pokeSearchInput {
@@ -632,17 +639,17 @@ option {
   border: none;
   font-size: large;
   letter-spacing: 5px;
-  font-family: cursive;
+  font-family: "Press Start 2P", cursive;
   text-align: center;
 }
 
 #pokeSearchValue {
-  font-family: pokemon;
+  font-family: "Press Start 2P", cursive;
   font-weight: bolder;
 }
 
 #pokeSearchTools {
-  margin-top: 1%;
+  padding: 2rem;
   background: #ff4e50; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -660,18 +667,52 @@ option {
   text-transform: capitalize;
 }
 
+#pokeh1,
+.pokeAdvanced,
+#pokeH3,
+#pokeLabel,
+#pkBtn,
+#pkClear {
+  font-family: "Press Start 2P", cursive;
+  font-size: medium;
+}
+
 .ui.modal {
   height: fit-content;
 }
 
 .pokeCard {
   border-radius: 50px;
+  margin: 2rem;
+}
+
+#pokeCard {
+  border-radius: 50px;
+  margin: 2rem;
 }
 
 #pokeContainer {
-  margin: 4rem;
-  align-content: center;
-  width: fit-content;
+  width: 350px;
+  color: black;
+  padding: 2rem;
+}
+
+#mobileImage {
+  text-align: center;
+}
+#pokeTest {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: 8%;
+}
+
+#pokeHr {
+  border-color: white;
+}
+
+#pokeModalDesc {
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {
