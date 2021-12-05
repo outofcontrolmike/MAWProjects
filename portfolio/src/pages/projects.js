@@ -17,7 +17,7 @@ function Projects(props) {
       name: "Pokedex API Call",
       meta: "Javascript, Bootstrap & Fomantic",
       desc: "Want to look at pokemon art and information about pokemon? Test this project out!.",
-      created: "Crafted in September 2020. Reworked August December 12/5/2021
+      created: "Crafted in September 2020. Reworked August December 12/5/2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/PokemonAPI",
     },
