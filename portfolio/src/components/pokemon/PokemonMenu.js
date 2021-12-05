@@ -2,13 +2,14 @@ import { get } from "jquery";
 import React from "react";
 import PokeModal from "./PokemonModal";
 
+//Function compoment for Pokemon Menu
 function PokemonMenu() {
   var prevUrl = "";
   
   setTimeout(windowload, 10);
 
+  //Basically adds event listeners to page elements
   function windowload() {
-    //on Page Load
 
     //SUPER IMPORTANT
     document
@@ -41,6 +42,7 @@ function PokemonMenu() {
     });
   }
 
+  //Configures the status of the user fetching
   function fetchStatus() {
     let pokeSearch = document.getElementById("search");
     let single = document.getElementById("name");
@@ -62,6 +64,8 @@ function PokemonMenu() {
 
   //Fetching Functions //
   //****************************************************************************************************************************** */
+
+
   //Fetch information for one pokemon
   function catchSingle() {
     var input = document.getElementById("pokeSearchValue").value;
@@ -78,7 +82,7 @@ function PokemonMenu() {
           })
 
           .then((pokemon) => {
-            createSingle(pokemon);
+            renderPokemon(pokemon);
           })
 
           .catch((error) => {
@@ -98,7 +102,7 @@ function PokemonMenu() {
         fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
           .then((response) => response.json())
           .then(function (pokemon) {
-            createSingle(pokemon);
+            renderPokemon(pokemon);
           });
         document.getElementById("pokeSearchValue").value = "";
         prevUrl = input;
@@ -122,7 +126,7 @@ function PokemonMenu() {
         .then((response) => response.json())
         .then(function (allPokemon) {
           allPokemon.results.forEach(function (pokemon) {
-            fetchPokemonData(pokemon);
+            fetchMultiple(pokemon);
           });
         });
       }
@@ -131,19 +135,20 @@ function PokemonMenu() {
    
   } //end Multi
 
-  //Fetch Random Amount
+  //Fetch Random pokemon
   function catchRandom() {
     var alg = Math.floor(Math.random(1) * 898);
     {
       fetch("https://pokeapi.co/api/v2/pokemon/" + alg)
         .then((response) => response.json())
         .then(function (pokemon) {
-          createSingle(pokemon);
+          renderPokemon(pokemon);
         });
     }
   }
 
-  function fetchPokemonData(pokemon) {
+  //Handles fetching multiple pokemon
+  function fetchMultiple(pokemon) {
     let url = pokemon.url;
     fetch(url)
       .then((response) => response.json())
@@ -155,7 +160,7 @@ function PokemonMenu() {
   //Rending Pokemon Data//
   //****************************************************************************************************************************** */
 
-  //Render for multiple pokemon
+  //creates card element for pok
   function renderPokemon(pokeData) {
     var heightMath = (pokeData.height / 3.048).toFixed(2);
     var weightMath = (pokeData.weight / 4.536).toFixed(2);
@@ -233,81 +238,6 @@ function PokemonMenu() {
     container.prepend(pokeContainer);
   } //end multi
 
-  //Render Single Pokemon
-  function createSingle(pokeData) {
-    var heightMath = (pokeData.height / 3.048).toFixed(2);
-    var weightMath = (pokeData.weight / 4.536).toFixed(2);
-    var baseStat = pokeData.base_experience;
-
-    let container = document.getElementById("pokeTest");
-    let pokeContainer = document.createElement("div");
-    pokeContainer.setAttribute("id", "pokeContainer");
-    pokeContainer.classList.add("pokeCard", "align-content-center");
-
-    var pokeImage = document.createElement("img");
-    pokeImage.classList.add("mobileImage");
-    var pokeName = document.createElement("h1");
-    pokeName.setAttribute("id", "pokeh1");
-    var pokeId = document.createElement("p");
-    var poketypes = document.createElement("p");
-    var pokeHeight = document.createElement("p");
-    var pokeWeight = document.createElement("p");
-    var baseStats = document.createElement("p");
-    var abilities = document.createElement("p");
-
-    let paragraphs = [
-      pokeId,
-      poketypes,
-      pokeHeight,
-      pokeWeight,
-      baseStats,
-      abilities,
-    ];
-
-    paragraphs.forEach((element) => {
-      element.setAttribute("id", "pokeP");
-    });
-
-    pokeImage.height = "250";
-    pokeImage.width = "250";
-
-    //image for pokemon
-    var pkId = pokeData.id;
-    var pkImg = (pokeData.srcset =
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" +
-      pkId +
-      ".png");
-
-    pokeImage.src = pkImg;
-    pokeName.innerHTML = pokeData.name;
-    pokeId.innerHTML = `#${pokeData.id}`;
-    poketypes.innerHTML = "Types: " + pokeData.types.map((el) => el.type.name);
-    abilities.innerHTML =
-      "<hr id='pokeHr' ><b>Abilities:<br></b> " +
-      pokeData.abilities.map((el) => el.ability.name);
-    pokeHeight.innerHTML = "Height: " + heightMath + " Feet";
-    pokeWeight.innerHTML = "Weight: " + weightMath + " lbs";
-    baseStats.innerHTML = "EXP earned: " + baseStat;
-    pokeContainer.append(
-      pokeImage,
-      pokeName,
-      pokeId,
-      poketypes,
-      pokeHeight,
-      pokeWeight,
-      baseStats,
-      abilities
-    );
-
-    abilities.style.maxWidth = "200px;";
-    abilities.style.padding = "20px;";
-    abilities.style.wordWrap = "break-word";
-    pokeContainer.style.borderRadius = "50px;";
-
-    let colorType = pokeData.types[0].type.name;
-    setColor(colorType, pokeContainer);
-    container.prepend(pokeContainer);
-  } // end single catch -- Should be able to combine single and multi, pass in a paramter to differ between the two
 
   //Misc Functions//
   //****************************************************************************************************************************** */
