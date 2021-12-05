@@ -4,16 +4,11 @@ import PokeModal from "./PokemonModal";
 
 function PokemonMenu() {
   var prevUrl = "";
-  //variables
-  var list = document.getElementById("pokeTest");
-  var toggleID = document.getElementById("catchOne");
-  // let input = document.getElementById("pokeSearchValue").value;
-
-  setTimeout(windowload, 2000);
+  
+  setTimeout(windowload, 10);
 
   function windowload() {
     //on Page Load
-    window.onload = invertColors;
 
     //SUPER IMPORTANT
     document
@@ -28,6 +23,7 @@ function PokemonMenu() {
 
     let single = document.getElementById("name");
     single.addEventListener("change", fetchStatus);
+
 
     //event listeners
     var searchInput = document.getElementById("pokeSearchValue");
@@ -119,7 +115,9 @@ function PokemonMenu() {
   //Fetch Multiple Pokemon
   function catchList() {
     var input = document.getElementById("pokeSearchValue").value;
+    
     if (input > 0) {
+      var pURL = input;
       fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
         .then((response) => response.json())
         .then(function (allPokemon) {
@@ -127,7 +125,10 @@ function PokemonMenu() {
             fetchPokemonData(pokemon);
           });
         });
-    }
+      }
+      document.getElementById("pokeSearchValue").value = "";
+      prevUrl = input;
+   
   } //end Multi
 
   //Fetch Random Amount
@@ -380,13 +381,6 @@ function PokemonMenu() {
     document.getElementById("pokeSearchValue").value = "";
   }
 
-  //Invert colors (Should take in a couple parameters..for some type of functionallity)
-  function invertColors() {
-    //navigation bar
-    document.getElementById("background").style.backgroundColor = "black";
-    //container that pokemon are held on
-    document.getElementById("pokeTest").style.backgroundColor = "black";
-  }
 
   return (
     <div>
@@ -471,6 +465,20 @@ function PokemonMenu() {
                         Reset
                       </button>
                       <PokeModal />
+                      <a href="/projects">
+                      <button
+                        id="pkClear"
+                        type="button"
+                        style={{
+                          backgroundColor: "orange",
+                          borderRadius: "25px",
+                          float: "right"
+                        }}
+                        className="ui black button large basic pkBtn"
+                      >
+                        Back to projects
+                      </button>
+                    </a>
                     </div>
                   </div>
                 </div>
