@@ -2,6 +2,8 @@ import React from 'react'
 
 //Game Select that gets auto populated on page load
 export default function FFGameSelect() {
+
+  getGames();
           //Fetch Game List to pull
 function getGames() {
   let url = "https://www.moogleapi.com/api/v1/games/";
