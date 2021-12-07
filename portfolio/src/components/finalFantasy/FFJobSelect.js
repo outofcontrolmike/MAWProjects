@@ -4,7 +4,7 @@ import React from 'react'
 export default function FFJobSelect() {
     return (
         <div>
-              <select className="ui fluid selection dropdown" id="jobSelect">
+              <select className="ui fluid selection dropdown ffSelect" id="jobSelect">
                 <option value="" disabled selected="selected">Job Select</option>
                 <option>??</option>
                     <option>Adventurer</option>

@@ -4,7 +4,7 @@ import React from 'react'
 export default function FFGenderSelect() {
     return (
         <div>
-            <select className="ui fluid selection dropdown" id="genderSelect">
+            <select className="ui fluid selection dropdown ffSelect" id="genderSelect">
                 <optgroup id="genders">
                     <option value="" disabled selected="selected">Gender Select</option>
                     <option>??</option>

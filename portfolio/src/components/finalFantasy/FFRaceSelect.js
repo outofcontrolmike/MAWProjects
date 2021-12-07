@@ -4,7 +4,7 @@ import React from 'react'
 export default function FFRaceSelect() {
     return (
         <div>
-                <select className="ui fluid selection dropdown" id="raceSelect">
+                <select className="ui fluid selection dropdown ffSelect" id="raceSelect">
                 <option value="" disabled selected="selected">Race Select</option>
                 <option>??</option>
                 <option>Alien</option>

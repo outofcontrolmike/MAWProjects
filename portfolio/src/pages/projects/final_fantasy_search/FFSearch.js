@@ -61,7 +61,7 @@ function resetfilters() {
 
   //Simply clears the list
 function clearList() {
-    document.getElementById("list").innerHTML = "";
+    document.getElementById("ffList").innerHTML = "";
     count = 0;
   }
 
@@ -105,8 +105,8 @@ function submitRequest() {
     fetch(url)
       .then((response) => response.json())
       .then((games) => {
-        let list = document.getElementById("list");
-        list.innerHTML = "";
+        let ffList = document.getElementById("ffList");
+        ffList.innerHTML = "";
         games.map(createGameCard);
       });
   }
@@ -223,6 +223,13 @@ function submitRequest() {
     let description = create("p");
     description.innerHTML = game.description;
   
+    let paragraphs = [title, platform, releaseDate, description]
+
+    paragraphs.forEach((element) => {
+      element.setAttribute("id", "ffP");
+    });
+
+
     let picture = game.picture;
     let imageHolder = create("img");
     imageHolder.className =
@@ -251,13 +258,14 @@ function submitRequest() {
     column2.append(imageHolder);
     column3.append(description);
     mainContainer.append(container, divider, column3);
-    document.getElementById("list").append(mainContainer);
+    document.getElementById("ffList").append(mainContainer);
   }
   
   //Card Creation - Characters ****************************************************************
   
   function getFFData(character) {
     let name = document.createElement("h1");
+    name.setAttribute('id', "ffName");
     let line = document.createElement("hr");
     line.className = "line";
     character.name.toUpperCase();
@@ -286,10 +294,11 @@ function submitRequest() {
   
     let weight = document.createElement("p");
     weight.innerHTML = "<b>Weight: </b>" + character.weight + "<br>";
-  
+
     let bio = document.createElement("h1");
+    bio.setAttribute('id', "ffBio");
     bio.innerHTML = "Details";
-    bio.className = "details";
+    bio.className = "ffDetails";
   
     let description = document.createElement("p");
     description.innerHTML = character.description;
@@ -306,6 +315,12 @@ function submitRequest() {
       picture = character.pictures[0].url;
       imageHolder.src = picture;
     }
+
+    let paragraphs = [jName, origin, race, gender, age, job, height, weight,description]
+    
+    paragraphs.forEach((element) => {
+      element.setAttribute("id", "ffP");
+    });
   
     let mainContainer = document.createElement("div");
     mainContainer.className = "ui segment raised padded";
@@ -340,7 +355,7 @@ function submitRequest() {
     column3.append(bio, description);
     mainContainer.append(container, divider, column3);
   
-    document.getElementById("list").prepend(mainContainer);
+    document.getElementById("ffList").prepend(mainContainer);
   
     count++;
   }
@@ -447,7 +462,7 @@ function createAlert(count, genderParam, jobParam, raceParam, origin) {
     return(
         <div id="app" class="ui container stackable">
             <FFMenu />
-            <div id="list">                
+            <div id="ffList">                
             </div>
             <FFFooter />
 

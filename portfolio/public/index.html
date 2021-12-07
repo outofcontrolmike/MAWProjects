@@ -148,12 +148,26 @@
     });
   });
 </script>
+<!-- FF Search Jquery-->
+<script>
+$(".advancedSearch").click(() => {
+  setTimeout(() => {
+    $(".advancedSearch").toast({
+      title: `Your search contains ${count} Characters!`,
+      message: alertMessage,
+      class: color,
+      displayTime: 30000,
+      className: {
+        toast: "ui message",
+      },
+    });
+    count = 0;
+  }, 1000);
+});
+</script>
 
-<!-- Brewery fetching jquery-->
 <script>
   $('.ui.accordion')
   .accordion()
 ;
-
-
 </script>

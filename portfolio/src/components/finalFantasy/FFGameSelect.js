@@ -97,7 +97,7 @@ function convertTitle(game) {
   
   return (
         <div>
-            <select className="ui fluid selection dropdown" id="games">
+            <select className="ui fluid selection dropdown ffSelect" id="games">
                 <option value="" disabled selected="selected">Game Select</option>
             </select>
         </div>
