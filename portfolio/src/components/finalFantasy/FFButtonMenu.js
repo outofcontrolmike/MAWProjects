@@ -20,6 +20,14 @@ export default function FFButtonMenu() {
                 <button id="clear" className="ui red button medium">
                     Clear List
                 </button>
+                <a href="/projects" style={{float: "right"}}>
+              <button
+                className="ui teal basic button"
+                style={{ color: "", padding: "1rem",}}
+              >
+                Back to Projects
+              </button>
+            </a>
             </div>
         </div>
     )
