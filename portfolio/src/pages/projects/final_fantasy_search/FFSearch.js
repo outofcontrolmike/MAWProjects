@@ -19,9 +19,6 @@ function onLoadListeners() {
       .addEventListener("click", advancedRequest);
   
     document.getElementById("title").addEventListener("click", disableSearch);
-    document
-      .getElementById("ffSearchInput")
-      .addEventListener("change", submitRequest);
   
     document.getElementById("clear").addEventListener("click", clearList);
     document
@@ -29,6 +26,9 @@ function onLoadListeners() {
       .addEventListener("click", createGameList);
     document.getElementById("random").addEventListener("click", getRandom);
     document.getElementById("reset").addEventListener("click", resetfilters);
+    document
+    .getElementById("ffSearchInput")
+    .addEventListener("change", submitRequest);
   }
 
   window.setTimeout(onLoadListeners, 10);
