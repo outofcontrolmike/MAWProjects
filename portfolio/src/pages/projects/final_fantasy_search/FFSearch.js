@@ -9,18 +9,18 @@ let alertMessage = "";
 let count = 0;
 let gameListFetch = false;
 
-
     ////Fetches for characters - Characters *************************************************************************////
         //Set up listener events *******************************************************************************
 function onLoadListeners() {
-    document.getElementById("onSubmit").addEventListener("click", submitRequest);
+
+    // document.getElementById("onSubmit").addEventListener("click", submitRequest);
     document
       .getElementById("advancedSearch")
       .addEventListener("click", advancedRequest);
   
     document.getElementById("title").addEventListener("click", disableSearch);
     document
-      .getElementById("searchInput")
+      .getElementById("ffSearchInput")
       .addEventListener("change", submitRequest);
   
     document.getElementById("clear").addEventListener("click", clearList);
@@ -31,11 +31,11 @@ function onLoadListeners() {
     document.getElementById("reset").addEventListener("click", resetfilters);
   }
 
-  window.setTimeout(onLoadListeners, 1000);
+  window.setTimeout(onLoadListeners, 10);
 
   //Resesting and Disabling DOM elements ******************************************************************
 function disableSearch() {
-    let search = document.getElementById("searchInput");
+    let search = document.getElementById("ffSearchInput");
     let title = document.getElementById("title").className;
     search.disabled = title === "title" ? true : false;
   }
@@ -67,8 +67,8 @@ function clearList() {
 
 //Handles user character name input
 function submitRequest() {
-    let searchValue = document.getElementById("searchInput").value;
-    if (searchValue) {
+
+    let searchValue = document.getElementById("ffSearchInput").value;    
       let url = "https://www.moogleapi.com/api/v1/characters/search?name=";
       fetch(url + searchValue)
         .then((response) => {
@@ -83,9 +83,8 @@ function submitRequest() {
         })
         .catch((error) => {
           console.log(error);
-        });
+        });      
     }
-  }
   
   //Grabs random character - provided by api
   function getRandom() {

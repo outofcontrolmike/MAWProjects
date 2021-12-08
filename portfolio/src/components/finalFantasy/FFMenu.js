@@ -11,10 +11,8 @@ export default function FFMenu() {
         <div id="ffBody">
             <div id="ffSearchTools" className="ui stackable segment container">
                 <div className="ui container">
-                    <div id="inputContainer" className="ui icon input fluid">
-                        <input type="text" id="searchInput" className="ffSearchInput" placeholder="Search...Character Name"/>
-                        <i className ="gem outline icon" tabindex="0" type ="submit" id="onSubmit"></i>
-                    </div>
+                    <div id="inputContainer" className="ui icon input fluid" style={{width: "100%"}}>
+                        <input type="text" id="ffSearchInput" className="" placeholder="Search...Character Name"/>                   </div>
                 </div>
                 <div className="ui container">
 
