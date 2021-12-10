@@ -98,7 +98,7 @@ function FFSearch() {
         console.log("character", character);
         //preventing duplicate call
         clearList();
-        character.map(getFFData);
+        getFFData(character);
       });
   }
 
