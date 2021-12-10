@@ -186,6 +186,7 @@ function BrewMenu() {
     fetch(url)
       .then((response) => response.json())
       .then((brew) => {
+        console.log("brew", brew);
         createBrew(brew, url);
       })
       .catch((error) => {
