@@ -1,13 +1,15 @@
-import react from 'react';
 import FFFooter from '../../../components/finalFantasy/FFFooter';
 import FFMenu from "../../../components/finalFantasy/FFMenu";
 //Main component for final fantasy search
-export default function FFSearch() {
+function FFSearch() {
   //Global Variables  *************************************************************************************
 let color = "blue";
 let alertMessage = "";
 let count = 0;
 let gameListFetch = false;
+
+var prevUrl = "";
+
 
     ////Fetches for characters - Characters *************************************************************************////
         //Set up listener events *******************************************************************************
@@ -26,12 +28,14 @@ function onLoadListeners() {
       .addEventListener("click", createGameList);
     document.getElementById("random").addEventListener("click", getRandom);
     document.getElementById("reset").addEventListener("click", resetfilters);
-    document
-    .getElementById("ffSearchInput")
-    .addEventListener("change", submitRequest);
+    
+    let ffINput = document
+    .getElementById("ffSearchInput");
+
+    ffINput.addEventListener("change", submitRequest);
   }
 
-  window.setTimeout(onLoadListeners, 10);
+  window.setTimeout(onLoadListeners, 1000);
 
   //Resesting and Disabling DOM elements ******************************************************************
 function disableSearch() {
@@ -68,14 +72,16 @@ function clearList() {
 //Handles user character name input
 function submitRequest() {
 
-    let searchValue = document.getElementById("ffSearchInput").value;    
-      let url = "https://www.moogleapi.com/api/v1/characters/search?name=";
-      fetch(url + searchValue)
+    var input = document.getElementById("ffSearchInput").value;    
+      let url  = "https://www.moogleapi.com/api/v1/characters/search?name=";
+      var ffURL = input;
+      while (prevUrl != ffURL) {
+      fetch(url + input)
         .then((response) => {
           if (response.ok) {
             return response.json();
           } else {
-            return;
+            console.log("error")
           }
         })
         .then((data) => {
@@ -83,7 +89,11 @@ function submitRequest() {
         })
         .catch((error) => {
           console.log(error);
-        });      
+        });
+        //
+        document.getElementById('ffSearchInput');
+        prevUrl = ffURL;      
+        }
     }
   
   //Grabs random character - provided by api
@@ -468,3 +478,5 @@ function createAlert(count, genderParam, jobParam, raceParam, origin) {
         </div>
     )
 }
+
+export default FFSearch;

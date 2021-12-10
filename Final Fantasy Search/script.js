@@ -18,9 +18,7 @@ function onLoadListeners() {
     .addEventListener("click", advancedRequest);
 
   document.getElementById("title").addEventListener("click", disableSearch);
-  document
-    .getElementById("searchInput")
-    .addEventListener("change", submitRequest);
+
 
   document.getElementById("clear").addEventListener("click", clearList);
   document
