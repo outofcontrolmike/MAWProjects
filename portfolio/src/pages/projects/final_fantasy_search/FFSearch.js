@@ -165,6 +165,7 @@ function FFSearch() {
     column3.className = "ui column";
 
     let divider = create("hr");
+    divider.setAttribute('id',"gameHr");
 
     container.append(column, column2, divider, column3);
 
@@ -224,7 +225,7 @@ function FFSearch() {
     description.innerHTML = character.description;
 
     let imageHolder = document.createElement("img");
-    imageHolder.className = "ui centered medium image";
+    imageHolder.className = "ui centered medium image ffImage";
 
     let test = character.pictures;
     let picture;
@@ -393,10 +394,13 @@ function FFSearch() {
     count = 0;
   }
   return (
-    <div id="app" class="ui container stackable">
+    <div className="ffContainer">
+
+    <div id="app" className="ui container stackable">
       <FFMenu />
       <div id="ffList"></div>
       <FFFooter />
+    </div>
     </div>
   );
 }

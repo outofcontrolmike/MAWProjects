@@ -22,18 +22,12 @@ export default function FFMenu() {
               id="ffSearchInput"
               placeholder="Search...Character Name"
             />
-            <i
-              className="gem outline icon button"
-              tabIndex="0"
-              id={"onSubmit"}
-            ></i>
           </div>
         </div>
         <div className="ui container">
           <div className="ui accordion" id="accordion">
-            <div className="title ffTitle" id="title">
-              <i className="dropdown icon"></i>
-              Advanced Search
+            <div className="title ffTitle" id="title" style={{fontSize: "1.3rem"}}>
+              <i className="gem outline large icon"></i>
             </div>
             {/* Place components within this accordion */}
             <div className="content">

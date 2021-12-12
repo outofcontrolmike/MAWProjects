@@ -9,10 +9,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 /*typography*/
-* {
+/* * {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 button:hover {
   position: relative;
@@ -314,7 +314,7 @@ input[type="number"] {
 #buttonGroup {
   text-align: center;
   margin-bottom: 3rem;
-  
+
 }
 
 #health {
@@ -759,9 +759,9 @@ option {
 }
 
 @media only screen and (max-width: 600px) {
-  img.ui.image {
+  /* img.ui.image {
     position: absolute;
-  }
+  } */
   .mobileImage {
     height: 150px;
     width: 150px;
@@ -777,23 +777,9 @@ option {
 
 /* ************************FF Search****************************************** */
 
-#ffBody {
-  background: #757f9a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 #ffFooter {
   position: relative;
-  margin-top: 22%;
+  margin-top: 35%;
 }
 
 #ffList {
@@ -801,8 +787,8 @@ option {
 }
 
 #ffP {
-  font-size: 1.5rem;
-  font-family: "EB Garamond", serif;
+  font-size: 1.6rem;
+  font-family: Forum;
   font-style: oblique;
   color: black;
 }
@@ -819,13 +805,14 @@ option {
 #ffA,
 .ffSelect,
 .ffTitle {
-  color: blue;
+  color:black;
   font-weight: 600;
   font-variant: petite-caps;
 }
 
-#ffName {
+#ffName,#ffBio {
   letter-spacing: 15px;
+  text-align: left;
 }
 
 /*Character Cards */
@@ -841,19 +828,19 @@ option {
 }
 
 .line {
-  border-color: springgreen;
+  border-color: skyblue;
   width: 75%;
   float: left;
 }
 
 .divider {
-  border-color: springgreen;
+  border-color: skyblue;
   margin-top: 5%;
 }
 
-.ui.medium.image {
-  margin-top: 14%;
-}
+/* .ui.medium.image {
+  margin-top: 14rem;
+} */
 
 /*Search Menu*/
 
@@ -883,6 +870,14 @@ option {
   margin-bottom: 3%;
 }
 
+#gameHr {
+  border-color: slateblue;
+}
+
+.gem:hover {
+  color:skyblue;
+}
+
 /*Media Rules*/
 
 @media only screen and (max-width: 600px) {
@@ -900,6 +895,7 @@ option {
   .buttons {
     width: 100%;
   }
+
 }
 
 @media only screen and (max-width: 990px) {
