@@ -4,44 +4,55 @@ import React from "react";
 export default function FFButtonMenu() {
   return (
     <div>
-      <div className="ui container" style={{ marginTop: "10px;" }}>
-        <div className="six ui buttons fluid stackable">
+
+      <div className="ui two column grid stackable">
+
+      <div className="ui column">
+      <div className="ui stackable">
           <button
             id="advancedSearch"
-            className="ui button medium blue advancedSearch"
+            className="ui button large tertiary blue advancedSearch"
           >
             Fetch Characters
           </button>
-          <button id="reset" className="ui button medium orange">
-            Reset Filters
-          </button>
           <button
-            style={{ float: "right" }}
-            id="random"
-            className="ui teal button medium"
-          >
-            Random Character
-          </button>
-          <button
-            style={{ float: "right" }}
+      
             id="listGames"
-            className="ui green button medium"
+            className="ui green button large tertiary"
           >
             List Games
           </button>
-          <button id="clear" className="ui red button medium">
+          <button
+      
+      id="random"
+      className="ui teal button large tertiary"
+    >
+      Random Character
+    </button>
+        </div>
+      </div>
+    {/* end first button group */}
+      <div className="ui column" style={{textAlign: "-webkit-right"}}>
+      <div className=" ui stackable">
+      <button id="clear" className="ui red tertiary button large">
             Clear List
           </button>
-          <a href="/projects" style={{ float: "right" }}>
+          <button id="reset" className="ui tertiary button large orange">
+            Reset Filters
+          </button>
+          <a href="/projects">
             <button
-              className="ui teal basic button"
-              style={{ color: "", padding: "1rem" }}
+              className="ui yellow button large tertiary"
             >
               Back to Projects
             </button>
           </a>
         </div>
       </div>
+      </div>
+
+      {/* container */}
+    
     </div>
   );
 }
