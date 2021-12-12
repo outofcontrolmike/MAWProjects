@@ -1,18 +1,16 @@
 import FFFooter from "../../../components/finalFantasy/FFFooter";
 import FFMenu from "../../../components/finalFantasy/FFMenu";
+
 //Main component for final fantasy search
 function FFSearch() {
-  //Global Variables  *************************************************************************************
-  let color = "blue";
-  let alertMessage = "";
-  let count = 0;
 
+  //Global Variables
+  let count = 0;
   var prevURL = "";
 
   setTimeout(onLoadListeners, 10);
-  ////Fetches for characters - Characters *************************************************************************////
-  //Set up listener events *******************************************************************************
 
+  //Set up listener events
   function onLoadListeners() {
     document
       .getElementById("advancedSearch")
@@ -34,11 +32,11 @@ function FFSearch() {
     ffInput.addEventListener("change", submitRequest);
   }
 
-  //Resesting and Disabling DOM elements ******************************************************************
+  //disable searchInput if advanced menu is open
   function disableSearch() {
     let search = document.getElementById("ffSearchInput");
-    let title = document.getElementById("title").className;
-    search.disabled = title === "title" ? true : false;
+    let title = document.getElementById("title").className
+    search.disabled = title === "title ffTitle" ? true : false;
   }
 
   //Resets the dropdown menus
@@ -87,93 +85,6 @@ function FFSearch() {
       document.getElementById("ffSearchInput").value = "";
       prevURL = ffURL;
     }
-  }
-
-  //Grabs random character - provided by api
-  function getRandom() {
-    let url = "https://www.moogleapi.com/api/v1/characters/random";
-    fetch(url)
-      .then((response) => response.json())
-      .then((character) => {
-        console.log("character", character);
-        //preventing duplicate call
-        clearList();
-        getFFData(character);
-      });
-  }
-
-  //Fetches - Games  ***************************************************************************
-
-  //Create Game cards
-  function createGameList() {
-    let url = "https://www.moogleapi.com/api/v1/games/";
-    fetch(url)
-      .then((response) => response.json())
-      .then((games) => {
-        let ffList = document.getElementById("ffList");
-        ffList.innerHTML = "";
-        games.map(createGameCard);
-      });
-  }
-
-  //Card Creation - Games *********************************************************************
-  //Create Game Cards
-  function createGameCard(game) {
-    let create = function (el) {
-      return document.createElement(el);
-    };
-
-    let card = create("div");
-    card.className = "ui segment";
-
-    let title = create("p");
-    title.innerHTML = "<b>Name </b>: " + game.title;
-
-    let platform = create("p");
-    platform.innerHTML = "<b>Platform:</b> " + game.platform;
-
-    let releaseDate = create("p");
-    releaseDate.innerHTML = "<b>Origin:</b> " + game.releaseDate;
-
-    let description = create("p");
-    description.innerHTML = game.description;
-
-    let paragraphs = [title, platform, releaseDate, description];
-
-    paragraphs.forEach((element) => {
-      element.setAttribute("id", "ffP");
-    });
-
-    let picture = game.picture;
-    let imageHolder = create("img");
-    imageHolder.className =
-      "ui large centered middle aligned image characterImage";
-    imageHolder.src = picture;
-
-    let mainContainer = create("div");
-    mainContainer.className = "ui segment";
-    let container = create("div");
-    container.className = "ui two column doubling stackable grid container";
-
-    let column = create("div");
-    column.className = "ui column";
-
-    let column2 = create("div");
-    column2.className = "ui column";
-
-    let column3 = create("div");
-    column3.className = "ui column";
-
-    let divider = create("hr");
-    divider.setAttribute('id',"gameHr");
-
-    container.append(column, column2, divider, column3);
-
-    column.append(title, platform, releaseDate, description);
-    column2.append(imageHolder);
-    column3.append(description);
-    mainContainer.append(container, divider, column3);
-    document.getElementById("ffList").append(mainContainer);
   }
 
   //Card Creation - Characters ****************************************************************
@@ -360,14 +271,99 @@ function FFSearch() {
       })
       .catch((error) => {
         if (count === 0) {
-          alertMessage = "";
-          color = "red";
+          // alertMessage = "";
+          // color = "red";
         }
         console.log(error);
       });
   }
 
-  //Set up Alert
+  //Grabs random character - provided by api
+  function getRandom() {
+    let url = "https://www.moogleapi.com/api/v1/characters/random";
+    fetch(url)
+      .then((response) => response.json())
+      .then((character) => {
+        console.log("character", character);
+        //preventing duplicate call
+        clearList();
+        getFFData(character);
+      });
+  }
+
+  //Fetches Game Information
+  function createGameList() {
+    let url = "https://www.moogleapi.com/api/v1/games/";
+    fetch(url)
+      .then((response) => response.json())
+      .then((games) => {
+        let ffList = document.getElementById("ffList");
+        ffList.innerHTML = "";
+        games.map(createGameCard);
+      });
+  }
+
+  //Create Game Cards
+  function createGameCard(game) {
+    let create = function (el) {
+      return document.createElement(el);
+    };
+
+    let card = create("div");
+    card.className = "ui segment";
+
+    let title = create("p");
+    title.innerHTML = "<b>Name </b>: " + game.title;
+
+    let platform = create("p");
+    platform.innerHTML = "<b>Platform:</b> " + game.platform;
+
+    let releaseDate = create("p");
+    releaseDate.innerHTML = "<b>Origin:</b> " + game.releaseDate;
+
+    let description = create("p");
+    description.innerHTML = game.description;
+
+    let paragraphs = [title, platform, releaseDate, description];
+
+    paragraphs.forEach((element) => {
+      element.setAttribute("id", "ffP");
+    });
+
+    let picture = game.picture;
+    let imageHolder = create("img");
+    imageHolder.className =
+      "ui large centered middle aligned image characterImage";
+    imageHolder.src = picture;
+
+    let mainContainer = create("div");
+    mainContainer.className = "ui segment";
+    let container = create("div");
+    container.className = "ui two column doubling stackable grid container";
+
+    let column = create("div");
+    column.className = "ui column";
+
+    let column2 = create("div");
+    column2.className = "ui column";
+
+    let column3 = create("div");
+    column3.className = "ui column";
+
+    let divider = create("hr");
+    divider.setAttribute('id', "gameHr");
+
+    container.append(column, column2, divider, column3);
+
+    column.append(title, platform, releaseDate, description);
+    column2.append(imageHolder);
+    column3.append(description);
+    mainContainer.append(container, divider, column3);
+    document.getElementById("ffList").append(mainContainer);
+  }
+
+
+  //Set up Alert  (Not being used currently)
   function createAlert(count, genderParam, jobParam, raceParam, origin) {
     if (origin) {
       origin = `These characters originate from ${origin}`;
@@ -384,9 +380,9 @@ function FFSearch() {
     if (genderParam) {
       genderParam = `They all happen to be ${genderParam}.`;
     }
-    alertMessage = origin + jobParam + raceParam + genderParam;
+    // alertMessage = origin + jobParam + raceParam + genderParam;
 
-    color = "blue";
+    // color = "blue";
     origin = "";
     jobParam = "";
     genderParam = "";
@@ -396,11 +392,11 @@ function FFSearch() {
   return (
     <div className="ffContainer">
 
-    <div id="app" className="ui container stackable">
-      <FFMenu />
-      <div id="ffList"></div>
-      <FFFooter />
-    </div>
+      <div id="app" className="ui container stackable">
+        <FFMenu />
+        <div id="ffList"></div>
+        <FFFooter />
+      </div>
     </div>
   );
 }

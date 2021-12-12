@@ -127,7 +127,7 @@ function Projects(props) {
       name: "Final Fantasy Search",
       meta: "JS,Fomantic and Google Fonts",
       desc: "A system for fetching Final Fantasy Characters and game information.",
-      created: "Wrote June 28th 2021",
+      created: "Wrote June 28th 2021" + "rewrote: December 12th -2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/Final%20Fantasy%20Search",
     },

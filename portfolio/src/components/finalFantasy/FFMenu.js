@@ -5,9 +5,8 @@ import GenderSelect from "./FFGenderSelect";
 import RaceSelect from "./FFRaceSelect";
 import ButtonGroup from "./FFButtonMenu";
 
+//Menu component
 export default function FFMenu() {
-  //Set up listener events *******************************************************************************
-
   return (
     <div id="ffBody">
       <div id="ffSearchTools" className="ui stackable segment container">
