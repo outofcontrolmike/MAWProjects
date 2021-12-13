@@ -10,10 +10,10 @@ export default function BMI() {
                     <div className="ui two column doubling stackable grid container">
                         <div className="ui column grid">
                             <label>Height (in)</label>
-                            <input id="bmiHeight" type="tel" id="ft" maxlength="2" className="input" />
+                            <input id="bmiHeight" type="number" maxlength="2" className="input" />
                             <span>
                                 <label>Weight(lbs)</label>
-                                <input id="bmiWeight" type="tel" maxlength="3" max="3" />
+                                <input id="bmiWeight" type="number" maxlength="3" max="3" />
                             </span>
                             <span className="ui"> <button className="ui button" id="bmiCalc">Calculate BMI</button>
                             </span>

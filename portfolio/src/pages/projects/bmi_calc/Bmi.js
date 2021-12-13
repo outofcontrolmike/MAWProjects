@@ -20,7 +20,7 @@ export default function Bmi() {
 
     setTimeout(initialLoad, 2000)
 
-    let bmr,multiplyer,genderNumber;
+    let bmr,multiplyer,genderNumber,calorieButton;
 
 
     function initialLoad() {
@@ -33,7 +33,7 @@ export default function Bmi() {
         //Buttons
         let bmiButton = document.getElementById('bmiCalc');
         let bmrButton = document.getElementById('bmrCalc');
-        let calorieButton = document.getElementById("calorieBtn");
+        calorieButton = document.getElementById("calorieBtn");
 
 
 
@@ -73,8 +73,9 @@ export default function Bmi() {
     function bmiCalc() {
         let weight, height, bmi
 
-        weight = document.getElementById('bmiWeight').value
-        height = document.getElementById('bmiHeight').value
+        weight = document.getElementById('bmiWeight').value;
+        height = document.getElementById('bmiHeight').value;
+
         let bmiText = document.getElementById('bmiInfo');
 
         bmiText.style.alignSelf = "center";
@@ -95,7 +96,6 @@ export default function Bmi() {
         let height = document.getElementById('bmrHeight').value;
         let age = document.getElementById('bmrAge').value;
 
-        let calorieButton;
 
         //convert to kg
         weight /= 2.205;
