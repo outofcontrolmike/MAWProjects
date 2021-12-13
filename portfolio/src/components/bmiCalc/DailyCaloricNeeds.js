@@ -4,12 +4,12 @@ import React from 'react'
 export default function DailyCaloricNeeds() {
     return (
         <div id="normalCards" className="ui raised very padded text segment">
-        <h1>Daily Caloric Needs</h1>
+        <h1 style={{color: "black"}} >Daily Caloric Needs</h1>
         <hr/>
-        <div className="ui two column doubling stackable grid container">
+        <div className="ui two column doubling stackable grid">
           <div className='ui column grid'>
-          <label>Activity Level</label>
-          <select id="activity" className="ui medium selection dropdown">
+          <label id="bmiLabel">Activity Level</label>
+          <select id="activity" style={{marginBottom: "30px"}} className="ui medium selection dropdown">
             <option value="0">Sedentary</option>
             <option value="1">Lightly Active</option>
             <option value="2">Active</option>

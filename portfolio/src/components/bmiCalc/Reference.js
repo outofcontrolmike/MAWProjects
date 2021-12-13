@@ -4,7 +4,7 @@ import React from 'react'
 export default function Reference() {
     return (
         <div id="bmrRef" className="ui container segment raised">
-        <h1>BMI Reference Chart</h1>
+        <h1 style={{color: "black"}} >BMI Reference Chart</h1>
         <table className="ui celled table">
           <thead>
             <tr>

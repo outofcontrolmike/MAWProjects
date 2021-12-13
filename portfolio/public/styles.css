@@ -913,5 +913,74 @@ option {
 /* End FF Search Styles */
 
 
-/************** NEXT PROJECT *********************/
+/************** BMI Calc *********************/
+
+#bmiBody {
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'KoHo', sans-serif;
+  margin-top: 2rem;
+
+}
+
+#mainBack {
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+#bmrAge {
+  margin-left:88px;
+}
+#genders, #activity {
+  margin-left:50px;
+  padding: 8px;
+}
+#normalCards,#bmrRef, #footer {
+  background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+margin-top: 10px;
+
+}
+
+#bmiCalc, #bmrCalc, #calorieBtn {
+  color:whitesmoke;
+  background-color: #302b63;
+  width:75%; 
+  margin-bottom: 20px;
+  margin-left: 5px;
+
+}
+
+h3 {
+  text-align: center;
+}
+
+#bmiHeight, #bmiWeight, #bmrAge, #bmrHeight, #bmrWeight {
+  height:40px;
+  width:210px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+#bmiLabel {
+  margin-bottom: 20px;
+  
+}
+
+@media only screen and (max-width: 1000px) {
+  #bmiHeight, #bmiWeight, #bmrAge, #bmrHeight, #bmrWeight {
+    width:100%;
+    margin:10px;
+  }
+  #bmiCalc, #bmrCalc, #calorieBtn {
+    margin:40px;
+    
+  }
+  #bmrAge {
+    margin-left:0px;
+  }
+
+}
 

@@ -18,7 +18,7 @@ export default function Bmi() {
 
     //Functions 
 
-    setTimeout(initialLoad, 2000)
+    setTimeout(initialLoad, 10)
 
     let bmr,multiplyer,genderNumber,calorieButton;
 
@@ -128,10 +128,14 @@ export default function Bmi() {
 
     //----------------------HELPER FUNCTIONS -----------------------//
     //Daily Calorie Needs
-    function caloireNeeds(bmr) {
+    function caloireNeeds(bmr, multiplyer) {
 
+        console.log(bmr, "bmr");
+        console.log(multiplyer, "multi");
         let needs = (bmr * multiplyer).toFixed(2);
         let needsText = document.getElementById('dailyNeeds')
+
+        console.log(needs,"needs");
 
         needsText.style.alignSelf = "center";
         needsText.style.textAlign = "center";
@@ -171,12 +175,14 @@ export default function Bmi() {
             multiplyer = 1.9
         }
 
+        return multiplyer;
+
     }//end dailyCalorie Math
 
     //
 
     return (
-        <div className="ui row container" style={{ backgroundColor: "aliceblue" }}>
+        <div className="ui row container" id="bmiBody" style={{ backgroundColor: "aliceblue", fontFamily: "'KoHo', sans-serif", color: "black", }}>
             <BmiCalc />
             <BmrCalc />
             <Stats />

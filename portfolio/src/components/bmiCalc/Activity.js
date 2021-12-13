@@ -5,7 +5,7 @@ export default function Activity() {
 
     return (
         <div id="bmrRef" className="ui container segment raised">
-        <h1>Activity Reference Chart</h1>
+        <h1 style={{color: "black"}}>Activity Reference Chart</h1>
         <table className="ui celled table">
           <thead>
             <tr>
