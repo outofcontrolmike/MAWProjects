@@ -14,9 +14,9 @@ export default function BMR() {
             <input id="bmrHeight" type="tel" maxlength="2" className="input"/>
             <div> <label id="bmiLabel">Weight(lbs)</label>
               <input type="tel" id="bmrWeight" maxlength="3" max="3"/></div>
-              <p>
+              
           <label id="bmiLabel">Age</label>
-          <input type="tel" id="bmrAge" maxlength="3" max="110"/></p>
+          <input type="tel" id="bmrAge" maxlength="3" max="110"/>
           <div id="gender"><label id="bmiLabel">Gender</label>
             <select id="genders" style={{marginBottom: "30px"}} className="ui medium selection dropdown">
               <option id="male" value="0">Male</option>

@@ -105,7 +105,7 @@ export default function Bmi() {
         genderMath();
 
         //Correct formula
-        let bmr = (10 * weight + 6.25 * height - 5 * age + genderNumber).toFixed(2);
+        bmr = (10 * weight + 6.25 * height - 5 * age + genderNumber).toFixed(2);
 
         let bmrText = document.getElementById('bmrInfo');
 
@@ -182,7 +182,7 @@ export default function Bmi() {
     //
 
     return (
-        <div className="ui row container" id="bmiBody" style={{ backgroundColor: "aliceblue", fontFamily: "'KoHo', sans-serif", color: "black", }}>
+        <div className="ui row container" id="bmiBody" style={{ backgroundColor: "black", fontFamily: "'KoHo', sans-serif", color: "black", }}>
             <BmiCalc />
             <BmrCalc />
             <Stats />

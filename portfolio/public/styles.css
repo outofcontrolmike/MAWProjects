@@ -475,10 +475,12 @@ input[type="number"] {
   color: red;
 }
 
-.input {
+/* .input {
   position: relative;
   width: 83%;
-}
+} */
+
+
 /* #count {
   display: flex;
   justify-content: center;
@@ -916,12 +918,9 @@ option {
 /************** BMI Calc *********************/
 
 #bmiBody {
-  background: #0f0c29;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: 'KoHo', sans-serif;
   margin-top: 2rem;
-
+  padding-bottom: 2rem;
 }
 
 #mainBack {
@@ -947,7 +946,7 @@ margin-top: 10px;
 #bmiCalc, #bmrCalc, #calorieBtn {
   color:whitesmoke;
   background-color: #302b63;
-  width:75%; 
+  width:100%; 
   margin-bottom: 20px;
   margin-left: 5px;
 
@@ -959,13 +958,14 @@ h3 {
 
 #bmiHeight, #bmiWeight, #bmrAge, #bmrHeight, #bmrWeight {
   height:40px;
-  width:210px;
+  width:100%;
   margin-bottom: 20px;
   margin-left: 5px;
 }
 
 #bmiLabel {
   margin-bottom: 20px;
+  margin-left: 5px;
   
 }
 
