@@ -4,29 +4,25 @@ import React from 'react'
 export default function BMI() {
     return (
         <div className='ui'>
-            <div id="normalCards" className="ui raised very padded text segment">
-                <h1 style={{color: "black"}}>Body Mass Index Calculation</h1>
-                <hr/>
-                    <div className="ui two column doubling stackable grid container ">
-                        <div className="ui column grid">
-                            <label id="bmiLabel">Height (in)</label>
-                            <input id="bmiHeight" type="tel" maxlength="2" className="input" />
-                            <div>
-                                <label id="bmiLabel">Weight(lbs)</label>
-                                <input id="bmiWeight" type="tel" maxlength="3" max="3" />
-                            </div>
-                            <span className="ui"> <button className="ui button" id="bmiCalc">Calculate BMI</button>
-                            </span>
+            <div id="normalCards" className='ui raised very padded text segment'>
+                <div className="ui large form">
+                    <div className="three fields">
+                        <div className="field">
+                            <label>Height (in)</label>
+                            <input id="bmiHeight" placeholder="Height" type="tel" />
                         </div>
-                        <div className="ui column grid" id="bmiInfo">
-                            <h3>
-                                *Fill out this form to get your BMI
-
-                            </h3>
+                        <div className="field">
+                            <label>Weight (lbs)</label>
+                            <input id="bmiWeight" placeholder="Weight" type="text" />
+                        </div>
+                        <div className="field">
+                            <h3 id="bmiInfo">summed value</h3>
                         </div>
                     </div>
+                    <span className="ui"> <button className="ui button" style={{ width: "50%" }} id="bmiCalc">Calculate BMI</button>
+                    </span>                </div>
             </div>
-            
+
         </div>
     )
 }

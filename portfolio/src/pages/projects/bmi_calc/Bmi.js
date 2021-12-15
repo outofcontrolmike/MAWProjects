@@ -20,7 +20,7 @@ export default function Bmi() {
 
     setTimeout(initialLoad, 10)
 
-    let bmr,multiplyer,genderNumber,calorieButton;
+    let bmr, multiplyer, genderNumber, calorieButton;
 
 
     function initialLoad() {
@@ -46,17 +46,17 @@ export default function Bmi() {
         let bmiWeight = document.getElementById('bmiWeight');
         //bmr
         let bmrWeight = document.getElementById('bmrAge');
-        
+
         bmiWeight.addEventListener('input', function () {
-            toggleButtons(bmiButton,'false');
+            toggleButtons(bmiButton, 'false');
         })
-        
-        
+
+
         bmrWeight.addEventListener('input', function () {
-            toggleButtons(bmrButton,'false');
-        })        
+            toggleButtons(bmrButton, 'false');
+        })
     }
-    
+
     function toggleButtons(buttonToDisable, handleToggle) {
         if (handleToggle === "false") {
             handleToggle = false;
@@ -85,7 +85,7 @@ export default function Bmi() {
 
         //Correct formula
         bmi = parseFloat((weight / (Math.pow(height, 2))) * 703).toPrecision(2);
-        document.getElementById('bmiInfo').innerText = + bmi;
+        document.getElementById('bmiInfo').innerText = bmi;
         document.getElementById('bmrWeight').value = weight;
         document.getElementById('bmrHeight').value = height;
 
@@ -130,13 +130,8 @@ export default function Bmi() {
     //Daily Calorie Needs
     function caloireNeeds(bmr, multiplyer) {
 
-        console.log(bmr, "bmr");
-        console.log(multiplyer, "multi");
         let needs = (bmr * multiplyer).toFixed(2);
         let needsText = document.getElementById('dailyNeeds')
-
-        console.log(needs,"needs");
-
         needsText.style.alignSelf = "center";
         needsText.style.textAlign = "center";
         needsText.style.fontSize = "60px";
