@@ -33,16 +33,16 @@ function Projects(props) {
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/Great%20Race%20-%20JavaScript",
     },
 
-    {
-      img: "img/vueImage.JPG",
-      href: "/vue_shopping_cart",
-      name: "Snes Shopping Cart",
-      meta: "Vue & Fomantic",
-      desc: "A basic shopping cart utlizing the core concepts of vue",
-      created: "Reworked Early November 2020",
-      github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/Vue-ShoppingCart",
-    },
+    // {
+    //   img: "img/vueImage.JPG",
+    //   href: "/vue_shopping_cart",
+    //   name: "Snes Shopping Cart",
+    //   meta: "Vue & Fomantic",
+    //   desc: "A basic shopping cart utlizing the core concepts of vue",
+    //   created: "Reworked Early November 2020",
+    //   github:
+    //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/Vue-ShoppingCart",
+    // },
 
     {
       img: "img/beast.PNG",
@@ -66,16 +66,16 @@ function Projects(props) {
     //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/XML%20Project",
     // },
 
-    {
-      img: "img/EFW.JPG",
-      href: "earth_water_fire",
-      name: "Earth Water Fire",
-      meta: "PHP & Fomantic",
-      desc: "A different theme of rock paper scissors, dealing with elements",
-      created: "Wrote Feburary 14th 2021",
-      github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/EarthFireWater",
-    },
+    // {
+    //   img: "img/EFW.JPG",
+    //   href: "earth_water_fire",
+    //   name: "Earth Water Fire",
+    //   meta: "PHP & Fomantic",
+    //   desc: "A different theme of rock paper scissors, dealing with elements",
+    //   created: "Wrote Feburary 14th 2021",
+    //   github:
+    //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/EarthFireWater",
+    // },
 
     {
       img: "img/tmnt.JPG",
@@ -94,7 +94,7 @@ function Projects(props) {
       name: "BMI BMR Calculator",
       meta: "Javascript & Fomantic",
       desc: "A reference tool for determing BMI and BMR + Daily caloric Needs.",
-      created: "Wrote May 30th 2021",
+      created: "Wrote May 30th 2021" + "rewrote: December 15th 2021",
       github:
         "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/bmi_bmr_stats",
     },
@@ -131,16 +131,16 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/Final%20Fantasy%20Search",
     },
-    {
-      img: "img/characters.JPG",
-      href: "/characters",
-      name: "Characters",
-      meta: "React JS,Fomantic and Google Fonts",
-      desc: "A system for fetching character information and custom character uploading",
-      created: "Wrote September 18th 2021",
-      github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/characters",
-    },
+    // {
+    //   img: "img/characters.JPG",
+    //   href: "/characters",
+    //   name: "Characters",
+    //   meta: "React JS,Fomantic and Google Fonts",
+    //   desc: "A system for fetching character information and custom character uploading",
+    //   created: "Wrote September 18th 2021",
+    //   github:
+    //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/characters",
+    // },
   ];
 
   //Create Cards
@@ -209,8 +209,7 @@ function Projects(props) {
       <Navigation />
 
       <div className="ui" id="projects">
-        <div className="ui divider"></div>
-        <div className="ui link cards centered vertical" id="list"></div>
+        <div className="ui link cards centered vertical five" id="list"></div>
       </div>
     </div>
   );
