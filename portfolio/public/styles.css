@@ -920,17 +920,11 @@ option {
   padding-bottom: 2rem;
 }
 
-#mainBack {
-  margin-bottom: 100px;
-  padding-bottom: 100px;
-}
-#bmrAge {
-  margin-left: 88px;
-}
 #genders,
 #activity {
   padding: 8px;
 }
+
 #normalCards,
 #bmrRef,
 #footer {
@@ -949,6 +943,7 @@ option {
   margin-top: 10px;
 }
 
+/* Button Styling */
 #bmiCalc,
 #bmrCalc,
 #calorieBtn {
@@ -957,10 +952,7 @@ option {
   width: 100%;
 }
 
-h3 {
-  text-align: center;
-}
-
+/* Input styling */
 #bmiHeight,
 #bmiWeight,
 #bmrAge,
@@ -972,36 +964,27 @@ h3 {
   margin-left: 5px;
 }
 
-#bmiLabel {
-  margin-left: 5px;
-}
-
+/* Styles bmi calcuation output */
 #bmiInfo {
   position: relative;
   top: 35%;
 }
 
+/* Styles daily needs output */
 #dailyNeeds {
   position: relative;
   top: 2rem;
 }
 
 @media only screen and (max-width: 1000px) {
-  #bmiHeight,
-  #bmiWeight,
-  #bmrAge,
-  #bmrHeight,
-  #bmrWeight,
   #bmiBacktoProjects {
     width: 100%;
     margin: 10px;
-  }
-
-  #bmrAge {
-    margin-left: 0px;
   }
 
   .bmiFooter {
     height: 10rem;
   }
 }
+
+/*Next Project styles /*********************************** */

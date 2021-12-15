@@ -1,6 +1,6 @@
 import React from "react";
 
-//Final Calculation of caloric needs
+//Daily Caloric Needs Component
 export default function DailyCaloricNeeds() {
   return (
     <div className="ui container">
@@ -8,7 +8,6 @@ export default function DailyCaloricNeeds() {
         <div className="ui large form">
           <h1 style={{ color: "black" }}> Daily Needs Caclulation</h1>
           <hr />
-
           <div className="two fields">
             <div className="field">
               <label id="bmiLabel">Activity Level</label>

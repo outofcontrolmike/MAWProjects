@@ -1,6 +1,6 @@
 import React from "react";
 
-//BMR calc
+//BMR Calc
 export default function BMR() {
   return (
     <div className="ui container">
@@ -8,7 +8,6 @@ export default function BMR() {
         <div className="ui large form">
           <h1 style={{ color: "black" }}> Basil Metabolic Rate Calculator</h1>
           <hr />
-
           <div className="three fields">
             <div className="field">
               <label>Height (in)</label>
