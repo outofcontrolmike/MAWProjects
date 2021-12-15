@@ -946,9 +946,6 @@ margin-top: 10px;
   color:whitesmoke;
   background-color: #302b63;
   width:100%; 
-  margin-bottom: 20px;
-  margin-left: 5px;
-
 }
 
 h3 {
@@ -963,9 +960,17 @@ h3 {
 }
 
 #bmiLabel {
-  margin-bottom: 20px;
   margin-left: 5px;
-  
+}
+
+#bmiInfo {
+  position: relative;
+  top: 35%;
+}
+
+#dailyNeeds {
+  position: relative;
+  top: 2rem;
 }
 
 @media only screen and (max-width: 1000px) {
