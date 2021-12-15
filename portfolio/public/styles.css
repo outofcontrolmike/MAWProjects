@@ -314,7 +314,6 @@ input[type="number"] {
 #buttonGroup {
   text-align: center;
   margin-bottom: 3rem;
-
 }
 
 #health {
@@ -479,7 +478,6 @@ input[type="number"] {
   position: relative;
   width: 83%;
 } */
-
 
 /* #count {
   display: flex;
@@ -807,12 +805,13 @@ option {
 #ffA,
 .ffSelect,
 .ffTitle {
-  color:black;
+  color: black;
   font-weight: 600;
   font-variant: petite-caps;
 }
 
-#ffName,#ffBio {
+#ffName,
+#ffBio {
   letter-spacing: 15px;
   text-align: left;
 }
@@ -877,7 +876,7 @@ option {
 }
 
 .gem:hover {
-  color:skyblue;
+  color: skyblue;
 }
 
 /*Media Rules*/
@@ -897,7 +896,6 @@ option {
   .buttons {
     width: 100%;
   }
-
 }
 
 @media only screen and (max-width: 990px) {
@@ -914,11 +912,10 @@ option {
 
 /* End FF Search Styles */
 
-
 /************** BMI Calc *********************/
 
 #bmiBody {
-  font-family: 'KoHo', sans-serif;
+  font-family: "KoHo", sans-serif;
   margin-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -928,33 +925,49 @@ option {
   padding-bottom: 100px;
 }
 #bmrAge {
-  margin-left:88px;
+  margin-left: 88px;
 }
-#genders, #activity {
+#genders,
+#activity {
   padding: 8px;
 }
-#normalCards,#bmrRef, #footer {
-  background: #C9D6FF;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#normalCards,
+#bmrRef,
+#footer {
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-margin-top: 10px;
-
+  margin-top: 10px;
 }
 
-#bmiCalc, #bmrCalc, #calorieBtn {
-  color:whitesmoke;
+#bmiCalc,
+#bmrCalc,
+#calorieBtn {
+  color: whitesmoke;
   background-color: #302b63;
-  width:100%; 
+  width: 100%;
 }
 
 h3 {
   text-align: center;
 }
 
-#bmiHeight, #bmiWeight, #bmrAge, #bmrHeight, #bmrWeight {
-  height:40px;
-  width:100%;
+#bmiHeight,
+#bmiWeight,
+#bmrAge,
+#bmrHeight,
+#bmrWeight {
+  height: 40px;
+  width: 100%;
   margin-bottom: 20px;
   margin-left: 5px;
 }
@@ -974,17 +987,21 @@ h3 {
 }
 
 @media only screen and (max-width: 1000px) {
-  #bmiHeight, #bmiWeight, #bmrAge, #bmrHeight, #bmrWeight {
-    width:100%;
-    margin:10px;
+  #bmiHeight,
+  #bmiWeight,
+  #bmrAge,
+  #bmrHeight,
+  #bmrWeight,
+  #bmiBacktoProjects {
+    width: 100%;
+    margin: 10px;
   }
-  #bmiCalc, #bmrCalc, #calorieBtn {
-    margin:40px;
-    
-  }
+
   #bmrAge {
-    margin-left:0px;
+    margin-left: 0px;
   }
 
+  .bmiFooter {
+    height: 10rem;
+  }
 }
-
