@@ -7,22 +7,11 @@ function Projects(props) {
 
   function mapOver() {
     document.getElementById("list").innerHTML = "";
+    projects.reverse();
     projects.map(createProjectCard);
   }
   //projects to map thorough
   let projects = [
-    {
-      img: "../img/pokemonProject.JPG",
-      href: "/pokemon",
-      name: "Pokedex API Call",
-      meta: "Javascript, Bootstrap & Fomantic",
-      desc: "Want to look at pokemon art and information about pokemon? Test this project out!.",
-      created: "Created: September 2020",
-      lastUpdated: "Last Updated: December 5th 2021",
-      github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/PokemonAPI",
-    },
-
     {
       img: "img/greatrace1.JPG",
       href: "/great_race",
@@ -33,6 +22,18 @@ function Projects(props) {
       lastUpdated: "Last Updated: November 18th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/Great%20Race%20-%20JavaScript",
+    },
+
+    {
+      img: "../img/pokemonProject.JPG",
+      href: "/pokemon",
+      name: "Pokedex API Call",
+      meta: "Javascript, Bootstrap & Fomantic",
+      desc: "Want to look at pokemon art and information about pokemon? Test this project out!.",
+      created: "Created: September 2020",
+      lastUpdated: "Last Updated: December 5th 2021",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/tree/master/PokemonAPI",
     },
 
     // {
@@ -54,7 +55,20 @@ function Projects(props) {
       desc: "A Beast Wars web application that displays the 1st generation of transformers from the 90's TV series. Also includes sorting options for the characters.",
       created: "Created: Feburary 6th 2021",
       lastUpdated: "Last Updated: November 14th 2021",
-      github:"https://github.com/outofcontrolmike/MAWProjects/tree/master/BeastWars%20Js",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/tree/master/BeastWars%20Js",
+    },
+
+    {
+      img: "img/calc.JPG",
+      href: "/cool_calc",
+      name: "Cool Calculator",
+      meta: "React,Fomantic",
+      desc: "A flashy basic Calculator.",
+      created: "Created: Feburary 10th 2021",
+      lastUpdated: "Last Updated: November 9th 2021",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/tree/master/coolCalculator",
     },
 
     // {
@@ -87,7 +101,8 @@ function Projects(props) {
       desc: "Heavily inspired by the Turtles in Time Character Select.",
       created: "Created: May 3rd 2021",
       lastUpdated: "Last Updated: November 15th 2021",
-      github:"https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/TMNT_CharSelect",
+      github:
+        "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/TMNT_CharSelect",
     },
 
     {
@@ -98,7 +113,8 @@ function Projects(props) {
       desc: "A reference tool for determing BMI and BMR + Daily caloric Needs.",
       created: "Created: May 30th 2021",
       lastUpdated: "Last updated: December 15th 2021",
-      github:"https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/bmi_bmr_stats",
+      github:
+        "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/bmi_bmr_stats",
     },
 
     {
@@ -109,19 +125,8 @@ function Projects(props) {
       desc: "A fun little project for listing breweries based on user needs.",
       created: "Created: June 16th 2021",
       lastUpdated: "Last Updated: December 1st 2021",
-      github:"https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/brewery_Fetch",
-    },
-
-    {
-      img: "img/calc.JPG",
-      href: "/cool_calc",
-      name: "Cool Calculator",
-      meta: "React,Fomantic",
-      desc: "A flashy basic Calculator.",
-      created: "Created: Feburary 10th 2021",
-      lastUpdated: "Last Updated: November 9th 2021",
       github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/coolCalculator",
+        "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/brewery_Fetch",
     },
 
     {
@@ -182,7 +187,7 @@ function Projects(props) {
     descContainer.className = "description";
     descContainer.innerHTML = project.desc;
 
-    let createdDate = document.createElement('div');
+    let createdDate = document.createElement("div");
     createdDate.classname = "description";
     createdDate.innerHTML = project.created;
     createdDate.style.paddingTop = "10px";
@@ -218,9 +223,14 @@ function Projects(props) {
       <Navigation />
 
       <div className="ui" id="projects">
-        <div className="ui cards centered four horizontal" id="list" style={{margin:"10px"}}></div>
+        <div
+          className="ui cards centered four horizontal"
+          id="list"
+          style={{ margin: "10px" }}
+        ></div>
       </div>
-      </div>
-  )}
+    </div>
+  );
+}
 
 export default Projects;
