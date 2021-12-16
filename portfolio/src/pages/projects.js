@@ -10,7 +10,8 @@ function Projects(props) {
     projects.reverse();
     projects.map(createProjectCard);
   }
-  //projects to map thorough
+
+  //Projects to map through
   let projects = [
     {
       img: "img/greatrace1.JPG",
