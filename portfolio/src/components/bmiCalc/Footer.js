@@ -3,7 +3,7 @@ import React from "react";
 //Footer for BMI Calculator Project
 function Footer() {
   return (
-    <div id="footer" className="ui segment container bmiFooter">
+    <div id="bmiFooter" className="ui segment container bmiFooter">
       <footer>
         <div className="ui container">
           <div className="column grid stackable" style={{ height: "fit" }}>

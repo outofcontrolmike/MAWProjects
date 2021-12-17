@@ -170,7 +170,7 @@ function PokemonMenu() {
     let pokeContainer = document.createElement("div");
     pokeContainer.setAttribute("id", "pokeContainer");
 
-    pokeContainer.classList.add("col-m-6", "pokeCard");
+    pokeContainer.classList.add("pokeCard");
     container.classList.add("ui");
     var pokeImage = document.createElement("img");
     pokeImage.classList.add("mobileImage");

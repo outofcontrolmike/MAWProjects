@@ -147,19 +147,19 @@ toggleButtons("true");
 
 
         <div className="ui two column container very padded relaxed" style={{width: "fit-content", marginTop: "5rem"}}>
-        <div className="ui column" style={{marign:"25px"}}>
-          <div style={{margin:"2rem"}}>
+        <div className="ui column">
+          <div style={{marginRight:"5rem"}}>
           <label style={{ fontFamily: '\'Rock Salt\', cursive', marginRight:"1rem"}}>Num1</label>
           <input style={{borderColor:"white",height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green", fontFamily: '\'Rock Salt\', cursive'}} type="number" id="num1" maxlength="12" className="input field"/> 
           <label style={{fontFamily: '\'Rock Salt\', cursive', marginLeft:"1rem", marginRight:"1rem",  fontFamily: '\'Rock Salt\', cursive' }}>Num2</label>
           <input style={{ fontFamily: '\'Rock Salt\', cursive' , borderColor:"white", height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num2" maxlength="12" max="12"/>
           </div>
-          <div className="container" style={{textAlign: "center"}}>
-          <button   id="add" type="button"  className="ui inverted green button">  <span id="coolBtn" >Add</span></button>
-          <button   id="minus" type="button" className="ui inverted red button coolBtn"> <span id="coolBtn">Subtract</span></button>
-          <button   id="mult" type="button" className="ui inverted purple button coolBtn"> <span id="coolBtn">Multiply</span></button>
-          <button   id="divide" type="number" className="ui inverted teal button coolBtn"> <span id="coolBtn">Divide</span></button>
-          <button   id="clear" type="number" className="ui inverted brown button coolBtn"> <span  id="coolBtn">Clear</span></button>
+          <div className="container" style={{textAlign: "center", padding: "30px"}}>
+          <button   id="add" type="button" style={{marginRight: ".5rem"}}  className="ui inverted green button">  <span id="coolBtn" >Add</span></button>
+          <button   id="minus" type="button" style={{margin: ".5rem"}} className="ui inverted red button coolBtn"> <span id="coolBtn">Subtract</span></button>
+          <button   id="mult" type="button"  style={{margin: ".5rem"}}className="ui inverted purple button coolBtn"> <span id="coolBtn">Multiply</span></button>
+          <button   id="divide" type="number"  style={{margin: ".5rem"}}className="ui inverted teal button coolBtn"> <span id="coolBtn">Divide</span></button>
+          <button   id="clear" type="number"  style={{margin: ".5rem"}}className="ui inverted brown button coolBtn"> <span  id="coolBtn">Clear</span></button>
         </div>
       </div>
       <hr id="calcBr"style={{borderColor:"white", visibility:"hidden"}} />

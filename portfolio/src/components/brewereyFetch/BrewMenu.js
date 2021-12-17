@@ -325,14 +325,14 @@ function BrewMenu() {
   return (
     <>
       <div className="ui container relaxed very padded stackable ">
-        <div className="ui transparent huge icon input stackable">
+        <div className="ui transparent huge icon input stackable fluid" >
           <input
             onChange={handleChange}
             onClick={handleInput}
             id="brewInput"
             type="text"
             className="ui"
-            style={{ color: "red", textAlign: "center" }}
+            style={{ color: "red", textAlign: "center"}}
             placeholder="Type in a Brewery name or filter keyword"
           />
 

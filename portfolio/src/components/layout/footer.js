@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <div className="ui vertical footer" id="footer">
+        <div className="ui vertical footer" id="footer" style={{color: "white"}}>
           <div className="ui center aligned container">
             <div className="ui stackable divided grid">
               <div className="three wide column">

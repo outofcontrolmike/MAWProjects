@@ -39,10 +39,10 @@ export default function Tmnt(props) {
 
     let variables = {
       name: "",
-      score: 0,
       lives: 2,
     };
 
+    let points = 0;
     let tName = document.getElementById("tName");
     // let details = document.getElementById("showDetails");
 
@@ -140,7 +140,7 @@ export default function Tmnt(props) {
       let lifeReset = variables.lives;
       lifeReset = 2;
       lives.innerHTML = "" + lifeReset;
-      variables.score = 0;
+      points = 0;
       score.innerHTML = 0;
     }
 
@@ -152,14 +152,14 @@ export default function Tmnt(props) {
     function addScore() {
       let score = document.getElementById("score");
 
-      if (score.innerHTML <= 9999) score.innerHTML = variables.score += 200;
+      if (score.innerHTML <= 9999) score.innerHTML = points += 200;
     }
 
     function minusScore() {
       let score = document.getElementById("score");
 
       if (score.innerHTML > 0) {
-        score.innerHTML -= 200;
+        score.innerHTML = points -= 200;
       }
     }
 
@@ -222,7 +222,7 @@ export default function Tmnt(props) {
     //set up player info
     function playerInfo(lives, score, health) {
       lives.innerHTML = "" + variables.lives;
-      score.innerHTML = variables.score;
+      score.innerHTML = points;
       let builder = "||||||||||||";
 
       health.innerHTML = builder;

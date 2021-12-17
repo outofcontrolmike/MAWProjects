@@ -87,7 +87,8 @@ i:hover {
 
 /*****************************About page ********************************************************/
 #about {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-color: black;
+  font-size: 1.4rem;
 }
 
 hr {
@@ -186,6 +187,11 @@ input[type="number"] {
 #coolBtn {
   font-family: "Rock Salt", cursive;
 }
+
+
+#footer {
+  color:white;
+}
 /****************************************************/
 
 /*GREAT RACE */
@@ -201,6 +207,7 @@ input[type="number"] {
   background-repeat: no-repeat;
   background-size: cover;
   height: 1000px;
+  font-size: 1rem;
 }
 
 /*setting position of flag*/
@@ -304,6 +311,9 @@ input[type="number"] {
 
 /****************TMNT Character Select**********************/
 
+path {
+  color:black;
+}
 .turtle {
   height: 300px;
   width: 300px;
@@ -334,6 +344,8 @@ input[type="number"] {
 }
 #players {
   color: white;
+  background-color: black;
+  font-size: 20px;
 }
 
 #pTurtle {
@@ -377,8 +389,9 @@ input[type="number"] {
   font-family: "Press Start 2P", cursive;
 }
 #turtleGroup {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin:3rem;
+  padding:2rem;
+
 }
 #tName {
   color: white;
@@ -423,6 +436,9 @@ input[type="number"] {
 
 /******BREWERY FETCH****************************************************************/
 
+#brewBody {
+  font-size: 1.2rem;
+}
 #brewContainer {
   background-color: aliceblue;
 }
@@ -460,9 +476,8 @@ input[type="number"] {
   height: fit-content;
 }
 
-#inputValue {
-  background-color: lavender;
-  font-size: 18px;
+#brewInput {
+  font-size: 2rem;
 }
 
 .brewUrl {
@@ -518,9 +533,6 @@ input[type="number"] {
   text-align: left;
 }
 
-#brewInput {
-  margin-left: 38%;
-}
 
 #brewLabel {
   font-size: medium;
@@ -590,6 +602,7 @@ option {
   #brewInput {
     margin-left: 0px;
     width: 15ch;
+    
   }
 
   .floatMe {
@@ -635,6 +648,9 @@ option {
   word-break: break-all;
 }
 
+#inputContainer {
+width: 90%;
+}
 .pokeSearchInput {
   font-weight: 600;
   border: none;
@@ -680,6 +696,7 @@ option {
 
 .ui.modal {
   height: fit-content;
+  font-size: 2rem;
 }
 
 .pokeCard {
@@ -687,15 +704,12 @@ option {
   margin: 2rem;
 }
 
-#pokeCard {
-  border-radius: 50px;
-  margin: 2rem;
-}
 
 #pokeContainer {
   width: 350px;
   color: black;
   padding: 2rem;
+  font-size: 1rem;
 }
 
 .mobileImage {
@@ -927,7 +941,7 @@ option {
 
 #normalCards,
 #bmrRef,
-#footer {
+#bmiFooter {
   background: #c9d6ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,

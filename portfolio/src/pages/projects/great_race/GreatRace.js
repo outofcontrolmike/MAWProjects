@@ -113,8 +113,8 @@ export default function GreatRace() {
       <div className="ui fluid">
         <h1
           id="header"
-          className="ui large message teal"
-          style={{ color: "black" }}
+          className="ui large message"
+          style={{ color: "black", backgroundColor: "lightgreen" }}
         >
           Welcome to The Great Race! Can you guess who will win??? Click on the
           star to get started.
@@ -130,7 +130,7 @@ export default function GreatRace() {
             marginLeft: "1rem",
           }}
         >
-          <p style={{ color: "red" }}>
+          <p style={{ color: "red", fontSize: "1.3rem" }}>
             Mario:
             <span
               id="marioScore"
@@ -138,7 +138,7 @@ export default function GreatRace() {
               style={{ paddingLeft: "10px" }}
             ></span>{" "}
           </p>
-          <p style={{ color: "green" }}>
+          <p style={{ color: "green", fontSize: "1.3rem" }}>
             Yoshi:
             <span
               id="yoshiScore"
