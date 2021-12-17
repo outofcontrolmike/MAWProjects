@@ -27,12 +27,12 @@ button:hover {
 /*Landing Page */
 
 h1 {
-  color: gold;
+  color: yellow;
   text-align: center;
 }
 
 a {
-  color: gold;
+  color: yellow;
   font-size: 26px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -59,7 +59,7 @@ a {
 }
 
 i {
-  color: darkorange;
+  color: yellow;
 }
 
 a:hover,
@@ -101,14 +101,36 @@ hr {
   width: 400px;
 }
 
-#resumeVisible {
-  height: 225px;
-  background-color: aquamarine;
+#resume {
+  font-size: 1.5rem;
+  border: orange 5px solid;
+  margin-bottom: 2rem;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
-.visible > h1 {
-  color: black;
+#resume > h1 {
+  color: yellow;
 }
+
+#resume > h2,
+h3 {
+  color: orange;
+}
+
+#resumeVisible {
+  height: 225px;
+  background-color: black;
+  color: yellow;
+  align-self: center;
+  padding-top: 6rem;
+  border: orange 2px solid;
+  border-style: outset;
+}
+
+/* .visible > h1 {
+  color: black;
+} */
 
 #resume {
   height: 100vh;
