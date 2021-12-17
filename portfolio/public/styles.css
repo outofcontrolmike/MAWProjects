@@ -146,8 +146,8 @@ a {
 
 #submit:hover,
 #thankYouButton:hover {
-  background-color: gold;
-  color: black;
+  background-color: black;
+  color: gold;
 }
 
 hr:hover {
@@ -162,7 +162,15 @@ hr:hover {
 #category {
   color: gold;
   background: black;
-  border: 1px solid aquamarine;
+  border: 1px solid orange;
+}
+#commentLabel {
+  height: 2rem;
+  text-align: -webkit-center;
+  font-size: medium;
+  margin-top: 0.25rem;
+  color: black;
+  font-weight: bolder;
 }
 
 /********************Thank you page *************************************************************/
@@ -188,9 +196,8 @@ input[type="number"] {
   font-family: "Rock Salt", cursive;
 }
 
-
 #footer {
-  color:white;
+  color: white;
 }
 /****************************************************/
 
@@ -312,7 +319,7 @@ input[type="number"] {
 /****************TMNT Character Select**********************/
 
 path {
-  color:black;
+  color: black;
 }
 .turtle {
   height: 300px;
@@ -389,9 +396,8 @@ path {
   font-family: "Press Start 2P", cursive;
 }
 #turtleGroup {
-  margin:3rem;
-  padding:2rem;
-
+  margin: 3rem;
+  padding: 2rem;
 }
 #tName {
   color: white;
@@ -533,7 +539,6 @@ path {
   text-align: left;
 }
 
-
 #brewLabel {
   font-size: medium;
   color: white;
@@ -602,7 +607,6 @@ option {
   #brewInput {
     margin-left: 0px;
     width: 15ch;
-    
   }
 
   .floatMe {
@@ -649,7 +653,7 @@ option {
 }
 
 #inputContainer {
-width: 90%;
+  width: 90%;
 }
 .pokeSearchInput {
   font-weight: 600;
@@ -703,7 +707,6 @@ width: 90%;
   border-radius: 50px;
   margin: 2rem;
 }
-
 
 #pokeContainer {
   width: 350px;

@@ -38,6 +38,7 @@ function NewCommentForm(props) {
   return (
     <div className="ui form" style={{ backgroundcolor: "black" }}>
       <form
+        style={{ fontSize: "1.5rem" }}
         onSubmit={submitHandler}
         className="ui form ui raised very padded text container"
       >
@@ -71,9 +72,10 @@ function NewCommentForm(props) {
           />
         </div>
         <button
-          className="ui button orange fluid large"
+          className="ui button basic fluid large yellow"
           id="submit"
           type="submit"
+          style={{ fontSize: "1.4rem" }}
         >
           Submit
         </button>
