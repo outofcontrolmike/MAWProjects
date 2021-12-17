@@ -158,11 +158,17 @@ hr:hover {
 #comment,
 #name,
 #email,
-#message,
-#category {
+#message {
   color: gold;
   background: black;
   border: 1px solid orange;
+  font-size: 1.5rem;
+}
+#category {
+  background: black;
+  border: 1px solid orange;
+  font-size: 1.5rem;
+  height: 4rem;
 }
 #commentLabel {
   height: 2rem;
