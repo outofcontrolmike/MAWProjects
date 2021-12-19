@@ -103,7 +103,6 @@ hr {
 
 #resume {
   font-size: 1.5rem;
-  border: orange 5px solid;
   margin-bottom: 2rem;
   height: 100vh;
   overflow-y: scroll;
@@ -113,7 +112,7 @@ hr {
   color: yellow;
 }
 
-#resume > h2,
+#resumeSegment > h2,
 h3 {
   color: orange;
 }
@@ -128,9 +127,20 @@ h3 {
   border-style: outset;
 }
 
-/* .visible > h1 {
-  color: black;
-} */
+#resumeSegment:hover {
+  position: relative;
+  border: orange 2px solid;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  animation: resumeBlinker 5s linear infinite;
+}
+
+@keyframes resumeBlinker {
+  50% {
+    opacity: 0.7;
+  }
+}
 
 #resume {
   height: 100vh;
