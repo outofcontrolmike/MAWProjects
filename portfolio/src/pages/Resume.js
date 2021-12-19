@@ -7,7 +7,7 @@ function Resume() {
       <Navigation />
       <div className="ui two column relaxed very padded stackable grid">
         <div className="ui column" id="resume">
-          <h1>Work Experience</h1>
+          <h1>Work Experience / Education</h1>
           <div id="resumeSegment">
             <h2>
               <b>Junior React Developer</b>
@@ -48,8 +48,8 @@ function Resume() {
             <p>
               I took on the role of helping our customer service department
               debug issues that they would run into with our system. I would
-              congregate with them in person and attempt getting to the root of
-              the problem.
+              discuss with them in person and attempt getting to the root of the
+              problem.
             </p>
             <br></br>
           </div>
@@ -78,11 +78,22 @@ function Resume() {
               <b>Web Store Manager / Personal Assistant</b>
             </h2>
             <p style={{ color: "yellow" }}>Farm 2 Counter - Springfield, MO</p>
-            <p style={{ color: "gray" }}>April 2017 - June 2019</p>
+            <h4>
+              <i style={{ color: "gray" }}>April 2017 - June 2019</i>
+            </h4>
             <p>
-              To sum this job up, I mainly managed a local grocery delivery
-              service as well as a physical store. I was also an assistant to my
-              employeer at the time.
+              Managed a local web store delivery service. This included
+              communicating with clients, purveyors, customers as well as the
+              creator of our online delivery service. Also lncluded inventory
+              managment, waste management, meal planning, order preperation,
+              package fulfillment and delivering said packages to customers.
+            </p>
+
+            <p>
+              I also managed a physical store, that held the space for the web
+              store. The roles involved were customer service, inventory
+              managment, POS usage and setup, payroll, opening and closing the
+              store.
             </p>
             <p></p>
             <br></br>
@@ -92,10 +103,17 @@ function Resume() {
               <b>Web Store Manager</b>
             </h2>
             <p style={{ color: "yellow" }}>
-              Spring Valley Herbs & Natural Foods- Springfield, MO
+              Spring Valley Herbs & Natural Foods - Springfield, MO
             </p>
-            <p style={{ color: "gray" }}>March 2015 - April 2017</p>
-            <p>Manager of Woocommerce based store... Add More to this later.</p>
+            <h4>
+              <i style={{ color: "gray" }}>March 2015 - April 2017</i>
+            </h4>
+            <p>
+              Manager of a Woocommerce based store. The duties for this job
+              included: customer service, order fulfillment, inventory
+              managment, item listing management, search engine optimization,
+              photography.{" "}
+            </p>
             <br></br>
           </div>
           <div id="resumeSegment">
@@ -103,11 +121,19 @@ function Resume() {
               <b>Cook/Delivery Driver</b>
             </h2>
             <p style={{ color: "yellow" }}>Godfathers Pizza - Nixa, MO</p>
-            <p style={{ color: "gray" }}>March 2015 - April 2017</p>
-            <p>All kinds of stuff.</p>
+            <h4>
+              <i style={{ color: "gray" }}>June 2007 - April 2015</i>
+            </h4>
+            <p>
+              This was my first place of employment. I worked the following
+              positions throughout the time: dishwasher, prep, cook, taking
+              phone orders, buser, delivery driver. I learned a lot about
+              customer service throughout the time and also learned how to
+              accomdate in stressful situations with limited options.
+            </p>
           </div>
           {/* Education segment */}
-          <h1>Education</h1>
+          <h1 style={{ marginTop: "4rem" }}>Education</h1>
           <div id="resumeSegment">
             <h2>
               <b>Associate in Applied Science - Computer Information Science</b>
@@ -116,7 +142,16 @@ function Resume() {
             <p style={{ color: "yellow" }}>
               Ozarks Technical Community College - Springfield, MO
             </p>
-            <p style={{ color: "gray" }}>January 2018 - December 2019</p>
+            <h4>
+              <i style={{ color: "gray" }}>January 2018 - December 2019</i>
+            </h4>
+            <p>
+              I stuided the following stacks and concepts during my time
+              obataining this degree: C#, Java, Javascript, PHP, HTML/CSS, SQL,
+              Web Development, Systems Analaysis and Design, Databases and
+              Project Management.
+            </p>
+            <p></p>
             <br />
             <br />
           </div>
@@ -127,7 +162,14 @@ function Resume() {
             <p style={{ color: "yellow" }}>
               Ozarks Technical Community College - Springfield, MO
             </p>
-            <p style={{ color: "gray" }}>August 2010 - May 2013</p>
+            <h4>
+              <i style={{ color: "gray" }}>August 2010 - May 2013</i>
+            </h4>
+            <p>
+              Stuided the following subjects during this degree: Culinary Arts
+              and Hospitallity Management, Automotive, General Education.
+            </p>
+            <p></p>
           </div>
         </div>
         {/* End Education */}
