@@ -8,7 +8,7 @@ function CommentList(props) {
       className="ui"
       style={{ height: "100vh", overflowY: "auto", marginLeft: "2rem" }}
     >
-      <h1 style={{ color: "gold" }}>Comments Feed </h1>
+      <h1 style={{ color: "yellow" }}>Comments Feed </h1>
       <div className="ui feed medium">
         {props.comments.map((comment) => (
           <CommentItem

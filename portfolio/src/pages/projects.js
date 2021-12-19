@@ -183,6 +183,7 @@ function Projects(props) {
     let metaInfo = document.createElement("p");
     metaInfo.innerHTML = project.meta;
     metaContainer.append(metaInfo);
+    metaContainer.setAttribute("id", "projectMeta");
 
     let descContainer = document.createElement("div");
     descContainer.className = "description";
@@ -207,7 +208,7 @@ function Projects(props) {
     let gitHub = document.createElement("span");
     let gitLink = document.createElement("a");
     let icon = document.createElement("i");
-    icon.className = "github icon blue";
+    icon.className = "github icon orange";
     gitLink.append(icon);
     gitHub.append(gitLink);
 
@@ -225,9 +226,9 @@ function Projects(props) {
 
       <div className="ui" id="projects">
         <div
-          className="ui cards centered four horizontal"
+          className="ui cards centered four horizontal inverted"
           id="list"
-          style={{ margin: "10px" }}
+          style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>
       </div>
     </div>
