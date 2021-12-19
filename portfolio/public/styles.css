@@ -88,11 +88,24 @@ i:hover {
 /*****************************About page ********************************************************/
 #about {
   background-color: black;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+}
+
+#aboutMe {
+  margin-top: 4rem;
 }
 
 hr {
   border-color: red;
+}
+
+#contactCard {
+  background-color: black;
+  border-color: orange;
+}
+
+#contactCard > div > div {
+  color: yellow;
 }
 
 /**********************************Resume Page****************************************************/
@@ -160,9 +173,8 @@ a {
 }
 
 #myName {
-  color: aquamarine;
+  color: orange;
   font-family: "Forum", cursive;
-  font-size: 26px;
 }
 
 #myName:hover,
@@ -195,6 +207,7 @@ hr:hover {
   border: 1px solid orange;
   font-size: 1.5rem;
 }
+
 #category {
   background: black;
   border: 1px solid orange;

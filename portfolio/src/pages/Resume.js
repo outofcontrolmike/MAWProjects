@@ -146,7 +146,7 @@ function Resume() {
               <i style={{ color: "gray" }}>January 2018 - December 2019</i>
             </h4>
             <p>
-              I stuided the following stacks and concepts during my time
+              I studied the following stacks and concepts during my time
               obataining this degree: C#, Java, Javascript, PHP, HTML/CSS, SQL,
               Web Development, Systems Analaysis and Design, Databases and
               Project Management.

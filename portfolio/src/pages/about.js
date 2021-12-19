@@ -1,6 +1,7 @@
 import Navigation from "../components/layout/Navigation";
 import Footer from "../components/layout/Footer";
 import myPicture from "../assets/img/profilePic-removebg-preview.png";
+import ContactCard from "../components/layout/ContactCard";
 
 function About() {
   return (
@@ -17,7 +18,7 @@ function About() {
             src={myPicture}
           />
         </div>
-        <div className="ui column padded">
+        <div className="ui column padded" id="aboutMe">
           <span id="myName" className="ui text large">
             Mr. Michael Wilson
           </span>
@@ -36,7 +37,6 @@ function About() {
             front end of my company's website.
           </p>
           <p>
-            <hr></hr>
             Currently I work with the Javascript coding language, specifically
             in the{" "}
             <span>
@@ -50,23 +50,23 @@ function About() {
               </a>
             </span>{" "}
             My tasks include fixing bugs and implementing feature requests among
-            a few of my compaines projects built with the react library.
+            a few of my compaines projects built with the react.
           </p>
           <p>
-            With some of my free time I try to build projects with React so I
-            keep up to date with work. I generally like to mess around with
-            API's.
+            During my free time I attempt to build projects with React so I can
+            have more to offer everynew day at work. I generally like to mess
+            around with API's and display information that's interesting to the
+            public and myself.
           </p>
-          <hr></hr>
           <p>
-            I really love hiking, travelilng and trying a vareity of new things.
-            I also enjoy Guitar, Writing and Photography. I of course work on my
-            over 100 year old house and keep learning new things about being a
-            homeowner.
+            Other than coding, I really love hiking, traveling and trying a
+            vareity of new things. I also enjoy playing guitar, writing and
+            photography. I have a fiance and two pet dogs and we all share a
+            house that's over 100 years old.
           </p>
+          <ContactCard />
         </div>
       </div>
-      <Footer />
     </>
   );
 }
