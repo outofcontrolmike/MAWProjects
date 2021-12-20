@@ -18,7 +18,7 @@ function Projects(props) {
       href: "/great_race",
       name: "The Great Race",
       meta: "React & Fomantic",
-      desc: "A race between Yoshi and Mario. Who will win???",
+      desc: "A race between Yoshi and Mario. Who will win???" + "<b> Fair warning</b>, this project is not supposed to be mobile friendly.",
       created: "Created: Spring 2018",
       lastUpdated: "Last Updated: November 18th 2021",
       github:

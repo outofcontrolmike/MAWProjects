@@ -14,7 +14,7 @@ export default function FFMenu() {
           <div
             id="inputContainer"
             className="ui icon input fluid"
-            style={{ width: "100%" }}
+            style={{ width: "100%" , marginLeft: "150px"}}
           >
             <input
               type="text"

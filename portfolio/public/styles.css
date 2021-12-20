@@ -207,9 +207,9 @@ hr:hover {
 }
 
 .projectImage {
- max-height:250px;
+ max-height:200px;
  width:200px;
- ;
+ object-fit: cover;
 }
 
 /* #projectGithub:hover{
@@ -268,6 +268,14 @@ input[type="number"] {
 #footer {
   color: white;
 }
+
+
+@media only screen and (max-width: 600px) {
+#num1, #num2 {
+  margin-left: 10rem;
+}
+}
+
 /****************************************************/
 
 /*GREAT RACE */
@@ -553,6 +561,7 @@ path {
 
 #brewInput {
   font-size: 2rem;
+  margin-left: 150px;
 }
 
 .brewUrl {
@@ -671,11 +680,17 @@ option {
 @media only screen and (max-width: 1350px) {
   .input {
     padding: 0px;
+
   }
 
   #brewInput {
     margin-left: 0px;
     width: 15ch;
+  }
+
+  #brewBtn {
+    width:2rem;
+    padding-right: 50px;
   }
 
   .floatMe {
@@ -844,6 +859,13 @@ option {
   color: black;
 }
 
+.pokemonDropdownIcon {
+  color: black;
+}
+
+.pokemonDropdownIcon:hover {
+  color:red;
+} 
 @media only screen and (max-width: 600px) {
   /* img.ui.image {
     position: absolute;
@@ -961,6 +983,9 @@ option {
   border-color: slateblue;
 }
 
+.gem {
+  color: orange;
+}
 .gem:hover {
   color: skyblue;
 }
@@ -971,7 +996,6 @@ option {
   .divider,
   .line {
     width: 100%;
-    border-color: lightblue;
   }
 
   .ui.button {

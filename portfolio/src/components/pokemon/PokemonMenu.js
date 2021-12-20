@@ -348,7 +348,7 @@ function PokemonMenu() {
           <div className="ui container">
             <div className="ui accordion" id="accordion">
               <div className="title">
-                <i className="dropdown icon"></i>
+                <i className="dropdown icon pokemonDropdownIcon"></i>
                 <span id="advanced" className="pokeAdvanced">
                   Advanced Options
                 </span>

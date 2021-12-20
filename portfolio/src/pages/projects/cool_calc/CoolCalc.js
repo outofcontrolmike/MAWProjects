@@ -155,7 +155,7 @@ toggleButtons("true");
           <input style={{ fontFamily: '\'Rock Salt\', cursive' , borderColor:"white", height: '100px', fontSize:"xx-large", width:"210px", backgroundColor: "black", color:"green"}} type="number" id="num2" maxlength="12" max="12"/>
           </div>
           <div className="container" style={{textAlign: "center", padding: "30px"}}>
-          <button   id="add" type="button" style={{marginRight: ".5rem"}}  className="ui inverted green button">  <span id="coolBtn" >Add</span></button>
+          <button   id="add" type="button" style={{margin: ".5rem"}}  className="ui inverted green button">  <span id="coolBtn" >Add</span></button>
           <button   id="minus" type="button" style={{margin: ".5rem"}} className="ui inverted red button coolBtn"> <span id="coolBtn">Subtract</span></button>
           <button   id="mult" type="button"  style={{margin: ".5rem"}}className="ui inverted purple button coolBtn"> <span id="coolBtn">Multiply</span></button>
           <button   id="divide" type="number"  style={{margin: ".5rem"}}className="ui inverted teal button coolBtn"> <span id="coolBtn">Divide</span></button>
