@@ -206,6 +206,16 @@ hr:hover {
   color: black;
 }
 
+.projectImage {
+ max-height:250px;
+ width:200px;
+ ;
+}
+
+/* #projectGithub:hover{
+color:lavenderblush;
+} */
+
 /************************************Comments Page ***********************************************/
 #comment,
 #name,

@@ -49,7 +49,7 @@ function Projects(props) {
     // },
 
     {
-      img: "img/beast.PNG",
+      img: "img/beast.JPG",
       href: "/beastwars",
       name: "Beast Wars JS",
       meta: "Vanilla JS, Jquery & Fomantic UI",
@@ -166,8 +166,7 @@ function Projects(props) {
 
     let image = document.createElement("img");
     image.src = project.img;
-    image.className = "ui image big";
-    image.style.maxHeight = "200px";
+    image.className = "ui image large projectImage";
     projectLink.append(image);
     imageContainer.append(projectLink);
 
@@ -196,7 +195,9 @@ function Projects(props) {
     createdDate.style.fontWeight = "bolder";
     createdDate.style.color = "black";
 
-    content.append(header, metaContainer, descContainer, createdDate);
+    let br = document.createElement('br');
+
+    content.append(header, metaContainer, br, descContainer, createdDate);
 
     let extraContent = document.createElement("div");
     extraContent.className = "extra content";
@@ -207,6 +208,7 @@ function Projects(props) {
 
     let gitHub = document.createElement("span");
     let gitLink = document.createElement("a");
+
     let icon = document.createElement("i");
     icon.className = "github icon orange";
     gitLink.append(icon);
@@ -226,7 +228,7 @@ function Projects(props) {
 
       <div className="ui" id="projects">
         <div
-          className="ui cards centered four horizontal inverted"
+          className="ui cards centered four horizontal"
           id="list"
           style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>
