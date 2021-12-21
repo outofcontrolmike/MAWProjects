@@ -26,7 +26,7 @@ function About() {
           <br />
           <p>
             I am a person that is always trying to learn new skills and enjoy
-            the process at the same time. I belive there is nothing better than
+            the process at the same time. I believe there is nothing better than
             working on a passion project. I have been involved with Web
             Development and Programming since the Spring of 2018.
           </p>
@@ -50,17 +50,17 @@ function About() {
               </a>
             </span>{" "}
             My tasks include fixing bugs and implementing feature requests among
-            a few of my compaines projects built with the react.
+            a few of my companies projects built with react.
           </p>
           <p>
             During my free time I attempt to build projects with React so I can
-            have more to offer everynew day at work. I generally like to mess
+            have more to offer every new day at work. I generally like to mess
             around with API's and display information that's interesting to the
             public and myself.
           </p>
           <p>
             Other than coding, I really love hiking, traveling and trying a
-            vareity of new things. I also enjoy playing guitar, writing and
+            variety of new things. I also enjoy playing guitar, writing and
             photography. I have a fiance and two pet dogs and we all share a
             house that's over 100 years old.
           </p>

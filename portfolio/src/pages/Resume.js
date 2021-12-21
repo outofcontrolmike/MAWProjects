@@ -20,8 +20,8 @@ function Resume() {
               Fixing bugs and implementing features across multiple projects
               written in the React JS Library. The main project I work on is a
               small Point of Sale system. I use Node Package Manager to source
-              libraries to fulfill feature requsts if needed. I have previously
-              brought up questions to ask our clientele in regards to
+              libraries to fulfill feature requests if needed. I have previously
+              brought up questions to ask our clientele in regards to the
               implementation of their feature requests.
             </p>
             <br />
@@ -37,13 +37,13 @@ function Resume() {
               <i style={{ color: "gray" }}>November 2019 - April 2021</i>
             </h4>
             <p>
-              Mapped MLS database fields to system templates, used for loading
+              Mapped MLS,Multiple Listing Services, database fields to system templates, used for loading
               data onto client sites in conjunction with feed management.
             </p>
             <p>
               Updated styles and functionality for certain system pages
               regarding a platform retheme. Also was involved with testing the
-              beta version of our retheme.
+              beta version of the above mentioned retheme.
             </p>
             <p>
               I took on the role of helping our customer service department
@@ -85,7 +85,7 @@ function Resume() {
               Managed a local web store delivery service. This included
               communicating with clients, purveyors, customers as well as the
               creator of our online delivery service. Also lncluded inventory
-              managment, waste management, meal planning, order preperation,
+              management, waste management, meal planning, order preperation,
               package fulfillment and delivering said packages to customers.
             </p>
 
@@ -93,7 +93,7 @@ function Resume() {
               I also managed a physical store, that held the space for the web
               store. The roles involved were customer service, inventory
               managment, POS usage and setup, payroll, opening and closing the
-              store.
+              business, bank desposits and much more.
             </p>
             <p></p>
             <br></br>
@@ -126,8 +126,7 @@ function Resume() {
             </h4>
             <p>
               This was my first place of employment. I worked the following
-              positions throughout the time: dishwasher, prep, cook, taking
-              phone orders, buser, delivery driver. I learned a lot about
+              positions throughout the time: dishwasher, prep, cook, phone answering, buser, delivery driver. I learned a lot about
               customer service throughout the time and also learned how to
               accomdate in stressful situations with limited options.
             </p>
@@ -167,7 +166,7 @@ function Resume() {
             </h4>
             <p>
               Stuided the following subjects during this degree: Culinary Arts
-              and Hospitallity Management, Automotive, General Education.
+              and Hospitallity Management, Automotive Repair, General Education.
             </p>
             <p></p>
           </div>
