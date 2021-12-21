@@ -21,62 +21,27 @@ function Home() {
     //     </Link></a>
     // </div>
 
-    <div className="ui" style={{ backgroundColor: "black" }}>
-      <div className="ui column">
-        <a className="item">
-          <Link to="/resume">
-            {" "}
-            <h1 style={{ paddingTop: "2rem", paddingBottom: "2rem" }}>
-              Resume
-            </h1>
-          </Link>
-        </a>
-      </div>
-      <div className="ui two column grid">
-        <div className="ui column">
-          <a className="item">
-            <Link to="/about">
-              {" "}
-              <h1>About</h1>
-            </Link>
-          </a>
-        </div>
-        <div className="ui column">
-          <a className="item">
-            <Link to="/projects">
-              {" "}
-              <h1>Projects</h1>
-            </Link>
-          </a>{" "}
-        </div>
-      </div>
+    <div className="ui two column stackable grid" id="landingPage">
+      <div className="ui column" style={{margin:"auto", textAlign: "center"}}>
+        <span style={{ textAlign: "left", color: "gold" }} className="ui text gold massive">
+          Michael A. Wilson
+        </span>
+        <h2>Yada yada yada ....</h2>
+        
+        <div>
 
-      <div className="ui two column grid">
-        <div className="ui column">
-          <a className="item">
-            <Link to="/">
-              <h1 style={{ textAlign: "left" }}>Home</h1>
-            </Link>
-          </a>
-        </div>
-        <div className="ui column">
-          <a className="item">
-            <Link to="/contact">
-              <h1 style={{ textAlign: "right" }}>Contact</h1>
-            </Link>
-          </a>
+          <button className="ui button massive basic yellow" style={{marginTop: "2rem"}}>
+              <a
+                href="about"
+                style={{color: "gold"}}
+              >
+                Let's build some shit              </a>
+            
+          </button>
         </div>
       </div>
-      <div className="ui three column grid stackable">
-        <div className="ui column">
-          <h1 style={{ textAlign: "left" }}>About section 1</h1>
-        </div>
-        <div className="ui column">
-          <img className="ui image large circular" src={picture}></img>
-        </div>
-        <div className="ui column">
-          <h1>About section 2</h1>
-        </div>
+      <div className="ui column">
+        <img className="ui image huge middle aligned " style={{textAlign: "center"}}  src={picture}></img>
       </div>
     </div>
   );
