@@ -180,12 +180,12 @@ function Resume() {
             <i className="css3 icon huge"></i>
             <i className="js icon huge"></i>
             <i class="react icon huge"></i>
-
             <i className="windows icon huge"></i>
           </div>
           <div className="ui list">
             <i className="node js icon huge"></i>
             <i className="npm icon huge"></i>
+            <i className="github icon huge"></i>
           </div>
           <h3 style={{ color: "orange" }}>Knowledgeable</h3>
           <div className="ui list">
@@ -196,13 +196,11 @@ function Resume() {
           <div className="ui list">
             <i className="ubuntu icon huge"></i>
             <i className="terminal icon huge"></i>
+            <i className="bootstrap icon huge"></i>
           </div>
           <div className="ui list">
             <i className="file word icon huge"></i>
             <i className="file excel icon huge"></i>
-          </div>
-          <div className="ui list">
-            <i className="bootstrap icon huge"></i>
           </div>
           <h3 style={{ color: "orange" }}>Certifications</h3>
           <div className="ui medium three list images">
