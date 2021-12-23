@@ -28,8 +28,8 @@ function Home() {
         <span style={{ textAlign: "left", color: "gold" }} className="ui text gold massive">
           Michael A. Wilson
         </span>
-        <h2>Yada yada yada ....</h2>
-        
+    
+    <h2>"The cave you're afraid to enter, holds the treasures you seek..."</h2>    
         <div>
 
           <button className="ui button massive basic yellow" style={{marginTop: "2rem"}}>
@@ -37,7 +37,7 @@ function Home() {
                 href="about"
                 style={{color: "yellow"}}
               >
-                Let's build some shit              </a>
+                Learn More </a>
             
           </button>
         </div>
