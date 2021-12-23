@@ -8,7 +8,7 @@ function Resume() {
       <Navigation />
       <div className="ui two column relaxed very padded stackable grid">
         <div className="ui column" id="resume">
-          <h1>Work Experience / Education</h1>
+          <h1 id="cursiveHeader">Work Experience / Education</h1>
           <div id="resumeSegment">
             <h2>
               <b>Junior React Developer</b>
@@ -38,8 +38,9 @@ function Resume() {
               <i style={{ color: "gray" }}>November 2019 - April 2021</i>
             </h4>
             <p>
-              Mapped MLS,Multiple Listing Services, database fields to system templates, used for loading
-              data onto client sites in conjunction with feed management.
+              Mapped MLS,Multiple Listing Services, database fields to system
+              templates, used for loading data onto client sites in conjunction
+              with feed management.
             </p>
             <p>
               Updated styles and functionality for certain system pages
@@ -127,9 +128,10 @@ function Resume() {
             </h4>
             <p>
               This was my first place of employment. I worked the following
-              positions throughout the time: dishwasher, prep, cook, phone answering, buser, delivery driver. I learned a lot about
-              customer service throughout the time and also learned how to
-              accomdate in stressful situations with limited options.
+              positions throughout the time: dishwasher, prep, cook, phone
+              answering, buser, delivery driver. I learned a lot about customer
+              service throughout the time and also learned how to accomdate in
+              stressful situations with limited options.
             </p>
           </div>
           {/* Education segment */}
@@ -174,7 +176,7 @@ function Resume() {
         </div>
         {/* End Education */}
         <div className="ui column" id="techStack">
-          <h1>Tech Stack / Certifications</h1>{" "}
+          <h1 id="cursiveHeader">Tech Stack / Certifications</h1>{" "}
           <h3 style={{ color: "orange" }}>Daily Tools</h3>
           <div className="ui list">
             <i className="html5 icon huge"></i>

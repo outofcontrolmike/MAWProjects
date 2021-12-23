@@ -29,12 +29,17 @@ h1 {
 #navigation {
   padding-left: 20rem;
   font-family: "forum", cursive;
+  color: gold;
 }
 
 /*Landing Page */
 h1 {
-  color: yellow;
+  color: gold;
   text-align: center;
+}
+
+h1:hover {
+  color: orange;
 }
 
 #landingPageSub {
@@ -43,7 +48,7 @@ h1 {
 }
 
 a {
-  color: yellow;
+  color: gold;
   font-size: 26px;
 }
 
@@ -98,6 +103,10 @@ i:hover {
 
 /**********************************Resume Page****************************************************/
 
+#cursiveHeader {
+  font-family: "Oooh Baby", cursive;
+  font-size: 2.5rem;
+}
 hr:hover {
   border-color: gold;
 }
@@ -108,14 +117,10 @@ hr:hover {
 }
 
 #resume {
-  font-size: 1.3rem;
+  font-size: 1.5em;
   margin-bottom: 2rem;
   height: 100vh;
   overflow-y: scroll;
-}
-
-#resume > h1 {
-  color: yellow;
 }
 
 #resumeSegment > h2,
@@ -153,19 +158,23 @@ h3 {
 }
 
 #myName {
-  color: Yellow;
-  font-family: "Forum", cursive;
+  color: gold;
+  font-family: "Oooh Baby", cursive;
   font-weight: 900;
+  font-size: xxx-large;
 }
 
 #myName:hover,
+#reactLink {
+  color: orange;
+}
 #name:focus,
 #comment:focus,
 #email:focus,
 #category:focus,
 #message:focus {
   color: gold;
-  border-color: gold;
+  border-color: orange;
 }
 
 #submit:hover,
@@ -196,13 +205,13 @@ h3 {
 #message {
   color: gold;
   background: black;
-  border: 1px solid orange;
+  border: 1px solid gold;
   font-size: 1.5rem;
 }
 
 #category {
   background: black;
-  border: 1px solid orange;
+  border: 1px solid gold;
   font-size: 1.5rem;
   height: 4rem;
 }

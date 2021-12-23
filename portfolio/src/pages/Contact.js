@@ -1,3 +1,4 @@
+import ContactCard from "../components/layout/ContactCard";
 import Navigation from "../components/layout/Navigation";
 
 export default function Contact() {

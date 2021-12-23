@@ -39,10 +39,10 @@ function About() {
           <p>
             Currently I work with the Javascript coding language, specifically
             in the{" "}
-            <span>
+            <span id="reactLink">
               {" "}
               <a
-                style={{ fontSize: "large", color: "gold" }}
+                style={{ fontSize: "large" }}
                 target="_blank"
                 href="https://reactjs.org/"
               >
@@ -50,7 +50,7 @@ function About() {
               </a>
             </span>{" "}
             My tasks include fixing bugs and implementing feature requests among
-            a few of my companies projects built with react.
+            a few of my companies' projects built with react.
           </p>
           <p>
             During my free time I attempt to build projects with React so I can
@@ -64,7 +64,6 @@ function About() {
             photography. I have a fiance and two pet dogs and we all share a
             house that's over 100 years old.
           </p>
-          <ContactCard />
         </div>
       </div>
     </>

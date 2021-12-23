@@ -5,25 +5,34 @@ export default function BeastWars() {
 
   //Loads all of our functionallity
   function loadScript() {
-     document.getElementById("here").innerHTML = "";
-         
-     //Assigning event listerns to sorting buttons
-     function assignEventListeners() {
+    document.getElementById("here").innerHTML = "";
 
-     let sortMaximalsBtn = document.getElementById('sortMaximals');
-     sortMaximalsBtn.addEventListener("click", () => {sortMaximals(characters)});
+    //Assigning event listerns to sorting buttons
+    function assignEventListeners() {
+      let sortMaximalsBtn = document.getElementById("sortMaximals");
+      sortMaximalsBtn.addEventListener("click", () => {
+        sortMaximals(characters);
+      });
 
-     let sortPredaconsBtn = document.getElementById('sortPredacons');
-     sortPredaconsBtn.addEventListener("click", () => {sortPredacons(characters)});
+      let sortPredaconsBtn = document.getElementById("sortPredacons");
+      sortPredaconsBtn.addEventListener("click", () => {
+        sortPredacons(characters);
+      });
 
-     let sortAlphaBtn = document.getElementById('sortAlpha');
-     sortAlphaBtn.addEventListener("click", () => {sortByName(characters)});
+      let sortAlphaBtn = document.getElementById("sortAlpha");
+      sortAlphaBtn.addEventListener("click", () => {
+        sortByName(characters);
+      });
 
-     let sortRandomBtn = document.getElementById('sortRandom');
-     sortRandomBtn.addEventListener("click", () => {sortRandom(characters)});
+      let sortRandomBtn = document.getElementById("sortRandom");
+      sortRandomBtn.addEventListener("click", () => {
+        sortRandom(characters);
+      });
 
-     let sortAnimalBtn = document.getElementById('sortAnimal');
-     sortAnimalBtn.addEventListener("click", () => {sortByAnimal(characters)});
+      let sortAnimalBtn = document.getElementById("sortAnimal");
+      sortAnimalBtn.addEventListener("click", () => {
+        sortByAnimal(characters);
+      });
     }
 
     assignEventListeners();
@@ -235,9 +244,9 @@ export default function BeastWars() {
       document.getElementById("here").innerText = "";
       mainFunction(animals);
     }
-    
+
     //Sort predacons
-     function sortPredacons() {
+    function sortPredacons() {
       var predacons = characters.filter(function (predacon) {
         return predacon.team === "Predacon";
       });
@@ -247,7 +256,7 @@ export default function BeastWars() {
 
     //sort by Maxmials
     function sortMaximals() {
-      console.log("working")
+      console.log("working");
       var maximals = characters.filter(function (maximal) {
         return maximal.team === "Maximal";
       });
@@ -289,71 +298,81 @@ export default function BeastWars() {
       } //end for
     }
 
-
-
     //Call for Initial Display of Transformers
-    mainFunction(characters);     
+    mainFunction(characters);
   }
 
   return (
     <div className="ui grid">
-    <div className="ui" id="beastBackground">
-
-      {/* //main Content*/}
-      <div className="ui" id="main"></div>
+      <div className="ui" id="beastBackground">
+        {/* //main Content*/}
+        <div className="ui" id="main"></div>
         <div className="ui container fluid padded stackable" id="beastMenu">
           <p id="beastP">
-           <span className="ui text huge" id="beastP" style={{textAlign: "center"}}>Beast Wars</span>
+            <span
+              className="ui text huge"
+              id="beastP"
+              style={{ textAlign: "center" }}
+            >
+              Beast Wars
+            </span>
           </p>
           <div className="ui center aligned container" id="beastContainer">
-          <button className="button ui red medium redBtn"
-                id="sortAlpha"
-                      >
-            Sort by Alphabetical
-          </button>
-          <button
-            className="button ui blue medium blueBtn"
-            id="sortMaximals"
+            <button className="button ui red medium redBtn" id="sortAlpha">
+              Sort by Alphabetical
+            </button>
+            <button className="button ui blue medium blueBtn" id="sortMaximals">
+              Maximals Only
+            </button>
+            <button
+              className="button ui yellow medium yellowBtn"
+              id="sortPredacons"
+            >
+              Predacons Only
+            </button>
+            <button className="button ui green medium greenBtn" id="sortAnimal">
+              Sort by Animal
+            </button>
+            <button className="button ui black medium blackBtn" id="sortRandom">
+              Sort Randomly
+            </button>
+            <a
+              className="ui"
+              id="bIcon"
+              data-tooltip="Navigate back to projects"
+              data-inverted=""
+              data-variation="large"
+              data-position="top center"
+              href="/projects"
+            >
+              <i
+                className="map signs icon huge black"
+                style={{ marginBottom: "1rem" }}
+              ></i>
+            </a>
+          </div>
+        </div>
+        <div className="ui cards stackable centered" id="here">
+          {/*Print cards here */}
+        </div>
+        <div className="content">
+          {/* <!--video here--> */}
+          <div
+            className="ui "
+            style={{
+              textAlign: "center",
+              marginTop: "5rem",
+              marginBottom: "5rem",
+            }}
           >
-            Maximals Only
-          </button>
-          <button
-            className="button ui yellow medium yellowBtn"
-            id="sortPredacons"
-          >
-            Predacons Only
-          </button>
-          <button
-            className="button ui green medium greenBtn"
-            id="sortAnimal"
-          >
-            Sort by Animal
-          </button>
-          <button
-            className="button ui black medium blackBtn"
-            id="sortRandom"
-          >
-            Sort Randomly
-          </button>
-          <a className="ui" id="bIcon" data-tooltip="Navigate back to projects" data-inverted="" data-variation="large" data-position="top center" href="/projects">
-          <i className="map signs icon huge black" style={{marginBottom: "1rem"}}></i>
-          </a>
-            </div>
+            <iframe
+              width="360"
+              height="315"
+              src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&cc_load_policy=1"
+            ></iframe>
+          </div>
+        </div>
       </div>
-      <div className="ui cards stackable"  style={{marginLeft: "2rem"}} id="here">
-        {/*Print cards here */}
-      </div>
-      <div className="content">
-      {/* <!--video here--> */}
-      <div className="ui " style={{textAlign: "center", marginTop: "5rem", marginBottom:"5rem"}}>
-      <iframe width="360" height="315"
-src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&cc_load_policy=1"></iframe>
-  </div>
     </div>
-    </div>
-</div>    
   );
 }
-
-
-

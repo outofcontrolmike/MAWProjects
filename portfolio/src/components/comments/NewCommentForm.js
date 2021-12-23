@@ -43,7 +43,7 @@ function NewCommentForm(props) {
         onSubmit={submitHandler}
         className="ui form ui raised very padded text container"
       >
-        <h1>Please Leave a Comment!</h1>
+        <h1 id="cursiveHeader">Please Leave a Comment!</h1>
         <div className="field" id="input" style={{ backgroundcolor: "black" }}>
           <label style={{ backgroundcolor: "black" }}> Name or Alias</label>
           <input
@@ -73,10 +73,10 @@ function NewCommentForm(props) {
           />
         </div>
         <button
-          className="ui button basic fluid large yellow"
+          className="ui button basic fluid large yellow inverted"
           id="submit"
           type="submit"
-          style={{ fontSize: "1.4rem" }}
+          style={{ color: "gold", fontSize: "1.4rem" }}
         >
           Submit
         </button>
