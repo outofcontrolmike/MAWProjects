@@ -22,7 +22,7 @@ function Projects(props) {
       created: "Created: Spring 2018",
       lastUpdated: "Last Updated: November 18th 2021",
       github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/Great%20Race%20-%20JavaScript",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/great_race/GreatRace.js",
     },
 
     {
@@ -34,7 +34,7 @@ function Projects(props) {
       created: "Created: September 2020",
       lastUpdated: "Last Updated: December 5th 2021",
       github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/PokemonAPI",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/pokemon/Pokemon.js",
     },
 
     // {
@@ -57,7 +57,7 @@ function Projects(props) {
       created: "Created: Feburary 6th 2021",
       lastUpdated: "Last Updated: November 14th 2021",
       github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/BeastWars%20Js",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/beast_wars/BeastWars.js",
     },
 
     {
@@ -69,7 +69,7 @@ function Projects(props) {
       created: "Created: Feburary 10th 2021",
       lastUpdated: "Last Updated: November 9th 2021",
       github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/coolCalculator",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/cool_calc/CoolCalc.js",
     },
 
     // {
@@ -103,7 +103,7 @@ function Projects(props) {
       created: "Created: May 3rd 2021",
       lastUpdated: "Last Updated: November 15th 2021",
       github:
-        "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/TMNT_CharSelect",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/tmnt/Tmnt.js",
     },
 
     {
@@ -115,7 +115,7 @@ function Projects(props) {
       created: "Created: May 30th 2021",
       lastUpdated: "Last updated: December 15th 2021",
       github:
-        "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/bmi_bmr_stats",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/bmi_calc/Bmi.js",
     },
 
     {
@@ -127,7 +127,7 @@ function Projects(props) {
       created: "Created: June 16th 2021",
       lastUpdated: "Last Updated: December 1st 2021",
       github:
-        "https://github.com/outofcontrolmike/Javascript_IntroProjects/tree/main/brewery_Fetch",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/breweries/Brewery.js",
     },
 
     {
@@ -139,7 +139,7 @@ function Projects(props) {
       created: "Created: June 28th 2021",
       lastUpdated: "Last Updated: December 12th 2021",
       github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/Final%20Fantasy%20Search",
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/final_fantasy_search/FFSearch.js",
     },
     // {
     //   img: "img/characters.JPG",

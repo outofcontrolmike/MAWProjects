@@ -110,7 +110,7 @@ h3 {
 }
 
 #resumeVisible {
-  height: 225px;
+  height: 15rem;
   background-color: black;
   color: yellow;
   align-self: center;
@@ -152,8 +152,9 @@ a {
 }
 
 #myName {
-  color: orange;
+  color: Yellow;
   font-family: "Forum", cursive;
+  font-weight: 900;
 }
 
 #myName:hover,
@@ -387,6 +388,7 @@ path {
 #buttonGroup {
   text-align: center;
   margin-bottom: 3rem;
+  text-shadow: 10px 10px;
 }
 
 #health {
@@ -400,15 +402,18 @@ path {
   font-family: "Press Start 2P", cursive;
 }
 #playerDetails,
-#h1Turtle {
+#h1Turtle
+ {
   font-family: "Press Start 2P", cursive;
   color: white;
   text-align: center;
+  text-shadow: 2px 2px steelblue;
 }
 #players {
   color: white;
   background-color: black;
   font-size: 20px;
+  text-shadow: 2px 2px steelblue;
 }
 
 #pTurtle {
@@ -436,8 +441,10 @@ path {
 #tFooter {
   padding-bottom: 50px;
   margin-top: 100px;
-  text-align-last: center;
   font-family: "Press Start 2P", cursive;
+  text-align-last: center;  
+  color: white;
+  text-shadow: 2px 2px steelblue;
 }
 
 #players {
@@ -632,6 +639,7 @@ path {
 
   border: 1px solid whitesmoke;
   color: white;
+  padding:.5rem;
 }
 
 option {
@@ -700,7 +708,6 @@ option {
   color: black;
 }
 
-#pokeP,
 #pokeSpan,
 .pokeSpan,
 #pokeH3,
@@ -713,6 +720,9 @@ option {
 #pokeP {
   text-align: center;
   word-break: break-all;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.3rem;
+
 }
 
 #inputContainer {
@@ -733,7 +743,7 @@ option {
 }
 
 #pokeSearchTools {
-  padding: 2rem;
+  padding: 1rem;
   background: #ff4e50; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -774,7 +784,7 @@ option {
 #pokeContainer {
   width: 350px;
   color: black;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 1rem;
 }
 

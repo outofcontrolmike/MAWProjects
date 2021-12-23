@@ -1,4 +1,6 @@
-import picture from "../assets/img/guitar.png";
+import picture from "../assets/img/profilePic-removebg-preview.png";
+import myPicture from "../assets/img/profilePic-removebg-preview.png";
+
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -33,7 +35,7 @@ function Home() {
           <button className="ui button massive basic yellow" style={{marginTop: "2rem"}}>
               <a
                 href="about"
-                style={{color: "gold"}}
+                style={{color: "yellow"}}
               >
                 Let's build some shit              </a>
             
@@ -41,7 +43,7 @@ function Home() {
         </div>
       </div>
       <div className="ui column">
-        <img className="ui image huge middle aligned " style={{textAlign: "center"}}  src={picture}></img>
+        <img className="ui image big center aligned " style={{textAlign: "center", marginLeft: "15%"}}  src={picture}></img>
       </div>
     </div>
   );

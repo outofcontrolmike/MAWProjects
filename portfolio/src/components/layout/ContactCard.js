@@ -6,12 +6,12 @@ export default function ContactCard() {
       <div className="content">
         <h1
           className="center aligned header text ui orange"
-          style={{ color: "orange" }}
+          style={{ color: "yellow" }}
         >
           <b>Michael A. Wilson</b>
         </h1>
         <div className="center aligned description">
-          <p>Email: michaelwilsona2019@gmail.com</p>
+          <p style={{color: "orange"}}>Email: michaelwilsona2019@gmail.com</p>
         </div>
       </div>
       <div className="extra content">
@@ -19,13 +19,17 @@ export default function ContactCard() {
           <a
             id="aboutLink"
             href="https://github.com/outofcontrolmike/MAWProjects"
+            target="_blank"
           >
             <img
               className="ui avatar image massive"
               src="img/GitHub-Mark.png"
             />{" "}
           </a>
-          <a href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/">
+          <a href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/"
+          target="_blank"
+          >
+            
             <img
               id="aboutAvatar"
               className="ui avatar image massive"

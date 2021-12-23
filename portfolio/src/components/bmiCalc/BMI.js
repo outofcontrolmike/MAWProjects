@@ -30,7 +30,7 @@ export default function BMI() {
               />
             </div>
             <div className="field">
-              <h3 id="bmiInfo"></h3>
+              <h3 id="bmiInfo" style={{color: "black"}} ></h3>
             </div>
           </div>
           <span className="ui">

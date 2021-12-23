@@ -292,7 +292,7 @@ export default function Tmnt(props) {
         <TMNTAudio className="control" />
         <footer>
           <div id="tFooter" className="ui">
-            <p> *All images and song are not owned by me. </p>
+             *All images and song are not owned by me.
           </div>
         </footer>
       </div>

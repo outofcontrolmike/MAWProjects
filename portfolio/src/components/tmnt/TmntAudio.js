@@ -3,6 +3,9 @@ import AudioPlayer from 'react-audio-element';
 
 export default class Example extends Component {
     render() {
+        document.getElementById('audio');
+
+        console.log("audio crap", document.getElementById('tmntAudio'));
         return (
             <div className="ui container" style={{width: "30rem", textAlign: "center"}}>
                 <iframe src="" allow="autoplay" id="audio" style={{display: "none"}}></iframe>

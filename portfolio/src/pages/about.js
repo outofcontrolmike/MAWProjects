@@ -44,7 +44,7 @@ function About() {
               <a
                 style={{ fontSize: "large", color: "gold" }}
                 target="_blank"
-                href="www.google.com"
+                href="https://reactjs.org/"
               >
                 React JS Library.
               </a>
