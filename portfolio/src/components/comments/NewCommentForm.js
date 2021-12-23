@@ -1,4 +1,5 @@
 import { setState, useRef } from "react";
+import ContactCard from "../layout/ContactCard";
 
 //Comment form Component
 function NewCommentForm(props) {
@@ -73,10 +74,10 @@ function NewCommentForm(props) {
           />
         </div>
         <button
-          className="ui button basic fluid large yellow inverted"
+          className="ui button basic fluid large"
           id="submit"
           type="submit"
-          style={{ color: "gold", fontSize: "1.4rem" }}
+          style={{ color: "gold", fontSize: "1.4rem", outline: "ridge" }}
         >
           Submit
         </button>

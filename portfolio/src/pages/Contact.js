@@ -1,6 +1,6 @@
-import ContactCard from "../components/layout/ContactCard";
 import Navigation from "../components/layout/Navigation";
 
+//Contact form , uses a emailer package to send emails - formsubmit
 export default function Contact() {
   return (
     <div>
@@ -15,11 +15,10 @@ export default function Contact() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/thanks"
+            value="http://mawportfolio.online/thanks"
           />
           <input type="hidden" name="_captcha" value="false" />
           <div className="field">
-            <label>Full Name</label>
             <input
               id="name"
               type="text"
@@ -29,7 +28,6 @@ export default function Contact() {
             />
           </div>
           <div className="field">
-            <label>Email Address</label>
             <input
               id="email"
               type="text"
@@ -39,7 +37,6 @@ export default function Contact() {
             />
           </div>
           <div className="field">
-            <label>Category</label>
             <select
               type="text"
               name="category"
@@ -57,7 +54,6 @@ export default function Contact() {
             </select>
           </div>
           <div className="field">
-            <label>Message</label>
             <textarea
               id="message"
               required
@@ -70,7 +66,7 @@ export default function Contact() {
             className="ui button yellow fluid basic"
             id="submit"
             type="submit"
-            style={{ fontSize: "1.5rem" }}
+            style={{ color: "gold", fontSize: "1.4rem", outline: "ridge" }}
           >
             Submit
           </button>

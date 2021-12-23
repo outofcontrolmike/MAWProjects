@@ -64,6 +64,26 @@ function About() {
             photography. I have a fiance and two pet dogs and we all share a
             house that's over 100 years old.
           </p>
+          <div className="center aligned author">
+            <a
+              id="aboutLink"
+              href="https://github.com/outofcontrolmike"
+              target="_blank"
+            >
+              <img className="ui avatar image" src="img/GitHub-Mark.png" />{" "}
+            </a>
+            <a
+              href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/"
+              target="_blank"
+            >
+              <img
+                id="aboutAvatar"
+                className="ui avatar image"
+                src="img/linkedin.png"
+                style={{ backgroundColor: "white" }}
+              />{" "}
+            </a>
+          </div>
         </div>
       </div>
     </>
