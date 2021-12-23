@@ -2,30 +2,36 @@
 //There are also styles for individual projects as well.  Each section is labeled appropriatley.  
 //Also, there is inline styling as well for all the projects.  So don't think all the styling is controlled from this sheet.
 
-**Import URL's from googlefont**
-
-
 //***********************GLOBAL Styling***********************************************************/
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-/*typography*/
-/* * {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
+/* simple way of showing movement on button hover*/
 button:hover {
   position: relative;
   bottom: 0.25rem;
 }
 
-/*Navigation */
+/* mainly select dropdown options */
+option {
+  color: black;
+}
+
+p,
+h1{
+  font-family: "Forum", cursive;
+}
+
+.ui.modal {
+  height: fit-content;
+  font-size: 2rem;
+}
+
+/*Navigation menu */
 #navigation {
   padding-left: 20rem;
+  font-family: "forum",cursive;
 }
 
 /*Landing Page */
-
 h1 {
   color: yellow;
   text-align: center;
@@ -34,8 +40,6 @@ h1 {
 a {
   color: yellow;
   font-size: 26px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .ui.menu .item img.logo {
@@ -74,10 +78,6 @@ i:hover {
   margin-top: 4rem;
 }
 
-hr {
-  border-color: red;
-}
-
 #contactCard {
   background-color: black;
   border-color: orange;
@@ -88,6 +88,12 @@ hr {
 }
 
 /**********************************Resume Page****************************************************/
+
+hr:hover {
+  border-color: gold;
+}
+
+
 .slide > img {
   height: 400px;
   width: 400px;
@@ -129,26 +135,13 @@ h3 {
 
 @keyframes resumeBlinker {
   50% {
-    opacity: 0.7;
+    opacity: 0.9;
   }
 }
 
 #resume {
   height: 100vh;
   overflow-y: scroll;
-}
-
-/*fomantic class additional stylings*/
-
-/* .column,
-.container {
-  /* background-color: black;
-  border: white, 2rem, solid; */
-
-p,
-h1,
-a {
-  font-family: "Forum", cursive;
 }
 
 #myName {
@@ -173,10 +166,6 @@ a {
   color: gold;
 }
 
-hr:hover {
-  border-color: gold;
-}
-
 /*************************************Projects Page **********************************************/
 #list {
   font-size: 1.2rem;
@@ -191,10 +180,6 @@ hr:hover {
  width:200px;
  object-fit: cover;
 }
-
-/* #projectGithub:hover{
-color:lavenderblush;
-} */
 
 /************************************Comments Page ***********************************************/
 #comment,
@@ -228,7 +213,7 @@ color:lavenderblush;
   top: 20rem;
 }
 
-/*Cool Calc Specifically/*
+/****************************Cool Calc Specifically *************************/
   /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -318,10 +303,6 @@ input[type="number"] {
   border-color: skyblue;
 }
 
-.ui > toast {
-  width: 50px;
-}
-
 #sortAlpha,
 #sortMaximals,
 #sortPredacons,
@@ -351,6 +332,12 @@ input[type="number"] {
   background-color: initial;
 }
 
+/* affects all ui toasts  */
+.ui > toast {
+  width: 50px;
+}
+
+
 @media only screen and (max-width: 600px) {
   #sortAlpha,
   #sortMaximals,
@@ -361,12 +348,6 @@ input[type="number"] {
     margin-bottom: 1rem;
     font-size: 20px;
   }
-
-  /*Figure this out */
-  #here {
-    margin-right: 2rem;
-  }
-
   #beastImage {
     height: 350px;
     object-fit: cover;
@@ -375,9 +356,11 @@ input[type="number"] {
 
 /****************TMNT Character Select**********************/
 
+/* Audio player controls styling */
 path {
   color: black;
 }
+
 .turtle {
   height: 300px;
   width: 300px;
@@ -389,6 +372,12 @@ path {
   text-align: center;
   margin-bottom: 3rem;
   text-shadow: 10px 10px;
+}
+
+#buttonGroup > .ui.button {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
 }
 
 #health {
@@ -413,7 +402,6 @@ path {
   color: white;
   background-color: black;
   font-size: 20px;
-  text-shadow: 2px 2px steelblue;
 }
 
 #pTurtle {
@@ -425,6 +413,15 @@ path {
 
 #pTurtle {
   font-size: 16px;
+}
+
+#turtleGroup {
+  margin: 3rem;
+  padding: 2rem;
+}
+#tName {
+  color: white;
+  font-size: 23px;
 }
 
 #pBlink {
@@ -452,19 +449,6 @@ path {
   border: snow;
   border-style: solid;
   font-family: "Press Start 2P", cursive;
-}
-#buttonGroup > .ui.button {
-  margin-top: 30px;
-  text-align: center;
-  font-family: "Press Start 2P", cursive;
-}
-#turtleGroup {
-  margin: 3rem;
-  padding: 2rem;
-}
-#tName {
-  color: white;
-  font-size: 23px;
 }
 
 .controls {
@@ -559,21 +543,6 @@ path {
   color: red;
 }
 
-/* .input {
-  position: relative;
-  width: 83%;
-} */
-
-/* #count {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  font-size: 150px;
-  animation: blinker 4s linear infinite;
-  margin-bottom: 10%;
-  color: lavender;
-} */
 @keyframes blinker {
   50% {
     opacity: 0;
@@ -642,9 +611,6 @@ path {
   padding:.5rem;
 }
 
-option {
-  color: black;
-}
 
 @media only screen and (max-width: 1000px) {
   #breweries {
@@ -771,11 +737,6 @@ option {
   font-size: medium;
 }
 
-.ui.modal {
-  height: fit-content;
-  font-size: 2rem;
-}
-
 .pokeCard {
   border-radius: 50px;
   margin: 2rem;
@@ -890,13 +851,6 @@ option {
   color: black;
 }
 
-/* option {
-  font-weight: 400;
-  font-variant: petite-caps;
-  font-weight: 200;
-  opacity: 0.8;
-} */
-
 #ffBio,
 #ffName,
 #ffA,
@@ -935,10 +889,6 @@ option {
   border-color: skyblue;
   margin-top: 5%;
 }
-
-/* .ui.medium.image {
-  margin-top: 14rem;
-} */
 
 /*Search Menu*/
 
@@ -1086,4 +1036,4 @@ option {
   }
 }
 
-/*Next Project styles /*********************************** */
+/* End CSS File */
