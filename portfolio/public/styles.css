@@ -16,7 +16,7 @@ option {
 }
 
 p,
-h1{
+h1 {
   font-family: "Forum", cursive;
 }
 
@@ -28,7 +28,7 @@ h1{
 /*Navigation menu */
 #navigation {
   padding-left: 20rem;
-  font-family: "forum",cursive;
+  font-family: "forum", cursive;
 }
 
 /*Landing Page */
@@ -38,7 +38,7 @@ h1 {
 }
 
 #landingPageSub {
-  font-family: 'Oooh Baby', cursive;
+  font-family: "Oooh Baby", cursive;
   font-size: 2.5rem;
 }
 
@@ -52,7 +52,6 @@ a {
   padding: 1em 0em;
 }
 
-
 i {
   color: yellow;
 }
@@ -64,9 +63,9 @@ i:hover {
 
 .learnMore:hover {
   position: relative;
-  bottom: .15rem;
-color: black;}
-  
+  bottom: 0.15rem;
+  color: black;
+}
 
 .blink {
   animation: blinker 4s linear infinite;
@@ -102,7 +101,6 @@ color: black;}
 hr:hover {
   border-color: gold;
 }
-
 
 .slide > img {
   height: 400px;
@@ -186,9 +184,9 @@ h3 {
 }
 
 .projectImage {
- max-height:160px;
- width:200px;
- object-fit: cover;
+  max-height: 160px;
+  width: 200px;
+  object-fit: cover;
 }
 
 /************************************Comments Page ***********************************************/
@@ -224,7 +222,7 @@ h3 {
 }
 
 /****************************Cool Calc Specifically *************************/
-  /* Chrome, Safari, Edge, Opera */
+/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -244,11 +242,11 @@ input[type="number"] {
   color: white;
 }
 
-
 @media only screen and (max-width: 600px) {
-#num1, #num2 {
-  margin-left: 10rem;
-}
+  #num1,
+  #num2 {
+    margin-left: 10rem;
+  }
 }
 
 /****************************************************/
@@ -347,7 +345,6 @@ input[type="number"] {
   width: 50px;
 }
 
-
 @media only screen and (max-width: 600px) {
   #sortAlpha,
   #sortMaximals,
@@ -401,8 +398,7 @@ path {
   font-family: "Press Start 2P", cursive;
 }
 #playerDetails,
-#h1Turtle
- {
+#h1Turtle {
   font-family: "Press Start 2P", cursive;
   color: white;
   text-align: center;
@@ -449,7 +445,7 @@ path {
   padding-bottom: 50px;
   margin-top: 100px;
   font-family: "Press Start 2P", cursive;
-  text-align-last: center;  
+  text-align-last: center;
   color: white;
   text-shadow: 2px 2px steelblue;
 }
@@ -618,9 +614,8 @@ path {
 
   border: 1px solid whitesmoke;
   color: white;
-  padding:.5rem;
+  padding: 0.5rem;
 }
-
 
 @media only screen and (max-width: 1000px) {
   #breweries {
@@ -643,7 +638,6 @@ path {
 @media only screen and (max-width: 1350px) {
   .input {
     padding: 0px;
-
   }
 
   #brewInput {
@@ -652,7 +646,7 @@ path {
   }
 
   #brewBtn {
-    width:2rem;
+    width: 2rem;
     padding-right: 50px;
   }
 
@@ -698,7 +692,6 @@ path {
   word-break: break-all;
   font-family: "Times New Roman", Times, serif;
   font-size: 1.3rem;
-
 }
 
 #inputContainer {
@@ -824,8 +817,8 @@ path {
 }
 
 .pokemonDropdownIcon:hover {
-  color:red;
-} 
+  color: red;
+}
 @media only screen and (max-width: 600px) {
   /* img.ui.image {
     position: absolute;

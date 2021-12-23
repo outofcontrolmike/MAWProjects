@@ -3,7 +3,6 @@ import Navigation from "../components/layout/Navigation";
 
 //Project's information to display
 function Projects(props) {
-  
   //Fixes render issue - Function was mapping before the component rendered
   setTimeout(mapOver, 1);
 
@@ -20,7 +19,9 @@ function Projects(props) {
       href: "/great_race",
       name: "The Great Race",
       meta: "React & Fomantic",
-      desc: "A race between Yoshi and Mario. Who will win???" + "<b> Fair warning</b>, this project is not supposed to be mobile friendly.",
+      desc:
+        "A race between Yoshi and Mario. Who will win???" +
+        "<b> Fair warning</b>, this project is not supposed to be mobile friendly.",
       created: "Created: Spring 2018",
       lastUpdated: "Last Updated: November 18th 2021",
       github:
@@ -197,7 +198,7 @@ function Projects(props) {
     createdDate.style.fontWeight = "bolder";
     createdDate.style.color = "black";
 
-    let br = document.createElement('br');
+    let br = document.createElement("br");
 
     content.append(header, metaContainer, br, descContainer, createdDate);
 
