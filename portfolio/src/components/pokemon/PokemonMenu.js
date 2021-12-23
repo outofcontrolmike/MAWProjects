@@ -1,16 +1,14 @@
-import { get } from "jquery";
 import React from "react";
 import PokeModal from "./PokemonModal";
 
 //Function compoment for Pokemon Menu
 function PokemonMenu() {
   var prevUrl = "";
-  
+
   setTimeout(windowload, 10);
 
   //Basically adds event listeners to page elements
   function windowload() {
-
     //SUPER IMPORTANT
     document
       .getElementById("pokeSearchValue")
@@ -24,7 +22,6 @@ function PokemonMenu() {
 
     let single = document.getElementById("name");
     single.addEventListener("change", fetchStatus);
-
 
     //event listeners
     var searchInput = document.getElementById("pokeSearchValue");
@@ -65,13 +62,12 @@ function PokemonMenu() {
   //Fetching Functions //
   //****************************************************************************************************************************** */
 
-
   //Fetch information for one pokemon
   function catchSingle() {
     var input = document.getElementById("pokeSearchValue").value;
     if (input > 0 && input <= 893) {
       var pURL = input;
-      while (prevUrl != pURL) {
+      while (prevUrl !== pURL) {
         /////////////////Fetch
         fetch("https://pokeapi.co/api/v2/pokemon/" + input + "/")
           .then((response) => {
@@ -96,9 +92,9 @@ function PokemonMenu() {
       }
     }
     //if not an interger or empty string
-    else if (input != "") {
+    else if (input !== "") {
       var LowerInput = input.toLowerCase(0);
-      while (prevUrl != input) {
+      while (prevUrl !== input) {
         fetch("https://pokeapi.co/api/v2/pokemon/" + LowerInput + "/")
           .then((response) => response.json())
           .then(function (pokemon) {
@@ -119,9 +115,8 @@ function PokemonMenu() {
   //Fetch Multiple Pokemon
   function catchList() {
     var input = document.getElementById("pokeSearchValue").value;
-    
+
     if (input > 0) {
-      var pURL = input;
       fetch("https://pokeapi.co/api/v2/pokemon?limit=" + input)
         .then((response) => response.json())
         .then(function (allPokemon) {
@@ -129,22 +124,19 @@ function PokemonMenu() {
             fetchMultiple(pokemon);
           });
         });
-      }
-      document.getElementById("pokeSearchValue").value = "";
-      prevUrl = input;
-   
+    }
+    document.getElementById("pokeSearchValue").value = "";
+    prevUrl = input;
   } //end Multi
 
   //Fetch Random pokemon
   function catchRandom() {
     var alg = Math.floor(Math.random(1) * 898);
-    {
-      fetch("https://pokeapi.co/api/v2/pokemon/" + alg)
-        .then((response) => response.json())
-        .then(function (pokemon) {
-          renderPokemon(pokemon);
-        });
-    }
+    fetch("https://pokeapi.co/api/v2/pokemon/" + alg)
+      .then((response) => response.json())
+      .then(function (pokemon) {
+        renderPokemon(pokemon);
+      });
   }
 
   //Handles fetching multiple pokemon
@@ -238,7 +230,6 @@ function PokemonMenu() {
     container.prepend(pokeContainer);
   } //end multi
 
-
   //Misc Functions//
   //****************************************************************************************************************************** */
 
@@ -310,7 +301,6 @@ function PokemonMenu() {
     document.getElementById("pokeTest").innerHTML = "";
     document.getElementById("pokeSearchValue").value = "";
   }
-
 
   return (
     <div>
@@ -396,19 +386,19 @@ function PokemonMenu() {
                       </button>
                       <PokeModal />
                       <a href="/projects">
-                      <button
-                        id="pkClear"
-                        type="button"
-                        style={{
-                          backgroundColor: "orange",
-                          borderRadius: "25px",
-                          float: "right"
-                        }}
-                        className="ui black button large basic pkBtn"
-                      >
-                        Back to projects
-                      </button>
-                    </a>
+                        <button
+                          id="pkClear"
+                          type="button"
+                          style={{
+                            backgroundColor: "orange",
+                            borderRadius: "25px",
+                            float: "right",
+                          }}
+                          className="ui black button large basic pkBtn"
+                        >
+                          Back to projects
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>

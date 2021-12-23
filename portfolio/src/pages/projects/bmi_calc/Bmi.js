@@ -13,7 +13,6 @@ import Footer from "../../../components/bmiCalc/Footer";
 
 //Main component for BMI Project
 export default function Bmi() {
-
   let bmr, multiplyer, genderNumber, calorieButton;
 
   //Load required variables after component renders
@@ -135,7 +134,7 @@ export default function Bmi() {
   //Another variable for the main bmr calculation
   function genderMath() {
     let sel = document.getElementById("genders");
-    if (sel.value == 0) {
+    if (sel.value === 0) {
       genderNumber = 5;
     } else {
       genderNumber = -151;
@@ -146,13 +145,13 @@ export default function Bmi() {
   function activityMultiplyer() {
     let sel = document.getElementById("activity");
     console.log("value " + sel.value);
-    if (sel.value == 0) {
+    if (sel.value === 0) {
       multiplyer = 1.2;
-    } else if (sel.value == 1) {
+    } else if (sel.value === 1) {
       multiplyer = 1.375;
-    } else if (sel.value == 2) {
+    } else if (sel.value === 2) {
       multiplyer = 1.55;
-    } else if (sel.value == 3) {
+    } else if (sel.value === 3) {
       multiplyer = 1.725;
     } else {
       multiplyer = 1.9;

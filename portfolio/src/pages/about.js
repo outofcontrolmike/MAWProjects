@@ -1,6 +1,5 @@
 import Navigation from "../components/layout/Navigation";
 import myPicture from "../assets/img/profilePic-removebg-preview.png";
-import ContactCard from "../components/layout/ContactCard";
 
 //About section component
 function About() {
@@ -14,8 +13,8 @@ function About() {
         <div className="ui column" id="pictureContainer">
           <img
             className="ui image centered big rounded"
-            style={{}}
             src={myPicture}
+            alt={"Michael Wilson being professional"}
           />
         </div>
         <div className="ui column padded" id="aboutMe">
@@ -44,6 +43,7 @@ function About() {
               <a
                 style={{ fontSize: "large" }}
                 target="_blank"
+                rel="noreferrer"
                 href="https://reactjs.org/"
               >
                 React JS Library.
@@ -69,17 +69,24 @@ function About() {
               id="aboutLink"
               href="https://github.com/outofcontrolmike"
               target="_blank"
+              rel="noreferrer"
             >
-              <img className="ui avatar image" src="img/GitHub-Mark.png" />{" "}
+              <img
+                className="ui avatar image"
+                src="img/GitHub-Mark.png"
+                alt={"github"}
+              />{" "}
             </a>
             <a
               href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 id="aboutAvatar"
                 className="ui avatar image"
                 src="img/linkedin.png"
+                alt={"Linked in icon"}
                 style={{ backgroundColor: "white" }}
               />{" "}
             </a>

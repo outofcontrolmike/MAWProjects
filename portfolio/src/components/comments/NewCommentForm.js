@@ -1,5 +1,4 @@
-import { setState, useRef } from "react";
-import ContactCard from "../layout/ContactCard";
+import { useRef } from "react";
 
 //Comment form Component
 function NewCommentForm(props) {
@@ -49,7 +48,6 @@ function NewCommentForm(props) {
           <label style={{ backgroundcolor: "black" }}> Name or Alias</label>
           <input
             style={{ backgroundcolor: "black" }}
-            id="input"
             type="text"
             min="1"
             max="25"
@@ -74,7 +72,7 @@ function NewCommentForm(props) {
           />
         </div>
         <button
-          className="ui button basic fluid large"
+          className="ui button basic fluid large orange"
           id="submit"
           type="submit"
           style={{ color: "gold", fontSize: "1.4rem", outline: "ridge" }}

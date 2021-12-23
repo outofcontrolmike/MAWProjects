@@ -2,7 +2,6 @@
 function CommentItem(props) {
   console.log(props);
   console.log(props.timestamp);
-  let newDate = props.timestamp;
 
   let firstChar = props.name.charAt(0);
   return (

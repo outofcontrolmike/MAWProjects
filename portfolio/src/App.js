@@ -1,4 +1,4 @@
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 //Main Website imports
 import About from "./pages/About";
@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
-import Thanks from "./pages/Thanks"
+import Thanks from "./pages/Thanks";
 import AllCommentsPage from "./pages/AllComments";
 import Layout from "./components/layout/Layout";
 
@@ -14,7 +14,7 @@ import Layout from "./components/layout/Layout";
 import BeastWars from "./pages/projects/beast_wars/BeastWars";
 import BMI from "./pages/projects/bmi_calc/Bmi";
 import Breweries from "./pages/projects/breweries/Brewery";
-import Characters from "./pages/projects/characters/Characters"
+import Characters from "./pages/projects/characters/Characters";
 import CoolCalc from "./pages/projects/cool_calc/CoolCalc";
 import EarthWaterFire from "./pages/projects/earth_water_fire/EarthWaterFire";
 import FFSearch from "./pages/projects/final_fantasy_search/FFSearch";
@@ -22,7 +22,6 @@ import GreatRace from "./pages/projects/great_race/GreatRace";
 import Pokemon from "./pages/projects/pokemon/Pokemon";
 import TMNT from "./pages/projects/tmnt/Tmnt";
 import VueShop from "./pages/projects/vue_shopping_cart/VueCart";
-
 
 //Main app component that handles all the routing
 function App() {

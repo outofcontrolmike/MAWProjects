@@ -1,4 +1,3 @@
-import { Router, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router";
 
 //Thank you Page

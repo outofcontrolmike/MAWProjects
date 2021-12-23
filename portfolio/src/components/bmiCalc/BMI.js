@@ -16,7 +16,6 @@ export default function BMI() {
                 placeholder="Height"
                 type="tel"
                 maxlength="2"
-                maxlength="2"
               />
             </div>
             <div className="field">
@@ -30,7 +29,9 @@ export default function BMI() {
               />
             </div>
             <div className="field">
-              <h3 id="bmiInfo" style={{color: "black"}} ></h3>
+              <h3 id="bmiInfo" style={{ color: "black" }}>
+                {null}
+              </h3>
             </div>
           </div>
           <span className="ui">

@@ -31,8 +31,6 @@ export default function BMR() {
               <label id="bmi">Age</label>
               <input
                 type="tel"
-                maxlength="2"
-                id=""
                 maxlength="3"
                 max="110"
                 placeholder="Age"
@@ -73,7 +71,7 @@ export default function BMR() {
           </div>
           <div className="field">
             <div className="ui column " id="bmrInfo">
-              <h3></h3>
+              <h3>{null}</h3>
             </div>
           </div>
         </div>

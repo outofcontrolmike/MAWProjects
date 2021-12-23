@@ -220,7 +220,7 @@ function Resume() {
                 className="hidden content"
                 href="img/pdfs/Michael_Wilson_MTA - HTML_CSS.pdf"
               >
-                <img src={htmlPic} />
+                <img src={htmlPic} alt={"html Certification"} />
               </a>
             </div>
 
@@ -235,7 +235,11 @@ function Resume() {
                 className="hidden content"
                 href="img/pdfs/Michael_Wilson_MTA - Programming_Javascript.pdf"
               >
-                <img className="" src="img/javascript.JPG" />
+                <img
+                  className=""
+                  src="img/javascript.JPG"
+                  alt={"Javascript Certification"}
+                />
               </a>
             </div>
             <div
@@ -249,7 +253,11 @@ function Resume() {
                 className="hidden content"
                 href="img/pdfs/Michael_Wilson_MTA_Database_Administration_Fundmentals.pdf"
               >
-                <img className="" src="img/database.JPG" />
+                <img
+                  className=""
+                  src="img/database.JPG"
+                  alt={"SQL Certification"}
+                />
               </a>
             </div>
           </div>

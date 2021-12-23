@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Icon, Image, Modal } from "semantic-ui-react";
+import { Button, Image, Modal } from "semantic-ui-react";
 
 //Modal for Help option
 export default function BrewModal() {
@@ -73,7 +73,7 @@ export default function BrewModal() {
             <p>
               Any information about the pokemon and access to it's data is
               provided by the{" "}
-              <a target="_blank" href="https://pokeapi.co/">
+              <a target="_blank" href="https://pokeapi.co/" rel="noreferrer">
                 PokeDex API (Application Programming Interface)
               </a>{" "}
               Keep in mind that the data set is open source and is maintained by

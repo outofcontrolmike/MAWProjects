@@ -294,7 +294,7 @@ export default function BeastWars() {
           '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/beastWars/' +
           team +
           '"></i><button style="float:right;"';
-        var info = (document.getElementById("here").innerHTML += htmlCode);
+        document.getElementById("here").innerHTML += htmlCode;
       } //end for
     }
 
@@ -366,6 +366,7 @@ export default function BeastWars() {
             }}
           >
             <iframe
+              title={"Beast Wars Modal"}
               width="360"
               height="315"
               src="https://www.youtube.com/embed/ffUXChZ13dE?autoplay=1&cc_load_policy=1"

@@ -3,7 +3,6 @@ import CommentList from "../components/comments/CommentList";
 import Navigation from "../components/layout/Navigation";
 import NewCommentForm from "../components/comments/NewCommentForm";
 
-
 function AllCommentsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedComments, setLoadedComments] = useState([]);
@@ -26,12 +25,11 @@ function AllCommentsPage() {
           };
           comments.push(comment);
           comments.reverse();
-
         }
         setIsLoading(false);
         setLoadedComments(comments);
       });
-  }, []);
+  }, [url]);
 
   if (isLoading) {
     return (
@@ -51,17 +49,15 @@ function AllCommentsPage() {
   return (
     <div>
       <Navigation />
-    
-    <div className="ui two column doubling stackable grid padded inverted">
-      <div className="ui column inverted">
-      
-      <CommentList comments={loadedComments} />
-      </div>
-      <div className="column">
-          <NewCommentForm />
-      </div>
-    </div>
 
+      <div className="ui two column doubling stackable grid padded inverted">
+        <div className="ui column inverted">
+          <CommentList comments={loadedComments} />
+        </div>
+        <div className="column">
+          <NewCommentForm />
+        </div>
+      </div>
     </div>
   );
 }

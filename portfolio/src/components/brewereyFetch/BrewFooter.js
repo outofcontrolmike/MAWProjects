@@ -11,6 +11,7 @@ function BrewFooter() {
             style={{ color: "gold" }}
             href="https://chrisjmears.com/"
             target="_blank"
+            rel="noreferrer"
           >
             Chris J Mears{" "}
           </a>{" "}
@@ -19,6 +20,7 @@ function BrewFooter() {
             style={{ color: "gold" }}
             href="https://wanderingleafstudios.com/"
             target="_blank"
+            rel="noreferrer"
           >
             Wandering Leaf Studios LLC
           </a>{" "}
@@ -30,6 +32,7 @@ function BrewFooter() {
             style={{ color: "red" }}
             href="https://www.brewersassociation.org/"
             target="_blank"
+            rel="noreferrer"
           >
             Brewers Association
           </a>

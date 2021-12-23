@@ -61,7 +61,7 @@ function BrewMenu() {
         stateFilter.options[stateFilter.selectedIndex].innerHTML;
 
       //Determine State to filter by
-      if (stateFilterValue != "State") {
+      if (stateFilterValue !== "State") {
         search.value = "Results for breweries in " + stateFilterValue;
         url =
           "https://api.openbrewerydb.org/breweries?by_state=" +
@@ -77,7 +77,7 @@ function BrewMenu() {
       let brewValue = brewType.options[brewType.selectedIndex].value;
       let brewText = brewValue.toLowerCase();
 
-      if (brewValue != "Brewery Type") {
+      if (brewValue !== "Brewery Type") {
         search.value = "Results for " + brewValue + " breweries";
         url =
           "https://api.openbrewerydb.org/breweries?by_type=" +
@@ -89,7 +89,7 @@ function BrewMenu() {
         }
       }
 
-      if (stateFilterValue != "State" && brewValue != "Brewery Type") {
+      if (stateFilterValue !== "State" && brewValue !== "Brewery Type") {
         search.value =
           "Results for " + brewValue + " breweries " + "in " + stateFilterValue;
         url =
@@ -126,11 +126,7 @@ function BrewMenu() {
     let searchRadio = document.getElementById("searchRadio");
     let input = document.getElementById("brewInput").value;
 
-    let stateFilter = document.getElementById("stateFilter");
-    let stateFilterValue =
-      stateFilter.options[stateFilter.selectedIndex].innerHTML;
-
-    if (input != "") {
+    if (input !== "") {
       url =
         "https://api.openbrewerydb.org/breweries/search?query=" +
         input +
@@ -163,11 +159,11 @@ function BrewMenu() {
         url += "by_postal=" + input + "&";
       }
 
-      if (stateFilterValue != "State") {
+      if (stateFilterValue !== "State") {
         url += "by_state=" + stateFilterValue + "&";
       }
 
-      if (brewValue != "Brewery Type") {
+      if (brewValue !== "Brewery Type") {
         url += "by_type=" + brewText + "&";
       }
 
@@ -262,7 +258,7 @@ function BrewMenu() {
     breweryURL.style.maxWidth = "20px";
     breweryURL.target = "_blank";
 
-    if (breweryURL != "http://localhost:3000/null") {
+    if (breweryURL !== "http://localhost:3000/null") {
       breweryURL.innerHTML = breweryURL;
     } else {
       breweryURL.innerHTML = "N/A";
@@ -325,14 +321,14 @@ function BrewMenu() {
   return (
     <>
       <div className="ui container relaxed very padded stackable ">
-        <div className="ui transparent huge icon input stackable fluid" >
+        <div className="ui transparent huge icon input stackable fluid">
           <input
             onChange={handleChange}
             onClick={handleInput}
             id="brewInput"
             type="text"
             className="ui"
-            style={{ color: "red", textAlign: "center"}}
+            style={{ color: "red", textAlign: "center" }}
             placeholder="Type in a Brewery name or filter keyword"
           />
 

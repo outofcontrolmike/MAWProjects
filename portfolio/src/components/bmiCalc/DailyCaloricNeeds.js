@@ -21,7 +21,9 @@ export default function DailyCaloricNeeds() {
             </div>
             <div className="field">
               <div className="ui column">
-                <h3 id="dailyNeeds" style={{color: "black"}}></h3>
+                <h3 id="dailyNeeds" style={{ color: "black" }}>
+                  {null}
+                </h3>
               </div>
             </div>
           </div>

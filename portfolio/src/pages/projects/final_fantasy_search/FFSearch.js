@@ -3,7 +3,6 @@ import FFMenu from "../../../components/finalFantasy/FFMenu";
 
 //Main component for final fantasy search
 function FFSearch() {
-
   //Global Variables
   let count = 0;
   var prevURL = "";
@@ -35,7 +34,7 @@ function FFSearch() {
   //disable searchInput if advanced menu is open
   function disableSearch() {
     let search = document.getElementById("ffSearchInput");
-    let title = document.getElementById("title").className
+    let title = document.getElementById("title").className;
     search.disabled = title === "title ffTitle" ? true : false;
   }
 
@@ -71,7 +70,7 @@ function FFSearch() {
     let finalUrl = url + input;
 
     var ffURL = input;
-    while (prevURL != ffURL) {
+    while (prevURL !== ffURL) {
       fetch(finalUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -226,28 +225,28 @@ function FFSearch() {
     let genderText = gender.options[gender.selectedIndex].value;
 
     //gameTExt
-    if (gameText != "Game Select") {
+    if (gameText !== "Game Select") {
       origin = "&origin=" + gameText;
     } else {
       origin = "";
     }
 
     //jobText
-    if (jobText != "Job Select") {
+    if (jobText !== "Job Select") {
       jobParam = "&job=" + jobText;
     } else {
       jobParam = "";
     }
 
     //raceText
-    if (raceText != "Race Select") {
+    if (raceText !== "Race Select") {
       raceParam = "race=" + raceText;
     } else {
       raceParam = "";
     }
 
     //JobText
-    if (genderText != "Gender Select") {
+    if (genderText !== "Gender Select") {
       genderParam = "&gender=" + genderText;
     } else {
       genderParam = "";
@@ -351,7 +350,7 @@ function FFSearch() {
     column3.className = "ui column";
 
     let divider = create("hr");
-    divider.setAttribute('id', "gameHr");
+    divider.setAttribute("id", "gameHr");
 
     container.append(column, column2, divider, column3);
 
@@ -361,7 +360,6 @@ function FFSearch() {
     mainContainer.append(container, divider, column3);
     document.getElementById("ffList").append(mainContainer);
   }
-
 
   //Set up Alert  (Not being used currently)
   function createAlert(count, genderParam, jobParam, raceParam, origin) {
@@ -391,7 +389,6 @@ function FFSearch() {
   }
   return (
     <div className="ffContainer">
-
       <div id="app" className="ui container stackable">
         <FFMenu />
         <div id="ffList"></div>
