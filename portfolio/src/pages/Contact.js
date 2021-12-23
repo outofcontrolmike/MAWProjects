@@ -1,8 +1,5 @@
 import Navigation from "../components/layout/Navigation";
-import { useHistory } from "react-router";
-//Contact page requirements - > Email form (name,email, category selection, message)
 
-//Also place in a section with contact links (phone number, email address, social icons and links)
 export default function Contact() {
   return (
     <div>

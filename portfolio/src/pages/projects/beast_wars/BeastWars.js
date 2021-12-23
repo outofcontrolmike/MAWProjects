@@ -1,7 +1,5 @@
 //Beast wars functional component
 export default function BeastWars() {
-  
-
   //Call to load all the functions for page
   setTimeout(loadScript, 100);
 

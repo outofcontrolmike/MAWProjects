@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+//Navigation menu component
 function Navigation(props) {
   return (
     <div

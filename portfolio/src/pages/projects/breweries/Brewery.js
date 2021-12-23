@@ -11,7 +11,6 @@ export default function Brewery() {
       <BrewMenu />
       <div id="breweries" className="ui" style={{ marginTop: "50px" }}></div>
       <BrewFooter />
-      {/* Brew Modal */}
     </body>
   );
 }

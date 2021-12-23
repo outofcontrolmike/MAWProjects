@@ -1,5 +1,6 @@
 import CommentItem from "./CommentItem";
 
+//Comment List component
 function CommentList(props) {
   console.log("props", props);
 

@@ -24,7 +24,7 @@ import TMNT from "./pages/projects/tmnt/Tmnt";
 import VueShop from "./pages/projects/vue_shopping_cart/VueCart";
 
 
-
+//Main app component that handles all the routing
 function App() {
   return (
     <Layout>

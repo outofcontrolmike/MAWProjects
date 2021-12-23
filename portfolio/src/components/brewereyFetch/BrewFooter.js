@@ -1,5 +1,6 @@
 import React from "react";
 
+//Footer component
 function BrewFooter() {
   return (
     <div>

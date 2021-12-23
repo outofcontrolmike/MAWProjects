@@ -1,3 +1,4 @@
+//Comment Item for used for mapping
 function CommentItem(props) {
   console.log(props);
   console.log(props.timestamp);

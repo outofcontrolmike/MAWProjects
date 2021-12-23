@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import Navigation from "../components/layout/Navigation";
 
+//Project's information to display
 function Projects(props) {
+  
   //Fixes render issue - Function was mapping before the component rendered
   setTimeout(mapOver, 1);
 

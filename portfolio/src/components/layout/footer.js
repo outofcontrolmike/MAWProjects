@@ -1,5 +1,6 @@
 import ContactCard from "./ContactCard";
 
+//Unused Footer Component
 function Footer() {
   return (
     <div className="ui vertical footer" id="footer" style={{ color: "white" }}>

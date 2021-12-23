@@ -1,5 +1,5 @@
 
-
+//Used in routing
 function Layout(props) {
     return(
         <div className="ui">

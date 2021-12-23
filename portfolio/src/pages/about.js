@@ -1,8 +1,8 @@
 import Navigation from "../components/layout/Navigation";
-import Footer from "../components/layout/Footer";
 import myPicture from "../assets/img/profilePic-removebg-preview.png";
 import ContactCard from "../components/layout/ContactCard";
 
+//About section component
 function About() {
   return (
     <>

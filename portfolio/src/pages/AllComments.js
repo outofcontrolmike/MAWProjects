@@ -3,6 +3,7 @@ import CommentList from "../components/comments/CommentList";
 import Navigation from "../components/layout/Navigation";
 import NewCommentForm from "../components/comments/NewCommentForm";
 
+
 function AllCommentsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedComments, setLoadedComments] = useState([]);

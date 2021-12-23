@@ -1,3 +1,4 @@
+//Image collection 
 export default function Images() {
   return (
     <>

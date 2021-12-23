@@ -62,10 +62,6 @@ i:hover {
   color: orange;
 }
 
-#about:hover {
-  color:black;
-}
-
 .learnMore:hover {
   position: relative;
   bottom: .15rem;

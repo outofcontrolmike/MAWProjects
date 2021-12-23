@@ -13,7 +13,7 @@ import Footer from "../../../components/bmiCalc/Footer";
 
 //Main component for BMI Project
 export default function Bmi() {
-  //Global Variables
+
   let bmr, multiplyer, genderNumber, calorieButton;
 
   //Load required variables after component renders

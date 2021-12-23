@@ -1,4 +1,6 @@
 import picture from "../assets/img/profilePic-removebg-preview.png";
+
+//Landing page component
 function Home() {
 
 
@@ -15,10 +17,9 @@ function Home() {
           <button className="ui button massive inverted basic learnMore yellow" style={{marginTop: "2rem"}}>
               <a
                 href="about"
-                style={{color: "gold", outlineColor : "blue"}}
+                style={{color: "gold"}}
               >
                 Learn More </a>
-            
           </button>
         </div>
       </div>

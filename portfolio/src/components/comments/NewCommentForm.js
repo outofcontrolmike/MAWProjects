@@ -1,5 +1,6 @@
 import { setState, useRef } from "react";
 
+//Comment form Component
 function NewCommentForm(props) {
   const nameRef = useRef();
   const messageRef = useRef();

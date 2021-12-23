@@ -1,6 +1,7 @@
 import Navigation from "../components/layout/Navigation";
 import htmlPic from "../assets/img/html.png";
 
+//Resume Component
 function Resume() {
   return (
     <div>

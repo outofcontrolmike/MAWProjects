@@ -1,5 +1,6 @@
 import React from "react";
 
+//Contact Card component
 export default function ContactCard() {
   return (
     <div className="ui card container" id="contactCard">
