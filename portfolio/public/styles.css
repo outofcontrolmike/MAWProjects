@@ -15,9 +15,7 @@ option {
   color: black;
 }
 
-p,
-h1 {
-  font-family: "Forum", cursive;
+p {
 }
 
 .ui.modal {
@@ -28,7 +26,7 @@ h1 {
 /*Navigation menu */
 #navigation {
   padding-left: 20rem;
-  font-family: "forum", cursive;
+  font-family: "Roboto Mono", monospace;
   color: gold;
 }
 
@@ -43,7 +41,7 @@ h1:hover {
 }
 
 #landingPageSub {
-  font-family: "Oooh Baby", cursive;
+  font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
 }
 
@@ -85,11 +83,13 @@ i:hover {
 /*****************************About page ********************************************************/
 #about {
   background-color: black;
-  font-size: 1.5em;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
 }
 
 #aboutMe {
   margin-top: 4rem;
+  font-size: 1.5rem;
 }
 
 #contactCard {
@@ -103,8 +103,8 @@ i:hover {
 
 /**********************************Resume Page****************************************************/
 
-#cursiveHeader {
-  font-family: "Oooh Baby", cursive;
+#roboHeader {
+  font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
 }
 hr:hover {
@@ -126,6 +126,10 @@ hr:hover {
 #resumeSegment > h2,
 h3 {
   color: orange;
+  font-family: "Roboto Mono", monospace;
+}
+#jobLocation {
+  font-family: "Roboto Mono", monospace;
 }
 
 #resumeVisible {
@@ -136,6 +140,7 @@ h3 {
   padding-top: 6rem;
   border: grey 2px solid;
   border-style: outset;
+  font-family: "Roboto Mono", monospace;
 }
 
 #resumeSegment:hover {
@@ -155,13 +160,14 @@ h3 {
 #resume {
   height: 100vh;
   overflow-y: scroll;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
 }
 
 #myName {
   color: gold;
-  font-family: "Oooh Baby", cursive;
+  font-family: "Roboto Mono", monospace;
   font-weight: 900;
-  font-size: xxx-large;
 }
 
 #myName:hover,
@@ -185,7 +191,7 @@ h3 {
 
 /*************************************Projects Page **********************************************/
 #list {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 #projectMeta {
@@ -207,6 +213,7 @@ h3 {
   background: black;
   border: 1px solid gold;
   font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
 }
 
 #category {
@@ -224,10 +231,21 @@ h3 {
   font-weight: bolder;
 }
 
+.commentText,
+#submit {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+}
+
 /********************Thank you page *************************************************************/
 #thankYou {
   position: relative;
   top: 20rem;
+}
+.thankyouText,
+.thankyouH1,
+.thankyouButton {
+  font-family: "Roboto Mono", monospace;
 }
 
 /****************************Cool Calc Specifically *************************/
@@ -597,6 +615,10 @@ path {
   margin-top: 30%;
   text-align: center;
 }
+#brewFooter > p {
+  font-family: "forum", cursive;
+  font-size: 1.4 rem;
+}
 
 .beer {
   position: relative;
@@ -699,8 +721,8 @@ path {
 #pokeP {
   text-align: center;
   word-break: break-all;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.3rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
 }
 
 #inputContainer {
@@ -759,6 +781,7 @@ path {
   color: black;
   padding: 1rem;
   font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
 }
 
 .mobileImage {
@@ -814,11 +837,12 @@ path {
 }
 
 #pokeHr {
-  border-color: white;
+  border-color: black;
 }
 
 #pokeModalDesc {
   color: black;
+  font-family: "Roboto Mono", monospace;
 }
 
 .pokemonDropdownIcon {
@@ -1039,12 +1063,12 @@ path {
 
 @media only screen and (max-width: 1000px) {
   #bmiBacktoProjects {
-    width: 100%;
-    margin: 10px;
+    position: relative;
+    left: unset;
   }
 
   .bmiFooter {
-    height: 10rem;
+    height: 16rem;
   }
 }
 

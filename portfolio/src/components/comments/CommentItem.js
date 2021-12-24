@@ -18,7 +18,7 @@ function CommentItem(props) {
             {props.timestamp}
           </div>
         </div>
-        <div className="extra text" style={{ color: "white" }}>
+        <div className="extra text commentText" style={{ color: "white" }}>
           {props.comment}
         </div>
       </div>

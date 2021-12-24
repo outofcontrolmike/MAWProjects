@@ -8,12 +8,14 @@ function Resume() {
       <Navigation />
       <div className="ui two column relaxed very padded stackable grid">
         <div className="ui column" id="resume">
-          <h1 id="cursiveHeader">Work Experience / Education</h1>
+          <h1 id="roboHeader">Work Experience / Education</h1>
           <div id="resumeSegment">
             <h2>
               <b>Junior React Developer</b>
             </h2>
-            <p style={{ color: "yellow" }}>Bearded Dev Ops - Willard, MO</p>
+            <p id="jobLocation" style={{ color: "yellow" }}>
+              Bearded Dev Ops - Willard, MO
+            </p>
             <h4>
               <i style={{ color: "gray" }}>March 2021 to Present</i>
             </h4>
@@ -31,7 +33,7 @@ function Resume() {
             <h2>
               <b>Mapper / Junior Developer</b>
             </h2>
-            <p style={{ color: "yellow" }}>
+            <p id="jobLocation" style={{ color: "yellow" }}>
               Market Maker - Springfield, MO 65803
             </p>
             <h4>
@@ -59,7 +61,7 @@ function Resume() {
             <h2>
               <b>Web Assistant Services - Work Study</b>
             </h2>
-            <p style={{ color: "yellow" }}>
+            <p id="jobLocation" style={{ color: "yellow" }}>
               Ozarks Technical Community College - Springfield, MO
             </p>
             <h4>
@@ -79,7 +81,9 @@ function Resume() {
             <h2>
               <b>Web Store Manager / Personal Assistant</b>
             </h2>
-            <p style={{ color: "yellow" }}>Farm 2 Counter - Springfield, MO</p>
+            <p id="jobLocation" style={{ color: "yellow" }}>
+              Farm 2 Counter - Springfield, MO
+            </p>
             <h4>
               <i style={{ color: "gray" }}>April 2017 - June 2019</i>
             </h4>
@@ -104,7 +108,7 @@ function Resume() {
             <h2>
               <b>Web Store Manager</b>
             </h2>
-            <p style={{ color: "yellow" }}>
+            <p id="jobLocation" style={{ color: "yellow" }}>
               Spring Valley Herbs & Natural Foods - Springfield, MO
             </p>
             <h4>
@@ -122,7 +126,9 @@ function Resume() {
             <h2>
               <b>Cook/Delivery Driver</b>
             </h2>
-            <p style={{ color: "yellow" }}>Godfathers Pizza - Nixa, MO</p>
+            <p id="jobLocation" style={{ color: "yellow" }}>
+              Godfathers Pizza - Nixa, MO
+            </p>
             <h4>
               <i style={{ color: "gray" }}>June 2007 - April 2015</i>
             </h4>
@@ -135,13 +141,15 @@ function Resume() {
             </p>
           </div>
           {/* Education segment */}
-          <h1 style={{ marginTop: "4rem" }}>Education</h1>
+          <h1 id="roboHeader" style={{ marginTop: "4rem" }}>
+            Education
+          </h1>
           <div id="resumeSegment">
             <h2>
               <b>Associate in Applied Science - Computer Information Science</b>
             </h2>
             <br></br>
-            <p style={{ color: "yellow" }}>
+            <p id="jobLocation" style={{ color: "yellow" }}>
               Ozarks Technical Community College - Springfield, MO
             </p>
             <h4>
@@ -161,7 +169,7 @@ function Resume() {
             <h2>
               <b>Associate of Arts - General Education</b>
             </h2>
-            <p style={{ color: "yellow" }}>
+            <p id="jobLocation" style={{ color: "yellow" }}>
               Ozarks Technical Community College - Springfield, MO
             </p>
             <h4>
@@ -176,7 +184,7 @@ function Resume() {
         </div>
         {/* End Education */}
         <div className="ui column" id="techStack">
-          <h1 id="cursiveHeader">Tech Stack / Certifications</h1>{" "}
+          <h1 id="roboHeader">Tech Stack / Certifications</h1>{" "}
           <h3 style={{ color: "orange" }}>Daily Tools</h3>
           <div className="ui list">
             <i className="html5 icon huge"></i>
