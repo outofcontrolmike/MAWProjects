@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "http://mawportfolio.online/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "jquery": "^3.6.0",
     "nodemailer": "^6.7.0",
+    "npm-buildpack": "^0.1.10",
     "react": "^17.0.2",
     "react-audio-element": "^1.0.5",
     "react-audio-player": "^0.17.0",
