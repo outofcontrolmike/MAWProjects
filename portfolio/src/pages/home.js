@@ -1,4 +1,4 @@
-import picture from "../assets/img/profilePic-removebg-preview.png";
+import picture from "../assets/img/me.png";
 
 //Landing page component
 function Home() {
@@ -32,7 +32,7 @@ function Home() {
       <div className="ui column">
         <img
           className="ui image big center aligned"
-          style={{ textAlign: "center", marginLeft: "15%" }}
+          style={{ textAlign: "center", marginLeft: "15%", marginTop: "10%" }}
           alt={"Me"}
           src={picture}
         ></img>

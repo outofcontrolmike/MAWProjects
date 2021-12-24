@@ -1,5 +1,5 @@
 import Navigation from "../components/layout/Navigation";
-import myPicture from "../assets/img/profilePic-removebg-preview.png";
+import myPicture from "../assets/img/think.png";
 
 //About section component
 function About() {
