@@ -31,8 +31,8 @@ function Home() {
       </div>
       <div className="ui column">
         <img
-          className="ui image big center aligned"
-          style={{ textAlign: "center", marginLeft: "15%", marginTop: "10%" }}
+          className="ui image big centered rounded"
+          style={{ marginTop: "6rem" }}
           alt={"Me"}
           src={picture}
         ></img>

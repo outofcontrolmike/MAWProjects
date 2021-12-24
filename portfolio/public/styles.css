@@ -15,9 +15,6 @@ option {
   color: black;
 }
 
-p {
-}
-
 .ui.modal {
   height: fit-content;
   font-size: 2rem;
@@ -25,7 +22,7 @@ p {
 
 /*Navigation menu */
 #navigation {
-  padding-left: 20rem;
+  padding-left: 10%;
   font-family: "Roboto Mono", monospace;
   color: gold;
 }
@@ -80,6 +77,13 @@ i:hover {
   }
 }
 
+/* Media queries  */
+@media only screen and (max-width: 765px) {
+  #navigation {
+    padding-left: unset;
+  }
+}
+
 /*****************************About page ********************************************************/
 #about {
   background-color: black;
@@ -99,6 +103,11 @@ i:hover {
 
 #contactCard > div > div {
   color: yellow;
+}
+
+.homePicutre {
+  text-align: center;
+  margin: auto;
 }
 
 /**********************************Resume Page****************************************************/
@@ -504,6 +513,11 @@ path {
     text-align: center;
   }
 
+  #tFooter {
+    padding-bottom: 4rem;
+    margin-top: 0;
+  }
+
   .ui > button {
     width: 100%;
     height: fit-content;
@@ -865,6 +879,10 @@ path {
     font-size: xx-small;
     height: 30px;
   }
+
+  #pokeSearchTools {
+    padding: 3rem;
+  }
 }
 
 /* ************************END POKEMON****************************************** */
@@ -1068,7 +1086,12 @@ path {
   }
 
   .bmiFooter {
-    height: 16rem;
+    height: 18rem;
+  }
+
+  #bmiInfo,
+  #dailyNeeds {
+    padding-bottom: 5rem;
   }
 }
 

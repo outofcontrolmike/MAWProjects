@@ -137,7 +137,6 @@ export default function CoolCalc() {
 
   return (
     <>
-      <HomeLink />
       <body style={{ marginTop: "100px" }}>
         <div
           className="ui two column container very padded relaxed"
@@ -275,6 +274,9 @@ export default function CoolCalc() {
           </div>
         </div>
       </body>
+      <span style={{ marginTop: "5rem" }}>
+        <HomeLink />
+      </span>
     </>
   );
 }
