@@ -16,7 +16,7 @@ function Home() {
         </span>
 
         <h2 id="landingPageSub">
-          Aspring Front End Developer Currently Working With React
+          Aspiring Front End Developer Currently Working With React
         </h2>
         <div>
           <button
