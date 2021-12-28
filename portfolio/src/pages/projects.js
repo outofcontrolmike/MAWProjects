@@ -31,7 +31,7 @@ function Projects(props) {
     {
       img: "../img/pokemonProject.JPG",
       href: "/pokemon",
-      name: "Pokedex API Call",
+      name: "Pokemon Viewer",
       meta: "Javascript, Bootstrap & Fomantic",
       desc: "Want to look at pokemon art and information about pokemon? Test this project out!.",
       created: "Created: September 2020",
@@ -57,7 +57,7 @@ function Projects(props) {
       name: "Beast Wars JS",
       meta: "Vanilla JS, Jquery & Fomantic UI",
       desc: "A Beast Wars web application that displays the 1st generation of transformers from the 90's TV series. Also includes sorting options for the characters.",
-      created: "Created: Feburary 6th 2021",
+      created: "Created: February 6th 2021",
       lastUpdated: "Last Updated: November 14th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/beast_wars/BeastWars.js",
@@ -69,7 +69,7 @@ function Projects(props) {
       name: "Cool Calculator",
       meta: "React,Fomantic",
       desc: "A flashy basic Calculator.",
-      created: "Created: Feburary 10th 2021",
+      created: "Created: February 10th 2021",
       lastUpdated: "Last Updated: November 9th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/cool_calc/CoolCalc.js",
@@ -114,7 +114,7 @@ function Projects(props) {
       href: "/bmi",
       name: "BMI BMR Calculator",
       meta: "Javascript & Fomantic",
-      desc: "A reference tool for determing BMI and BMR + Daily caloric Needs.",
+      desc: "A reference tool for determining BMI and BMR + Daily caloric Needs.",
       created: "Created: May 30th 2021",
       lastUpdated: "Last updated: December 15th 2021",
       github:
@@ -192,7 +192,7 @@ function Projects(props) {
     descContainer.innerHTML = project.desc;
 
     let createdDate = document.createElement("div");
-    createdDate.classname = "description";
+    createdDate.className = "description";
     createdDate.innerHTML = project.created;
     createdDate.style.paddingTop = "10px";
     createdDate.style.fontWeight = "bolder";

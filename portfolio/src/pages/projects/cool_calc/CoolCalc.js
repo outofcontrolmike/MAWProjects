@@ -1,5 +1,5 @@
 //Cool Calc Project - in React
-/*Originally wrote Febuarary 14th 2021
+/*Originally wrote February 14th 2021
   Rewrote November 9th 2021*/
 
 import HomeLink from "../../../components/links/Home";
@@ -8,7 +8,7 @@ export default function CoolCalc() {
   //Had to set timeout because component wasn't rendering correctly
   setTimeout(loadEverything, 5);
 
-  //Loads all the functionallity
+  //Loads all the functionality
   function loadEverything() {
     //grand total
     let total = document.getElementById("total");

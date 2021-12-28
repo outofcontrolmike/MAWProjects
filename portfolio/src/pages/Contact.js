@@ -33,7 +33,7 @@ export default function Contact() {
               type="text"
               required
               name="email"
-              placeholder="Prefered Email Address"
+              placeholder="Preferred Email Address"
             />
           </div>
           <div className="field">

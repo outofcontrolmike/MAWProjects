@@ -6,7 +6,7 @@ export default function DailyCaloricNeeds() {
     <div className="ui container">
       <div id="normalCards" className="ui raised very padded text segment">
         <div className="ui large form">
-          <h1 style={{ color: "black" }}> Daily Needs Caclulation</h1>
+          <h1 style={{ color: "black" }}> Daily Needs Calculation</h1>
           <hr />
           <div className="two fields">
             <div className="field">
@@ -15,7 +15,7 @@ export default function DailyCaloricNeeds() {
                 <option value="0">Sedentary</option>
                 <option value="1">Lightly Active</option>
                 <option value="2">Active</option>
-                <option value="3">Moderatly Active</option>
+                <option value="3">Moderately Active</option>
                 <option value="4">Athletic</option>
               </select>
             </div>

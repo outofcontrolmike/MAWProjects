@@ -3,11 +3,11 @@ export default function BeastWars() {
   //Call to load all the functions for page
   setTimeout(loadScript, 100);
 
-  //Loads all of our functionallity
+  //Loads all of our functionality 
   function loadScript() {
     document.getElementById("here").innerHTML = "";
 
-    //Assigning event listerns to sorting buttons
+    //Assigning event listenrs to sorting buttons
     function assignEventListeners() {
       let sortMaximalsBtn = document.getElementById("sortMaximals");
       sortMaximalsBtn.addEventListener("click", () => {
@@ -44,7 +44,7 @@ export default function BeastWars() {
         name: "Optimus Primal",
         team: "Maximal",
         animal: "Gorilla",
-        personallity: "Well rounded behavior",
+        Personality : "Well rounded behavior",
         role: "Maximal Leader",
         img: "optimus1.jpg",
         img2: "optimus2.jpg",
@@ -54,7 +54,7 @@ export default function BeastWars() {
         name: "Rhinox",
         team: "Maximal",
         animal: "Rhinoceros",
-        personallity: "Always lookingout for the team",
+        Personality : "Always looking out for the team",
         role: "Systems Admin",
         img: "rhinox1.jpg",
         img2: "rhinox2.jpg",
@@ -64,7 +64,7 @@ export default function BeastWars() {
         name: "Cheetor",
         team: "Maximal",
         animal: "Cheetah",
-        personallity: "In over his head",
+        Personality : "In over his head",
         role: "Scouter",
         img: "cheetor1.jpg",
         img2: "cheetor2.jpg",
@@ -74,7 +74,7 @@ export default function BeastWars() {
         name: "Rattrap",
         team: "Maximal",
         animal: "Rat",
-        personallity: "very cocky",
+        Personality : "very cocky",
         role: "Bomb specialist / spy",
         img: "rat1.jpg",
         img2: "rat2.jpg",
@@ -84,7 +84,7 @@ export default function BeastWars() {
         name: "Dinobot",
         team: "Maximal",
         animal: "Velociraptor",
-        personallity: "Honerable",
+        Personality : "Honorable",
         role: "Second in command",
         img: "dino1.jpg",
         img2: "dino2.jpg",
@@ -94,7 +94,7 @@ export default function BeastWars() {
         name: "Tigatron",
         team: "Maximal",
         animal: "White Tiger",
-        personallity: "Trustworthy",
+        Personality : "Trustworthy",
         role: "Backup spy",
         img: "tiga1.jpg",
         img2: "tiga2.jpg",
@@ -104,7 +104,7 @@ export default function BeastWars() {
         name: "Airazor",
         team: "Maximal",
         animal: "Peregrine falcon",
-        personallity: "Restoring",
+        Personality : "Restoring",
         role: "Navigator",
         img: "air1.jpg",
         img2: "air2.jpg",
@@ -114,7 +114,7 @@ export default function BeastWars() {
         name: "Silverbolt",
         team: "Maximal",
         animal: "Timberwolf-golden eagle condor",
-        personallity: "Galliant",
+        Personality : "Gallant",
         role: "Melee Fighter",
         img: "silver1.jpg",
         img2: "silver2.jpg",
@@ -124,7 +124,7 @@ export default function BeastWars() {
         name: "Depth Charge",
         team: "Maximal",
         animal: "Manta ray",
-        personallity: "Egalitarian",
+        Personality : "Egalitarian",
         role: "Defender",
         img: "depth1.jpg",
         img2: "depth2.jpg",
@@ -135,7 +135,7 @@ export default function BeastWars() {
         name: "Megatron",
         team: "Predacon",
         animal: "Dinosaur",
-        personallity: "Meniachal",
+        Personality : "maniacal",
         role: "Predacon Leader",
         img: "megatron11.jpg",
         img2: "megatron1.jpg",
@@ -145,7 +145,7 @@ export default function BeastWars() {
         name: "Waspinator",
         team: "Predacon",
         animal: "Wasp",
-        personallity: "Deceptable",
+        Personality : "Devious",
         role: "Spy",
         img: "wasp1.jpg",
         img2: "wasp2.jpg",
@@ -155,8 +155,8 @@ export default function BeastWars() {
         name: "Scorponok",
         team: "Predacon",
         animal: "Scorpion",
-        personallity: "Sneaky",
-        role: "Missle Launcher",
+        Personality : "Sneaky",
+        role: "Missile Launcher",
         img: "scorp1.jpg",
         img2: "scorp2.jpg",
       },
@@ -165,7 +165,7 @@ export default function BeastWars() {
         name: "Terrosaur",
         team: "Predacon",
         animal: "Pterodactyl",
-        personallity: "Betraying",
+        Personality : "Betraying",
         role: "Scout",
         img: "p1.jpg",
         img2: "p2.jpg",
@@ -175,7 +175,7 @@ export default function BeastWars() {
         name: "Tarrantulas",
         team: "Predacon",
         animal: "Tarantula",
-        personallity: "Mad Scientist",
+        Personality : "Mad Scientist",
         role: "Predacon Leader",
         img: "tara1.jpg",
         img2: "tara2.jpg",
@@ -185,7 +185,7 @@ export default function BeastWars() {
         name: "Blackarachnia",
         team: "Predacon",
         animal: "Black Widow Spider",
-        personallity: "Trickster",
+        Personality : "Trickster",
         role: "Maximal in Disguise",
         img: "black1.jpg",
         img2: "black2.jpg",
@@ -195,8 +195,8 @@ export default function BeastWars() {
         name: "Inferno",
         team: "Predacon",
         animal: "Fire Ant",
-        personallity: "Obnoxious",
-        role: "Cheif Commander",
+        Personality : "Obnoxious",
+        role: "Chief Commander",
         img: "inferno1.jpg",
         img2: "inferno2.jpg",
       },
@@ -205,7 +205,7 @@ export default function BeastWars() {
         name: "Quickstrike",
         team: "Predacon",
         animal: "Scorpion / Cobra",
-        personallity: "Loud",
+        Personality : "Loud",
         role: "Fighter",
         img: "quick1.jpg",
         img2: "quick2.jpg",
@@ -215,7 +215,7 @@ export default function BeastWars() {
         name: "Rampage",
         team: "Predacon",
         animal: "Red King Crab",
-        personallity: "Insane",
+        Personality : "Insane",
         role: "Conscript",
         img: "rampage1.jpg",
         img2: "rampage2.jpg",
@@ -289,8 +289,8 @@ export default function BeastWars() {
           "Animal: " +
           sort[i].animal +
           '</div><div class="description">' +
-          "Personallity: " +
-          sort[i].personallity +
+          "Personality : " +
+          sort[i].Personality  +
           '</div></div><div id="symbolColor" class="extra content"><i class=""><img style="height:25px; width:25px;" src="img/beastWars/' +
           team +
           '"></i><button style="float:right;"';

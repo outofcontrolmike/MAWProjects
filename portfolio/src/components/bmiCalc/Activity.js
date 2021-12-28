@@ -1,6 +1,6 @@
 import React from "react";
 
-//Acitivy Chart info
+//Activity Chart info
 export default function Activity() {
   return (
     <div id="bmrRef" className="ui container segment raised">
@@ -13,7 +13,7 @@ export default function Activity() {
         </thead>
         <tbody>
           <tr>
-            <td data-label="Name">Sedentary: little or no excercise</td>
+            <td data-label="Name">Sedentary: little or no exercise</td>
           </tr>
           <tr>
             <td data-label="Name">Lightly Active: Exercise 1-3 times/week:</td>
@@ -23,7 +23,7 @@ export default function Activity() {
           </tr>
           <tr>
             <td data-label="Name">
-              Moderatly Active: Daily exercsising or intense exercise 3-4
+              Moderately Active: Daily exercising or intense exercise 3-4
               times/week
             </td>
           </tr>

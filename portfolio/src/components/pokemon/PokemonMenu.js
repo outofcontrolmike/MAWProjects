@@ -1,7 +1,7 @@
 import React from "react";
 import PokeModal from "./PokemonModal";
 
-//Function compoment for Pokemon Menu
+//Function component for Pokemon Menu
 function PokemonMenu() {
   var prevUrl = "";
 
@@ -91,7 +91,7 @@ function PokemonMenu() {
         prevUrl = pURL;
       }
     }
-    //if not an interger or empty string
+    //if not an integer or empty string
     else if (input !== "") {
       var LowerInput = input.toLowerCase(0);
       while (prevUrl !== input) {

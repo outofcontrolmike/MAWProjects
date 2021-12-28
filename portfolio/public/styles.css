@@ -1,5 +1,5 @@
-/*This is a global style sheet for this whole portolio project.
-//There are also styles for individual projects as well.  Each section is labeled appropriatley.  
+/*This is a global style sheet for this whole portfolio project.
+//There are also styles for individual projects as well.  Each section is labeled appropriately.  
 //Also, there is inline styling as well for all the projects.  So don't think all the styling is controlled from this sheet.
 
 //***********************GLOBAL Styling***********************************************************/
@@ -105,10 +105,6 @@ i:hover {
   color: yellow;
 }
 
-.homePicutre {
-  text-align: center;
-  margin: auto;
-}
 
 /**********************************Resume Page****************************************************/
 
@@ -1067,7 +1063,7 @@ path {
   margin-left: 5px;
 }
 
-/* Styles bmi calcuation output */
+/* Styles bmi calculation output */
 #bmiInfo {
   position: relative;
   top: 35%;

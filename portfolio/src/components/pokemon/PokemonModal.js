@@ -33,7 +33,7 @@ export default function BrewModal() {
           <div id="pokeModalDesc">
             <h3 style={{ paddingTop: "10px" }}>Pokdex Javascript Info</h3>
             <p>
-              Weclome to this small web app! The first option you have avaiable
+              Welcome to this small web app! The first option you have available
               is searching by pokemon name. You can also enter a pokemon's ID if
               you know it. Once you filled out the input field you can either
               press enter or select the search icon.
@@ -46,19 +46,19 @@ export default function BrewModal() {
             <hr />
             <h3>Search Options</h3>
             <p>
-              You also have the option to retreive a list of pokemon. To do this
+              You also have the option to retrieve a list of pokemon. To do this
               you'll select the Collection option in the advanced Search. Once
               selected, enter the number of pokemon you want to receive and the
               list should generate the amount of pokemon you entered. It tries
               it's best to list them out in order but doesn't always work.
             </p>
             <hr />
-            <h3>Reseting page</h3>
+            <h3>Resetting page</h3>
             <p>You can easily clear the list of pokemon by clicking Reset. </p>
             <hr />
             <h3>Random Fetching</h3>
             <p>
-              If you click the Pokeball you will retreive a random pokemon.
+              If you click the Pokeball you will retrieve a random pokemon.
               Incase you're wondering how this works, here's an explanation
               below:
             </p>

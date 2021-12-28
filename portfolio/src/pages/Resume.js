@@ -72,8 +72,8 @@ function Resume() {
               Services requirements.
             </p>
             <p>
-              When I wasn't assigned tasks I utlized my time for studying CSS
-              and Boostrap through W3 Schools.
+              When I wasn't assigned tasks I utilized my time for studying CSS
+              and Bootstrap through W3 Schools.
             </p>
             <br></br>
           </div>
@@ -90,16 +90,16 @@ function Resume() {
             <p>
               Managed a local web store delivery service. This included
               communicating with clients, purveyors, customers as well as the
-              creator of our online delivery service. Also lncluded inventory
-              management, waste management, meal planning, order preperation,
+              creator of our online delivery service. Also included inventory
+              management, waste management, meal planning, order preparation,
               package fulfillment and delivering said packages to customers.
             </p>
 
             <p>
               I also managed a physical store, that held the space for the web
               store. The roles involved were customer service, inventory
-              managment, POS usage and setup, payroll, opening and closing the
-              business, bank desposits and much more.
+              management, POS usage and setup, payroll, opening and closing the
+              business, bank deposits and much more.
             </p>
             <p></p>
             <br></br>
@@ -115,9 +115,9 @@ function Resume() {
               <i style={{ color: "gray" }}>March 2015 - April 2017</i>
             </h4>
             <p>
-              Manager of a Woocommerce based store. The duties for this job
+              Manager of a WooCommerce based store. The duties for this job
               included: customer service, order fulfillment, inventory
-              managment, item listing management, search engine optimization,
+              management, item listing management, search engine optimization,
               photography.{" "}
             </p>
             <br></br>
@@ -135,8 +135,8 @@ function Resume() {
             <p>
               This was my first place of employment. I worked the following
               positions throughout the time: dishwasher, prep, cook, phone
-              answering, buser, delivery driver. I learned a lot about customer
-              service throughout the time and also learned how to accomdate in
+              answering, busser, delivery driver. I learned a lot about customer
+              service throughout the time and also learned how to accommodate during
               stressful situations with limited options.
             </p>
           </div>
@@ -157,8 +157,8 @@ function Resume() {
             </h4>
             <p>
               I studied the following stacks and concepts during my time
-              obataining this degree: C#, Java, Javascript, PHP, HTML/CSS, SQL,
-              Web Development, Systems Analaysis and Design, Databases and
+              obtaining this degree: C#, Java, Javascript, PHP, HTML/CSS, SQL,
+              Web Development, Systems Analysis and Design, Databases and
               Project Management.
             </p>
             <p></p>
@@ -176,8 +176,8 @@ function Resume() {
               <i style={{ color: "gray" }}>August 2010 - May 2013</i>
             </h4>
             <p>
-              Stuided the following subjects during this degree: Culinary Arts
-              and Hospitallity Management, Automotive Repair, General Education.
+              Studied the following subjects during this degree: Culinary Arts
+              and Hospitality Management, Automotive Repair, General Education.
             </p>
             <p></p>
           </div>

@@ -50,7 +50,7 @@ export default function Bmi() {
     });
   }
 
-  //Prevents user from submiting empty calculations
+  //Prevents user from submitting empty calculations
   function toggleButtons(buttonToDisable, handleToggle) {
     if (handleToggle === "false") {
       handleToggle = false;
@@ -82,7 +82,7 @@ export default function Bmi() {
     document.getElementById("bmrHeight").value = height;
   }
 
-  //Calcuation for BMR
+  //Calculation for BMR
   function bmrCalc() {
     let weight = document.getElementById("bmrWeight").value;
     let height = document.getElementById("bmrHeight").value;
@@ -109,9 +109,9 @@ export default function Bmi() {
     toggleButtons(calorieButton, "false");
   }
 
-  //Configures Daily Caloric Needs by fetching mulitiplyer and bmr
+  //Configures Daily Caloric Needs by fetching multiplier and bmr
   function dailyNeedsCalc() {
-    //multiplyer
+    //multiplier
     activityMultiplyer();
 
     //Daily needs call

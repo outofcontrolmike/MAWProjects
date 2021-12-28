@@ -20,7 +20,7 @@ export default function GreatRace() {
     var marioScore = 0;
     var yoshiScore = 0;
 
-    // onlick event for starting race by clicking stopLight variable
+    // onclick event for starting race by clicking stopLight variable
     document.getElementById("star").addEventListener("click", startRace);
     yoshiWin.addEventListener("click", restartRace);
     marioWin.addEventListener("click", restartRace);
@@ -45,6 +45,7 @@ export default function GreatRace() {
       myTime = setInterval(takeOff, 6);
       takeOff();
     }
+    
     function takeOff() {
       var rand = Math.round(Math.random() * 10);
       var rand2 = Math.round(Math.random() * 10);

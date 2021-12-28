@@ -25,7 +25,7 @@ function BrewModal() {
             <p id="brewP">
               By default the input filed will accept any keyword that you desire
               to type in. For example you could type in Mother and you would see
-              Mother's brewering Company from Springfield MO populate in the
+              Mother's brewing Company from Springfield MO populate in the
               list.
             </p>
 
@@ -36,7 +36,7 @@ function BrewModal() {
             <hr />
             <h3 id="brewh3">Main Filtering</h3>
             <p id="brewP">
-              You have the options to filter by Search Term, City or Zipcode.
+              You have the options to filter by Search Term, City or zip code.
               You can easily select to filter by a city and choose advanced
               filtering options for the state and brewery type, but it's not
               required.
@@ -52,7 +52,7 @@ function BrewModal() {
             <h3 id="brewh3">Filtering by Brewery Type</h3>
             <p id="brewP">
               It is possible to filter out certain Breweries by Type. Keep in
-              mind your other filter setings when choosing this.
+              mind your other filter settings when choosing this.
             </p>
             <hr />
             <h3 id="brewh3">Bonus Notes</h3>
