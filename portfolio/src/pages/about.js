@@ -7,7 +7,7 @@ function About() {
     <>
       <Navigation />
       <div
-        className="ui two column doubling stackable grid padded relaxed "
+        className="ui two column doubling stackable grid very padded relaxed "
         id="about"
       >
         <div className="ui column" id="pictureContainer">

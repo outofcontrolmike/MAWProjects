@@ -6,7 +6,7 @@ function Resume() {
   return (
     <div>
       <Navigation />
-      <div className="ui two column relaxed very padded stackable grid">
+      <div className="ui two column very padded relaxed stackable grid">
         <div className="ui column" id="resume">
           <h1 id="roboHeader">Work Experience / Education</h1>
           <div id="resumeSegment">

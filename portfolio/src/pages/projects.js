@@ -229,7 +229,7 @@ function Projects(props) {
     <div>
       <Navigation />
 
-      <div className="ui" id="projects">
+      <div className="ui very padded relaxed grid" id="projects">
         <div
           className="ui cards centered four horizontal"
           id="list"
