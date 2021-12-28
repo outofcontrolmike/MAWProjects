@@ -13,9 +13,9 @@ function CommentItem(props) {
       </div>
       <div className="content">
         <div className="summary" style={{ color: "white" }}>
-          <span style={{ color: "gold" }}>{props.name}</span> Posted a comment
+          <span style={{ color: "gold" }}>{props.name}</span> 
           <div className="date" style={{ color: "grey" }}>
-            {props.timestamp}
+            - {props.timestamp}
           </div>
         </div>
         <div className="extra text commentText" style={{ color: "white" }}>
