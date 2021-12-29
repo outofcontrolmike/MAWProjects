@@ -1,0 +1,258 @@
+/***********************GLOBAL Styling***********************************************************/
+
+/* simple way of showing movement on button hover*/
+button:hover {
+  position: relative;
+  bottom: 0.25rem;
+}
+
+/* mainly select dropdown options */
+option {
+  color: black;
+}
+
+.ui.modal {
+  height: fit-content;
+  font-size: 2rem;
+}
+
+/*Navigation menu */
+#navigation {
+  padding-left: 10%;
+  font-family: "Roboto Mono", monospace;
+  color: gold;
+}
+
+/*Landing Page */
+h1 {
+  color: gold;
+  text-align: center;
+}
+
+h1:hover {
+  color: orange;
+}
+
+#landingPageSub {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.5rem;
+}
+
+#goldText {
+  color: gold;
+}
+a {
+  color: gold;
+  font-size: 26px;
+}
+
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+  padding: 1em 0em;
+}
+
+i {
+  color: yellow;
+}
+
+a:hover,
+i:hover {
+  color: orange;
+}
+
+.learnMore:hover {
+  position: relative;
+  bottom: 0.15rem;
+  color: black;
+}
+
+.blink {
+  animation: blinker 4s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Media queries  */
+@media only screen and (max-width: 765px) {
+  #navigation {
+    padding-left: unset;
+  }
+}
+
+/*****************************About page ********************************************************/
+#about {
+  background-color: black;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+}
+
+#aboutMe {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+}
+
+#contactCard {
+  background-color: black;
+  border-color: orange;
+}
+
+#contactCard > div > div {
+  color: yellow;
+}
+
+/**********************************Resume Page****************************************************/
+
+#roboHeader {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.5rem;
+}
+hr:hover {
+  border-color: gold;
+}
+
+.slide > img {
+  height: 400px;
+  width: 400px;
+}
+
+#resume {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#resumeSegment > h2,
+h3 {
+  color: orange;
+  font-family: "Roboto Mono", monospace;
+}
+#jobLocation {
+  font-family: "Roboto Mono", monospace;
+}
+
+#resumeVisible {
+  height: 15rem;
+  background-color: black;
+  color: yellow;
+  align-self: center;
+  padding-top: 6rem;
+  border: grey 2px solid;
+  border-style: outset;
+  font-family: "Roboto Mono", monospace;
+}
+
+#resumeSegment:hover {
+  position: relative;
+  border: orange 2px solid;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  animation: resumeBlinker 5s linear infinite;
+}
+
+@keyframes resumeBlinker {
+  50% {
+    opacity: 0.9;
+  }
+}
+
+#resume {
+  height: 100vh;
+  overflow-y: scroll;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+}
+
+#myName {
+  color: gold;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
+}
+
+#reactLink {
+  color: gold;
+}
+#myName:hover,
+#reactLink:hover {
+  color: orange;
+}
+
+#name:focus,
+#comment:focus,
+#email:focus,
+#category:focus,
+#message:focus {
+  color: gold;
+  border-color: orange;
+}
+
+#submit:hover,
+#thankYouButton:hover {
+  background-color: black;
+  color: gold;
+}
+
+/*************************************Projects Page **********************************************/
+#list {
+  font-size: 1.2rem;
+}
+
+#projectMeta {
+  color: black;
+}
+
+.projectImage {
+  max-height: 160px;
+  width: 200px;
+  object-fit: cover;
+}
+
+/************************************Comments Page ***********************************************/
+#comment,
+#name,
+#email,
+#message {
+  color: gold;
+  background: black;
+  border: 1px solid gold;
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+#category {
+  background: black;
+  border: 1px solid gold;
+  font-size: 1.5rem;
+  height: 4rem;
+}
+#commentLabel {
+  height: 2rem;
+  text-align: -webkit-center;
+  font-size: medium;
+  margin-top: 0.25rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.commentText,
+#submit {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+}
+
+/********************Thank you page *************************************************************/
+#thankYou {
+  position: relative;
+  top: 20rem;
+}
+.thankyouText,
+.thankyouH1,
+.thankyouButton {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* End Main CSS File */

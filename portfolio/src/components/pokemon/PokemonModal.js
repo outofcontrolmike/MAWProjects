@@ -73,7 +73,12 @@ export default function BrewModal() {
             <p>
               Any information about the pokemon and access to it's data is
               provided by the{" "}
-              <a target="_blank" href="https://pokeapi.co/" rel="noreferrer">
+              <a
+                target="_blank"
+                href="https://pokeapi.co/"
+                rel="noreferrer"
+                style={{ color: "red", fontSize: "20px" }}
+              >
                 PokeDex API (Application Programming Interface)
               </a>{" "}
               Keep in mind that the data set is open source and is maintained by

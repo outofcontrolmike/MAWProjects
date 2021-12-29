@@ -1,0 +1,178 @@
+/* Brewery Fetch Style Sheet */
+
+/* Main font size for project */
+#brewBody {
+    font-size: 1.2rem;
+  }
+
+  /* brewery card container*/
+  #brewContainer {
+    background-color: aliceblue;
+  }
+  
+  /* Card content */
+  #brewCard {
+    margin-bottom: 2rem;
+    padding: 20px;
+    background-color: white;
+    color: black;
+  }
+
+  /* card font */
+  #brewP {
+    color: black;
+  }
+  
+
+  #brewP,
+  #brewA {
+    font-size: 24px;
+    font-family: "Linden Hill", serif;
+  }
+  
+  /* font color */
+  #brewh3,
+  #breweryInfo {
+    color: black;
+  }
+  
+  #disableLink {
+    pointer-events: none;
+    color: black;
+  }
+
+  /* brew components height */
+  #container,
+  #filter,
+  #stateFilter,
+  #brewType {
+    height: fit-content;
+  }
+  
+  /* Main input styling */
+  #brewInput {
+    font-size: 2rem;
+    margin-left: 150px;
+  }
+  
+  /* Brewery Url on card */
+  .brewUrl {
+    font-size: 20px;
+    word-wrap: break-word;
+  }
+  
+  /* Brew Count */
+  .floatMe {
+    color: red;
+  }
+  
+
+  /* Brew list container */
+  #breweries {
+    padding: 0px 100px 100px 100px;
+  }
+  
+  /* Brewery Card header */
+  #brewHeader {
+    color: black;
+    font-size: xx-large;
+    text-align: left;
+  }
+  
+  /* Brewery card icons */
+  #brewLabel {
+    font-size: medium;
+    color: white;
+  }
+  
+  /* Responsive footer */
+  #brewFooter {
+    position: relative;
+    margin-top: 30%;
+    text-align: center;
+  }
+
+  #brewFooter > p {
+    font-family: "forum", cursive;
+    font-size: 1.4 rem;
+  }
+  
+  /* beer icon */
+  .beer {
+    position: relative;
+    left: 0.3rem;
+  }
+  
+  /* Select dropdown background colors */
+  #stateFilter,
+  #brewType {
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c3e50,
+      #bdc3c7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2c3e50,
+      #bdc3c7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    border: 1px solid whitesmoke;
+    color: white;
+    padding: 0.5rem;
+  }
+  
+  /* Handling screens with less width than 1000px */
+  @media only screen and (max-width: 1000px) {
+    #breweries {
+      padding: 0;
+    }
+  
+    #divider {
+      visibility: hidden;
+    }
+  
+    i {
+      text-overflow: clip;
+    }
+  
+    hr {
+      visibility: hidden;
+    }
+  }
+  
+  @media only screen and (max-width: 1350px) {
+    .input {
+      padding: 0px;
+    }
+  
+    #brewInput {
+      margin-left: 0px;
+      width: 15ch;
+    }
+  
+    #brewBtn {
+      width: 2rem;
+      padding-right: 50px;
+    }
+  
+    .floatMe {
+      padding-top: 0px;
+      float: right;
+      margin-bottom: 3%;
+    }
+  
+    #brewFooter {
+      margin-top: 120%;
+    }
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    #brewFooter {
+      position: absolute;
+      text-align: center;
+    }
+  }
+  
+  /**End of Brewery style sheet/**

@@ -1,0 +1,40 @@
+/*GREAT RACE Style Sheet */
+
+/*Setting the background image for race*/
+#greatRaceBg {
+  /* Full height */
+  height: 100%;
+  background-image: url("../img/greatRace/background.jpg");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  font-size: 1rem;
+}
+
+/*setting position of flag*/
+#flag {
+  float: right;
+  bottom: 630px;
+  position: relative;
+}
+
+/*Handling of YoshiWin image*/
+#yoshiWin {
+  width: 150px;
+  height: 200px;
+  right: 500px;
+  top: 300px;
+  position: fixed;
+  visibility: hidden;
+}
+/*Handling of mario winning image*/
+#winMario {
+  width: 150px;
+  height: 200px;
+  right: 600px;
+  top: 300px;
+  position: fixed;
+  visibility: hidden;
+}

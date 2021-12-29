@@ -1,0 +1,147 @@
+/* TMNT character Select Style Sheet */
+
+/* Audio player controls styling */
+path {
+  color: black;
+}
+
+.controls {
+  padding-top: 7rem;
+}
+
+/* turtle image */
+.turtle {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+  margin-top: 50px;
+}
+
+#buttonGroup {
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 10px 10px;
+}
+/* Specific styling for buttons */
+#buttonGroup > .ui.button {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+/* health styling for player menu */
+#health {
+  word-break: break-all;
+  width: fit-content;
+  font-family: "Press Start 2P", cursive;
+}
+
+/* Player 1 & Player 2 label */
+#pNum {
+  position: relative;
+  font-size: large;
+  font-family: "Press Start 2P", cursive;
+}
+/* PLayer details component */
+#playerDetails,
+#h1Turtle {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px steelblue;
+}
+#players {
+  color: white;
+  background-color: black;
+  font-size: 20px;
+}
+
+#pTurtle {
+  color: goldenrod;
+  font-family: "Press Start 2P", cursive;
+  color: snow;
+  text-shadow: 2px 2px steelblue;
+}
+
+#pTurtle {
+  font-size: 16px;
+}
+
+/* Container for turtles */
+#turtleGroup {
+  margin: 3rem;
+  padding: 2rem;
+}
+
+#tName {
+  font-size: 23px;
+}
+
+/* Player two Press start to play */
+#pBlink {
+  animation: blinker 2s linear infinite;
+  font-family: "Press Start 2P", cursive;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Footer for page */
+#tFooter {
+  padding-bottom: 50px;
+  margin-top: 100px;
+  font-family: "Press Start 2P", cursive;
+  text-align-last: center;
+  color: white;
+  text-shadow: 2px 2px steelblue;
+}
+
+/* Players menu container */
+#players {
+  border-right: 1em;
+  border: snow;
+  border-style: solid;
+}
+
+/* Button styling */
+#addLives,
+#minusPoints,
+#addPoints,
+#resetStats {
+  font-size: 1.5rem;
+  margin-right: 3rem;
+  position: relative;
+  left: 3rem;
+}
+
+/* Media queries for page width less than 765px */
+@media only screen and (max-width: 765px) {
+  #turtleGroup {
+    text-align: center;
+  }
+
+  #tFooter {
+    padding-bottom: 4rem;
+    margin-top: 0;
+  }
+
+  .ui > button {
+    width: 100%;
+    height: fit-content;
+  }
+  #project {
+    margin: 5%;
+  }
+
+  #addLives,
+  #minusPoints,
+  #addPoints,
+  #resetStats {
+    left: 0px;
+  }
+}
+
+/* End Style Sheet */

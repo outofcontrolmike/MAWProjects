@@ -1,0 +1,178 @@
+/* Pokemon Style Sheet */
+
+/* Poke card name */
+#pokeh1 {
+  font-family: pokemon;
+  margin-top: 20px;
+  color: black;
+}
+
+/* card details */
+#pokeSpan,
+.pokeSpan,
+#pokeH3,
+#pokeLabel {
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+}
+
+#pokeP {
+  text-align: center;
+  word-break: break-all;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+}
+
+/* main input container */
+#inputContainer {
+  width: 90%;
+}
+
+/* input font */
+#pokeSearchValue {
+  font-family: "Press Start 2P", cursive;
+  font-weight: bolder;
+  border: none;
+  font-size: large;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* Search Menu */
+#pokeSearchTools {
+  padding: 1rem;
+  background: #ff4e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f9d423,
+    #ff4e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f9d423,
+    #ff4e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#pokeh1::first-letter {
+  text-transform: capitalize;
+}
+
+/* Font styling for sub headers and misc components */
+#pokeh1,
+.pokeAdvanced,
+#pokeH3,
+#pokeLabel,
+#pkBtn,
+#pkClear {
+  font-family: "Press Start 2P", cursive;
+  font-size: medium;
+}
+
+/* Styling cards in list */
+.pokeCard {
+  border-radius: 50px;
+  margin: 2rem;
+}
+
+/* Container for pokeCard */
+#pokeContainer {
+  width: 350px;
+  color: black;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* PokeImage shake effect  */
+.mobileImage:hover {
+  animation: shake 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Controls the shake animation */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/* Align cards in rows (flex) */
+#pokeTest {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: 8%;
+}
+
+/* Content separator for card */
+#pokeHr {
+  border-color: black;
+}
+
+/* Modal Font */
+#pokeModalDesc {
+  color: black;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* accordion styling */
+.pokemonDropdownIcon {
+  color: black;
+}
+
+/* spices ui*/
+.pokemonDropdownIcon:hover {
+  color: red;
+}
+@media only screen and (max-width: 600px) {
+  /* img.ui.image {
+      position: absolute;
+    } */
+  .mobileImage {
+    height: 150px;
+    width: 150px;
+  }
+  .ui.input,
+  #searchValue {
+    font-size: xx-small;
+    height: 30px;
+  }
+
+  #pokeSearchTools {
+    padding: 3rem;
+  }
+}
+
+/* ************************END POKEMON****************************************** */

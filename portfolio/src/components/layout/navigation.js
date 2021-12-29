@@ -10,22 +10,34 @@ function Navigation(props) {
     >
       <div className="ui container">
         <a className="active item">
-          <Link to="/">Home</Link>
+          <Link id="goldText" to="/">
+            Home
+          </Link>
         </a>
         <a className="item">
-          <Link to="/about">About</Link>
+          <Link id="goldText" to="/about">
+            About
+          </Link>
         </a>
         <a className="item">
-          <Link to="/resume">Resume</Link>
+          <Link id="goldText" to="/resume">
+            Resume
+          </Link>
         </a>
         <a className="item">
-          <Link to="/projects">Projects</Link>{" "}
+          <Link id="goldText" to="/projects">
+            Projects
+          </Link>{" "}
         </a>
         <a className="item">
-          <Link to="/comments">Comments</Link>
+          <Link id="goldText" to="/comments">
+            Comments
+          </Link>
         </a>
         <a className="item">
-          <Link to="/contact">Contact</Link>
+          <Link id="goldText" to="/contact">
+            Contact
+          </Link>
         </a>
       </div>
     </div>

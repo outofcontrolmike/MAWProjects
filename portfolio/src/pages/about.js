@@ -38,9 +38,10 @@ function About() {
           <p>
             Currently I work with the Javascript coding language, specifically
             in the{" "}
-            <span id="reactLink">
+            <span>
               {" "}
               <a
+                id="reactLink"
                 style={{ fontSize: "large" }}
                 target="_blank"
                 rel="noreferrer"

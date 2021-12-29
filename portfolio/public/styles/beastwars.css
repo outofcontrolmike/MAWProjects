@@ -1,0 +1,67 @@
+/* Beast Wars Style Sheet */
+
+/* Card Styling */
+#beastP {
+  font-family: "Creepster", cursive;
+  text-shadow: 5px 5px orange;
+  color: rgb(12, 8, 8);
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* Card image Height */
+#beastImage {
+  height: 300px;
+}
+
+#beastHr {
+  border-color: skyblue;
+}
+
+/* Button Group margin */
+#sortAlpha,
+#sortMaximals,
+#sortPredacons,
+#sortRandom,
+#sortAnimal {
+  margin-right: 2rem;
+}
+
+/* Background / menu styling */
+#beastBackground,
+#beastMenu {
+  position: relative;
+  margin-top: 1rem;
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* affects all ui toasts  */
+.ui > toast {
+  width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  #sortAlpha,
+  #sortMaximals,
+  #sortPredacons,
+  #sortRandom,
+  #sortAnimal {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+  #beastImage {
+    height: 350px;
+    object-fit: cover;
+  }
+}
