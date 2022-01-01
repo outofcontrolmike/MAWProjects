@@ -18,7 +18,7 @@ option {
 
 /*Navigation menu */
 #navigation {
-  padding-left: 10%;
+  padding-left: 5%;
   font-family: "Roboto Mono", monospace;
   color: gold;
 }
@@ -146,13 +146,14 @@ h3 {
   font-family: "Roboto Mono", monospace;
 }
 
-#resumeSegment:hover {
+#resumeSegment:hover, #faqSegment:hover {
   position: relative;
   border: orange 2px solid;
   padding: 1rem;
   margin-bottom: 1rem;
   animation: resumeBlinker 5s linear infinite;
 }
+
 
 @keyframes resumeBlinker {
   50% {
@@ -175,6 +176,7 @@ h3 {
 
 #reactLink {
   color: gold;
+  font-size: larger;
 }
 #myName:hover,
 #reactLink:hover {
@@ -242,6 +244,17 @@ h3 {
 #submit {
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
+}
+
+/********************FAQ Page *************************************************************/
+#faqDiv > #faqSegment > h2 {
+  color:orange;
+}
+
+#faqDiv > #faqSegment > p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 /********************Thank you page *************************************************************/

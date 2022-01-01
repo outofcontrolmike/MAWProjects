@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
+import Faq from "./pages/Faq";
 import Thanks from "./pages/Thanks";
 import AllCommentsPage from "./pages/AllComments";
 import Layout from "./components/layout/Layout";
@@ -46,9 +47,13 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
+        <Route path="/faq">
+          <Faq />
+        </Route>
         <Route path="/thanks">
           <Thanks />
         </Route>
+        
 
         {/* Reigion : Routes for projects */}
         <Route path="/beastwars">

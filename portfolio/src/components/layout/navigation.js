@@ -39,6 +39,11 @@ function Navigation(props) {
             Contact
           </Link>
         </a>
+        <a className="item">
+          <Link id="goldText" to="/faq">
+            FAQ
+          </Link>
+        </a>
       </div>
     </div>
   );
