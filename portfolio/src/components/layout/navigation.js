@@ -1,31 +1,7 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 //Navigation menu component
 function Navigation(props) {
-
-function setupActive() {
-
-  // Get the container element
-var navContainer = document.getElementById("navContainer");
-
-console.log("navContainer", navContainer);
-// Get all buttons with class="btn" inside the container
-var links = navContainer.getElementsByClassName("item");
-
-console.log("links", links);
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-}
-
-setTimeout(() => {
-  setupActive()
-}, 10);
   return (
     <div
       className="ui menu secondary pointing stackable"
@@ -34,39 +10,39 @@ setTimeout(() => {
     >
       <div className="ui container navContainer" id="navContainer">
         <a className="item">
-          <Link id="goldText" to="/">
+          <NavLink id="goldText" to="/">
             Home
-          </Link>
+          </NavLink>
         </a>
-        <a className="item active">
-          <Link id="goldText" to="/about">
+        <a className="item">
+          <NavLink activeClassName="selected" id="goldText" to="/about">
             About
-          </Link>
+          </NavLink>
         </a>
         <a className="item">
-          <Link id="goldText" to="/resume">
+          <NavLink activeClassName="selected" id="goldText" to="/resume">
             Resume
-          </Link>
+          </NavLink>
         </a>
         <a className="item">
-          <Link id="goldText" to="/projects">
+          <NavLink activeClassName="selected" id="goldText" to="/projects">
             Projects
-          </Link>{" "}
+          </NavLink>{" "}
         </a>
         <a className="item">
-          <Link id="goldText" to="/comments">
+          <NavLink activeClassName="selected" id="goldText" to="/comments">
             Comments
-          </Link>
+          </NavLink>
         </a>
         <a className="item">
-          <Link id="goldText" to="/contact">
+          <NavLink activeClassName="selected" id="goldText" to="/contact">
             Contact
-          </Link>
+          </NavLink>
         </a>
         <a className="item">
-          <Link id="goldText" to="/faq">
+          <NavLink activeClassName="selected" id="goldText" to="/faq">
             FAQ
-          </Link>
+          </NavLink>
         </a>
       </div>
     </div>

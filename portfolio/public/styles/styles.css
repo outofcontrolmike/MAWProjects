@@ -21,7 +21,10 @@ option {
   padding-left: 5%;
   font-family: "Roboto Mono", monospace;
   color: gold;
-  border-bottom-color: grey
+  border-bottom-color: grey;
+}
+.selected {
+  border-bottom: orange 2px solid;
 }
 
 /*Landing Page */
@@ -147,14 +150,14 @@ h3 {
   font-family: "Roboto Mono", monospace;
 }
 
-#resumeSegment:hover, #faqSegment:hover {
+#resumeSegment:hover,
+#faqSegment:hover {
   position: relative;
   border: orange 2px solid;
   padding: 1rem;
   margin-bottom: 1rem;
   animation: resumeBlinker 5s linear infinite;
 }
-
 
 @keyframes resumeBlinker {
   50% {
@@ -242,7 +245,7 @@ h3 {
 
 /********************FAQ Page *************************************************************/
 #faqDiv > #faqSegment > h2 {
-  color:orange;
+  color: orange;
 }
 
 #faqDiv > #faqSegment > p {
