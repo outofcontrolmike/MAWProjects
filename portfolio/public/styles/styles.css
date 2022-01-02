@@ -21,6 +21,7 @@ option {
   padding-left: 5%;
   font-family: "Roboto Mono", monospace;
   color: gold;
+  border-bottom-color: grey
 }
 
 /*Landing Page */
@@ -118,12 +119,12 @@ hr:hover {
   height: 400px;
   width: 400px;
 }
-
 #resume {
-  font-size: 1.5em;
-  margin-bottom: 2rem;
   height: 100vh;
   overflow-y: scroll;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 #resumeSegment > h2,
@@ -159,13 +160,6 @@ h3 {
   50% {
     opacity: 0.9;
   }
-}
-
-#resume {
-  height: 100vh;
-  overflow-y: scroll;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.4rem;
 }
 
 #myName {

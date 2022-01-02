@@ -2,19 +2,43 @@ import { Link } from "react-router-dom";
 
 //Navigation menu component
 function Navigation(props) {
+
+function setupActive() {
+
+  // Get the container element
+var navContainer = document.getElementById("navContainer");
+
+console.log("navContainer", navContainer);
+// Get all buttons with class="btn" inside the container
+var links = navContainer.getElementsByClassName("item");
+
+console.log("links", links);
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+}
+
+setTimeout(() => {
+  setupActive()
+}, 10);
   return (
     <div
-      className="ui menu secondary stackable"
+      className="ui menu secondary pointing stackable"
       id="navigation"
       style={{ backgroundColor: "black" }}
     >
-      <div className="ui container">
-        <a className="active item">
+      <div className="ui container navContainer" id="navContainer">
+        <a className="item">
           <Link id="goldText" to="/">
             Home
           </Link>
         </a>
-        <a className="item">
+        <a className="item active">
           <Link id="goldText" to="/about">
             About
           </Link>
