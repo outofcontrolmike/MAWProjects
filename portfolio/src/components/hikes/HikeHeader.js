@@ -7,7 +7,7 @@ function HikeHeader() {
         className="ui text header massive center aligned"
         style={{ fontSize: "6rem", padding: "1rem" }}
       >
-        417 Hikes
+        417 Missouri Hikes
       </h1>
     </div>
   );

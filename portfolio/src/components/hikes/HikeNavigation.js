@@ -10,15 +10,7 @@ export default function HikeNavigation() {
             Home
           </NavLink>
         </a>
-        <a className="item">
-          <NavLink
-            activeClassName="selected"
-            style={{ color: "black" }}
-            to="/about"
-          >
-            About
-          </NavLink>
-        </a>
+
         <a className="item">
           <NavLink
             activeClassName="selected"
@@ -43,7 +35,7 @@ export default function HikeNavigation() {
             to="/projects"
             style={{ color: "black" }}
           >
-            Back to Projects
+            Projects
           </NavLink>
         </a>
       </div>
