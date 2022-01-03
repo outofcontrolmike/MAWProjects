@@ -20,6 +20,7 @@ import CoolCalc from "./pages/projects/cool_calc/CoolCalc";
 import EarthWaterFire from "./pages/projects/earth_water_fire/EarthWaterFire";
 import FFSearch from "./pages/projects/final_fantasy_search/FFSearch";
 import GreatRace from "./pages/projects/great_race/GreatRace";
+import Hikes from "./pages/projects/417Hikes/Hikes";
 import Pokemon from "./pages/projects/pokemon/Pokemon";
 import TMNT from "./pages/projects/tmnt/Tmnt";
 import VueShop from "./pages/projects/vue_shopping_cart/VueCart";
@@ -53,7 +54,6 @@ function App() {
         <Route path="/thanks">
           <Thanks />
         </Route>
-        
 
         {/* Reigion : Routes for projects */}
         <Route path="/beastwars">
@@ -79,6 +79,9 @@ function App() {
         </Route>
         <Route path="/great_race">
           <GreatRace />
+        </Route>
+        <Route path="/hikes">
+          <Hikes />
         </Route>
         <Route path="/pokemon">
           <Pokemon />
