@@ -21,7 +21,6 @@ option {
   padding-left: 5%;
   font-family: "Roboto Mono", monospace;
   color: gold;
-  border-bottom-color: grey;
 }
 .selected {
   border-bottom: orange 2px solid;

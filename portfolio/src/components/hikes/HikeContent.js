@@ -1,9 +1,9 @@
 import React from "react";
-
+import HikeCard from "./HikeCard";
 export default function HikeContent() {
   return (
-    <div className="ui column">
-      <h1>Hikes Content</h1>
+    <div className="ui column" id="hikeContent">
+      <HikeCard />
     </div>
   );
 }
