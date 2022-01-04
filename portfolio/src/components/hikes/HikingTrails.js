@@ -4,6 +4,8 @@ export default function HikingTrails() {
   function changeMe(e) {
     console.log("hello!!!");
     document.getElementById("busiek").style.color = "teal";
+    let test = document.getElementById("hikeMap");
+    test.innerHTML = "";
     swapHikeInfo();
   }
 
