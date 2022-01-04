@@ -1,16 +1,13 @@
 import React from "react";
 
-export default function HikingTrails() {
+export default function HikingTrails(props) {
+  console.log("props from hking trails", props);
   function changeMe(e) {
-    console.log("hello!!!");
-    document.getElementById("busiek").style.color = "teal";
-    let test = document.getElementById("hikeMap");
-    test.innerHTML = "";
-    swapHikeInfo();
-  }
-
-  function swapHikeInfo() {
-    console.log("working form here inside swaphikeinfo");
+    console.log("hello!!!", e);
+    if (e.target.id === "busiek") {
+      document.getElementById("busiek").style.color = "teal";
+      document.getElementById("hikeMap").innerHTML = props.data.map[0];
+    }
   }
 
   return (
