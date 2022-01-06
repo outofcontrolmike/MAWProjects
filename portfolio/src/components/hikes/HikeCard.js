@@ -4,7 +4,6 @@ import { Carousel } from "react-responsive-carousel";
 
 //Hiking card
 export default function HikeCard(props) {
-  console.log("props from hike card", props.hikes.data[0]);
   let hike1 = props.hikes.data[0];
 
   return (
@@ -12,15 +11,15 @@ export default function HikeCard(props) {
       <p id="hikePhotos">
         <Carousel>
           <div>
-            <img id="hikeImage1" src="img/hikes/herculesGlades.jpg" />
+            <img id="hikeImage1" src={props.hikes.imgs[3].src} />
             <p className="legend">The Falls</p>
           </div>
           <div>
-            <img id="hikeImage2" src="img/hikes/herculesGlades3.jpg" />
+            <img id="hikeImage2" src={props.hikes.imgs[4].src} />
             <p className="legend">Legend 2</p>
           </div>
           <div>
-            <img id="hikeImage3" src="img/hikes/herculesglades2.jpg" />
+            <img id="hikeImage3"  src={props.hikes.imgs[5].src}  />
             <p className="legend">Legend 3</p>
           </div>
         </Carousel>
@@ -29,11 +28,11 @@ export default function HikeCard(props) {
       <p id="hikeDesc">{hike1.description}</p>
       <p id="bestSeason">{hike1.bestSeason}</p>
       <p id="hikeExp">{hike1.personalExp}</p>
-      <div id="hikeLink">
+      <div>
         More Info:
         <br></br>
         <br></br>
-        <a href="www.google.com" target="_blank">
+        <a id="hikeLink" href="www.google.com" target="_blank">
           {hike1.linkTo}
         </a>
       </div>
