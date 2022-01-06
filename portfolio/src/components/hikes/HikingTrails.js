@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function HikingTrails(props) {
 
-  console.log("props form hiking trails", props);
+  //new state
 
-  let busiek, hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3;
+  
+  let busiek, hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, legend1, legend2, legend3
+
 
   function loadStuff() {
     hikeDesc = document.getElementById('hikeDesc');
@@ -14,6 +16,11 @@ export default function HikingTrails(props) {
     hikeImage1 = document.getElementById('hikeImage1')
     hikeImage2 = document.getElementById('hikeImage2')
     hikeImage3 = document.getElementById('hikeImage3')
+    legend1 = document.getElementById('legend1');
+    legend2 = document.getElementById('legend2');
+    legend3 = document.getElementById('legend3');
+
+
     hikeMap = document.getElementById('hikeMap');
 
     console.log(hikeMap, "hikeMap")
@@ -58,13 +65,17 @@ export default function HikingTrails(props) {
       hikeImage1.src = props.imgs[3].src;
       hikeImage2.src = props.imgs[4].src;
       hikeImage3.src = props.imgs[5].src;
+
+      //set legends
+      legend1.innerHTML = busiekHike.legend1;
+      legend2.innerHTML = busiekHike.legend2;
+      legend3.innerHTML = busiekHike.legend3;    
     }
   }
 
   function herculesFiller(e) {
     let hercules = document.getElementById('hercules');
     let herculesHike = props.data[1];
-    console.log("herculesHike", herculesHike);
     if (e.target.id === "hercules") {
       selectAllItems();
       hercules.style.color = "teal";
@@ -73,10 +84,16 @@ export default function HikingTrails(props) {
       hikeExp.innerHTML = herculesHike.personalExp;
       hikeLink.innerHTML = herculesHike.linkTo;
       hikeMap.src = herculesHike.iframeSrc;
+
       //set images
       hikeImage1.src = props.imgs[0].src;
       hikeImage2.src = props.imgs[1].src;
       hikeImage3.src = props.imgs[2].src;
+          
+      //set legends
+      legend1.innerHTML = herculesHike.legend1;
+      legend2.innerHTML = herculesHike.legend2;
+      legend3.innerHTML = herculesHike.legend3;    
 
     }
   }
@@ -98,7 +115,10 @@ export default function HikingTrails(props) {
       hikeImage2.src = props.imgs[7].src;
       hikeImage3.src = props.imgs[8].src;
 
-
+     //set legends
+     legend1.innerHTML = pineyHike.legend1;
+     legend2.innerHTML = pineyHike.legend2;
+     legend3.innerHTML = pineyHike.legend3;    
 
     }
   }

@@ -9,18 +9,18 @@ export default function HikeCard(props) {
   return (
     <div className="ui container" id="hikeCard" style={{ fontSize: "2rem" }}>
       <p id="hikePhotos">
-        <Carousel>
+        <Carousel carouselData={props}>
           <div>
             <img id="hikeImage1" src={props.hikes.imgs[3].src} />
-            <p className="legend">The Falls</p>
+            <p id="legend1"className="legend">{hike1.legend1}</p>
           </div>
           <div>
             <img id="hikeImage2" src={props.hikes.imgs[4].src} />
-            <p className="legend">Legend 2</p>
+            <p id="legend2" className="legend">{hike1.legend2}</p>
           </div>
           <div>
             <img id="hikeImage3"  src={props.hikes.imgs[5].src}  />
-            <p className="legend">Legend 3</p>
+            <p  id="legend3" className="legend">{hike1.legend3}</p>
           </div>
         </Carousel>
       </p>
