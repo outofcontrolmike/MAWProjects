@@ -1,4 +1,5 @@
 import React from "react";
+import HikeCarousel from "../../../components/hikes/HikeCarousel";
 import HikeContent from "../../../components/hikes/HikeContent";
 import HikeFooter from "../../../components/hikes/HikeFooter";
 import HikeGPS from "../../../components/hikes/HikeGPS";
@@ -101,8 +102,9 @@ function Hikes() {
       <HikeNavigation />
       <div className="ui three column stackable grid very relaxed padded">
         <HikingTrails data={hikes} imgs={imgArray} />
+        <HikeCarousel data={hikes} imgs={imgArray} />
         <HikeContent data={hikes} imgs={imgArray} />
-        <HikeGPS data={hikes} imgs={imgArray} />
+
       </div>
 
       <HikeFooter />
