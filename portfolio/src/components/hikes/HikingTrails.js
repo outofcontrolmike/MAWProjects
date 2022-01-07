@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 export default function HikingTrails(props) {
 
   //new state
 
-  
+
   let busiek, hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, legend1, legend2, legend3
+
 
 
   function loadStuff() {
@@ -29,6 +30,7 @@ export default function HikingTrails(props) {
       item.addEventListener('click', changeMe);
 
     })
+
   }
 
   setTimeout(loadStuff, 1000);
@@ -48,78 +50,70 @@ export default function HikingTrails(props) {
     })
   }
 
+    //handles hikeContent and legends
+    function setupHikeContent(num) {
+      let hikeInfo = props.data[num];
+  
+      //Set hike info
+      hikeDesc.innerHTML = hikeInfo.description;
+      bestSeason.innerHTML = hikeInfo.bestSeason;
+      hikeExp.innerHTML = hikeInfo.personalExp;
+      hikeLink.innerHTML = hikeInfo.linkTo;
+      hikeMap.src = hikeInfo.iframeSrc;
+  
+      //set legends
+      legend1.innerHTML = hikeInfo.legend1;
+      legend2.innerHTML = hikeInfo.legend2;
+      legend3.innerHTML = hikeInfo.legend3;
+    }
+  
+  //swap carousel images and thumbnails
+  function swapImages(img1, img2, img3) {
+    let image1 = document.querySelectorAll('#hikeImage1');
+    let image2 = document.querySelectorAll('#hikeImage2');
+    let image3 = document.querySelectorAll('#hikeImage3');
+
+    //carousel images
+    image1[0].src = props.imgs[img1].src;
+    image2[0].src = props.imgs[img2].src;
+    image3[0].src = props.imgs[img3].src;
+
+    //thumbnails
+    image1[1].src = props.imgs[img1].src;
+    image2[1].src = props.imgs[img2].src;
+    image3[1].src = props.imgs[img3].src;
+
+  }
+
 
   function busiekFiller(e) {
     busiek = document.getElementById('busiek');
-    let busiekHike = props.data[0];
     if (e.target.id === "busiek") {
       selectAllItems();
       busiek.style.color = "teal";
-      hikeDesc.innerHTML = busiekHike.description;
-      bestSeason.innerHTML = busiekHike.bestSeason;
-      hikeExp.innerHTML = busiekHike.personalExp;
-      hikeLink.innerHTML = busiekHike.linkTo;
-      hikeMap.src = busiekHike.iframeSrc;
+      setupHikeContent(0);
+      swapImages(3, 4, 5);
 
-      //set images
-      hikeImage1.src = props.imgs[3].src;
-      hikeImage2.src = props.imgs[4].src;
-      hikeImage3.src = props.imgs[5].src;
-
-      //set legends
-      legend1.innerHTML = busiekHike.legend1;
-      legend2.innerHTML = busiekHike.legend2;
-      legend3.innerHTML = busiekHike.legend3;    
     }
   }
 
   function herculesFiller(e) {
     let hercules = document.getElementById('hercules');
-    let herculesHike = props.data[1];
     if (e.target.id === "hercules") {
       selectAllItems();
       hercules.style.color = "teal";
-      hikeDesc.innerHTML = herculesHike.description;
-      bestSeason.innerHTML = herculesHike.bestSeason;
-      hikeExp.innerHTML = herculesHike.personalExp;
-      hikeLink.innerHTML = herculesHike.linkTo;
-      hikeMap.src = herculesHike.iframeSrc;
-
-      //set images
-      hikeImage1.src = props.imgs[0].src;
-      hikeImage2.src = props.imgs[1].src;
-      hikeImage3.src = props.imgs[2].src;
-          
-      //set legends
-      legend1.innerHTML = herculesHike.legend1;
-      legend2.innerHTML = herculesHike.legend2;
-      legend3.innerHTML = herculesHike.legend3;    
-
+      setupHikeContent(1);
+      swapImages(0, 1, 2);
     }
   }
 
   function pineyFiller(e) {
     let piney = document.getElementById('piney');
-    let pineyHike = props.data[2];
     if (e.target.id === "piney") {
       selectAllItems();
       piney.style.color = "teal";
-      hikeDesc.innerHTML = pineyHike.description;
-      bestSeason.innerHTML = pineyHike.bestSeason;
-      hikeExp.innerHTML = pineyHike.personalExp;
-      hikeLink.innerHTML = pineyHike.linkTo;
-      hikeMap.src = pineyHike.iframeSrc;
-
-      //set images
-      hikeImage1.src = props.imgs[6].src;
-      hikeImage2.src = props.imgs[7].src;
-      hikeImage3.src = props.imgs[8].src;
-
-     //set legends
-     legend1.innerHTML = pineyHike.legend1;
-     legend2.innerHTML = pineyHike.legend2;
-     legend3.innerHTML = pineyHike.legend3;    
-
+      setupHikeContent(2);
+      swapImages(6, 7, 8)
     }
   }
 
