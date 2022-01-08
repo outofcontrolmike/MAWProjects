@@ -83,6 +83,9 @@ function App() {
         <Route path="/hikes">
           <Hikes />
         </Route>
+        <Route path="/springfield">
+          <Pokemon />
+        </Route>
         <Route path="/pokemon">
           <Pokemon />
         </Route>

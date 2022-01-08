@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Navigation(props) {
   return (
     <div
-      className="ui menu secondary pointing stackable"
+      className="ui menu secondary stackable"
       id="navigation"
       style={{ backgroundColor: "black" }}
     >
