@@ -5,7 +5,7 @@ export default function HikeCard(props) {
   let hike1 = props.hikes.data[0];
 
   
-  let busiek, hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, legend1, legend2, legend3
+  let hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, item, legend1, legend2, legend3
 
 
 
@@ -27,17 +27,22 @@ export default function HikeCard(props) {
       item.addEventListener('click', changeMe);
 
     })
-
-    console.log("props from hikeCard", props);
-
   }
   setTimeout(loadStuff, 1000);
 
   function changeMe(e) {
-    console.log("hello!!!", e);
     busiekFiller(e);
     herculesFiller(e);
     pineyFiller(e);
+    comptonFiller(e);
+    heningFiller(e);
+    lakeSpfFiller(e);
+    lostHillFiller(e);
+    pleasantFiller(e);
+    sncFiller(e);
+    twoRiversFiller(e);
+    valleyFiller(e);
+    wilsonFiller(e);
 
   }
 
@@ -96,10 +101,10 @@ export default function HikeCard(props) {
 
 
   function busiekFiller(e) {
-    busiek = document.getElementById('busiekEast');
-    if (e.target.id === "busiekEast") {
+    let item = document.getElementById('busiek');
+    if (e.target.id === "busiek") {
       selectAllItems();
-      busiek.style.color = "teal";
+      item.style.color = "teal";
       setupHikeContent(0);
       swapImages(3, 4, 5);
 
@@ -125,6 +130,110 @@ export default function HikeCard(props) {
       swapImages(6, 7, 8)
     }
   }
+
+  //////
+
+  
+  function comptonFiller(e) {
+    item = document.getElementById('compton');
+    if (e.target.id === "compton") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(3);
+      swapImages(9, 10, 11);
+    }
+  }
+
+  
+  function heningFiller(e) {
+    item = document.getElementById('hening');
+    if (e.target.id === "hening") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(4);
+      swapImages(12, 13, 14);
+    }
+  }
+
+  
+  function lakeSpfFiller(e) {
+    item = document.getElementById('lakeSpringfield');
+    if (e.target.id === "lakeSpringfield") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(5);
+      swapImages(15, 16, 17);
+
+    }
+  }
+
+  
+  function lostHillFiller(e) {
+    item = document.getElementById('lostHill');
+    if (e.target.id === "lostHill") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(6);
+      swapImages(18, 19, 20);
+    }
+  }
+
+  //pleasant hope
+  function pleasantFiller(e) {
+    item = document.getElementById('pleasant');
+    if (e.target.id === "pleasant") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(7);
+      swapImages(21, 22, 23);
+    }
+  }
+
+  
+//springfield Nature Center
+  function sncFiller(e) {
+    item = document.getElementById('springfieldNC');
+    if (e.target.id === "springfieldNC") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(8);
+      swapImages(24, 25, 26);
+    }
+  }
+
+  
+  function twoRiversFiller(e) {
+    item = document.getElementById('twoRivers');
+    if (e.target.id === "twoRivers") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(9);
+      swapImages(27, 28, 29);
+    }
+  }
+
+  
+  function valleyFiller(e) {
+     item = document.getElementById('valleyWater');
+    if (e.target.id === "valleyWater") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(10);
+      swapImages(30, 31, 32);
+    }
+  }
+
+  
+  function wilsonFiller(e) {
+    item = document.getElementById('wilsonsCreek');
+    if (e.target.id === "wilsonsCreek") {
+      selectAllItems();
+      item.style.color = "teal";
+      setupHikeContent(11);
+      swapImages(33, 34, 35);
+    }
+  }
+  
   
   return (
     <div className="ui container" id="hikeCard" style={{ fontSize: "1.3rem" }}>
