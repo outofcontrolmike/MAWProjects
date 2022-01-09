@@ -3,3 +3,7 @@
 #hikeLink {
     font-size: 1rem;
 }
+
+#hikeList > div {
+    padding: .9rem;
+}

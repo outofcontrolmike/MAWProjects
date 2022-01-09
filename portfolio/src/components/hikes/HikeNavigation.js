@@ -13,7 +13,7 @@ export default function HikeNavigation() {
         <a className="item">
           <NavLink
             activeClassName="selected"
-            to="/resume"
+            to="/hikes"
             style={{ color: "black" }}
           >
            Gallery
@@ -22,7 +22,7 @@ export default function HikeNavigation() {
         <a className="item">
           <NavLink
             activeClassName="selected"
-            to="/contact"
+            to="/hikes"
             style={{ color: "black" }}
           >
             Contact

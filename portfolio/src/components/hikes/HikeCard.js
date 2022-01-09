@@ -96,8 +96,8 @@ export default function HikeCard(props) {
 
 
   function busiekFiller(e) {
-    busiek = document.getElementById('busiek');
-    if (e.target.id === "busiek") {
+    busiek = document.getElementById('busiekEast');
+    if (e.target.id === "busiekEast") {
       selectAllItems();
       busiek.style.color = "teal";
       setupHikeContent(0);

@@ -2,32 +2,31 @@ import React from "react";
 import HikeCarousel from "../../../components/hikes/HikeCarousel";
 import HikeContent from "../../../components/hikes/HikeContent";
 import HikeFooter from "../../../components/hikes/HikeFooter";
-import HikeGPS from "../../../components/hikes/HikeGPS";
 import HikeHeader from "../../../components/hikes/HikeHeader";
 import HikeNavigation from "../../../components/hikes/HikeNavigation";
 import HikingTrails from "../../../components/hikes/HikingTrails";
 
-function Hikes() {
+function Hikes(props) {
+  
   let imgArray = new Array()
-  imgArray[0] = new Image();
+  let count = 10;
+
+  //Create array indexes for images
+  for(let i = 0; i <= count; i++)
+  {
+    imgArray[i] = new Image();
+  }
+
   imgArray[0].src = "img/hikes/herculesGlades.jpg";
-  imgArray[1] = new Image();
   imgArray[1].src = "img/hikes/herculesglades2.jpg";
-  imgArray[2] = new Image();
   imgArray[2].src = "img/hikes/herculesGlades3.jpg";
 
-  imgArray[3] = new Image();
   imgArray[3].src = "img/hikes/busiek1.jpg";
-  imgArray[4] = new Image();
   imgArray[4].src = "img/hikes/busiek2.jpg";
-  imgArray[5] = new Image();
   imgArray[5].src = "img/hikes/busiek3.jpg";
 
-  imgArray[6] = new Image();
   imgArray[6].src = "img/hikes/piney1.jpg";
-  imgArray[7] = new Image();
   imgArray[7].src = "img/hikes/piney2.jpg";
-  imgArray[8] = new Image();
   imgArray[8].src = "img/hikes/piney3.jpeg";
 
 
@@ -37,7 +36,6 @@ function Hikes() {
   let hikes = [
     {
       name: "Busiek State Forest",
-      photos: [imgArray[0], imgArray[1], imgArray[2]],
       description: "Testing from array",
       bestSeason: "Spring",
       personalExp: "This is a very easy place to become lost at",
@@ -50,7 +48,6 @@ function Hikes() {
     },
     {
       name: "Hercules Glades Wilderness",
-      photos: ["test", "test2", "test3"],
       description: "Beautiful place in the ozarks",
       bestSeason: "Spring",
       personalExp: "I lost a lot of weight hiking this trail.",
@@ -63,7 +60,6 @@ function Hikes() {
     },
     {
       name: "PineyCreek Wilderness",
-      photos: ["test", "test2", "test3"],
       description: "Kind of near Galena",
       bestSeason: "Winter",
       personalExp: "Very easy to get lost out here",
@@ -74,26 +70,126 @@ function Hikes() {
       linkTo:
         "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
     },
-    // {
-    //   name: "Two Rivers Mountain Bike Park",
-    //   photos: ["test", "test2", "test3"],
-    //   description: "very cool place to hike in Highlandville MO",
-    //   bestSeason: "Fall/Winter/Spring",
-    //   personalExp:
-    //     "I grew up a few miles down the road from this place.  I think this place had a different owner when I was younger.  When you first pull in you'll think it's only a mountain bike park, but there is plenty of footwork to be explored when you walk towards the river.",
-    //   map: (
-    //     <iframe
-    //       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.200666116713!2d-93.35636278480841!3d36.957264066542464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf6b99a091c567%3A0xe26e1bd83561f3f7!2sTwo%20Rivers%20Mountain%20Bike%20Park!5e0!3m2!1sen!2sus!4v1641237303981!5m2!1sen!2sus"
-    //       width="600"
-    //       height="450"
-    //       style="border:0;"
-    //       allowfullscreen=""
-    //       loading="lazy"
-    //     ></iframe>
-    //   ),
-    //   linkTo:
-    //     "https://mdc.mo.gov/discover-nature/places/busiek-state-forest-wildlife-area",
-    // },
+    {
+      name: "Two Rivers Mountain Bike Park",
+      description: "very cool place to hike in Highlandville MO",
+      bestSeason: "Fall/Winter/Spring",
+      personalExp:
+        "I grew up a few miles down the road from this place.  I think this place had a different owner when I was younger.  When you first pull in you'll think it's only a mountain bike park, but there is plenty of footwork to be explored when you walk towards the river.",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.200666116713!2d-93.35636278480841!3d36.957264066542464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf6b99a091c567%3A0xe26e1bd83561f3f7!2sTwo%20Rivers%20Mountain%20Bike%20Park!5e0!3m2!1sen!2sus!4v1641237303981!5m2!1sen!2sus",
+      linkTo:
+        "https://mdc.mo.gov/discover-nature/places/busiek-state-forest-wildlife-area",
+    },
+
+    ////New additions
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
+    {
+      name: "PineyCreek Wilderness",
+      description: "Kind of near Galena",
+      bestSeason: "Winter",
+      personalExp: "Very easy to get lost out here",
+      legend1: "Viewing of Table Rock Lake",
+      legend2: "Somewhere in the wilderness",
+      legend3: "Looks like summer time",
+      iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12795.234184852217!2d-93.6100099!3d36.7031383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe114f42700b002e3!2sPiney%20Creek%20Wilderness!5e0!3m2!1sen!2sus!4v1641237264740!5m2!1sen!2sus",
+      linkTo:
+        "https://www.fs.usda.gov/recarea/mtnf/recarea/?recid=21764",
+    },
   ];
 
   return (
