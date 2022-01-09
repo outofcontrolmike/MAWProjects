@@ -6,7 +6,7 @@ export default function HikingTrails(props) {
       <div className="ui container segment piled raised">
         <div className="ui list" id="hikeList" style={{ fontSize: "1.5rem" }}>
           <div style={{ color: "teal" }} id="busiek" className="item">
-            Busiek State Forest - East
+            Busiek State Forest
           </div>
           <div className="item" id="compton">Compton Hollow Conservation Area</div>
           <div className="item" id="hening">Hening Conservation Area</div>

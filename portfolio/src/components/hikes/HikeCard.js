@@ -100,6 +100,16 @@ export default function HikeCard(props) {
   }
 
 
+  function herculesFiller(e) {
+    let hercules = document.getElementById('hercules');
+    if (e.target.id === "hercules") {
+      selectAllItems();
+      hercules.style.color = "teal";
+      setupHikeContent(1);
+      swapImages(0, 1, 2);
+    }
+  }
+
   function busiekFiller(e) {
     let item = document.getElementById('busiek');
     if (e.target.id === "busiek") {
@@ -108,16 +118,6 @@ export default function HikeCard(props) {
       setupHikeContent(0);
       swapImages(3, 4, 5);
 
-    }
-  }
-
-  function herculesFiller(e) {
-    let hercules = document.getElementById('hercules');
-    if (e.target.id === "hercules") {
-      selectAllItems();
-      hercules.style.color = "teal";
-      setupHikeContent(1);
-      swapImages(0, 1, 2);
     }
   }
 
@@ -139,7 +139,7 @@ export default function HikeCard(props) {
     if (e.target.id === "compton") {
       selectAllItems();
       item.style.color = "teal";
-      setupHikeContent(3);
+      setupHikeContent(4);
       swapImages(9, 10, 11);
     }
   }
@@ -150,7 +150,7 @@ export default function HikeCard(props) {
     if (e.target.id === "hening") {
       selectAllItems();
       item.style.color = "teal";
-      setupHikeContent(4);
+      setupHikeContent(5);
       swapImages(12, 13, 14);
     }
   }
@@ -161,7 +161,7 @@ export default function HikeCard(props) {
     if (e.target.id === "lakeSpringfield") {
       selectAllItems();
       item.style.color = "teal";
-      setupHikeContent(5);
+      setupHikeContent(6);
       swapImages(15, 16, 17);
 
     }
@@ -173,7 +173,7 @@ export default function HikeCard(props) {
     if (e.target.id === "lostHill") {
       selectAllItems();
       item.style.color = "teal";
-      setupHikeContent(6);
+      setupHikeContent(7);
       swapImages(18, 19, 20);
     }
   }
@@ -184,7 +184,7 @@ export default function HikeCard(props) {
     if (e.target.id === "pleasant") {
       selectAllItems();
       item.style.color = "teal";
-      setupHikeContent(7);
+      setupHikeContent(8);
       swapImages(21, 22, 23);
     }
   }
@@ -196,7 +196,7 @@ export default function HikeCard(props) {
     if (e.target.id === "springfieldNC") {
       selectAllItems();
       item.style.color = "teal";
-      setupHikeContent(8);
+      setupHikeContent(9);
       swapImages(24, 25, 26);
     }
   }
