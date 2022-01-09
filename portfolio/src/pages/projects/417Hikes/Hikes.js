@@ -81,9 +81,9 @@ function Hikes(props) {
   let hikes = [
     {
       name: "Busiek State Forest",
-      description: "Testing from array",
-      bestSeason: "Spring",
-      personalExp: "This is a very easy place to become lost at",
+      description: "This area is located between Ozark and Branson.  It features a East and a West side offering three different trails for each side.  The east side consists of the Red,Yellow, and Silver trails.  Red is most common and least difficult.  There are also three different parking areas that will start you at each trail head, but most people stick with the most north one (the red trail head).  This trali offers many viewings of ozark mountains, wild flowers, wildlife, creeks, and small waterfalls if you go after a good rain. <p>The West side also has a gun range along with three trails.  These trails are marked as Purple, White and Orange.  This area has the more strenous hikes but is more secluded. It's possible to combine all the trails into one, but you'd be looking at hiking around 8 or 9 miles</p>",
+      bestSeason: "Spring/Fall",
+      personalExp: "I've had a lot of fun exploring all the trails at this area and have helped direct people at times.  I really enjoy the trails after a good rain or on a snowy day.  I don't recommend going during the summer.",
       legend1: "Carter Cemetary along the Red trail",
       legend2: "Spring Time at the Yellow Trail",
       legend3: "Part of the Red Trail",
