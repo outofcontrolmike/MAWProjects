@@ -7,3 +7,8 @@
 #hikeList > div {
     padding: .9rem;
 }
+
+.carousel .slide img {
+    max-height: 310px;
+    object-fit: cover;
+}

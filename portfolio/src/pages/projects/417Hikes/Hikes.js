@@ -238,7 +238,7 @@ function Hikes(props) {
       description: "Located northeast of Springfield on Valley Water Mill Road, the park features a one-mile hiking trail around the lake and other in-park trails, water-and-stream side learning stations, outdoor classroom pavilion, fishing piers, maintenance center and Watershed Center of the Ozarks.",
       bestSeason: "All except Summer",
       personalExp: "I Personally enjoy this place.  It's less crowded than the Nature Center and does have a lot of informative information about the ecosystem along the trail.  You get to see a lot within 1.5 miles of hiking.",
-      legend1: "Perfect Sunny day",
+      legend1: "Marsh type area",
       legend2: "View of the spring fed lake",
       legend3: "Some type of wild mushroom",
       iframeSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12701.60177039494!2d-93.2474959!3d37.2619303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcac6462a7dfa8b4!2sValley%20Water%20Mill%20Park!5e0!3m2!1sen!2sus!4v1641759637763!5m2!1sen!2sus",
