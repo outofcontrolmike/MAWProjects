@@ -207,7 +207,7 @@ export default function HikeCard(props) {
     if (e.target.id === "twoRivers") {
       selectAllItems();
       item.style.color = "teal";
-      setupHikeContent(9);
+      setupHikeContent(3);
       swapImages(27, 28, 29);
     }
   }
