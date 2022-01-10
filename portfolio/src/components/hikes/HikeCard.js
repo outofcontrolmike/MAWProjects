@@ -7,9 +7,13 @@ export default function HikeCard(props) {
   
   let hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, item, legend1, legend2, legend3
 
+  let hikeTitle, hikeFeatures, hikeLocation;
 
 
   function loadStuff() {
+    hikeTitle = document.getElementById('hikeTitle');
+    hikeFeatures = document.getElementById('hikeFeatures');
+    hikeLocation = document.getElementById('hikeLocation');
     hikeDesc = document.getElementById('hikeDesc');
     bestSeason = document.getElementById('bestSeason')
     hikeExp = document.getElementById('hikeExp')
@@ -59,6 +63,9 @@ export default function HikeCard(props) {
       let hikeInfo = props.hikes.data[num];
   
       //Set hike info
+      hikeTitle.innerHTML = hikeInfo.name;
+      hikeLocation.innerHTML = hikeInfo.location;
+      hikeFeatures.innerHTML = hikeInfo.features;
       hikeDesc.innerHTML = hikeInfo.description;
       bestSeason.innerHTML = hikeInfo.bestSeason;
       hikeExp.innerHTML = hikeInfo.personalExp;
@@ -236,15 +243,31 @@ export default function HikeCard(props) {
   
   
   return (
-    <div className="ui container" id="hikeCard" style={{ fontSize: "1.3rem" }}>
+    <div className="ui" id="hikeCard" style={{ fontSize: "1.3rem" }}>
+      <h2 id="hikeTitle">
+        {hike1.name}
+      </h2>
+      <hr></hr>
+      <b>Features: </b>
+      <p id="hikeFeatures">
+        <p>{hike1.features}</p>
+      </p>
+      <b>Location: </b>
+      <p id="hikeLocation">
+    {hike1.location}
+      </p>
+      <b>Description: </b>
       <p id="hikeDesc">{hike1.description}</p>
+      <b>Beast Season: </b>
       <p id="bestSeason">{hike1.bestSeason}</p>
+      <b>Personal Experience: </b>
       <p id="hikeExp">{hike1.personalExp}</p>
       <div>
-        More Info:
+      <b>More Information:</b>
+
         <br></br>
         <br></br>
-        <a id="hikeLink" target="_blank">
+        <a id="hikeLink" target="_blank" href={hike1.linkTo}>
           {hike1.linkTo}
         </a>
       </div>

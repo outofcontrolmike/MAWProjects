@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function HikeNavigation() {
   return (
-    <div className="ui four item menu secondary pointing center aligned">
+    <div className="ui five item menu secondary pointing center aligned">
         <a className="item">
           <NavLink to="/hikes" style={{ color: "black" }}>
             Hikes
@@ -13,7 +13,7 @@ export default function HikeNavigation() {
         <a className="item">
           <NavLink
             activeClassName="selected"
-            to="/hikes"
+            to="/hikeGallery"
             style={{ color: "black" }}
           >
            Gallery
@@ -22,10 +22,19 @@ export default function HikeNavigation() {
         <a className="item">
           <NavLink
             activeClassName="selected"
-            to="/hikes"
+            to="/hikeContact"
             style={{ color: "black" }}
           >
             Contact
+          </NavLink>
+        </a>
+        <a className="item">
+          <NavLink
+            activeClassName="selected"
+            to="spfGallery"
+            style={{ color: "black" }}
+          >
+            Springfield Gallery
           </NavLink>
         </a>
         <a className="item">

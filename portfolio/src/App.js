@@ -25,6 +25,11 @@ import Pokemon from "./pages/projects/pokemon/Pokemon";
 import TMNT from "./pages/projects/tmnt/Tmnt";
 import VueShop from "./pages/projects/vue_shopping_cart/VueCart";
 
+//Hike Imports
+import HikeContact from "./components/hikes/HikeContact";
+import HikeGallery from "./components/hikes/HikeGallery";
+import SpringfieldGallery from "./components/hikes/SpringfieldGallery";
+
 //Main app component that handles all the routing
 function App() {
   return (
@@ -83,9 +88,6 @@ function App() {
         <Route path="/hikes">
           <Hikes />
         </Route>
-        <Route path="/springfield">
-          <Pokemon />
-        </Route>
         <Route path="/pokemon">
           <Pokemon />
         </Route>
@@ -94,6 +96,17 @@ function App() {
         </Route>
         <Route path="/vue_shopping_cart">
           <VueShop />
+        </Route>
+
+        {/* Region for Hikes project */}
+        <Route path="/hikeContact">
+          <HikeContact />
+        </Route>
+        <Route path="/hikeGallery">
+          <HikeGallery />
+        </Route>
+        <Route path="/spfGallery">
+          <SpringfieldGallery />
         </Route>
       </Switch>
     </Layout>

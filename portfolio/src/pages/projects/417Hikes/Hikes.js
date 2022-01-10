@@ -83,7 +83,7 @@ function Hikes(props) {
       name: "Busiek State Forest",
       location: "South of Ozark, MO",
       features: "Viewings of Ozark Mountains, wild flowers, wildlife, creeks and waterflow.  Camping is also available.",
-      description: "This state forest features an East and a West side offering three different trails for each side.  The east side consists of the Red,Yellow, and Silver trails.  Red is most common and least difficult.  There are also three different parking areas that will start you at each trail head, but most people stick with the most north one (the red trail head).The West side also has a gun range along with three trails. These trails are marked as Purple, White and Orange.  This area has the more strenuous hikes but is more secluded. It's possible to combine all the trails into one, but you'd be looking at hiking around 8 or 9 miles</p>",
+      description: "This state forest features an East and a West side offering three different trails for each side.  The east side consists of the Red,Yellow, and Silver trails.  Red is most common and least difficult.  There are also three different parking areas that will start you at each trail head, but most people stick with the most north one (the red trail head). The West side also has a gun range along with three trails. These trails are marked as Purple, White and Orange.  This area has the more strenuous hikes but is more secluded. It's possible to combine all the trails into one, but you'd be looking at hiking around 8 or 9 miles.",
       bestSeason: "Spring/Fall",
       personalExp: "I've had a lot of fun exploring all the trails at this area and have helped direct people at times.  I really enjoy the trails after a good rain or on a snowy day.  I don't recommend going during the summer.",
       legend1: "Carter Cemetary along the Red trail",
@@ -267,7 +267,7 @@ function Hikes(props) {
     <div className="ui" style={{ backgroundColor: "white", color: "black" }}>
       <HikeHeader />
       <HikeNavigation />
-      <div className="ui three column stackable grid very relaxed padded">
+      <div className="ui three column doubling stackable grid fluid padded">
         <HikingTrails data={hikes} imgs={imgArray} />
         <HikeCarousel data={hikes} imgs={imgArray} />
         <HikeContent data={hikes} imgs={imgArray} />

@@ -3,7 +3,9 @@ import React, { useState } from "react";
 export default function HikingTrails(props) {
   return (
     <div className="ui column">
-      <div className="ui container segment piled raised">
+      <div className="ui container segment raised padded relaxed very">
+        <h2 style={{paddingTop: "1rem"}}>Hikes List</h2>
+        <hr></hr>
         <div className="ui list" id="hikeList" style={{ fontSize: "1.5rem" }}>
           <div style={{ color: "teal" }} id="busiek" className="item">
             Busiek State Forest
