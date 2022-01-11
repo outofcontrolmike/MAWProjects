@@ -21,8 +21,9 @@ export default function SpringfieldGallery() {
     
     return (
         <div className="ui" style={{backgroundColor: "white"}}>
+            <h1>Springfield City Gallery</h1>
         <div id="spfList" className='ui images centered'>
-            
+            {/* Images will be listed here */}
         </div>
         </div>
     )

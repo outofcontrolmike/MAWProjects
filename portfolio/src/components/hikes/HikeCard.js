@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 import HikeGPS from "./HikeGPS";
-//Hiking card
+
+//Hiking card component - handles swapping hiking content info, gallery info and selected hiking item
 export default function HikeCard(props) {
+
+  //sets up initial selected hike on page load
   let hike1 = props.hikes.data[0];
 
-  
+  // set up variables 
   let hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, item, legend1, legend2, legend3
-
   let hikeTitle, hikeFeatures, hikeLocation;
 
 
+  //Grabs all id's and assigns click events to hike items
   function loadStuff() {
     hikeTitle = document.getElementById('hikeTitle');
     hikeFeatures = document.getElementById('hikeFeatures');
@@ -25,31 +28,67 @@ export default function HikeCard(props) {
     legend2 = document.getElementById('legend2');
     legend3 = document.getElementById('legend3');
 
-
     hikeMap = document.getElementById('hikeMap');
     document.querySelectorAll('.item').forEach(item => {
       item.addEventListener('click', changeMe);
 
     })
   }
+  //grabs everything after initial page load
   setTimeout(loadStuff, 1000);
 
+  //Handles assigning passable data based on selected hike
   function changeMe(e) {
-    busiekFiller(e);
-    herculesFiller(e);
-    pineyFiller(e);
-    comptonFiller(e);
-    heningFiller(e);
-    lakeSpfFiller(e);
-    lostHillFiller(e);
-    pleasantFiller(e);
-    sncFiller(e);
-    twoRiversFiller(e);
-    valleyFiller(e);
-    wilsonFiller(e);
+    let target = e.target.id;
 
+    switch (target) {
+      case 'busiek':
+        hikeFiller("busiek", 0, 3, 4, 5);
+        break;
+      case 'hercules':
+        hikeFiller("hercules", 1, 0, 1, 2);
+        break;
+      case 'piney':
+        hikeFiller("piney", 2, 6, 7, 8);
+        break;
+      case 'twoRivers':
+        hikeFiller("twoRivers", 3, 27, 28, 29);
+        break;
+      case 'compton':
+        hikeFiller("compton", 4, 9, 10, 11);
+        break;
+      case 'hening':
+        hikeFiller("hening", 5, 12, 13, 14);
+        break;
+      case 'lakeSpringfield':
+        hikeFiller("lakeSpringfield", 6, 15, 16, 17);
+        break;
+      case 'lostHill':
+        hikeFiller("lostHill", 7, 18, 19, 20);
+        break;
+      case 'pleasant':
+        hikeFiller("pleasant", 8, 21, 22, 23);
+        break;
+      case 'springfieldNC':
+        hikeFiller("springfieldNC", 9, 24, 25, 26);
+        break;
+      case 'valleyWater':
+        hikeFiller("valleyWater", 10, 30, 31, 32);
+        break;
+      case 'wilsonsCreek':
+        hikeFiller("wilsonsCreek", 11, 33, 34, 35);
+        break;
+    }
   }
 
+  //Handles swapping out hike card content with passed data
+  function hikeFiller(id, content, img1, img2, img3) {
+    let itemId = document.getElementById(id);
+    itemId.style.color = "teal";
+    setupHikeContent(content);
+    swapImages(img1, img2, img3);
+    selectAllItems();
+  }
   //changes non selected list items to black
   function selectAllItems(e) {
     document.querySelectorAll('.item').forEach(item => {
@@ -57,28 +96,27 @@ export default function HikeCard(props) {
     })
   }
 
-    //handles hikeContent and legends
-    function setupHikeContent(num) {
+  //handles hikeContent and legends
+  function setupHikeContent(num) {
 
-      let hikeInfo = props.hikes.data[num];
-  
-      //Set hike info
-      hikeTitle.innerHTML = hikeInfo.name;
-      hikeLocation.innerHTML = hikeInfo.location;
-      hikeFeatures.innerHTML = hikeInfo.features;
-      hikeDesc.innerHTML = hikeInfo.description;
-      bestSeason.innerHTML = hikeInfo.bestSeason;
-      hikeExp.innerHTML = hikeInfo.personalExp;
-      hikeLink.innerHTML = hikeInfo.linkTo;
-      hikeMap.src = hikeInfo.iframeSrc;
-  
-      //set legends
-      legend1.innerHTML = hikeInfo.legend1;
-      legend2.innerHTML = hikeInfo.legend2;
-      legend3.innerHTML = hikeInfo.legend3;
+    let hikeInfo = props.hikes.data[num];
 
-    }
-  
+    //Set hike info
+    hikeTitle.innerHTML = hikeInfo.name;
+    hikeLocation.innerHTML = hikeInfo.location;
+    hikeFeatures.innerHTML = hikeInfo.features;
+    hikeDesc.innerHTML = hikeInfo.description;
+    bestSeason.innerHTML = hikeInfo.bestSeason;
+    hikeExp.innerHTML = hikeInfo.personalExp;
+    hikeLink.innerHTML = hikeInfo.linkTo;
+    hikeMap.src = hikeInfo.iframeSrc;
+
+    //set legends
+    legend1.innerHTML = hikeInfo.legend1;
+    legend2.innerHTML = hikeInfo.legend2;
+    legend3.innerHTML = hikeInfo.legend3;
+  }
+
   //swap carousel images and thumbnails
   function swapImages(img1, img2, img3) {
     let image1 = document.querySelectorAll('#hikeImage1');
@@ -95,153 +133,8 @@ export default function HikeCard(props) {
     image2[1].src = props.hikes.imgs[img2].src;
     image3[1].src = props.hikes.imgs[img3].src;
 
-    // //revert back to original slide
-    // let thumbs = document.querySelectorAll('.slide');
-    // thumbs[0].classList.remove('selected', 'previous');
-    // thumbs[1].classList.remove('selected', 'previous');
-    // thumbs[2].classList.remove('selected', 'previous');
-
-    // console.log("slides", thumbs);
-    // thumbs[0].classList.add('selected');
-
   }
 
-
-  function herculesFiller(e) {
-    let hercules = document.getElementById('hercules');
-    if (e.target.id === "hercules") {
-      selectAllItems();
-      hercules.style.color = "teal";
-      setupHikeContent(1);
-      swapImages(0, 1, 2);
-    }
-  }
-
-  function busiekFiller(e) {
-    let item = document.getElementById('busiek');
-    if (e.target.id === "busiek") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(0);
-      swapImages(3, 4, 5);
-
-    }
-  }
-
-  function pineyFiller(e) {
-    let piney = document.getElementById('piney');
-    if (e.target.id === "piney") {
-      selectAllItems();
-      piney.style.color = "teal";
-      setupHikeContent(2);
-      swapImages(6, 7, 8)
-    }
-  }
-
-  //////
-
-  
-  function comptonFiller(e) {
-    item = document.getElementById('compton');
-    if (e.target.id === "compton") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(4);
-      swapImages(9, 10, 11);
-    }
-  }
-
-  
-  function heningFiller(e) {
-    item = document.getElementById('hening');
-    if (e.target.id === "hening") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(5);
-      swapImages(12, 13, 14);
-    }
-  }
-
-  
-  function lakeSpfFiller(e) {
-    item = document.getElementById('lakeSpringfield');
-    if (e.target.id === "lakeSpringfield") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(6);
-      swapImages(15, 16, 17);
-
-    }
-  }
-
-  
-  function lostHillFiller(e) {
-    item = document.getElementById('lostHill');
-    if (e.target.id === "lostHill") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(7);
-      swapImages(18, 19, 20);
-    }
-  }
-
-  //pleasant hope
-  function pleasantFiller(e) {
-    item = document.getElementById('pleasant');
-    if (e.target.id === "pleasant") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(8);
-      swapImages(21, 22, 23);
-    }
-  }
-
-  
-//springfield Nature Center
-  function sncFiller(e) {
-    item = document.getElementById('springfieldNC');
-    if (e.target.id === "springfieldNC") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(9);
-      swapImages(24, 25, 26);
-    }
-  }
-
-  
-  function twoRiversFiller(e) {
-    item = document.getElementById('twoRivers');
-    if (e.target.id === "twoRivers") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(3);
-      swapImages(27, 28, 29);
-    }
-  }
-
-  
-  function valleyFiller(e) {
-     item = document.getElementById('valleyWater');
-    if (e.target.id === "valleyWater") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(10);
-      swapImages(30, 31, 32);
-    }
-  }
-
-  
-  function wilsonFiller(e) {
-    item = document.getElementById('wilsonsCreek');
-    if (e.target.id === "wilsonsCreek") {
-      selectAllItems();
-      item.style.color = "teal";
-      setupHikeContent(11);
-      swapImages(33, 34, 35);
-    }
-  }
-  
-  
   return (
     <div className="ui" id="hikeCard" style={{ fontSize: "1.3rem" }}>
       <h2 id="hikeTitle">
@@ -254,7 +147,7 @@ export default function HikeCard(props) {
       </p>
       <b>Location: </b>
       <p id="hikeLocation">
-    {hike1.location}
+        {hike1.location}
       </p>
       <b>Description: </b>
       <p id="hikeDesc">{hike1.description}</p>
@@ -263,8 +156,7 @@ export default function HikeCard(props) {
       <b>Personal Experience: </b>
       <p id="hikeExp">{hike1.personalExp}</p>
       <div>
-      <b>More Information:</b>
-
+        <b>More Information:</b>
         <br></br>
         <br></br>
         <a id="hikeLink" target="_blank" href={hike1.linkTo}>
@@ -272,7 +164,7 @@ export default function HikeCard(props) {
         </a>
       </div>
       <br></br>
-      <HikeGPS data={props}/>
+      <HikeGPS data={props} />
 
     </div>
   );
