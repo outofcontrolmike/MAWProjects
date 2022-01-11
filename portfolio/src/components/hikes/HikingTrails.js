@@ -8,7 +8,7 @@ export default function HikingTrails(props) {
         <h2 id="hikeListHeader" style={{paddingTop: "1rem", color: "forestgreen"}}>Hikes List</h2>
         <hr></hr>
         <div className="ui list" id="hikeList" style={{ fontSize: "1.5rem" }}>
-          <div style={{ color: "teal" }} id="busiek" className="item">
+          <div style={{ color: "forestgreen" }} id="busiek" className="item">
             Busiek State Forest
           </div>
           <div className="item" id="compton">Compton Hollow Conservation Area</div>

@@ -35,6 +35,9 @@ overflow: auto;
     border-bottom: forestgreen 2px solid;
   }
 
+#hikeNavigation {
+    margin-bottom: 2rem;
+}
 #hikeNavigation > a {
     font-size: .5rem;
 }
