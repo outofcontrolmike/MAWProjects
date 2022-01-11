@@ -1,10 +1,12 @@
 import React from 'react'
-
+import HikeHeader from './HikeHeader'
+import HikeNavigation from './HikeNavigation'
 //Hike contact form
 export default function HikeContact() {
     return (
-        <div>
-            <h2>Hike Contact</h2>
+        <div style={{backgroundColor: "white"}}>
+            <HikeHeader />
+            <HikeNavigation />
         </div>
     )
 }

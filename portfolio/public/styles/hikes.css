@@ -17,3 +17,13 @@
     height: 44.5rem;
 overflow: auto;
 }
+
+#hikeImage {
+    object-fit: cover;
+    
+}
+
+/* hikeNavigation */
+.hikeSelected {
+    border-bottom: forestgreen 2px solid;
+  }

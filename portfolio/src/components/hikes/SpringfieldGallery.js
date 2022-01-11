@@ -1,5 +1,8 @@
 import React from 'react'
+import HikeNavigation
+ from './HikeNavigation';
 
+ import HikeHeader from './HikeHeader';
 //Springfield photo gallery
 export default function SpringfieldGallery() {
 
@@ -25,7 +28,8 @@ export default function SpringfieldGallery() {
     
     return (
         <div className="ui" style={{backgroundColor: "white"}}>
-            <h1>Springfield City Gallery</h1>
+             <HikeHeader />
+                <HikeNavigation />
         <div id="spfList" className='ui images centered'>
             {/* Images will be listed here */}
         </div>

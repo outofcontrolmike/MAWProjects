@@ -1,5 +1,8 @@
 import React from 'react'
+import HikeNavigation
+ from './HikeNavigation';
 
+ import HikeHeader from './HikeHeader';
 //Hiking Gallery
 export default function HikeGallery(props) {
    
@@ -8,7 +11,7 @@ export default function HikeGallery(props) {
 
     function setupImages() {
   //Alternate way of setting up array
-  let count = 50;
+  let count = 35;
   
   //Create array indexes for images
   for (let i = 0; i <= count; i++) {
@@ -78,11 +81,12 @@ export default function HikeGallery(props) {
   
     }
 
-    console.log("imgarray", imgArray);
-        //Create images and append to spfList
+        //Create images and append to galleryList
         function createImages() {
             for(let i = 0; i < imgArray.length; i++ )
             {
+                imgArray[i].className="ui image medium";
+                imgArray[i].id = "hikeImage"
                document.getElementById('galleryList').appendChild(imgArray[i]);
             }
         }
@@ -96,8 +100,9 @@ export default function HikeGallery(props) {
     console.log('imagArray from hike gallery', imgArray);
     return (
         <div className="ui" style={{backgroundColor: "white"}}>
-            <h1>Springfield City Gallery</h1>
-        <div id="galleryList" className='ui images centered'>
+                <HikeHeader />
+                <HikeNavigation />
+        <div id="galleryList" className='ui images centered huge one fluid'>
             {/* Images will be listed here */}
         </div>
         </div>
