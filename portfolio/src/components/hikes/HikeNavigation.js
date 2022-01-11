@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+//Navigation menu for project
 export default function HikeNavigation() {
   return (
     <div className="ui five item menu secondary pointing center aligned">

@@ -1,5 +1,6 @@
 import React from "react";
 
+//Header for hikes project
 function HikeHeader() {
   return (
     <div className="ui">

@@ -1,5 +1,6 @@
 import React from "react";
 
+//Interchangeable Google Map 
 export default function HikeGPS() {
   return (
       <iframe

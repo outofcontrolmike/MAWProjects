@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Hike contact form
 export default function HikeContact() {
     return (
         <div>

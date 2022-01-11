@@ -1,5 +1,6 @@
 import React from "react";
 
+//Footer
 export default function HikeFooter() {
   return (
     <div

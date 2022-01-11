@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Hiking Gallery
 export default function HikeGallery() {
     return (
         <div>

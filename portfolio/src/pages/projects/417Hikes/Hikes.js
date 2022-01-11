@@ -6,8 +6,10 @@ import HikeHeader from "../../../components/hikes/HikeHeader";
 import HikeNavigation from "../../../components/hikes/HikeNavigation";
 import HikingTrails from "../../../components/hikes/HikingTrails";
 
+//main hiking component
 function Hikes(props) {
 
+  //Alternate way of setting up array
   let imgArray = new Array()
   let count = 50;
 
@@ -77,7 +79,7 @@ function Hikes(props) {
    imgArray[34].src = "img/hikes/wilson2.jpg";
    imgArray[35].src = "img/hikes/wilson3.jpg";
 
-  //array of hikes
+  //array of hikes - Please only add new objects to the end of the hikes array.
   let hikes = [
     {
       name: "Busiek State Forest",

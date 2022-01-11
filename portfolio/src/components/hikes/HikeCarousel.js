@@ -2,11 +2,10 @@ import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-
+//Interchangeable Carousel for hikes page
 export default function HikeCarousel(props) {
-    console.log("props from hikecarosuel", props)
+    //Initial carousel images for page load
     let hike1 = props.data[0];
-
     return (
         <div className='ui column'>
             <p id="hikePhotos">

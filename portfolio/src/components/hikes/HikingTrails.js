@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//List of hiking trails
 export default function HikingTrails(props) {
   return (
     <div className="ui column">
