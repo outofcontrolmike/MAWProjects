@@ -83,11 +83,12 @@ export default function HikeCard(props) {
 
   //Handles swapping out hike card content with passed data
   function hikeFiller(id, content, img1, img2, img3) {
+    selectAllItems();
+
     let itemId = document.getElementById(id);
-    itemId.style.color = "teal";
+    itemId.style.color = "forestgreen";
     setupHikeContent(content);
     swapImages(img1, img2, img3);
-    selectAllItems();
   }
   //changes non selected list items to black
   function selectAllItems(e) {
@@ -103,6 +104,7 @@ export default function HikeCard(props) {
 
     //Set hike info
     hikeTitle.innerHTML = hikeInfo.name;
+    hikeTitle.style.color = "forestgreen";
     hikeLocation.innerHTML = hikeInfo.location;
     hikeFeatures.innerHTML = hikeInfo.features;
     hikeDesc.innerHTML = hikeInfo.description;

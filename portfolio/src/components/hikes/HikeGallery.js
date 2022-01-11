@@ -85,7 +85,7 @@ export default function HikeGallery(props) {
         function createImages() {
             for(let i = 0; i < imgArray.length; i++ )
             {
-                imgArray[i].className="ui image medium";
+                imgArray[i].className="ui huge image centered";
                 imgArray[i].id = "hikeImage"
                document.getElementById('galleryList').appendChild(imgArray[i]);
             }
@@ -102,7 +102,7 @@ export default function HikeGallery(props) {
         <div className="ui" style={{backgroundColor: "white"}}>
                 <HikeHeader />
                 <HikeNavigation />
-        <div id="galleryList" className='ui images centered huge one fluid'>
+        <div id="galleryList" className='ui images centered'>
             {/* Images will be listed here */}
         </div>
         </div>

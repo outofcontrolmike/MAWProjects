@@ -1,5 +1,8 @@
 /* Hikes Style Sheet */
 
+#hikesText, #hikeNavigation, #hikeHeader, #hikeListHeader, #hikeTitle {
+    font-family: 'Libre Baskerville', serif;
+}
 #hikeLink {
     font-size: 1rem;
 }
@@ -18,12 +21,20 @@
 overflow: auto;
 }
 
-#hikeImage {
+#hikeImage, #spfImage {
     object-fit: cover;
-    
+    max-height: 450px;
+    padding:2rem;
+    max-width: 100%;
+    height: auto;
+
 }
 
 /* hikeNavigation */
 .hikeSelected {
     border-bottom: forestgreen 2px solid;
   }
+
+#hikeNavigation > a {
+    font-size: .5rem;
+}

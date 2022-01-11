@@ -4,11 +4,10 @@ import { NavLink } from "react-router-dom";
 //Navigation menu for project
 export default function HikeNavigation() {
   return (
-    <div className="ui five item menu secondary center aligned">
+    <div className="ui five item secondary pointing menu center aligned" id="hikeNavigation">
       <a className="item">
 
         <NavLink          activeClassName="hikeSelected"
-
           to="/hikes" style={{ color: "black" }}>
           Hikes
         </NavLink>

@@ -16,8 +16,7 @@ export default function SpringfieldGallery() {
            let spfImage =  document.createElement('img');
            spfImage.src = spfImages[i];
            spfImage.classList="ui huge image centered";
-           spfImage.style.padding = "1rem"
-           console.log("spfImage", spfImage.src);
+           spfImage.id = "spfImage";
            document.getElementById('spfList').appendChild(spfImage);
         }
     }

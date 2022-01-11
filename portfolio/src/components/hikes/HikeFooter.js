@@ -9,7 +9,7 @@ export default function HikeFooter() {
     >
       <p className="ui text center aligned" style={{ fontSize: "20px" }}>
         Thank you for visiting my hike page. Info is based on personal
-        experience and google
+        experience and google.  All pictures were taken by myself (Michael Wilson)
       </p>
     </div>
   );
