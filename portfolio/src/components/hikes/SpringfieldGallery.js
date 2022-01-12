@@ -1,4 +1,5 @@
 import React from 'react'
+import HikeFooter from './HikeFooter';
 import HikeNavigation
  from './HikeNavigation';
 
@@ -32,6 +33,8 @@ export default function SpringfieldGallery() {
         <div id="spfList" className='ui images centered'>
             {/* Images will be listed here */}
         </div>
+        <HikeFooter />
+
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import HikeFooter from './HikeFooter';
 import HikeNavigation
  from './HikeNavigation';
 
@@ -105,6 +106,8 @@ export default function HikeGallery(props) {
         <div id="galleryList" className='ui images centered'>
             {/* Images will be listed here */}
         </div>
+        <HikeFooter />
+
         </div>
     )
 }

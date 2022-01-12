@@ -8,10 +8,10 @@ export default function HikeFooter() {
       style={{ color: "black", height: "4rem" }}
     >
       <p className="ui text center aligned" style={{ fontSize: "20px" }}>
-        Thank you for visiting my hike page. Info is based on personal
-        experience and google.  All pictures were taken by myself (Michael Wilson)
+        Thank you for visiting my hiking site! The information is based on personal
+        experience and google and all of the photos were taken by me.
         <span style={{float: "right"}}>
-          <a href="https://www.instagram.com/explodingsnes">
+          <a href="https://www.instagram.com/explodingsnes/">
           <i class="instagram icon large"></i>
             </a></span>
       </p>
