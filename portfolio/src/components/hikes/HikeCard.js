@@ -139,7 +139,7 @@ export default function HikeCard(props) {
 
   return (
     <div className="ui" id="hikeCard" style={{ fontSize: "1.3rem" }}>
-      <h2 id="hikeTitle">
+      <h2 id="hikeTitle" style={{color: "forestgreen"}}>
         {hike1.name}
       </h2>
       <hr></hr>
