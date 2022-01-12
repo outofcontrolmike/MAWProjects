@@ -24,7 +24,7 @@ export default function SpringfieldGallery() {
     //Run this after page render
     setTimeout(() => {
         createImages()
-    }, 10);
+    }, 1);
     
     return (
         <div className="ui" style={{backgroundColor: "white"}}>
