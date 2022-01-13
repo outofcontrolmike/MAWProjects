@@ -20,6 +20,7 @@ export default function SpringfieldGallery() {
            spfImage.id = "spfImage";
 
           let link = document.createElement('a');
+          link.classList = "ui container";
           link.target = "_blank";
           link.style.width = "800px";
           link.href = spfImage.src;
@@ -37,7 +38,7 @@ export default function SpringfieldGallery() {
         <div className="ui" style={{backgroundColor: "white"}}>
              <HikeHeader />
                 <HikeNavigation />
-        <div id="spfList" className='ui image centered'>
+        <div id="spfList" className='ui image centered' style={{backgroundColor: "white"}}>
             {/* Images will be listed here */}
         </div>
         <HikeFooter />

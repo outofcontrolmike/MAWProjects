@@ -11,9 +11,6 @@
     padding-bottom: .9rem;
 }
 
-#hikeList {
-    background-color: black;
-}
 .carousel .slide img {
     max-height: 310px;
     object-fit: cover;
