@@ -18,7 +18,14 @@ export default function SpringfieldGallery() {
            spfImage.src = spfImages[i];
            spfImage.classList="ui huge image centered";
            spfImage.id = "spfImage";
-           document.getElementById('spfList').appendChild(spfImage);
+
+          let link = document.createElement('a');
+          link.target = "_blank";
+          link.style.width = "800px";
+          link.href = spfImage.src;
+
+          link.appendChild(spfImage);
+           document.getElementById('spfList').appendChild(link);
         }
     }
     //Run this after page render
@@ -30,7 +37,7 @@ export default function SpringfieldGallery() {
         <div className="ui" style={{backgroundColor: "white"}}>
              <HikeHeader />
                 <HikeNavigation />
-        <div id="spfList" className='ui images centered'>
+        <div id="spfList" className='ui image centered'>
             {/* Images will be listed here */}
         </div>
         <HikeFooter />

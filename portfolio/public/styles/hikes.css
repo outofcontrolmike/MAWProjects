@@ -11,6 +11,9 @@
     padding-bottom: .9rem;
 }
 
+#hikeList {
+    background-color: black;
+}
 .carousel .slide img {
     max-height: 310px;
     object-fit: cover;
@@ -24,16 +27,14 @@ overflow: auto;
 #hikeImage, #spfImage {
     object-fit: cover;
     max-height: 450px;
-    padding:2rem;
+    padding:.25rem;
+    margin-bottom:1rem;
     max-width: 100%;
     height: auto;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+    border-color: black;
 }
 
-#hikeImage:hover {
-    text-align: center;
-    object-fit: contain;
-}
 
 /* hikeNavigation */
 .hikeSelected {
@@ -60,3 +61,5 @@ overflow: auto;
     bottom:2px;
     color:white;
 }
+
+/* Spf List */

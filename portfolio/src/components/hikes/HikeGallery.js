@@ -86,9 +86,15 @@ export default function HikeGallery(props) {
         function createImages() {
             for(let i = 0; i < imgArray.length; i++ )
             {
+                let link = document.createElement('a');
+                link.classList = "ui container"
+                link.target = "_blank";
+                link.style.width = "800px";
+                link.href = imgArray[i].src;
                 imgArray[i].className="ui huge image centered";
                 imgArray[i].id = "hikeImage"
-               document.getElementById('galleryList').appendChild(imgArray[i]);
+               link.appendChild(imgArray[i]); 
+               document.getElementById('galleryList').appendChild(link);
             }
         }
         //Run this after page render
@@ -103,7 +109,7 @@ export default function HikeGallery(props) {
         <div className="ui" style={{backgroundColor: "white"}}>
                 <HikeHeader />
                 <HikeNavigation />
-        <div id="galleryList" className='ui images centered'>
+        <div id="galleryList" className='ui image centered'>
             {/* Images will be listed here */}
         </div>
         <HikeFooter />
