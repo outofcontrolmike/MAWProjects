@@ -3,11 +3,11 @@ import React from "react";
 //Header for hikes project
 function HikeHeader() {
   return (
-    <div className="ui">
+    <div className="ui" style={{paddingTop: "1rem"}}>
       <h1
         className="ui text header center aligned massive"
         id="hikeHeader"
-        style={{ fontSize: "3rem", paddingTop: "2rem", color: "forestgreen" }}
+        style={{ fontSize: "2rem", paddingTop: "1rem"}}
       >
         417 Missouri Hikes
       </h1>

@@ -1,10 +1,21 @@
 /* Hikes Style Sheet */
 
-#hikeHeader {
-    letter-spacing: 1.5rem;
+#hikeHeader{
+    letter-spacing: 1rem;
+    text-shadow: .5px .5px forestgreen;
+    padding-top:3rem;
 }
-#hikesText, #hikeNavigation, #hikeHeader, #hikeListHeader, #hikeTitle {
+
+#hikesText, #hikeNavigation, #hikeHeader, #hikeListHeader, #hikeTitle, #hikeContactContainer > div {
     font-family: 'Libre Baskerville', serif;
+}
+
+#hikesText, #hikeFooter, #hikeGallery, #spfGallery, #hikeContactContainer {
+    background: #DAD299;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
 }
 #hikeLink {
     font-size: 1rem;
@@ -44,6 +55,7 @@ width:32%;
     height: auto;
     border-color: black;
     border-width: 10rem;
+
 }
 
 
@@ -57,19 +69,25 @@ width:32%;
     border-bottom-color: black;
     padding-bottom: 1rem;
 }
+
 #hikeNavigation > a {
-    font-size: .4rem;
+    text-shadow: .5px .5px forestgreen;
+    padding-bottom: 1rem;
 }
+
+
 
 /* Footer */
 
 #hikeFooter {
     height:4rem;
+    color: black;
     border-top-color: black;
     border-top-width: 3px;
     border-right: none;
     border-left:none;
     border-bottom: none;
+    font-size: x-small;
 }
 
 .instagram {
@@ -86,3 +104,46 @@ width:32%;
 }
 
 /* Spf List */
+
+
+/* Hike Contact */
+
+#hikeContactContainer {
+    height: 100vh;
+}
+#hikeContactForm {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width:40%;
+}
+
+#hikeFormText {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.1rem;
+    border-color: black;
+}
+
+
+
+/* Misc */
+
+.scroll-to-top{
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    animation: fadeIn 700ms ease-in-out 1s both;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

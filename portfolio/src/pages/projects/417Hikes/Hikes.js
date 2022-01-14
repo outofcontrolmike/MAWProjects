@@ -273,7 +273,7 @@ imgArray[32].src = "img/hikes/valley3.jpg";
   ];
 
   return (
-    <div className="ui" id="hikesText" style={{ backgroundColor: "white", color: "black" }}>
+    <div className="ui" id="hikesText" style={{  color: "black" }}>
       <HikeHeader />
       <HikeNavigation />
       <div className="ui three column doubling stackable grid fluid padded">

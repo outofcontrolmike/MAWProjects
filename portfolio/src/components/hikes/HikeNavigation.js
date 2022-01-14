@@ -9,7 +9,7 @@ export default function HikeNavigation() {
 
         <NavLink          
         activeClassName="hikeSelected"
-          to="/hikes" style={{ color: "black" }}>
+          to="/hikes" id="hikeNavItem" style={{ color: "black", fontSize: "1.5rem"}}>
           Hikes
         </NavLink>
       </a>
@@ -18,7 +18,7 @@ export default function HikeNavigation() {
         <NavLink
           activeClassName="hikeSelected"
           to="/hikeGallery"
-          style={{ color: "black" }}
+          style={{ color: "black", fontSize: "1.5rem" }}
         >
           Hike
           Gallery
@@ -28,7 +28,7 @@ export default function HikeNavigation() {
         <NavLink
           activeClassName="hikeSelected"
           to="spfGallery"
-          style={{ color: "black" }}
+          style={{ color: "black", fontSize: "1.5rem" }}
         >
           Springfield Gallery
         </NavLink>
@@ -37,7 +37,7 @@ export default function HikeNavigation() {
         <NavLink
           activeClassName="hikeSelected"
           to="/hikeContact"
-          style={{ color: "black" }}
+          style={{ color: "black", fontSize: "1.5rem" }}
         >
           Contact
         </NavLink>
@@ -46,7 +46,7 @@ export default function HikeNavigation() {
         <NavLink
           activeClassName="hikeSelected"
           to="/projects"
-          style={{ color: "black" }}
+          style={{ color: "black", fontSize: "1.5rem" }}
         >
           Projects
         </NavLink>

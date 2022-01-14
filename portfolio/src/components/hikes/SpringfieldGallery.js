@@ -4,6 +4,7 @@ import HikeNavigation
  from './HikeNavigation';
 
  import HikeHeader from './HikeHeader';
+ import BackToTopBtn from './BackToTopBtn';
 //Springfield photo gallery
 export default function SpringfieldGallery() {
 
@@ -35,12 +36,13 @@ export default function SpringfieldGallery() {
     }, 1);
     
     return (
-        <div className="ui" style={{backgroundColor: "white"}}>
+        <div className="ui" id="spfGallery">
              <HikeHeader />
                 <HikeNavigation />
-        <div id="spfList" className='ui image centered' style={{backgroundColor: "white"}}>
+        <div id="spfList" className='ui image centered'>
             {/* Images will be listed here */}
         </div>
+        <BackToTopBtn/>
         <HikeFooter />
 
         </div>

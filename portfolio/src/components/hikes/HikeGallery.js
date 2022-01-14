@@ -3,6 +3,8 @@ import HikeFooter from './HikeFooter';
 import HikeNavigation
  from './HikeNavigation';
 
+ import BackToTopBtn from './BackToTopBtn';
+
  import HikeHeader from './HikeHeader';
 //Hiking Gallery
 export default function HikeGallery(props) {
@@ -106,12 +108,13 @@ export default function HikeGallery(props) {
 
     console.log('imagArray from hike gallery', imgArray);
     return (
-        <div className="ui" style={{backgroundColor: "white"}}>
+        <div className="ui" id="hikeGallery">
                 <HikeHeader />
                 <HikeNavigation />
         <div id="galleryList" className='ui image centered'>
             {/* Images will be listed here */}
         </div>
+        <BackToTopBtn  style={{display: "none"}}/>
         <HikeFooter />
 
         </div>
