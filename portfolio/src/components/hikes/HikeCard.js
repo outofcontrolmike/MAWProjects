@@ -142,8 +142,8 @@ export default function HikeCard(props) {
       <h2 id="hikeTitle" style={{color: "forestgreen"}}>
         {hike1.name}
       </h2>
-      <hr></hr>
-      <b>Features: </b>
+      <hr id="hikeHr" style={{marginBottom: "1rem"}}></hr>
+      <b style={{paddingTop: "1rem"}}>Features: </b>
       <p id="hikeFeatures">
         <p>{hike1.features}</p>
       </p>

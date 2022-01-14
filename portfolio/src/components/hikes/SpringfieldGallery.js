@@ -16,7 +16,7 @@ export default function SpringfieldGallery() {
         {
            let spfImage =  document.createElement('img');
            spfImage.src = spfImages[i];
-           spfImage.classList="ui huge image centered";
+           spfImage.classList="ui huge image centered rounded";
            spfImage.id = "spfImage";
 
           let link = document.createElement('a');

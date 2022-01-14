@@ -91,7 +91,7 @@ export default function HikeGallery(props) {
                 link.target = "_blank";
                 link.style.width = "800px";
                 link.href = imgArray[i].src;
-                imgArray[i].className="ui huge image centered";
+                imgArray[i].className="ui huge image centered rounded";
                 imgArray[i].id = "hikeImage"
                link.appendChild(imgArray[i]); 
                document.getElementById('galleryList').appendChild(link);

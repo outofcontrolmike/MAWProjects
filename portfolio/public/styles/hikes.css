@@ -1,5 +1,8 @@
 /* Hikes Style Sheet */
 
+#hikeHeader {
+    letter-spacing: 1.5rem;
+}
 #hikesText, #hikeNavigation, #hikeHeader, #hikeListHeader, #hikeTitle {
     font-family: 'Libre Baskerville', serif;
 }
@@ -7,8 +10,18 @@
     font-size: 1rem;
 }
 
+#hikeListColumn, #hikeContent, #hikeHr, #hikeFooter{
+    border-color: black;
+    border-bottom-color: black;;
+}
+
 #hikeList > div {
-    padding-bottom: .9rem;
+    padding-bottom: 1.3rem;
+    border-color: black;
+}
+
+#hikeList > div:hover {
+    font-size: x-large;
 }
 
 .carousel .slide img {
@@ -17,8 +30,9 @@
 }
 
 #hikeContent {
-    height: 44.5rem;
+    height: 49rem;
 overflow: auto;
+width:32%;
 }
 
 #hikeImage, #spfImage {
@@ -28,24 +42,36 @@ overflow: auto;
     margin-bottom:1rem;
     max-width: 100%;
     height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
     border-color: black;
+    border-width: 10rem;
 }
 
 
 /* hikeNavigation */
-.hikeSelected {
-    border-bottom: forestgreen 2px solid;
+.hikeSelected{
+    font-weight: bold;
   }
 
 #hikeNavigation {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-bottom-color: black;
+    padding-bottom: 1rem;
 }
 #hikeNavigation > a {
-    font-size: .5rem;
+    font-size: .4rem;
 }
 
 /* Footer */
+
+#hikeFooter {
+    height:4rem;
+    border-top-color: black;
+    border-top-width: 3px;
+    border-right: none;
+    border-left:none;
+    border-bottom: none;
+}
+
 .instagram {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     box-shadow: 0px 3px 10px rgba(0,0,0,.25);

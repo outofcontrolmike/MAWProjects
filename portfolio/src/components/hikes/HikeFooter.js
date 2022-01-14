@@ -4,8 +4,9 @@ import React from "react";
 export default function HikeFooter() {
   return (
     <div
-      className="ui footer fluid center aligned segment"
-      style={{ color: "black", height: "4rem" }}
+      className="ui footer center aligned segment"
+      style={{ color: "black"}}
+      id="hikeFooter"
     >
       <p className="ui text center aligned" style={{ fontSize: "20px" }}>
         Thank you for visiting my hiking site! The information is based on personal
