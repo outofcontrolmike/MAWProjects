@@ -6,8 +6,6 @@ import HikeHeader from "../../../components/hikes/HikeHeader";
 import HikeNavigation from "../../../components/hikes/HikeNavigation";
 import HikingTrails from "../../../components/hikes/HikingTrails";
 
-import HikeGallery from "../../../components/hikes/HikeGallery";
-
 //main hiking component
 function Hikes(props) {
   let imgArray = new Array()

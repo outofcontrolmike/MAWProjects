@@ -5,6 +5,7 @@ import HikeNavigation
 
  import HikeHeader from './HikeHeader';
  import BackToTopBtn from './BackToTopBtn';
+ 
 //Springfield photo gallery
 export default function SpringfieldGallery() {
 

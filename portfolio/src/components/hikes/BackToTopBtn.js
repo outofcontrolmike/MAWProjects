@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-//Helper scroll to top component
+//Helper scroll to top component - > Credit to https://codesandbox.io/s/scroll-to-top-react-component-coderomeos-sep3f?from-embed=&file=/src/ScrollToTop.js
 export default class ScrollToTop extends Component {
   constructor(props) {
     super(props);

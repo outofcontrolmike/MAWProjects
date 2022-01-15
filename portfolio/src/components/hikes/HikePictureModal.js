@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Image, Modal } from "semantic-ui-react";
+import {Image, Modal } from "semantic-ui-react";
 
 //Modal for Help option
 export default function HikePictureModal(props) {
