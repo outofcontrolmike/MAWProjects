@@ -34,7 +34,7 @@ export default function SpringfieldGallery() {
     //Run this after page render
     setTimeout(() => {
         createImages()
-    }, 1);
+    }, 1000);
     
     return (
         <div className="ui" id="spfGallery">

@@ -144,16 +144,17 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/final_fantasy_search/FFSearch.js",
     },
-    // {
-    //   img: "img/characters.JPG",
-    //   href: "/characters",
-    //   name: "Characters",
-    //   meta: "React JS,Fomantic and Google Fonts",
-    //   desc: "A system for fetching character information and custom character uploading",
-    //   created: "Wrote September 18th 2021",
-    //   github:
-    //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/characters",
-    // },
+    {
+      img: "img/hikeProject.png",
+      href: "/hikes",
+      name: "Mikes Hikes Site",
+      meta: "React JS,Fomantic and Google Fonts",
+      desc: "Are you new to Springfield and happen to enjoy the outdoors? If so, check out this project that I made exclusively made for the Springfield area.",
+      created: "Created: January 15th 2022",
+      lastUpdated: "Last Updated: N/A",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/417Hikes/Hikes.js",
+    },
   ];
 
   //Create Cards
