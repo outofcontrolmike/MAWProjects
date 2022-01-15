@@ -5,7 +5,7 @@ export default function HikeContact() {
     return (
         <div className='ui' id="hikeContactContainer">
             {/* Form  - Name, Email, Question box, submit (use placeholders as labels) */}
-            <div className='ui container form segment relaxed padded very raised' id="hikeContactForm">
+            <div className='ui container form segment relaxed padded very raised stackable' id="hikeContactForm">
                 <form
                     action="https://formsubmit.co/outofcontrolmike@gmail.com"
                     method="POST">
