@@ -14,6 +14,8 @@
     background: #DAD299;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
 }
 #hikeLink {
     font-size: 1rem;
@@ -21,7 +23,7 @@
 
 #hikeListColumn, #hikeContent, #hikeHr, #hikeFooter{
     border-color: black;
-    border-bottom-color: black;;
+    border-bottom-color: none;
 }
 
 #hikeList > div {
@@ -78,14 +80,13 @@ width:32%;
 /* Footer */
 
 #hikeFooter {
-    height:4rem;
+    height:fit-content;
     color: black;
     border-top-color: black;
     border-top-width: 3px;
     border-right: none;
     border-left:none;
     border-bottom: none;
-    font-size: x-small;
 }
 
 .instagram {

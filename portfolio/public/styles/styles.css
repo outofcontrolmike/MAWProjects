@@ -96,7 +96,7 @@ i:hover {
 
 #aboutMe {
   margin-top: 4rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 #contactCard {
@@ -128,6 +128,7 @@ hr:hover {
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
   margin-bottom: 2rem;
+  padding:1rem;
 }
 
 #resumeSegment > h2,

@@ -12,7 +12,7 @@ export default function HikeFooter() {
         experience and google and all of the photos were taken by me.
         <span style={{float: "right"}}>
           <a href="https://www.instagram.com/explodingsnes/">
-          <i class="instagram icon large"></i>
+          <i className="instagram icon" style={{fontSize: "2rem"}}></i>
             </a></span>
       </p>
     </div>
