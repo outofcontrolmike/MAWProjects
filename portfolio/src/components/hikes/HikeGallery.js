@@ -19,8 +19,6 @@ export default function HikeGallery(props) {
         for (let i = 0; i <= count; i++) {
             imgArray[i] = new Image();
         }
-
-        //hercules glades
         imgArray[0].src = "img/hikes/herculesGlades.jpg";
         imgArray[1].src = "img/hikes/herculesglades2.jpg";
         imgArray[2].src = "img/hikes/herculesGlades3.jpg";
