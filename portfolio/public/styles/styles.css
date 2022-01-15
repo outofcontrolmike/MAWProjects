@@ -17,12 +17,12 @@ option {
 }
 
 /*Navigation menu */
-#navigation {
+#portfolioNavigation {
   padding-left: 5%;
   font-family: "Roboto Mono", monospace;
   color: gold;
 }
-.selected {
+.portfolioSelected {
   border-bottom: orange 2px solid;
 }
 
@@ -44,6 +44,7 @@ h1:hover {
 #goldText {
   color: gold;
 }
+
 a {
   color: gold;
   font-size: 26px;

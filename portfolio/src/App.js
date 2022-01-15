@@ -29,6 +29,7 @@ import VueShop from "./pages/projects/vue_shopping_cart/VueCart";
 import HikeContact from "./components/hikes/HikeContact";
 import HikeGallery from "./components/hikes/HikeGallery";
 import SpringfieldGallery from "./components/hikes/SpringfieldGallery";
+import HikeThankYou from "./components/hikes/HikeThankYou";
 
 //Main app component that handles all the routing
 function App() {
@@ -99,6 +100,9 @@ function App() {
         </Route>
 
         {/* Region for Hikes project */}
+        <Route path="/hikeThankYou">
+          <HikeThankYou />
+        </Route>
         <Route path="/hikeContact">
           <HikeContact />
         </Route>

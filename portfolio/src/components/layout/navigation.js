@@ -5,7 +5,7 @@ function Navigation(props) {
   return (
     <div
       className="ui menu secondary stackable"
-      id="navigation"
+      id="portfolioNavigation"
       style={{ backgroundColor: "black" }}
     >
       <div className="ui container navContainer" id="navContainer">
@@ -15,32 +15,32 @@ function Navigation(props) {
           </NavLink>
         </a>
         <a className="item">
-          <NavLink activeClassName="selected" id="goldText" to="/about">
+          <NavLink activeClassName="portfolioSelected" id="goldText" to="/about">
             About
           </NavLink>
         </a>
         <a className="item">
-          <NavLink activeClassName="selected" id="goldText" to="/resume">
+          <NavLink activeClassName="portfolioSelected" id="goldText" to="/resume">
             Resume
           </NavLink>
         </a>
         <a className="item">
-          <NavLink activeClassName="selected" id="goldText" to="/projects">
+          <NavLink activeClassName="portfolioSelected" id="goldText" to="/projects">
             Projects
           </NavLink>{" "}
         </a>
         <a className="item">
-          <NavLink activeClassName="selected" id="goldText" to="/comments">
+          <NavLink activeClassName="portfolioSelected" id="goldText" to="/comments">
             Comments
           </NavLink>
         </a>
         <a className="item">
-          <NavLink activeClassName="selected" id="goldText" to="/contact">
+          <NavLink activeClassName="portfolioSelected" id="goldText" to="/contact">
             Contact
           </NavLink>
         </a>
         <a className="item">
-          <NavLink activeClassName="selected" id="goldText" to="/faq">
+          <NavLink activeClassName="portfolioSelected" id="goldText" to="/faq">
             FAQ
           </NavLink>
         </a>
