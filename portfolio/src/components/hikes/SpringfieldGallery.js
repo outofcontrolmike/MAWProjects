@@ -23,25 +23,8 @@ export default function SpringfieldGallery() {
         for (let i = 0; i <= count; i++) {
             imgArray[i] = new Image();
         }
-    }
 
-
-    function createImages() {
-
-        for (let i = 0; i < spfImages.length; i++) {
-            imgArray[i].classList = "ui huge image centered rounded";
-            imgArray[i].id = "spfImage";
-
-            let link = document.createElement('a');
-            link.classList = "ui container";
-            link.target = "_blank";
-            link.style.width = "800px";
-            link.href = imgArray.src;
-
-            link.appendChild(imgArray[i]);
-            document.getElementById('spfList').appendChild(link);
-        }
-
+        
         //hercules glades
         imgArray[0].src = spfImages[0];
         imgArray[1].src = spfImages[1];
@@ -102,6 +85,24 @@ export default function SpringfieldGallery() {
         imgArray[33].src = spfImages[33];
         imgArray[34].src = spfImages[34];
         imgArray[35].src = spfImages[35];
+    }
+
+
+    function createImages() {
+
+        for (let i = 0; i < spfImages.length; i++) {
+            imgArray[i].classList = "ui huge image centered rounded";
+            imgArray[i].id = "spfImage";
+
+            let link = document.createElement('a');
+            link.classList = "ui container";
+            link.target = "_blank";
+            link.style.width = "800px";
+            link.href = imgArray[i].src;
+
+            link.appendChild(imgArray[i]);
+            document.getElementById('spfList').appendChild(link);
+        }
     }
     //Run this after page render
     setTimeout(() => {

@@ -103,13 +103,11 @@ export default function HikeGallery(props) {
     }, 10);
 
     setupImages();
-
-    console.log('imagArray from hike gallery', imgArray);
     return (
         <div className="ui" id="hikeGallery">
             <HikeHeader />
             <HikeNavigation />
-            <div id="galleryList" className='ui image centered'>
+            <div id="galleryList" className='ui centered stackable'>
                 {/* Images will be listed here */}
             </div>
             <BackToTopBtn style={{ display: "none" }} />

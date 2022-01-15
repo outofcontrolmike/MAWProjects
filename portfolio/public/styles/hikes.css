@@ -55,7 +55,6 @@ width:32%;
     height: auto;
     border-color: black;
     border-width: 10rem;
-
 }
 
 
@@ -140,6 +139,15 @@ width:32%;
     }
     to {
       opacity: 1;
+    }
+  }
+
+  /* Media Rules */
+  @media only screen and (max-width: 600px) {
+  #hikeImage, #spfImage {
+      width: 90%;
+      position: relative;
+      right: 25px;
     }
   }
   
