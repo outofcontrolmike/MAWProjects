@@ -24,7 +24,7 @@ export default function HikeContact() {
                         <input required type="text" id="hikeFormText" name="last-name" placeholder="Contact Email" />
                     </div>
                     <div class="field">
-                        <textarea required type="text" id="hikeFormText" placeholder='Ask about something hiking related or anything else...' />
+                        <textarea required type="text" id="hikeFormText" name="message" placeholder='Ask about something hiking related or anything else...' />
                     </div>
                     <button id="hikeFormText" class="ui button right floated basic" type="submit">Submit</button>
                 </form>
