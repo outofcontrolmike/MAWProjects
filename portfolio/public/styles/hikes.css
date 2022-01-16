@@ -21,7 +21,7 @@
     font-size: 1rem;
 }
 
-#hikeListColumn, #hikeContent, #hikeHr, #hikeFooter{
+#hikeListColumn, #hikeContent, #hikeHr, #hikeFooter, #hikeCard{
     border-color: black;
     border-bottom-color: none;
 }
@@ -144,21 +144,21 @@ width:32%;
 
   /* Media Rules */
   @media only screen and (max-width: 600px) {
-  #hikeImage, #spfImage{
-      width: 95%;
-      position: relative;
-      right: 50px;
-      height:60%;
-      margin-right: 2rem;
-  }
+    #hikeImage, #spfImage {
+        width: 75%;
+        height: 60%;
+        margin: auto;
+        position: relative;
+        right: 1.5rem;
+    }
 
   #hikeContactForm {
     width: 90%;
     margin:auto;
   }
 
-
-.ui.ui.ui.container:not(.fluid) {
-    margin-left: 0;
-}}
-  
+  .mountain {
+      position:relative;
+      right: 2.5rem;
+  }
+}

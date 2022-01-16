@@ -4,7 +4,7 @@ import HikeCard from "./HikeCard";
 //Container for Hiking card
 export default function HikeContent(props) {
   return (
-    <div className="ui column container segment" id="hikeContent">
+    <div className="ui column" id="hikeContent">
       <HikeCard hikes={props} />
     </div>
   );

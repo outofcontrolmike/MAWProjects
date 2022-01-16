@@ -266,4 +266,14 @@ h3 {
   font-family: "Roboto Mono", monospace;
 }
 
+
+
+ /* Media Rules */
+ @media only screen and (max-width: 600px) {
+
+
+  #landingPage {
+    font-size: smaller;
+  }
+}
 /* End Main CSS File */
