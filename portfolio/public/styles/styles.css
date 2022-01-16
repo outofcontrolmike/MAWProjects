@@ -273,7 +273,8 @@ h3 {
 
 
   #landingPage {
-    font-size: smaller;
+    font-size: 10px;
+    max-width: 99%;
   }
 }
 /* End Main CSS File */
