@@ -22,8 +22,8 @@ import FFSearch from "./pages/projects/final_fantasy_search/FFSearch";
 import GreatRace from "./pages/projects/great_race/GreatRace";
 import Hikes from "./pages/projects/417Hikes/Hikes";
 import Pokemon from "./pages/projects/pokemon/Pokemon";
+import Residentevil from "./pages/projects/residentevil/Residentevil";
 import TMNT from "./pages/projects/tmnt/Tmnt";
-import VueShop from "./pages/projects/vue_shopping_cart/VueCart";
 
 //Hike Imports
 import HikeContact from "./components/hikes/HikeContact";
@@ -92,12 +92,13 @@ function App() {
         <Route path="/pokemon">
           <Pokemon />
         </Route>
+        <Route path="/residentevil">
+          <Residentevil />
+        </Route>
         <Route path="/tmnt">
           <TMNT />
         </Route>
-        <Route path="/vue_shopping_cart">
-          <VueShop />
-        </Route>
+      
 
         {/* Region for Hikes project */}
         <Route path="/hikeThankYou">
