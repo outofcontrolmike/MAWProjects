@@ -4,15 +4,11 @@
     font-family: 'Nanum Gothic', sans-serif;
 }
 #resPortrait {
-    max-height: 650px;
+    max-height: 750px;
     object-fit:contain
 }
 #resGamesList {
     place-content: center;
-}
-
-#resDiv {
-    padding-right: 6rem;
 }
 
 #reBioContainer, #resGamesList {

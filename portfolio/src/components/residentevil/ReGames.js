@@ -7,10 +7,12 @@ export default function ReGames(props) {
     function createGameMenu(character) {
         gameData[character].gamesArray.map(gameTitle => {
             let resDiv = document.createElement('div');
-            resDiv.id = "resDiv";
+            resDiv.id = gameData[character].name
             resDiv.innerHTML = gameTitle + "&nbsp;"
             resDiv.style.paddingRight = "6rem";
             document.getElementById('resGamesList').appendChild(resDiv);
+            
+            console.log("resDiv id", resDiv.id);
         })
     }
     setTimeout(() => {

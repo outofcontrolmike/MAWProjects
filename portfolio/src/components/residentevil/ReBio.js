@@ -68,23 +68,25 @@ export default function ReBio(props) {
           reGames.innerHTML = charInfo.games;
           reBio.innerHTML = charInfo.bio;
 
-          let gameData = createGameMenu(charInfo.gamesArray)
-          console.log(gameData, "gameData from rebio")
+          let gameData = createGameMenu(charInfo.gamesArray, charInfo.name)
 
 
         //   reGamesList.innerHTML = createGameMenu(index);
       }
 
     //Locates Game list for passed in character index and appends to character bio menu
-    function createGameMenu(character) {
+    function createGameMenu(character, characterName) {
         let resGamesList = document.getElementById('resGamesList');
         resGamesList.innerHTML = "";
         character.map(gameTitle => {
           let resDiv = document.createElement('div');
-          resDiv.id = "resDiv";
+          resDiv.className = "resMenuItem";
+          resDiv.id = gameTitle + " " + characterName;
           resDiv.innerHTML = gameTitle + "&nbsp;"
           resDiv.style.paddingRight = "6rem";
           resGamesList.appendChild(resDiv);
+          console.log("res.id", resDiv.id);
+          console.log("res className", resDiv.className);
         })
     }
 
