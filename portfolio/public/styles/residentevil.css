@@ -1,1 +1,20 @@
 /* Resident Evil Stylesheet */
+
+#residentEvilProject > div, #reName {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#resPortrait {
+    max-height: 650px;
+    object-fit:contain
+}
+#resGamesList {
+    place-content: center;
+}
+
+#resDiv {
+    padding-right: 6rem;
+}
+
+#reBioContainer, #resGamesList {
+    font-size: 1.5rem;
+}

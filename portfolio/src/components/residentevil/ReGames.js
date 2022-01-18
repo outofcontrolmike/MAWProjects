@@ -8,7 +8,8 @@ export default function ReGames(props) {
         gameData[character].gamesArray.map(gameTitle => {
             let resDiv = document.createElement('div');
             resDiv.id = "resDiv";
-            resDiv.innerHTML = gameTitle;
+            resDiv.innerHTML = gameTitle + "&nbsp;"
+            resDiv.style.paddingRight = "6rem";
             document.getElementById('resGamesList').appendChild(resDiv);
         })
     }

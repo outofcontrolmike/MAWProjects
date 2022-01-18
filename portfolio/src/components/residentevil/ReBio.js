@@ -47,6 +47,7 @@ export default function ReBio(props) {
         setupCharacterContent(content);
       }
 
+      //Changes non-selected main menu items
       function selectAllItems(e) {
         document.querySelectorAll('.reMenuItem').forEach(item => {
           item.style.color = "white";
@@ -74,20 +75,22 @@ export default function ReBio(props) {
         //   reGamesList.innerHTML = createGameMenu(index);
       }
 
-    //Locates Game list for passed in character index
+    //Locates Game list for passed in character index and appends to character bio menu
     function createGameMenu(character) {
-        let resDiv = document.getElementById('resGamesList');
-        resDiv.innerHTML = "";
+        let resGamesList = document.getElementById('resGamesList');
+        resGamesList.innerHTML = "";
         character.map(gameTitle => {
-            resDiv.append(gameTitle);
+          let resDiv = document.createElement('div');
+          resDiv.id = "resDiv";
+          resDiv.innerHTML = gameTitle + "&nbsp;"
+          resDiv.style.paddingRight = "6rem";
+          resGamesList.appendChild(resDiv);
         })
     }
 
-
-
     return (
-        <div className='ui column'>
-        <h1  id="reName"style={{ textAlign: "center" }} >{props.data[0].name}</h1>
+        <div className='ui column' id="reBioContainer">
+        <h1  id="reName"style={{ textAlign: "center", color: "red" }} >{props.data[0].name}</h1>
         <p id="reAge">{props.data[0].age}</p>
         <p id="reHeight">{props.data[0].height}</p>
         <p id="reWeight">{props.data[0].weight}</p>
