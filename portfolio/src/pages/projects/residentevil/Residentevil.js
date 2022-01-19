@@ -32,7 +32,7 @@ export default function Residentevil() {
       age: "21",
       height: "5ft 10in",
       weight: "155 lbs",
-      game: "Resident Evil 2, Resident Evil 4, Resident Evil 6",
+      games: "Resident Evil 2, Resident Evil 4, Resident Evil 6",
       gamesArray: ["RE 2", "RE 4"],
       bio: "Leon Scott Kennedy (Japanese: レオン・スコット・ケネディ, Hepburn: Reon Sukotto Kenedi) is a fictional character in the Resident Evil (Biohazard in Japan) horror franchise by Capcom. He debuted as one of the two playable characters of the 1998 video game Resident Evil 2, where he is a rookie police officer for the Raccoon City Police Department (R.P.D) and later returns as a D.S.O Agent in Resident Evil 4.  During the events of Resident Evil 2, Leon is a rookie police officer who arrives in the doomed Raccoon City late for his first day on the job, only to confront a zombie outbreak first-hand. During the course of the game, he teams up with civilian survivor Claire Redfield, rescues the young Sherry Birkin, and is aided by the mysterious Ada Wong. Six years later, in Resident Evil 4, Leon returns as an agent for the U.S. federal government, part of a special anti-Umbrella task force, assigned to rescue the president's daughter, Ashley Graham, from a sinister cult. In Resident Evil 6, he continues to work for the U.S. government and reunites with Ada and an adult Sherry.",
     },
@@ -43,7 +43,7 @@ export default function Residentevil() {
 
   function setupImages() {
     //Alternate way of setting up array
-    let count = 11;
+    let count = 13;
 
     //Create array indexes for images
     for (let i = 0; i <= count; i++) {
@@ -51,14 +51,14 @@ export default function Residentevil() {
     }
 
     //Resident Evil 1
-    imgArray[0].src = "img/hikes/herculesGlades.jpg";
-    imgArray[1].src = "img/hikes/herculesglades2.jpg";
+    imgArray[0].src = "img/residentEvil/res1_chris.png";
+    imgArray[1].src = "img/residentEvil/res1_jill.png";
 
     //Resident Evil 2
-    imgArray[2].src = "img/hikes/busiek1.jpg";
+    imgArray[2].src = "img/residentEvil/res2_leon.png";
 
-    //Resident Evil 3 Nemesis
-    imgArray[3].src = "img/residentEvil/res1_jill.png";
+    // //Resident Evil 3 Nemesis
+    imgArray[3].src = "img/residentEvil/res3_jill.png";
 
     //Resident Evil 4
     imgArray[4].src = "img/hikes/piney1.jpg";
@@ -78,7 +78,9 @@ export default function Residentevil() {
     imgArray[11].src = "img/hikes/busiek1.jpg";
   }
 
-  setupImages();
+  setTimeout(() => {
+    setupImages();
+  }, 1000);
 
   return (
     <div

@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function ReMenu(props) {
-  console.log("props in reMenu", props);
+  console.log("props in reMenu", props.imgs);
 
   function assignListeners() {
     let reMenuItems = document.querySelectorAll(".reMenuItem");
@@ -15,13 +15,20 @@ export default function ReMenu(props) {
   function imageSwap(e) {
     let imageToSwap = document.getElementById("resPortrait");
     console.log("e from reMenu", e);
+    if (e.target.id === "chris") {
+      imageToSwap.src = props.imgs[0].src;
+    }
     if (e.target.id === "jill") {
-      console.log("hello this is jill");
-      imageToSwap.src = props.imgs[3].src;
+      imageToSwap.src = props.imgs[1].src;
+    }
+    if (e.target.id === "leon") {
+      imageToSwap.src = props.imgs[2].src;
     }
   }
 
-  assignListeners();
+  setTimeout(() => {
+    assignListeners();
+  }, 1000);
   return (
     <div
       className="ui four item secondary pointing menu center aligned stackable"
