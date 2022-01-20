@@ -32,10 +32,10 @@ export default function ReGames(props) {
         characterImage.src = props.data.imgs[0].src;
         break;
       case "1":
-        characterImage.src = props.data.imgs[6].src;
+        characterImage.src = props.data.imgs[5].src;
         break;
       case "2":
-        characterImage.src = props.data.imgs[5].src;
+        characterImage.src = props.data.imgs[6].src;
         break;
       case "3":
         characterImage.src = props.data.imgs[8].src;
