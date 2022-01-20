@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function ReMenu(props) {
   console.log("props in reMenu", props.imgs);
 
+  //assign click events to navigation menu
   function assignListeners() {
     let reMenuItems = document.querySelectorAll(".reMenuItem");
     reMenuItems.forEach((item) => {
@@ -11,6 +12,7 @@ export default function ReMenu(props) {
     });
   }
 
+  //controls swapping image back to first game for character
   function imageSwap(e) {
     let imageToSwap = document.getElementById("resPortrait");
     console.log("e from reMenu", e);
