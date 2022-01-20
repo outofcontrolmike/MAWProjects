@@ -68,7 +68,7 @@ export default function Residentevil() {
 
     //Resident Evil 5
     imgArray[6].src = "img/residentEvil/res5_chris.png";
-    imgArray[7].src = "img/residentEvil/res5_jill.png";;
+    imgArray[7].src = "img/residentEvil/res5_jill.png";
 
     //Resident Evil 7... or Village
     imgArray[8].src = "img/residentEvil/resVillage_chris.png";

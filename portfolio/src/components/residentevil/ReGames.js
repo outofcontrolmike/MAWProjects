@@ -23,8 +23,6 @@ export default function ReGames(props) {
 
   function changeGameImage() {
     let target = this.id;
-    console.log("this", this);
-    console.log("props", props);
     let characterImage = document.getElementById("resPortrait");
     switch (target) {
       //Chris Scenarios

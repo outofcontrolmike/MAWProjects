@@ -45,12 +45,9 @@ export default function ReBio(props) {
   }
 
   function changeGameImage() {
-    console.log("character game titles are being clicked");
     let target = this.id;
-    console.log("this", this);
     let characterImage = document.getElementById("resPortrait");
     switch (target) {
-
       //Chris Scenarios
       case "RE Chris Redfield":
         characterImage.src = props.imgs[0].src;
@@ -65,24 +62,24 @@ export default function ReBio(props) {
         characterImage.src = props.imgs[8].src;
         break;
 
-        //Jill Scenarios
-        case "RE Jill Valentine":
-          characterImage.src = props.imgs[1].src;
-          break;
-        case "RE 3 Jill Valentine":
-          characterImage.src = props.imgs[3].src;
-          break;
-        case "RE 5 Jill Valentine":
-          characterImage.src = props.imgs[7].src;
-          break;
+      //Jill Scenarios
+      case "RE Jill Valentine":
+        characterImage.src = props.imgs[1].src;
+        break;
+      case "RE 3 Jill Valentine":
+        characterImage.src = props.imgs[3].src;
+        break;
+      case "RE 5 Jill Valentine":
+        characterImage.src = props.imgs[7].src;
+        break;
 
-        //Leon Scenarios
-        case "RE 2 Leon S. Kennedy":
-          characterImage.src = props.imgs[2].src;
-          break;
-        case "RE 4 Leon S. Kennedy":
-          characterImage.src = props.imgs[4].src;
-          break;
+      //Leon Scenarios
+      case "RE 2 Leon S. Kennedy":
+        characterImage.src = props.imgs[2].src;
+        break;
+      case "RE 4 Leon S. Kennedy":
+        characterImage.src = props.imgs[4].src;
+        break;
     }
   }
 
@@ -104,7 +101,6 @@ export default function ReBio(props) {
   //accepts array array index pointer
   function setupCharacterContent(index) {
     let charInfo = props.data[index];
-    console.log("charInfo", charInfo);
 
     //Set character info
     reName.innerHTML = charInfo.name;
@@ -131,10 +127,9 @@ export default function ReBio(props) {
       resDiv.style.paddingRight = "6rem";
       resGamesList.appendChild(resDiv);
 
-
       reGamesMenu = document.querySelectorAll(".resMenuItem");
       reGamesMenu.forEach((item) => {
-        console.log("item from forEach reGamesMenu", item)
+        console.log("item from forEach reGamesMenu", item);
         item.addEventListener("click", changeGameImage);
       });
     });

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 export default function ReMenu(props) {
   console.log("props in reMenu", props.imgs);
-
   //assign click events to navigation menu
   function assignListeners() {
     let reMenuItems = document.querySelectorAll(".reMenuItem");
@@ -15,7 +14,6 @@ export default function ReMenu(props) {
   //controls swapping image back to first game for character
   function imageSwap(e) {
     let imageToSwap = document.getElementById("resPortrait");
-    console.log("e from reMenu", e);
     if (e.target.id === "chris") {
       imageToSwap.src = props.imgs[0].src;
     }
@@ -29,7 +27,7 @@ export default function ReMenu(props) {
 
   setTimeout(() => {
     assignListeners();
-  }, 1000);
+  }, 10);
   return (
     <div
       className="ui four item secondary pointing menu center aligned stackable"
