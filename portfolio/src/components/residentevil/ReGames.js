@@ -5,16 +5,45 @@ export default function ReGames(props) {
 
     //Locates Game list for passed in character index
     function createGameMenu(character) {
+        let resId = 0
         gameData[character].gamesArray.map(gameTitle => {
             let resDiv = document.createElement('div');
-            resDiv.id = gameData[character].name;
-            resDiv.classList = "testing"
+            resDiv.id = resId;
+            resDiv.className = "testing"
             resDiv.innerHTML = gameTitle + "&nbsp;"
             resDiv.style.paddingRight = "6rem";
             document.getElementById('resGamesList').appendChild(resDiv);
+            resId++;
         })
-        let menuItems =  document.querySelectorAll('.testing');
-        console.log("menuItems from regames", menuItems);
+        let menuItems = document.querySelectorAll(".testing");
+        menuItems.forEach(item => {
+            item.addEventListener("click", changeGameImage);
+        })
+
+
+    }
+
+    function changeGameImage() {
+        let target = this.id;
+        console.log("this", this);
+        console.log("props",props);
+        let characterImage = document.getElementById("resPortrait");
+        switch (target) {
+
+            //Chris Scenarios
+            case "0":
+                characterImage.src = props.data.imgs[0].src;
+                break;
+            case "1":
+                characterImage.src = props.data.imgs[6].src;
+                break;
+            case "2":
+                characterImage.src = props.data.imgs[5].src;
+                break;
+            case "3":
+                characterImage.src = props.data.imgs[8].src;
+                break;
+        }
     }
     setTimeout(() => {
         //Passing in Chris for original page load
