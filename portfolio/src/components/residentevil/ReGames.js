@@ -7,13 +7,14 @@ export default function ReGames(props) {
     function createGameMenu(character) {
         gameData[character].gamesArray.map(gameTitle => {
             let resDiv = document.createElement('div');
-            resDiv.id = gameData[character].name
+            resDiv.id = gameData[character].name;
+            resDiv.classList = "testing"
             resDiv.innerHTML = gameTitle + "&nbsp;"
             resDiv.style.paddingRight = "6rem";
             document.getElementById('resGamesList').appendChild(resDiv);
-            
-            console.log("resDiv id", resDiv.id);
         })
+        let menuItems =  document.querySelectorAll('.testing');
+        console.log("menuItems from regames", menuItems);
     }
     setTimeout(() => {
         //Passing in Chris for original page load

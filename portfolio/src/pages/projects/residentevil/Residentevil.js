@@ -43,7 +43,7 @@ export default function Residentevil() {
 
   function setupImages() {
     //Alternate way of setting up array
-    let count = 13;
+    let count = 9;
 
     //Create array indexes for images
     for (let i = 0; i <= count; i++) {
@@ -61,21 +61,17 @@ export default function Residentevil() {
     imgArray[3].src = "img/residentEvil/res3_jill.png";
 
     //Resident Evil 4
-    imgArray[4].src = "img/hikes/piney1.jpg";
+    imgArray[4].src = "img/residentEvil/res4_leon.png";
 
     //Resident Evil Code Veronica
-    imgArray[5].src = "img/hikes/busiek1.jpg";
+    imgArray[5].src = "img/residentEvil/codeVeronica.png";
 
     //Resident Evil 5
-    imgArray[6].src = "img/hikes/busiek1.jpg";
-    imgArray[7].src = "img/hikes/busiek1.jpg";
+    imgArray[6].src = "img/residentEvil/res5_chris.png";
+    imgArray[7].src = "img/residentEvil/res5_jill.png";;
 
-    //Resident Evil 6
-    imgArray[8].src = "img/hikes/busiek1.jpg";
-    imgArray[9].src = "img/hikes/busiek1.jpg";
-    imgArray[10].src = "img/hikes/busiek1.jpg";
     //Resident Evil 7... or Village
-    imgArray[11].src = "img/hikes/busiek1.jpg";
+    imgArray[8].src = "img/residentEvil/resVillage_chris.png";
   }
 
   setTimeout(() => {

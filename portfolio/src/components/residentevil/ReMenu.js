@@ -6,7 +6,6 @@ export default function ReMenu(props) {
 
   function assignListeners() {
     let reMenuItems = document.querySelectorAll(".reMenuItem");
-    console.log("reMenuItems", reMenuItems);
     reMenuItems.forEach((item) => {
       item.addEventListener("click", imageSwap);
     });

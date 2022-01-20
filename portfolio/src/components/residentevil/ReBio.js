@@ -44,20 +44,45 @@ export default function ReBio(props) {
     }
   }
 
-  function changeGameImage(gameTitle) {
-    console.log("gameTitle from changGameImage", gameTitle);
-    let target = gameTitle.id;
+  function changeGameImage() {
+    console.log("character game titles are being clicked");
+    let target = this.id;
+    console.log("this", this);
     let characterImage = document.getElementById("resPortrait");
     switch (target) {
+
+      //Chris Scenarios
       case "RE Chris Redfield":
-        characterImage.src = "img/residentEvil/res1_chris.png";
+        characterImage.src = props.imgs[0].src;
         break;
       case "RE 5 Chris Redfield":
-        characterImage.src = "img/residentEvil/res5_chris.png";
+        characterImage.src = props.imgs[6].src;
         break;
-      case "leon":
-        characterInfo("leon", 2);
+      case "RE Code Veronica Chris Redfield":
+        characterImage.src = props.imgs[5].src;
         break;
+      case "RE Village Chris Redfield":
+        characterImage.src = props.imgs[8].src;
+        break;
+
+        //Jill Scenarios
+        case "RE Jill Valentine":
+          characterImage.src = props.imgs[1].src;
+          break;
+        case "RE 3 Jill Valentine":
+          characterImage.src = props.imgs[3].src;
+          break;
+        case "RE 5 Jill Valentine":
+          characterImage.src = props.imgs[7].src;
+          break;
+
+        //Leon Scenarios
+        case "RE 2 Leon S. Kennedy":
+          characterImage.src = props.imgs[2].src;
+          break;
+        case "RE 4 Leon S. Kennedy":
+          characterImage.src = props.imgs[4].src;
+          break;
     }
   }
 
@@ -105,13 +130,12 @@ export default function ReBio(props) {
       resDiv.innerHTML = gameTitle + "&nbsp;";
       resDiv.style.paddingRight = "6rem";
       resGamesList.appendChild(resDiv);
-      console.log("res.id", resDiv.id);
-      console.log("res className", resDiv.className);
+
 
       reGamesMenu = document.querySelectorAll(".resMenuItem");
       reGamesMenu.forEach((item) => {
-        console.log("item id", item.id);
-        item.addEventListener("click", changeGameImage(item));
+        console.log("item from forEach reGamesMenu", item)
+        item.addEventListener("click", changeGameImage);
       });
     });
   }
