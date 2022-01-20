@@ -1,7 +1,18 @@
 /* Resident Evil Stylesheet */
 
 #residentEvilProject > div, #reName {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: auto;
+}
+
+#reName {
+    font-size: 3.5rem;
+}
+
+#reMenu {
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 #resPortrait {
     max-height: 750px;
@@ -9,6 +20,8 @@
 }
 #resGamesList {
     place-content: center;
+    padding-top: 1em;
+    cursor:crosshair;
 }
 
 #reBioContainer, #resGamesList {

@@ -90,7 +90,7 @@ export default function ReBio(props) {
   function characterInfo(id, content) {
     selectAllItems();
     let itemId = document.getElementById(id);
-    itemId.style.color = "forestgreen";
+    itemId.style.color = "red";
     setupCharacterContent(content);
   }
 
@@ -108,11 +108,11 @@ export default function ReBio(props) {
 
     //Set character info
     reName.innerHTML = charInfo.name;
-    reAge.innerHTML = charInfo.age;
-    reHeight.innerHTML = charInfo.height;
-    reWeight.innerHTML = charInfo.weight;
-    reGames.innerHTML = charInfo.games;
-    reBio.innerHTML = charInfo.bio;
+    reAge.innerHTML = "Age: " + charInfo.age;
+    reHeight.innerHTML = "Height: " + charInfo.height;
+    reWeight.innerHTML = "Weight: " + charInfo.weight;
+    reGames.innerHTML = "Related Games: " + charInfo.games;
+    reBio.innerHTML = "Profile: " + charInfo.bio;
 
     let gameData = createGameMenu(charInfo.gamesArray, charInfo.name);
 
@@ -145,11 +145,11 @@ export default function ReBio(props) {
       <h1 id="reName" style={{ textAlign: "center", color: "red" }}>
         {props.data[0].name}
       </h1>
-      <p id="reAge">{props.data[0].age}</p>
-      <p id="reHeight">{props.data[0].height}</p>
-      <p id="reWeight">{props.data[0].weight}</p>
-      <p id="reGames">{props.data[0].games}</p>
-      <p id="reBio">{props.data[0].bio}</p>
+      <p id="reAge">Age: {props.data[0].age}</p>
+      <p id="reHeight">Height: {props.data[0].height}</p>
+      <p id="reWeight">Weight: {props.data[0].weight}</p>
+      <p id="reGames">Related Games: {props.data[0].games}</p>
+      <p id="reBio">Profile: {props.data[0].bio}</p>
     </div>
   );
 }
