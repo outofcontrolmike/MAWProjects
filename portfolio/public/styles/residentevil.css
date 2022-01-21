@@ -1,29 +1,61 @@
 /* Resident Evil Stylesheet */
 
-#residentEvilProject > div, #reName {
-    font-family: auto;
+#residentEvilProject > div,
+#reName {
+  font-family: auto;
 }
 
 #reName {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
-#reMenu {
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+#reMenu,
+#reFooterContainer {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 #resPortrait {
-    max-height: 750px;
-    object-fit:contain
+  max-height: 675px;
+  object-fit: contain;
 }
 #resGamesList {
-    place-content: center;
-    padding-top: 1em;
-    cursor:crosshair;
+  place-content: center;
+  padding-top: 1em;
+  cursor: crosshair;
 }
 
-#reBioContainer, #resGamesList {
-    font-size: 1.5rem;
+#reBioContainer,
+#resGamesList,
+#resFooterText {
+  font-size: 1.5rem;
+}
+
+#reFooterContainer {
+  position: fixed;
+  height: 75px;
+  bottom: 0px;
+}
+#resFooterText {
+  text-align: center;
+  padding: 26px 0;
+}
+
+.reMenuItem:hover,
+.resMenuItem:hover,
+#reName {
+  text-shadow: 1px 1px 2px red;
+}
+
+#bioLabel {
+  color: yellow;
 }

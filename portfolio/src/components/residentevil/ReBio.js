@@ -140,11 +140,26 @@ export default function ReBio(props) {
       <h1 id="reName" style={{ textAlign: "center", color: "red" }}>
         {props.data[0].name}
       </h1>
-      <p id="reAge">Age: {props.data[0].age}</p>
-      <p id="reHeight">Height: {props.data[0].height}</p>
-      <p id="reWeight">Weight: {props.data[0].weight}</p>
-      <p id="reGames">Related Games: {props.data[0].games}</p>
-      <p id="reBio">Profile: {props.data[0].bio}</p>
+      <p id="reAge">
+        <span id="bioLabel"> Age: </span>
+        {props.data[0].age}
+      </p>
+      <p id="reHeight">
+        <span id="bioLabel"> Height: </span>
+        {props.data[0].height}
+      </p>
+      <p id="reWeight">
+        <span id="bioLabel"> Weight: </span>
+        {props.data[0].weight}
+      </p>
+      <p id="reGames">
+        <span id="bioLabel"> Related Games: </span>
+        {props.data[0].games}
+      </p>
+      <p id="reBio">
+        <span id="bioLabel"> Profile: </span>
+        {props.data[0].bio}
+      </p>
     </div>
   );
 }

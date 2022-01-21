@@ -2,6 +2,7 @@ import React from "react";
 import ReMenu from "../../../components/residentevil/ReMenu";
 import RePortrait from "../../../components/residentevil/RePortrait";
 import ReBio from "../../../components/residentevil/ReBio";
+import ReFooter from "../../../components/residentevil/ReFooter";
 
 export default function Residentevil() {
   //Game Data Response Array
@@ -88,6 +89,7 @@ export default function Residentevil() {
         <RePortrait data={data} imgs={imgArray} />
         <ReBio data={data} imgs={imgArray} />
       </div>
+      <ReFooter />
     </div>
   );
 }
