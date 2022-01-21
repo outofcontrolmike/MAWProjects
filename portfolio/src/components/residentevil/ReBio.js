@@ -104,11 +104,11 @@ export default function ReBio(props) {
 
     //Set character info
     reName.innerHTML = charInfo.name;
-    reAge.innerHTML = "Age: " + charInfo.age;
-    reHeight.innerHTML = "Height: " + charInfo.height;
-    reWeight.innerHTML = "Weight: " + charInfo.weight;
-    reGames.innerHTML = "Related Games: " + charInfo.games;
-    reBio.innerHTML = "Profile: " + charInfo.bio;
+    reAge.innerHTML = charInfo.age;
+    reHeight.innerHTML = charInfo.height;
+    reWeight.innerHTML = charInfo.weight;
+    reGames.innerHTML = charInfo.games;
+    reBio.innerHTML = charInfo.bio;
 
     let gameData = createGameMenu(charInfo.gamesArray, charInfo.name);
 
@@ -140,25 +140,29 @@ export default function ReBio(props) {
       <h1 id="reName" style={{ textAlign: "center", color: "red" }}>
         {props.data[0].name}
       </h1>
-      <p id="reAge">
+
+      <p>
         <span id="bioLabel"> Age: </span>
-        {props.data[0].age}
+        <span id="reAge">{props.data[0].age}</span>
       </p>
-      <p id="reHeight">
+      <p>
         <span id="bioLabel"> Height: </span>
-        {props.data[0].height}
+        <span id="reHeight">{props.data[0].height}</span>
       </p>
-      <p id="reWeight">
+
+      <p>
         <span id="bioLabel"> Weight: </span>
-        {props.data[0].weight}
+        <span id="reWeight">{props.data[0].weight}</span>
       </p>
-      <p id="reGames">
+
+      <p>
         <span id="bioLabel"> Related Games: </span>
-        {props.data[0].games}
+        <span id="reGames">{props.data[0].games}</span>
       </p>
-      <p id="reBio">
+
+      <p>
         <span id="bioLabel"> Profile: </span>
-        {props.data[0].bio}
+        <span id="reBio">{props.data[0].bio}</span>
       </p>
     </div>
   );
