@@ -46,20 +46,25 @@ export default function ReBio(props) {
 
   function changeGameImage() {
     let target = this.id;
+    let age = document.getElementById('reAge');
     let characterImage = document.getElementById("resPortrait");
     switch (target) {
       //Chris Scenarios
       case "RE Chris Redfield":
         characterImage.src = props.imgs[0].src;
+        age.innerHTML = "23"
         break;
       case "RE 5 Chris Redfield":
         characterImage.src = props.imgs[6].src;
+        age.innerHTML = "35"
         break;
       case "RE Code Veronica Chris Redfield":
         characterImage.src = props.imgs[5].src;
+        age.innerHTML = "25"
         break;
       case "RE Village Chris Redfield":
         characterImage.src = props.imgs[8].src;
+        age.innerHTML = "48"
         break;
 
       //Jill Scenarios
@@ -137,7 +142,7 @@ export default function ReBio(props) {
 
   return (
     <div className="ui column" id="reBioContainer">
-      <h1 id="reName" style={{ textAlign: "center", color: "navajowhite" }}>
+      <h1 id="reName" style={{ textAlign: "center", color: "red" }}>
         {props.data[0].name}
       </h1>
 

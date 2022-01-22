@@ -41,8 +41,7 @@
 }
 
 #reFooterContainer {
-  margin-top: 3rem;
-  padding:1rem;
+  margin-top: 1.5rem;
   height:fit-content;
   display: flex;
   align-items: center;
@@ -50,6 +49,7 @@
 }
 #resFooterText {
   text-align: center;
+  padding: 1%;
 }
 
 .reMenuItem:hover,
@@ -58,18 +58,22 @@
   text-shadow: 6px 6px 12px black;
 }
 
-#resGamesList > div:hover {
+#resGamesList > div:hover, #resFooterText:hover {
   color: red;
 }
 
 #resGamesList > div {
-  color: navajowhite;
+  
 }
 
 #bioLabel {
-  color: navajowhite
+  color: crimson
 }
 
 #reBioContainer{
     padding:3rem;
+}
+
+#reName{
+  border-bottom: solid white .5px;
 }
