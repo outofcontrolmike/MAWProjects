@@ -24,7 +24,7 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#resPortrait {
+#resPortrait, #reBioContainer {
   max-height: 675px;
   object-fit: contain;
 }
@@ -37,7 +37,7 @@
 #reBioContainer,
 #resGamesList,
 #resFooterText {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 #reFooterContainer {
@@ -59,9 +59,17 @@
 }
 
 #resGamesList > div:hover {
-  color: greenyellow;
+  color: red;
+}
+
+#resGamesList > div {
+  color: navajowhite;
 }
 
 #bioLabel {
-  color: greenyellow
+  color: navajowhite
+}
+
+#reBioContainer{
+    padding:3rem;
 }

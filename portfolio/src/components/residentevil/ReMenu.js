@@ -38,7 +38,7 @@ export default function ReMenu(props) {
         activeClassName="reSelected"
         className="item reMenuItem"
         id="chris"
-        style={{ color: "white" }}
+        style={{ color: "red" }}
       >
         Chris Redfield
       </a>
