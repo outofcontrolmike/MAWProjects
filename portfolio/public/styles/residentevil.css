@@ -24,14 +24,19 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#resPortrait, #reBioContainer {
+#resPortrait {
   max-height: 675px;
   object-fit: contain;
 }
+
 #resGamesList {
   place-content: center;
   padding-top: 1em;
   cursor: crosshair;
+}
+
+#resGamesList > div {
+  padding-left: 6rem;
 }
 
 #reBioContainer,
@@ -55,25 +60,36 @@
 .reMenuItem:hover,
 .resMenuItem:hover,
 #reName:hover {
-  text-shadow: 6px 6px 12px black;
+  text-shadow: 2px 2px 4px black;
 }
 
 #resGamesList > div:hover, #resFooterText:hover {
   color: red;
 }
 
-#resGamesList > div {
-  
-}
-
 #bioLabel {
   color: crimson
 }
 
-#reBioContainer{
-    padding:3rem;
-}
-
 #reName{
   border-bottom: solid white .5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #reBioContainer{
+    text-align: center;
+}
+#reBioContainer > p {
+  padding:1.5rem;
+}
+#resGamesList {
+  text-align: center;
+  
+}
+
+#resGamesList > div {
+  padding: 25px;
+  padding-right: unset;
+
+}
 }

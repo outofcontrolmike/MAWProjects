@@ -70,20 +70,25 @@ export default function ReBio(props) {
       //Jill Scenarios
       case "RE Jill Valentine":
         characterImage.src = props.imgs[1].src;
+        age.innerHTML = "23"
         break;
       case "RE 3 Jill Valentine":
         characterImage.src = props.imgs[3].src;
+        age.innerHTML = "23"
         break;
       case "RE 5 Jill Valentine":
         characterImage.src = props.imgs[7].src;
+        age.innerHTML = "32"
         break;
 
       //Leon Scenarios
       case "RE 2 Leon S. Kennedy":
         characterImage.src = props.imgs[2].src;
+        age.innerHTML = "21"
         break;
       case "RE 4 Leon S. Kennedy":
         characterImage.src = props.imgs[4].src;
+        age.innerHTML = "27"
         break;
     }
   }
@@ -129,7 +134,6 @@ export default function ReBio(props) {
       resDiv.className = "resMenuItem";
       resDiv.id = gameTitle + " " + characterName;
       resDiv.innerHTML = gameTitle + "&nbsp;";
-      resDiv.style.paddingRight = "6rem";
       resGamesList.appendChild(resDiv);
 
       reGamesMenu = document.querySelectorAll(".resMenuItem");

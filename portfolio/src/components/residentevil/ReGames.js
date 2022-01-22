@@ -11,7 +11,6 @@ export default function ReGames(props) {
       resDiv.id = resId;
       resDiv.className = "testing";
       resDiv.innerHTML = gameTitle + "&nbsp;";
-      resDiv.style.paddingRight = "6rem";
       document.getElementById("resGamesList").appendChild(resDiv);
       resId++;
     });
@@ -46,7 +45,7 @@ export default function ReGames(props) {
   }, 10);
 
   return (
-    <div className="ui secondary menu container column" id="resGamesList">
+    <div className="ui secondary menu container column stackable" id="resGamesList">
       {/* Res games should be dynamically set here */}
     </div>
   );
