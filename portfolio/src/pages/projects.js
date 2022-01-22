@@ -155,6 +155,19 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/417Hikes/Hikes.js",
     },
+
+    {
+      img: "img/resProject.jpg",
+      href: "/residentEvil",
+      name: "Resident Evil Profile Viewer",
+      meta: "React, Fomantic",
+      desc:
+       "This project provides information about Resident Evil characters that I am familiar with.  If you love profile information and character artwork, this is the project for you.",
+      created: "Created: January 22nd 2022",
+      lastUpdated: "Last Updated: N/A",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/residentevil/ResidentEvil.js",
+    },
   ];
 
   //Create Cards
