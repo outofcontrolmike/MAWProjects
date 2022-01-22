@@ -1,3 +1,10 @@
+/*
+Project Name: Resident Evil Profile Viewer
+Author: Michael Wilson
+Date: 1/22/2022
+Purpose: Just for fun really
+
+*/
 import React from "react";
 import ReMenu from "../../../components/residentevil/ReMenu";
 import RePortrait from "../../../components/residentevil/RePortrait";
