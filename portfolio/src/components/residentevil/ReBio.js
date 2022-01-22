@@ -1,5 +1,6 @@
 import React from "react";
 
+//Profile Component
 export default function ReBio(props) {
   let reName,
     reAge,
@@ -10,7 +11,7 @@ export default function ReBio(props) {
     reGamesList,
     reGamesMenu = "";
 
-  //Grabs all id's and assigns
+    //Grabs all id's and assigns
   function loadStuff() {
     reName = document.getElementById("reName");
     reAge = document.getElementById("reAge");
@@ -44,6 +45,7 @@ export default function ReBio(props) {
     }
   }
 
+  //Handles swapping character image and Age
   function changeGameImage() {
     let target = this.id;
     let age = document.getElementById('reAge');
@@ -108,7 +110,7 @@ export default function ReBio(props) {
     });
   }
 
-  //accepts array array index pointer
+  //accepts array index pointer
   function setupCharacterContent(index) {
     let charInfo = props.data[index];
 
@@ -120,9 +122,7 @@ export default function ReBio(props) {
     reGames.innerHTML = charInfo.games;
     reBio.innerHTML = charInfo.bio;
 
-    let gameData = createGameMenu(charInfo.gamesArray, charInfo.name);
-
-    //   reGamesList.innerHTML = createGameMenu(index);
+    createGameMenu(charInfo.gamesArray, charInfo.name);
   }
 
   //Locates Game list for passed in character index and appends to character bio menu

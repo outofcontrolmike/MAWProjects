@@ -1,5 +1,6 @@
 import React from "react";
 
+//Footer Component for Res Evil
 export default function ReFooter() {
   return (
     <div className="ui container fluid" id="reFooterContainer">

@@ -1,4 +1,5 @@
 import React from "react";
+
 //Resident Evil Games List
 export default function ReGames(props) {
   let gameData = props.data.data;
@@ -20,6 +21,7 @@ export default function ReGames(props) {
     });
   }
 
+  //Initial Page Load image swapping
   function changeGameImage() {
     let target = this.id;
     let characterImage = document.getElementById("resPortrait");

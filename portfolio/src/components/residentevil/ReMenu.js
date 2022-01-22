@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+//Main Navigation menu component
 export default function ReMenu(props) {
   console.log("props in reMenu", props.imgs);
   //assign click events to navigation menu
@@ -24,10 +25,11 @@ export default function ReMenu(props) {
       imageToSwap.src = props.imgs[2].src;
     }
   }
-
+  //Listener events for navigation items
   setTimeout(() => {
     assignListeners();
   }, 10);
+
   return (
     <div
       className="ui four item secondary pointing menu center aligned stackable"

@@ -4,6 +4,7 @@ import RePortrait from "../../../components/residentevil/RePortrait";
 import ReBio from "../../../components/residentevil/ReBio";
 import ReFooter from "../../../components/residentevil/ReFooter";
 
+//Main Resident Evil Component
 export default function Residentevil() {
   //Game Data Response Array
   let data = [

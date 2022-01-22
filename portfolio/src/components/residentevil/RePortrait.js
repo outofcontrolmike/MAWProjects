@@ -1,6 +1,7 @@
 import React from "react";
 import ReGames from "../../components/residentevil/ReGames";
 
+//Portrait component
 export default function RePortrait(props) {
   return (
     <div className="ui column">
