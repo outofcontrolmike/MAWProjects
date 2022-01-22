@@ -32,6 +32,7 @@ export default function ReMenu(props) {
     <div
       className="ui four item secondary pointing menu center aligned stackable"
       id="reMenu"
+      style={{}}
     >
       <a
         activeClassName="reSelected"

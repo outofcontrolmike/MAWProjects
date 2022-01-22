@@ -137,7 +137,7 @@ export default function ReBio(props) {
 
   return (
     <div className="ui column" id="reBioContainer">
-      <h1 id="reName" style={{ textAlign: "center", color: "red" }}>
+      <h1 id="reName" style={{ textAlign: "center", color: "greenYellow" }}>
         {props.data[0].name}
       </h1>
 
