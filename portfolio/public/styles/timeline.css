@@ -6,22 +6,35 @@ background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* C
 background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 padding:2rem
 }
-#timeline {
-    
+
+#timelineName {
+    color:black
+}
+#timeLineHr, #timelineName:hover, #timelineAge:hover, #currentAge:hover, #timelineYear:hover {
+    color:skyblue;
+    border-color:skyblue;
+}
+#timelineYear,#timelineAge {
+    font-weight: bold;
 }
 #printYears {
     color: black;
 }
 #currentAge{
     float: right;
-    padding-right: 2rem;
+    color:black
 }
 
 
 #timelineAge {
     float: right;
+    color:slategray
 }
 
 #timelinePositive {
     font-size: x-large;
 }
+
+/* #printYears > span:hover {
+border: solid 2px grey;
+} */
