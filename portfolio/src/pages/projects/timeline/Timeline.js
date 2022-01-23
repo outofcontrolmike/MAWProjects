@@ -49,7 +49,7 @@ export default function Timeline() {
 
   return (
   <div className='ui' id="timelineContainer">
-  <div className='ui piled segment container raised' id="timeline">
+  <div className='ui segment container stackable very padded relaxed' id="timeline">
       <div>
       <span className='ui text huge red'>Michael's Timeline -> </span>
     <span className='ui text huge blue' id="currentAge">Age: 30</span>
@@ -61,7 +61,7 @@ export default function Timeline() {
             1991-1995
           </span>
           <span className='ui text large' id="timelineAge">0-4</span>
-          <p id="timelinePostive" className='ui text large'>
+          <p id="timelinePositive" className='ui text large'>
           I survived the first 4 years of my life down at the 'Farm'
           </p>
       </div>
