@@ -13,6 +13,7 @@ export default function Timeline() {
       positives.forEach(item => {
         generateYear(item);
       })
+      determineAge();
     }
 
     setTimeout(loadVariables, 1);
@@ -21,8 +22,6 @@ export default function Timeline() {
     //Function for Determining current age
 
     function generateYear(positive) {
-
-      
       let year = document.createElement('span');
       year.className = "ui text large";
       year.id = "timelineYear";
@@ -45,6 +44,21 @@ export default function Timeline() {
       //increment year
       birthYear++;
       startAge++;
+    }
+
+    function determineAge() {
+      
+      //Birth year
+      let birthYear = 1991;
+
+      //Current year
+      let date = new Date();
+      let year = date.getFullYear();
+
+      let currentAge = (year - birthYear);
+
+      console.log("date.getMonth", date.getTime());
+      document.getElementById('currentAge').innerHTML = currentAge;
     }
 
   return (
