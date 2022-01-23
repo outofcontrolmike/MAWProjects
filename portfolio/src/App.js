@@ -23,6 +23,7 @@ import GreatRace from "./pages/projects/great_race/GreatRace";
 import Hikes from "./pages/projects/417Hikes/Hikes";
 import Pokemon from "./pages/projects/pokemon/Pokemon";
 import Residentevil from "./pages/projects/residentevil/Residentevil";
+import Timeline from "./pages/projects/timeline/Timeline"
 import TMNT from "./pages/projects/tmnt/Tmnt";
 
 //Hike Imports
@@ -94,6 +95,9 @@ function App() {
         </Route>
         <Route path="/residentevil">
           <Residentevil />
+        </Route>
+        <Route path="/timeline">
+          <Timeline />
         </Route>
         <Route path="/tmnt">
           <TMNT />
