@@ -157,7 +157,7 @@ function Projects(props) {
     },
 
     {
-      img: "img/resProject.jpg",
+      img: "img/resProject.JPG",
       href: "/residentEvil",
       name: "Resident Evil Profile Viewer",
       meta: "React, Fomantic",
