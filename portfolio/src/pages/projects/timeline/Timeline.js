@@ -4,8 +4,8 @@ import React from 'react';
 export default function Timeline() {
 
     let currentAge, yearContainer = "";
-    let birthYear = 1996;
-    let startAge = 5;
+    let birthYear = 1997;
+    let startAge = 6;
 
 
     function loadVariables() {
@@ -58,11 +58,11 @@ export default function Timeline() {
 
       <div id="printYears">
           <span className='ui text large' id="timelineYear">
-            1991-1995
+            1991-1996
           </span>
-          <span className='ui text large' id="timelineAge">0-4</span>
+          <span className='ui text large' id="timelineAge">0-5</span>
           <p id="timelinePositive" className='ui text large'>
-          I survived the first 4 years of my life down at the 'Farm'
+          I survived the first 6 years of my life down at the 'Farm'.
           </p>
       </div>
   </div>
