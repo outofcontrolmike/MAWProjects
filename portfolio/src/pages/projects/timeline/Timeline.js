@@ -48,16 +48,18 @@ export default function Timeline() {
 
     function determineAge() {
       
-      //Birth year
-      let birthYear = 1991;
+      //Current date
+      const birthdate = new Date();
+      birthdate.setFullYear(1991, 7, 31);      
+      let birthTime = birthdate.getTime();
 
-      //Current year
-      let date = new Date();
-      let year = date.getFullYear();
+      //Get current time
+      const currentDate = new Date();
+      let currentTime = currentDate.getTime();
+      console.log(birthTime);
+      console.log(currentTime.getFull, "currentTime")
 
-      let currentAge = (year - birthYear);
-
-      console.log("date.getMonth", date.getTime());
+      let currentAge = (currentTime - birthTime);
       document.getElementById('currentAge').innerHTML = currentAge;
     }
 
