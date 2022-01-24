@@ -24,7 +24,7 @@ export default function Timeline() {
       determineAge();
     }
 
-    setTimeout(b4PageLoad(), 1);
+    setTimeout(b4PageLoad, 10);
 
     //Positives array to loop through
     let positives = ["I was finally somewhere actually learning skills to survive in society."," I realized that some people have to work two jobs to make ends meet.","I learned what it was like to make neighborhood friends.","People were very nice to me, even if I didn’t have much to offer.","People may move away but there are chances that you can see them again.","Glad I had friends to stay busy with at the time.","I learned about what I didn’t want to become when I grew up.","Some people really care more than they have to.","I’m very happy I met my childhood friend Jaime Canon.","Life sometimes has a mysterious way of turning around.","Started learning the value of money","I drove and bought my first car - Mercury Sable 1997"," I was staying super busy and experiencing a lot of memories.","I was able to move onto continuing my education. ","I learned to let go, even if it does hurt someone else.","I figured out who my true friends were after some complex drama."," I learned that taking a vacation from life is very important.","I really enjoyed the chance to feel closer to my family."," I started noticing that I could motivate myself to do what I thought was impossible.","I really got to know Jessica, the love of my life.","I moved in with Jessica","I was working towards a lot of goals and was becoming responsible."," I found a job related to my career choice.  ","I started to see things that I did not like about myself.  Change is always good.","I learned how much Jessica meant to me through the crazy year of 2021."]

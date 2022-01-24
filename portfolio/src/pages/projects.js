@@ -168,6 +168,18 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/residentevil/ResidentEvil.js",
     },
+    {
+      img: "img/timeline.JPG",
+      href: "/timeline",
+      name: "Timeline Positives",
+      meta: "React, Fomantic",
+      desc:
+       "This project displays my current age and a positive for each year I've been alive.",
+      created: "Created: January 23rd 2022",
+      lastUpdated: "Last Updated: N/A",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/timeline/Timeline.js",
+    },
   ];
 
   //Create Cards
