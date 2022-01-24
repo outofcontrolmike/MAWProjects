@@ -1,5 +1,6 @@
 /* Timeline Style sheet */
 
+/* From https://uigradients.com*/
 #timelineContainer{
     background: #2980B9;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
@@ -8,9 +9,9 @@ padding:2rem
 }
 
 #timelineName {
-    color:black
+    color:skyblue;
 }
-#timeLineHr, #timelineName:hover, #timelineAge:hover, #currentAge:hover, #timelineYear:hover {
+#timeLineHr,#timelineName:hover, #timelineAge:hover, #currentAge:hover, #timelineYear:hover {
     color:skyblue;
     border-color:skyblue;
 }
@@ -22,19 +23,25 @@ padding:2rem
 }
 #currentAge{
     float: right;
-    color:black
+    color:skyblue;
+    animation: blinker 25s linear infinite;
 }
-
-
 #timelineAge {
     float: right;
-    color:slategray
+    color: black;
+    font-weight: bold;
 }
-
 #timelinePositive {
     font-size: x-large;
 }
 
-/* #printYears > span:hover {
-border: solid 2px grey;
-} */
+#timelinePositive:hover {
+    color:skyblue;
+}
+
+/* Handles the visibility of my current age */
+  @keyframes blinker {
+    80% {
+      opacity: 0;
+    }
+  }

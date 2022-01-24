@@ -1,3 +1,10 @@
+/*
+Project: Timeline Positives
+Purpose: Display my current age and a postive that I've learned every year of my life.
+Author:Michael Wilson
+Date: 1/23/2022
+*/
+
 import React from 'react';
 
 //Main timeline component
@@ -8,20 +15,23 @@ export default function Timeline() {
     let startAge = 6;
 
 
-    function loadVariables() {
+    //load 
+    function b4PageLoad() {
       yearContainer = document.getElementById('printYears');
       positives.forEach(item => {
-        generateYear(item);
+        generateContent(item);
       })
       determineAge();
     }
 
-    setTimeout(loadVariables, 1);
+    setTimeout(b4PageLoad(), 1);
 
+    //Positives array to loop through
     let positives = ["I was finally somewhere actually learning skills to survive in society."," I realized that some people have to work two jobs to make ends meet.","I learned what it was like to make neighborhood friends.","People were very nice to me, even if I didn’t have much to offer.","People may move away but there are chances that you can see them again.","Glad I had friends to stay busy with at the time.","I learned about what I didn’t want to become when I grew up.","Some people really care more than they have to.","I’m very happy I met my childhood friend Jaime Canon.","Life sometimes has a mysterious way of turning around.","Started learning the value of money","I drove and bought my first car - Mercury Sable 1997"," I was staying super busy and experiencing a lot of memories.","I was able to move onto continuing my education. ","I learned to let go, even if it does hurt someone else.","I figured out who my true friends were after some complex drama."," I learned that taking a vacation from life is very important.","I really enjoyed the chance to feel closer to my family."," I started noticing that I could motivate myself to do what I thought was impossible.","I really got to know Jessica, the love of my life.","I moved in with Jessica","I was working towards a lot of goals and was becoming responsible."," I found a job related to my career choice.  ","I started to see things that I did not like about myself.  Change is always good.","I learned how much Jessica meant to me through the crazy year of 2021."]
-    //Function for Determining current age
 
-    function generateYear(positive) {
+    
+    //Creates html elements regarding age and positive
+    function generateContent(positive) {
       let year = document.createElement('span');
       year.className = "ui text large";
       year.id = "timelineYear";
@@ -36,8 +46,6 @@ export default function Timeline() {
       positiveText.id = "timelinePositive";
       positiveText.className = "ui text large";
 
-      console.log(positive, "positive");
-
       positiveText.innerHTML = positive;
       yearContainer.append(year,age,positiveText);
 
@@ -46,21 +54,40 @@ export default function Timeline() {
       startAge++;
     }
 
+    //Determine my actual age
     function determineAge() {
-      
-      //Current date
-      const birthdate = new Date();
-      birthdate.setFullYear(1991, 7, 31);      
-      let birthTime = birthdate.getTime();
-
-      //Get current time
+      //get my birthdate year
+      const d = new Date(1991, 7, 31);
+      let year = d.getFullYear();
+    
+      //Get current Date
       const currentDate = new Date();
-      let currentTime = currentDate.getTime();
-      console.log(birthTime);
-      console.log(currentTime.getFull, "currentTime")
+      let currentYear = currentDate.getFullYear();
+      let currentMonth = currentDate.getMonth();
+      let currentDay = currentDate.getDate();
 
-      let currentAge = (currentTime - birthTime);
-      document.getElementById('currentAge').innerHTML = currentAge;
+      //determine age
+      let age = currentYear - year;
+
+      //Check if the month is August
+      if(currentMonth >= 7 )
+      {
+        //check if it's later than August
+        if(currentMonth > 7)
+        {
+          age += 1;
+        }
+        //Check if it's my birthday
+        if(currentDay === 31 && currentMonth === 7)
+        {
+          age += 1;
+        }
+      }
+      //If my bday hasn't happened yet, correct the age
+      else {
+        age -= 1;
+      }
+      document.getElementById('currentAge').innerHTML = age;
     }
 
   return (
@@ -81,12 +108,11 @@ export default function Timeline() {
           I survived the first 6 years of my life down at the 'Farm'.
           </p>
       </div>
-  </div>
-  <div className='ui container fluid content'>
-        <a href="/projects" style={{color: "black"}}>
+      <hr id="timeLineHr"></hr>
+      <a href="/projects" style={{color: "skyblue", float: "right", fontSize: "x-large"}}>
           Back to projects
         </a>
-      </div>
+  </div>
   </div>
   )
 }
