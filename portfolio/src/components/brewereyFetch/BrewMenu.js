@@ -258,7 +258,7 @@ function BrewMenu() {
     breweryURL.style.maxWidth = "20px";
     breweryURL.target = "_blank";
 
-    if (breweryURL != "https://mawportfolio.online/null") {
+    if (breweryURL != "https://www.mawportfolio.online/null") {
       breweryURL.innerHTML = breweryURL;
     } else {
       breweryURL.innerHTML = "N/A";
