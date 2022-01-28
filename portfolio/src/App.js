@@ -14,14 +14,19 @@ import Layout from "./components/layout/Layout";
 //Project Imports
 import BeastWars from "./pages/projects/beast_wars/BeastWars";
 import BMI from "./pages/projects/bmi_calc/Bmi";
+import Bored from "./pages/projects/bored/Bored";
 import Breweries from "./pages/projects/breweries/Brewery";
+import Cats from "./pages/projects/catFacts/Cats";
 import Characters from "./pages/projects/characters/Characters";
 import CoolCalc from "./pages/projects/cool_calc/CoolCalc";
 import EarthWaterFire from "./pages/projects/earth_water_fire/EarthWaterFire";
 import FFSearch from "./pages/projects/final_fantasy_search/FFSearch";
 import GreatRace from "./pages/projects/great_race/GreatRace";
 import Hikes from "./pages/projects/417Hikes/Hikes";
+import Jokes from "./pages/projects/jokes/Jokes";
 import Pokemon from "./pages/projects/pokemon/Pokemon";
+import RandomDogs from "./pages/projects/randomDogs/Dogs";
+import RandomUser from "./pages/projects/randomUser/RandomUser";
 import Residentevil from "./pages/projects/residentevil/Residentevil";
 import Timeline from "./pages/projects/timeline/Timeline"
 import TMNT from "./pages/projects/tmnt/Tmnt";
@@ -69,8 +74,14 @@ function App() {
         <Route path="/bmi">
           <BMI />
         </Route>
+        <Route path="/bored">
+          <Bored />
+        </Route>
         <Route path="/breweries">
           <Breweries />
+        </Route>
+        <Route path="/cats">
+          <Cats />
         </Route>
         <Route path="/characters">
           <Characters />
@@ -90,8 +101,17 @@ function App() {
         <Route path="/hikes">
           <Hikes />
         </Route>
+        <Route path="/jokes">
+          <Jokes />
+        </Route>
         <Route path="/pokemon">
           <Pokemon />
+        </Route>
+        <Route path="/randomDogs">
+          <RandomDogs />
+        </Route>
+        <Route path="/randomUser">
+          <RandomUser />
         </Route>
         <Route path="/residentevil">
           <Residentevil />
