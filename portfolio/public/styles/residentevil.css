@@ -1,6 +1,5 @@
 /* Resident Evil Stylesheet */
 
-
 #residentEvilProject > div,
 #reName {
   font-family: auto;
@@ -8,8 +7,7 @@
 
 #reName {
   font-size: 3.5rem;
-  border-bottom: solid white .5px;
-
+  border-bottom: solid white 0.5px;
 }
 
 /* Gradient background from https://uigradients.com/ */
@@ -55,8 +53,8 @@
 
 /* Getting the dang footer centered */
 #reFooterContainer {
-  margin-top: 1.5rem;
-  height:fit-content;
+  margin-top: 4rem;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,9 +62,8 @@
 
 #resFooterText {
   text-align: center;
-  padding: 1%;
+  padding: 1.5%;
 }
-
 
 /* hovering effects to show emphasis */
 .reMenuItem:hover,
@@ -75,26 +72,28 @@
   text-shadow: 2px 2px 4px crimson;
 }
 
-#resGamesList > div:hover, #resFooterText:hover, #bioLabel:hover {
+#resGamesList > div:hover,
+#resFooterText:hover,
+#bioLabel:hover {
   color: red;
 }
 
 #bioLabel {
-  color: crimson
+  color: crimson;
 }
 
 /* Media Query Rules */
 @media only screen and (max-width: 1000px) {
-  #reBioContainer{
+  #reBioContainer {
     text-align: center;
-}
-#reBioContainer > p {
-  padding:1.5rem;
-}
-#resGamesList {
-  text-align: center;
-}
-#resGamesList > div {
-  padding: 25px;
-}
+  }
+  #reBioContainer > p {
+    padding: 1.5rem;
+  }
+  #resGamesList {
+    text-align: center;
+  }
+  #resGamesList > div {
+    padding: 25px;
+  }
 }

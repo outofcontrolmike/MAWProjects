@@ -7,6 +7,93 @@ function Resume() {
     <div>
       <Navigation />
       <div className="ui two column very padded relaxed stackable grid">
+        <div className="ui column" id="techStack">
+          <h1 id="roboHeader">Tech Stack / Certifications</h1>{" "}
+          <h3 style={{ color: "orange" }}>Daily Tools</h3>
+          <div className="ui list">
+            <i className="html5 icon huge"></i>
+            <i className="css3 icon huge"></i>
+            <i className="js icon huge"></i>
+            <i class="react icon huge"></i>
+            <i className="windows icon huge"></i>
+          </div>
+          <div className="ui list">
+            <i className="node js icon huge"></i>
+            <i className="npm icon huge"></i>
+            <i className="github icon huge"></i>
+          </div>
+          <h3 style={{ color: "orange" }}>Knowledgeable</h3>
+          <div className="ui list">
+            <i className="java icon huge"></i>
+            <i className="php icon huge"></i>
+            <i className="database icon huge"></i>
+          </div>
+          <div className="ui list">
+            <i className="ubuntu icon huge"></i>
+            <i className="terminal icon huge"></i>
+            <i className="bootstrap icon huge"></i>
+          </div>
+          <div className="ui list">
+            <i className="file word icon huge"></i>
+            <i className="file excel icon huge"></i>
+          </div>
+          <h3 style={{ color: "orange" }}>Certifications</h3>
+          <div className="ui medium three list images">
+            <div
+              className="ui slide masked reveal image"
+              style={{ width: "30%" }}
+            >
+              <div className="visible content" id="resumeVisible">
+                <h1>HTML & CSS</h1>
+              </div>
+
+              <a
+                target="blank_self"
+                className="hidden content"
+                href="img/pdfs/Michael_Wilson_MTA - HTML_CSS.pdf"
+              >
+                <img src={htmlPic} alt={"html Certification"} />
+              </a>
+            </div>
+
+            <div
+              className="ui slide masked reveal image"
+              style={{ width: "30%" }}
+            >
+              <div className="visible content" id="resumeVisible">
+                <h1>Javascript</h1>
+              </div>
+              <a
+                className="hidden content"
+                href="img/pdfs/Michael_Wilson_MTA - Programming_Javascript.pdf"
+              >
+                <img
+                  className=""
+                  src="img/javascript.JPG"
+                  alt={"Javascript Certification"}
+                />
+              </a>
+            </div>
+            <div
+              className="ui slide masked reveal image"
+              style={{ width: "30%" }}
+            >
+              <div className="visible content" id="resumeVisible">
+                <h1>SQL</h1>
+              </div>
+              <a
+                className="hidden content"
+                href="img/pdfs/Michael_Wilson_MTA_Database_Administration_Fundmentals.pdf"
+              >
+                <img
+                  className=""
+                  src="img/database.JPG"
+                  alt={"SQL Certification"}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
         <div className="ui column" id="resume">
           <h1 id="roboHeader">Work Experience / Education</h1>
           <div id="resumeSegment">
@@ -136,8 +223,8 @@ function Resume() {
               This was my first place of employment. I worked the following
               positions throughout the time: dishwasher, prep, cook, phone
               answering, busser, delivery driver. I learned a lot about customer
-              service throughout the time and also learned how to accommodate during
-              stressful situations with limited options.
+              service throughout the time and also learned how to accommodate
+              during stressful situations with limited options.
             </p>
           </div>
           {/* Education segment */}
@@ -183,93 +270,6 @@ function Resume() {
           </div>
         </div>
         {/* End Education */}
-        <div className="ui column" id="techStack">
-          <h1 id="roboHeader">Tech Stack / Certifications</h1>{" "}
-          <h3 style={{ color: "orange" }}>Daily Tools</h3>
-          <div className="ui list">
-            <i className="html5 icon huge"></i>
-            <i className="css3 icon huge"></i>
-            <i className="js icon huge"></i>
-            <i class="react icon huge"></i>
-            <i className="windows icon huge"></i>
-          </div>
-          <div className="ui list">
-            <i className="node js icon huge"></i>
-            <i className="npm icon huge"></i>
-            <i className="github icon huge"></i>
-          </div>
-          <h3 style={{ color: "orange" }}>Knowledgeable</h3>
-          <div className="ui list">
-            <i className="java icon huge"></i>
-            <i className="php icon huge"></i>
-            <i className="database icon huge"></i>
-          </div>
-          <div className="ui list">
-            <i className="ubuntu icon huge"></i>
-            <i className="terminal icon huge"></i>
-            <i className="bootstrap icon huge"></i>
-          </div>
-          <div className="ui list">
-            <i className="file word icon huge"></i>
-            <i className="file excel icon huge"></i>
-          </div>
-          <h3 style={{ color: "orange" }}>Certifications</h3>
-          <div className="ui medium three list images">
-            <div
-              className="ui slide masked reveal image"
-              style={{ width: "30%" }}
-            >
-              <div className="visible content" id="resumeVisible">
-                <h1>HTML & CSS</h1>
-              </div>
-
-              <a
-                target="blank_self"
-                className="hidden content"
-                href="img/pdfs/Michael_Wilson_MTA - HTML_CSS.pdf"
-              >
-                <img src={htmlPic} alt={"html Certification"} />
-              </a>
-            </div>
-
-            <div
-              className="ui slide masked reveal image"
-              style={{ width: "30%" }}
-            >
-              <div className="visible content" id="resumeVisible">
-                <h1>Javascript</h1>
-              </div>
-              <a
-                className="hidden content"
-                href="img/pdfs/Michael_Wilson_MTA - Programming_Javascript.pdf"
-              >
-                <img
-                  className=""
-                  src="img/javascript.JPG"
-                  alt={"Javascript Certification"}
-                />
-              </a>
-            </div>
-            <div
-              className="ui slide masked reveal image"
-              style={{ width: "30%" }}
-            >
-              <div className="visible content" id="resumeVisible">
-                <h1>SQL</h1>
-              </div>
-              <a
-                className="hidden content"
-                href="img/pdfs/Michael_Wilson_MTA_Database_Administration_Fundmentals.pdf"
-              >
-                <img
-                  className=""
-                  src="img/database.JPG"
-                  alt={"SQL Certification"}
-                />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
