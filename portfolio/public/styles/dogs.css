@@ -3,6 +3,7 @@
 #dogImage {
   width: 600px;
   height: 650px;
+  padding-top: 2rem;
   object-fit: scale-down;
 }
 
@@ -42,13 +43,44 @@
 }
 
 #dogHeader {
-  color: black;
+  background-color: black;
+  color: #78ffd6;
   font-family: "Crafty Girls", cursive;
   margin-bottom: unset;
-  padding-bottom: unset;
+  padding: 1.5rem;
+}
+
+#dogHeader:hover {
+  color: #a8ff78;
 }
 
 #dogFooter {
   border-top: black solid 2px;
   margin-top: 10rem;
+  background-color: black;
+  color: #78ffd6;
+  font-family: "Crafty Girls", cursive;
+  padding: 3rem;
+}
+
+#dogCreds {
+  border-right: #a8ff78 4px solid;
+}
+
+#dogCreds > a:hover,
+#dogText > a:hover {
+  color: #a8ff78;
+}
+
+/* Media Rules */
+@media only screen and (max-width: 990px) {
+  #dogCreds {
+    border-right: unset;
+    border-bottom: #a8ff78 4px solid;
+  }
+}
+
+#dogText > a,
+#dogCreds > a {
+  color: #78ffd6;
 }

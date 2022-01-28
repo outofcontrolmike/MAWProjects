@@ -25,7 +25,7 @@ export default function Dogs() {
 
   return (
     <div
-      className="ui container fluid segment stackable "
+      className="ui container fluid stackable"
       id="dogsProject"
       style={{ backgroundColor: "white", height: "1200px", color: "black" }}
     >
@@ -34,7 +34,7 @@ export default function Dogs() {
         style={{ textAlign: "center", fontSize: "4.5rem" }}
         id="dogHeader"
       >
-        Random Dog Viewer
+        Random Dog Generator
       </p>
 
       <div id="dogContainer" className="ui container">
