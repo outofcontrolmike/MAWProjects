@@ -1,1 +1,54 @@
 /* Dogs Stylesheet */
+
+#dogImage {
+  width: 600px;
+  height: 650px;
+  object-fit: scale-down;
+}
+
+#dogBtnContainer {
+  width: 600px;
+}
+#dogBtn {
+  margin-top: 2rem;
+  background-color: black;
+}
+
+#dogBtn:hover {
+  border: solid 4px;
+  border-color: #a8ff78;
+}
+#dogBtn:hover > .paw {
+  color: #a8ff78;
+}
+
+.paw {
+  color: #78ffd6;
+}
+
+/* Gold blue and green gradient */
+#dogsProject {
+  background: #a8ff78; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#dogHeader {
+  color: black;
+  font-family: "Crafty Girls", cursive;
+  margin-bottom: unset;
+  padding-bottom: unset;
+}
+
+#dogFooter {
+  border-top: black solid 2px;
+  margin-top: 10rem;
+}
