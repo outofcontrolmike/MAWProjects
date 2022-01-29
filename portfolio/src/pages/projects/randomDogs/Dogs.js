@@ -1,22 +1,22 @@
+/*
+*Title: Random Dog Viewer
+*Purpose: Display random dogs based on button click
+*Date: 01/29/2022
+*Author: Michael Wilson
+*/
+
 import React from "react";
 import DogFooter from "../../../components/dogs/DogFooter";
-// - https://dog.ceo/dog-api/
+// Main component for Dogs Project
+
 export default function Dogs() {
   function handleClick() {
     let url = "https://dog.ceo/api/breeds/image/random";
     fetch(url)
       .then((response) => response.json())
       .then((dog) => {
-        console.log("dog", dog);
-        console.log("this", this);
-        console.log("dogs stuff...", dog.message);
-        console.log("dogMessage", dog.message.clientHeight);
         let dogImage = document.getElementById("dogImage");
         dogImage.src = dog.message;
-        var width = dogImage.clientWidth;
-        var height = dogImage.clientHeight;
-
-        console.log(width, height);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -27,11 +27,11 @@ export default function Dogs() {
     <div
       className="ui container fluid stackable"
       id="dogsProject"
-      style={{ backgroundColor: "white", height: "1200px", color: "black" }}
+      style={{ backgroundColor: "white", color: "black" }}
     >
       <p
         className="ui text massive black"
-        style={{ textAlign: "center", fontSize: "4.5rem" }}
+        style={{ textAlign: "center"}}
         id="dogHeader"
       >
         Random Dog Generator

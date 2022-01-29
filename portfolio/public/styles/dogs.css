@@ -29,6 +29,7 @@
 
 /* Gold blue and green gradient */
 #dogsProject {
+height: fit-content;
   background: #a8ff78; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -48,6 +49,7 @@
   font-family: "Crafty Girls", cursive;
   margin-bottom: unset;
   padding: 1.5rem;
+  font-size: 4.5rem;
 }
 
 #dogHeader:hover {
@@ -74,10 +76,31 @@
 
 /* Media Rules */
 @media only screen and (max-width: 990px) {
+
+  #dogsProject {
+    height:unset;
+  }
   #dogCreds {
     border-right: unset;
     border-bottom: #a8ff78 4px solid;
   }
+
+  #dogHeader {
+    font-size: 2rem;
+  }
+
+  #dogBtnContainer {
+    height: 50px;
+  }
+
+  #dogImage {
+    height: 400px;
+  }
+
+  #dogBtnContainer {
+    margin: unset;
+  }
+
 }
 
 #dogText > a,
