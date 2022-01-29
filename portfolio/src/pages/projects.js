@@ -180,6 +180,18 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/timeline/Timeline.js",
     },
+    {
+      img: "img/randomDogViewer.JPG",
+      href: "/randomDogs",
+      name: "Random Dog Viewer",
+      meta: "React, Fomantic",
+      desc:
+       "This is an interaction with free API that provides images of random dogs.  If you love dogs, this is the project for you to view.",
+      created: "Created: January 29th 2022",
+      lastUpdated: "Last Updated: N/A",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/randomDogs/Dogs.js",
+    },
   ];
 
   //Create Cards

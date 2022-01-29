@@ -1,5 +1,38 @@
 /* Dogs Stylesheet */
 
+/* Gold blue and green gradient */
+#dogsProject {
+  height: fit-content;
+    background: #a8ff78; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #78ffd6,
+      #a8ff78
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #78ffd6,
+      #a8ff78
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  #dogHeader {
+    background-color: black;
+    color: #78ffd6;
+    font-family: "Crafty Girls", cursive;
+    margin-bottom: unset;
+    padding: 1.5rem;
+    font-size: 4.5rem;
+  }
+  
+  #dogHeader:hover {
+    color: #a8ff78;
+  }
+
+#dogBtnContainer {
+  width: 600px;
+}
+
 #dogImage {
   width: 600px;
   height: 650px;
@@ -7,9 +40,6 @@
   object-fit: scale-down;
 }
 
-#dogBtnContainer {
-  width: 600px;
-}
 #dogBtn {
   margin-top: 2rem;
   background-color: black;
@@ -27,34 +57,7 @@
   color: #78ffd6;
 }
 
-/* Gold blue and green gradient */
-#dogsProject {
-height: fit-content;
-  background: #a8ff78; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #78ffd6,
-    #a8ff78
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #78ffd6,
-    #a8ff78
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
-#dogHeader {
-  background-color: black;
-  color: #78ffd6;
-  font-family: "Crafty Girls", cursive;
-  margin-bottom: unset;
-  padding: 1.5rem;
-  font-size: 4.5rem;
-}
-
-#dogHeader:hover {
-  color: #a8ff78;
-}
 
 #dogFooter {
   border-top: black solid 2px;
@@ -69,13 +72,18 @@ height: fit-content;
   border-right: #a8ff78 4px solid;
 }
 
+#dogText > a,
+#dogCreds > a {
+  color: #78ffd6;
+}
+
 #dogCreds > a:hover,
 #dogText > a:hover {
   color: #a8ff78;
 }
 
 /* Media Rules */
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 1200px) {
 
   #dogsProject {
     height:unset;
@@ -91,6 +99,7 @@ height: fit-content;
 
   #dogBtnContainer {
     height: 50px;
+    margin:unset;
   }
 
   #dogImage {
@@ -103,7 +112,3 @@ height: fit-content;
 
 }
 
-#dogText > a,
-#dogCreds > a {
-  color: #78ffd6;
-}
