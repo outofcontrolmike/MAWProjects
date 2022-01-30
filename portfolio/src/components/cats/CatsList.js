@@ -6,16 +6,23 @@ export default function CatsList(props) {
 
     //LoadFacts
     function loadFacts() {
-      let url = "https://catfact.ninja/facts";
+
+      //Figure out how to get every random fact by button click (like append or prepend to list)
+      let pageNum = 2;
+      let url = "https://catfact.ninja/facts?page=" + pageNum;
       fetch(url)
         .then((response) => response.json())
-        .then((catFact) => {
-            console.log("catFact", catFact);
+        .then((catFacts) => {
+            console.log("catFact", catFacts);
         })
         .catch((error) => {
           console.error("Error:", error);
         });
     }
+
+    setTimeout(() => {
+      loadFacts()
+    }, 10);
   return <div>
     <CatNavigation />
       <h3>CatsList Test</h3>

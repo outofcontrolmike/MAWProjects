@@ -1,5 +1,5 @@
 import React from 'react';
-import CatNavigation from './CatNavigation';
+import CatNavigation from '../../../components/cats/CatNavigation';
 
 //Random Cats Facts - Needs two options
 export default function RandomCats(props) {
@@ -20,5 +20,6 @@ export default function RandomCats(props) {
   return <div>
     <CatNavigation />
       <h3>Test for Random Cat Facts</h3>
+      <button onClick={handleClick} className='ui button huge blue basic'>Get a random fact</button>
   </div>;
 }

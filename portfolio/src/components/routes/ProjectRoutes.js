@@ -8,7 +8,7 @@ import HikeThankYou from "../hikes/HikeThankYou";
 
 import BreedsList from "../cats/BreedsList";
 import CatsList from "../cats/CatsList";
-import RandomCats from "../cats/RandomCats.js";
+import RandomCats from "../../pages/projects/catFacts/RandomCats.js";
 
 //Hike routes to import into main app
 export default function ProjectRoutes(props) {

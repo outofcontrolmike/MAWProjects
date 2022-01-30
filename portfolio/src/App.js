@@ -16,7 +16,6 @@ import BeastWars from "./pages/projects/beast_wars/BeastWars";
 import BMI from "./pages/projects/bmi_calc/Bmi";
 import Bored from "./pages/projects/bored/Bored";
 import Breweries from "./pages/projects/breweries/Brewery";
-import Cats from "./pages/projects/catFacts/Cats";
 import Characters from "./pages/projects/characters/Characters";
 import CoolCalc from "./pages/projects/cool_calc/CoolCalc";
 import EarthWaterFire from "./pages/projects/earth_water_fire/EarthWaterFire";
