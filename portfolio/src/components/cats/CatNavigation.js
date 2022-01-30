@@ -9,7 +9,7 @@ export default function CatNavigation(props) {
       <a className="item">
         <NavLink
           activeClassName="catItemSelected"
-          to="/randomCatFacts" id="catNavItem" style={{ color: "black", fontSize: "1.5rem" }}>
+          to="/cats" id="catNavItem" style={{ color: "black", fontSize: "1.5rem" }}>
           Random Fact
         </NavLink>
       </a>

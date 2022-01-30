@@ -36,7 +36,7 @@ export default function ProjectRoutes(props) {
         <Route path="/catsList">
           <CatsList />
         </Route>
-        <Route path="/randomCatFacts">
+        <Route path="/cats">
           <RandomCats />
         </Route>
         </Switch>
