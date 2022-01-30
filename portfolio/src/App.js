@@ -32,13 +32,10 @@ import Timeline from "./pages/projects/timeline/Timeline"
 import TMNT from "./pages/projects/tmnt/Tmnt";
 
 //Hike Imports
-import HikeContact from "./components/hikes/HikeContact";
-import HikeGallery from "./components/hikes/HikeGallery";
-import SpringfieldGallery from "./components/hikes/SpringfieldGallery";
-import HikeThankYou from "./components/hikes/HikeThankYou";
 
-//Cat Routes
-import CatRoutes from "./components/cats/CatRoutes";
+
+//Collection Routes
+import ProjectRoutes from "./components/routes/ProjectRoutes";
 
 //Main app component that handles all the routing
 function App() {
@@ -83,9 +80,6 @@ function App() {
         <Route path="/breweries">
           <Breweries />
         </Route>
-        <Route path="/cats">
-          <Cats />
-        </Route>
         <Route path="/characters">
           <Characters />
         </Route>
@@ -128,21 +122,7 @@ function App() {
       
 
         {/* Region for Hikes project */}
-        <Route path="/hikeThankYou">
-          <HikeThankYou />
-        </Route>
-        <Route path="/hikeContact">
-          <HikeContact />
-        </Route>
-        <Route path="/hikeGallery">
-          <HikeGallery />
-        </Route>
-        <Route path="/spfGallery">
-          <SpringfieldGallery />
-        </Route>
-
-        {/*Cat routes */}
-        <CatRoutes />
+      <ProjectRoutes />
         
       </Switch>
     </Layout>

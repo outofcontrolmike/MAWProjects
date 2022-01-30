@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 
 //Navigation Menu
-export default function CatNavigation() {
+export default function CatNavigation(props) {
   return (
     <div className="ui four item menu center aligned stackable" id="catNavigationMenu">
       <a className="item">
