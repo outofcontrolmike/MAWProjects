@@ -1,4 +1,6 @@
 import React from 'react';
+import CatNavigation from './CatNavigation';
+
 //Breeds list component
 export default function BreedsList(props) {
 
@@ -16,6 +18,7 @@ export default function BreedsList(props) {
       }
 
   return <div>
+    <CatNavigation/>
       <h3>Breeds List test</h3>
   </div>;
 }

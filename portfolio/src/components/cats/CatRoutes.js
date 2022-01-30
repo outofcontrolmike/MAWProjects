@@ -9,6 +9,7 @@ import RandomCats from "./RandomCats.js";
 export default function CatRoutes() {
   return (
       <>
+      <div id="catApp">
       <Route path="/breedsList">
           <BreedsList />
         </Route>
@@ -18,6 +19,7 @@ export default function CatRoutes() {
         <Route path="/randomCatFacts">
           <RandomCats />
         </Route>
+        </div>
       </>
   );
 }

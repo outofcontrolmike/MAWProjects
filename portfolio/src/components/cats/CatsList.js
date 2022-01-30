@@ -1,7 +1,8 @@
 import React from 'react';
+import CatNavigation from './CatNavigation';
 
 //Cat List
-export default function CatsList() {
+export default function CatsList(props) {
 
     //LoadFacts
     function loadFacts() {
@@ -16,6 +17,7 @@ export default function CatsList() {
         });
     }
   return <div>
+    <CatNavigation />
       <h3>CatsList Test</h3>
   </div>;
 }
