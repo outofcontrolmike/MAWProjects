@@ -37,6 +37,9 @@ import HikeGallery from "./components/hikes/HikeGallery";
 import SpringfieldGallery from "./components/hikes/SpringfieldGallery";
 import HikeThankYou from "./components/hikes/HikeThankYou";
 
+//Cat Routes
+import CatRoutes from "./components/cats/CatRoutes";
+
 //Main app component that handles all the routing
 function App() {
   return (
@@ -137,6 +140,10 @@ function App() {
         <Route path="/spfGallery">
           <SpringfieldGallery />
         </Route>
+
+        {/*Cat routes */}
+        <CatRoutes />
+        
       </Switch>
     </Layout>
   );
