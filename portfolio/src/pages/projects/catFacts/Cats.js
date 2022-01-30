@@ -1,5 +1,10 @@
 import React from 'react';
+import CatNavigation from '../../../components/cats/CatNavigation';
 //https://catfact.ninja/
-export default function Cats() {
-  return <div>Testing for Cat FActs</div>;
+
+//Main Component for Cats project
+export default function Cats(props) {
+  return <div id="catApp" className='ui container fluid'>
+    <CatNavigation />
+  </div>;
 }
