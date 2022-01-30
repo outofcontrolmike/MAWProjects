@@ -45,3 +45,25 @@ padding:2rem
       opacity: 0;
     }
   }
+
+  /* Media Query Rules */
+@media only screen and (max-width: 600px) {
+    #timelineHeader {
+        height:135px;
+        border-bottom:2px solid skyblue;
+    }
+
+    #timelineName, #currentAge{
+        font-size: 3rem;
+    }
+
+    #currentAge {
+        float:unset;
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        padding-left: 40%;
+        padding-top:10px;
+        bottom:10px;
+    }
+  }

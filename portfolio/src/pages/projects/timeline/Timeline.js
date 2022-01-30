@@ -14,7 +14,6 @@ export default function Timeline() {
     let birthYear = 1997;
     let startAge = 6;
 
-
     //load 
     function b4PageLoad() {
       yearContainer = document.getElementById('printYears');
@@ -93,7 +92,7 @@ export default function Timeline() {
   return (
   <div className='ui' id="timelineContainer">
   <div className='ui segment container stackable very padded relaxed' id="timeline">
-      <div>
+      <div id="timelineHeader" className='ui container stackable'>
       <span className='ui text huge' id="timelineName">Michael's Timeline</span>
     <span className='ui text huge ' id="currentAge">30</span>
       </div>
