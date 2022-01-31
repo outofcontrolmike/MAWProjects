@@ -161,8 +161,7 @@ function Projects(props) {
       href: "/residentEvil",
       name: "Resident Evil Profile Viewer",
       meta: "React, Fomantic",
-      desc:
-       "This project provides information about Resident Evil characters that I am familiar with.  If you love profile information and character artwork, this is the project for you.",
+      desc: "This project provides information about Resident Evil characters that I am familiar with.  If you love profile information and character artwork, this is the project for you.",
       created: "Created: January 22nd 2022",
       lastUpdated: "Last Updated: N/A",
       github:
@@ -173,8 +172,7 @@ function Projects(props) {
       href: "/timeline",
       name: "Timeline Positives",
       meta: "React, Fomantic",
-      desc:
-       "This project displays my current age and a positive for each year I've been alive.",
+      desc: "This project displays my current age and a positive for each year I've been alive.",
       created: "Created: January 23rd 2022",
       lastUpdated: "Last Updated: N/A",
       github:
@@ -185,8 +183,7 @@ function Projects(props) {
       href: "/randomDogs",
       name: "Random Dog Viewer",
       meta: "React, Fomantic",
-      desc:
-       "This is an interaction with free API that provides images of random dogs.  If you love dogs, this is the project for you to view.",
+      desc: "This is an interaction with free API that provides images of random dogs.  If you love dogs, this is the project for you to view.",
       created: "Created: January 29th 2022",
       lastUpdated: "Last Updated: N/A",
       github:

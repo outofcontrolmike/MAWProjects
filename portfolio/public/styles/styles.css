@@ -3,7 +3,6 @@
 /* simple way of showing movement on button hover*/
 button:hover {
   position: relative;
-  bottom: 0.25rem;
 }
 
 /* mainly select dropdown options */
@@ -128,7 +127,7 @@ hr:hover {
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
   margin-bottom: 2rem;
-  padding:1rem;
+  padding: 1rem;
 }
 
 #resumeSegment > h2,
@@ -266,12 +265,8 @@ h3 {
   font-family: "Roboto Mono", monospace;
 }
 
-
-
- /* Media Rules */
- @media only screen and (max-width: 600px) {
-
-
+/* Media Rules */
+@media only screen and (max-width: 600px) {
   #landingPage {
     font-size: 10px;
     max-width: 99%;
