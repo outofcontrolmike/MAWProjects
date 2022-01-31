@@ -21,11 +21,18 @@ export default function RandomCats(props) {
     let time = document.getElementById("catInput").value;
     //convert Time to milliseconds
     time *= 1000;
+    let resetBtn = document.createElement("button");
+
     document.getElementById("catInput").style.visibility = "hidden";
     document.getElementById("catFactButton").style.visibility = "hidden";
+    document.getElementById("catFactReset").style.visibility = "visible";
     setInterval(() => {
       requestFact();
     }, time);
+  }
+
+  function reloadWindow() {
+    window.location.reload();
   }
 
   return (
@@ -51,6 +58,14 @@ export default function RandomCats(props) {
             Go
           </button>
         </div>
+        <button
+          onClick={reloadWindow}
+          id="catFactReset"
+          className="ui button yellow huge basic fluid"
+          style={{ visibility: "hidden" }}
+        >
+          Reset
+        </button>
       </div>
     </div>
   );
