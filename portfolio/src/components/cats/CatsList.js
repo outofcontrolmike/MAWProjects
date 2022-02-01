@@ -30,7 +30,6 @@ export default function CatsList(props) {
   function createList(fact) {
     console.log(fact);
     let item = document.createElement("p");
-    item.classList("ui text large");
     item.innerHTML = fact.fact;
     document.getElementById("catFactsList").append(item);
   }
@@ -38,7 +37,6 @@ export default function CatsList(props) {
   return (
     <div className="ui container fluid center aligned">
       <CatNavigation />
-      <h3>CatsList Test</h3>
       <button onClick={loadFacts} className="ui button huge red basic">
         Load Lists
       </button>
