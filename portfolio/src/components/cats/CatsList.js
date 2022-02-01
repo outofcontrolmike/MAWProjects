@@ -41,7 +41,7 @@ export default function CatsList(props) {
     <div className="ui container fluid center aligned">
       <CatNavigation />
       <h3>10 Random Cat Facts</h3>
-      <div className="ui container" id="catFactsList"></div>
+      <div className="ui container fluid" id="catFactsList"></div>
       <button
         data-tooltip="Request 10 More Random Facts"
         data-inverted=""
