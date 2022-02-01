@@ -18,19 +18,23 @@ export default function RandomCats(props) {
   }
 
   function setTimer() {
-    //initial call
-    requestFact();
     let time = document.getElementById("catInput").value;
-    //convert Time to milliseconds
-    time *= 1000;
-    let resetBtn = document.createElement("button");
-
-    document.getElementById("catInput").style.visibility = "hidden";
-    document.getElementById("catFactButton").style.visibility = "hidden";
-    document.getElementById("catFactReset").style.visibility = "visible";
-    setInterval(() => {
+    if (time <= 0) {
+      window.alert("Enter an amount more than 0 seconds");
+    } else {
+      //initial call
       requestFact();
-    }, time);
+      //convert Time to milliseconds
+      time *= 1000;
+      let resetBtn = document.createElement("button");
+
+      document.getElementById("catInput").style.visibility = "hidden";
+      document.getElementById("catFactButton").style.visibility = "hidden";
+      document.getElementById("catFactReset").style.visibility = "visible";
+      setInterval(() => {
+        requestFact();
+      }, time);
+    }
   }
 
   function reloadWindow() {
