@@ -65,14 +65,16 @@ export default function RandomCats(props) {
           </button>
         </div>
       </div>
-      <button
-        onClick={reloadWindow}
-        id="catFactReset"
-        className="ui button yellow huge basic fluid"
-        style={{ visibility: "hidden" }}
-      >
-        Reset
-      </button>
+      <div className="ui container center aligned">
+        <button
+          onClick={reloadWindow}
+          id="catFactReset"
+          className="ui button yellow huge basic"
+          style={{ visibility: "hidden" }}
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 }

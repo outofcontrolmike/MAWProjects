@@ -38,6 +38,10 @@
   top: 60%;
 }
 
+#catSpan {
+  color: blue;
+}
+
 /* Media Rules */
 @media only screen and (max-width: 1000px) {
   #randomCatFactContainer {
