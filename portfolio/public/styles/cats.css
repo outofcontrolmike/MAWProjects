@@ -18,6 +18,10 @@
   text-align: center;
 }
 
+#catFactsList {
+  color: black;
+}
+
 #catInput,
 #catFactButton {
   text-align: center;
