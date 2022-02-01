@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+#randomCats {
+  height: 100vh;
+}
+
 #randomCatFactContainer {
   position: absolute;
   left: 50%;
@@ -45,6 +49,27 @@
   color: blue;
 }
 
+#catFooter {
+  position: fixed;
+  bottom: 0px;
+  right: 32%;
+  background-color: black;
+  padding: 3rem;
+}
+
+#catCreds > a,
+#catText > a {
+  color: beige;
+}
+
+#catCreds {
+  border-right: yellow 4px solid;
+}
+
+#breedBtn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 /* Media Rules */
 @media only screen and (max-width: 1000px) {
   #randomCatFactContainer {

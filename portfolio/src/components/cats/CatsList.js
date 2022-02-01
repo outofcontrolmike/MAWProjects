@@ -1,5 +1,6 @@
 import React from "react";
 import CatNavigation from "./CatNavigation";
+import CatFooter from "../cats/CatFooter";
 
 //Cat List
 export default function CatsList(props) {
@@ -53,6 +54,7 @@ export default function CatsList(props) {
       >
         <i className="cat icon large"></i>
       </button>
+      <CatFooter />
     </div>
   );
 }
