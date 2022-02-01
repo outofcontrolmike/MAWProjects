@@ -29,6 +29,11 @@
   color: blanchedalmond;
 }
 
+#catFactReset {
+  position: fixed;
+  top: 60%;
+}
+
 /* Media Rules */
 @media only screen and (max-width: 1000px) {
   #randomCatFactContainer {
@@ -43,5 +48,10 @@
   #catFactButton {
     margin-top: 2rem;
     font-size: 1.5rem;
+  }
+
+  #catFactReset {
+    position: relative;
+    top: 300px;
   }
 }

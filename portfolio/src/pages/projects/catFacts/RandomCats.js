@@ -17,7 +17,9 @@ export default function RandomCats(props) {
       });
   }
 
-  function startProgram() {
+  function setTimer() {
+    //initial call
+    requestFact();
     let time = document.getElementById("catInput").value;
     //convert Time to milliseconds
     time *= 1000;
@@ -51,22 +53,22 @@ export default function RandomCats(props) {
         <div class="ui action input" id="catInputMenu">
           <input id="catInput" type="text" placeholder="Seconds" />
           <button
-            onClick={startProgram}
+            onClick={setTimer}
             id="catFactButton"
             className="ui button red huge"
           >
             Go
           </button>
         </div>
-        <button
-          onClick={reloadWindow}
-          id="catFactReset"
-          className="ui button yellow huge basic fluid"
-          style={{ visibility: "hidden" }}
-        >
-          Reset
-        </button>
       </div>
+      <button
+        onClick={reloadWindow}
+        id="catFactReset"
+        className="ui button yellow huge basic fluid"
+        style={{ visibility: "hidden" }}
+      >
+        Reset
+      </button>
     </div>
   );
 }
