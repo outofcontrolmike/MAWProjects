@@ -19,7 +19,10 @@
 }
 
 #catFactsList {
-  color: black;
+  color: bisque;
+  font-size: 1.5rem;
+  height: 100vh;
+  max-height: 700px;
 }
 
 #catInput,

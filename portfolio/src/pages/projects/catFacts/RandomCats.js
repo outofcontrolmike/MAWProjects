@@ -59,9 +59,9 @@ export default function RandomCats(props) {
           <button
             onClick={setTimer}
             id="catFactButton"
-            className="ui button red huge"
+            className="ui buttonhuge"
           >
-            Go
+            <i class="cat icon large"></i>
           </button>
         </div>
       </div>

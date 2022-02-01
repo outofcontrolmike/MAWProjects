@@ -3,24 +3,29 @@ import CatNavigation from "./CatNavigation";
 
 //Breeds list component
 export default function BreedsList(props) {
+  //initial call for loadBreeds;
+  setTimeout(() => {
+    loadBreeds();
+  }, 0.0001);
+
   let page = 1;
   function loadBreeds() {
     if (page <= 4) {
       let url = "https://catfact.ninja/breeds?page=" + page;
+      document.getElementById("breedList").prepend("page" + page);
       fetch(url)
         .then((response) => response.json())
         .then((catBreeds) => {
           console.log("Breeds", catBreeds);
           catBreeds.data.map(createList);
           //figure out how to add page number
-          document.getElementById("breedList").prepend("page" + page);
         })
         .catch((error) => {
           console.error("Error:", error);
         });
       page++;
     } else {
-      page = 1;
+      document.getElementById("breedBtn").innerHTML = "Max amount reached";
     }
   }
 
@@ -61,14 +66,23 @@ export default function BreedsList(props) {
   return (
     <div className="ui container fluid center aligned padded relaxed">
       <CatNavigation />
-      <button onClick={loadBreeds} className="ui button huge red basic">
-        Load Breeds Lists
-      </button>
       <div
         className="ui container fluid"
         style={{ color: "black" }}
         id="breedList"
       ></div>
+      <button
+        id="breedBtn"
+        onClick={loadBreeds}
+        className="ui button huge red basic"
+        data-tooltip="Request Additional Breeds"
+        data-inverted=""
+        data-variation="large"
+        data-position="right center"
+        className="ui button huge massive orange basic"
+      >
+        <i className="cat icon huge"></i>
+      </button>
     </div>
   );
 }
