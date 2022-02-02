@@ -5,6 +5,7 @@ import CatFooter from "../cats/CatFooter";
 //Cat List
 export default function CatsList(props) {
   let pageNum = 1;
+  let count = 1;
 
   //initial call for loadFacts;
   setTimeout(() => {
@@ -27,20 +28,20 @@ export default function CatsList(props) {
           console.error("Error:", error);
         });
     } else {
-      pageNum = 1;
+      window.alert("You've requested all lists of cat facts");
     }
   }
 
   function createList(fact) {
-    console.log(fact);
     let item = document.createElement("p");
-    item.innerHTML = fact.fact;
-    document.getElementById("catFactsList").prepend(item);
+    item.innerHTML = count + ". " + fact.fact;
+    document.getElementById("catFactsList").append(item);
+    count++;
   }
 
   return (
     <div
-      className="ui container fluid center aligned"
+      className="ui container center aligned very padded relaxed"
       id="catFactsListContainer"
     >
       <CatNavigation />

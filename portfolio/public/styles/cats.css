@@ -23,13 +23,13 @@
 }
 
 #catFactsListContainer {
-  height: 650px;
-  overflow: scroll;
 }
 
 #catFactsList {
   color: bisque;
   font-size: 1.5rem;
+  height: 600px;
+  overflow: scroll;
 }
 
 #catInput,
@@ -55,7 +55,7 @@
 #catFooter {
   position: fixed;
   bottom: 0px;
-  right: 32%;
+  right: 33%;
   background-color: black;
   padding: 3rem;
 }
