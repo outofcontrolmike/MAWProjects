@@ -22,13 +22,18 @@
   text-align: center;
 }
 
-#catFactsList {
+#catFactsList,
+#breedList {
   color: bisque;
   padding-right: 10rem;
   padding-left: 10rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: 550px;
   overflow: scroll;
+}
+
+#breedSegment {
+  font-size: 1.5rem;
 }
 
 #catsListButton {
@@ -52,7 +57,7 @@
 }
 
 #catSpan {
-  color: blue;
+  color: red;
 }
 
 #catFooter {
@@ -76,6 +81,16 @@
 #breedBtn {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+#breedSegment {
+  color: white;
+  background-color: black;
+  border-color: beige;
+}
+
+.cat:hover {
+  padding-left: 0.5rem;
 }
 /* Media Rules */
 @media only screen and (max-width: 1000px) {

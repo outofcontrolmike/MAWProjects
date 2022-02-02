@@ -1,4 +1,5 @@
 import React from "react";
+import CatFooter from "./CatFooter";
 import CatNavigation from "./CatNavigation";
 
 //Breeds list component
@@ -6,12 +7,13 @@ export default function BreedsList(props) {
   //initial call for loadBreeds;
   setTimeout(() => {
     loadBreeds();
-  }, 0.0001);
+  }, 10);
 
   let page = 1;
   function loadBreeds() {
     if (page <= 4) {
       let url = "https://catfact.ninja/breeds?page=" + page;
+      document.getElementById("pageNum").innerHTML = page + "/4";
       document.getElementById("breedList").prepend("page" + page);
       fetch(url)
         .then((response) => response.json())
@@ -32,7 +34,7 @@ export default function BreedsList(props) {
   function createList(cat) {
     let list = document.createElement("div");
     list.classList = "ui container segment stackable very raised padded";
-
+    list.id = "breedSegment";
     let container = document.createElement("div");
     container.classList = "ui two column container stackable grid";
 
@@ -63,9 +65,21 @@ export default function BreedsList(props) {
     document.getElementById("breedList").append(list);
   }
 
+  function backToTop() {
+    console.log("working");
+    document.getElementById("breedList").scrollTop = 0;
+  }
+
   return (
     <div className="ui container fluid center aligned padded relaxed">
       <CatNavigation />
+      <h2 className="ui text">
+        {" "}
+        <span id="pageNum" className="ui text large">
+          {" "}
+          1/4
+        </span>
+      </h2>
       <div
         className="ui container fluid"
         style={{ color: "black" }}
@@ -74,15 +88,23 @@ export default function BreedsList(props) {
       <button
         id="breedBtn"
         onClick={loadBreeds}
-        className="ui button huge red basic"
+        className="ui button large red basic"
         data-tooltip="Request Additional Breeds"
         data-inverted=""
         data-variation="large"
         data-position="right center"
-        className="ui button huge massive orange basic"
+        className="ui button large massive orange basic"
       >
-        <i className="cat icon huge"></i>
+        <i className="cat icon large"></i>
       </button>
+      <button
+        id="catsBackToTop"
+        onClick={backToTop}
+        className="ui button massive basic blue"
+      >
+        Back to top
+      </button>
+      <CatFooter />
     </div>
   );
 }

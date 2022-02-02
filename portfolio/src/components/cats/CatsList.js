@@ -46,8 +46,12 @@ export default function CatsList(props) {
       id="catFactsListContainer"
     >
       <CatNavigation />
-      <h2>
-        List <span id="pageNum"> 1/34</span>
+      <h2 className="ui text">
+        {" "}
+        <span id="pageNum" className="ui text large">
+          {" "}
+          1/34
+        </span>
       </h2>
       <div className="ui container fluid" id="catFactsList"></div>
       <button
