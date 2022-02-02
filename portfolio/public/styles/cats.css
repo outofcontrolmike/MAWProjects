@@ -22,12 +22,11 @@
   text-align: center;
 }
 
-#catFactsListContainer {
-}
-
 #catFactsList {
   color: bisque;
-  font-size: 1.5rem;
+  padding-right: 10rem;
+  padding-left: 10rem;
+  font-size: 2rem;
   height: 600px;
   overflow: scroll;
 }
@@ -55,9 +54,10 @@
 #catFooter {
   position: fixed;
   bottom: 0px;
-  right: 33%;
   background-color: black;
+  border-top: solid yellow 2px;
   padding: 3rem;
+  width: 100%;
 }
 
 #catCreds > a,

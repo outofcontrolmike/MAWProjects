@@ -17,6 +17,7 @@ export default function CatsList(props) {
     if (pageNum <= 34) {
       let list = document.getElementById("catFactsList");
       list.innerHTML = "";
+      document.getElementById("pageNum").innerHTML = pageNum + "/34";
       let url = "https://catfact.ninja/facts?page=" + pageNum;
       pageNum++;
       fetch(url)
@@ -34,18 +35,20 @@ export default function CatsList(props) {
 
   function createList(fact) {
     let item = document.createElement("p");
-    item.innerHTML = count + ". " + fact.fact;
+    item.innerHTML = count + "." + "&nbsp" + fact.fact;
     document.getElementById("catFactsList").append(item);
     count++;
   }
 
   return (
     <div
-      className="ui container center aligned very padded relaxed"
+      className="ui container fluid center aligned very padded relaxed"
       id="catFactsListContainer"
     >
       <CatNavigation />
-      <h3>10 Random Cat Facts</h3>
+      <h2>
+        List <span id="pageNum"> 1/34</span>
+      </h2>
       <div className="ui container fluid" id="catFactsList"></div>
       <button
         data-tooltip="Request 10 More Random Facts"

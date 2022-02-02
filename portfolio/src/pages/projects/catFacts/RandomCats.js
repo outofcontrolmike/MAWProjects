@@ -1,7 +1,7 @@
 import React from "react";
 import CatNavigation from "../../../components/cats/CatNavigation";
 import CatFooter from "../../../components/cats/CatFooter";
-//Random Cats Facts - Needs two options
+
 export default function RandomCats(props) {
   // Get Random Cat Fact
   function requestFact(time) {
@@ -42,10 +42,10 @@ export default function RandomCats(props) {
   }
 
   return (
-    <div id="randomCats">
+    <div className="ui" id="randomCats">
       <CatNavigation />
       <div
-        className="ui container padded relaxed center aligned ui text huge"
+        className="ui container fluid padded relaxed center aligned ui text huge"
         id="randomCatFactContainer"
       >
         <div>
@@ -75,7 +75,9 @@ export default function RandomCats(props) {
           </button>
         </div>
       </div>
-      <CatFooter />
+      <div>
+        <CatFooter />
+      </div>
     </div>
   );
 }
