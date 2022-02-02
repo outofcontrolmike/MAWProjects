@@ -51,6 +51,7 @@ export default function CatsList(props) {
       </h2>
       <div className="ui container fluid" id="catFactsList"></div>
       <button
+        id="catsListButton"
         data-tooltip="Request 10 More Random Facts"
         data-inverted=""
         data-variation="large"

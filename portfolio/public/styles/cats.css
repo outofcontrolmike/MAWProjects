@@ -27,8 +27,12 @@
   padding-right: 10rem;
   padding-left: 10rem;
   font-size: 2rem;
-  height: 600px;
+  height: 550px;
   overflow: scroll;
+}
+
+#catsListButton {
+  margin-top: 2rem;
 }
 
 #catInput,
@@ -89,7 +93,8 @@
     font-size: 1.5rem;
   }
 
-  #catFactReset {
+  #catFactReset,
+  #catsListButton {
     position: relative;
     top: 300px;
   }
