@@ -66,7 +66,6 @@ export default function BreedsList(props) {
   }
 
   function backToTop() {
-    console.log("working");
     document.getElementById("breedList").scrollTop = 0;
   }
 
@@ -97,13 +96,12 @@ export default function BreedsList(props) {
       >
         <i className="cat icon large"></i>
       </button>
-      <button
+      <i
         id="catsBackToTop"
         onClick={backToTop}
-        className="ui button massive basic blue"
-      >
-        Back to top
-      </button>
+        className="arrow alternate circle up outline icon huge"
+        style={{ color: "white" }}
+      ></i>
       <CatFooter />
     </div>
   );
