@@ -22,11 +22,14 @@
   text-align: center;
 }
 
+#catFactsListContainer {
+  height: 650px;
+  overflow: scroll;
+}
+
 #catFactsList {
   color: bisque;
   font-size: 1.5rem;
-  height: 100vh;
-  max-height: 650px;
 }
 
 #catInput,

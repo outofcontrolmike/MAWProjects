@@ -39,7 +39,10 @@ export default function CatsList(props) {
   }
 
   return (
-    <div className="ui container fluid center aligned">
+    <div
+      className="ui container fluid center aligned"
+      id="catFactsListContainer"
+    >
       <CatNavigation />
       <h3>10 Random Cat Facts</h3>
       <div className="ui container fluid" id="catFactsList"></div>
@@ -50,7 +53,6 @@ export default function CatsList(props) {
         data-position="right center"
         onClick={loadFacts}
         className="ui button huge massive orange basic"
-        data-content="add users"
       >
         <i className="cat icon large"></i>
       </button>
