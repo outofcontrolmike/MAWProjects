@@ -151,7 +151,7 @@ function Projects(props) {
       meta: "React JS,Fomantic and Google Fonts",
       desc: "Are you new to Springfield and happen to enjoy the outdoors? If so, check out this project that I made exclusively made for the Springfield area.",
       created: "Created: January 15th 2022",
-      lastUpdated: "Last Updated: N/A",
+      lastUpdated: "Last Updated: February 1st 2022",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/417Hikes/Hikes.js",
     },

@@ -8,14 +8,15 @@ export default function HikeCard(props) {
   let hike1 = props.hikes.data[0];
 
   // set up variables 
-  let hikeDesc, bestSeason, hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, item, legend1, legend2, legend3
-  let hikeTitle, hikeFeatures, hikeLocation;
+  let hikeDesc, bestSeason,  hikeExp, hikeLink, hikeMap, hikeImage1, hikeImage2, hikeImage3, item, legend1, legend2, legend3
+  let hikeTitle, hikeFeatures, dogFriendly, hikeLocation;
 
 
   //Grabs all id's and assigns click events to hike items
   function loadStuff() {
     hikeTitle = document.getElementById('hikeTitle');
     hikeFeatures = document.getElementById('hikeFeatures');
+    dogFriendly = document.getElementById('dogFriendly');
     hikeLocation = document.getElementById('hikeLocation');
     hikeDesc = document.getElementById('hikeDesc');
     bestSeason = document.getElementById('bestSeason')
@@ -107,6 +108,7 @@ export default function HikeCard(props) {
     hikeTitle.style.color = "forestgreen";
     hikeLocation.innerHTML = hikeInfo.location;
     hikeFeatures.innerHTML = hikeInfo.features;
+    dogFriendly.innerHTML = hikeInfo.dogFriendly;
     hikeDesc.innerHTML = hikeInfo.description;
     bestSeason.innerHTML = hikeInfo.bestSeason;
     hikeExp.innerHTML = hikeInfo.personalExp;
@@ -146,6 +148,10 @@ export default function HikeCard(props) {
       <b style={{paddingTop: "1rem"}}>Features: </b>
       <p id="hikeFeatures">
         <p>{hike1.features}</p>
+      </p>
+      <b style={{paddingTop: "1rem"}}>Dog Friendly: </b>
+      <p id="dogFriendly">
+        <p>{hike1.dogFriendly}</p>
       </p>
       <b>Location: </b>
       <p id="hikeLocation">
