@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function CatNavigation(props) {
   return (
     <div
-      className="ui four item menu secondary pointing center aligned stackable"
+      className="ui four item secondary pointing menu center aligned stackable"
       id="catNavigationMenu"
     >
       <a className="item">

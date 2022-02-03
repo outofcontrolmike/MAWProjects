@@ -28,8 +28,8 @@ export default function RandomCats(props) {
       time *= 1000;
       let resetBtn = document.createElement("button");
 
-      document.getElementById("catInput").style.visibility = "hidden";
-      document.getElementById("catFactButton").style.visibility = "hidden";
+      document.getElementById("catInput").remove();
+      document.getElementById("catFactButton").remove();
       document.getElementById("catFactReset").style.visibility = "visible";
       setInterval(() => {
         requestFact();
@@ -45,7 +45,7 @@ export default function RandomCats(props) {
     <div className="ui" id="randomCats">
       <CatNavigation />
       <div
-        className="ui container fluid padded relaxed center aligned ui text huge"
+        className="ui container fluid padded relaxed center aligned ui text huge stackable grid"
         id="randomCatFactContainer"
       >
         <div>
@@ -69,20 +69,18 @@ export default function RandomCats(props) {
           </button>
         </div>
       </div>
-      <div className="ui container center aligned">
-        <button
-          onClick={reloadWindow}
-          id="catFactReset"
-          className="ui button huge"
-          data-tooltip="Reset the page right meow."
-          data-inverted=""
-          data-variation="large"
-          data-position="left center"
-          style={{ visibility: "hidden" }}
-        >
-          <i class="cat icon huge"></i>
-        </button>
-      </div>
+      <button
+        onClick={reloadWindow}
+        id="catFactReset"
+        className="ui button huge"
+        data-tooltip="Reset the page right meow."
+        data-inverted=""
+        data-variation="large"
+        data-position="left center"
+        style={{ visibility: "hidden" }}
+      >
+        <i class="cat icon huge"></i>
+      </button>
       <div>
         <CatFooter />
       </div>

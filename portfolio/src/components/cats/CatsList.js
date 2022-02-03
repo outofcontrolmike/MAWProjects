@@ -54,7 +54,7 @@ export default function CatsList(props) {
         </span>
       </h2>
       <div
-        className="ui container raised padded relaxed segment"
+        className="ui container padded relaxed segment"
         id="catFactsList"
       ></div>
       <button

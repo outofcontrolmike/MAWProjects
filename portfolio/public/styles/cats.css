@@ -17,7 +17,8 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 36px;
+  font-size: 30px;
+  overflow-y: scroll;
 }
 
 #catInputMenu {
@@ -137,23 +138,35 @@
 }
 /* Media Rules */
 @media only screen and (max-width: 1000px) {
+  #catNavigationMenu > a {
+    font-size: 1rem;
+  }
   #randomCatFactContainer {
     width: 100%;
+    font-size: 24px;
+    height: 400px;
+    overflow-y: scroll;
   }
 
   #catRandomFact {
-    font-size: 36px;
   }
 
   #catInput,
   #catFactButton {
-    margin-top: 2rem;
     font-size: 1.5rem;
   }
 
   #catFactReset,
   #catsListButton {
-    position: relative;
-    top: 300px;
+    border-top: grey solid 1px;
+  }
+
+  #catFactsList {
+    padding: unset;
+    padding: 2rem;
+  }
+
+  .cat {
+    padding-left: 34px;
   }
 }
