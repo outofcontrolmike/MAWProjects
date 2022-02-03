@@ -66,7 +66,7 @@ export default function CatsList(props) {
         className="ui button small"
         onClick={loadFacts}
       >
-        <i className="cat icon massive"></i>
+        <i className="cat icon massive" id="listCatIcon"></i>
       </button>
       <CatFooter />
     </div>
