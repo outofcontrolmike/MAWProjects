@@ -53,7 +53,10 @@ export default function CatsList(props) {
           1/34
         </span>
       </h2>
-      <div className="ui container fluid" id="catFactsList"></div>
+      <div
+        className="ui container raised padded relaxed segment"
+        id="catFactsList"
+      ></div>
       <button
         id="catsListButton"
         data-tooltip="Request Another list of facts"

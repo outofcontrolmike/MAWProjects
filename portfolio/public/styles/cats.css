@@ -99,7 +99,8 @@
   border-right: beige 4px solid;
 }
 
-#breedSegment {
+#breedSegment,
+#catFactsList {
   color: white;
   background-color: black;
   border-color: beige;

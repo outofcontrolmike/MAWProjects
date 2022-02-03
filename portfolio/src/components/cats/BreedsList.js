@@ -14,6 +14,7 @@ export default function BreedsList(props) {
     if (page <= 4) {
       let url = "https://catfact.ninja/breeds?page=" + page;
       document.getElementById("pageNum").innerHTML = page + "/4";
+      document.getElementById("breedList").innerHTML = "";
       document.getElementById("breedList").prepend("page" + page);
       fetch(url)
         .then((response) => response.json())
@@ -27,7 +28,7 @@ export default function BreedsList(props) {
         });
       page++;
     } else {
-      document.getElementById("breedBtn").innerHTML = "Max amount reached";
+      document.getElementById("breedBtn").disabled = "true";
     }
   }
 
@@ -93,14 +94,14 @@ export default function BreedsList(props) {
         data-position="left center"
         className="ui button small"
       >
-        <i className="cat icon massive"></i>
+        <i className="cat icon massive" id="breedsCatIcon"></i>
       </button>
-      <i
+      {/* <i
         id="catsBackToTop"
         onClick={backToTop}
         className="arrow alternate circle up outline icon huge"
         style={{ color: "beige" }}
-      ></i>
+      ></i> */}
       <CatFooter />
     </div>
   );
