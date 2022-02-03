@@ -56,14 +56,14 @@ export default function CatsList(props) {
       <div className="ui container fluid" id="catFactsList"></div>
       <button
         id="catsListButton"
-        data-tooltip="Request 10 More Random Facts"
+        data-tooltip="Request Another list of facts"
         data-inverted=""
         data-variation="large"
-        data-position="right center"
+        data-position="left center"
+        className="ui button small"
         onClick={loadFacts}
-        className="ui button huge massive orange basic"
       >
-        <i className="cat icon large"></i>
+        <i className="cat icon massive"></i>
       </button>
       <CatFooter />
     </div>

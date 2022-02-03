@@ -52,7 +52,7 @@ export default function BreedsList(props) {
     let hr = document.createElement("hr");
 
     breed.innerHTML = cat.breed;
-    coat.innerHTML = "<span id='catSpan'>COAT: </span>" + cat.coat;
+    coat.innerHTML = "<span id='catSpan'>Coat: </span>" + cat.coat;
     country.innerHTML = "<span id='catSpan'>Country: </span>" + cat.country;
     origin.innerHTML = "<span id='catSpan'>Origin: </span>" + cat.origin;
     pattern.innerHTML = "<span id='catSpan'>Pattern: </span>" + cat.pattern;
@@ -87,20 +87,19 @@ export default function BreedsList(props) {
       <button
         id="breedBtn"
         onClick={loadBreeds}
-        className="ui button large red basic"
-        data-tooltip="Request Additional Breeds"
+        data-tooltip={"Request More of my Breeds"}
         data-inverted=""
         data-variation="large"
-        data-position="right center"
-        className="ui button large massive orange basic"
+        data-position="left center"
+        className="ui button small"
       >
-        <i className="cat icon large"></i>
+        <i className="cat icon massive"></i>
       </button>
       <i
         id="catsBackToTop"
         onClick={backToTop}
         className="arrow alternate circle up outline icon huge"
-        style={{ color: "white" }}
+        style={{ color: "beige" }}
       ></i>
       <CatFooter />
     </div>

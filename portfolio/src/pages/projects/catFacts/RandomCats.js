@@ -55,25 +55,33 @@ export default function RandomCats(props) {
           </span>
         </div>
         <div class="ui action input" id="catInputMenu">
-          <input id="catInput" type="text" placeholder="Seconds" />
+          <input id="catInput" maxlength="2" type="text" />
           <button
             onClick={setTimer}
             id="catFactButton"
             className="ui button huge"
+            data-tooltip="Meowwwww!!!  ... I mean click me to get started."
+            data-inverted=""
+            data-variation="large"
+            data-position="top center"
           >
             <i class="cat icon huge"></i>
           </button>
         </div>
-        <div className="ui container center aligned">
-          <button
-            onClick={reloadWindow}
-            id="catFactReset"
-            className="ui button yellow huge basic"
-            style={{ visibility: "hidden" }}
-          >
-            Reset
-          </button>
-        </div>
+      </div>
+      <div className="ui container center aligned">
+        <button
+          onClick={reloadWindow}
+          id="catFactReset"
+          className="ui button huge"
+          data-tooltip="Reset the page right meow."
+          data-inverted=""
+          data-variation="large"
+          data-position="left center"
+          style={{ visibility: "hidden" }}
+        >
+          <i class="cat icon huge"></i>
+        </button>
       </div>
       <div>
         <CatFooter />

@@ -7,6 +7,10 @@
   height: 100vh;
 }
 
+#catNavigationMenu {
+  border-bottom-color: whitesmoke;
+}
+
 #randomCatFactContainer {
   position: absolute;
   left: 50%;
@@ -24,12 +28,12 @@
 
 #catFactsList,
 #breedList {
-  color: bisque;
+  color: whitesmoke;
   padding-right: 10rem;
   padding-left: 10rem;
   font-size: 1.5rem;
-  height: 550px;
-  overflow: scroll;
+  height: 500px;
+  overflow-y: scroll;
 }
 
 #breedSegment {
@@ -40,15 +44,22 @@
   margin-top: 2rem;
 }
 
-#catInput,
-#catFactButton {
+#catInput {
   text-align: center;
   border: none;
   border-top: none;
-  border-width: 1px;
+  width: 10rem;
   background-color: black;
-  border-bottom: 2px solid bisque;
-  color: blanchedalmond;
+  border-bottom: 1px solid beige;
+  color: beige;
+}
+
+#breedBtn,
+#catFactButton,
+#catFactReset,
+#catsListButton {
+  border: none;
+  background-color: black;
 }
 
 #catFactReset {
@@ -64,24 +75,28 @@
   position: fixed;
   bottom: 0px;
   background-color: black;
-  border-top: solid yellow 2px;
-  padding: 3rem;
-  width: 100%;
+  border-top: solid whitesmoke 2px;
+  padding: 2rem;
+  width: 105%;
 }
 
 #catCreds > a,
-#catText > a {
+#catText > a,
+.cat {
   color: beige;
+  font-size: 1.5rem;
+}
+
+#catCreds > a:hover,
+#catText > a:hover,
+#catNavigationMenu > a:hover,
+.cat:hover {
+  color: whitesmoke;
+  text-shadow: 1px 1px beige;
 }
 
 #catCreds {
-  border-right: yellow 4px solid;
-}
-
-#breedBtn {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: orange;
+  border-right: beige 4px solid;
 }
 
 #breedSegment {
@@ -91,7 +106,8 @@
 }
 
 .cat:hover {
-  padding-left: 0.5rem;
+  transform: rotate(-10deg);
+  text-shadow: 1px 1px beige;
 }
 /* Media Rules */
 @media only screen and (max-width: 1000px) {
