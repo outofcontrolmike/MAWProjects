@@ -36,6 +36,11 @@
   overflow-y: scroll;
 }
 
+#pageNum {
+  color: beige;
+  text-shadow: 1px 1px whitesmoke;
+}
+
 #breedSegment {
   font-size: 1.5rem;
 }
@@ -68,7 +73,8 @@
 }
 
 #catSpan {
-  color: red;
+  color: thistle;
+  text-shadow: thistle 1px 1px;
 }
 
 #catFooter {
@@ -103,7 +109,26 @@
 #catFactsList {
   color: white;
   background-color: black;
-  border-color: beige;
+  border-color: whitesmoke;
+}
+
+#breedSegment:hover {
+  border-width: 4px;
+  border-color: whitesmoke;
+}
+
+#breedSegment:hover > hr {
+  border-width: 2px;
+  border-color: whitesmoke;
+}
+
+#breedSegment > h1 {
+  color: thistle;
+  text-shadow: thistle 1px 1px;
+}
+
+#catFactsList > p:hover {
+  text-shadow: 1px 1px beige;
 }
 
 .cat:hover {
