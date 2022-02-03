@@ -151,9 +151,6 @@
     overflow-y: scroll;
   }
 
-  #catRandomFact {
-  }
-
   #catInput,
   #catFactButton {
     font-size: 1.5rem;
