@@ -72,7 +72,7 @@ export default function RandomCats(props) {
       <button
         onClick={reloadWindow}
         id="catFactReset"
-        className="ui button huge"
+        className="ui button huge fluid"
         data-tooltip="Reset the page right meow."
         data-inverted=""
         data-variation="large"
