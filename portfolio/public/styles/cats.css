@@ -186,6 +186,18 @@
   #catCreds {
     border-right: unset;
   }
+
+  #breedList {
+    padding-left: unset;
+    padding-right: unset;
+    height: 400px;
+  }
+
+  #breedBtn {
+    border-top: 1px solid grey;
+    border-width: 100%;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-height: 900px) {
@@ -210,24 +222,39 @@
   #catFactsList {
     padding: unset;
     padding: 2rem;
-    height: 200px;
+    height: 275px;
   }
 
-  #listCatIcon {
-    font-size: 5rem;
+  #listCatIcon,
+  #breedsCatIcon {
+    font-size: 3rem;
     margin-right: 4rem;
     padding-bottom: 4rem;
   }
-}
 
-@media only screen and (max-width: 300px) {
-  #randomCatFactContainer {
-    width: 100%;
-    font-size: 18px;
-    padding-left: 40px;
-    padding-top: 40px;
-    margin: 20px;
-    height: 400px;
-    overflow-y: scroll;
+  #breedList {
+    padding-left: unset;
+    padding-right: unset;
+    height: 320px;
+  }
+
+  #breedSegment {
+    font-size: 1.3rem;
+    margin-left: 2rem;
+  }
+  #catFooter {
+    padding: unset;
+  }
+
+  @media only screen and (max-width: 300px) {
+    #randomCatFactContainer {
+      width: 100%;
+      font-size: 18px;
+      padding-left: 40px;
+      padding-top: 40px;
+      margin: 20px;
+      height: 400px;
+      overflow-y: scroll;
+    }
   }
 }

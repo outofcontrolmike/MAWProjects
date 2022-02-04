@@ -92,9 +92,9 @@ export default function BreedsList(props) {
         data-inverted=""
         data-variation="large"
         data-position="left center"
-        className="ui button small"
+        className="ui button large"
       >
-        <i className="cat icon massive" id="breedsCatIcon"></i>
+        <i className="cat icon huge" id="breedsCatIcon"></i>
       </button>
       {/* <i
         id="catsBackToTop"
