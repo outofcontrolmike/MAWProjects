@@ -74,17 +74,18 @@ function About() {
             >
               <img
                 className="ui avatar image"
+                id="aboutAvatar"
                 src="img/GitHub-Mark.png"
                 alt={"github"}
               />{" "}
             </a>
             <a
+              id="aboutAvatar"
               href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/"
               target="_blank"
               rel="noreferrer"
             >
               <img
-                id="aboutAvatar"
                 className="ui avatar image"
                 src="img/linkedin.png"
                 alt={"Linked in icon"}

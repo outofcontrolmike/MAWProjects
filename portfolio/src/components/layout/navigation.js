@@ -9,37 +9,57 @@ function Navigation(props) {
       style={{ backgroundColor: "black" }}
     >
       <div className="ui container navContainer" id="navContainer">
-        <a className="item">
+        <a className="item" id="mainNavigationItem">
           <NavLink id="goldText" to="/">
             Home
           </NavLink>
         </a>
-        <a className="item">
-          <NavLink activeClassName="portfolioSelected" id="goldText" to="/about">
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/about"
+          >
             About
           </NavLink>
         </a>
-        <a className="item">
-          <NavLink activeClassName="portfolioSelected" id="goldText" to="/resume">
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/resume"
+          >
             Resume
           </NavLink>
         </a>
-        <a className="item">
-          <NavLink activeClassName="portfolioSelected" id="goldText" to="/projects">
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/projects"
+          >
             Projects
           </NavLink>{" "}
         </a>
-        <a className="item">
-          <NavLink activeClassName="portfolioSelected" id="goldText" to="/comments">
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/comments"
+          >
             Comments
           </NavLink>
         </a>
-        <a className="item">
-          <NavLink activeClassName="portfolioSelected" id="goldText" to="/contact">
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/contact"
+          >
             Contact
           </NavLink>
         </a>
-        <a className="item">
+        <a className="item" id="mainNavigationItem">
           <NavLink activeClassName="portfolioSelected" id="goldText" to="/faq">
             FAQ
           </NavLink>

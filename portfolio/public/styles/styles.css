@@ -45,8 +45,9 @@ option {
   color: gold;
 }
 
-a {
-  color: gold;
+#aboutAvatar,
+#aboutLink,
+#mainNavigationItem {
   font-size: 26px;
 }
 
@@ -55,12 +56,12 @@ a {
   padding: 1em 0em;
 }
 
-i {
-  color: yellow;
+.resumeList > i {
+  color: gold;
 }
 
-a:hover,
-i:hover {
+.resumeList > a:hover,
+.resumeList > i:hover {
   color: orange;
 }
 

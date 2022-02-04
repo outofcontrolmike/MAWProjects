@@ -12,30 +12,30 @@ function Resume() {
             Tech Stack / Certifications
           </h1>{" "}
           <h3 style={{ color: "orange" }}>Daily Tools</h3>
-          <div className="ui list">
+          <div className="ui list resumeList">
             <i className="html5 icon huge"></i>
             <i className="css3 icon huge"></i>
             <i className="js icon huge"></i>
             <i class="react icon huge"></i>
             <i className="windows icon huge"></i>
           </div>
-          <div className="ui list">
+          <div className="ui list resumeList">
             <i className="node js icon huge"></i>
             <i className="npm icon huge"></i>
             <i className="github icon huge"></i>
           </div>
           <h3 style={{ color: "orange" }}>Knowledgeable</h3>
-          <div className="ui list">
+          <div className="ui list resumeList">
             <i className="java icon huge"></i>
             <i className="php icon huge"></i>
             <i className="database icon huge"></i>
           </div>
-          <div className="ui list">
+          <div className="ui list resumeList">
             <i className="ubuntu icon huge"></i>
             <i className="terminal icon huge"></i>
             <i className="bootstrap icon huge"></i>
           </div>
-          <div className="ui list">
+          <div className="ui list resumeList">
             <i className="file word icon huge"></i>
             <i className="file excel icon huge"></i>
           </div>
