@@ -3,7 +3,10 @@ import picture from "../assets/img/me.png";
 //Landing page component
 function Home() {
   return (
-    <div className="ui two column stackable grid very padded relaxed" id="landingPage">
+    <div
+      className="ui two column stackable grid very padded relaxed"
+      id="landingPage"
+    >
       <div
         className="ui column"
         style={{ margin: "auto", textAlign: "center" }}

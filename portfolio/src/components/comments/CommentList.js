@@ -9,7 +9,9 @@ function CommentList(props) {
       className="ui"
       style={{ height: "100vh", overflowY: "auto", marginLeft: "2rem" }}
     >
-      <h1 id="roboHeader">Comments Feed </h1>
+      <h1 className="mainPageh1" id="roboHeader">
+        Comments Feed{" "}
+      </h1>
       <div className="ui feed medium">
         {props.comments.map((comment) => (
           <CommentItem

@@ -5,6 +5,15 @@ button:hover {
   position: relative;
 }
 
+.mainPageh1 {
+  color: gold;
+  text-align: center;
+}
+
+.mainPageh1:hover {
+  color: orange;
+}
+
 /* mainly select dropdown options */
 option {
   color: black;
@@ -26,14 +35,6 @@ option {
 }
 
 /*Landing Page */
-h1 {
-  color: gold;
-  text-align: center;
-}
-
-h1:hover {
-  color: orange;
-}
 
 #landingPageSub {
   font-family: "Roboto Mono", monospace;

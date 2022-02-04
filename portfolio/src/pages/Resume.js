@@ -8,7 +8,9 @@ function Resume() {
       <Navigation />
       <div className="ui two column very padded relaxed stackable grid">
         <div className="ui column" id="techStack">
-          <h1 id="roboHeader">Tech Stack / Certifications</h1>{" "}
+          <h1 className="mainPageh1" id="roboHeader">
+            Tech Stack / Certifications
+          </h1>{" "}
           <h3 style={{ color: "orange" }}>Daily Tools</h3>
           <div className="ui list">
             <i className="html5 icon huge"></i>
@@ -44,7 +46,7 @@ function Resume() {
               style={{ width: "30%" }}
             >
               <div className="visible content" id="resumeVisible">
-                <h1>HTML & CSS</h1>
+                <h1 className="mainPageh1">HTML & CSS</h1>
               </div>
 
               <a
@@ -61,7 +63,7 @@ function Resume() {
               style={{ width: "30%" }}
             >
               <div className="visible content" id="resumeVisible">
-                <h1>Javascript</h1>
+                <h1 className="mainPageh1">Javascript</h1>
               </div>
               <a
                 className="hidden content"
@@ -79,7 +81,7 @@ function Resume() {
               style={{ width: "30%" }}
             >
               <div className="visible content" id="resumeVisible">
-                <h1>SQL</h1>
+                <h1 className="mainPageh1">SQL</h1>
               </div>
               <a
                 className="hidden content"
@@ -95,7 +97,9 @@ function Resume() {
           </div>
         </div>
         <div className="ui column" id="resume">
-          <h1 id="roboHeader">Work Experience / Education</h1>
+          <h1 className="mainPageh1" id="roboHeader">
+            Work Experience / Education
+          </h1>
           <div id="resumeSegment">
             <h2>
               <b>Junior React Developer</b>
@@ -228,7 +232,11 @@ function Resume() {
             </p>
           </div>
           {/* Education segment */}
-          <h1 id="roboHeader" style={{ marginTop: "4rem" }}>
+          <h1
+            className="mainPageh1"
+            id="roboHeader"
+            style={{ marginTop: "4rem" }}
+          >
             Education
           </h1>
           <div id="resumeSegment">
