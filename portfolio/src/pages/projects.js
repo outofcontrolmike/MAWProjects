@@ -189,6 +189,17 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/randomDogs/Dogs.js",
     },
+    {
+      img: "img/catsProject.PNG",
+      href: "/cats",
+      name: "Random Cat Facts",
+      meta: "React, Fomantic",
+      desc: "Do you love learning about random cat facts and also having the option to view breed information about cats?  Try this project out!",
+      created: "Created: February 3rd 2022",
+      lastUpdated: "Last Updated: N/A",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/catFacts/RandomCats.js",
+    },
   ];
 
   //Create Cards
@@ -266,7 +277,7 @@ function Projects(props) {
 
       <div className="ui very padded relaxed grid" id="projects">
         <div
-          className="ui cards centered four horizontal"
+          className="ui cards centered seven horizontal"
           id="list"
           style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>
