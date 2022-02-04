@@ -115,9 +115,6 @@ option {
   font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
 }
-hr:hover {
-  border-color: gold;
-}
 
 .slide > img {
   height: 400px;
@@ -132,8 +129,7 @@ hr:hover {
   padding: 1rem;
 }
 
-#resumeSegment > h2,
-h3 {
+#resumeSegment > h2 {
   color: orange;
   font-family: "Roboto Mono", monospace;
 }
