@@ -18,9 +18,7 @@ Ten random jokes based on category - https://nova-joke-api.netlify.app/.netlify/
 export default function Jokes() {
   return (
     <div style={{ backgroundColor: "white", color: "black" }}>
-      <div className="ui container fluid stackable grid container">
-        <div className="ui menu four item stackable grid"></div>
-      </div>
+      <div className="ui container fluid stackable container">Testing</div>
     </div>
   );
 }
