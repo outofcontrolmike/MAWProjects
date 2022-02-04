@@ -1,3 +1,4 @@
+/* Global Cat styles */
 #catApp {
   background-color: black;
   height: 100vh;
@@ -7,10 +8,36 @@
   height: 100vh;
 }
 
+#breedBtn,
+#catFactButton,
+#catFactReset,
+#catsListButton {
+  border: none;
+  background-color: black;
+}
+
+#breedSegment,
+#catFactsList {
+  color: white;
+  background-color: black;
+  border-color: whitesmoke;
+}
+
+.cat {
+  width: 100%;
+}
+
+.cat:hover {
+  transform: rotate(-10deg);
+  text-shadow: 1px 1px beige;
+}
+
+/* Cat Nav Menu */
 #catNavigationMenu {
   border-bottom-color: whitesmoke;
 }
 
+/* Random Fact page */
 #randomCatFactContainer {
   position: absolute;
   left: 50%;
@@ -23,31 +50,7 @@
 
 #catInputMenu {
   margin-top: 5rem;
-
   text-align: center;
-}
-
-#catFactsList,
-#breedList {
-  color: whitesmoke;
-  padding-right: 10rem;
-  padding-left: 10rem;
-  font-size: 1.5rem;
-  height: 500px;
-  overflow-y: scroll;
-}
-
-#pageNum {
-  color: beige;
-  text-shadow: 1px 1px whitesmoke;
-}
-
-#breedSegment {
-  font-size: 1.5rem;
-}
-
-#catsListButton {
-  margin-top: 2rem;
 }
 
 #catInput {
@@ -60,26 +63,65 @@
   color: beige;
 }
 
-#breedBtn,
-#catFactButton,
-#catFactReset,
-#catsListButton {
-  border: none;
-  background-color: black;
-}
-
 #catFactReset {
   position: fixed;
   top: 60%;
+}
+
+/* Breeds Page */
+
+#breedList {
+  color: whitesmoke;
+  padding-right: 10rem;
+  padding-left: 10rem;
+  font-size: 1.5rem;
+  height: 425px;
+  overflow-y: scroll;
+}
+
+#breedSegment {
+  font-size: 1.5rem;
+}
+
+#breedSegment:hover {
+  border-width: 4px;
+  border-color: whitesmoke;
+}
+
+#breedSegment:hover > hr {
+  border-width: 2px;
+  border-color: whitesmoke;
+}
+
+#breedSegment > h1 {
+  color: thistle;
+  text-shadow: thistle 1px 1px;
 }
 
 #catSpan {
   color: thistle;
   text-shadow: thistle 1px 1px;
 }
-.cat {
-  width: 100%;
+/* Random Facts Page */
+
+#catFactsList {
+  color: whitesmoke;
+  padding-right: 10rem;
+  padding-left: 10rem;
+  font-size: 1.5rem;
+  height: 1000px;
+  overflow-y: scroll;
 }
+#catsListButton {
+  margin-top: 2rem;
+}
+
+#pageNum {
+  color: beige;
+  text-shadow: 1px 1px whitesmoke;
+}
+
+/* Cat Footer */
 
 #catFooter {
   position: fixed;
@@ -109,44 +151,10 @@
   border-right: beige 4px solid;
 }
 
-#breedSegment,
-#catFactsList {
-  color: white;
-  background-color: black;
-  border-color: whitesmoke;
-}
-
-#breedSegment:hover {
-  border-width: 4px;
-  border-color: whitesmoke;
-}
-
-#breedSegment:hover > hr {
-  border-width: 2px;
-  border-color: whitesmoke;
-}
-
-#breedSegment > h1 {
-  color: thistle;
-  text-shadow: thistle 1px 1px;
-}
-
-#catFactsList > p:hover {
-  text-shadow: 1px 1px beige;
-}
-
-.cat:hover {
-  transform: rotate(-10deg);
-  text-shadow: 1px 1px beige;
-}
 /* Media Rules */
 
-@media only screen and (max-width: 600px) {
-  #randomCatFactContainer {
-    position: absolute;
-    font-size: 0.5rem;
-  }
-}
+/* Width */
+
 @media only screen and (max-width: 1000px) {
   #catNavigationMenu > a {
     font-size: 2px;
@@ -200,6 +208,27 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #randomCatFactContainer {
+    position: absolute;
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #randomCatFactContainer {
+    width: 100%;
+    font-size: 18px;
+    padding-left: 40px;
+    padding-top: 40px;
+    margin: 20px;
+    height: 400px;
+    overflow-y: scroll;
+  }
+}
+
+/* Height */
+
 @media only screen and (max-height: 900px) {
   #catFactsList {
     padding: unset;
@@ -244,17 +273,5 @@
   }
   #catFooter {
     padding: unset;
-  }
-
-  @media only screen and (max-width: 300px) {
-    #randomCatFactContainer {
-      width: 100%;
-      font-size: 18px;
-      padding-left: 40px;
-      padding-top: 40px;
-      margin: 20px;
-      height: 400px;
-      overflow-y: scroll;
-    }
   }
 }

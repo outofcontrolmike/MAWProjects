@@ -3,13 +3,16 @@ import CatFooter from "./CatFooter";
 import CatNavigation from "./CatNavigation";
 
 //Breeds list component
-export default function BreedsList(props) {
+export default function BreedsList() {
   //initial call for loadBreeds;
   setTimeout(() => {
     loadBreeds();
   }, 10);
 
+  //page count
   let page = 1;
+
+  //Hit api for breeds
   function loadBreeds() {
     if (page <= 4) {
       let url = "https://catfact.ninja/breeds?page=" + page;
@@ -19,9 +22,7 @@ export default function BreedsList(props) {
       fetch(url)
         .then((response) => response.json())
         .then((catBreeds) => {
-          console.log("Breeds", catBreeds);
-          catBreeds.data.map(createList);
-          //figure out how to add page number
+          catBreeds.data.map(createCatCard);
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -32,7 +33,8 @@ export default function BreedsList(props) {
     }
   }
 
-  function createList(cat) {
+  //Create
+  function createCatCard(cat) {
     let list = document.createElement("div");
     list.classList = "ui container segment stackable very raised padded";
     list.id = "breedSegment";
@@ -66,9 +68,9 @@ export default function BreedsList(props) {
     document.getElementById("breedList").append(list);
   }
 
-  function backToTop() {
-    document.getElementById("breedList").scrollTop = 0;
-  }
+  // function backToTop() {
+  //   document.getElementById("breedList").scrollTop = 0;
+  // }
 
   return (
     <div className="ui container fluid center aligned padded relaxed">

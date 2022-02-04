@@ -63,10 +63,10 @@ export default function CatsList(props) {
         data-inverted=""
         data-variation="large"
         data-position="left center"
-        className="ui button small"
+        className="ui button large"
         onClick={loadFacts}
       >
-        <i className="cat icon massive" id="listCatIcon"></i>
+        <i className="cat icon huge" id="listCatIcon"></i>
       </button>
       <CatFooter />
     </div>

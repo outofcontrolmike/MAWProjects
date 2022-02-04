@@ -2,7 +2,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 //Navigation Menu
-export default function CatNavigation(props) {
+export default function CatNavigation() {
+  //Changes non-selected main menu items
+  function selectAllItems(e) {
+    document.querySelectorAll(".catItemSelected").forEach((item) => {
+      item.style.color = "thistle";
+    });
+  }
+
+  selectAllItems();
+
   return (
     <div
       className="ui four item secondary pointing menu center aligned stackable"
