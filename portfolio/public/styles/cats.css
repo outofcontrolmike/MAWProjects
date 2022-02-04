@@ -23,7 +23,7 @@
 
 #catInputMenu {
   margin-top: 5rem;
-  width: fit-content;
+
   text-align: center;
 }
 
@@ -222,6 +222,5 @@
     margin: 20px;
     height: 400px;
     overflow-y: scroll;
-    overflow-x: hidden;
   }
 }
