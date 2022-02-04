@@ -17,7 +17,7 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 30px;
+  font-size: 40px;
   overflow-y: scroll;
 }
 
@@ -140,9 +140,16 @@
   text-shadow: 1px 1px beige;
 }
 /* Media Rules */
+
+@media only screen and (max-width: 600px) {
+  #randomCatFactContainer {
+    position: absolute;
+    font-size: 0.5rem;
+  }
+}
 @media only screen and (max-width: 1000px) {
   #catNavigationMenu > a {
-    font-size: 1rem;
+    font-size: 2px;
   }
   #randomCatFactContainer {
     width: 100%;
@@ -203,5 +210,18 @@
     font-size: 2rem;
     margin-right: 4rem;
     padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #randomCatFactContainer {
+    width: 100%;
+    font-size: 18px;
+    padding-left: 40px;
+    padding-top: 40px;
+    margin: 20px;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
