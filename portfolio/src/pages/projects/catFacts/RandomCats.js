@@ -55,7 +55,7 @@ export default function RandomCats(props) {
           </span>
         </div>
         <div class="ui action input" id="catInputMenu">
-          <input id="catInput" maxlength="2" type="text" />
+          <input id="catInput" className="ui" maxlength="2" type="text" />
           <button
             onClick={setTimer}
             id="catFactButton"

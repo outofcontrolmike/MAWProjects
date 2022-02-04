@@ -166,7 +166,7 @@
 
   #catFactReset,
   #catsListButton {
-    border-top: grey solid 1px;
+    border-top: grey solid 2px;
   }
 
   #catFactsList {
@@ -188,7 +188,14 @@
   }
 }
 
-@media only screen and (max-height: 680px) {
+@media only screen and (max-height: 900px) {
+  #catFactsList {
+    padding: unset;
+    padding: 2rem;
+    height: 300px;
+  }
+}
+@media only screen and (max-height: 740px) {
   #randomCatFactContainer {
     width: 100%;
     font-size: 20px;
@@ -207,7 +214,7 @@
   }
 
   #listCatIcon {
-    font-size: 2rem;
+    font-size: 5rem;
     margin-right: 4rem;
     padding-bottom: 4rem;
   }

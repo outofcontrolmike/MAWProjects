@@ -9,7 +9,7 @@ export default function CatFooter() {
     >
       <div className="ui column center aligned" id="catCreds">
         <a target="_blank" href="https://catfact.ninja">
-          Cat data set provided by - cats
+          Cat data set provided by - Cat Fact Ninja
         </a>
       </div>
       <div className="ui column center aligned" id="catText">
