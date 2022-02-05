@@ -30,6 +30,10 @@ option {
   font-family: "Roboto Mono", monospace;
   color: gold;
 }
+#goldText:hover {
+  color: orange;
+}
+
 .portfolioSelected {
   border-bottom: orange 2px solid;
 }
