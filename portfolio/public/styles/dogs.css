@@ -3,31 +3,31 @@
 /* Gold blue and green gradient */
 #dogsProject {
   height: fit-content;
-    background: #a8ff78; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #78ffd6,
-      #a8ff78
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #78ffd6,
-      #a8ff78
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-  
-  #dogHeader {
-    background-color: black;
-    color: #78ffd6;
-    font-family: "Crafty Girls", cursive;
-    margin-bottom: unset;
-    padding: 1.5rem;
-    font-size: 4.5rem;
-  }
-  
-  #dogHeader:hover {
-    color: #a8ff78;
-  }
+  background: #a8ff78; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#dogHeader {
+  background-color: black;
+  color: #78ffd6;
+  font-family: "Crafty Girls", cursive;
+  margin-bottom: unset;
+  padding: 1.5rem;
+  font-size: 4.5rem;
+}
+
+#dogHeader:hover {
+  color: #a8ff78;
+}
 
 #dogBtnContainer {
   width: 600px;
@@ -57,8 +57,6 @@
   color: #78ffd6;
 }
 
-
-
 #dogFooter {
   border-top: black solid 2px;
   margin-top: 10rem;
@@ -75,6 +73,7 @@
 #dogText > a,
 #dogCreds > a {
   color: #78ffd6;
+  font-size: 1.5rem;
 }
 
 #dogCreds > a:hover,
@@ -84,9 +83,8 @@
 
 /* Media Rules */
 @media only screen and (max-width: 1200px) {
-
   #dogsProject {
-    height:unset;
+    height: unset;
   }
   #dogCreds {
     border-right: unset;
@@ -99,7 +97,7 @@
 
   #dogBtnContainer {
     height: 50px;
-    margin:unset;
+    margin: unset;
   }
 
   #dogImage {
@@ -109,6 +107,4 @@
   #dogBtnContainer {
     margin: unset;
   }
-
 }
-
