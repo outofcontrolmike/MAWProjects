@@ -26,6 +26,10 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+#reMenu {
+  font-size: 22px;
+}
+
 /* Controls portrait size and framing */
 #resPortrait {
   max-height: 675px;
