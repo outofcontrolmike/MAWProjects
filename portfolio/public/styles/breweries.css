@@ -90,11 +90,8 @@
     position: relative;
     margin-top: 30%;
     text-align: center;
-  }
-
-  #brewFooter > p {
+    font-size: 1.5rem;
     font-family: "forum", cursive;
-    font-size: 1.4 rem;
   }
   
   /* beer icon */

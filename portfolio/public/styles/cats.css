@@ -44,8 +44,12 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 36px;
   overflow-y: scroll;
+}
+
+#randomCatFactContainer:hover {
+  text-shadow: 1px 1px whitesmoke;
 }
 
 #catInputMenu {
@@ -111,6 +115,10 @@
   font-size: 1.5rem;
   height: 500px;
   overflow-y: scroll;
+}
+
+#catFactsList > p:hover {
+  text-shadow: 1px 1px whitesmoke;
 }
 #catsListButton {
   margin-top: 2rem;
