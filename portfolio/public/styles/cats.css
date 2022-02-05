@@ -109,7 +109,7 @@
   padding-right: 10rem;
   padding-left: 10rem;
   font-size: 1.5rem;
-  height: 1000px;
+  height: 500px;
   overflow-y: scroll;
 }
 #catsListButton {
@@ -155,7 +155,7 @@
 
 /* Width */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   #catNavigationMenu > a {
     font-size: 2px;
   }
