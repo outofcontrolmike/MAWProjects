@@ -1,4 +1,6 @@
 import React from "react";
+import JokesMenu from "../../../components/jokes/JokesMenu";
+import JokesCard from "../../../components/jokes/JokesCard";
 //nova-joke-api.netlify.app/.netlify/functions/index/api/random
 
 /*  ALL ENDPOINTS
@@ -14,11 +16,20 @@ Ten random jokes based on category - https://nova-joke-api.netlify.app/.netlify/
 
 //Status of API (like how many jokes are in the dataset) - > https://nova-joke-api.netlify.app/.netlify/functions/index/status
 */
+
 //Programming Related Jokes
-export default function Jokes() {
+export default function Jokes(props) {
   return (
     <div style={{ backgroundColor: "white", color: "black" }}>
-      <div className="ui container fluid stackable container">Testing</div>
+      <div className="ui container fluid stackable container">
+        <JokesMenu />
+        <div
+          className="ui container fluid"
+          style={{ height: "100vh", backgroundColor: "" }}
+        >
+          <JokesCard data={props} />
+        </div>
+      </div>
     </div>
   );
 }
