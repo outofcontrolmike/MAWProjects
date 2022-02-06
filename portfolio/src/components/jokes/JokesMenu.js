@@ -1,17 +1,17 @@
 import React from "react";
-
+import { useState } from "react";
 //Jokes Menu
-export default function jokesMenu(props) {
-  //This needs to check some shit - what Type of joke was selected, and quantity
-  
-  let jokeType = ""
-  let jokeQuantity = ""
+export default function JokesMenu(props) {
 
+  const [jokeType, setType] = useState("/general");
+  const [jokeQuantity, setJokeQuantity] = useState("/random");
+
+  
   function handleClick() {
 
-    setQuantity(jokeQuantity);
-    setJokeType(jokeType);
-  setTimeout(fetchJoke(jokeQuantity, jokeType), 4000)
+    setQuantity();
+    setJokeType();
+    fetchJoke();
   }
 
   function setJokeType(jokeType) {
@@ -23,25 +23,24 @@ export default function jokesMenu(props) {
     let jokeProgramming = document.getElementById('jokeProgramming');
 
     if(jokeGeneral.checked) {
-      jokeType = "/general"
+      setType("/general")
     }
     else if(jokeKnock.checked) {
-      jokeType = "/knock-knock"
+      setType("/knock-knock")
     }
     else if(jokeProgramming.checked) {
-      jokeType = "/programming"
+      setType("/programming")
     }
     else {
-      jokeType = ""
+      setType("")
     }
-
-    return jokeType;
+    
   }
 
   function setQuantity(jokeQuantity) {
     //Quantity
     let jokeQuantityOne = document.getElementById('jokeQuantityOne');
-    jokeQuantityOne.checked ? jokeQuantity = "/random" : jokeQuantity = "/ten";
+    jokeQuantityOne.checked ? setJokeQuantity("/random") : setJokeQuantity("/ten");
   }
 
   function fetchJoke() {
@@ -51,7 +50,7 @@ export default function jokesMenu(props) {
     .then((response) => response.json())
     .then((joke) => {
       console.log(joke);
-      displayStatus(joke.message);
+      // displayStatus(joke.message);
     })
     .catch((error) => {
       console.error("Error:", error);
