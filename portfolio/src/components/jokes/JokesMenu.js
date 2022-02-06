@@ -3,11 +3,60 @@ import React from "react";
 //Jokes Menu
 export default function jokesMenu(props) {
   //This needs to check some shit - what Type of joke was selected, and quantity
-  function handleClick() {}
+  
+  let jokeType = ""
+  let jokeQuantity = ""
 
-  function fetchJoke(type, quantity) {
-    let url = "";
+  function handleClick() {
+
+    setQuantity(jokeQuantity);
+    setJokeType(jokeType);
+  setTimeout(fetchJoke(jokeQuantity, jokeType), 4000)
   }
+
+  function setJokeType(jokeType) {
+
+    //JokeType  
+    // let jokeAny = document.getElementById('jokeAny');
+    let jokeGeneral = document.getElementById('jokeGeneral');
+    let jokeKnock = document.getElementById('jokeKnock');
+    let jokeProgramming = document.getElementById('jokeProgramming');
+
+    if(jokeGeneral.checked) {
+      jokeType = "/general"
+    }
+    else if(jokeKnock.checked) {
+      jokeType = "/knock-knock"
+    }
+    else if(jokeProgramming.checked) {
+      jokeType = "/programming"
+    }
+    else {
+      jokeType = ""
+    }
+
+    return jokeType;
+  }
+
+  function setQuantity(jokeQuantity) {
+    //Quantity
+    let jokeQuantityOne = document.getElementById('jokeQuantityOne');
+    jokeQuantityOne.checked ? jokeQuantity = "/random" : jokeQuantity = "/ten";
+  }
+
+  function fetchJoke() {
+    let url = "https://nova-joke-api.netlify.app/.netlify/functions/index/api" + jokeType + jokeQuantity;
+    console.log(url);
+    fetch(url)
+    .then((response) => response.json())
+    .then((joke) => {
+      console.log(joke);
+      displayStatus(joke.message);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
 
   //create card based on data
   function createCard(data, quantity) {}
@@ -41,30 +90,30 @@ export default function jokesMenu(props) {
       </div>
       <div className="item">
         {" "}
-        <div className="ui form" style={{ fontSize: "24px" }}>
+        <div className="ui form" id="jokeType" style={{ fontSize: "24px" }}>
           <div className="inline fields">
             <label>Type of Joke?</label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" checked="checked" />
+                <input type="radio" name="frequency" id="jokeAny" checked="checked" />
                 <label>Any</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" id="jokeGeneral" />
                 <label>General</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" id="jokeKnock" />
                 <label>Knock Knock</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" />
+                <input type="radio" name="frequency" id="jokeProgramming" />
                 <label>Programming</label>
               </div>
             </div>
@@ -72,18 +121,18 @@ export default function jokesMenu(props) {
         </div>
       </div>
       <div className="item">
-        <div className="ui form" style={{ fontSize: "24px" }}>
+        <div className="ui form" id="jokeQuantity" style={{ fontSize: "24px" }}>
           <div className="inline fields">
             <label>Quantity</label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="quantity" checked="checked" />
+                <input type="radio" name="quantity" id="jokeQuantityOne" checked="checked" />
                 <label>One</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="quantity" />
+                <input type="radio" name="quantity" id="jokeQuantityTen" />
                 <label>Ten</label>
               </div>
             </div>
