@@ -22,7 +22,7 @@ export default function Jokes(props) {
   return (
     <div style={{ backgroundColor: "white", color: "black" }}>
       <div className="ui container fluid stackable container">
-        <JokesMenu />
+        <JokesMenu data={props} />
         <div
           className="ui container fluid"
           style={{ height: "100vh", backgroundColor: "" }}

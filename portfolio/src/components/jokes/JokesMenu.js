@@ -1,67 +1,8 @@
 import React from "react";
-import { useState } from "react";
 //Jokes Menu
 export default function JokesMenu(props) {
 
-  const [jokeType, setType] = useState("/general");
-  const [jokeQuantity, setJokeQuantity] = useState("/random");
 
-  
-  function handleClick() {
-
-    setQuantity();
-    setJokeType();
-    fetchJoke();
-  }
-
-  function setJokeType(jokeType) {
-
-    //JokeType  
-    // let jokeAny = document.getElementById('jokeAny');
-    let jokeGeneral = document.getElementById('jokeGeneral');
-    let jokeKnock = document.getElementById('jokeKnock');
-    let jokeProgramming = document.getElementById('jokeProgramming');
-
-    if(jokeGeneral.checked) {
-      setType("/general")
-    }
-    else if(jokeKnock.checked) {
-      setType("/knock-knock")
-    }
-    else if(jokeProgramming.checked) {
-      setType("/programming")
-    }
-    else {
-      setType("")
-    }
-    
-  }
-
-  function setQuantity(jokeQuantity) {
-    //Quantity
-    let jokeQuantityOne = document.getElementById('jokeQuantityOne');
-    jokeQuantityOne.checked ? setJokeQuantity("/random") : setJokeQuantity("/ten");
-  }
-
-  function fetchJoke() {
-    let url = "https://nova-joke-api.netlify.app/.netlify/functions/index/api" + jokeType + jokeQuantity;
-    console.log(url);
-    fetch(url)
-    .then((response) => response.json())
-    .then((joke) => {
-      console.log(joke);
-      // displayStatus(joke.message);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-}
-
-  //create card based on data
-  function createCard(data, quantity) {}
-
-  //inserts new info into card
-  function showPunchLine(joke) {}
 
   //Grabs API Status
   function requestStatus() {
@@ -138,13 +79,6 @@ export default function JokesMenu(props) {
           </div>
         </div>
       </div>
-      <button
-        className="item 
-      ui button huge basic red"
-        onClick={handleClick}
-      >
-        Go
-      </button>
       <button
         className="item 
       ui button huge basic blue"
