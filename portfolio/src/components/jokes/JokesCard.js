@@ -15,10 +15,9 @@ export default function JokesCard(props) {
     fetchJoke();
   }
 
-  function setJokeType(jokeType) {
+  function setJokeType() {
 
     //JokeType  
-    // let jokeAny = document.getElementById('jokeAny');
     let jokeGeneral = document.getElementById('jokeGeneral');
     let jokeKnock = document.getElementById('jokeKnock');
     let jokeProgramming = document.getElementById('jokeProgramming');
@@ -38,7 +37,7 @@ export default function JokesCard(props) {
     
   }
 
-  function setQuantity(jokeQuantity) {
+  function setQuantity() {
     //Quantity
     let jokeQuantityOne = document.getElementById('jokeQuantityOne');
     jokeQuantityOne.checked ? setJokeQuantity("/random") : setJokeQuantity("/ten");
@@ -67,7 +66,7 @@ export default function JokesCard(props) {
       <h1 className="ui text">
         I'm not good at coming up with jokes, but this API is.
       </h1>
-      <p> - Joke Type is random unless filtered -</p>
+      <p> Joke Type: {jokeType ? jokeType : "Any"}</p>
       <button onClick={handleClick} className="ui button massive blue">Request Joke</button>
     </div>
   );
