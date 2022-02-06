@@ -47,9 +47,11 @@ export default function JokesCard(props) {
     let url = "https://nova-joke-api.netlify.app/.netlify/functions/index/api" + jokeType + jokeQuantity;
     fetch(url)
     .then((response) => response.json())
-    .then((joke) => {
-      console.log(joke);
-      // displayStatus(joke.message);
+    .then((jokeData) => {
+      console.log(jokeData);
+      jokeData.map((joke) => {
+        console.log(joke);
+      })
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -61,6 +63,7 @@ export default function JokesCard(props) {
 
   //inserts new info into card
   function showPunchLine(joke) {}
+
   return (
     <div className="ui container segment center aligned" id="jokesContainer">
       <h1 className="ui text">

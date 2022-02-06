@@ -1,6 +1,7 @@
 import React from "react";
 import JokesMenu from "../../../components/jokes/JokesMenu";
 import JokesCard from "../../../components/jokes/JokesCard";
+import JokesFooter from "../../../components/jokes/JokesFooter";
 //nova-joke-api.netlify.app/.netlify/functions/index/api/random
 
 /*  ALL ENDPOINTS
@@ -29,6 +30,7 @@ export default function Jokes(props) {
         >
           <JokesCard data={props} />
         </div>
+        <JokesFooter />
       </div>
     </div>
   );

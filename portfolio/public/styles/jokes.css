@@ -1,1 +1,20 @@
 /* Jokes Stylesheet */
+/* jokes Footer */
+
+#jokesFooter {
+    position: fixed;
+    bottom: 0px;
+    background-color: whitesmoke;
+    border-top: solid black 4px;
+    padding: 2rem;
+    width: 105%;
+  }
+
+  #jokesFooter > .column > a {
+      color:black;
+  }
+
+  #jokesFooter > .column > a:hover {
+    color: red;
+    text-shadow: 1px 1px red;
+  }
