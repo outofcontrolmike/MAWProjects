@@ -3,17 +3,16 @@ import { useState } from "react";
 
 //Sets up and displays jokes
 export default function JokesCard(props) {
-  const [jokeType, setType] = useState("/general");
-  const [jokeQuantity, setJokeQuantity] = useState("/random");
+  const [jokeType, setJokeCategory] = useState("programming");
+  const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("ID of Joke")
   const [jokeText, setJokeText] = useState("I'm not good at coming up with jokes, but this API is.");
   const [punchLineText, setPunchLineText] = useState("blah for now");
   //Create some refs...
   
   function handleClick() {
-
-    setQuantity();
     setJokeType();
+    setQuantity();
     fetchJoke();
   }
 
@@ -25,31 +24,37 @@ export default function JokesCard(props) {
     let jokeProgramming = document.getElementById('jokeProgramming');
 
     if(jokeGeneral.checked) {
-      setType("/general")
+      setJokeCategory("general")
     }
-    else if(jokeKnock.checked) {
-      setType("/knock-knock")
+    if(jokeKnock.checked) {
+      setJokeCategory("knock-knock")
     }
-    else if(jokeProgramming.checked) {
-      setType("/programming")
+    if(jokeProgramming.checked) {
+      setJokeCategory("programming")
     }
-    
+
+    console.log(jokeType, "jokeType")
+    return;
   }
 
   function setQuantity() {
     //Quantity
     let jokeQuantityOne = document.getElementById('jokeQuantityOne');
-    jokeQuantityOne.checked ? setJokeQuantity("/random") : setJokeQuantity("/ten");
+    jokeQuantityOne.checked ? setJokeQuantity("random") : setJokeQuantity("ten");
+    console.log(jokeQuantity, "jokeQuantity");
   }
 
   function fetchJoke() {
-    let url = "https://nova-joke-api.netlify.app/.netlify/functions/index/api" + jokeType + jokeQuantity;
+    console.log(jokeType,jokeQuantity);
+    let url = "https://nova-joke-api.netlify.app/.netlify/functions/index/api" + "/" + jokeType + "/" + jokeQuantity;
     fetch(url)
     .then((response) => response.json())
     .then((jokeData) => {
       console.log(jokeData);
-      jokeData.forEach(element => createCard(element))
-    })
+      jokeData.map((joke) => {
+        createCard(joke);
+      })
+  })
     .catch((error) => {
       console.error("Error:", error);
     });
@@ -57,11 +62,10 @@ export default function JokesCard(props) {
 
   //create card based on data
   function createCard(joke) {
-    console.log(joke);
     setJokeText(joke.setup); 
     // setJokeQuantity(joke.quantity);
     setJokeId(joke.id);
-    setJokeType(joke.type);
+    setJokeCategory(joke.type);
   }
 
   //inserts new info into card
@@ -72,7 +76,7 @@ export default function JokesCard(props) {
       <h1 className="ui text">
         {jokeText}
       </h1>
-      <p> Joke Type: {jokeType ? jokeType : "Any"}</p>
+      <p> {jokeType}</p>
       <button onClick={handleClick} className="ui button massive blue">Request Joke</button>
     </div>
   );
