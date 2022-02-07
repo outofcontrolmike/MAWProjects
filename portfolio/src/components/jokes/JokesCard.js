@@ -5,7 +5,9 @@ import { useState } from "react";
 export default function JokesCard(props) {
   const [jokeType, setType] = useState("/general");
   const [jokeQuantity, setJokeQuantity] = useState("/random");
-
+  const [jokeId, setJokeId] = useState("ID of Joke")
+  const [jokeText, setJokeText] = useState("I'm not good at coming up with jokes, but this API is.");
+  const [punchLineText, setPunchLineText] = useState("blah for now");
   //Create some refs...
   
   function handleClick() {
@@ -31,9 +33,6 @@ export default function JokesCard(props) {
     else if(jokeProgramming.checked) {
       setType("/programming")
     }
-    else {
-      setType("")
-    }
     
   }
 
@@ -49,9 +48,7 @@ export default function JokesCard(props) {
     .then((response) => response.json())
     .then((jokeData) => {
       console.log(jokeData);
-      jokeData.map((joke) => {
-        console.log(joke);
-      })
+      jokeData.forEach(element => createCard(element))
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -59,7 +56,13 @@ export default function JokesCard(props) {
 }
 
   //create card based on data
-  function createCard(data, quantity) {}
+  function createCard(joke) {
+    console.log(joke);
+    setJokeText(joke.setup); 
+    // setJokeQuantity(joke.quantity);
+    setJokeId(joke.id);
+    setJokeType(joke.type);
+  }
 
   //inserts new info into card
   function showPunchLine(joke) {}
@@ -67,7 +70,7 @@ export default function JokesCard(props) {
   return (
     <div className="ui container segment center aligned" id="jokesContainer">
       <h1 className="ui text">
-        I'm not good at coming up with jokes, but this API is.
+        {jokeText}
       </h1>
       <p> Joke Type: {jokeType ? jokeType : "Any"}</p>
       <button onClick={handleClick} className="ui button massive blue">Request Joke</button>
