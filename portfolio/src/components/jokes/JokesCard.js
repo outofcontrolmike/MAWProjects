@@ -82,7 +82,6 @@ export default function JokesCard(props) {
     punchLineButton.className = "ui button blue massive";
     punchLineButton.id = "punchLineButton";
     punchLineButton.addEventListener("click", showPunchLine);
-    document.getElementById("jokesContainer").append(punchLineButton);
     punchLineButton.innerHTML = "Punch Line";
     console.log("joke", joke);
     jokeTextValue = joke.punchline;
@@ -97,20 +96,26 @@ export default function JokesCard(props) {
   function showPunchLine() {
     let punchLineButton = document.getElementById("punchLineButton");
     punchLineButton.innerHTML = "Request new joke";
+    punchLineButton.addEventListener("click", handleClick);
+    punchLineButton.addEventListener("click", handleClick);
     setJokeText(jokeTextValue);
   }
+
+  const jokeButton = (
+    <button
+      id="jokeButton"
+      onClick={handleClick}
+      className="ui button massive blue"
+    >
+      {buttonText}
+    </button>
+  );
 
   return (
     <div className="ui container segment center aligned" id="jokesContainer">
       <h1 className="ui text">{jokeText}</h1>
       <p> {jokeType}</p>
-      <button
-        id="jokeButton"
-        onClick={handleClick}
-        className="ui button massive blue"
-      >
-        {buttonText}
-      </button>
+      {jokeButton}
     </div>
   );
 }
