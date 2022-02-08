@@ -95,8 +95,9 @@ export default function JokesCard(props) {
 
   //inserts new info into card
   function showPunchLine() {
+    let punchLineButton = document.getElementById("punchLineButton");
+    punchLineButton.innerHTML = "Request new joke";
     setJokeText(jokeTextValue);
-    setButtonText("Fetch New Joke");
   }
 
   return (
