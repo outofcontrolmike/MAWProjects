@@ -3,17 +3,19 @@ import { useState } from "react";
 
 //Sets up and displays jokes
 export default function JokesCard(props) {
-  const [jokeType, setJokeCategory] = useState(null);
+  const [jokeType, setJokeCategory] = useState("general");
   const [jokeQuantity, setJokeQuantity] = useState("random");
-  const [jokeId, setJokeId] = useState("ID of Joke")
-  const [jokeText, setJokeText] = useState("I'm not good at coming up with jokes, but this API is.");
-  const [punchLineText, setPunchLineText] = useState("blah for now");
+  const [jokeId, setJokeId] = useState("ID of Joke");
+  const [jokeText, setJokeText] = useState(
+    "I'm not good at coming up with jokes, but this API is."
+  );
 
+  const [punchLineText, setPunchLineText] = useState("blah for now");
   const [buttonText, setButtonText] = useState("Fetch Joke");
-  //Create some refs...
-  
-let jokejoke = "";
-let quantity = "";
+  let jokeTextValue = "";
+
+  let typeParam = "";
+  let quantityParam = "";
 
   function handleClick() {
     setJokeType();
@@ -22,72 +24,92 @@ let quantity = "";
   }
 
   function setJokeType() {
+    //JokeType
+    let jokeGeneral = document.getElementById("jokeGeneral");
+    let jokeKnock = document.getElementById("jokeKnock");
+    let jokeProgramming = document.getElementById("jokeProgramming");
 
-    //JokeType  
-    let jokeGeneral = document.getElementById('jokeGeneral');
-    let jokeKnock = document.getElementById('jokeKnock');
-    let jokeProgramming = document.getElementById('jokeProgramming');
-
-    if(jokeGeneral.checked) {
-      setJokeCategory("general")
-      jokejoke = "general"
+    if (jokeGeneral.checked) {
+      setJokeCategory("general");
+      typeParam = "general";
     }
-    if(jokeKnock.checked) {
-      setJokeCategory("knock-knock")
-      jokejoke = "knock-knock";
+    if (jokeKnock.checked) {
+      setJokeCategory("knock-knock");
+      typeParam = "knock-knock";
     }
-    if(jokeProgramming.checked) {
-      setJokeCategory("programming")
-      jokejoke = "programming";
+    if (jokeProgramming.checked) {
+      setJokeCategory("programming");
+      typeParam = "programming";
     }
-    
+    return;
   }
 
   function setQuantity() {
     //Quantity
-    let jokeQuantityOne = document.getElementById('jokeQuantityOne');
-    jokeQuantityOne.checked ? setJokeQuantity("random") : setJokeQuantity("ten");
+    let jokeQuantityOne = document.getElementById("jokeQuantityOne");
+    jokeQuantityOne.checked
+      ? setJokeQuantity("random")
+      : setJokeQuantity("ten");
   }
 
   function fetchJoke() {
-    let url = "https://nova-joke-api.netlify.app/.netlify/functions/index/api" + "/" + jokejoke  + "/" + jokeQuantity;
+    console.log(jokeType, jokeQuantity);
+    let url =
+      "https://nova-joke-api.netlify.app/.netlify/functions/index/api" +
+      "/" +
+      typeParam +
+      "/" +
+      jokeQuantity;
     fetch(url)
-    .then((response) => response.json())
-    .then((jokeData) => {
-      console.log(jokeData);
-      createCard(jokeData);
-      // })
-  })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-}
+      .then((response) => response.json())
+      .then((jokeData) => {
+        console.log(jokeData);
+        jokeData.map((joke) => {
+          createCard(joke);
+        });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 
   //create card based on data
   function createCard(joke) {
-    document.getElementById('jokeText').innerHTML = joke[0].setup;
-    setJokeId(joke.id);
-    setButtonText("Retrieve Punchlne")
-    let jokeButton = document.getElementById('jokeButton');
-    jokeButton.removeEventListener("onClick", handleClick);
-    showPunchLine(joke);
+    let jokeButton = document.getElementById("jokeButton");
+    setCardState1(joke);
+    jokeButton.remove();
+    let punchLineButton = document.createElement("button");
+    punchLineButton.className = "ui button blue massive";
+    punchLineButton.id = "punchLineButton";
+    punchLineButton.addEventListener("click", showPunchLine);
+    document.getElementById("jokesContainer").append(punchLineButton);
+    punchLineButton.innerHTML = "Punch Line";
+    console.log("joke", joke);
+    jokeTextValue = joke.punchline;
   }
 
-
+  function setCardState1(joke) {
+    setJokeText(joke.setup);
+    setJokeId(joke.id);
+  }
 
   //inserts new info into card
-  function showPunchLine(joke) {
-    console.log("punchling joke", joke[0].punchline);
-    // console.log(jokeButton, "jokeButton after removing eventListenr")
-
+  function showPunchLine() {
+    setJokeText(jokeTextValue);
+    setButtonText("Fetch New Joke");
   }
+
   return (
     <div className="ui container segment center aligned" id="jokesContainer">
-      <h1 className="ui text" id="jokeText">
-        {jokeText}
-      </h1>
+      <h1 className="ui text">{jokeText}</h1>
       <p> {jokeType}</p>
-      <button id="jokeButton" onClick={handleClick} className="ui button massive blue">{buttonText}</button>
+      <button
+        id="jokeButton"
+        onClick={handleClick}
+        className="ui button massive blue"
+      >
+        {buttonText}
+      </button>
     </div>
   );
 }
