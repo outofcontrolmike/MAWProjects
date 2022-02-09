@@ -1,10 +1,8 @@
 import React from "react";
 //Jokes Menu
-export default function JokesMenu(props) {
-
-
-
+const JokesMenu = (props) => {
   //Grabs API Status
+  console.log(props, "props joke menu");
   function requestStatus() {
     let url =
       "https://nova-joke-api.netlify.app/.netlify/functions/index/status";
@@ -23,6 +21,25 @@ export default function JokesMenu(props) {
     window.alert(message);
   }
 
+  function requestTenJokes() {
+    let url =
+      "https://nova-joke-api.netlify.app/.netlify/functions/index/api/ten";
+    fetch(url)
+      .then((response) => response.json())
+      .then((jokeData) => {
+        console.log("jokeData", jokeData);
+        // props.setJokes(10);
+        // jokeData.map((joke) => {
+        //   createCard(joke);
+        // });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+
+  console.log("props", props);
+
   return (
     <div className="ui menu stackable">
       <div className="header item">
@@ -35,7 +52,12 @@ export default function JokesMenu(props) {
             <label>Type of Joke?</label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" id="jokeGeneral" checked="checked" />
+                <input
+                  type="radio"
+                  name="frequency"
+                  id="jokeGeneral"
+                  checked="checked"
+                />
                 <label>General</label>
               </div>
             </div>
@@ -55,31 +77,26 @@ export default function JokesMenu(props) {
         </div>
       </div>
       <div className="item">
-        <div className="ui form" id="jokeQuantity" style={{ fontSize: "24px" }}>
-          <div className="inline fields">
-            <label>Quantity</label>
-            <div className="field">
-              <div className="ui radio checkbox">
-                <input type="radio" name="quantity" id="jokeQuantityOne" checked="checked" />
-                <label>One</label>
-              </div>
-            </div>
-            <div className="field">
-              <div className="ui radio checkbox">
-                <input type="radio" name="quantity" id="jokeQuantityTen" />
-                <label>Ten</label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button
-        className="item 
+        <button
+          className="item 
+      ui button huge basic orange"
+          onClick={requestTenJokes}
+        >
+          Request List of Jokes
+        </button>
+        <button
+          className="item 
       ui button huge basic blue"
-        onClick={requestStatus}
-      >
-        API Status
-      </button>
+          onClick={requestStatus}
+        >
+          API Status
+        </button>
+      </div>
+      <div className="item">
+        <h2>{props.setJokes}</h2>
+      </div>
     </div>
   );
-}
+};
+
+export default JokesMenu;

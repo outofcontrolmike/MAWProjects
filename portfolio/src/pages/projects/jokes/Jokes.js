@@ -2,6 +2,9 @@ import React from "react";
 import JokesMenu from "../../../components/jokes/JokesMenu";
 import JokesCard from "../../../components/jokes/JokesCard";
 import JokesFooter from "../../../components/jokes/JokesFooter";
+
+import { useState } from "react";
+
 //nova-joke-api.netlify.app/.netlify/functions/index/api/random
 
 /*  ALL ENDPOINTS
@@ -20,15 +23,17 @@ Ten random jokes based on category - https://nova-joke-api.netlify.app/.netlify/
 
 //Programming Related Jokes
 export default function Jokes(props) {
+  const [jokeQuantity, setJokeQuantity] = useState(1);
+
   return (
     <div style={{ backgroundColor: "white", color: "black" }}>
       <div className="ui container fluid stackable container">
-        <JokesMenu data={props} />
+        <JokesMenu setJokes={jokeQuantity} />
         <div
           className="ui container fluid"
           style={{ height: "100vh", backgroundColor: "" }}
         >
-          <JokesCard data={props} />
+          <JokesCard {...jokeQuantity} />
         </div>
         <JokesFooter />
       </div>
