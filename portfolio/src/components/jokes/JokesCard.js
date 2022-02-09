@@ -1,47 +1,54 @@
 import React from "react";
 import { useState } from "react";
 
-//Sets up and displays jokes
+//Sets up and displays Jokes
 export default function JokesCard(props) {
-  const [jokeType, setJokeCategory] = useState("general");
+
+  //Hooks for the card mainly
+  const [jokeType, setJokeCategory] = useState("Type of Joke");
   const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("ID of Joke");
   const [jokeText, setJokeText] = useState(
     "I'm not good at coming up with jokes, but this API is."
   );
-  const [buttonText, setButtonText] = useState("Fetch Joke");
-  let jokeTextValue = "";
 
+
+  //somewhat gloabl variables
+  let jokeTextValue = "";
   let typeParam = "";
   let quantityParam = "";
 
+  //Original button click
   function handleClick() {
     setJokeType();
     setQuantity();
     fetchJoke();
   }
 
+  //Sets up category param for fetch and jokeType for card
   function setJokeType() {
+
     //JokeType
     let jokeGeneral = document.getElementById("jokeGeneral");
     let jokeKnock = document.getElementById("jokeKnock");
     let jokeProgramming = document.getElementById("jokeProgramming");
 
     if (jokeGeneral.checked) {
-      setJokeCategory("general");
+      setJokeCategory("General");
       typeParam = "general";
     }
     if (jokeKnock.checked) {
-      setJokeCategory("knock-knock");
+      setJokeCategory("Knock-Knock");
       typeParam = "knock-knock";
     }
     if (jokeProgramming.checked) {
-      setJokeCategory("programming");
+      setJokeCategory("Programming");
       typeParam = "programming";
     }
     return;
   }
 
+  //Sets quantity state - will be used for param and card
   function setQuantity() {
     //Quantity
     let jokeQuantityOne = document.getElementById("jokeQuantityOne");
@@ -50,8 +57,8 @@ export default function JokesCard(props) {
       : setJokeQuantity("ten");
   }
 
+  //The actual fetch - doesn't need to accept any parameters
   function fetchJoke() {
-    console.log(jokeType, jokeQuantity);
     let url =
       "https://nova-joke-api.netlify.app/.netlify/functions/index/api" +
       "/" +
@@ -61,7 +68,6 @@ export default function JokesCard(props) {
     fetch(url)
       .then((response) => response.json())
       .then((jokeData) => {
-        console.log(jokeData);
         jokeData.map((joke) => {
           createCard(joke);
         });
@@ -71,16 +77,15 @@ export default function JokesCard(props) {
       });
   }
 
-  //create card based on data
+  //Create card based on data - accepts joke data as a parameter
   function createCard(joke) {
-    let jokeButton = document.getElementById("jokeButton");
-    setCardState1(joke);
+    setCardState(joke);
     createButton(showPunchLine, "Show Punchline")
+    let jokeButton = document.getElementById("jokeButton");
     jokeButton.remove();
-    jokeTextValue = joke.punchline;
   }
 
-    //Use this to swap buttons out
+    //Handles creating a new button element and appending to dom
     function createButton(functionCall, buttonText) {
       let button = document.createElement('button');
       button.classList = "ui button massive blue";
@@ -90,26 +95,28 @@ export default function JokesCard(props) {
       document.getElementById('jokesContainer').append(button);
     }
 
-  function setCardState1(joke) {
+  //Setting Hook States
+  function setCardState(joke) {
     setJokeText(joke.setup);
     setJokeId(joke.id);
+    jokeTextValue = joke.punchline;
   }
 
-  //inserts new info into card
+  //Swaps out old button for new to basically reset program
   function showPunchLine() {
     document.getElementById('jokeButton').remove();
     createButton(handleClick,"Request a new joke");
     setJokeText(jokeTextValue);
   }
 
-
+  //Just a jsx element for initial page load
   const jokeButton = (
     <button
       id="jokeButton"
       onClick={handleClick}
       className="ui button massive blue"
     >
-      {buttonText}
+     Request a Joke!
     </button>
   );
 

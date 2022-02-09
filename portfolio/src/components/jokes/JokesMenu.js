@@ -35,7 +35,7 @@ export default function JokesMenu(props) {
             <label>Type of Joke?</label>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" id="jokeGeneral" />
+                <input type="radio" name="frequency" id="jokeGeneral" checked="checked" />
                 <label>General</label>
               </div>
             </div>
