@@ -9,8 +9,6 @@ export default function JokesCard(props) {
   const [jokeText, setJokeText] = useState(
     "I'm not good at coming up with jokes, but this API is."
   );
-
-  const [punchLineText, setPunchLineText] = useState("blah for now");
   const [buttonText, setButtonText] = useState("Fetch Joke");
   let jokeTextValue = "";
 
@@ -77,15 +75,20 @@ export default function JokesCard(props) {
   function createCard(joke) {
     let jokeButton = document.getElementById("jokeButton");
     setCardState1(joke);
+    createButton(showPunchLine, "Show Punchline")
     jokeButton.remove();
-    let punchLineButton = document.createElement("button");
-    punchLineButton.className = "ui button blue massive";
-    punchLineButton.id = "punchLineButton";
-    punchLineButton.addEventListener("click", showPunchLine);
-    punchLineButton.innerHTML = "Punch Line";
-    console.log("joke", joke);
     jokeTextValue = joke.punchline;
   }
+
+    //Use this to swap buttons out
+    function createButton(functionCall, buttonText) {
+      let button = document.createElement('button');
+      button.classList = "ui button massive blue";
+      button.id = "jokeButton";
+      button.innerHTML = buttonText;
+      button.addEventListener('click', functionCall);
+      document.getElementById('jokesContainer').append(button);
+    }
 
   function setCardState1(joke) {
     setJokeText(joke.setup);
@@ -94,12 +97,11 @@ export default function JokesCard(props) {
 
   //inserts new info into card
   function showPunchLine() {
-    let punchLineButton = document.getElementById("punchLineButton");
-    punchLineButton.innerHTML = "Request new joke";
-    punchLineButton.addEventListener("click", handleClick);
-    punchLineButton.addEventListener("click", handleClick);
+    document.getElementById('jokeButton').remove();
+    createButton(handleClick,"Request a new joke");
     setJokeText(jokeTextValue);
   }
+
 
   const jokeButton = (
     <button
