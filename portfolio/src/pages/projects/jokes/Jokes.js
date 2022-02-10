@@ -26,12 +26,12 @@ export default function Jokes(props) {
   const [jokeQuantity, setJokeQuantity] = useState(1);
 
   return (
-    <div style={{ backgroundColor: "white", color: "black" }}>
+    <div id="jokesApp" style={{ backgroundColor: "white", color: "black" }}>
       <div className="ui container fluid stackable container">
         <JokesMenu setJokes={jokeQuantity} />
         <div
           className="ui container fluid"
-          style={{ height: "100vh", backgroundColor: "" }}
+          style={{ backgroundColor: "" }}
         >
           <JokesCard {...jokeQuantity} />
         </div>

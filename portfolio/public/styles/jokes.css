@@ -1,13 +1,18 @@
 /* Jokes Stylesheet */
-/* jokes Footer */
 
+#jokesApp {
+  height: 100vh;
+  margin-bottom: 4rem;
+}
+/* jokes Footer */
 #jokesFooter {
     position: fixed;
     bottom: 0px;
     background-color: whitesmoke;
     border-top: solid black 4px;
-    padding: 2rem;
+    padding: 1rem;
     width: 105%;
+    margin-top:20rem;
   }
 
   #jokesFooter > .column > a {

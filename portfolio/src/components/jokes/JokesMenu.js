@@ -27,15 +27,40 @@ const JokesMenu = (props) => {
     fetch(url)
       .then((response) => response.json())
       .then((jokeData) => {
-        console.log("jokeData", jokeData);
+        document.getElementById('jokesContainer').innerHTML = ""
+
         // props.setJokes(10);
-        // jokeData.map((joke) => {
-        //   createCard(joke);
-        // });
+        jokeData.map((joke) => {
+          createJokeList(joke);
+        });
       })
       .catch((error) => {
         console.error("Error:", error);
       });
+  }
+
+  function createJokeList(joke) {
+    console.log("joke",joke);
+
+    let jokeId = joke.id;
+    let jokeType = joke.type;
+    let jokeSetup = joke.setup;
+    let jokePunchline = joke.punchline;
+
+    let jokeIdP = document.createElement('p');
+    let jokeTypeP = document.createElement('p');
+    let jokePunchlineP = document.createElement('p');
+    let jokeSetupP = document.createElement('p');
+
+    let jokeDiv = document.createElement('div');
+
+    jokeIdP.innerHTML = jokeId;
+    jokeTypeP.innerHTML = jokeType;
+    jokeSetupP.innerHTML = jokeSetup;
+    jokePunchlineP.innerHTML = jokePunchline;
+
+    jokeDiv.append(jokeIdP, jokeTypeP,jokeSetup,jokePunchlineP,)
+    document.getElementById('jokesContainer').append(jokeDiv);
   }
 
   console.log("props", props);
