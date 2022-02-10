@@ -5,10 +5,13 @@ export default function Pokemon() {
   return (
     <div id="pBackground">
       <PokemonMenu />
+      <div id="pokeTestWrapper">
       <div
         className="row text-center justify-content-center"
         id="pokeTest"
       ></div>
+            </div>
+
     </div>
   );
 }

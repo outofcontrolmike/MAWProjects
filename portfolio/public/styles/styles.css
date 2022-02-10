@@ -29,6 +29,7 @@ option {
   padding-left: 5%;
   font-family: "Roboto Mono", monospace;
   color: gold;
+  margin-bottom: unset;
 }
 #goldText:hover {
   color: orange;
@@ -39,6 +40,12 @@ option {
 }
 
 /*Landing Page */
+
+#landingPage,#about,#resume,#techStack {
+  color:white;
+  background-color: black;
+  height:100vh;
+}
 
 #landingPageSub {
   font-family: "Roboto Mono", monospace;
@@ -97,6 +104,7 @@ option {
   background-color: black;
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
+  
 }
 
 #aboutMe {
@@ -115,6 +123,9 @@ option {
 
 /**********************************Resume Page****************************************************/
 
+#resumeColumnContainer {
+  background-color: black;
+}
 #roboHeader {
   font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
@@ -198,8 +209,12 @@ option {
 }
 
 /*************************************Projects Page **********************************************/
+#projects {
+  background-color: black;
+}
 #list {
   font-size: 1.2rem;
+  margin-bottom: unset;
 }
 
 #projectMeta {
@@ -213,6 +228,9 @@ option {
 }
 
 /************************************Comments Page ***********************************************/
+#commentsPage {
+  background-color: black;
+}
 #comment,
 #name,
 #email,
@@ -245,7 +263,19 @@ option {
   font-size: 1.4rem;
 }
 
+/* ***************Contact Page************************** */
+#contactPage {
+  background-color: black;
+  height: 100vh;
+}
+
 /********************FAQ Page *************************************************************/
+
+#faqsPage {
+  height: 100vh;
+  color:white;
+  background-color: black;
+}
 #faqDiv > #faqSegment > h2 {
   color: orange;
 }

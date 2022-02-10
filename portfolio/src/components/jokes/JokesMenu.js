@@ -54,13 +54,15 @@ const JokesMenu = (props) => {
 
     let jokeDiv = document.createElement('div');
 
+    jokeDiv.classList = "ui container stackable centered align segment"
+
     jokeIdP.innerHTML = jokeId;
     jokeTypeP.innerHTML = jokeType;
     jokeSetupP.innerHTML = jokeSetup;
     jokePunchlineP.innerHTML = jokePunchline;
 
     jokeDiv.append(jokeIdP, jokeTypeP,jokeSetup,jokePunchlineP,)
-    document.getElementById('jokesContainer').append(jokeDiv);
+    document.getElementById('jokesContent').append(jokeDiv);
   }
 
   console.log("props", props);

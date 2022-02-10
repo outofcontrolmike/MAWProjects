@@ -2,7 +2,7 @@ import Navigation from "../components/layout/Navigation";
 
 function Contact() {
   return (
-    <>
+    <div id="faqsPage">
       <Navigation />
       <div
         id="faqDiv"
@@ -67,7 +67,7 @@ function Contact() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

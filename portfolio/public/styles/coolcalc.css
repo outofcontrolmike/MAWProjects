@@ -1,5 +1,10 @@
 /* Cool Calc Style Sheet */
 
+#coolCalcApp {
+  background-color: black;
+  height: 100vh;
+
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -15,10 +20,6 @@ input[type="number"] {
 /* Setting google font */
 #coolBtn {
   font-family: "Rock Salt", cursive;
-}
-
-#footer {
-  color: white;
 }
 
 @media only screen and (max-width: 600px) {

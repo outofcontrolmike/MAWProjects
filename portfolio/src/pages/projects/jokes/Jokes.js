@@ -32,6 +32,7 @@ export default function Jokes(props) {
         <div
           className="ui container fluid"
           style={{ backgroundColor: "" }}
+          id="jokesContent"
         >
           <JokesCard {...jokeQuantity} />
         </div>

@@ -1,4 +1,14 @@
 /* Pokemon Style Sheet */
+#pBackground {
+  height:100vh;
+  background-color: black;
+}
+
+#pokeTestWrapper {
+  height: fit-content;
+  background-color: black;
+
+}
 
 /* Poke card name */
 #pokeh1 {

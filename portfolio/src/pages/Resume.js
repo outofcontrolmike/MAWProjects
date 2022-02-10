@@ -4,9 +4,9 @@ import htmlPic from "../assets/img/html.png";
 //Resume Component
 function Resume() {
   return (
-    <div>
+    <div id="resumePage">
       <Navigation />
-      <div className="ui two column very padded relaxed stackable grid">
+      <div className="ui two column very padded relaxed stackable grid" id="resumeColumnContainer">
         <div className="ui column" id="techStack">
           <h1 className="mainPageh1" id="roboHeader">
             Tech Stack / Certifications

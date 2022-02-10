@@ -136,11 +136,10 @@ export default function CoolCalc() {
   }
 
   return (
-    <>
-      <body style={{ marginTop: "100px" }}>
+      <div id="coolCalcApp">
         <div
           className="ui two column container very padded relaxed"
-          style={{ width: "fit-content", marginTop: "5rem" }}
+          style={{ width: "fit-content", paddingTop: "15rem" }}
         >
           <div className="ui column">
             <div style={{ marginRight: "5rem" }}>
@@ -273,10 +272,9 @@ export default function CoolCalc() {
             ></span>
           </div>
         </div>
-      </body>
-      <span style={{ marginTop: "5rem" }}>
+      <span style={{position: "fixed", bottom: "2rem" ,right : "2rem" }}>
         <HomeLink />
       </span>
-    </>
+      </div>
   );
 }
