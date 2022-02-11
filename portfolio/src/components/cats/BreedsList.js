@@ -73,7 +73,7 @@ export default function BreedsList() {
   // }
 
   return (
-    <div className="ui container fluid center aligned padded relaxed">
+    <div className="ui container fluid center aligned padded relaxed" id="breedListContainer">
       <CatNavigation />
       <h2 className="ui text">
         {" "}

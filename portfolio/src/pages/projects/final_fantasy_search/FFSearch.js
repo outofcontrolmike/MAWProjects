@@ -389,7 +389,7 @@ function FFSearch() {
   }
   return (
     <div className="ffContainer">
-      <div id="app" className="ui container stackable">
+      <div id="ffApp" className="ui container stackable">
         <FFMenu />
         <div id="ffList"></div>
         <FFFooter />

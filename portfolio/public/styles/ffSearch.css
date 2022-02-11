@@ -1,11 +1,21 @@
+.ffContainer {
+  margin-top: unset;
+  background-color: yellow;
+  height:100vh;
+  padding-top: 2rem;
+}
+
+
 /* FF Search Style Sheet */
 #ffFooter {
   position: relative;
+  background-color: yellow;
   margin-top: 35%;
 }
 
 /* list output */
 #ffList {
+  height:fit-content;
   padding-bottom: 100px;
 }
 
@@ -84,8 +94,7 @@
 
 /* Main container for search menu */
 #ffSearchTools {
-  margin-top: 3%;
-  margin-bottom: 3%;
+  padding-top: 3%;
 }
 
 /* Game card styling */
