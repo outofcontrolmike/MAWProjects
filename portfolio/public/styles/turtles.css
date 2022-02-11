@@ -1,5 +1,10 @@
 /* TMNT character Select Style Sheet */
 
+#tmntProject {
+  background-color: black;
+  color:white;
+  padding-top: 2rem;
+}
 /* Audio player controls styling */
 path {
   color: black;

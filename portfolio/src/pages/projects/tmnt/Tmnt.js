@@ -233,12 +233,12 @@ export default function Tmnt(props) {
     initiateVars();
   }
   return (
-    <div>
-      <div id="project" className="ui" style={{ height: "700px" }}>
+    <div id="tmntProject" >
+      <div className="ui">
         {/* // <!--Players--> */}
         <div
           className="ui two column doubling stackable grid container segment"
-          style={{ marginTop: "50px;" }}
+          style={{ marginTop: "unset", }}
         >
           {/* <!-- first player--> */}
           <div className="column ui" id="players">
@@ -289,7 +289,7 @@ export default function Tmnt(props) {
         </a>
 
         <TurtleSelect />
-        <TMNTAudio className="control" />
+        <TMNTAudio className="control" id="tmntProject" />
         <footer>
           <div id="tFooter" className="ui">
             *All images and song are not owned by me.
