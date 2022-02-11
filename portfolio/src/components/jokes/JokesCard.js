@@ -11,11 +11,33 @@ export default function JokesCard(props) {
     "I'm not good at coming up with jokes, but this API is."
   );
 
+  const [punchlineText, setPunchlineText] = useState("Testing for now");
+
   let jokesData = props.jokeData;
   //somewhat gloabl variables
   let jokeTextValue = "";
   let typeParam = "";
   let quantityParam = "";
+
+  function pageLoadJoke() {
+    let url =
+      "https://nova-joke-api.netlify.app/.netlify/functions/index/api/random/";
+    fetch(url)
+      .then((response) => response.json())
+      .then((jokeData) => {
+        console.log("jokeData", jokeData);
+        setJokeText(jokeData.setup);
+        setJokeCategory(jokeData.type);
+        console.log(jokeData);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+
+  setTimeout(() => {
+    pageLoadJoke();
+  }, 10000);
 
   //Original button click
   function handleClick() {
@@ -106,17 +128,25 @@ export default function JokesCard(props) {
       onClick={handleClick}
       className="ui button massive blue"
     >
-      Request a Joke!
+      Request Punchline
     </button>
   );
 
-  console.log("props in joke card", props);
-
   return (
-    <div className="ui container segment center aligned" id="jokesContainer">
-      <h1 className="ui text">{jokeText}</h1>
-      <p> {jokeType}</p>
-      {jokeButton}
+    <div className="ui container " id="jokesContainer">
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <h1 className="ui text">{jokeText}</h1>
+            <p> {jokeType}</p>
+            {jokeButton}
+          </div>
+          <div className="flip-card-back">
+            <h1 className="ui text">"PunchLine should go here!</h1>
+            {punchlineText}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
