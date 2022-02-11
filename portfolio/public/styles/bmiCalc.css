@@ -3,8 +3,10 @@
 /* styling for whole bmi component */
 #bmiBody {
   font-family: "KoHo", sans-serif;
-  margin-top: 2rem;
   padding-bottom: 2rem;
+  background-color: aliceblue
+
+  
 }
 
 /* padding for select dropdown menus */
@@ -29,7 +31,11 @@
     #c9d6ff
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#BMIContainer {
+  padding-top: 1rem;
 }
 
 /* Button Styling */

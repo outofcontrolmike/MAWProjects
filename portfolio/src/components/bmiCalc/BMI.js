@@ -3,7 +3,7 @@ import React from "react";
 //BMI Calculator
 export default function BMI() {
   return (
-    <div className="ui container">
+    <div className="ui container" id="BMIContainer">
       <div id="normalCards" className="ui raised very padded text segment">
         <div className="ui large form">
           <h1 style={{ color: "black" }}>Body Mass Index Calculator</h1>

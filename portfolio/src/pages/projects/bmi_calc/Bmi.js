@@ -163,10 +163,9 @@ export default function Bmi() {
   //Main return
   return (
     <div
-      className="ui row container"
+      className="ui row container fluid"
       id="bmiBody"
       style={{
-        backgroundColor: "black",
         fontFamily: "'KoHo', sans-serif",
         color: "black",
       }}
