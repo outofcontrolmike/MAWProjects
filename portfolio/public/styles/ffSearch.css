@@ -1,22 +1,43 @@
 .ffContainer {
   margin-top: unset;
-  background-color: yellow;
-  height:100vh;
   padding-top: 2rem;
+  height: 100vh;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
-/* FF Search Style Sheet */
+/* FF Search Style Sheet
 #ffFooter {
   position: relative;
   background-color: yellow;
-  margin-top: 35%;
-}
+  margin-top: 75%;
+} */
 
 /* list output */
-#ffList {
-  height:fit-content;
-  padding-bottom: 100px;
+#ffListWrapper {
+  height: fit-content;
+  padding-bottom: 2rem;
+
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Card paragraphs */
@@ -58,13 +79,13 @@
 }
 
 .line {
-  border-color: skyblue;
+  border-color: #bdc3c7;
   width: 75%;
   float: left;
 }
 
 .divider {
-  border-color: skyblue;
+  border-color: #bdc3c7;
   margin-top: 5%;
 }
 
@@ -85,7 +106,7 @@
   font-weight: 600;
   font-variant: petite-caps;
   border: none;
-  border-bottom: 2px solid skyblue;
+  border-bottom: 2px solid #bdc3c7;
   font-size: xx-large;
   letter-spacing: 15px;
   font-family: "EB Garamond", serif;
@@ -95,11 +116,12 @@
 /* Main container for search menu */
 #ffSearchTools {
   padding-top: 3%;
+  margin-bottom: 2rem;
 }
 
 /* Game card styling */
 #gameHr {
-  border-color: slateblue;
+  border-color: #bdc3c7;
 }
 
 /* Gem icon near input */
@@ -107,7 +129,7 @@
   color: orange;
 }
 .gem:hover {
-  color: skyblue;
+  color: #bdc3c7;
 }
 
 /*Media Rules*/

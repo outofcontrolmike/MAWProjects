@@ -1,4 +1,3 @@
-import FFFooter from "../../../components/finalFantasy/FFFooter";
 import FFMenu from "../../../components/finalFantasy/FFMenu";
 
 //Main component for final fantasy search
@@ -388,11 +387,12 @@ function FFSearch() {
     count = 0;
   }
   return (
-    <div className="ffContainer">
-      <div id="ffApp" className="ui container stackable">
+    <div className="ffContainer ui container fluid">
+      <div id="" className="ui container fluid stackable">
         <FFMenu />
-        <div id="ffList"></div>
-        <FFFooter />
+        <div id="ffListWrapper">
+          <div className="ui container" id="ffList"></div>
+        </div>
       </div>
     </div>
   );
