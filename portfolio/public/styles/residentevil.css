@@ -1,5 +1,9 @@
 /* Resident Evil Stylesheet */
 
+#residentEvilProject {
+  background-color: black;
+  color:whitesmoke;
+}
 #residentEvilProject > div,
 #reName {
   font-family: auto;
