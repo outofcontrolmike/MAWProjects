@@ -118,7 +118,7 @@ export default function JokesCard(props) {
     document.getElementById("jokeButton").remove();
     createButton(handleClick, "Request a new joke");
     setJokeText(jokeTextValue);
-    document.getElementByClassName("flip-card-inner").id="showBack"
+    document.getElementsByClassName("flip-card-inner").id="showBack"
   }
 
   //Just a jsx element for initial page load
@@ -128,7 +128,7 @@ export default function JokesCard(props) {
       onClick={handleClick}
       className="ui button massive blue"
     >
-      Request Punchline
+      Request Joke
     </button>
   );
 
@@ -139,12 +139,15 @@ export default function JokesCard(props) {
           <div className="flip-card-front">
             <h1 className="ui text">{jokeText}</h1>
             <p> {jokeType}</p>
-            {jokeButton}
           </div>
           <div className="flip-card-back">
             {punchlineText}
           </div>
         </div>
+      </div>
+      <div className="ui container center aligned">
+      {jokeButton}
+
       </div>
     </div>
   );
