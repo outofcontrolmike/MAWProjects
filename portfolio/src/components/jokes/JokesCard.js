@@ -35,9 +35,7 @@ export default function JokesCard(props) {
       });
   }
 
-  setTimeout(() => {
-    pageLoadJoke();
-  }, 10000);
+  // pageLoadJoke();
 
   //Original button click
   function handleClick() {
@@ -112,6 +110,7 @@ export default function JokesCard(props) {
     setJokeText(joke.setup);
     setJokeId(joke.id);
     jokeTextValue = joke.punchline;
+    setPunchlineText(joke.punchline);
   }
 
   //Swaps out old button for new to basically reset program
@@ -119,6 +118,7 @@ export default function JokesCard(props) {
     document.getElementById("jokeButton").remove();
     createButton(handleClick, "Request a new joke");
     setJokeText(jokeTextValue);
+    document.getElementByClassName("flip-card-inner").id="showBack"
   }
 
   //Just a jsx element for initial page load
@@ -142,7 +142,6 @@ export default function JokesCard(props) {
             {jokeButton}
           </div>
           <div className="flip-card-back">
-            <h1 className="ui text">"PunchLine should go here!</h1>
             {punchlineText}
           </div>
         </div>
