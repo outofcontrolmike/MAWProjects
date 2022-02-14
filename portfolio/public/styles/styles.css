@@ -302,10 +302,14 @@ option {
 }
 
 /* Media Rules */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   #landingPage {
     font-size: 10px;
     max-width: 99%;
+  }
+
+  #resume {
+    padding-top: 12rem;
   }
 }
 /* End Main CSS File */

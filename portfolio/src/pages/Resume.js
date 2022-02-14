@@ -39,6 +39,7 @@ function Resume() {
             <i className="file word icon huge"></i>
             <i className="file excel icon huge"></i>
           </div>
+          <div className="ui list">
           <h3 style={{ color: "orange" }}>Certifications</h3>
           <div className="ui medium three list images">
             <div
@@ -94,6 +95,7 @@ function Resume() {
                 />
               </a>
             </div>
+          </div>
           </div>
         </div>
         <div className="ui column" id="resume">
