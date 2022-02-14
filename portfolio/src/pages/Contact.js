@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div id="contactPage">
       <Navigation />
-      <div className="ui column stackable very padded relaxed container">
+      <div className="ui stackable very padded relaxed container" id="contactFormSegment">
         <form
           action="https://formsubmit.co/outofcontrolmike@gmail.com"
           method="POST"

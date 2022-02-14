@@ -17,7 +17,7 @@ function About() {
             alt={"Michael Wilson being professional"}
           />
         </div>
-        <div className="ui column padded" id="aboutMe">
+        <div className="ui column padded" id="aboutMe" style={{backgroundColor: "black"}}>
           <span id="myName" className="ui text large">
             Mr. Michael Wilson
           </span>

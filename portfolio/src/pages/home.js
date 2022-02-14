@@ -32,7 +32,7 @@ function Home() {
           </button>
         </div>
       </div>
-      <div className="ui column">
+      <div className="ui column" style={{backgroundColor: "black"}}>
         <img
           className="ui image big centered rounded"
           style={{ marginTop: "6rem" }}

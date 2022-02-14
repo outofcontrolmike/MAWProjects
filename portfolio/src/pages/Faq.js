@@ -2,7 +2,10 @@ import Navigation from "../components/layout/Navigation";
 
 function Contact() {
   return (
-    <div id="faqsPage">
+    <div id="faqsPage"
+    className="ui column stackable very padded relaxed fluid container"
+
+    >
       <Navigation />
       <div
         id="faqDiv"
