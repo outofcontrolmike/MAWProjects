@@ -41,10 +41,13 @@ option {
 
 /*Landing Page */
 
-#landingPage,#about,#resume,#techStack {
-  color:white;
+#landingPage,
+#about,
+#resume,
+#techStack {
+  color: white;
   background-color: black;
-  height:100vh;
+  height: fit-content;
 }
 
 #landingPageSub {
@@ -92,19 +95,11 @@ option {
   }
 }
 
-/* Media queries  */
-@media only screen and (max-width: 765px) {
-  #navigation {
-    padding-left: unset;
-  }
-}
-
 /*****************************About page ********************************************************/
 #about {
   background-color: black;
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
-  
 }
 
 #aboutMe {
@@ -125,6 +120,8 @@ option {
 
 #resumeColumnContainer {
   background-color: black;
+  height: fit-content;
+  padding: 2rem;
 }
 #roboHeader {
   font-family: "Roboto Mono", monospace;
@@ -153,13 +150,13 @@ option {
 }
 
 #resumeVisible {
-  height: 15rem;
   background-color: black;
   color: yellow;
   align-self: center;
-  padding-top: 6rem;
   border: grey 2px solid;
   border-style: outset;
+  padding-top: 33%;
+  height: 200px;
   font-family: "Roboto Mono", monospace;
 }
 
@@ -269,14 +266,13 @@ option {
   height: 1200px;
 }
 
-
 #contactFormSegment {
-  padding-top:6rem;
+  padding-top: 6rem;
 }
 /********************FAQ Page *************************************************************/
 
 #faqsPage {
-  color:white;
+  color: white;
   background-color: black;
   height: 1800px;
 }
@@ -302,14 +298,10 @@ option {
 }
 
 /* Media Rules */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-height: 750px) {
   #landingPage {
     font-size: 10px;
     max-width: 99%;
-  }
-
-  #resume {
-    padding-top: 12rem;
   }
 }
 /* End Main CSS File */
