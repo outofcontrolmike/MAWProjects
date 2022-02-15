@@ -47,7 +47,7 @@ option {
 #techStack {
   color: white;
   background-color: black;
-  height: fit-content;
+  height: 100vh;
 }
 
 #landingPageSub {
@@ -274,7 +274,6 @@ option {
 #faqsPage {
   color: white;
   background-color: black;
-  height: 1800px;
 }
 #faqDiv > #faqSegment > h2 {
   color: orange;
