@@ -318,7 +318,6 @@ option {
 @media only screen and (max-height: 750px) {
   #landingPage {
     font-size: 10px;
-    max-width: 99%;
   }
 }
 /* End Main CSS File */

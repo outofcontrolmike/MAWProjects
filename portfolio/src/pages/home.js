@@ -4,7 +4,7 @@ import picture from "../assets/img/me.png";
 function Home() {
   return (
     <div
-      className="ui two column stackable grid very padded relaxed"
+      className="ui two column stackable grid very padded relaxed container"
       id="landingPage"
     >
       <div
@@ -32,7 +32,7 @@ function Home() {
           </button>
         </div>
       </div>
-      <div className="ui column" style={{backgroundColor: "black"}}>
+      <div className="ui column" style={{ backgroundColor: "black" }}>
         <img
           className="ui image big centered rounded"
           style={{ marginTop: "6rem" }}
