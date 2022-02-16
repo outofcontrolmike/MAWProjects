@@ -205,6 +205,13 @@ option {
   color: gold;
 }
 
+/* Media Rules */
+@media only screen and (max-width: 400px) {
+  #resumeColumnContainer {
+    height: 1800px;
+  }
+}
+
 /*************************************Projects Page **********************************************/
 #projects {
   background-color: black;
