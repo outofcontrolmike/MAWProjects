@@ -270,6 +270,8 @@ option {
 /* ***************Contact Page************************** */
 #contactPage {
   background-color: black;
+  padding-bottom: 20rem;
+  padding-right: unset;
 }
 
 #contactFormSegment {
@@ -279,7 +281,8 @@ option {
 /* Media Rules */
 @media only screen and (max-width: 300px) {
   #contactPage {
-    height: 1500px;
+    height: unset;
+    height: px;
   }
 }
 /********************FAQ Page *************************************************************/
