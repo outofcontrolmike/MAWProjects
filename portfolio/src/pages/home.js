@@ -4,7 +4,7 @@ import picture from "../assets/img/me.png";
 function Home() {
   return (
     <div
-      className="ui two column stackable grid very padded relaxed container"
+      className="ui two column stackable grid very padded relaxed"
       id="landingPage"
     >
       <div
