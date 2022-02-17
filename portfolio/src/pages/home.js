@@ -2,8 +2,12 @@ import picture from "../assets/img/me.png";
 
 //Landing page component
 function Home() {
+  let height = window.innerHeight;
+  console.log("height", height);
+
   return (
     <div
+      style={{ height: { height } }}
       className="ui two column stackable grid very padded relaxed"
       id="landingPage"
     >

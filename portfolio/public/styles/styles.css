@@ -47,7 +47,12 @@ option {
 #techStack {
   color: white;
   background-color: black;
-  height: fit-content;
+  height: 100vh;
+}
+
+#landingPage > div,
+#about > div {
+  background-color: black;
 }
 
 #landingPageSub {
@@ -103,7 +108,8 @@ option {
 }
 
 #aboutMe {
-  margin-top: 4rem;
+  background-color: black;
+  padding-top: 4rem;
   font-size: 1.4rem;
 }
 
