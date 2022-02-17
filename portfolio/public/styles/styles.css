@@ -47,7 +47,7 @@ option {
 #techStack {
   color: white;
   background-color: black;
-  height: 100vh;
+  height: fit-content;
 }
 
 #landingPageSub {
@@ -206,9 +206,18 @@ option {
 }
 
 /* Media Rules */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
   #resumeColumnContainer {
     height: 1800px;
+  }
+
+  #resume,
+  #techStack,
+  #commentForm {
+    border-top: solid orange 2px;
+  }
+  #commentForm {
+    padding-top: 2rem;
   }
 }
 

@@ -37,7 +37,7 @@ function NewCommentForm(props) {
   }
 
   return (
-    <div className="ui form" style={{ backgroundcolor: "black" }}>
+    <div className="ui form" id="commentForm">
       <form
         style={{ fontSize: "1.5rem" }}
         onSubmit={submitHandler}
@@ -46,10 +46,9 @@ function NewCommentForm(props) {
         <h1 className="mainPageh1" id="roboHeader">
           Please Leave a Comment!
         </h1>
-        <div className="field" id="input" style={{ backgroundcolor: "black" }}>
-          <label style={{ backgroundcolor: "black" }}> Name or Alias</label>
+        <div className="field" id="input">
+          <label> Name or Alias</label>
           <input
-            style={{ backgroundcolor: "black" }}
             type="text"
             min="1"
             max="25"
