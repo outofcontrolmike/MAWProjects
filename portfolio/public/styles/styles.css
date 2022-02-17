@@ -44,10 +44,19 @@ option {
 #landingPage,
 #about,
 #resume,
-#techStack {
+#techStack,
+#faqsPage {
   color: white;
   background-color: black;
   height: 100vh;
+}
+
+#faqsPage > div {
+  background-color: black;
+  padding: unset;
+}
+#faqDiv {
+  background-color: black;
 }
 
 #landingPage > div,
@@ -308,8 +317,8 @@ option {
   padding-bottom: 100px;
 }
 
-#faqDiv {
-  padding: 1rem;
+#faqSegment {
+  padding: 2rem;
 }
 #faqDiv > #faqSegment > h2 {
   color: orange;
