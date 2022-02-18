@@ -8,7 +8,7 @@ export default function JokesCard(props) {
     "If you hover this card you will see the punchline.  Of course you need to fetch a joke first. "
   );
   const [jokeQuantity, setJokeQuantity] = useState("random");
-  const [jokeId, setJokeId] = useState("ID of Joke");
+  const [jokeId, setJokeId] = useState("");
   const [jokeText, setJokeText] = useState(
     "I'm not good at coming up with jokes, but this API is."
   );
@@ -23,26 +23,29 @@ export default function JokesCard(props) {
   let typeParam = "";
   let quantityParam = "";
 
-  function pageLoadJoke() {
-    let url =
-      "https://nova-joke-api.netlify.app/.netlify/functions/index/api/random/";
-    fetch(url)
-      .then((response) => response.json())
-      .then((jokeData) => {
-        console.log("jokeData", jokeData);
-        setJokeText(jokeData.setup);
-        setJokeCategory(jokeData.type);
-        console.log(jokeData);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }
+  console.log("card props", props);
+
+  // function pageLoadJoke() {
+  //   let url =
+  //     "https://nova-joke-api.netlify.app/.netlify/functions/index/api/random/";
+  //   fetch(url)
+  //     .then((response) => response.json())
+  //     .then((jokeData) => {
+  //       console.log("jokeData", jokeData);
+  //       setJokeText(jokeData.setup);
+  //       setJokeCategory(jokeData.type);
+  //       console.log(jokeData);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error:", error);
+  //     });
+  // }
 
   // pageLoadJoke();
 
   //Original button click
   function handleClick() {
+    props.data();
     setJokeType();
     // setQuantity();
     fetchJoke();

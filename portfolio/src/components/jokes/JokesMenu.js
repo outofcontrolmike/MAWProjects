@@ -36,7 +36,6 @@ const JokesMenu = (props) => {
         document.getElementById("jokesContainer").style.visibility = "hidden";
         document.getElementById("jokesContainer").style.height = "0px";
 
-        // props.setJokes(10);
         jokeData.map((joke) => {
           createJokeList(joke);
         });
@@ -47,8 +46,7 @@ const JokesMenu = (props) => {
   }
 
   function createJokeList(joke) {
-    console.log("joke", joke);
-
+    props.data();
     let jokeId = joke.id;
     let jokeType = joke.type;
     let jokeSetup = joke.setup;
@@ -73,12 +71,10 @@ const JokesMenu = (props) => {
     document.getElementById("jokesList").prepend(jokeDiv);
   }
 
-  console.log("props", props);
-
   return (
-    <div className="ui menu stackable">
+    <div className="ui menu stackable fluid">
       <div className="header item">
-        <p style={{ fontSize: "5rem" }}>Random Jokes</p>
+        <p style={{ fontSize: "4rem" }}>Random Jokes</p>
       </div>
       <div className="item">
         {" "}
@@ -117,7 +113,7 @@ const JokesMenu = (props) => {
       ui button huge basic green"
           onClick={resetJokes}
         >
-          Fetch Joke by single
+          Fetch Random Joke
         </button>
         <button
           className=" 
