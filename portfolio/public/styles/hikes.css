@@ -1,164 +1,191 @@
 /* Hikes Style Sheet */
 
-#hikeHeader{
-    letter-spacing: 1rem;
-    text-shadow: .5px .5px forestgreen;
-    padding-top:3rem;
+#hikeHeader {
+  letter-spacing: 1rem;
+  text-shadow: 0.5px 0.5px forestgreen;
+  padding-top: 3rem;
 }
 
-#hikesText, #hikeNavigation, #hikeHeader, #hikeListHeader, #hikeTitle, #hikeContactContainer > div {
-    font-family: 'Libre Baskerville', serif;
+#hikesText,
+#hikeNavigation,
+#hikeHeader,
+#hikeListHeader,
+#hikeTitle,
+#hikeContactContainer > div {
+  font-family: "Libre Baskerville", serif;
 }
 
-#hikesText, #hikeFooter, #hikeGallery, #spfGallery, #hikeContactContainer, #hikeThankYouContainer {
-    background: #DAD299;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    
+#hikesText,
+#hikeFooter,
+#hikeGallery,
+#spfGallery,
+#hikeContactContainer,
+#hikeThankYouContainer,
+#hikesText > div {
+  background: #dad299; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b0dab9,
+    #dad299
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b0dab9,
+    #dad299
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 #hikeLink {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-#hikeListColumn, #hikeContent, #hikeHr, #hikeFooter, #hikeCard{
-    border-color: black;
-    border-bottom-color: none;
+#hikeListColumn,
+#hikeContent,
+#hikeHr,
+#hikeFooter,
+#hikeCard {
+  border-color: black;
+  border-bottom-color: none;
 }
 
 #hikeList > div {
-    padding-bottom: 1.3rem;
-    border-color: black;
+  padding-bottom: 1.3rem;
+  border-color: black;
 }
 
 #hikeList > div:hover {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 .carousel .slide img {
-    max-height: 310px;
-    object-fit: cover;
+  max-height: 310px;
+  object-fit: cover;
 }
 
 #hikeContent {
-    height: 49rem;
-overflow: auto;
-width:32%;
+  height: 49rem;
+  overflow: auto;
+  width: 32%;
 }
 
-#hikeImage, #spfImage {
-    object-fit: cover;
-    max-height: 450px;
-    padding:.25rem;
-    margin-bottom:1rem;
-    max-width: 100%;
-    height: auto;
-    border-color: black;
-    border-width: 10rem;
+#hikeImage,
+#spfImage {
+  object-fit: cover;
+  max-height: 450px;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
+  border-color: black;
+  border-width: 10rem;
 }
-
 
 /* hikeNavigation */
-.hikeSelected{
-    font-weight: bold;
-  }
+.hikeSelected {
+  font-weight: bold;
+}
 
 #hikeNavigation {
-    margin-bottom: 1rem;
-    border-bottom-color: black;
-    padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom-color: black;
+  padding-bottom: 1rem;
 }
 
 #hikeNavigation > a {
-    text-shadow: .5px .5px forestgreen;
-    padding-bottom: 1rem;
+  text-shadow: 0.5px 0.5px forestgreen;
+  padding-bottom: 1rem;
 }
-
-
 
 /* Footer */
 
 #hikeFooter {
-    height:fit-content;
-    color: black;
-    border-top-color: black;
-    border-top-width: 3px;
-    border-right: none;
-    border-left:none;
-    border-bottom: none;
+  height: fit-content;
+  color: black;
+  border-top-color: black;
+  border-top-width: 3px;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  margin-top: unset;
 }
 
 .instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
-    color:white;
-    border-radius: 25%;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  border-radius: 25%;
 }
 
 .instagram:hover {
-    position: relative;
-    bottom:2px;
-    color:white;
+  position: relative;
+  bottom: 2px;
+  color: white;
 }
-
 
 /* Hike Contact */
 
-#hikeContactContainer, #hikeThankYouContainer {
-    height: 100vh;
+#hikeContactContainer,
+#hikeThankYouContainer {
+  height: 100vh;
 }
 #hikeContactForm {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width:40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 40%;
 }
 
 #hikeFormText {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1.1rem;
-    border-color: black;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.1rem;
+  border-color: black;
 }
-
 
 /* Misc */
 
-.scroll-to-top{
-    position: fixed;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    animation: fadeIn 700ms ease-in-out 1s both;
-    cursor: pointer;
+.scroll-to-top {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
-  /* Media Rules */
-  @media only screen and (max-width: 600px) {
-    #hikeImage, #spfImage {
-        width: 75%;
-        height: 60%;
-        margin: auto;
-        position: relative;
-        right: 1.5rem;
-    }
+/* Media Rules */
+@media only screen and (max-width: 600px) {
+  #hikeImage,
+  #spfImage {
+    width: 75%;
+    height: 60%;
+    margin: auto;
+    position: relative;
+    right: 1.5rem;
+  }
 
   #hikeContactForm {
     width: 90%;
-    margin:auto;
+    margin: auto;
   }
 
   .mountain {
-      position:relative;
-      right: 2.5rem;
+    position: relative;
+    right: 2.5rem;
   }
 }
