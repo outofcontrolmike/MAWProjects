@@ -27,7 +27,7 @@ export default function Jokes(props) {
 
   return (
     <div id="jokesApp" style={{ backgroundColor: "white", color: "black" }}>
-      <div className="ui container fluid stackable container">
+      <div className="ui  fluid stackable grid">
         <JokesMenu setJokes={jokeQuantity} />
         <div
           className="ui container fluid"

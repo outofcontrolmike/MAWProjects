@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function JokesCard(props) {
   //Hooks for the card mainly
   const [jokeType, setJokeCategory] = useState(
-    "If you hover here you will see the punchline"
+    "If you hover this card you will see the punchline.  Of course you need to fetch a joke first. "
   );
   const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("ID of Joke");
