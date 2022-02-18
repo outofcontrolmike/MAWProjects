@@ -35,6 +35,7 @@ export default function Jokes(props) {
           id="jokesContent"
         >
           <JokesCard {...jokeQuantity} />
+          <div className="ui container fluid" id="jokesList"></div>
         </div>
         <JokesFooter />
       </div>

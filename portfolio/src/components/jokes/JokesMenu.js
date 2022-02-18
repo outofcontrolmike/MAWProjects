@@ -17,6 +17,12 @@ const JokesMenu = (props) => {
       });
   }
 
+  function resetJokes() {
+    document.getElementById("jokesList").innerHTML = "";
+    document.getElementById("jokesContainer").style.visibility = "visible";
+    document.getElementById("jokesContainer").style.height = "fit-content";
+  }
+
   function displayStatus(message) {
     window.alert(message);
   }
@@ -27,7 +33,8 @@ const JokesMenu = (props) => {
     fetch(url)
       .then((response) => response.json())
       .then((jokeData) => {
-        document.getElementById('jokesContainer').innerHTML = ""
+        document.getElementById("jokesContainer").style.visibility = "hidden";
+        document.getElementById("jokesContainer").style.height = "0px";
 
         // props.setJokes(10);
         jokeData.map((joke) => {
@@ -40,29 +47,30 @@ const JokesMenu = (props) => {
   }
 
   function createJokeList(joke) {
-    console.log("joke",joke);
+    console.log("joke", joke);
 
     let jokeId = joke.id;
     let jokeType = joke.type;
     let jokeSetup = joke.setup;
     let jokePunchline = joke.punchline;
 
-    let jokeIdP = document.createElement('p');
-    let jokeTypeP = document.createElement('p');
-    let jokePunchlineP = document.createElement('p');
-    let jokeSetupP = document.createElement('p');
+    let jokeIdP = document.createElement("p");
+    let jokeTypeP = document.createElement("p");
+    let jokePunchlineP = document.createElement("p");
+    let jokeSetupP = document.createElement("p");
 
-    let jokeDiv = document.createElement('div');
+    let jokeDiv = document.createElement("div");
+    jokeDiv.id = "jokeDiv";
 
-    jokeDiv.classList = "ui container stackable centered align segment"
+    jokeDiv.classList = "ui container stackable centered align segment";
 
     jokeIdP.innerHTML = jokeId;
     jokeTypeP.innerHTML = jokeType;
     jokeSetupP.innerHTML = jokeSetup;
     jokePunchlineP.innerHTML = jokePunchline;
 
-    jokeDiv.append(jokeIdP, jokeTypeP,jokeSetup,jokePunchlineP,)
-    document.getElementById('jokesContent').append(jokeDiv);
+    jokeDiv.append(jokeIdP, jokeTypeP, jokeSetup, jokePunchlineP);
+    document.getElementById("jokesList").prepend(jokeDiv);
   }
 
   console.log("props", props);
@@ -110,6 +118,13 @@ const JokesMenu = (props) => {
           onClick={requestTenJokes}
         >
           Request List of Jokes
+        </button>
+        <button
+          className="item 
+      ui button huge basic green"
+          onClick={resetJokes}
+        >
+          Fetch Joke by single
         </button>
         <button
           className="item 
