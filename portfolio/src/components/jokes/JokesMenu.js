@@ -113,21 +113,21 @@ const JokesMenu = (props) => {
       </div>
       <div className="item">
         <button
-          className="item 
-      ui button huge basic orange"
-          onClick={requestTenJokes}
-        >
-          Request List of Jokes
-        </button>
-        <button
-          className="item 
+          className="
       ui button huge basic green"
           onClick={resetJokes}
         >
           Fetch Joke by single
         </button>
         <button
-          className="item 
+          className=" 
+      ui button huge basic orange"
+          onClick={requestTenJokes}
+        >
+          Request List of Jokes
+        </button>
+        <button
+          className=" 
       ui button huge basic blue"
           onClick={requestStatus}
         >

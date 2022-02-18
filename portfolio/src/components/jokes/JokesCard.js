@@ -112,17 +112,9 @@ export default function JokesCard(props) {
   //Setting Hook States
   function setCardState(joke) {
     setJokeText(joke.setup);
-    setJokeId(joke.id);
+    setJokeId("#" + joke.id);
     jokeTextValue = joke.punchline;
     setPunchlineText(joke.punchline);
-  }
-
-  //Swaps out old button for new to basically reset program
-  function showPunchLine() {
-    document.getElementById("jokeButton").remove();
-    createButton(handleClick, "Request a new joke");
-    setJokeText(jokeTextValue);
-    // document.getElementsByClassName("flip-card-inner").id = "showBack";
   }
 
   //Just a jsx element for initial page load
@@ -141,10 +133,14 @@ export default function JokesCard(props) {
       <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
+            <h2 style={{ float: "left" }}>{jokeId}</h2>
             <h1 className="ui text">{jokeText}</h1>
-            <p> {jokeType}</p>
+            <h5> {jokeType}</h5>
           </div>
-          <div className="flip-card-back">{punchlineText}</div>
+          <div className="flip-card-back">
+            <h2 style={{ float: "right" }}>{jokeId}</h2>
+            <h1>{punchlineText}</h1>
+          </div>
         </div>
       </div>
       <div className="ui container center aligned" id="jokesButtonContainer">
