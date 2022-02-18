@@ -68,3 +68,7 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+#jokeButton {
+  margin-top: 2rem;
+}

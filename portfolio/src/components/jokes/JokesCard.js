@@ -4,14 +4,18 @@ import { useState } from "react";
 //Sets up and displays Jokes
 export default function JokesCard(props) {
   //Hooks for the card mainly
-  const [jokeType, setJokeCategory] = useState("Type of Joke");
+  const [jokeType, setJokeCategory] = useState(
+    "If you hover here you will see the punchline"
+  );
   const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("ID of Joke");
   const [jokeText, setJokeText] = useState(
     "I'm not good at coming up with jokes, but this API is."
   );
 
-  const [punchlineText, setPunchlineText] = useState("Testing for now");
+  const [punchlineText, setPunchlineText] = useState(
+    "Punch line will be here once you fetch a joke.  :)"
+  );
 
   let jokesData = props.jokeData;
   //somewhat gloabl variables
@@ -90,7 +94,7 @@ export default function JokesCard(props) {
   function createCard(joke) {
     // props.data += 1;
     setCardState(joke);
-    createButton(showPunchLine, "Show Punchline");
+    createButton(handleClick, "Fetch a new joke!");
     let jokeButton = document.getElementById("jokeButton");
     jokeButton.remove();
   }
@@ -102,7 +106,7 @@ export default function JokesCard(props) {
     button.id = "jokeButton";
     button.innerHTML = buttonText;
     button.addEventListener("click", functionCall);
-    document.getElementById("jokesContainer").append(button);
+    document.getElementById("jokesButtonContainer").append(button);
   }
 
   //Setting Hook States
@@ -118,7 +122,7 @@ export default function JokesCard(props) {
     document.getElementById("jokeButton").remove();
     createButton(handleClick, "Request a new joke");
     setJokeText(jokeTextValue);
-    document.getElementsByClassName("flip-card-inner").id="showBack"
+    // document.getElementsByClassName("flip-card-inner").id = "showBack";
   }
 
   //Just a jsx element for initial page load
@@ -140,14 +144,11 @@ export default function JokesCard(props) {
             <h1 className="ui text">{jokeText}</h1>
             <p> {jokeType}</p>
           </div>
-          <div className="flip-card-back">
-            {punchlineText}
-          </div>
+          <div className="flip-card-back">{punchlineText}</div>
         </div>
       </div>
-      <div className="ui container center aligned">
-      {jokeButton}
-
+      <div className="ui container center aligned" id="jokesButtonContainer">
+        {jokeButton}
       </div>
     </div>
   );
