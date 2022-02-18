@@ -42,12 +42,9 @@ export default function RandomCats(props) {
   }
 
   return (
-    <div className="ui" id="randomCats">
+    <div className="ui container fluid center aligned" id="randomCats">
       <CatNavigation />
-      <div
-        className="ui container fluid padded relaxed center aligned ui text huge stackable grid"
-        id="randomCatFactContainer"
-      >
+      <div className="ui container center aligned" id="randomCatFactContainer">
         <div>
           <span id="catRandomFact" className="ui text">
             How many Seconds do you want between seeing a random cat fact?

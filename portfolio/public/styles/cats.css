@@ -1,14 +1,14 @@
 /* Global Cat styles */
 #catApp {
   background-color: black;
-  color:white;
+  color: white;
   height: 100vh;
 }
 
 #randomCats {
   height: 100vh;
   background-color: black;
-  color:white;
+  color: white;
 }
 
 #breedBtn,
@@ -24,7 +24,6 @@
   color: white;
   background-color: black;
   border-color: whitesmoke;
-  
 }
 
 .cat {
@@ -39,19 +38,15 @@
 /* Cat Nav Menu */
 #catNavigationMenu {
   border-bottom-color: whitesmoke;
-  
 }
 
 /* Random Fact page */
 
 #randomCatFactContainer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   font-size: 36px;
   overflow-y: scroll;
+  position: relative;
+  padding-top: 10%;
 }
 
 #randomCatFactContainer:hover {
@@ -82,8 +77,9 @@
 
 #breedListContainer {
   background-color: black;
-  color:white;
+  color: white;
   height: 100vh;
+  overflow-y: scroll;
 }
 #breedList {
   color: whitesmoke;
@@ -119,10 +115,11 @@
 }
 /* Random Facts Page */
 
-#catFactsListContainer{
+#catFactsListContainer {
   background-color: black;
-  color:white;
+  color: white;
   height: 100vh;
+  overflow-y: scroll;
 }
 #catFactsList {
   color: whitesmoke;
@@ -135,9 +132,6 @@
 
 #catFactsList > p:hover {
   text-shadow: 1px 1px whitesmoke;
-}
-#catsListButton {
-  margin-top: 2rem;
 }
 
 #pageNum {
@@ -189,6 +183,7 @@
     height: 400px;
     overflow-y: scroll;
     overflow-x: hidden;
+    margin-left: unset;
   }
 
   #catInput,
@@ -200,7 +195,6 @@
   #catsListButton {
     border-top: grey solid 2px;
   }
-
 
   #catFactsList {
     padding: unset;
@@ -298,5 +292,10 @@
   }
   #catFooter {
     padding: unset;
+  }
+
+  #catsListButton,
+  #breedButton {
+    padding-bottom: 4rem;
   }
 }

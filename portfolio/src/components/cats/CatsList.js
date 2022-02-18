@@ -42,7 +42,7 @@ export default function CatsList(props) {
 
   return (
     <div
-      className="ui container fluid center aligned very padded relaxed"
+      className="ui container fluid center aligned  relaxed"
       id="catFactsListContainer"
     >
       <CatNavigation />
@@ -53,6 +53,7 @@ export default function CatsList(props) {
           1/34
         </span>
       </h2>
+
       <div
         className="ui container padded relaxed segment"
         id="catFactsList"
