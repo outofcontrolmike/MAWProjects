@@ -2,7 +2,6 @@ import React from "react";
 //Jokes Menu
 const JokesMenu = (props) => {
   //Grabs API Status
-  console.log(props, "props joke menu");
   function requestStatus() {
     let url =
       "https://nova-joke-api.netlify.app/.netlify/functions/index/status";
@@ -17,14 +16,16 @@ const JokesMenu = (props) => {
       });
   }
 
+  //Message from api
+  function displayStatus(message) {
+    window.alert(message);
+  }
+
+  //Resets the jokes container
   function resetJokes() {
     document.getElementById("jokesList").innerHTML = "";
     document.getElementById("jokesContainer").style.visibility = "visible";
     document.getElementById("jokesContainer").style.height = "fit-content";
-  }
-
-  function displayStatus(message) {
-    window.alert(message);
   }
 
   function requestTenJokes() {

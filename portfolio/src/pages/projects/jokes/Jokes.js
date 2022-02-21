@@ -24,12 +24,13 @@ Ten random jokes based on category - https://nova-joke-api.netlify.app/.netlify/
 //Programming Related Jokes
 export default function Jokes(props) {
   let [jokeQuantity, setJokeQuantity] = useState(0);
+  console.log(jokeQuantity);
 
   return (
     <div id="jokesApp" style={{ backgroundColor: "white", color: "black" }}>
       <div className="ui  fluid stackable grid">
         <JokesMenu
-          data={() => setJokeQuantity((jokeQuantity += 10))}
+          data={() => setJokeQuantity(jokeQuantity + 10)}
           setJokes={jokeQuantity}
         />
         <div
