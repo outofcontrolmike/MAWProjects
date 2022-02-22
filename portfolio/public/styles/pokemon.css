@@ -97,12 +97,11 @@
 
 /* PokeImage shake effect  */
 .mobileImage:hover {
-  animation: shake 2s;
-  animation-iteration-count: infinite;
+  transform: scale(2);
 }
 
 /* Controls the shake animation */
-@keyframes shake {
+/* @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
   }
@@ -136,7 +135,7 @@
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
-}
+} */
 
 /* Align cards in rows (flex) */
 #pokeTest {
@@ -173,6 +172,7 @@
   .mobileImage {
     height: 150px;
     width: 150px;
+    transition: transform .2s;
   }
   .ui.input,
   #searchValue {

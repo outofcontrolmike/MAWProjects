@@ -227,7 +227,7 @@ function PokemonMenu() {
     abilities.style.maxWidth = "200";
     setColor(colorType, pokeContainer);
 
-    container.prepend(pokeContainer);
+    container.append(pokeContainer);
   } //end multi
 
   //Misc Functions//
