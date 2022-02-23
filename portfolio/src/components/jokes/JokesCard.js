@@ -45,7 +45,9 @@ export default function JokesCard(props) {
 
   //Original button click
   function handleClick() {
+    //This increments the call through an onClick event from parent component
     props.data();
+
     setJokeType();
     // setQuantity();
     fetchJoke();

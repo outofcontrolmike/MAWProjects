@@ -1,6 +1,12 @@
 import React from "react";
+import { useState } from "react";
+
 //Jokes Menu
 const JokesMenu = (props) => {
+
+  const  [categorySelected, setSelected] = useState("");
+
+
   //Grabs API Status
   function requestStatus() {
     let url =
@@ -72,6 +78,10 @@ const JokesMenu = (props) => {
     document.getElementById("jokesList").prepend(jokeDiv);
   }
 
+  function handleSelected() {
+    setSelected(this)
+  }
+
   return (
     <div className="ui menu stackable fluid">
       <div className="header item">
@@ -89,19 +99,22 @@ const JokesMenu = (props) => {
                   name="frequency"
                   id="jokeGeneral"
                   checked="checked"
+                  onChange={handleSelected}
                 />
                 <label>General</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" id="jokeKnock" />
+                <input type="radio" name="frequency" id="jokeKnock"
+                    onChange={handleSelected} />
                 <label>Knock Knock</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" id="jokeProgramming" />
+                <input type="radio" name="frequency" id="jokeProgramming"
+                    onChange={handleSelected} />
                 <label>Programming</label>
               </div>
             </div>
