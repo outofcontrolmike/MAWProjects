@@ -50,6 +50,7 @@ const JokesCard = ({jokeData,addJokes,jokeCount }) =>  {
     fetchJoke();
 
     addJokes(jokeCount += 1)
+
   }
 
   //Sets up category param for fetch and jokeType for card
@@ -71,7 +72,6 @@ const JokesCard = ({jokeData,addJokes,jokeCount }) =>  {
       setJokeCategory("Programming");
       typeParam = "programming";
     }
-    return;
   }
 
   //The actual fetch - doesn't need to accept any parameters
@@ -119,6 +119,19 @@ const JokesCard = ({jokeData,addJokes,jokeCount }) =>  {
     setJokeId("#" + joke.id);
     jokeTextValue = joke.punchline;
     setPunchlineText(joke.punchline);
+    resetJokeCategory();
+  }
+
+  //Fix for radio fields being reset to default because of setting state
+  function resetJokeCategory() {
+    if(typeParam === "programming") {
+      document.getElementById("jokeGeneral").checked = "false";
+      document.getElementById('jokeProgramming').checked = "true"
+    }
+    if(typeParam === "knock-knock") {
+      document.getElementById("jokeGeneral").checked = "false";
+      document.getElementById('jokeKnock').checked = "true"
+    }
   }
 
   //Just a jsx element for initial page load
