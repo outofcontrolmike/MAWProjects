@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 //Sets up and displays Jokes
-export default function JokesCard(props) {
+const JokesCard = ({jokeData,addJokes,jokeCount }) =>  {
   //Hooks for the card mainly
   const [jokeType, setJokeCategory] = useState(
     "If you hover this card you will see the punchline.  Of course you need to fetch a joke first. "
@@ -17,13 +17,12 @@ export default function JokesCard(props) {
     "Punch line will be here once you fetch a joke.  :)"
   );
 
-  let jokesData = props.jokeData;
+  let jokesData = jokeData;
   //somewhat gloabl variables
   let jokeTextValue = "";
   let typeParam = "";
   let quantityParam = "";
 
-  console.log("card props", props);
 
   // function pageLoadJoke() {
   //   let url =
@@ -46,11 +45,11 @@ export default function JokesCard(props) {
   //Original button click
   function handleClick() {
     //This increments the call through an onClick event from parent component
-    props.data();
 
     setJokeType();
-    // setQuantity();
     fetchJoke();
+
+    addJokes(jokeCount += 1)
   }
 
   //Sets up category param for fetch and jokeType for card
@@ -154,3 +153,5 @@ export default function JokesCard(props) {
     </div>
   );
 }
+
+export default JokesCard;

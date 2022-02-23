@@ -29,15 +29,18 @@ let [jokeQuantity, setJokeQuantity] = useState(0);
     <div id="jokesApp" style={{ backgroundColor: "white", color: "black" }}>
       <div className="ui fluid stackable grid">
         <JokesMenu
-          data={() => setJokeQuantity(jokeQuantity + 10)}
-          setJokes={jokeQuantity}
+          addJokes={setJokeQuantity}
+          jokeQuantity={jokeQuantity}
         />
         <div
           className="ui container fluid"
           style={{ backgroundColor: "" }}
           id="jokesContent"
         >
-          <JokesCard data={() => setJokeQuantity((jokeQuantity += 1))} />
+          <JokesCard
+            addJokes={setJokeQuantity}
+            jokeCount={jokeQuantity}
+          />
           <div className="ui container fluid" id="jokesList"></div>
         </div>
         <JokesFooter />

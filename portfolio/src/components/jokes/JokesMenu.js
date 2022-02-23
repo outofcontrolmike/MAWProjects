@@ -2,10 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 //Jokes Menu
-const JokesMenu = (props) => {
-
-  const  [categorySelected, setSelected] = useState("");
-
+const JokesMenu = ({jokeQuantity,addJokes}) => {
 
   //Grabs API Status
   function requestStatus() {
@@ -35,6 +32,7 @@ const JokesMenu = (props) => {
   }
 
   function requestTenJokes() {
+
     let url =
       "https://nova-joke-api.netlify.app/.netlify/functions/index/api/ten";
     fetch(url)
@@ -43,6 +41,7 @@ const JokesMenu = (props) => {
         document.getElementById("jokesContainer").style.visibility = "hidden";
         document.getElementById("jokesContainer").style.height = "0px";
 
+      addJokes(jokeQuantity + 10)
         jokeData.map((joke) => {
           createJokeList(joke);
         });
@@ -53,7 +52,6 @@ const JokesMenu = (props) => {
   }
 
   function createJokeList(joke) {
-    props.data();
     let jokeId = joke.id;
     let jokeType = joke.type;
     let jokeSetup = joke.setup;
@@ -77,11 +75,6 @@ const JokesMenu = (props) => {
     jokeDiv.append(jokeIdP, jokeTypeP, jokeSetup, jokePunchlineP);
     document.getElementById("jokesList").prepend(jokeDiv);
   }
-
-  function handleSelected() {
-    setSelected(this)
-  }
-
   return (
     <div className="ui menu stackable fluid">
       <div className="header item">
@@ -99,7 +92,6 @@ const JokesMenu = (props) => {
                   name="frequency"
                   id="jokeGeneral"
                   checked="checked"
-                  onChange={handleSelected}
                 />
                 <label>General</label>
               </div>
@@ -107,14 +99,14 @@ const JokesMenu = (props) => {
             <div className="field">
               <div className="ui radio checkbox">
                 <input type="radio" name="frequency" id="jokeKnock"
-                    onChange={handleSelected} />
+                  />
                 <label>Knock Knock</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
                 <input type="radio" name="frequency" id="jokeProgramming"
-                    onChange={handleSelected} />
+                  />
                 <label>Programming</label>
               </div>
             </div>
@@ -145,7 +137,7 @@ const JokesMenu = (props) => {
         </button>
       </div>
       <div className="item">
-        <h2>{props.setJokes}</h2>
+        <h2>{jokeQuantity}</h2>
       </div>
     </div>
   );
