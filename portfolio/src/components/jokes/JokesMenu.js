@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 //Jokes Menu
-const JokesMenu = ({jokeQuantity,addJokes}) => {
-
+const JokesMenu = ({ jokeQuantity, addJokes }) => {
   //Grabs API Status
   function requestStatus() {
     let url =
@@ -32,7 +31,6 @@ const JokesMenu = ({jokeQuantity,addJokes}) => {
   }
 
   function requestTenJokes() {
-
     let url =
       "https://nova-joke-api.netlify.app/.netlify/functions/index/api/ten";
     fetch(url)
@@ -41,7 +39,7 @@ const JokesMenu = ({jokeQuantity,addJokes}) => {
         document.getElementById("jokesContainer").style.visibility = "hidden";
         document.getElementById("jokesContainer").style.height = "0px";
 
-      addJokes(jokeQuantity += 10)
+        addJokes((jokeQuantity += 10));
         jokeData.map((joke) => {
           createJokeList(joke);
         });
@@ -76,10 +74,7 @@ const JokesMenu = ({jokeQuantity,addJokes}) => {
     document.getElementById("jokesList").prepend(jokeDiv);
   }
   return (
-    <div className="ui menu stackable fluid">
-      <div className="header item">
-        <p style={{ fontSize: "4rem" }}>Random Jokes</p>
-      </div>
+    <div className="ui menu stackable fluid center aligned">
       <div className="item">
         {" "}
         <div className="ui form" id="jokeType" style={{ fontSize: "24px" }}>
@@ -98,22 +93,25 @@ const JokesMenu = ({jokeQuantity,addJokes}) => {
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" id="jokeKnock"
-                  />
+                <input type="radio" name="frequency" id="jokeKnock" />
                 <label>Knock Knock</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
-                <input type="radio" name="frequency" id="jokeProgramming"
-                  />
+                <input type="radio" name="frequency" id="jokeProgramming" />
                 <label>Programming</label>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="item">
+      <div className="ui item center aligned">
+        <div className="header ui text">
+          <p style={{ fontSize: "4rem" }}>Random Jokes</p>
+        </div>
+      </div>
+      <div className="right menu">
         <button
           className="
       ui button huge basic green"
@@ -135,9 +133,9 @@ const JokesMenu = ({jokeQuantity,addJokes}) => {
         >
           API Status
         </button>
-      </div>
-      <div className="item">
-        <h2>{jokeQuantity}</h2>
+        <div className="item center aligned">
+          <h1>{jokeQuantity}</h1>
+        </div>
       </div>
     </div>
   );
