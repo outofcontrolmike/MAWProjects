@@ -2,11 +2,14 @@ import React from "react";
 import { useState } from "react";
 
 //Sets up and displays Jokes
-const JokesCard = ({jokeData,addJokes,jokeCount }) =>  {
+const JokesCard = ({jokeData,jokeCount,addJokes }) =>  {
+
+
   //Hooks for the card mainly
   const [jokeType, setJokeCategory] = useState(
     "If you hover this card you will see the punchline.  Of course you need to fetch a joke first. "
   );
+  
   const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("");
   const [jokeText, setJokeText] = useState(
@@ -17,40 +20,22 @@ const JokesCard = ({jokeData,addJokes,jokeCount }) =>  {
     "Punch line will be here once you fetch a joke.  :)"
   );
 
-  let jokesData = jokeData;
+
   //somewhat gloabl variables
+
+  let jokesData = jokeData;
   let jokeTextValue = "";
   let typeParam = "";
   let quantityParam = "";
 
 
-  // function pageLoadJoke() {
-  //   let url =
-  //     "https://nova-joke-api.netlify.app/.netlify/functions/index/api/random/";
-  //   fetch(url)
-  //     .then((response) => response.json())
-  //     .then((jokeData) => {
-  //       console.log("jokeData", jokeData);
-  //       setJokeText(jokeData.setup);
-  //       setJokeCategory(jokeData.type);
-  //       console.log(jokeData);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     });
-  // }
-
-  // pageLoadJoke();
-
   //Original button click
   function handleClick() {
-    //This increments the call through an onClick event from parent component
-
     setJokeType();
     fetchJoke();
 
+    //Increment counter state
     addJokes(jokeCount += 1)
-
   }
 
   //Sets up category param for fetch and jokeType for card
@@ -94,27 +79,8 @@ const JokesCard = ({jokeData,addJokes,jokeCount }) =>  {
       });
   }
 
-  //Create card based on data - accepts joke data as a parameter
+  //Sets up the state and ui for card
   function createCard(joke) {
-    // props.data += 1;
-    setCardState(joke);
-    createButton(handleClick, "Fetch a new joke!");
-    let jokeButton = document.getElementById("jokeButton");
-    jokeButton.remove();
-  }
-
-  //Handles creating a new button element and appending to dom
-  function createButton(functionCall, buttonText) {
-    let button = document.createElement("button");
-    button.classList = "ui button massive blue";
-    button.id = "jokeButton";
-    button.innerHTML = buttonText;
-    button.addEventListener("click", functionCall);
-    document.getElementById("jokesButtonContainer").append(button);
-  }
-
-  //Setting Hook States
-  function setCardState(joke) {
     setJokeText(joke.setup);
     setJokeId("#" + joke.id);
     jokeTextValue = joke.punchline;

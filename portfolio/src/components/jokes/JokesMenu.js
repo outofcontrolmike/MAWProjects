@@ -41,7 +41,7 @@ const JokesMenu = ({jokeQuantity,addJokes}) => {
         document.getElementById("jokesContainer").style.visibility = "hidden";
         document.getElementById("jokesContainer").style.height = "0px";
 
-      addJokes(jokeQuantity + 10)
+      addJokes(jokeQuantity += 10)
         jokeData.map((joke) => {
           createJokeList(joke);
         });
