@@ -2,14 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 //Sets up and displays Jokes
-const JokesCard = ({jokeData,jokeCount,addJokes }) =>  {
-
-
+const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
   //Hooks for the card mainly
   const [jokeType, setJokeCategory] = useState(
     "If you hover this card you will see the punchline.  Of course you need to fetch a joke first. "
   );
-  
+
   const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("");
   const [jokeText, setJokeText] = useState(
@@ -20,7 +18,6 @@ const JokesCard = ({jokeData,jokeCount,addJokes }) =>  {
     "Punch line will be here once you fetch a joke.  :)"
   );
 
-
   //somewhat gloabl variables
 
   let jokesData = jokeData;
@@ -28,14 +25,13 @@ const JokesCard = ({jokeData,jokeCount,addJokes }) =>  {
   let typeParam = "";
   let quantityParam = "";
 
-
   //Original button click
   function handleClick() {
     setJokeType();
     fetchJoke();
 
     //Increment counter state
-    addJokes(jokeCount += 1)
+    addJokes((jokeCount += 1));
   }
 
   //Sets up category param for fetch and jokeType for card
@@ -90,13 +86,13 @@ const JokesCard = ({jokeData,jokeCount,addJokes }) =>  {
 
   //Fix for radio fields being reset to default because of setting state
   function resetJokeCategory() {
-    if(typeParam === "programming") {
+    if (typeParam === "programming") {
       document.getElementById("jokeGeneral").checked = "false";
-      document.getElementById('jokeProgramming').checked = "true"
+      document.getElementById("jokeProgramming").checked = "true";
     }
-    if(typeParam === "knock-knock") {
+    if (typeParam === "knock-knock") {
       document.getElementById("jokeGeneral").checked = "false";
-      document.getElementById('jokeKnock').checked = "true"
+      document.getElementById("jokeKnock").checked = "true";
     }
   }
 
@@ -131,6 +127,6 @@ const JokesCard = ({jokeData,jokeCount,addJokes }) =>  {
       </div>
     </div>
   );
-}
+};
 
 export default JokesCard;

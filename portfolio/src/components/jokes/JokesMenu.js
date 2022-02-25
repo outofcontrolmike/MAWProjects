@@ -74,11 +74,11 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
     document.getElementById("jokesList").prepend(jokeDiv);
   }
   return (
-    <div className="ui menu stackable fluid center aligned">
-      <div className="item">
+    <div className="ui three item menu stackable fluid">
+      <div className="item center aligned">
         {" "}
         <div className="ui form" id="jokeType" style={{ fontSize: "24px" }}>
-          <div className="inline fields">
+          <div className="inline fields container">
             <label>Type of Joke?</label>
             <div className="field">
               <div className="ui radio checkbox">
@@ -106,7 +106,10 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
           </div>
         </div>
       </div>
-      <div className="right menu">
+      <div className="item center aligned">
+        <h1>{jokeQuantity}</h1>
+      </div>
+      <div className="right item menu">
         <button
           className="
       ui button huge basic green"
@@ -128,9 +131,6 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
         >
           API Status
         </button>
-        <div className="item center aligned">
-          <h1>{jokeQuantity}</h1>
-        </div>
       </div>
     </div>
   );
