@@ -5,6 +5,8 @@
 import HomeLink from "../../../components/links/Home";
 
 export default function CoolCalc() {
+  document.title = "Cool Calculator";
+
   //Had to set timeout because component wasn't rendering correctly
   setTimeout(loadEverything, 5);
 
@@ -136,145 +138,145 @@ export default function CoolCalc() {
   }
 
   return (
-      <div id="coolCalcApp">
-        <div
-          className="ui two column container very padded relaxed"
-          style={{ width: "fit-content", paddingTop: "15rem" }}
-        >
-          <div className="ui column">
-            <div style={{ marginRight: "5rem" }}>
-              <label
-                style={{
-                  fontFamily: "'Rock Salt', cursive",
-                  marginRight: "1rem",
-                }}
-              >
-                Num1
-              </label>
-              <input
-                style={{
-                  borderColor: "white",
-                  height: "100px",
-                  fontSize: "xx-large",
-                  width: "210px",
-                  backgroundColor: "black",
-                  color: "green",
-                  fontFamily: "'Rock Salt', cursive",
-                }}
-                type="number"
-                id="num1"
-                maxlength="12"
-                className="input field"
-              />
-              <label
-                style={{
-                  marginLeft: "1rem",
-                  marginRight: "1rem",
-                  fontFamily: "'Rock Salt', cursive",
-                }}
-              >
-                Num2
-              </label>
-              <input
-                style={{
-                  fontFamily: "'Rock Salt', cursive",
-                  borderColor: "white",
-                  height: "100px",
-                  fontSize: "xx-large",
-                  width: "210px",
-                  backgroundColor: "black",
-                  color: "green",
-                }}
-                type="number"
-                id="num2"
-                maxlength="12"
-                max="12"
-              />
-            </div>
-            <div
-              className="container"
-              style={{ textAlign: "center", padding: "30px" }}
-            >
-              <button
-                id="add"
-                type="button"
-                style={{ margin: ".5rem" }}
-                className="ui inverted green button"
-              >
-                {" "}
-                <span id="coolBtn">Add</span>
-              </button>
-              <button
-                id="minus"
-                type="button"
-                style={{ margin: ".5rem" }}
-                className="ui inverted red button coolBtn"
-              >
-                {" "}
-                <span id="coolBtn">Subtract</span>
-              </button>
-              <button
-                id="mult"
-                type="button"
-                style={{ margin: ".5rem" }}
-                className="ui inverted purple button coolBtn"
-              >
-                {" "}
-                <span id="coolBtn">Multiply</span>
-              </button>
-              <button
-                id="divide"
-                type="number"
-                style={{ margin: ".5rem" }}
-                className="ui inverted teal button coolBtn"
-              >
-                {" "}
-                <span id="coolBtn">Divide</span>
-              </button>
-              <button
-                id="clear"
-                type="number"
-                style={{ margin: ".5rem" }}
-                className="ui inverted brown button coolBtn"
-              >
-                {" "}
-                <span id="coolBtn">Clear</span>
-              </button>
-            </div>
-          </div>
-          <hr
-            id="calcBr"
-            style={{ borderColor: "white", visibility: "hidden" }}
-          />
-          <br></br>
-          <div className="ui column" id="sum" style={{ height: "5rem" }}>
-            <span
-              style={{ fontFamily: "'Rock Salt', cursive" }}
-              id="value1"
-            ></span>
-            <span
-              style={{ fontFamily: "'Rock Salt', cursive" }}
-              id="operator"
-            ></span>
-            <span
-              style={{ fontFamily: "'Rock Salt', cursive" }}
-              id="value2"
-            ></span>
-            <span
+    <div id="coolCalcApp">
+      <div
+        className="ui two column container very padded relaxed"
+        style={{ width: "fit-content", paddingTop: "15rem" }}
+      >
+        <div className="ui column">
+          <div style={{ marginRight: "5rem" }}>
+            <label
               style={{
                 fontFamily: "'Rock Salt', cursive",
-                color: "green",
-                fontSize: "xx-large",
-                marginLeft: "2%",
+                marginRight: "1rem",
               }}
-              className="blink"
-              id="total"
-            ></span>
+            >
+              Num1
+            </label>
+            <input
+              style={{
+                borderColor: "white",
+                height: "100px",
+                fontSize: "xx-large",
+                width: "210px",
+                backgroundColor: "black",
+                color: "green",
+                fontFamily: "'Rock Salt', cursive",
+              }}
+              type="number"
+              id="num1"
+              maxlength="12"
+              className="input field"
+            />
+            <label
+              style={{
+                marginLeft: "1rem",
+                marginRight: "1rem",
+                fontFamily: "'Rock Salt', cursive",
+              }}
+            >
+              Num2
+            </label>
+            <input
+              style={{
+                fontFamily: "'Rock Salt', cursive",
+                borderColor: "white",
+                height: "100px",
+                fontSize: "xx-large",
+                width: "210px",
+                backgroundColor: "black",
+                color: "green",
+              }}
+              type="number"
+              id="num2"
+              maxlength="12"
+              max="12"
+            />
+          </div>
+          <div
+            className="container"
+            style={{ textAlign: "center", padding: "30px" }}
+          >
+            <button
+              id="add"
+              type="button"
+              style={{ margin: ".5rem" }}
+              className="ui inverted green button"
+            >
+              {" "}
+              <span id="coolBtn">Add</span>
+            </button>
+            <button
+              id="minus"
+              type="button"
+              style={{ margin: ".5rem" }}
+              className="ui inverted red button coolBtn"
+            >
+              {" "}
+              <span id="coolBtn">Subtract</span>
+            </button>
+            <button
+              id="mult"
+              type="button"
+              style={{ margin: ".5rem" }}
+              className="ui inverted purple button coolBtn"
+            >
+              {" "}
+              <span id="coolBtn">Multiply</span>
+            </button>
+            <button
+              id="divide"
+              type="number"
+              style={{ margin: ".5rem" }}
+              className="ui inverted teal button coolBtn"
+            >
+              {" "}
+              <span id="coolBtn">Divide</span>
+            </button>
+            <button
+              id="clear"
+              type="number"
+              style={{ margin: ".5rem" }}
+              className="ui inverted brown button coolBtn"
+            >
+              {" "}
+              <span id="coolBtn">Clear</span>
+            </button>
           </div>
         </div>
-      <span style={{position: "fixed", bottom: "2rem" ,right : "2rem" }}>
+        <hr
+          id="calcBr"
+          style={{ borderColor: "white", visibility: "hidden" }}
+        />
+        <br></br>
+        <div className="ui column" id="sum" style={{ height: "5rem" }}>
+          <span
+            style={{ fontFamily: "'Rock Salt', cursive" }}
+            id="value1"
+          ></span>
+          <span
+            style={{ fontFamily: "'Rock Salt', cursive" }}
+            id="operator"
+          ></span>
+          <span
+            style={{ fontFamily: "'Rock Salt', cursive" }}
+            id="value2"
+          ></span>
+          <span
+            style={{
+              fontFamily: "'Rock Salt', cursive",
+              color: "green",
+              fontSize: "xx-large",
+              marginLeft: "2%",
+            }}
+            className="blink"
+            id="total"
+          ></span>
+        </div>
+      </div>
+      <span style={{ position: "fixed", bottom: "2rem", right: "2rem" }}>
         <HomeLink />
       </span>
-      </div>
+    </div>
   );
 }

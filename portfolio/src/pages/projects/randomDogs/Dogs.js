@@ -1,15 +1,17 @@
 /*
-*Title: Random Dog Viewer
-*Purpose: Display random dogs based on button click
-*Date: 01/29/2022
-*Author: Michael Wilson
-*/
+ *Title: Random Dog Viewer
+ *Purpose: Display random dogs based on button click
+ *Date: 01/29/2022
+ *Author: Michael Wilson
+ */
 
 import React from "react";
 import DogFooter from "../../../components/dogs/DogFooter";
-// Main component for Dogs Project
 
+// Main component for Dogs Project
 export default function Dogs() {
+  document.title = "Random Dogs";
+
   function handleClick() {
     let url = "https://dog.ceo/api/breeds/image/random";
     fetch(url)
@@ -31,7 +33,7 @@ export default function Dogs() {
     >
       <p
         className="ui text massive black"
-        style={{ textAlign: "center"}}
+        style={{ textAlign: "center" }}
         id="dogHeader"
       >
         Random Dog Generator

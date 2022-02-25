@@ -8,6 +8,8 @@ import HikingTrails from "../../../components/hikes/HikingTrails";
 
 //main hiking component
 function Hikes(props) {
+  document.title = "Mikes Hikes";
+
   let imgArray = new Array();
 
   function setupImages() {

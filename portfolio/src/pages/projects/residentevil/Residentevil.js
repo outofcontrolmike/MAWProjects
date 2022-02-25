@@ -13,6 +13,8 @@ import ReFooter from "../../../components/residentevil/ReFooter";
 
 //Main Resident Evil Component
 export default function Residentevil() {
+  document.title = "Resident Evil Profiler";
+
   //Game Data Response Array
   let data = [
     //Resident Evil Characters

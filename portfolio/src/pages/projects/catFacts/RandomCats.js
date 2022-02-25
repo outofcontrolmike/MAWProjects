@@ -3,6 +3,8 @@ import CatNavigation from "../../../components/cats/CatNavigation";
 import CatFooter from "../../../components/cats/CatFooter";
 
 export default function RandomCats(props) {
+  document.title = "Cat Facts";
+
   // Get Random Cat Fact
   function requestFact(time) {
     let url = "https://catfact.ninja/fact";

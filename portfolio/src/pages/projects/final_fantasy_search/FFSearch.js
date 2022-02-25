@@ -2,6 +2,8 @@ import FFMenu from "../../../components/finalFantasy/FFMenu";
 
 //Main component for final fantasy search
 function FFSearch() {
+  document.title = "Final Fantasy Search";
+
   //Global Variables
   let count = 0;
   var prevURL = "";

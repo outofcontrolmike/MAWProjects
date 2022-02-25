@@ -2,6 +2,8 @@ import Images from "./Images";
 
 //Great Race Project in React
 export default function GreatRace() {
+  document.title = "Great Race";
+
   //Loads script after initial render
   setTimeout(runScript, 5);
 
@@ -45,7 +47,7 @@ export default function GreatRace() {
       myTime = setInterval(takeOff, 6);
       takeOff();
     }
-    
+
     function takeOff() {
       var rand = Math.round(Math.random() * 10);
       var rand2 = Math.round(Math.random() * 10);

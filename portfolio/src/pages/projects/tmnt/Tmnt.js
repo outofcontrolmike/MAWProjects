@@ -3,6 +3,8 @@ import TurtleSelect from "../../../components/tmnt/TurtleSelect";
 
 import TMNTAudio from "../../../components/tmnt/TmntAudio";
 export default function Tmnt(props) {
+  document.title = "TMNT Character Select";
+
   //Functions here
   setTimeout(loadAll, 50);
 
@@ -233,12 +235,12 @@ export default function Tmnt(props) {
     initiateVars();
   }
   return (
-    <div id="tmntProject" >
+    <div id="tmntProject">
       <div className="ui">
         {/* // <!--Players--> */}
         <div
           className="ui two column doubling stackable grid container segment"
-          style={{ marginTop: "unset", }}
+          style={{ marginTop: "unset" }}
         >
           {/* <!-- first player--> */}
           <div className="column ui" id="players">

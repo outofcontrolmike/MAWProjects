@@ -3,8 +3,11 @@ import BrewFooter from "../../../components/brewereyFetch/BrewFooter";
 
 //Main component to render for Brewery App
 export default function Brewery() {
+  document.title = "Brewery fetching";
+
   return (
-    <body id="brewBody"
+    <body
+      id="brewBody"
       className="ui segment"
       style={{ backgroundColor: "black", height: "100vh" }}
     >

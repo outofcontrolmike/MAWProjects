@@ -106,11 +106,6 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
           </div>
         </div>
       </div>
-      <div className="ui item center aligned">
-        <div className="header ui text">
-          <p style={{ fontSize: "4rem" }}>Random Jokes</p>
-        </div>
-      </div>
       <div className="right menu">
         <button
           className="
