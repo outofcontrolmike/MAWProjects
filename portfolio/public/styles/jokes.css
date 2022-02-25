@@ -12,11 +12,11 @@
 #jokesApp {
   height: 100vh;
   margin-bottom: 4rem;
-  background-color: #f8f5c0;
+  background-color: #77f8fd;
 }
 
 #jokesAppContainer {
-  background-color: #f8f5c0;
+  background-color: #77f8fd;
 }
 
 #jokesContainer {
@@ -31,9 +31,9 @@
   position: fixed;
   bottom: 0px;
   background-color: #9ef8df;
-  border-top: solid black 4px;
   padding: 1rem;
   width: 105%;
+  border: 1px solid rgba(34, 36, 38, 0.15);
 }
 
 #jokesFooter > .column > a {
@@ -84,23 +84,27 @@
 
 .flip-card-front {
   color: black;
-  background-color: #77f8fd;
+  background-color: #9ef8df;
 }
 
 .flip-card-back {
-  background-color: #77f8fd;
+  background-color: #9ef8df;
   color: black;
   transform: rotateY(180deg);
 }
 
+#jokeId {
+  color: #fcc470;
+}
+
 #jokeButton {
   margin-top: 2rem;
-  background-color: #77f8fd;
+  background-color: #9ef8df;
 }
 
 #jokeButton:hover {
   background-color: #fdcede;
-  border-radius: 50%;
+  border-radius: 45%;
 }
 #resetJokes,
 #tenJokes {

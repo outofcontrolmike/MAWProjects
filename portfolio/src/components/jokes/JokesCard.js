@@ -113,12 +113,16 @@ const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
       <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
-            <h2 style={{ float: "left" }}>{jokeId}</h2>
+            <h2 id="jokeId" style={{ float: "left" }}>
+              {jokeId}
+            </h2>
             <h1 className="ui text">{jokeText}</h1>
             <h5> {jokeType}</h5>
           </div>
           <div className="flip-card-back">
-            <h2 style={{ float: "right" }}>{jokeId}</h2>
+            <h2 id="jokeId" style={{ float: "right" }}>
+              {jokeId}
+            </h2>
             <h1>{punchlineText}</h1>
           </div>
         </div>
