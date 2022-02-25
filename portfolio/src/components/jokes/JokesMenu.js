@@ -25,12 +25,14 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
 
   //Resets the jokes container
   function resetJokes() {
+    document.getElementById("resetJokes").classList.add("disabled");
     document.getElementById("jokesList").innerHTML = "";
     document.getElementById("jokesContainer").style.visibility = "visible";
     document.getElementById("jokesContainer").style.height = "fit-content";
   }
 
   function requestTenJokes() {
+    document.getElementById("resetJokes").classList.remove("disabled");
     let url =
       "https://nova-joke-api.netlify.app/.netlify/functions/index/api/ten";
     fetch(url)
@@ -74,12 +76,11 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
     document.getElementById("jokesList").prepend(jokeDiv);
   }
   return (
-    <div className="ui three item menu stackable fluid">
+    <div className="ui three item menu stackable fluid" id="jokesMenu">
       <div className="item center aligned">
         {" "}
         <div className="ui form" id="jokeType" style={{ fontSize: "24px" }}>
           <div className="inline fields container">
-            <label>Type of Joke?</label>
             <div className="field">
               <div className="ui radio checkbox">
                 <input
@@ -88,45 +89,48 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
                   id="jokeGeneral"
                   checked="checked"
                 />
-                <label>General</label>
+                <label id="jokeCategoryLabel">General</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
                 <input type="radio" name="frequency" id="jokeKnock" />
-                <label>Knock Knock</label>
+                <label id="jokeCategoryLabel">Knock Knock</label>
               </div>
             </div>
             <div className="field">
               <div className="ui radio checkbox">
                 <input type="radio" name="frequency" id="jokeProgramming" />
-                <label>Programming</label>
+                <label id="jokeCategoryLabel">Programming</label>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="item center aligned">
-        <h1>{jokeQuantity}</h1>
+        <h1 id="jokeQuantity">{jokeQuantity}</h1>
       </div>
-      <div className="right item menu">
+      <div className="right item menu stackable" id="jokeBtnGroup">
         <button
           className="
-      ui button huge basic green"
+      ui button huge circular disabled"
+          id="resetJokes"
           onClick={resetJokes}
         >
           Fetch Random Joke
         </button>
         <button
           className=" 
-      ui button huge basic orange"
+      ui button huge circular"
+          id="tenJokes"
           onClick={requestTenJokes}
         >
           Request List of Jokes
         </button>
         <button
           className=" 
-      ui button huge basic blue"
+      ui button huge circular"
+          id="jokeStatusBtn"
           onClick={requestStatus}
         >
           API Status

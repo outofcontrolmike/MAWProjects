@@ -90,6 +90,7 @@ const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
       document.getElementById("jokeGeneral").checked = "false";
       document.getElementById("jokeProgramming").checked = "true";
     }
+
     if (typeParam === "knock-knock") {
       document.getElementById("jokeGeneral").checked = "false";
       document.getElementById("jokeKnock").checked = "true";
@@ -101,9 +102,9 @@ const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
     <button
       id="jokeButton"
       onClick={handleClick}
-      className="ui button massive blue"
+      className="ui button massive circular"
     >
-      Request Joke
+      Request A Joke :)
     </button>
   );
 
