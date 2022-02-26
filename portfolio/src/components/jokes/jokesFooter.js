@@ -7,7 +7,7 @@ export default function jokesFooter() {
   className="ui two column doubling stackable grid relaxed"
   id="jokesFooter"
 >
-  <div className="ui column center aligned" id="">
+  <div className="ui column center aligned" id="jokeFooterLeft">
     <a target="_blank" href="https://catfact.ninja">
       Jokes Data Provided by : https://nova-joke-api.netlify.app/
     </a>

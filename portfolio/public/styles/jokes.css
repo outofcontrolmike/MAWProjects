@@ -2,35 +2,41 @@
 
 #jokesMenu {
   background-color: #9ef8df;
+    font-family: 'Bitter', serif;
 }
 
-#jokeCategoryLabel {
-  color: black;
-  font-weight: bolder;
-  font-variant: small-caps;
-}
 #jokesApp {
   height: 100vh;
   margin-bottom: 4rem;
   background-color: #77f8fd;
+  font-family: 'Bitter', serif;
 }
+
 
 #jokesAppContainer {
   background-color: #77f8fd;
+
+}
+#jokeId {
+  font-family: 'Bitter', serif;
 }
 
-#jokesContainer {
-  color: black;
+.flip-card-front > *, .flip-card-back > * {
+  font-family: 'Bitter', serif;
 }
+
 
 #jokeBtnGroup > button {
   margin-right: 2rem;
+  font-family: 'Bitter', serif;
+
 }
 /* jokes Footer */
 #jokesFooter {
   position: fixed;
   bottom: 0px;
   background-color: #9ef8df;
+  font-family: 'Bitter', serif;
   padding: 1rem;
   width: 105%;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -38,12 +44,15 @@
 
 #jokesFooter > .column > a {
   color: black;
-  font-size: x-large;
+  font-size: 1.5rem;
+}
+#jokeFooterLeft {
+  border-right:.5rem solid #77f8fd
 }
 
 #jokesFooter > .column > a:hover {
-  color: #fffcb8;
-  text-shadow: 1px 1px #fcc470;
+  color: black;
+  text-shadow: 1px 1px #77f8fd;
 }
 
 /* flipping card */
@@ -93,31 +102,48 @@
   transform: rotateY(180deg);
 }
 
-#jokeId {
-  color: #fcc470;
+#jokeText {
+  padding-top: 3rem;
+}
+
+#jokePunchLine {
+  padding-top: 3.5rem;
 }
 
 #jokeButton {
   margin-top: 2rem;
-  background-color: #9ef8df;
+  background-color: #fdcede;
 }
 
 #jokeButton:hover {
-  background-color: #fdcede;
+  background-color: #9ef8df;
   border-radius: 45%;
 }
+
+
 #resetJokes,
 #tenJokes {
   background-color: #fdcede;
 }
 
+#resetJokes:hover,#tenJokes:hover {
+  background-color: #77f8fd;
+  border-radius: 45%;
+}
+
 #jokeStatusBtn {
   background-color: #77f8fd;
 }
+
+#jokeStatusBtn:hover {
+  background-color: #fdcede;
+  border-radius: 45%;
+}
 #jokeQuantity {
-  color: black;
   font-weight: bolder;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-family: 'Bitter', serif;
+
 }
 
 #jokesList {
