@@ -8,8 +8,8 @@ export default function jokesFooter() {
   id="jokesFooter"
 >
   <div className="ui column center aligned" id="jokeFooterLeft">
-    <a target="_blank" href="https://catfact.ninja">
-      Jokes Data Provided by : https://nova-joke-api.netlify.app/
+    <a target="_blank" href="https://nova-joke-api.netlify.app/.netlify/functions/index/api">
+      Jokes Data Provided by Nova Joke API
     </a>
   </div>
   <div className="ui column center aligned" id="">

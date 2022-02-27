@@ -110,7 +110,7 @@ const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
 
   return (
     <div className="ui container " id="jokesContainer">
-      <div className="flip-card">
+      <div className="flip-card" id="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <h2 id="jokeId" style={{textAlign:"left"}}>
