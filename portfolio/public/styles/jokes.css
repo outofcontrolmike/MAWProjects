@@ -38,8 +38,8 @@
   background-color: #9ef8df;
   font-family: 'Bitter', serif;
   padding: 1rem;
-  width: 105%;
   border: 1px solid rgba(34, 36, 38, 0.15);
+  width:100%;
 }
 
 #jokesFooter > .column > a {
@@ -47,12 +47,17 @@
   font-size: 1.5rem;
 }
 #jokeFooterLeft {
-  border-right:.5rem solid #77f8fd
+  border-right:.5rem solid black
 }
+
+#jokeFooterLeft:hover {
+  border-color:#fdcede
+}
+
 
 #jokesFooter > .column > a:hover {
   color: black;
-  text-shadow: 1px 1px #77f8fd;
+  text-shadow: 5px 2px #77f8fd;
 }
 
 /* flipping card */
@@ -61,7 +66,7 @@
   background-color: transparent;
   height: 300px;
   perspective: 1000px;
-  margin-top: 15%;
+  margin-top: 12%;
 }
 
 .flip-card-inner {
@@ -148,4 +153,43 @@
 
 #jokesList {
   padding-bottom: 10rem;
+}
+
+
+/* Ten Jokes List Styles */
+
+#jokeDiv {
+background-color: #9ef8df;
+width:600px;
+}
+
+#jokeDiv > p {
+  font-family: 'Bitter', serif;
+  font-size: larger;
+}
+
+#jokeDiv > p::first-letter {
+  font-size: 1.5rem;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 770px) {
+
+  #jokeBtnGroup > button {
+    margin-right: unset;
+    padding:1.5rem;
+    margin:1rem;
+    width:95%
+  }
+
+  #jokeType {
+    margin-top:20px;
+  }
+
+  #jokeFooterLeft {
+    border-right: unset;
+  }
+
+
 }
