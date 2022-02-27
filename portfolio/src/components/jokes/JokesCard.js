@@ -3,23 +3,21 @@ import { useState } from "react";
 
 //Sets up and displays Jokes
 const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
+  
   //Hooks for the card mainly
   const [jokeType, setJokeCategory] = useState(
     "If you hover this card you will see the punchline.  Of course you need to fetch a joke first. "
   );
-
   const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("");
   const [jokeText, setJokeText] = useState(
     "I'm not good at coming up with jokes, but this API is."
   );
-
   const [punchlineText, setPunchlineText] = useState(
     "Punch line will be here once you fetch a joke.  :)"
   );
 
   //somewhat gloabl variables
-
   let jokesData = jokeData;
   let jokeTextValue = "";
   let typeParam = "";

@@ -5,7 +5,7 @@ import JokesFooter from "../../../components/jokes/JokesFooter";
 
 import { useState } from "react";
 
-//Programming Related Jokes
+//Programming Related Jokes 
 export default function Jokes(props) {
   let [jokeQuantity, setJokeQuantity] = useState(0);
 

@@ -1,6 +1,6 @@
 import React from "react";
-//Footer component
 
+//Footer component
 export default function jokesFooter() {
   return(
   <div

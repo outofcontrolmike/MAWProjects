@@ -33,6 +33,7 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
 
   }
 
+  //Handles requesting Ten Jokes
   function requestTenJokes() {
     document.getElementById("resetJokes").classList.remove("disabled");
     let url =
@@ -54,6 +55,7 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
       });
   }
 
+  //Create div elements for list and prepend
   function createJokeList(joke) {
     let jokeId = joke.id;
     let jokeType = joke.type;
