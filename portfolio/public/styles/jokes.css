@@ -159,8 +159,6 @@
 }
 
 
-
-
 /* Ten Jokes List Styles */
 
 #jokesList {
@@ -189,7 +187,7 @@ width:600px;
     margin-right: unset;
     padding:1.5rem;
     margin:1rem;
-    width:95%
+    width:50%
   }
 
   #jokeType {
@@ -198,5 +196,17 @@ width:600px;
 
   #jokeFooterLeft {
     border-right: unset;
+  }
+
+  #jokesContainer{
+    margin-bottom: 4rem;
+  }
+
+  #jokeDiv {
+    width: unset;
+  }
+
+  #jokesList {
+    padding-bottom: 15rem;
   }
 }

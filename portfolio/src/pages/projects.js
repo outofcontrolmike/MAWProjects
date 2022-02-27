@@ -200,6 +200,17 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/catFacts/RandomCats.js",
     },
+    {
+      img: "img/jokesProject.JPG",
+      href: "/jokes",
+      name: "Random Jokes",
+      meta: "React, Fomantic, Google Fonts",
+      desc: "Need some free jokes that are contained within a easter theme?  Check this project out",
+      created: "Created: February 26th 2022",
+      lastUpdated: "Last Updated: N/A",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/tree/master/portfolio/src/pages/projects/jokes",
+    },
   ];
 
   //Create Cards
