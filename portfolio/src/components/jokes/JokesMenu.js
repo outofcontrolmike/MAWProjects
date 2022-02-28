@@ -29,8 +29,11 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
     document.getElementById("jokesList").innerHTML = "";
     document.getElementById("jokesContainer").style.visibility = "visible";
     document.getElementById("jokesContainer").style.height = "fit-content";
+    document.getElementById("flip-card").style.marginTop = "12%";
+
   }
 
+  //Handles requesting Ten Jokes
   function requestTenJokes() {
     document.getElementById("resetJokes").classList.remove("disabled");
     let url =
@@ -40,6 +43,7 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
       .then((jokeData) => {
         document.getElementById("jokesContainer").style.visibility = "hidden";
         document.getElementById("jokesContainer").style.height = "0px";
+        document.getElementById("flip-card").style.marginTop = "0px";
 
         addJokes((jokeQuantity += 10));
         jokeData.map((joke) => {
@@ -51,6 +55,7 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
       });
   }
 
+  //Create div elements for list and prepend
   function createJokeList(joke) {
     let jokeId = joke.id;
     let jokeType = joke.type;
@@ -67,19 +72,19 @@ const JokesMenu = ({ jokeQuantity, addJokes }) => {
 
     jokeDiv.classList = "ui container stackable centered align segment";
 
-    jokeIdP.innerHTML = jokeId;
-    jokeTypeP.innerHTML = jokeType;
-    jokeSetupP.innerHTML = jokeSetup;
-    jokePunchlineP.innerHTML = jokePunchline;
+    jokeIdP.innerHTML = "# " +  jokeId;
+    jokeTypeP.innerHTML = "Category: " +  jokeType;
+    jokeSetupP.innerHTML = "Setup: " + jokeSetup;
+    jokePunchlineP.innerHTML = "Punchline: " + jokePunchline;
 
-    jokeDiv.append(jokeIdP, jokeTypeP, jokeSetup, jokePunchlineP);
+    jokeDiv.append(jokeIdP, jokeTypeP, jokeSetupP, jokePunchlineP);
     document.getElementById("jokesList").prepend(jokeDiv);
   }
   return (
-    <div className="ui three item menu stackable fluid" id="jokesMenu">
+    <div className="ui three item menu stackable" id="jokesMenu">
       <div className="item center aligned">
         {" "}
-        <div className="ui form" id="jokeType" style={{ fontSize: "24px" }}>
+        <div className="ui form" id="jokeType" style={{ fontSize: "1.5rem" }}>
           <div className="inline fields container">
             <div className="field">
               <div className="ui radio checkbox">

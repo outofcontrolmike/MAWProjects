@@ -3,23 +3,21 @@ import { useState } from "react";
 
 //Sets up and displays Jokes
 const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
+  
   //Hooks for the card mainly
   const [jokeType, setJokeCategory] = useState(
     "If you hover this card you will see the punchline.  Of course you need to fetch a joke first. "
   );
-
   const [jokeQuantity, setJokeQuantity] = useState("random");
   const [jokeId, setJokeId] = useState("");
   const [jokeText, setJokeText] = useState(
     "I'm not good at coming up with jokes, but this API is."
   );
-
   const [punchlineText, setPunchlineText] = useState(
     "Punch line will be here once you fetch a joke.  :)"
   );
 
   //somewhat gloabl variables
-
   let jokesData = jokeData;
   let jokeTextValue = "";
   let typeParam = "";
@@ -110,20 +108,20 @@ const JokesCard = ({ jokeData, jokeCount, addJokes }) => {
 
   return (
     <div className="ui container " id="jokesContainer">
-      <div className="flip-card">
+      <div className="flip-card" id="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
-            <h2 id="jokeId" style={{ float: "left" }}>
+            <h2 id="jokeId" style={{textAlign:"left"}}>
               {jokeId}
             </h2>
-            <h1 className="ui text">{jokeText}</h1>
+            <h1 className="ui text" id="jokeText" >{jokeText}</h1>
             <h5> {jokeType}</h5>
           </div>
           <div className="flip-card-back">
-            <h2 id="jokeId" style={{ float: "right" }}>
+            <h2 id="jokeId" style={{textAlign: "right" }}>
               {jokeId}
             </h2>
-            <h1>{punchlineText}</h1>
+            <h1 id="jokePunchLine">{punchlineText}</h1>
           </div>
         </div>
       </div>

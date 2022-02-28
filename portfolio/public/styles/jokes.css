@@ -1,58 +1,90 @@
 /* Jokes Stylesheet */
-
-#jokesMenu {
-  background-color: #9ef8df;
-}
-
-#jokeCategoryLabel {
-  color: black;
-  font-weight: bolder;
-  font-variant: small-caps;
-}
 #jokesApp {
   height: 100vh;
   margin-bottom: 4rem;
   background-color: #77f8fd;
+  font-family: 'Bitter', serif;
 }
 
 #jokesAppContainer {
   background-color: #77f8fd;
+
 }
 
-#jokesContainer {
-  color: black;
+/* Menu */
+#jokesMenu {
+  background-color: #9ef8df;
+    font-family: 'Bitter', serif;
 }
+
+
+#jokeId {
+  font-family: 'Bitter', serif;
+}
+
 
 #jokeBtnGroup > button {
   margin-right: 2rem;
+  font-family: 'Bitter', serif;
+
 }
-/* jokes Footer */
-#jokesFooter {
-  position: fixed;
-  bottom: 0px;
+
+#resetJokes,
+#tenJokes {
+  background-color: #fdcede;
+}
+
+#resetJokes:hover,#tenJokes:hover {
+  background-color: #77f8fd;
+  border-radius: 45%;
+}
+
+#jokeStatusBtn {
+  background-color: #77f8fd;
+}
+
+#jokeStatusBtn:hover {
+  background-color: #fdcede;
+  border-radius: 45%;
+}
+#jokeQuantity {
+  font-weight: bolder;
+  font-size: 3.5rem;
+  font-family: 'Bitter', serif;
+
+}
+
+/* Joke Card */
+
+.flip-card-front > *, .flip-card-back > * {
+  font-family: 'Bitter', serif;
+}
+
+#jokeText {
+  padding-top: 3rem;
+}
+
+#jokePunchLine {
+  padding-top: 3.5rem;
+}
+
+#jokeButton {
+  margin-top: 2rem;
+  background-color: #fdcede;
+}
+
+#jokeButton:hover {
   background-color: #9ef8df;
-  padding: 1rem;
-  width: 105%;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 45%;
 }
 
-#jokesFooter > .column > a {
-  color: black;
-  font-size: x-large;
-}
-
-#jokesFooter > .column > a:hover {
-  color: #fffcb8;
-  text-shadow: 1px 1px #fcc470;
-}
-
-/* flipping card */
+/* flipping card - Borrowed from w3 schools*/
 
 .flip-card {
   background-color: transparent;
   height: 300px;
   perspective: 1000px;
-  margin-top: 15%;
+  margin-top: 12%;
 }
 
 .flip-card-inner {
@@ -93,33 +125,88 @@
   transform: rotateY(180deg);
 }
 
-#jokeId {
-  color: #fcc470;
-}
 
-#jokeButton {
-  margin-top: 2rem;
+
+
+/* jokes Footer */
+#jokesFooter {
+  position: fixed;
+  bottom: 0px;
   background-color: #9ef8df;
+  font-family: 'Bitter', serif;
+  padding: 1rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  width:100%;
 }
 
-#jokeButton:hover {
-  background-color: #fdcede;
-  border-radius: 45%;
-}
-#resetJokes,
-#tenJokes {
-  background-color: #fdcede;
-}
-
-#jokeStatusBtn {
-  background-color: #77f8fd;
-}
-#jokeQuantity {
+#jokesFooter > .column > a {
   color: black;
-  font-weight: bolder;
-  font-size: 4rem;
+  font-size: 1.5rem;
+
 }
+
+#jokesFooter > .column > a:hover {
+  color: black;
+  text-shadow: 5px 2px #77f8fd;
+}
+
+#jokeFooterLeft {
+  border-right:.5rem solid black
+}
+
+#jokeFooterLeft:hover {
+  border-color:#fdcede
+}
+
+
+/* Ten Jokes List Styles */
 
 #jokesList {
   padding-bottom: 10rem;
+}
+
+#jokeDiv {
+background-color: #9ef8df;
+width:600px;
+}
+
+#jokeDiv > p {
+  font-family: 'Bitter', serif;
+  font-size: larger;
+}
+
+#jokeDiv > p::first-letter {
+  font-size: 1.5rem;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 770px) {
+
+  #jokeBtnGroup > button {
+    margin-right: unset;
+    padding:1.5rem;
+    margin:1rem;
+    width:50%
+  }
+
+  #jokeType {
+    margin-top:20px;
+  }
+
+  #jokeFooterLeft {
+    border-right: unset;
+  }
+
+  #jokesContainer{
+    margin-bottom: 4rem;
+  }
+
+  #jokeDiv {
+    width: unset;
+  }
+
+  #jokesList {
+    padding-bottom: 15rem;
+  }
 }
