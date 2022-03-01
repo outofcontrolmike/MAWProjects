@@ -17,7 +17,11 @@ function About() {
             alt={"Michael Wilson being professional"}
           />
         </div>
-        <div className="ui column padded" id="aboutMe" style={{backgroundColor: "black"}}>
+        <div
+          className="ui column padded"
+          id="aboutMe"
+          style={{ backgroundColor: "black" }}
+        >
           <span id="myName" className="ui text large">
             Mr. Michael Wilson
           </span>
@@ -51,7 +55,9 @@ function About() {
               </a>
             </span>{" "}
             My tasks include fixing bugs and implementing feature requests among
-            a few of my companies' projects built with react.
+            a few of my companies' projects built with react. I also work with
+            frameworks such as Cake and Propel to complete back end tasks for my
+            work.
           </p>
           <p>
             During my free time I attempt to build projects with React so I can
