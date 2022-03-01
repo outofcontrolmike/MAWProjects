@@ -101,7 +101,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 </div>
                 <div class="row">
                     <div class="column">
-                        <h4>Environment</h4>
+                        <h4>Environmenttst</h4>
                         <ul>
                         <?php if (version_compare(PHP_VERSION, '7.2.0', '>=')) : ?>
                             <li class="bullet success">Your version of PHP is 7.2.0 or higher (detected <?= PHP_VERSION ?>).</li>

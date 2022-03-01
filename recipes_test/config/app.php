@@ -295,7 +295,7 @@ return [
             'persistent' => false,
             'timezone' => 'UTC',
             'username' => 'root',
-            'password' => 'YES',
+            'password' => '',
             'database' => 'recipes_database',
 
             /*
