@@ -44,10 +44,9 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            'username' => 'my_app',
-            'password' => 'secret',
-
-            'database' => 'my_app',
+            'username' => 'root',
+            'password' => 'YES',
+            'database' => 'recipes_database',
             /*
              * If not using the default 'public' schema with the PostgreSQL driver
              * set it here.
