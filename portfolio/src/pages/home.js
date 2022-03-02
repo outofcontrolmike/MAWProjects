@@ -23,7 +23,7 @@ function Home() {
         </span>
 
         <h2 id="landingPageSub">
-          Aspiring Full Stack Developer Currently Working With React
+          Aspiring Full Stack Developer
         </h2>
         <div>
           <button
