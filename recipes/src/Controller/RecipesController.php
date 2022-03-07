@@ -1,70 +1,132 @@
 <?php
-// src/Controller/RecipesController.php
+declare(strict_types=1);
 
 namespace App\Controller;
 
-class recipesController extends AppController
+/**
+ * Recipes Controller
+ *
+ * @property \App\Model\Table\RecipesTable $Recipes
+ * @method \App\Model\Entity\Recipe[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ */
+class RecipesController extends AppController
 {
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
     public function index()
     {
-        $this->loadComponent('Paginator');
-        $recipes = $this->Paginator->paginate($this->Recipes->find());
+        $this->paginate = [
+            'contain' => ['Users'],
+        ];
+        $recipes = $this->paginate($this->Recipes);
+
         $this->set(compact('recipes'));
     }
 
-    public function view($slug = null)
+    /**
+     * View method
+     *
+     * @param string|null $id Recipe id.
+     * @return \Cake\Http\Response|null|void Renders view
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function view($id = null)
     {
-        $recipe = $this->Recipes->findBySlug($slug) -> firstOrFail();
+        $recipe = $this->Recipes->get($id, [
+            'contain' => ['Users', 'Tags'],
+        ]);
+
+        
         $this->set(compact('recipe'));
     }
 
-    public function add() 
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     */
+    public function add()
     {
         $recipe = $this->Recipes->newEmptyEntity();
-        if($this->request->is('post')) {
+        if ($this->request->is('post')) {
             $recipe = $this->Recipes->patchEntity($recipe, $this->request->getData());
+            if ($this->Recipes->save($recipe)) {
+                $this->Flash->success(__('The recipe has been saved.'));
 
-              // Hardcoding the user_id is temporary, and will be removed later
-            // when we build authentication out.
-            $recipe->user_id = 1;
-            if($this->Recipes->save($recipe)) {
-                $this->Flash->success(__("Your Recipe has been saved.!"));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->set('recipe', recipe);
+            $this->Flash->error(__('The recipe could not be saved. Please, try again.'));
         }
+        //List of tags 
+        
+        $users = $this->Recipes->Users->find('list', ['limit' => 200])->all();
+        $tags = $this->Recipes->Tags->find('list', ['limit' => 200])->all();
+        $this->set(compact('recipe', 'users', 'tags'));
     }
 
-    // in src/Controller/ArticlesController.php
+    /**
+     * Edit method
+     *
+     * @param string|null $id Recipe id.
+     * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function edit($id = null)
+    {
+        $recipe = $this->Recipes->get($id, [
+            'contain' => ['Tags'],
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $recipe = $this->Recipes->patchEntity($recipe, $this->request->getData());
+            if ($this->Recipes->save($recipe)) {
+                $this->Flash->success(__('The recipe has been saved.'));
 
-// Add the following method.
-
-public function edit($slug)
-{
-    $recipe = $this->Recipes
-        ->findBySlug($slug)
-        ->firstOrFail();
-
-    if ($this->request->is(['post', 'put'])) {
-        $this->Recipes->patchEntity($recipe, $this->request->getData());
-        if ($this->Recipes->save($recipe)) {
-            $this->Flash->success(__('Your Recipe has been updated.'));
-            return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The recipe could not be saved. Please, try again.'));
         }
-        $this->Flash->error(__('Unable to update your recipe.'));
+        $users = $this->Recipes->Users->find('list', ['limit' => 200])->all();
+        $tags = $this->Recipes->Tags->find('list', ['limit' => 200])->all();
+        $this->set(compact('recipe', 'users', 'tags'));
     }
 
-    $this->set('recipe', $recipe);
-}
+    /**
+     * Delete method
+     *
+     * @param string|null $id Recipe id.
+     * @return \Cake\Http\Response|null|void Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function delete($id = null)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+        $recipe = $this->Recipes->get($id);
+        if ($this->Recipes->delete($recipe)) {
+            $this->Flash->success(__('The recipe has been deleted.'));
+        } else {
+            $this->Flash->error(__('The recipe could not be deleted. Please, try again.'));
+        }
 
-public function delete($slug) 
-{
-    $this->request->allowMethod(['post', 'delete']);
-    
-    $recipe = $this->Recipes->findBySlug($slug)->firstOrFail();
-    if($this->Recipes->delete($recipe)) {
-        $this->Flash->success(__("The {0} recipe has been deleted", $recipe->title));
-        return $this->redirect(['action' => "index"]);
+        return $this->redirect(['action' => 'index']);
     }
-}
+
+    public function tags(...$tags)
+    {
+        $tags = $this->request->getParam('pass');
+
+        //Use Recipes Table to find tagged Recipes
+        $recipes = $this->Recipes->find('tagged', [
+            'tags' => $tags
+        ])
+        ->all();
+
+        //Set up new variables into the view template context.
+        $this->set([
+            'recipes' => $recipes,
+            'tags' => $tags
+        ]);
+    } 
 }
