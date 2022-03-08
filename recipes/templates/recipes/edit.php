@@ -36,8 +36,8 @@
                     echo $this->Form->control('directions');
                     echo $this->Form->control('photo_paths');
                     echo $this->Form->control('published');
-                    echo $this->Form->control('tags._ids', ['options' => $tags]);
-                ?>
+                    echo $this->Form->control('tag_string', ['type' => 'text']);
+                    ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>

@@ -16,7 +16,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="recipes view content">
-            <h3><?= h($recipe->title) ?></h3>
+            <h2><?= h($recipe->title) ?></h2>
             <table>
                 <tr>
                     <th><?= __('User') ?></th>
@@ -81,6 +81,7 @@
                     <?= $this->Text->autoParagraph(h($recipe->description)); ?>
                 </blockquote>
             </div>
+            <p><b>Tags:</b> <?= h($recipe->tag_string) ?></p>
             <div class="related">
                 <h4><?= __('Related Tags') ?></h4>
                 <?php if (!empty($recipe->tags)) : ?>

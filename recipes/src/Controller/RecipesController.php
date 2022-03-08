@@ -52,7 +52,7 @@ class RecipesController extends AppController
         $recipe = $this->Recipes->newEmptyEntity();
         if ($this->request->is('post')) {
             $recipe = $this->Recipes->patchEntity($recipe, $this->request->getData());
-            
+
             if ($this->Recipes->save($recipe)) {
                 $this->Flash->success(__('The recipe has been saved.'));
 
@@ -109,5 +109,23 @@ class RecipesController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function tags() {
+     // The 'pass' key is provided by CakePHP and contains all
+    // the passed URL path segments in the request.
+    $tags = $this->request->getParam('pass');
+
+    // Use the ArticlesTable to find tagged articles.
+    $recipes = $this->Recipes->find('tagged', [
+            'tags' => $tags
+        ])
+        ->all();
+
+    // Pass variables into the view template context.
+    $this->set([
+        'recipes' => $recipes,
+        'tags' => $tags
+    ]);
     }
 }
