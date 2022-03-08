@@ -25,8 +25,8 @@ class UsersFixture extends TestFixture
                 'user_name' => 'Lorem ipsum dolor sit amet',
                 'bio' => 'Lorem ipsum dolor sit amet',
                 'instagram_link' => 'Lorem ipsum dolor sit amet',
-                'created' => '2022-03-08 19:30:47',
-                'modified' => '2022-03-08 19:30:47',
+                'created' => '2022-03-08 21:46:18',
+                'modified' => '2022-03-08 21:46:18',
             ],
         ];
         parent::init();
