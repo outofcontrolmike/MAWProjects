@@ -11,7 +11,7 @@ use Cake\Validation\Validator;
 /**
  * Users Model
  *
- * @property \APP\Model\Table\RecipesTable&\Cake\ORM\Association\HasMany $Recipes
+ * @property \App\Model\Table\RecipesTable&\Cake\ORM\Association\HasMany $Recipes
  *
  * @method \App\Model\Entity\User newEmptyEntity()
  * @method \App\Model\Entity\User newEntity(array $data, array $options = [])
