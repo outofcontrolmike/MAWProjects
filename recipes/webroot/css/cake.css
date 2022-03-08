@@ -6,37 +6,27 @@ body {
 
 .top-nav-links,
 .side-nav,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: #363637;
 }
 
 a {
-    color: #2f85ae;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    color:#2f85ae;
+    -webkit-transition:all 0.2s linear;
+    transition:all 0.2s linear;
 }
 
 a:hover,
 a:focus,
-a:active {
-    color: #2a6496;
-    -webkit-transition: all 0.2s easeout;
-    transition: all 0.2s ease-out;
+a:active  {
+    color:#2a6496;
+    -webkit-transition:all 0.2s easeout;
+    transition:all 0.2s ease-out;
 }
 
 .side-nav a,
@@ -50,7 +40,7 @@ th a,
 .side-nav a:focus,
 .actions a:hover,
 .actions a:focus {
-    color: #2f85ae;
+    color:#2f85ae;
 }
 
 /* Utility */
@@ -86,7 +76,7 @@ th {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100%;
+    max-width: 112rem;
     padding: 2rem;
     margin: 0 auto 2rem;
 }
@@ -153,7 +143,7 @@ th {
 /* Forms */
 .input.radio,
 .input.checkbox {
-    margin-bottom: 2rem;
+    margin-bottom: 2.0rem;
 }
 .input.radio input,
 .input.checkbox input {
@@ -167,10 +157,10 @@ th {
 }
 .input.radio label > input,
 .input.checkbox label > input {
-    margin-right: 1rem;
+    margin-right: 1.0rem;
 }
 .input.radio label:first-of-type {
-    margin-bottom: 2rem;
+    margin-bottom: 2.0rem;
 }
 
 /* Paginator */

@@ -39,7 +39,6 @@ class RecipesController extends AppController
             'contain' => ['Users', 'Tags'],
         ]);
 
-        
         $this->set(compact('recipe'));
     }
 
@@ -53,6 +52,7 @@ class RecipesController extends AppController
         $recipe = $this->Recipes->newEmptyEntity();
         if ($this->request->is('post')) {
             $recipe = $this->Recipes->patchEntity($recipe, $this->request->getData());
+            
             if ($this->Recipes->save($recipe)) {
                 $this->Flash->success(__('The recipe has been saved.'));
 
@@ -60,8 +60,6 @@ class RecipesController extends AppController
             }
             $this->Flash->error(__('The recipe could not be saved. Please, try again.'));
         }
-        //List of tags 
-        
         $users = $this->Recipes->Users->find('list', ['limit' => 200])->all();
         $tags = $this->Recipes->Tags->find('list', ['limit' => 200])->all();
         $this->set(compact('recipe', 'users', 'tags'));
@@ -112,21 +110,4 @@ class RecipesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-
-    public function tags(...$tags)
-    {
-        $tags = $this->request->getParam('pass');
-
-        //Use Recipes Table to find tagged Recipes
-        $recipes = $this->Recipes->find('tagged', [
-            'tags' => $tags
-        ])
-        ->all();
-
-        //Set up new variables into the view template context.
-        $this->set([
-            'recipes' => $recipes,
-            'tags' => $tags
-        ]);
-    } 
 }

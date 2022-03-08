@@ -32,8 +32,8 @@ class RecipesFixture extends TestFixture
                 'directions' => 'Lorem ipsum dolor sit amet',
                 'photo_paths' => 'Lorem ipsum dolor sit amet',
                 'published' => 1,
-                'created' => '2022-03-07 14:23:41',
-                'modified' => '2022-03-07 14:23:41',
+                'created' => '2022-03-08 19:30:43',
+                'modified' => '2022-03-08 19:30:43',
             ],
         ];
         parent::init();

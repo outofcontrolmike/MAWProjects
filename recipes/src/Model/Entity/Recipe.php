@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Model\Entity;
 
-use Cake\Collection\Collection;
 use Cake\ORM\Entity;
 
 /**
@@ -24,6 +23,9 @@ use Cake\ORM\Entity;
  * @property bool|null $published
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
+ *
+ * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\Tag[] $tags
  */
 class Recipe extends Entity
 {
@@ -51,21 +53,7 @@ class Recipe extends Entity
         'published' => true,
         'created' => true,
         'modified' => true,
-        'tag_string' => true,
+        'user' => true,
+        'tags' => true,
     ];
-
-    protected function _getTagString() 
-    {
-        if (isset($this->_fields['tag_string'])) {
-            return $this->_fields['tag_string'];
-        }
-        if(empty($this->tags)){
-            return '';
-        }
-        $tags = new Collection($this->tags);
-        $str = $tags->reduce(function ($string, $tag){
-            return $string . $tag->title . ', ';
-        }, '');
-        return trim($str, ', ');
-    }
 }

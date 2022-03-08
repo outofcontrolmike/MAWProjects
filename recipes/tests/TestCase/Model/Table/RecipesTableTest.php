@@ -25,6 +25,8 @@ class RecipesTableTest extends TestCase
      */
     protected $fixtures = [
         'app.Recipes',
+        'app.Users',
+        'app.Tags',
     ];
 
     /**
@@ -49,5 +51,27 @@ class RecipesTableTest extends TestCase
         unset($this->Recipes);
 
         parent::tearDown();
+    }
+
+    /**
+     * Test validationDefault method
+     *
+     * @return void
+     * @uses \App\Model\Table\RecipesTable::validationDefault()
+     */
+    public function testValidationDefault(): void
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     * @uses \App\Model\Table\RecipesTable::buildRules()
+     */
+    public function testBuildRules(): void
+    {
+        $this->markTestIncomplete('Not implemented yet.');
     }
 }
