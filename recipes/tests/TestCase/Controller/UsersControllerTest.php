@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\UsersController;
@@ -21,7 +19,7 @@ class UsersControllerTest extends TestCase
      *
      * @var array
      */
-    protected $fixtures = [
+    public $fixtures = [
         'app.Users',
         'app.Recipes',
     ];
@@ -30,9 +28,8 @@ class UsersControllerTest extends TestCase
      * Test index method
      *
      * @return void
-     * @uses \App\Controller\UsersController::index()
      */
-    public function testIndex(): void
+    public function testIndex()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -41,9 +38,8 @@ class UsersControllerTest extends TestCase
      * Test view method
      *
      * @return void
-     * @uses \App\Controller\UsersController::view()
      */
-    public function testView(): void
+    public function testView()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -52,9 +48,8 @@ class UsersControllerTest extends TestCase
      * Test add method
      *
      * @return void
-     * @uses \App\Controller\UsersController::add()
      */
-    public function testAdd(): void
+    public function testAdd()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -63,9 +58,8 @@ class UsersControllerTest extends TestCase
      * Test edit method
      *
      * @return void
-     * @uses \App\Controller\UsersController::edit()
      */
-    public function testEdit(): void
+    public function testEdit()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -74,9 +68,8 @@ class UsersControllerTest extends TestCase
      * Test delete method
      *
      * @return void
-     * @uses \App\Controller\UsersController::delete()
      */
-    public function testDelete(): void
+    public function testDelete()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

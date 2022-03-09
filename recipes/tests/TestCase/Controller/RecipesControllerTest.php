@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\RecipesController;
@@ -21,7 +19,7 @@ class RecipesControllerTest extends TestCase
      *
      * @var array
      */
-    protected $fixtures = [
+    public $fixtures = [
         'app.Recipes',
         'app.Users',
         'app.Tags',
@@ -32,9 +30,8 @@ class RecipesControllerTest extends TestCase
      * Test index method
      *
      * @return void
-     * @uses \App\Controller\RecipesController::index()
      */
-    public function testIndex(): void
+    public function testIndex()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -43,9 +40,8 @@ class RecipesControllerTest extends TestCase
      * Test view method
      *
      * @return void
-     * @uses \App\Controller\RecipesController::view()
      */
-    public function testView(): void
+    public function testView()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -54,9 +50,8 @@ class RecipesControllerTest extends TestCase
      * Test add method
      *
      * @return void
-     * @uses \App\Controller\RecipesController::add()
      */
-    public function testAdd(): void
+    public function testAdd()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -65,9 +60,8 @@ class RecipesControllerTest extends TestCase
      * Test edit method
      *
      * @return void
-     * @uses \App\Controller\RecipesController::edit()
      */
-    public function testEdit(): void
+    public function testEdit()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -76,9 +70,8 @@ class RecipesControllerTest extends TestCase
      * Test delete method
      *
      * @return void
-     * @uses \App\Controller\RecipesController::delete()
      */
-    public function testDelete(): void
+    public function testDelete()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

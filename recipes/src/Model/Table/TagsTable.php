@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -13,19 +11,14 @@ use Cake\Validation\Validator;
  *
  * @property \App\Model\Table\RecipesTable&\Cake\ORM\Association\BelongsToMany $Recipes
  *
- * @method \App\Model\Entity\Tag newEmptyEntity()
- * @method \App\Model\Entity\Tag newEntity(array $data, array $options = [])
- * @method \App\Model\Entity\Tag[] newEntities(array $data, array $options = [])
  * @method \App\Model\Entity\Tag get($primaryKey, $options = [])
- * @method \App\Model\Entity\Tag findOrCreate($search, ?callable $callback = null, $options = [])
- * @method \App\Model\Entity\Tag patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Tag[] patchEntities(iterable $entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Tag newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Tag[] newEntities(array $data, array $options = [])
  * @method \App\Model\Entity\Tag|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
  * @method \App\Model\Entity\Tag saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Tag[]|\Cake\Datasource\ResultSetInterface|false saveMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\Tag[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
- * @method \App\Model\Entity\Tag[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\Tag[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
+ * @method \App\Model\Entity\Tag patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Tag[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Tag findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
@@ -37,7 +30,7 @@ class TagsTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config): void
+    public function initialize(array $config)
     {
         parent::initialize($config);
 
@@ -60,7 +53,7 @@ class TagsTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator): Validator
+    public function validationDefault(Validator $validator)
     {
         $validator
             ->integer('id')
@@ -82,9 +75,9 @@ class TagsTable extends Table
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    public function buildRules(RulesChecker $rules): RulesChecker
+    public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['title'], ['allowMultipleNulls' => true]), ['errorField' => 'title']);
+        $rules->add($rules->isUnique(['title']));
 
         return $rules;
     }

@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\TagsController;
@@ -21,7 +19,7 @@ class TagsControllerTest extends TestCase
      *
      * @var array
      */
-    protected $fixtures = [
+    public $fixtures = [
         'app.Tags',
         'app.Recipes',
         'app.RecipesTags',
@@ -31,9 +29,8 @@ class TagsControllerTest extends TestCase
      * Test index method
      *
      * @return void
-     * @uses \App\Controller\TagsController::index()
      */
-    public function testIndex(): void
+    public function testIndex()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -42,9 +39,8 @@ class TagsControllerTest extends TestCase
      * Test view method
      *
      * @return void
-     * @uses \App\Controller\TagsController::view()
      */
-    public function testView(): void
+    public function testView()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -53,9 +49,8 @@ class TagsControllerTest extends TestCase
      * Test add method
      *
      * @return void
-     * @uses \App\Controller\TagsController::add()
      */
-    public function testAdd(): void
+    public function testAdd()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -64,9 +59,8 @@ class TagsControllerTest extends TestCase
      * Test edit method
      *
      * @return void
-     * @uses \App\Controller\TagsController::edit()
      */
-    public function testEdit(): void
+    public function testEdit()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -75,9 +69,8 @@ class TagsControllerTest extends TestCase
      * Test delete method
      *
      * @return void
-     * @uses \App\Controller\TagsController::delete()
      */
-    public function testDelete(): void
+    public function testDelete()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

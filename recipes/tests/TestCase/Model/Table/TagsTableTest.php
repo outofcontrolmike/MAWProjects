@@ -1,9 +1,8 @@
 <?php
-declare(strict_types=1);
-
 namespace App\Test\TestCase\Model\Table;
 
 use App\Model\Table\TagsTable;
+use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
@@ -16,14 +15,14 @@ class TagsTableTest extends TestCase
      *
      * @var \App\Model\Table\TagsTable
      */
-    protected $Tags;
+    public $Tags;
 
     /**
      * Fixtures
      *
      * @var array
      */
-    protected $fixtures = [
+    public $fixtures = [
         'app.Tags',
         'app.Recipes',
     ];
@@ -33,11 +32,11 @@ class TagsTableTest extends TestCase
      *
      * @return void
      */
-    public function setUp(): void
+    public function setUp()
     {
         parent::setUp();
-        $config = $this->getTableLocator()->exists('Tags') ? [] : ['className' => TagsTable::class];
-        $this->Tags = $this->getTableLocator()->get('Tags', $config);
+        $config = TableRegistry::getTableLocator()->exists('Tags') ? [] : ['className' => TagsTable::class];
+        $this->Tags = TableRegistry::getTableLocator()->get('Tags', $config);
     }
 
     /**
@@ -45,7 +44,7 @@ class TagsTableTest extends TestCase
      *
      * @return void
      */
-    public function tearDown(): void
+    public function tearDown()
     {
         unset($this->Tags);
 
@@ -53,12 +52,21 @@ class TagsTableTest extends TestCase
     }
 
     /**
+     * Test initialize method
+     *
+     * @return void
+     */
+    public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
      * Test validationDefault method
      *
      * @return void
-     * @uses \App\Model\Table\TagsTable::validationDefault()
      */
-    public function testValidationDefault(): void
+    public function testValidationDefault()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -67,9 +75,8 @@ class TagsTableTest extends TestCase
      * Test buildRules method
      *
      * @return void
-     * @uses \App\Model\Table\TagsTable::buildRules()
      */
-    public function testBuildRules(): void
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

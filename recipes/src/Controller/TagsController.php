@@ -1,12 +1,13 @@
 <?php
-declare(strict_types=1);
-
 namespace App\Controller;
+
+use App\Controller\AppController;
 
 /**
  * Tags Controller
  *
  * @property \App\Model\Table\TagsTable $Tags
+ *
  * @method \App\Model\Entity\Tag[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class TagsController extends AppController
@@ -14,7 +15,7 @@ class TagsController extends AppController
     /**
      * Index method
      *
-     * @return \Cake\Http\Response|null|void Renders view
+     * @return \Cake\Http\Response|null
      */
     public function index()
     {
@@ -27,7 +28,7 @@ class TagsController extends AppController
      * View method
      *
      * @param string|null $id Tag id.
-     * @return \Cake\Http\Response|null|void Renders view
+     * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
@@ -36,17 +37,17 @@ class TagsController extends AppController
             'contain' => ['Recipes'],
         ]);
 
-        $this->set(compact('tag'));
+        $this->set('tag', $tag);
     }
 
     /**
      * Add method
      *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
     public function add()
     {
-        $tag = $this->Tags->newEmptyEntity();
+        $tag = $this->Tags->newEntity();
         if ($this->request->is('post')) {
             $tag = $this->Tags->patchEntity($tag, $this->request->getData());
             if ($this->Tags->save($tag)) {
@@ -56,7 +57,7 @@ class TagsController extends AppController
             }
             $this->Flash->error(__('The tag could not be saved. Please, try again.'));
         }
-        $recipes = $this->Tags->Recipes->find('list', ['limit' => 200])->all();
+        $recipes = $this->Tags->Recipes->find('list', ['limit' => 200]);
         $this->set(compact('tag', 'recipes'));
     }
 
@@ -64,7 +65,7 @@ class TagsController extends AppController
      * Edit method
      *
      * @param string|null $id Tag id.
-     * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
+     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function edit($id = null)
@@ -81,7 +82,7 @@ class TagsController extends AppController
             }
             $this->Flash->error(__('The tag could not be saved. Please, try again.'));
         }
-        $recipes = $this->Tags->Recipes->find('list', ['limit' => 200])->all();
+        $recipes = $this->Tags->Recipes->find('list', ['limit' => 200]);
         $this->set(compact('tag', 'recipes'));
     }
 
@@ -89,7 +90,7 @@ class TagsController extends AppController
      * Delete method
      *
      * @param string|null $id Tag id.
-     * @return \Cake\Http\Response|null|void Redirects to index.
+     * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)

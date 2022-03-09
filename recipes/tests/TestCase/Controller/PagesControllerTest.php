@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -16,19 +14,20 @@ declare(strict_types=1);
  */
 namespace App\Test\TestCase\Controller;
 
+use Cake\Core\App;
 use Cake\Core\Configure;
-use Cake\TestSuite\IntegrationTestTrait;
-use Cake\TestSuite\TestCase;
+use Cake\Http\Response;
+use Cake\Http\ServerRequest;
+use Cake\TestSuite\IntegrationTestCase;
+use Cake\View\Exception\MissingTemplateException;
 
 /**
  * PagesControllerTest class
  *
  * @uses \App\Controller\PagesController
  */
-class PagesControllerTest extends TestCase
+class PagesControllerTest extends IntegrationTestCase
 {
-    use IntegrationTestTrait;
-
     /**
      * testMultipleGet method
      *
@@ -82,7 +81,7 @@ class PagesControllerTest extends TestCase
         $this->assertResponseFailure();
         $this->assertResponseContains('Missing Template');
         $this->assertResponseContains('Stacktrace');
-        $this->assertResponseContains('not_existing.php');
+        $this->assertResponseContains('not_existing.ctp');
     }
 
     /**
@@ -100,7 +99,7 @@ class PagesControllerTest extends TestCase
     /**
      * Test that CSRF protection is applied to page rendering.
      *
-     * @return void
+     * @reutrn void
      */
     public function testCsrfAppliedError()
     {
@@ -113,7 +112,7 @@ class PagesControllerTest extends TestCase
     /**
      * Test that CSRF protection is applied to page rendering.
      *
-     * @return void
+     * @reutrn void
      */
     public function testCsrfAppliedOk()
     {

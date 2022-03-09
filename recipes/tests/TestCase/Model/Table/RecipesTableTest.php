@@ -1,9 +1,8 @@
 <?php
-declare(strict_types=1);
-
 namespace App\Test\TestCase\Model\Table;
 
 use App\Model\Table\RecipesTable;
+use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
@@ -16,14 +15,14 @@ class RecipesTableTest extends TestCase
      *
      * @var \App\Model\Table\RecipesTable
      */
-    protected $Recipes;
+    public $Recipes;
 
     /**
      * Fixtures
      *
      * @var array
      */
-    protected $fixtures = [
+    public $fixtures = [
         'app.Recipes',
         'app.Users',
         'app.Tags',
@@ -34,11 +33,11 @@ class RecipesTableTest extends TestCase
      *
      * @return void
      */
-    public function setUp(): void
+    public function setUp()
     {
         parent::setUp();
-        $config = $this->getTableLocator()->exists('Recipes') ? [] : ['className' => RecipesTable::class];
-        $this->Recipes = $this->getTableLocator()->get('Recipes', $config);
+        $config = TableRegistry::getTableLocator()->exists('Recipes') ? [] : ['className' => RecipesTable::class];
+        $this->Recipes = TableRegistry::getTableLocator()->get('Recipes', $config);
     }
 
     /**
@@ -46,7 +45,7 @@ class RecipesTableTest extends TestCase
      *
      * @return void
      */
-    public function tearDown(): void
+    public function tearDown()
     {
         unset($this->Recipes);
 
@@ -54,12 +53,21 @@ class RecipesTableTest extends TestCase
     }
 
     /**
+     * Test initialize method
+     *
+     * @return void
+     */
+    public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
      * Test validationDefault method
      *
      * @return void
-     * @uses \App\Model\Table\RecipesTable::validationDefault()
      */
-    public function testValidationDefault(): void
+    public function testValidationDefault()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -68,9 +76,8 @@ class RecipesTableTest extends TestCase
      * Test buildRules method
      *
      * @return void
-     * @uses \App\Model\Table\RecipesTable::buildRules()
      */
-    public function testBuildRules(): void
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
