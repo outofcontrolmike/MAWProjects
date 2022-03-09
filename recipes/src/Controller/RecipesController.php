@@ -21,6 +21,8 @@ class RecipesController extends AppController
         $this->paginate = [
             'contain' => ['Users'],
         ];
+        $this->Authorization->skipAuthorization();
+
         $recipes = $this->paginate($this->Recipes);
 
         $this->set(compact('recipes'));
@@ -39,6 +41,9 @@ class RecipesController extends AppController
             'contain' => ['Users', 'Tags'],
         ]);
 
+        $this->Authorization->skipAuthorization();
+
+
         $this->set(compact('recipe'));
     }
 
@@ -50,8 +55,13 @@ class RecipesController extends AppController
     public function add()
     {
         $recipe = $this->Recipes->newEmptyEntity();
+        $this->Authorization->authorize($recipe);
+        
         if ($this->request->is('post')) {
             $recipe = $this->Recipes->patchEntity($recipe, $this->request->getData());
+
+            //check identity
+            $recipe->user_id = $this->request->getAttribute('identity')->getIdentifier();
 
             if ($this->Recipes->save($recipe)) {
                 $this->Flash->success(__('The recipe has been saved.'));
@@ -77,13 +87,19 @@ class RecipesController extends AppController
         $recipe = $this->Recipes->get($id, [
             'contain' => ['Tags'],
         ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $recipe = $this->Recipes->patchEntity($recipe, $this->request->getData());
-            if ($this->Recipes->save($recipe)) {
-                $this->Flash->success(__('The recipe has been saved.'));
 
+        $this->Authorization->authorize('recipe');  
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $this->Recipes->patchEntity($recipe, $this->request->getData(), [
+                // Added: Disable modification of user_id.
+                'accessibleFields' => ['user_id' => false]
+            ]);
+            if ($this->Recipes->save($recipe)) {
+                $this->Flash->success(__('Your recipe has been updated.'));
                 return $this->redirect(['action' => 'index']);
             }
+            
             $this->Flash->error(__('The recipe could not be saved. Please, try again.'));
         }
         $users = $this->Recipes->Users->find('list', ['limit' => 200])->all();
@@ -102,6 +118,9 @@ class RecipesController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $recipe = $this->Recipes->get($id);
+
+        $this->Authorization-authorize($recipe);
+
         if ($this->Recipes->delete($recipe)) {
             $this->Flash->success(__('The recipe has been deleted.'));
         } else {
@@ -112,6 +131,7 @@ class RecipesController extends AppController
     }
 
     public function tags() {
+
      // The 'pass' key is provided by CakePHP and contains all
     // the passed URL path segments in the request.
     $tags = $this->request->getParam('pass');
@@ -121,6 +141,9 @@ class RecipesController extends AppController
             'tags' => $tags
         ])
         ->all();
+
+        $this->Authorization->skipAuthorization();
+
 
     // Pass variables into the view template context.
     $this->set([
