@@ -68,7 +68,7 @@ function About() {
           <p>
             Other than coding, I really love hiking, traveling and trying a
             variety of new things. I also enjoy playing guitar, writing and
-            photography. I have a fiance and two pet dogs and we all share a
+            photography. I am married and we have two pet dogs, which we all share a
             house that's over 100 years old.
           </p>
           <div className="center aligned author">
