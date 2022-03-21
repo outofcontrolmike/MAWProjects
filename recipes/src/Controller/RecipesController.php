@@ -52,10 +52,12 @@ public function add()
     $this->set('recipe', $recipe);
 }
 
+
 public function edit($slug)
 {
     $recipe = $this->Recipes
         ->findBySlug($slug)
+        ->contain('Tags')
         ->firstOrFail();
 
     if ($this->request->is(['post', 'put'])) {
