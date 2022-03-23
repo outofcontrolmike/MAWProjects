@@ -19,6 +19,7 @@ class UsersController extends AppController
     public function index()
     {
         $users = $this->paginate($this->Users);
+        $this->Authorization->skipAuthorization();
 
         $this->set(compact('users'));
     }
@@ -32,6 +33,8 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
+
         $user = $this->Users->get($id, [
             'contain' => ['Recipes'],
         ]);
@@ -70,9 +73,12 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
+        
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
+        // $this->Authorization->authorize($user);
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {

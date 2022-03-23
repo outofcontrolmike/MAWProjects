@@ -5,6 +5,7 @@
     <tr>
         <th>Title</th>
         <th>Created</th>
+        <th>Created By</th>
     </tr>
 
     <!-- Here is where we iterate through our $Recipes query object, printing out recipe info -->
@@ -18,8 +19,12 @@
             <?= $recipe->created->format(DATE_RFC850) ?>
         </td>
         <td>
+            <?= $this->Html->link($recipe->user_id, ['action' => 'view', $recipe->user_id]) ?>
+        </td>
+        <td>
             <?= $this->Html->link('Edit', ['action' => 'edit', $recipe->slug]) ?>
         </td>
+      
         <td>
         <?= $this->Form->postLink(
                 'Delete',
