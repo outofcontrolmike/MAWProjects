@@ -1,4 +1,5 @@
 <!-- In templates/Recipes/tags.php -->
+<div class="container content">
 <h1>
     Recipes tagged with
     <?= $this->Text->toList(h($tags), 'or') ?>
@@ -16,3 +17,4 @@
     </article>
 <?php endforeach; ?>
 </section>
+        </div>

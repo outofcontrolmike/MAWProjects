@@ -61,7 +61,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="container">
 
     <footer>
-        <h5>Thank you for you using cake recipes cms.  This was a dream come true with the help of cakePHP.</h5>
+        <h6>Thank you for you using cake recipes cms.  This was a dream come true with the help of cakePHP.</h6>
     </footer>
     </div>
 

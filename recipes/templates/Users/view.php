@@ -5,7 +5,7 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
+    <!-- <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
             <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
@@ -13,8 +13,8 @@
             <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
+    </aside> -->
+    <div class="column-responsive">
         <div class="users view content">
             <h3><?= h($user->id) ?></h3>
             <table>
@@ -48,7 +48,9 @@
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Recipes') ?></h4>
+                <h4><?= __("User's Created Recipes") ?></h4>
+                <button><a  target="_self" style="color: black" href="http://localhost:8765/recipes/add">Add Recipe</a>
+</button>
                 <?php if (!empty($user->recipes)) : ?>
                 <div class="table-responsive">
                     <table>

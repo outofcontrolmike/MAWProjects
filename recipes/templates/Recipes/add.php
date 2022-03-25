@@ -1,5 +1,6 @@
 <!-- File: templates/Recipes/add.php -->
 
+<div class="container content">
 <h1>Add Recipe</h1>
 <?php
     echo $this->Form->create($recipe);
@@ -11,3 +12,4 @@
     echo $this->Form->button(__('Save Recipe'));
     echo $this->Form->end();
 ?>
+</div>
