@@ -1,5 +1,5 @@
-
-<h1>Recipes</h1>
+<div class="index content">
+<h3>Recipes</h3>
 <?= $this->Html->link('Add Recipe', ['action' => 'add']) ?>
 <table>
     <tr>
@@ -35,3 +35,4 @@
     </tr>
     <?php endforeach; ?>
 </table>
+        </div>
