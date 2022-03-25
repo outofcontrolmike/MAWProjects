@@ -10,5 +10,5 @@
     <?= $this->Form->submit(__('Login')); ?>
     <?= $this->Form->end() ?>
 
-    <?= $this->Html->link("Create account / Sign up", ['action' => 'add']) ?>
+    <?= $this->Html->link("If you don't have an account yet, Please sign up!", ['action' => 'add']) ?>
 </div>
