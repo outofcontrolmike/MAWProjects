@@ -12,7 +12,9 @@ class Recipe extends Entity
         '*' => true,
         'id' => false,
         'slug' => false,
-        'tag_string' => true
+        'tag_string' => true,
+        'ingredients' => true,
+        'directions' => true
 
     ];
 
