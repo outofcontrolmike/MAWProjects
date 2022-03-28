@@ -1,5 +1,4 @@
 <!-- File: templates/Recipes/view.php -->
-<p><?= $recipe->photo_paths?></p>
 <div class="container content">
 <h1><?= h($recipe->title) ?></h1>
 <img }src="<?= $recipe->photo_paths ?>" />
