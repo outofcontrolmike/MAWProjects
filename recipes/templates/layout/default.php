@@ -58,12 +58,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->fetch('content') ?>
         </div>
     </main>
-    <div class="container">
+    <!-- <div class="container">
 
     <footer>
         <h6>Thank you for you using cake recipes cms.  This was a dream come true with the help of cakePHP.</h6>
     </footer>
-    </div>
+    </div> -->
 
 </body>
 </html>
