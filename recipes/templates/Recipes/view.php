@@ -5,6 +5,7 @@
 <p><small>PrepTime: <?= $recipe->prep_time?> min</small></p>
 <p><small>CookTime: <?= $recipe->cook_time?> min</small></p>
 <p><small>Servings: <?= $recipe->servings?></small></p>
+<p>Description/Summary: <?= $recipe->body?></p>
 <p><h4>Ingredients: <?= h($recipe->ingredients) ?></h4></p>
 <p><h4>Directions: <?= h($recipe->directions) ?></h4></p>
 <p><b>Tags:</b> <?= h($recipe->tag_string) ?></p>
