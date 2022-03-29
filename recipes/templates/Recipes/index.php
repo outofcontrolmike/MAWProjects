@@ -6,6 +6,7 @@
         <th>Title</th>
         <th>Created</th>
         <th>Creator</th>
+        <th></th>
     </tr>
 
     <!-- Here is where we iterate through our $Recipes query object, printing out recipe info -->
@@ -21,6 +22,10 @@
         <td>
             <p><?=$recipe->user_id?></p>
         </td>
+        <td>
+        <img src="<?= $recipe->photo_paths ?>" height="100px" width:="150px" />
+
+    </td>
         <!-- <td>
             <?= $this->Html->link('Edit', ['action' => 'edit', $recipe->slug]) ?>
         </td> -->
