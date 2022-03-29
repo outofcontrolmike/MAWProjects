@@ -43,7 +43,13 @@ public function validationDefault(Validator $validator): Validator
         ->maxLength('title', 255)
 
         ->notEmptyString('body')
-        ->minLength('body', 10);
+        ->minLength('body', 10)
+        ->notEmpty('prep_time')
+        ->notEmpty('cook_time')
+        ->notEmpty('servings')
+        ->notEmptyString('ingredients')
+        ->notEmptyString('directions')
+        ;
 
     return $validator;
 }
