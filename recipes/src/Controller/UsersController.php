@@ -149,7 +149,10 @@ public function logout()
     // regardless of POST or GET, redirect if user is logged in
     if ($result->isValid()) {
         $this->Authentication->logout();
+        $this->Flash->success(__('You have successfuly logged out.'));
         return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+
     }
+
 }
 }
