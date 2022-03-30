@@ -1,4 +1,5 @@
 <!-- File: templates/Recipes/add.php -->
+<?php include "templates\layout\header.php" ?>
 
 <div class="container content">
 <h1>Add Recipe</h1>

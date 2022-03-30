@@ -1,3 +1,5 @@
+<?php include "templates\layout\header.php" ?>
+
 <div class="users form container content">
     <?= $this->Flash->render() ?>
     <h3>Login</h3>

@@ -1,4 +1,5 @@
 <!-- In templates/Recipes/tags.php -->
+<?php include "templates\layout\header.php" ?>
 <div class="container content">
 <h1>
     Recipes tagged with

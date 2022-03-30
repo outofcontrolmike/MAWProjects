@@ -1,4 +1,5 @@
 <!-- File: templates/Recipes/view.php -->
+<?php include "templates\layout\header.php" ?>
 <div class="container content">
 <h1><?= h($recipe->title) ?></h1>
 <img src="<?= $recipe->photo_paths ?>" height="200px" width:="250px" />

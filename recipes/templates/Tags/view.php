@@ -4,6 +4,8 @@
  * @var \App\Model\Entity\Tag $tag
  */
 ?>
+<?php include "templates\layout\header.php" ?>
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">

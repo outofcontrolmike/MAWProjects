@@ -4,6 +4,8 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
+
+<?php include "templates\layout\header.php" ?>
 <div class="row">
     <div class="column-responsive">
         <div class="users form content">

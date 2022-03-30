@@ -1,3 +1,4 @@
+<?php include "templates\layout\header.php" ?>
 <div class="index content">
 <h3>Public Recipes</h3>
 <?= $this->Html->link('Add Recipe', ['action' => 'add']) ?>

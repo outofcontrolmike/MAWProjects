@@ -5,6 +5,8 @@
  * @var \Cake\Collection\CollectionInterface|string[] $recipes
  */
 ?>
+<?php include "templates\layout\header.php" ?>
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">

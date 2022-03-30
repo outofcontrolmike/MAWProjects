@@ -1,4 +1,6 @@
 <!-- File: templates/Recipes/edit.php -->
+
+<?php include "templates\layout\header.php" ?>
 <div class="container content">
 <h1>Edit Recipe</h1>
 <?php

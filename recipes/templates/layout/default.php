@@ -36,22 +36,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
-        </div>
-        <div class="top-nav-links">
-            <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
-            <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Public Recipes |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/recipes/tags">Tags |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users">Users |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/account">Account Settings |</a>
-            <!-- <a target="_self" rel="noopener" href="http://localhost:8765/users/signUp">Create Account</a> -->
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
 
-        </div>
-    </nav>
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>
