@@ -234,3 +234,16 @@ footer {
     border-top: solid black 1px;
     text-align: center;
 }
+
+
+/********************************* Other Styles  *************************************/
+
+#recipeSignUp {
+    position: relative;
+    margin-top:12.5%;
+    margin-left:25%;
+    width:fit-content;
+    
+  
+}
+
