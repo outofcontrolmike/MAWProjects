@@ -17,11 +17,11 @@
 ?>
 <!DOCTYPE html>
 <body>
+    <!-- Grab user ID to append to account settings -->
     <?php
-           $name = $this->request->getSession()->read('User.name');
-           echo $name;
-
+        $userId = $_SESSION['Auth']['id'];
     ?>
+
 <nav class="top-nav">
         <div class="top-nav-title">
             <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
@@ -33,7 +33,7 @@
             <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Public Recipes |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/recipes/tags">Tags |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users">Users |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/view/1">Account Settings |</a>
+            <a target="_self" rel="noopener" href="http://localhost:8765/users/view/<?php echo $userId?>">Account Settings </a>
             <!-- <a target="_self" rel="noopener" href="http://localhost:8765/users/signUp">Create Account</a> -->
             <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
 
