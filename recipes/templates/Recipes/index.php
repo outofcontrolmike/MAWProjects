@@ -21,7 +21,7 @@
             <?= $recipe->created->format(DATE_RFC850) ?>
         </td>
         <td>
-        <a href="http://localhost:8765/users/view/?id=\""."><?= $recipe->user_id?></a>
+        <a href="http://localhost:8765/users/view/<?=$recipe->user_id?>"><?= $recipe->user_id?></a>
         </td>
         <td>
         <img src="<?= $recipe->photo_paths ?>" height="100px" width:="150px" />
