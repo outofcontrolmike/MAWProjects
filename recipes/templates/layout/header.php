@@ -17,17 +17,23 @@
 ?>
 <!DOCTYPE html>
 <body>
+    <?php
+           $name = $this->request->getSession()->read('User.name');
+           echo $name;
+
+    ?>
 <nav class="top-nav">
         <div class="top-nav-title">
             <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
         </div>
+
         <div class="top-nav-links">
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Public Recipes |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/recipes/tags">Tags |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users">Users |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/account">Account Settings |</a>
+            <a target="_self" rel="noopener" href="http://localhost:8765/users/view/1">Account Settings |</a>
             <!-- <a target="_self" rel="noopener" href="http://localhost:8765/users/signUp">Create Account</a> -->
             <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
 
