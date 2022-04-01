@@ -122,6 +122,11 @@ class UsersController extends AppController
     $this->Authentication->addUnauthenticatedActions(['login', 'add']);
 }
 
+public function contact() {
+    $this->Authorization->skipAuthorization();
+
+}
+
 public function login()
 {
     $this->Authorization->skipAuthorization();
