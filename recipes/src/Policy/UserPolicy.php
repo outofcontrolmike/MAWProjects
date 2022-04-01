@@ -18,22 +18,15 @@ class UserPolicy
      * @param App\Model\Entity\User $resource
      * @return bool
      */
-    public function canAdd(IdentityInterface $user, User $resource)
+    public function canAdd (IdentityInterface $user, User $resource)
     {
         return true;
     }
 
-    /**
-     * Check if $user can update User
-     *
-     * @param Authorization\IdentityInterface $user The user.
-     * @param App\Model\Entity\User $resource
-     * @return bool
-     */
     public function canEdit(IdentityInterface $user, User $resource)
     {
-           // logged in users can edit their own details.
-           return $this->isAuthor($user, $resource);
+        // logged in users can edit their own info
+        return $this->isAuthor($user, $resource);
     }
 
     /**
@@ -45,19 +38,12 @@ class UserPolicy
      */
     public function canDelete(IdentityInterface $user, User $resource)
     {
-        // logged in users can delete theirself.
-        return $this->isAuthor($user, $resource);
+          // logged in users can delete their own recipes.
+          return $this->isAuthor($user, $resource);
     }
 
-    /**
-     * Check if $user can view User
-     *
-     * @param Authorization\IdentityInterface $user The user.
-     * @param App\Model\Entity\User $resource
-     * @return bool
-     */
-    public function canView(IdentityInterface $user, User $resource)
+    protected function isAuthor(IdentityInterface $user, User $resource)
     {
-        return $resource->user_id === $user->getIdentifier();
+        return $resource->id === $user->getIdentifier();
     }
 }
