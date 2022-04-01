@@ -21,7 +21,7 @@ $isCreator = $_SESSION["Auth"]["id"];
 <p>Created By: <?= $recipe->user_id?></p>
 <hr>
 <?php if($isCreator === $recipe->user_id) : ?>  
-<p><?=$this->Html->link('Edit', ['action' => 'edit', $recipe->slug]) ?></p>
+<?=$this->Html->link('Edit', ['action' => 'edit', $recipe->slug],['class' => 'button']) ?>
 <?php else: null  ?>
 <?php endif; ?>
 </div>
