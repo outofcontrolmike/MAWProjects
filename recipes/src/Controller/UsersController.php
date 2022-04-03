@@ -77,12 +77,10 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
-            $this->Authorization->authorize($user);
-
+         $this->Authorization->authorize($user);
 
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
@@ -122,11 +120,6 @@ class UsersController extends AppController
     $this->Authentication->addUnauthenticatedActions(['login', 'add']);
 }
 
-public function contact() {
-    $this->Authorization->skipAuthorization();
-
-}
-
 public function login()
 {
     $this->Authorization->skipAuthorization();
@@ -134,7 +127,7 @@ public function login()
     $result = $this->Authentication->getResult();
     // regardless of POST or GET, redirect if user is logged in
     if ($result->isValid()) {
-        // redirect to /articles after login success
+        // redirect to /recipes after login success
         $redirect = $this->request->getQuery('redirect', [
             'controller' => 'Recipes',
             'action' => 'index',
@@ -158,8 +151,17 @@ public function logout()
         $this->Authentication->logout();
         $this->Flash->success(__('You have successfuly logged out.'));
         return $this->redirect(['controller' => 'Users', 'action' => 'login']);
-
     }
 
 }
+
+public function contact() {
+    $this->Authorization->skipAuthorization();
+}
+
+public function thankyou() {
+    $this->Authorization->skipAuthorization();
+    // $this->Flash->success(__('Your Email has been sent!  Thank you!'));
+}
+
 }

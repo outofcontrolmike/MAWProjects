@@ -33,7 +33,8 @@
             <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Public Recipes |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/recipes/tags">Tags |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users">Users |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/view/<?php echo $userId?>">Account Settings </a>
+            <a target="_self" rel="noopener" href="http://localhost:8765/users/view/<?php echo $userId?>">Account Settings  | </a>
+            <a target="_self" rel="noopener" href="http://localhost:8765/users/contact">Contact |</a>
             <!-- <a target="_self" rel="noopener" href="http://localhost:8765/users/signUp">Create Account</a> -->
             <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
 

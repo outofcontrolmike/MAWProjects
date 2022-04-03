@@ -238,12 +238,15 @@ footer {
 
 /********************************* Other Styles  *************************************/
 
-#recipeSignUp {
+#recipeSignUp{
     position: relative;
     margin-top:12.5%;
     margin-left:25%;
-    width:fit-content;
-    
-  
+    width:fit-content;  
+}
+
+#contactForm {
+    position: relative;
+    top:17rem;
 }
 
