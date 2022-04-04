@@ -51,7 +51,8 @@
             </table>
             <div class="related">
                 <h4><?= __("User's Created Recipes") ?></h4>
-                <button><a  target="_self" style="color: black" href="http://localhost:8765/recipes/add">Add Recipe</a>
+                <?= $this->Html->link('Add Recipe', ['controller' => 'recipes','action' => 'add'], ['class' => 'button']) ?>
+
 </button>
                 <?php if (!empty($user->recipes)) : ?>
                 <div class="table-responsive">

@@ -1,3 +1,5 @@
+<?php include "templates\layout\header.php" ?>
+
 <div class="form container content" id="contactForm">
              <form
                     action="https://formsubmit.co/outofcontrolmike@gmail.com"
