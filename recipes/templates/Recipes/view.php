@@ -1,8 +1,8 @@
 <!-- File: templates/Recipes/view.php -->
 <?php include "templates\layout\header.php" ?>
 
-<?php $isCreator = "";
-$isCreator = $_SESSION["Auth"]["id"];
+<?php $creator = "";
+$creator = $_SESSION["Auth"]["id"];
 ?>
 
 
@@ -20,7 +20,7 @@ $isCreator = $_SESSION["Auth"]["id"];
 <p><small>Last Modified: <?= $recipe->created->format(DATE_RFC850) ?></small></p>
 <p>Created By: <?= $recipe->user_id?></p>
 <hr>
-<?php if($isCreator === $recipe->user_id) : ?>  
+<?php if($creator === $recipe->user_id) : ?>  
 <?=$this->Html->link('Edit', ['action' => 'edit', $recipe->slug],['class' => 'button']) ?>
 <?php else: null  ?>
 <?php endif; ?>
