@@ -1,6 +1,5 @@
-<?php include "templates\layout\header.php" ?>
 
-<div class="users form container content">
+<div class="users form container content" id="loginForm">
     <?= $this->Flash->render() ?>
     <h3>Login</h3>
     <?= $this->Form->create() ?>

@@ -245,7 +245,7 @@ footer {
     width:fit-content;  
 }
 
-#contactForm {
+#contactForm, #loginForm {
     position: relative;
     top:18rem;
 }
