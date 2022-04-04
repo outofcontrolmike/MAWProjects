@@ -1,5 +1,5 @@
 <?php include "templates\layout\header.php" ?>
-<div class="index content">
+<div class="index content" id="recipesIndex">
 <h3>Public Recipes</h3>
 
 
