@@ -31,7 +31,7 @@
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Public Recipes |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/recipes/tags">Tags |</a>
+            <a target="_self" rel="noopener" href="http://localhost:8765/tags">Tags |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users">Users |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users/edit/<?php echo $userId?>">Account Settings  | </a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users/view/<?php echo $userId?>">My Recipes |</a>
