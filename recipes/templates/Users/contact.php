@@ -11,7 +11,7 @@
                         value="http://localhost:8765/users/thankyou"
                     />
                     <input type="hidden" name="_captcha" value="false" />
-                    <h1 style="text-align:center;">Recipe Questions or Comments Welcome.</h1>
+                    <h1 style="text-align:center;">Comments or Suggestions?</h1>
                     <div class="field">
                         <input required type="text" id="hikeFormText" name="first-name" placeholder="First Name or name preferred" />
                     </div>
@@ -21,7 +21,7 @@
                     <div class="field">
                         <textarea required type="text" id="hikeFormText" name="message" placeholder='Questions or Suggestions about cooking or ways to improve this site.'></textarea>
                     </div>
-                    <button id="hikeFormText" class="ui button right floated basic" type="submit">Submit</button>
+                    <button style="width: 99%;" type="submit">Submit</button>
                 </form>
             </div>
         </div>

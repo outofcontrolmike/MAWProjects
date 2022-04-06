@@ -248,6 +248,7 @@ footer {
 #contactForm, #loginForm {
     position: relative;
     top:18rem;
+    width: fit-content;
 }
 
 #recipesIndex {

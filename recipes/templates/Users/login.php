@@ -10,6 +10,6 @@
     </fieldset>
     <?= $this->Form->submit(__('Login'), ['action' => ['add']]); ?>
     <?= $this->Form->end() ?>
-
-    <?= $this->Html->link("If you don't have an account yet, Please sign up!", ['action' => 'add']) ?>
+    <h5>OR</h5>
+    <?= $this->Html->link('Sign Up', ['action' => 'add'], ['class' => 'button'], ['style' => 'width:']) ?>
 </div>
