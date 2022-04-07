@@ -1,10 +1,24 @@
 <?php include "templates\layout\header.php" ?>
+
+<div class="users form content">
+    <?= $this->Flash->render() ?>
+    <?= $this->Form->create() ?>
+    <fieldset>
+        <?= $this->Form->control('Search by tags', ['required' => true]) ?>
+    </fieldset>
+    <?= $this->Form->submit(__('Submit Search'), ['action' => ['add']]); ?>
+    <?= $this->Form->end() ?>
+
+    
+</div>
 <div class="index content" id="recipesIndex">
 <h3>Public Recipes</h3>
 
 
 
-<?= $this->Html->link('Add Recipe', ['action' => 'add'], ['class' => 'button']) ?>
+<!-- <?= $this->Html->link('Add Recipe', ['action' => 'add'], ['class' => 'button']) ?> -->
+
+<!-- Add input field -->
 
 <table>
     <tr>
