@@ -21,7 +21,7 @@
                 <legend><?= __('Add Tag') ?></legend>
                 <?php
                     echo $this->Form->control('title');
-                    echo $this->Form->control('recipes._ids', ['options' => $recipes]);
+                    echo $this->Form->control('recipes._ids', ['label' => "Recipes to Tag (Hold Control Key and then click each recipe you want to tag)", 'class' => 'recipesTextArea', 'options' => $recipes]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

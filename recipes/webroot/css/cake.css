@@ -255,3 +255,8 @@ footer {
     height: 80vh;
     overflow-y: scroll;
 }
+
+.recipesTextArea {
+    height: fit-content;
+    background-color: linen;
+}
