@@ -34,6 +34,8 @@ class TagsController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
+
         $tag = $this->Tags->get($id, [
             'contain' => ['Recipes'],
         ]);
@@ -71,6 +73,8 @@ class TagsController extends AppController
      */
     public function edit($id = null)
     {
+        $this->Authorization->skipAuthorization();
+
         $tag = $this->Tags->get($id, [
             'contain' => ['Recipes'],
         ]);

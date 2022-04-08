@@ -6,7 +6,7 @@
  */
 ?>
 <?php include "templates\layout\header.php" ?>
-<?php print_r($_SESSION); ?>
+
 
 <div class="tags index content">
     <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => 'button float-right']) ?>
@@ -35,7 +35,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('View'), ['action' => 'view', $tag->id]) ?>
                             <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tag->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?>
+                            <!-- <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?> -->
                         </td>
                     </tr>
                 <?php endforeach; ?>

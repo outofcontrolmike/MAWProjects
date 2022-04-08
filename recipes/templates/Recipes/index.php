@@ -4,9 +4,9 @@
     <?= $this->Flash->render() ?>
     <?= $this->Form->create() ?>
     <fieldset>
-        <?= $this->Form->control('Search by tags', ['required' => true]) ?>
+        <?= $this->Form->control('Search by Keyword', ['required' => true]) ?>
     </fieldset>
-    <?= $this->Form->submit(__('Submit Search'), ['action' => ['add']]); ?>
+    <?= $this->Form->submit(__('Submit Search'),['controller' => "recipes/tagged"],['action' => 'test']) ?>
     <?= $this->Form->end() ?>
 
     
