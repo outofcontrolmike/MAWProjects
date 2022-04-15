@@ -238,6 +238,16 @@ footer {
 
 /********************************* Other Styles  *************************************/
 
+#recipeCardsIndex {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#recipeCard {
+    width: 500px;
+    margin-bottom: 2rem;
+}
+
 #recipeSignUp{
     position: relative;
     margin-top:12.5%;

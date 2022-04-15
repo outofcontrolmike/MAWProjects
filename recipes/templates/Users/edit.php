@@ -22,7 +22,7 @@
         <div class="users form content">
             <?= $this->Form->create($user) ?>
             <fieldset>
-                <legend><?= __('Edit User') ?></legend>
+                <legend><?= __('Edit Your Account Details') ?></legend>
                 <?php
                     echo $this->Form->control('user_name');
                     echo $this->Form->control('email');
