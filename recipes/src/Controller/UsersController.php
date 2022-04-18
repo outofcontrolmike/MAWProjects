@@ -32,7 +32,13 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
-        $this->Authorization->skipAuthorization();
+
+        //check if there's a session and limit outside user
+        $userId = $_SESSION['Auth']['id'];
+        if($userId) {
+            $this->Authorization->skipAuthorization();
+        } 
+
         $user = $this->Users->get($id, [
             'contain' => ['Recipes'],
         ]);
