@@ -57,8 +57,9 @@ class AppController extends Controller
     public function beforeFilter(\Cake\Event\EventInterface $event)
 {
     parent::beforeFilter($event);
-    // for all controllers in our application, make index and view
+    // Public recipes viewable by non-logged in users
+    // for all controllers in our application, make index and view, public
     // actions public, skipping the authentication check
-    $this->Authentication->addUnauthenticatedActions(['index', 'view']);
+    $this->Authentication->addUnauthenticatedActions(['public', 'view']);
 }
 }

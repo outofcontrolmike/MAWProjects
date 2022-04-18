@@ -35,10 +35,11 @@ class RecipesController extends AppController
 
     public function view($slug = null)
 {
-    $this->Authorization->skipAuthorization();
 
     $recipe = $this->Recipes->findBySlug($slug)->contain('Tags')->firstOrFail();
+    $this->Authorization->skipAuthorization($slug);
     $this->set(compact('recipe'));
+
 }
 
 public function add()

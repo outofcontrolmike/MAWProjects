@@ -20,7 +20,6 @@ class UsersController extends AppController
     {
         $users = $this->paginate($this->Users);
         $this->Authorization->skipAuthorization();
-
         $this->set(compact('users'));
     }
 
@@ -33,12 +32,9 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
-        $this->Authorization->skipAuthorization();
-
         $user = $this->Users->get($id, [
             'contain' => ['Recipes'],
         ]);
-
         $this->set(compact('user'));
     }
 
