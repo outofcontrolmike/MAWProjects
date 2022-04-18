@@ -32,6 +32,7 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
+        $this->Authorization->skipAuthorization();
         $user = $this->Users->get($id, [
             'contain' => ['Recipes'],
         ]);
