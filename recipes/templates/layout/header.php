@@ -30,16 +30,21 @@
         <div class="top-nav-links">
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
-            <a target="_self" rel="noopener" href="http://localhost:8765/recipes/public">Public Recipes |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Recipes Table View |</a>
+            <?php if($userId) { ?>
+            <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Public Recipes |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/tags">Tags |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users">Users |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users/edit/<?php echo $userId?>">Account Settings  | </a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users/view/<?php echo $userId?>">My Recipes |</a>
+            <a target="_self" rel="noopener" href="http://localhost:8765/recipes/public">All Recipes |</a>
             <a target="_self" rel="noopener" href="http://localhost:8765/users/contact">Contact |</a>
             <!-- <a target="_self" rel="noopener" href="http://localhost:8765/users/signUp">Create Account</a> -->
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
-
+        
+                <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
+        <?php } ?>
+            <?php if(!$userId) { ?>
+            <a target="_self" rel="noopener" href="http://localhost:8765/users/login">Login</a>
+        <?php } ?>
         </div>
     </nav>
 </body>
