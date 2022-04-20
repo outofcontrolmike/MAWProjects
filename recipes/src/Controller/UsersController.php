@@ -18,8 +18,11 @@ class UsersController extends AppController
      */
     public function index()
     {
+        $userId = $_SESSION['Auth']['id'];
+        if($userId) {
+            $this->Authorization->skipAuthorization();
+        } 
         $users = $this->paginate($this->Users);
-        $this->Authorization->skipAuthorization();
         $this->set(compact('users'));
     }
 
@@ -132,7 +135,7 @@ public function login()
     if ($result->isValid()) {
         // redirect to /recipes after login success
         $redirect = $this->request->getQuery('redirect', [
-            'controller' => 'Users',
+            'controller' => 'Recipes',
             'action' => 'index',
         ]);
 
