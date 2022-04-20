@@ -33,7 +33,7 @@ class UsersController extends AppController
     public function view($id = null)
     {
 
-        //check if there's a session and limit outside user
+        //check if there's a session and limit otside user
         $userId = $_SESSION['Auth']['id'];
         if($userId) {
             $this->Authorization->skipAuthorization();
@@ -132,7 +132,7 @@ public function login()
     if ($result->isValid()) {
         // redirect to /recipes after login success
         $redirect = $this->request->getQuery('redirect', [
-            'controller' => 'Recipes',
+            'controller' => 'Users',
             'action' => 'index',
         ]);
 
