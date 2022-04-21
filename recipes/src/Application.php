@@ -131,7 +131,7 @@ class Application extends BaseApplication
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
 {
     $authenticationService = new AuthenticationService([
-        'unauthenticatedRedirect' => Router::url('/recipes'),
+        'unauthenticatedRedirect' => Router::url('/users/login'),
         'queryParam' => 'redirect',
     ]);
 
