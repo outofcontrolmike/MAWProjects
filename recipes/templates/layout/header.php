@@ -24,7 +24,7 @@
 
 <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+            <a href="<?= $this->Url->build('/recipes') ?>"><span>Cake</span>PHP</a>
         </div>
 
         <div class="top-nav-links">
