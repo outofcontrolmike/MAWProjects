@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -19,9 +20,9 @@ class UsersController extends AppController
     public function index()
     {
         $userId = $_SESSION['Auth']['id'];
-        if($userId) {
+        if ($userId) {
             $this->Authorization->skipAuthorization();
-        } 
+        }
         $users = $this->paginate($this->Users);
         $this->set(compact('users'));
     }
@@ -38,9 +39,9 @@ class UsersController extends AppController
 
         //check if there's a session and limit otside user
         $userId = $_SESSION['Auth']['id'];
-        if($userId) {
+        if ($userId) {
             $this->Authorization->skipAuthorization();
-        } 
+        }
 
         $user = $this->Users->get($id, [
             'contain' => ['Recipes'],
@@ -63,7 +64,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('You have successfully created an account!'));
 
-                return $this->redirect(['controller'=> "Recipes",'action' => 'index']);
+                return $this->redirect(['controller' => "Recipes", 'action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
@@ -79,18 +80,17 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
-        
+
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
-         $this->Authorization->authorize($user);
+        $this->Authorization->authorize($user);
 
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('Your Account Details have been updated!'));
-
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect('/users/edit/' . $id);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
@@ -105,7 +105,8 @@ class UsersController extends AppController
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)
-    {        $this->Authorization->skipAuthorization();
+    {
+        $this->Authorization->skipAuthorization();
 
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
@@ -119,56 +120,55 @@ class UsersController extends AppController
     }
 
     public function beforeFilter(\Cake\Event\EventInterface $event)
-{
-    parent::beforeFilter($event);
-    // Configure the login action to not require authentication, preventing
-    // the infinite redirect loop issue
-    $this->Authentication->addUnauthenticatedActions(['login', 'add']);
-}
-
-public function login()
-{
-    $this->Authorization->skipAuthorization();
-    $this->request->allowMethod(['get', 'post']);
-    $result = $this->Authentication->getResult();
-    // regardless of POST or GET, redirect if user is logged in
-    if ($result->isValid()) {
-        // redirect to /recipes after login success
-        $redirect = $this->request->getQuery('redirect', [
-            'controller' => 'Recipes',
-            'action' => 'index',
-        ]);
-
-        return $this->redirect($redirect);
-    }
-    // display error if user submitted and authentication failed
-    if ($this->request->is('post') && !$result->isValid()) {
-        $this->Flash->error(__('Invalid username or password'));
-    }
-}
-
-public function logout()
-{
-    $this->Authorization->skipAuthorization();
-
-    $result = $this->Authentication->getResult();
-    // regardless of POST or GET, redirect if user is logged in
-    if ($result->isValid()) {
-        $this->Flash->success(__('You have successfully logged out.'));
-        $this->Authentication->logout();
-        return $this->redirect(['controller' => 'Users', 'action' => 'login']);
-
+    {
+        parent::beforeFilter($event);
+        // Configure the login action to not require authentication, preventing
+        // the infinite redirect loop issue
+        $this->Authentication->addUnauthenticatedActions(['login', 'add']);
     }
 
-}
+    public function login()
+    {
+        $this->Authorization->skipAuthorization();
+        $this->request->allowMethod(['get', 'post']);
+        $result = $this->Authentication->getResult();
+        // regardless of POST or GET, redirect if user is logged in
+        if ($result->isValid()) {
+            // redirect to /recipes after login success
+            $redirect = $this->request->getQuery('redirect', [
+                'controller' => 'Recipes',
+                'action' => 'index',
+            ]);
 
-public function contact() {
-    $this->Authorization->skipAuthorization();
-}
+            return $this->redirect($redirect);
+        }
+        // display error if user submitted and authentication failed
+        if ($this->request->is('post') && !$result->isValid()) {
+            $this->Flash->error(__('Invalid username or password'));
+        }
+    }
 
-public function thankyou() {
-    $this->Authorization->skipAuthorization();
-    // $this->Flash->success(__('Your Email has been sent!  Thank you!'));
-}
+    public function logout()
+    {
+        $this->Authorization->skipAuthorization();
 
+        $result = $this->Authentication->getResult();
+        // regardless of POST or GET, redirect if user is logged in
+        if ($result->isValid()) {
+            $this->Flash->success(__('You have successfully logged out.'));
+            $this->Authentication->logout();
+            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        }
+    }
+
+    public function contact()
+    {
+        $this->Authorization->skipAuthorization();
+    }
+
+    public function thankyou()
+    {
+        $this->Authorization->skipAuthorization();
+        // $this->Flash->success(__('Your Email has been sent!  Thank you!'));
+    }
 }
