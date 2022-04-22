@@ -46,7 +46,6 @@ class TagsController extends AppController
     public function view($id = null)
     {
         $this->checkAuth();
-
         $tag = $this->Tags->get($id, [
             'contain' => ['Recipes'],
         ]);
