@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -11,17 +12,27 @@ namespace App\Controller;
  */
 class TagsController extends AppController
 {
+    //Checks for a user session - We don't want Tags viewable to non-users
+    public function checkAuth()
+    {
+        $userId = $_SESSION['Auth']['id'];
+        if ($userId) {
+            $this->Authorization->skipAuthorization();
+        }
+    }
+
+
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
+
+
     public function index()
     {
-        $this->Authorization->skipAuthorization();
-
+        $this->checkAuth();
         $tags = $this->paginate($this->Tags);
-
         $this->set(compact('tags'));
     }
 
@@ -34,7 +45,7 @@ class TagsController extends AppController
      */
     public function view($id = null)
     {
-        $this->Authorization->skipAuthorization();
+        $this->checkAuth();
 
         $tag = $this->Tags->get($id, [
             'contain' => ['Recipes'],
@@ -50,7 +61,7 @@ class TagsController extends AppController
      */
     public function add()
     {
-        $this->Authorization->skipAuthorization();
+        $this->checkAuth();
 
         $tag = $this->Tags->newEmptyEntity();
         if ($this->request->is('post')) {
