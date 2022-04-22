@@ -48,7 +48,7 @@ $this->disableAutoLayout();
 <body>
     <header>
         <div class="container text-center">
-            <a href="http://localhost:8765/recipes" target="_blank" rel="noopener">
+            <a href="http://localhost:8765/recipes" target="_self" rel="noopener">
                 <img alt="CakePHP" src="https://cakephp.org/v2/img/logos/CakePHP_Logo.svg" width="350" />
             </a>
             <h1>
