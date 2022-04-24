@@ -66,15 +66,8 @@ $this->disableAutoLayout();
         <p>Do you need one place for sharing and storing your recipes? If so, look no further. This website allows viewers like you to view other creator's recipes as well as list/manage your own. If you don't want to sign up for an account, that's perfectly fine. You will always have the option to view all the recipes on this site without an account.</p>
         <hr>
         <div>
-            </>
-            <form name="form" action="" method="post">
-                <input type="text" name="subject" id="subject" value="Car Loan"></>
-                
-                <?= $this->Html->link(__('Submit Search'), ['controller' => "Recipes/", 'action' => 'tagged', $_GET['name']], ['class' => 'button']) ?>
-            </form>
-
-
-
+            <input name="test" value= "tacos" placeholder="...Type a keyword into here">
+            <?= $this->Html->link(__('Submit Search'), ['controller' => "Recipes/", 'action' => 'tagged/', $_REQUEST['test']], ['class' => 'button']) ?>
         </div>
         <!-- <a href="http://localhost:8765/recipes" target="_self" rel="noopener">
                 <img alt="CakePHP" src="https://cakephp.org/v2/img/logos/CakePHP_Logo.svg" width="350" />
