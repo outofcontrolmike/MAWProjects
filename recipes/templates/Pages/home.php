@@ -43,7 +43,7 @@ $this->disableAutoLayout();
         <p>Do you need one place for sharing and storing your recipes? If so, look no further. This website allows viewers like you to view other creator's recipes as well as list/manage your own. If you don't want to sign up for an account, that's perfectly fine. You will always have the option to view all the recipes on this site without an account.</p>
         <hr>
         <div>
-            <input name="test" id="recipeKeyword" value="tacos" placeholder="...Type a keyword into here">
+            <input name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
             <button onclick="submitKeyword()" class="button">Submit Keyword</button>
         </div>
     </div>
@@ -72,7 +72,9 @@ $this->disableAutoLayout();
     //Will search for whatever user entered
     function submitKeyword() {
         let keyword = document.getElementById('recipeKeyword');
-        window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
+        if (keyword.value != "") {
+            window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
+        }
     }
 </script>
 
