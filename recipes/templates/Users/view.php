@@ -29,28 +29,12 @@ $creator = $_SESSION["Auth"]["id"];
                     <td><?= h($user->user_name) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Email') ?></th>
-                    <td><?= h($user->email) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Bio') ?></th>
                     <td><?= h($user->bio) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Instagram Link') ?></th>
                     <td><?= h($user->instagram_link) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($user->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($user->created) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Modified') ?></th>
-                    <td><?= h($user->modified) ?></td>
                 </tr>
             </table>
             <div class="related">
