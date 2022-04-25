@@ -40,12 +40,14 @@
                 <a target="_self" rel="noopener" href="http://localhost:8765/users/view/<?php echo $userId ?>">My Recipes |</a>
                 <a target="_self" rel="noopener" href="http://localhost:8765/recipes/public">All Recipes |</a>
                 <a target="_self" rel="noopener" href="http://localhost:8765/users/contact">Contact |</a>
-                <!-- <a target="_self" rel="noopener" href="http://localhost:8765/users/signUp">Create Account</a> -->
-
+                <a target="_self" rel="noopener" href="http://localhost:8765/users/faq">FAQ</a>
                 <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
             <?php } ?>
             <?php if (!$userId) { ?>
                 <a target="_self" rel="noopener" href="http://localhost:8765/users/login">Login</a>
+                <a target="_self" rel="noopener" href="http://localhost:8765/users/add">Create Account |</a>
+                <a target="_self" rel="noopener" href="http://localhost:8765/users/contact">Contact |</a>
+                <a target="_self" rel="noopener" href="http://localhost:8765/users/faq">FAQ</a>
             <?php } ?>
         </div>
     </nav>

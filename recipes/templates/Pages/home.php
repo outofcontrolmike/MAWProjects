@@ -36,18 +36,9 @@ $this->disableAutoLayout();
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body class="container">
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
-        </div>
-        <div class="top-nav-links">
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/login">Login |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/add">Create Account |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/contact">Contact |</a>
-            <a target="_self" rel="noopener" href="http://localhost:8765/users/faq">FAQ</a>
-        </div>
-    </nav>
+    <?php include "templates\layout\header.php" ?>
     <div class="container text-center content" style="margin-bottom: 2rem;">
         <p>Do you need one place for sharing and storing your recipes? If so, look no further. This website allows viewers like you to view other creator's recipes as well as list/manage your own. If you don't want to sign up for an account, that's perfectly fine. You will always have the option to view all the recipes on this site without an account.</p>
         <hr>
