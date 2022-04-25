@@ -331,9 +331,20 @@ option {
 }
 
 /********************Thank you page *************************************************************/
+#thankYouContainer {
+  height:110vh;
+  background-color: black;
+}
+
 #thankYou {
+  border: orange solid 4px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 10px;
   position: relative;
   top: 20rem;
+  color: white;
+  background-color: black;
 }
 .thankyouText,
 .thankyouH1,

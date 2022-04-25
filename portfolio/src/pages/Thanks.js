@@ -9,6 +9,7 @@ function Thanks(props) {
   }
 
   return (
+    <div className="ui container fluid" id="thankYouContainer">
     <div className="ui middle aligned center aligned grid" id="thankYou">
       <div className="column thankyouText">
         <h1 className="thankyouH1">Thank you so much!!</h1>
@@ -27,6 +28,8 @@ function Thanks(props) {
         </div>
       </div>
     </div>
+    </div>
+
   );
 }
 
