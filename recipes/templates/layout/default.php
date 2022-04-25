@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -18,6 +19,7 @@ $cakeDescription = 'Recipes Project';
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,14 +32,17 @@ $cakeDescription = 'Recipes Project';
 
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
 
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+
+    <!-- You MUST include jQuery before Fomantic -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script> -->
 </head>
+
 <body>
 
     <main class="main">
-        <div class="container">
+        <div class="ui container fluid segment">
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
         </div>
@@ -50,4 +55,5 @@ $cakeDescription = 'Recipes Project';
     </div> -->
 
 </body>
+
 </html>
