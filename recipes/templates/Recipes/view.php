@@ -4,8 +4,6 @@
 <?php $creator = "";
 $creator = $_SESSION["Auth"]["id"];
 ?>
-
-
 <div class="container content">
     <h1><?= h($recipe->title) ?></h1>
     <?php if ($recipe->image != null) : ?>

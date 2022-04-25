@@ -93,6 +93,18 @@ class RecipesController extends AppController
                 'accessibleFields' => ['user_id' => false]
             ]);
 
+            //file upload
+            if (!$recipe->getErrors) {
+
+                $attachment = $this->request->getData('image_file');
+                $name = $attachment->getClientFilename();
+                $targetPath = WWW_ROOT . 'img' . DS . $name;
+                if ($name) {
+                    $attachment->moveTo($targetPath);
+                    $recipe->image = $name;
+                }
+            }
+
             if ($this->Recipes->save($recipe)) {
                 $this->Flash->success(__('Your recipe has been updated.'));
                 return $this->redirect(['action' => 'index']);
