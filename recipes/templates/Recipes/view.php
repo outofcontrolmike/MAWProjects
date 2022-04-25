@@ -8,7 +8,9 @@ $creator = $_SESSION["Auth"]["id"];
 
 <div class="container content">
     <h1><?= h($recipe->title) ?></h1>
-    <img src="<?= $recipe->image ?>" />
+    <?php if ($recipe->image != null) : ?>
+        <p><?= $this->Html->image($recipe->image) ?></p>
+    <?php endif ?>
     <p><small>PrepTime: <?= $recipe->prep_time ?> min</small></p>
     <p><small>CookTime: <?= $recipe->cook_time ?> min</small></p>
     <p><small>Servings: <?= $recipe->servings ?></small></p>
