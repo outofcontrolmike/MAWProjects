@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -14,6 +15,7 @@ declare(strict_types=1);
  * @since     0.2.9
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace App\Controller;
 
 use Cake\Core\Configure;
@@ -46,7 +48,7 @@ class PagesController extends AppController
     public function display(string ...$path): ?Response
     {
         //Skip authorization for home page
-         $this->Authorization->skipAuthorization();
+        $this->Authorization->skipAuthorization();
 
         if (!$path) {
             return $this->redirect('/');
@@ -80,5 +82,10 @@ class PagesController extends AppController
         // Configure the login action to not require authentication, preventing
         // the infinite redirect loop issue
         $this->Authentication->addUnauthenticatedActions(['display']);
+    }
+
+    public function faq()
+    {
+        $this->Authorization->skipAuthorization();
     }
 }
