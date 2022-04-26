@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Entity;
@@ -40,6 +41,9 @@ class User extends Entity
         'created' => true,
         'modified' => true,
         'recipes' => true,
+        'title' => true,
+        'image' => true,
+        'link' => true,
     ];
 
     /**
@@ -51,11 +55,11 @@ class User extends Entity
         'password',
     ];
 
-     // Add this method
-     protected function _setPassword(string $password) : ?string
-     {
-         if (strlen($password) > 0) {
-             return (new DefaultPasswordHasher())->hash($password);
-         }
-     }
+    // Add this method
+    protected function _setPassword(string $password): ?string
+    {
+        if (strlen($password) > 0) {
+            return (new DefaultPasswordHasher())->hash($password);
+        }
+    }
 }

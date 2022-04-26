@@ -23,10 +23,15 @@ $creator = $_SESSION["Auth"]["id"];
     </aside> -->
     <div class="column-responsive">
         <div class="users view content">
+            <img style="height: 250px" src="<?= h($user->image) ?>" />
             <table>
                 <tr>
                     <th><?= __('User Name') ?></th>
                     <td><?= h($user->user_name) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Title') ?></th>
+                    <td><?= h($user->title) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Bio') ?></th>
@@ -35,6 +40,10 @@ $creator = $_SESSION["Auth"]["id"];
                 <tr>
                     <th><?= __('Instagram Link') ?></th>
                     <td><?= h($user->instagram_link) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Business Link') ?></th>
+                    <td><?= h($user->link) ?></td>
                 </tr>
             </table>
             <div class="related">

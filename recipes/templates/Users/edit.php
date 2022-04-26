@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
@@ -24,11 +25,14 @@
             <fieldset>
                 <legend><?= __('Edit Your Account Details') ?></legend>
                 <?php
-                    echo $this->Form->control('user_name');
-                    echo $this->Form->control('email');
-                    echo $this->Form->control('password');
-                    echo $this->Form->control('bio');
-                    echo $this->Form->control('instagram_link');
+                echo $this->Form->control('user_name');
+                echo $this->Form->control('title');
+                echo $this->Form->control('email');
+                echo $this->Form->control('password');
+                echo $this->Form->control('bio');
+                echo $this->Form->control('image');
+                echo $this->Form->control('link');
+                echo $this->Form->control('instagram_link');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

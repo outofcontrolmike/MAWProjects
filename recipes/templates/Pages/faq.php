@@ -38,7 +38,7 @@ $this->disableAutoLayout();
         </h2>
         <div style="text-align: left">
             <h4>What’s the point of this application?</h4>
-            <div>The point of this application is to allow people like you to view recipes, that other’s have created, and the provide you the opportunity to create an account to post your recipes. Having an account may also help you promote yourself by displaying a unique profile and social media links (such as Instagram or your website).</div>
+            <div>The point of this application is to allow people like you to view recipes, that other’s have created, and to provide you the opportunity to create an account to post your recipes. Having an account may also help you promote yourself by displaying a unique profile and social media links (such as Instagram or your website).</div>
             <hr>
             </hr>
 
