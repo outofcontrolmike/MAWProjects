@@ -31,6 +31,10 @@
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <?php if ($userId) { ?>
+                <div class="ui icon input">
+                    <input type="text" placeholder="Type in a recipe key word...">
+                    <i class="search link icon"></i>
+                </div>
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
                 <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
@@ -44,7 +48,7 @@
             <?php } ?>
             <?php if (!$userId) { ?>
                 <div class="ui icon input">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Type in a recipe key word...">
                     <i class="search link icon"></i>
                 </div>
                 <div class="right pointing menu">

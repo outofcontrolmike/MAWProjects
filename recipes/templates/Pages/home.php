@@ -14,7 +14,6 @@
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  * @var \App\View\AppView $this
  */
-$this->disableAutoLayout();
 
 ?>
 <!DOCTYPE html>
@@ -40,7 +39,7 @@ $this->disableAutoLayout();
 
 <body class="ui">
     <?php include "templates\layout\header.php" ?>
-    <div class="ui conatiner">
+    <div class="ui">
     <div class="" style="margin-bottom: 10rem;">
         <p>Do you need one place for sharing and storing your recipes? If so, look no further. This website allows viewers like you to view other creator's recipes as well as list/manage your own. If you don't want to sign up for an account, that's perfectly fine. You will always have the option to view all the recipes on this site without an account.</p>
         <hr>
