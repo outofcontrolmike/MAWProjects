@@ -1,8 +1,12 @@
 <?php include "templates\layout\header.php" ?>
 <div class="content">
     <h3>Public Recipes</h3>
-
+    <div>
+        <input name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
+        <button onclick="submitKeyword()" class="button">Submit Keyword</button>
+    </div>
     <div class="index" id="recipeCardsIndex">
+
         <!-- <?= $this->Html->link('Add Recipe', ['action' => 'add'], ['class' => 'button']) ?> -->
 
         <!-- Here is where we iterate through our $Recipes query object, printing out recipe info -->
@@ -23,3 +27,13 @@
         <?php endforeach; ?>
     </div>
 </div>
+
+<script>
+    //Will search for whatever user entered
+    function submitKeyword() {
+        let keyword = document.getElementById('recipeKeyword');
+        if (keyword.value != "") {
+            window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
+        }
+    }
+</script>

@@ -30,21 +30,20 @@ $this->disableAutoLayout();
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'home']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 
     <!-- You MUST include jQuery before Fomantic -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
-<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
 </head>
 
-<body class="container">
+<body class="ui container fluid">
     <?php include "templates\layout\header.php" ?>
-    <div class="container text-center content" style="margin-bottom: 2rem;">
+    <div class="container fluid" style="margin-bottom: 2rem;">
         <p>Do you need one place for sharing and storing your recipes? If so, look no further. This website allows viewers like you to view other creator's recipes as well as list/manage your own. If you don't want to sign up for an account, that's perfectly fine. You will always have the option to view all the recipes on this site without an account.</p>
         <hr>
         <div>

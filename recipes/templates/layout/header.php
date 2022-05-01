@@ -24,30 +24,36 @@
     $userId = $_SESSION['Auth']['id'];
     ?>
 
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
-        </div>
-
-        <div class="top-nav-links">
+    <nav>
+        <div class="ui secondary menu">
+            <a class="active item" href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <?php if ($userId) { ?>
-                <a target="_self" rel="noopener" href="http://localhost:8765/recipes">Public Recipes |</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/tags">Tags |</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users">Users |</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users/edit/<?php echo $userId ?>">Account Settings | </a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users/view/<?php echo $userId ?>">Profile |</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users/contact">Contact |</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/pages/faq">FAQ</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users/logout">Logout</a>
+                <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
+                <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
+                <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
+                <a class="item" href="<?= $this->Url->build('/users/contact') ?>">Contact</a>
+                <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
+                <div class="right menu">
+                    <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Account Settings</a>
+                    <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>
+                    <a class="item" href="<?= $this->Url->build('users/logout') ?>">Logout</a>
+                </div>
             <?php } ?>
             <?php if (!$userId) { ?>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users/login">Login</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users/add">Create Account |</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/users/contact">Contact |</a>
-                <a target="_self" rel="noopener" href="http://localhost:8765/pages/faq">FAQ</a>
+                <div class="right menu">
+                    <a class="item" href="<?= $this->Url->build('/users/login') ?>">Login</a>
+                    <a class="item" href="<?= $this->Url->build('/users/add') ?>">Create Account</a>
+                    <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
+                    <a class="item" href="<?= $this->Url->build('/users/contact') ?>">Contact</a>
+                </div>
             <?php } ?>
-        </div>
     </nav>
+    <div class="ui secondary menu">
+
+
+
+
+    </div>
 </body>
