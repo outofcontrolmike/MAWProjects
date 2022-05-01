@@ -23,15 +23,15 @@ class RecipesController extends AppController
         $this->set(compact('recipes'));
     }
 
-    //any user can view this (Main view of recipes anyways)
-    public function public()
-    {
-        // $this->Authorization->authorize($this);
-        $this->Authorization->skipAuthorization();
+    // //any user can view this (Main view of recipes anyways)
+    // public function public()
+    // {
+    //     // $this->Authorization->authorize($this);
+    //     $this->Authorization->skipAuthorization();
 
-        $recipes = $this->Paginator->paginate($this->Recipes->find());
-        $this->set(compact('recipes'));
-    }
+    //     $recipes = $this->Paginator->paginate($this->Recipes->find());
+    //     $this->set(compact('recipes'));
+    // }
 
     public function view($slug = null)
     {
