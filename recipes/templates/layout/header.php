@@ -33,7 +33,7 @@
             <?php if ($userId) { ?>
                 <div class="ui icon input">
                     <input type="text" placeholder="Type in a recipe key word...">
-                    <i class="search link icon"></i>
+                    <i id="recipeKeyword" onclick="submitKeyword()" class="search link icon"></i>
                 </div>
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
@@ -49,7 +49,7 @@
             <?php if (!$userId) { ?>
                 <div class="ui icon input">
                     <input type="text" placeholder="Type in a recipe key word...">
-                    <i class="search link icon"></i>
+                    <i  id="recipeKeyword" onclick="submitKeyword()"class="search link icon"></i>
                 </div>
                 <div class="right pointing menu">
                     <a class="item" href="<?= $this->Url->build('/users/login') ?>">Login</a>
@@ -59,10 +59,15 @@
                 </div>
             <?php } ?>
     </nav>
-    <div class="ui secondary menu">
-
-
-
-
-    </div>
+    <script>
+    //Will search for whatever user entered
+    function submitKeyword() {
+        console.log("my god does this work in the header")
+        let keyword = document.getElementById('recipeKeyword');
+        if (keyword.value != "") {
+            window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
+        }
+    }
+</script>
 </body>
+
