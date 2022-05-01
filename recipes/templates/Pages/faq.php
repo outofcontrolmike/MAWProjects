@@ -3,8 +3,6 @@
 /**
  * Frequently Asked Questions
  */
-$this->disableAutoLayout();
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,17 +16,11 @@ $this->disableAutoLayout();
     <?= $this->Html->meta('icon') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'home']) ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
 </head>
 
-<body class="container">
+<body class="">
     <?php include "templates\layout\header.php" ?>
-    <div class="container text-center content" style="margin-bottom: 2rem;">
+    <div class="ui container segment very padded relaxed" style="margin-bottom: 2rem;">
         <h1>Frequently Asked Questions</h1>
         <hr>
         </hr>

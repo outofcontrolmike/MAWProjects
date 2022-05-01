@@ -1,6 +1,14 @@
 
 /********************************* Other Styles  *************************************/
 
+* {
+color: yellow;
+}
+/* body {
+    font-size: 18px;
+    background-color: blue;
+} */
+/* 
 #recipeCardsIndex {
     display: flex;
     flex-wrap:wrap;
@@ -32,4 +40,4 @@
 .recipesTextArea {
     height: fit-content;
     background-color: linen;
-}
+} */

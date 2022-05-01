@@ -29,11 +29,8 @@ $this->disableAutoLayout();
     <?= $this->Html->meta('icon') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+   
+    <?= $this->Html->css(['home']) ?>
 
     <!-- You MUST include jQuery before Fomantic -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
@@ -41,9 +38,10 @@ $this->disableAutoLayout();
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
 </head>
 
-<body class="ui container fluid">
+<body class="ui">
     <?php include "templates\layout\header.php" ?>
-    <div class="container fluid" style="margin-bottom: 2rem;">
+    <div class="ui conatiner segment">
+    <div class="" style="margin-bottom: 10rem;">
         <p>Do you need one place for sharing and storing your recipes? If so, look no further. This website allows viewers like you to view other creator's recipes as well as list/manage your own. If you don't want to sign up for an account, that's perfectly fine. You will always have the option to view all the recipes on this site without an account.</p>
         <hr>
         <div>
@@ -66,11 +64,12 @@ $this->disableAutoLayout();
         </div>
     </div>
     </div>
-    <div class="container content">
+    <div class="">
         <footer>
             <h6>Thank you for you using cake recipes cms. This was a dream come true with the help of cakePHP.</h6>
         </footer>
     </div>
+</div>
 </body>
 <script>
     //Will search for whatever user entered
