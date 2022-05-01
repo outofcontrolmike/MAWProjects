@@ -25,8 +25,9 @@
     ?>
 
     <nav>
-        <div class="ui secondary menu">
-            <a class="active item" href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+        <div class="ui menu stackable">
+
+            <a class="active item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('logo.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <?php if ($userId) { ?>
@@ -42,7 +43,11 @@
                 </div>
             <?php } ?>
             <?php if (!$userId) { ?>
-                <div class="right menu">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+                <div class="right pointing menu">
                     <a class="item" href="<?= $this->Url->build('/users/login') ?>">Login</a>
                     <a class="item" href="<?= $this->Url->build('/users/add') ?>">Create Account</a>
                     <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
