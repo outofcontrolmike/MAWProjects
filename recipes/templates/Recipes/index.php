@@ -1,5 +1,5 @@
 <?php include "templates\layout\header.php" ?>
-<div class="content">
+<div class="ui container">
     <h3>Public Recipes</h3>
     <div>
         <input name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">

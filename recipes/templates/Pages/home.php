@@ -28,7 +28,7 @@
     <?= $this->Html->meta('icon') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-   
+
     <?= $this->Html->css(['home']) ?>
 
     <!-- You MUST include jQuery before Fomantic -->
@@ -39,41 +39,65 @@
 
 <body class="ui">
     <?php include "templates\layout\header.php" ?>
-    <div class="ui">
-    <div class="" style="margin-bottom: 10rem;">
-        <p>Do you need one place for sharing and storing your recipes? If so, look no further. This website allows viewers like you to view other creator's recipes as well as list/manage your own. If you don't want to sign up for an account, that's perfectly fine. You will always have the option to view all the recipes on this site without an account.</p>
-        <hr>
-        <div>
-            <input name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
-            <button onclick="submitKeyword()" class="button">Submit Keyword</button>
+    <div class="ui vertical masthead center aligned fluid container">
+        <div class="ui container fluid">
+            <div class="ui container fluid" id="homeRecipeSearch">
+                <div class="ui text"">
+                <span class="ui text huge">Recipe Keyword Search</span>
+                    <h2>Try searching our user created recipes right now</h2>
+                    <div class="ui action input">
+                        <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="...Type a keyword into here">
+                        <div class="ui button" onclick="submitKeyword()">Go</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- End first div -->
+            <!-- Start 2nd section -->
+            <div class="ui two column container stackable grid" id="homeContent2" style="margin-bottom: 2rem;">
+                <div class="ui column">
+                    <span class="ui text big">Public Recipes</span>
+                    <p>Take a chance to check out neat recipes that our users have created.</p>
+                </div>
+                <div class="ui column center aligned">
+                    <div>
+                        <?= $this->Html->link(__('View Recipes'), ['controller' => "Recipes", 'action' => 'index'], ['class' => 'ui button blue big centered']) ?>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End second section -->
+            <div class="ui container fluid">
+                <hr>
+            <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+            <div class="ui column">
+                    <span class="ui text big">Benefits of a user subscription</span>
+                    <ul>
+                    <li>Can create recipes</li>
+                    <li>Can store recipes</li>
+                    <li>Create tags</li>
+                    <li>Unique Profile customization</li>
+                    </ul>
+                </div>
+                <div class="ui column center aligned">
+                    <div>
+                    <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                    </div>
+                </div>
         </div>
-    </div>
-    <div class="container text-center content" style="margin-bottom: 2rem;">
-        <img alt="Recipe Card Demo" src="https://lh3.googleusercontent.com/Oh-fE5PgCxTV4qn5UCXJnUK4ZHWXCzC16AWp8WpN-FMMzLVfV3A6eb2k9QePcm7e3Y_BLfnwHX9Cvu8T1rvnpaTDn3Wwh4bC_5j-xHUkMz1jvEjrElN0nzczokS9w8nWqichsFDrrRvTQpYLlKvnXaat3-mDJHoQRUvGkKdlb3obdYouBX--tm73iV-6QEPk55PT7eRAEcB9RsPpJ7lOdaGTfcEOcVbXSMiofJ7nRPDNIwrynBc_6-g46FZjcTo_ZR3MzAJJ5efw8EwwN0bs-_qSv52Ujg6fFmnvj35DmP-Ir_lDlFvBXVwchDAKwTlY6Egaaz5wCAP4b14jAT_pEZdilfq1Mdq9kTTRBwV1gp2VIY3zvXU9UygnLrrOkXEqr-joiUyRdE6euFpcY2IT1pmIMzMd9UDbOWDpZywMiCtb1fwcUUhap1GOrc59Hp7--BG4UJh0uoieoEbD8Mhu309s8P__B94GiuRbhwTpHU2llV541-9JcmadlHete1mjFoMA469AVniBKbEc8xWjapsT2KxsWZVhVOI-x6lGq2BY_OvW--2Tqn9rcVJn_zG_wBfyTuIecg0hAbSqoysYPLWdv2TkwvXFwAvF4roS-Z80ebV9CkP8JOaw0aQO33bz1CwroDSXGvSTSOafEkX7jQjhmbVhklW9_7DKk5eiZ24UDNgxgCs95j46Pykg6RIqj65Obs53tMN3qD-QTuKAObIUXnOtQ95Exs-rmRFP_SO_xZp_Jl6oJz7f3-wBJj3rRREWrTOE1MDYXIVDk0NCccm9JtIuS0EBrjdyKL4iJIprL3lZ5wa8KlQJRpIIB59U5N-mR-bzaaS6lDOmBugS7u6p9OH56EWrNpxsTakk=w1116-h703-no?authuser=1" width="90%" />
-        <hr>
-        <div>
-            <?= $this->Html->link(__('View Recipes'), ['controller' => "Recipes", 'action' => 'index'], ['class' => 'button']) ?>
-        </div>
-    </div>
-    <div class="container text-center content">
-        <img alt="Recipe Card Demo" src="https://lh3.googleusercontent.com/-FtZw2mXRkb3sUbjgexVXE9rswHjcLVnRkb31ktDo60m3Sw4QhrkhHJDNTAbTr7Z1Iuv00D0Lt15mAyKBTw7bVQeuBPbGunsbPoteR7sDbpWM8pAEZohJEhXiAErpK5BjomWW6YqMwcKjCMvVFAUudQy1tzC3e9F0ggo554qtuQ7YbK5xTJ0WyWlEXDC_L4AN1meoH7HhxZAHvFGrD86iULx0CMxZtrPtVVNlZKcAllxELadTcaSUx4d11Q2XzH9o5hOYFWSckt5pkSW4h7yjRnJ7nKL13G2HL7I6mnLF84pLwvox27aiP5IElCEVSvCaob0MWq_U3pLtvpVrRv7Uot0wW_VE2SzcNXVGsbMNFoNQhJAwNR3kgyhdr2oiiYfmxMVVEpO22EZC2DG1YUKsJzQswCgY0Ii5isydNe1JtEMi9aZnLao7t5j81mE_O390rx_LTxgoISo3EMBcbs0BFNRVaVKykMQUHXTMXzZw7r9XEiPJnVDGK47FZad7kZcY2kDmspnIKW7ZdNiMK2r7nqeBil4nyig9J-SrYhzOLAH72fgj6S59DGy8kwfdSI7lmhhPXPCl2rhGLRzTGgP4PU8gqXbNuIoTP2zsHW2OXSQoD3JzcI2TUrulRavqHGreOknHPT2u92dG8p-YJsM5cfwNereq56yYE9-d7TYMRh8OMmyAyG98whDzbpogp_6eR20MnABafAH9wlQVsNibuKIzv0ciOjOLuPLaTHqJPQDUuUToinflcFcwSVrahSMCQ-sHnH3UBHDUdqZ49U-vxPq8xqTrpstWfaV4Da1lI3l4d_LRaJoMJQ2r4AYxxiLexPRtvtwJ90bZHs3d8c91n-w5UMgXiI6maSlbqpW=w1112-h693-no?authuser=1" width="90%" />
-        <hr>
-        <div>
-            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'button']) ?>
-        </div>
-    </div>
+</div>
     </div>
     <div class="">
         <footer>
             <h6>Thank you for you using cake recipes cms. This was a dream come true with the help of cakePHP.</h6>
         </footer>
     </div>
-</div>
+    </div>
 </body>
 <script>
     //Will search for whatever user entered
     function submitKeyword() {
-        let keyword = document.getElementById('recipeKeyword');
+        let keyword = document.getElementById('recipeTagKeyword');
         if (keyword.value != "") {
             window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
         }
