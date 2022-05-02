@@ -25,21 +25,19 @@
     ?>
 
     <nav>
-        <div class="ui secondary menu stackable">
-
-            <a class="active item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('logo.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
+        <div class="ui menu stackable inverted" id="navigationMenu">
+            <a class="active item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <?php if ($userId) { ?>
-                <div class="ui icon input">
+
+                <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
+                <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
+                <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
+                <div class="ui icon input centered transparent inverted" style="align: center">
                     <input id="recipeKeyword" type="text" placeholder="Type in a recipe key word...">
                     <i onclick="submitKeyword()" class="search link icon"></i>
                 </div>
-                <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
-                <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
-                <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
-                <a class="item" href="<?= $this->Url->build('/users/contact') ?>">Contact</a>
-                <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
                 <div class="right menu secondary">
                     <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Account Settings</a>
                     <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>

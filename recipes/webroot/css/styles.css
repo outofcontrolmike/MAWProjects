@@ -1,8 +1,19 @@
 
 /********************************* Other Styles  *************************************/
 
+/* Gloabl Styles */
 * {
 color: black;
+
+}
+
+
+
+
+/* Navigation menu */
+
+#navigationMenu {
+    font-size: x-large;
 }
 /* body {
     font-size: 18px;
