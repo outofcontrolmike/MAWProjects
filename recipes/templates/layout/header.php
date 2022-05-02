@@ -45,8 +45,8 @@
                 </div>
             <?php } ?>
             <?php if (!$userId) { ?>
-                <div class="ui right menu secondary">
-                    <a class="item" href="<?= $this->Url->build('/users/add') ?>">Sign Up</a>
+                <div class="ui right menu secondary" id="navigationMenu">
+                    <a class=" item" href="<?= $this->Url->build('/users/add') ?>">Sign Up</a>
                     <a class="item" href="<?= $this->Url->build('/users/login') ?>">Login</a>
 
                     <!-- Add below to footer -->

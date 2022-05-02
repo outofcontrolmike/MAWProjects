@@ -1,5 +1,8 @@
+#landingPage {
+    font-size:20px;
+}
 #homeRecipeSearch {
-    padding: 50px;
+    padding: 100px;
     background: #C9D6FF;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
@@ -11,4 +14,7 @@
 #homeContent2, #homeContent3 
 {
     padding:50px;
+}
+#navigationMenu {
+    font-size: x-large;
 }

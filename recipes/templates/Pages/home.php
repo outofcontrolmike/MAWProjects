@@ -39,11 +39,11 @@
 
 <body class="ui">
     <?php include "templates\layout\header.php" ?>
-    <div class="ui vertical masthead center aligned fluid container">
+    <div class="ui vertical masthead center aligned fluid container" id="landingPage">
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
                 <div class="ui text"">
-                <span class="ui text huge">Recipe Keyword Search</span>
+                <span class=" ui text huge">Recipe Keyword Search</span>
                     <h2>Try searching our user created recipes right now</h2>
                     <div class="ui action input">
                         <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="...Type a keyword into here">
@@ -69,29 +69,29 @@
             <!-- End second section -->
             <div class="ui container fluid">
                 <hr>
-            <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
-            <div class="ui column">
-                    <span class="ui text big">Benefits of a user subscription</span>
-                    <ul>
-                    <li>Can create recipes</li>
-                    <li>Can store recipes</li>
-                    <li>Create tags</li>
-                    <li>Unique Profile customization</li>
-                    </ul>
-                </div>
-                <div class="ui column center aligned">
-                    <div>
-                    <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+                    <div class="ui column">
+                        <span class="ui text big">Benefits of a user subscription</span>
+                        <ul>
+                            <li>Can create recipes</li>
+                            <li>Can store recipes</li>
+                            <li>Create tags</li>
+                            <li>Unique Profile customization</li>
+                        </ul>
+                    </div>
+                    <div class="ui column center aligned">
+                        <div>
+                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                        </div>
                     </div>
                 </div>
+            </div>
         </div>
-</div>
-    </div>
-    <div class="">
-        <footer>
-            <h6>Thank you for you using cake recipes cms. This was a dream come true with the help of cakePHP.</h6>
-        </footer>
-    </div>
+        <div class="">
+            <footer>
+                <h6>Thank you for you using cake recipes cms. This was a dream come true with the help of cakePHP.</h6>
+            </footer>
+        </div>
     </div>
 </body>
 <script>
