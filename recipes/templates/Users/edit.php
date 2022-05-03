@@ -34,7 +34,8 @@
             echo $this->Form->control('link');
             echo $this->Form->control('instagram_link');
             ?>
-            <?= $this->Form->button(__('Submit')) ?>
+            <br>
+            <?= $this->Form->button(__('Submit'), ['class' => 'ui fluid button yellow']) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

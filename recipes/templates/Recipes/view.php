@@ -4,7 +4,7 @@
 <?php $creator = "";
 $creator = $_SESSION["Auth"]["id"];
 ?>
-<div class="container content">
+<div class="ui very padded relaxed raised segment container center aligned ">
     <h1><?= h($recipe->title) ?></h1>
     <?php if ($recipe->image != null) : ?>
         <p><?= $this->Html->image($recipe->image) ?></p>
@@ -23,9 +23,10 @@ $creator = $_SESSION["Auth"]["id"];
     <p><small>Created: <?= $recipe->created->format(DATE_RFC850) ?></small></p>
     <p><small>Last Modified: <?= $recipe->created->format(DATE_RFC850) ?></small></p>
     <p>Created By: <?= $recipe->user_id ?></p>
-    <hr>
     <?php if ($creator === $recipe->user_id) : ?>
+        <hr>
         <?= $this->Html->link('Edit', ['action' => 'edit', $recipe->slug], ['class' => 'button']) ?>
     <?php else : null  ?>
     <?php endif; ?>
 </div>
+<br>

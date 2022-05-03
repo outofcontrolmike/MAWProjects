@@ -1,21 +1,18 @@
 <?php include "templates\layout\header.php" ?>
-<div class="ui container">
+<div class="ui container fluid very padded relaxed">
     <h3>Public Recipes</h3>
     <div>
         <input name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
         <button onclick="submitKeyword()" class="button">Submit Keyword</button>
     </div>
     <div class="index" id="recipeCardsIndex">
-
         <!-- <?= $this->Html->link('Add Recipe', ['action' => 'add'], ['class' => 'button']) ?> -->
 
         <!-- Here is where we iterate through our $Recipes query object, printing out recipe info -->
-
         <?php foreach ($recipes as $recipe) : ?>
-
             <div id="recipeCard" class="content container">
                 <?php if ($recipe->image != null) : ?>
-                    <img><?= $this->Html->image($recipe->image) ?></img>
+                    <?= $this->Html->image($recipe->image, ['class' => "ui small image"]) ?>
                 <?php endif ?>
                 <!-- <img src="<?= $recipe->image ?>" height="250px" width:="425px" /> -->
                 <h5> <?= $this->Html->link($recipe->title, ['action' => 'view', $recipe->slug]) ?></h5>
