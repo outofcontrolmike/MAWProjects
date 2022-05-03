@@ -6,16 +6,14 @@
  */
 ?>
 
-<div class="row">
-    <div class="column-responsive">
-        <div class="users form content" id="recipeSignUp">
+    <div class="ui container segment raised very padded">
+        <div class="ui form" id="">
             <?= $this->Form->create($user) ?>
-            <fieldset>
                 <legend style="text-align:center">
                     <h2><?= __('Sign up to start adding recipes!') ?></h2>
                 </legend>
                 <?php
-                echo $this->Form->control('user_name');
+                echo $this->Form->control('user_name',['class' => "field"]);
                 echo $this->Form->control('title');
                 echo $this->Form->control('email');
                 echo $this->Form->control('password');
@@ -24,8 +22,7 @@
                 echo $this->Form->control('link');
                 echo $this->Form->control('instagram_link');
                 ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Submit'), ['class' => 'ui button red massive']) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
