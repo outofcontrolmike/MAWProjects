@@ -19,22 +19,21 @@
             <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside> -->
-    <div class="column-responsive">
-        <div class="users form content">
+    <br>
+    <div class="ui very padded relaxed raised column container segment">
+        <div class="ui form">
             <?= $this->Form->create($user) ?>
-            <fieldset>
-                <legend><?= __('Edit Your Account Details') ?></legend>
-                <?php
-                echo $this->Form->control('user_name');
-                echo $this->Form->control('title');
-                echo $this->Form->control('email');
-                echo $this->Form->control('password');
-                echo $this->Form->control('bio');
-                echo $this->Form->control('image');
-                echo $this->Form->control('link');
-                echo $this->Form->control('instagram_link');
-                ?>
-            </fieldset>
+            <legend><?= __('Edit Your Account Details') ?></legend>
+            <?php
+            echo $this->Form->control('user_name');
+            echo $this->Form->control('title');
+            echo $this->Form->control('email');
+            echo $this->Form->control('password');
+            echo $this->Form->control('bio');
+            echo $this->Form->control('image');
+            echo $this->Form->control('link');
+            echo $this->Form->control('instagram_link');
+            ?>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>
         </div>
