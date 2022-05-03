@@ -20,7 +20,7 @@ $creator = $_SESSION["Auth"]["id"];
             <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside> -->
-<div class="ui container segment">
+<div class="ui very padded relaxed raised segment container">
     <div class="">
         <img style="height: 250px" src="<?= h($user->image) ?>" />
         <table class='ui table celled'>
@@ -57,24 +57,24 @@ $creator = $_SESSION["Auth"]["id"];
             <?php if (!empty($user->recipes)) : ?>
                 <div class="">
                     <table class="ui celled table">
-                        <tr>
-                            <th><?= __('Title') ?></th>
-                            <th><?= __('Slug') ?></th>
-                            <th><?= __('Description') ?></th>
-                            <th><?= __('Ingredients') ?></th>
-                            <th><?= __('Prep Time') ?></th>
-                            <th><?= __('Cook Time') ?></th>
-                            <th><?= __('Servings') ?></th>
-                            <th><?= __('Directions') ?></th>
-                            <th><?= __('Published') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th><?= __('Modified') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th><?= __('Title') ?></th>
+                                <th><?= __('Description') ?></th>
+                                <th><?= __('Ingredients') ?></th>
+                                <th><?= __('Prep Time') ?></th>
+                                <th><?= __('Cook Time') ?></th>
+                                <th><?= __('Servings') ?></th>
+                                <th><?= __('Directions') ?></th>
+                                <th><?= __('Published') ?></th>
+                                <th><?= __('Created') ?></th>
+                                <th><?= __('Modified') ?></th>
+                                <th class="actions"><?= __('Actions') ?></th>
+                            </tr>
+                        </thead>
                         <?php foreach ($user->recipes as $recipes) : ?>
                             <tr>
                                 <td><?= h($recipes->title) ?></td>
-                                <td><?= h($recipes->slug) ?></td>
                                 <td><?= h($recipes->body) ?></td>
                                 <td><?= h($recipes->ingredients) ?></td>
                                 <td><?= h($recipes->prep_time) ?></td>
