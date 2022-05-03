@@ -7,7 +7,7 @@
 ?>
 <?php include "templates\layout\header.php" ?>
 
-<div class="row">
+<div style="height: 100vh">
     <!-- <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>

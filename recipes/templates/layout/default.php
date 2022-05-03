@@ -37,13 +37,13 @@ $cakeDescription = 'Recipes Project';
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
 
-      
+
 
 </head>
 
 <body class="ui container fluid">
     <main class="main">
-        <div class="ui">
+        <div class="ui" id="defaultView">
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
         </div>

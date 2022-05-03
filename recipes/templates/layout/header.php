@@ -25,7 +25,7 @@
     ?>
 
     <nav>
-        <div class="ui menu stackable " id="navigationMenu">
+        <div class="ui menu stackable inverted" id="navigationMenu">
             <a class="active item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
