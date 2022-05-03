@@ -60,7 +60,7 @@ $creator = $_SESSION["Auth"]["id"];
                         <tr>
                             <th><?= __('Title') ?></th>
                             <th><?= __('Slug') ?></th>
-                            <th><?= __('Body') ?></th>
+                            <th><?= __('Description') ?></th>
                             <th><?= __('Ingredients') ?></th>
                             <th><?= __('Prep Time') ?></th>
                             <th><?= __('Cook Time') ?></th>
