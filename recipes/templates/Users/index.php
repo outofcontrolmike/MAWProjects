@@ -7,11 +7,11 @@
 ?>
 <?php include "templates\layout\header.php" ?>
 
-<div class="ui container segment">
+<div class="ui container segment very padded relaxed raised">
     <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Users') ?></h3>
     <div class="">
-        <table class="ui very compact table">
+        <table class="ui table celled">
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('user_name') ?></th>
@@ -53,3 +53,4 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+<br>

@@ -8,11 +8,11 @@
 <?php include "templates\layout\header.php" ?>
 
 
-<div class="tags index content">
+<div class="ui container segment very padded relaxed raised ">
     <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Tags') ?></h3>
-    <div class="table-responsive">
-        <table>
+    <div class="">
+        <table class="ui table">
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
@@ -53,3 +53,4 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+<br>
