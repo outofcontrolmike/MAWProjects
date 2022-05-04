@@ -33,6 +33,14 @@ width:auto;
 
 }
 
+/* Recipes  */
+#recipeCardsIndex {
+    padding-top: 20px;
+}
+#recipeImage > img {
+    height:200px;
+    object-fit: fill;
+}
 
 /* body {
     font-size: 18px;
