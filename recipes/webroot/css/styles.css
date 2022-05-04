@@ -19,15 +19,18 @@ color: black;
     font-size: large;
 }
 
-#loginFormContainer {
+/*Login and Sign up Pages */
+
+#loginFormContainer, #signUpFormContainer {
     display: flex;
     align-items: center;    
     height: 100vh;
+    justify-content: center;
     }
 
-#loginForm {
+#loginForm, #signUpForm {
 width:auto;
-justify-content: center;
+
 }
 
 
