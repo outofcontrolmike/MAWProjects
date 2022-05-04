@@ -42,8 +42,8 @@
     <div class="ui vertical masthead center aligned fluid container" id="landingPage">
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
-                <div class="ui text"">
-                <span class=" ui text huge">Recipe Keyword Search</span>
+                <div class="ui text">
+                    <span class=" ui text big">Recipe Keyword Search</span>
                     <h2>Try searching our user created recipes right now</h2>
                     <div class="ui action input">
                         <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="...Type a keyword into here">
@@ -56,7 +56,7 @@
             <!-- Start 2nd section -->
             <div class="ui two column container stackable grid" id="homeContent2" style="margin-bottom: 2rem;">
                 <div class="ui column">
-                    <span class="ui text big">Public Recipes</span>
+                    <span class="ui text big">A little bit about US</span>
                     <p>Take a chance to check out neat recipes that our users have created.</p>
                 </div>
                 <div class="ui column center aligned">
@@ -66,12 +66,11 @@
                 </div>
             </div>
 
-            <!-- End second section -->
             <div class="ui container fluid">
                 <hr>
                 <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
                     <div class="ui column">
-                        <span class="ui text big">Benefits of a user subscription</span>
+                        <span class="ui text big">Unique User Profile Information</span>
                         <ul>
                             <li>Can create recipes</li>
                             <li>Can store recipes</li>
@@ -86,11 +85,73 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="">
-            <footer>
-                <h6>Thank you for you using cake recipes cms. This was a dream come true with the help of cakePHP.</h6>
-            </footer>
+
+            <!-- End second section -->
+            <div class="ui container fluid">
+                <hr>
+                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+                    <div class="ui column">
+                        <span class="ui text big">Create Recipes Information</span>
+                        <ul>
+                            <li>Can create recipes</li>
+                            <li>Can store recipes</li>
+                            <li>Create tags</li>
+                            <li>Unique Profile customization</li>
+                        </ul>
+                    </div>
+                    <div class="ui column center aligned">
+                        <div>
+                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End third section -->
+            <div class="ui container fluid">
+                <hr>
+                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+                    <div class="ui column">
+                        <span class="ui text big">Manage Recipes</span>
+                        <ul>
+                            <li>Can create recipes</li>
+                            <li>Can store recipes</li>
+                            <li>Create tags</li>
+                            <li>Unique Profile customization</li>
+                        </ul>
+                    </div>
+                    <div class="ui column center aligned">
+                        <div>
+                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End fourth section -->
+
+            <!-- End fifth section -->
+            <div class="ui container fluid">
+                <hr>
+                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+                    <div class="ui column">
+                        <span class="ui text big">Manage Tags</span>
+                        <ul>
+                            <li>Can create recipes</li>
+                            <li>Can store recipes</li>
+                            <li>Create tags</li>
+                            <li>Unique Profile customization</li>
+                        </ul>
+                    </div>
+                    <div class="ui column center aligned">
+                        <div>
+                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- End sections -->
         </div>
     </div>
 </body>

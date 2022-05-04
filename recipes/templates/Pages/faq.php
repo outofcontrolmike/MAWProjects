@@ -20,7 +20,7 @@
 
 <body class="">
     <?php include "templates\layout\header.php" ?>
-    <div class="ui container segment very padded relaxed raised piled " style="height:fit-content">
+    <div class="ui container segment very padded relaxed raised piled" style="height:fit-content">
         <h1>Frequently Asked Questions</h1>
         <hr>
         </hr>
