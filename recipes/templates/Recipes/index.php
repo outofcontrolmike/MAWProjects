@@ -5,15 +5,15 @@
         <input name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
         <button onclick="submitKeyword()" class="button">Submit Keyword</button>
     </div>
-    <div class="ui cards centered container fluid" id="recipeCardsIndex">
+    <div class="ui cards container fluid small" id="recipeCardsIndex">
         <!-- <?= $this->Html->link('Add Recipe', ['action' => 'add'], ['class' => 'button']) ?> -->
 
         <!-- Here is where we iterate through our $Recipes query object, printing out recipe info -->
         <?php
 
         foreach ($recipes as $recipe) : ?>
-            <div class="ui card ">
-                <div class="image" id="recipeImage">
+            <div class="ui card link segment very padded raised" id="recipeCard">
+                <div class=" image" id="recipeImage">
                     <?php if ($recipe->image != null) : ?>
                         <?= $this->Html->image($recipe->image, ['class' => "ui image"]) ?>
                     <?php else : ?>
@@ -21,7 +21,7 @@
                     <?php endif ?>
                 </div>
                 <div class=" content">
-                    <div class="header" style="text-decoration: none"><?= $this->Html->link($recipe->title, ['action' => 'view', $recipe->slug]) ?></div>
+                    <div class="header" id="recipeTitle"><?= $this->Html->link($recipe->title, ['action' => 'view', $recipe->slug], ['style' => "color:black"], ['id' => "recipeTitle"]) ?></div>
                     <div class="description">
                         <?= $recipe->body ?>
                     </div>

@@ -36,10 +36,25 @@ width:auto;
 /* Recipes  */
 #recipeCardsIndex {
     padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
 }
 #recipeImage > img {
     height:200px;
     object-fit: fill;
+}
+
+#recipeTitle {
+color: black;
+font-size:20px;
+font-weight: 900;
+text-decoration: none;
+transition: text-decoration;
+}
+
+#recipeTitle:hover {
+    text-decoration:solid underline;
+   
 }
 
 /* body {

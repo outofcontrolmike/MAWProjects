@@ -20,7 +20,8 @@ $creator = $_SESSION["Auth"]["id"];
             <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside> -->
-<div style="height: 100vh;">
+<br><br>
+<div style="height: 100vh">
     <div class="ui very padded relaxed raised segment container">
         <div class="ui">
             <img style="height: 250px" src="<?= h($user->image) ?>" />
