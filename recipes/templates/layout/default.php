@@ -48,13 +48,7 @@ $cakeDescription = 'Recipes Project';
             <?= $this->fetch('content') ?>
         </div>
     </main>
-    <!-- <div class="container">
-
-    <footer>
-        <h6>Thank you for you using cake recipes cms.  This was a dream come true with the help of cakePHP.</h6>
-    </footer>
-    </div> -->
-
+    <?php include "templates\layout\Footer.php" ?>
 </body>
 
 </html>
