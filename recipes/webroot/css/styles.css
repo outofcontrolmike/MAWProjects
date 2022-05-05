@@ -58,9 +58,23 @@ transition: text-decoration;
 }
 
 /* Recipe View Template styles */
-#recipeCardView {
-width:25%;
-padding:0;
+#recipeViewContainer {
+    display:flex;
+    width:100%;
+}
+
+#recipeViewContainer > .column > .segment {
+    flex: 1;
+    padding-top: 20px;
+}
+
+
+#recipeInfo {
+    font-size:large;
+}
+
+#ingredients {
+    overflow: hidden;
 }
 
 /* .recipeCardImage {
