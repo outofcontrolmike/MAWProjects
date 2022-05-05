@@ -34,10 +34,10 @@
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
                 <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
-                <div class="ui icon input centered" style="margin-left: 25%">
+                <!-- <div class="ui icon input centered" style="margin-left: 25%">
                     <input id="recipeKeyword" type="text" placeholder="Type in a recipe key word...">
                     <i onclick="submitKeyword()" class="search link icon"></i>
-                </div>
+                </div> -->
                 <div class="right menu secondary">
                     <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Account Settings</a>
                     <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>

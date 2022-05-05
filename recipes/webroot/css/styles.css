@@ -57,6 +57,16 @@ transition: text-decoration;
    
 }
 
+/* Recipe View Template styles */
+#recipeCardView {
+width:25%;
+padding:0;
+}
+
+/* .recipeCardImage {
+    padding: 0px;
+} */
+
 /* body {
     font-size: 18px;
     background-color: blue;
