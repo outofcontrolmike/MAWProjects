@@ -77,9 +77,9 @@ transition: text-decoration;
     overflow: hidden;
 }
 
-/* .recipeCardImage {
-    padding: 0px;
-} */
+.recipeCardImage {
+    border-radius: 25px;
+}
 
 /* body {
     font-size: 18px;

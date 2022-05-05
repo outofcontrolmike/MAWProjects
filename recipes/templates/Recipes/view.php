@@ -18,7 +18,7 @@ $ingredients = preg_split("/[,]+/", $recipe->ingredients);
             <?php if ($recipe->image != null) : ?>
                 <?= $this->Html->image($recipe->image, ['class' => "ui image huge centered recipeCardImage"]) ?>
             <?php else : ?>
-                <?= $this->Html->image('comingSoon.jpg', array('class' => "recipeCardImage", 'alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'height' => "200px",)); ?></a>
+                <?= $this->Html->image('comingSoon.jpg', array('class' => "ui image huge recipeCardImage", 'alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'height' => "200px",)); ?></a>
             <?php endif ?>
         </div>
         <h1 class="ui text center aligned"><?= h($recipe->title) ?></h1>
@@ -37,7 +37,8 @@ $ingredients = preg_split("/[,]+/", $recipe->ingredients);
         <div class="row">
             <h1>Ingredients</h1>
             <?php foreach ($ingredients as $ingredient) {
-                echo "<p>$ingredient</p>";
+                $uppercaseFirst = ucfirst($ingredient);
+                echo "<p>$uppercaseFirst</p>";
             } ?>
         </div>
         <br>
