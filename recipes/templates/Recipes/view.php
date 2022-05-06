@@ -9,16 +9,14 @@ $ingredients = preg_split("/[,]+/", $recipe->ingredients);
 
 //Separate Direction text into paragraphs.
 $directions = preg_split('#(\r\n?|\n)+#', $recipe->directions);
+
+$recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
+
 ?>
-
-
-
-
-
 <br>
 
 <div class="ui two column container stackable grid segment raised relaxed">
-    <div class="ui column container" id="recipeView2ndColumn">
+    <div class="ui column container">
         <!-- img -->
         <div class="container">
             <?php if ($recipe->image != null) : ?>
@@ -33,9 +31,15 @@ $directions = preg_split('#(\r\n?|\n)+#', $recipe->directions);
         <p>Servings: <?= $recipe->servings ?> </p>
         <p>Created: <?= date_format($recipe->created, "m/d/Y") ?></p>
         <p>Created By: <?= $recipe->user_id ?></p>
-        <hr>
-        <p><?= $recipe->body ?></p>
         <p><b>Tags:</b> <?= h($recipe->tag_string) ?></p>
+        <hr>
+        <div class="row" id="recipeBody">
+            <h1>Description</h1>
+            <?php foreach ($recipeBody as $bodyPart) {
+                $uppercaseFirst = ucfirst($bodyPart);
+                echo "<p>$bodyPart</p>";
+            } ?>
+        </div>
 
     </div>
 

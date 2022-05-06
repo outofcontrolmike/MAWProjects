@@ -38,6 +38,7 @@ width:auto;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
+    margin: 0px;
 }
 #recipeImage > img {
     height:200px;
@@ -73,18 +74,24 @@ transition: text-decoration;
     font-size:large;
 }
 
-#ingredients {
+/* #ingredients {
     overflow: hidden;
-}
+} */
 
 .recipeCardImage {
-    border-radius: 25px;
+    border-radius: 12px;
 }
 
-#recipeView2ndColumn,#recipeView1stColumn {
+#recipeView2ndColumn {
     height:800px;
     overflow-y: auto;
 }
+
+#recipeBody {
+    height:200px;
+    overflow-y: auto;
+}
+
 
 /* body {
     font-size: 18px;
