@@ -18,7 +18,7 @@ $directions = preg_split('#(\r\n?|\n)+#', $recipe->directions);
 <br>
 
 <div class="ui two column container stackable grid segment raised relaxed">
-    <div class="ui column container">
+    <div class="ui column container" id="recipeView2ndColumn">
         <!-- img -->
         <div class="container">
             <?php if ($recipe->image != null) : ?>
@@ -34,6 +34,7 @@ $directions = preg_split('#(\r\n?|\n)+#', $recipe->directions);
         <p>Created: <?= date_format($recipe->created, "m/d/Y") ?></p>
         <p>Created By: <?= $recipe->user_id ?></p>
         <hr>
+        <p><?= $recipe->body ?></p>
         <p><b>Tags:</b> <?= h($recipe->tag_string) ?></p>
 
     </div>

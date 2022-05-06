@@ -81,9 +81,9 @@ transition: text-decoration;
     border-radius: 25px;
 }
 
-#recipeView2ndColumn {
+#recipeView2ndColumn,#recipeView1stColumn {
     height:800px;
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 /* body {
