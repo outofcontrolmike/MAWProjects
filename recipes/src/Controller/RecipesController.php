@@ -19,7 +19,9 @@ class RecipesController extends AppController
     {
         $this->Authorization->skipAuthorization();
 
-        $recipes = $this->Paginator->paginate($this->Recipes->find());
+        //Might want to paginate this later
+        // $recipes = $this->Paginator->paginate($this->Recipes->find());
+        $recipes = $this->Recipes->find();
         $this->set(compact('recipes'));
     }
 
