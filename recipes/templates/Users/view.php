@@ -68,9 +68,7 @@ $creator = $_SESSION["Auth"]["id"];
                                     <th><?= __('Cook Time') ?></th>
                                     <th><?= __('Servings') ?></th>
                                     <th><?= __('Directions') ?></th>
-                                    <th><?= __('Published') ?></th>
                                     <th><?= __('Created') ?></th>
-                                    <th><?= __('Modified') ?></th>
                                     <th class="actions"><?= __('Actions') ?></th>
                                 </tr>
                             </thead>
@@ -83,9 +81,7 @@ $creator = $_SESSION["Auth"]["id"];
                                     <td><?= h($recipes->cook_time) ?></td>
                                     <td><?= h($recipes->servings) ?></td>
                                     <td><?= h($recipes->directions) ?></td>
-                                    <td><?= h($recipes->published) ?></td>
                                     <td><?= h($recipes->created) ?></td>
-                                    <td><?= h($recipes->modified) ?></td>
                                     <td class="actions">
                                         <?= $this->Html->link(__('View'), ['controller' => 'Recipes', 'action' => 'view', $recipes->slug]) ?>
                                         <?= $this->Html->link(__('Edit'), ['controller' => 'Recipes', 'action' => 'edit', $recipes->slug]) ?>

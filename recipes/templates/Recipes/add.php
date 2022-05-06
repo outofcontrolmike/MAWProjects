@@ -13,7 +13,7 @@
         echo $this->Form->control('cook_time', ['label' => "Cook-Time (in minutes)"]);
         echo $this->Form->control('servings');
         echo $this->Form->control('ingredients', ['placeholder' => "bananas,strawberries,blueberries"]);
-        echo $this->Form->control('directions',  ['rows' => '5']);
+        echo $this->Form->control('directions',  ['placeholder' => "Enter a new line for each step", 'rows' => '5']);
         echo $this->Form->control('image_file', ['type' => 'file'], ['label' => "Image (place url to your photo here.)"]);
         echo $this->Form->control('tag_string', ['label' => "Search Tags (enter comma separated words -eg: peppers,onions,sharp cheddar,ect..)"], ['type' => 'text']);
         echo "<br>";

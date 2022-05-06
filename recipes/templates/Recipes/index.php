@@ -12,8 +12,6 @@
         <?php
 
         foreach ($recipes as $recipe) :
-
-
             $totalMinutes = 0;
 
             //get cook time
