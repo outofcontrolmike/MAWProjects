@@ -4,8 +4,14 @@
 <?php $creator = "";
 $creator = $_SESSION["Auth"]["id"];
 
+//Separate Ingredients
 $ingredients = preg_split("/[,]+/", $recipe->ingredients);
+
+//Separate Direction text into paragraphs.
+$directions = preg_split('#(\r\n?|\n)+#', $recipe->directions);
 ?>
+
+
 
 
 
@@ -32,8 +38,8 @@ $ingredients = preg_split("/[,]+/", $recipe->ingredients);
 
     </div>
 
-    <!-- 2nd column-->
-    <div class="ui column container">
+    <!-- 2nd column - Ingredients & Directions -->
+    <div class="ui column container" id="recipeView2ndColumn">
         <div class="row">
             <h1>Ingredients</h1>
             <?php foreach ($ingredients as $ingredient) {
@@ -45,7 +51,13 @@ $ingredients = preg_split("/[,]+/", $recipe->ingredients);
         <hr>
         <div class="row">
             <h1>Directions</h1>
-            <p><?= h($recipe->directions) ?></p>
+            <?php $counter = 1; ?>
+            <?php foreach ($directions as $direction) {
+                $uppercaseFirst = ucfirst($direction);
+                echo "<b>Step $counter</b>";
+                echo "<p>$direction</p>";
+                $counter++;
+            } ?>
         </div>
     </div>
 </div>

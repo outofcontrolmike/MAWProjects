@@ -12,13 +12,14 @@
         echo $this->Form->control('prep_time', ['label' => "Prep-Time (in minutes)"]);
         echo $this->Form->control('cook_time', ['label' => "Cook-Time (in minutes)"]);
         echo $this->Form->control('servings');
-        echo $this->Form->control('ingredients');
-        echo $this->Form->control('directions');
+        echo $this->Form->control('ingredients', ['placeholder' => "bananas,strawberries,blueberries"]);
+        echo $this->Form->control('directions',  ['rows' => '5']);
         echo $this->Form->control('image_file', ['type' => 'file'], ['label' => "Image (place url to your photo here.)"]);
         echo $this->Form->control('tag_string', ['label' => "Search Tags (enter comma separated words -eg: peppers,onions,sharp cheddar,ect..)"], ['type' => 'text']);
-        echo $this->Form->button(__('Save Recipe'), ['class' => "ui button fluid red"]);
         echo "<br>";
+        echo $this->Form->button(__('Save Recipe'), ['class' => "ui button fluid red"]);
         echo $this->Form->end();
         ?>
     </div>
 </div>
+<br>

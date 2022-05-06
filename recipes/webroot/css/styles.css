@@ -81,6 +81,11 @@ transition: text-decoration;
     border-radius: 25px;
 }
 
+#recipeView2ndColumn {
+    height:800px;
+    overflow: scroll;
+}
+
 /* body {
     font-size: 18px;
     background-color: blue;
