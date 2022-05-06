@@ -1,18 +1,23 @@
-<?php include "templates\layout\header.php" ?>
+<?php include "templates\layout\header.php";
+?>
 <div class="ui container fluid very padded relaxed">
-    <h3>Public Recipes</h3>
-    <div>
-        <input name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
-        <button onclick="submitKeyword()" class="button">Submit Keyword</button>
+    <br>
+    <div class="ui container fluid">
+        <div class="ui action input" id="recipeIndexSearch">
+            <input type="test" name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
+            <div class="ui button" onclick="submitKeyword()">Go</div>
+        </div>
     </div>
     <div class="ui cards container fluid small" id="recipeCardsIndex">
         <!-- <?= $this->Html->link('Add Recipe', ['action' => 'add'], ['class' => 'button']) ?> -->
 
         <!-- Here is where we iterate through our $Recipes query object, printing out recipe info -->
         <?php
-
         foreach ($recipes as $recipe) :
             $totalMinutes = 0;
+
+            $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
+
 
             //get cook time
             $cookMinutes = intval($recipe->cook_time);
@@ -33,8 +38,11 @@
                         <i class="clock outline icon"></i>
                         <span class="ui date"><?php echo $totalMinutes ?> min</span>
                     </div>
-                    <div class="description">
-                        <?= $recipe->body ?>
+                    <div class="description" id="recipeBody">
+                        <?php foreach ($recipeBody as $bodyPart) {
+                            $uppercaseFirst = ucfirst($bodyPart);
+                            echo "<p>$bodyPart</p>";
+                        } ?>
                     </div>
                 </div>
                 <div class="extra content">
@@ -42,8 +50,8 @@
                         <?= date_format($recipe->created, "m/d/Y") ?>
                     </span>
                     <span>
-                        <i class="user icon"></i>
-                        Created By: <a href="http://localhost:8765/users/view/<?= $recipe->user_id ?>"><?= $recipe->user_id ?></a>
+
+                        <a href="http://localhost:8765/users/view/<?= $recipe->user_id ?>"> <i class="user icon blue"></i></a>
                     </span>
                 </div>
             </div>

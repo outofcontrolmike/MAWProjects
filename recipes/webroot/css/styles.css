@@ -34,6 +34,11 @@ width:auto;
 }
 
 /* Recipes  */
+
+#recipeIndexSearch {
+    float:right;
+    padding-right: 3.5rem;
+}
 #recipeCardsIndex {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -88,8 +93,13 @@ transition: text-decoration;
 }
 
 #recipeBody {
-    height:200px;
+    height:150px;
     overflow-y: auto;
+}
+
+.description {
+    max-height:100px;
+    overflow:auto;
 }
 
 
