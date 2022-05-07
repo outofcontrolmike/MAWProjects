@@ -63,6 +63,47 @@ width:25%;
 padding:0;
 }
 
+/* *****USERS******** */
+
+#userIndexUserColumn {
+width: 200px;
+max-width:200px;
+}
+
+#userActions{
+    text-align: center;
+
+}
+
+/* Pagination */
+ul.pagination li a {
+    color: rgba(0, 0 ,0 , 0.54);
+}
+
+ul.pagination li.active a {
+    background-color: #DCE47E;
+    color: #FFF;
+    font-weight: bold;
+    cursor: default;
+}
+ul.pagination .disabled:hover a {
+    background: none;
+}
+
+.paginator {
+    text-align: center;
+}
+
+.paginator ul.pagination li {
+    float: none;
+    display: inline-block;
+}
+
+.paginator p {
+    text-align: right;
+    color: rgba(0, 0 ,0 , 0.54);
+}
+
 /* .recipeCardImage {
     padding: 0px;
 } */

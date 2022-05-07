@@ -31,8 +31,8 @@
             echo $this->Form->control('password');
             echo $this->Form->control('bio');
             echo $this->Form->control('image');
-            echo $this->Form->control('link');
-            echo $this->Form->control('instagram_link');
+            echo $this->Form->control('link', ['placeholder' => "Enter your website name without the https or http, example: mawportfolio.online"]);
+            echo $this->Form->control('instagram_link',['placeholder' => "Enter your Instagram user name and we'll link to it.  example: explodingsnes"]);
             ?>
             <br>
             <?= $this->Form->button(__('Submit'), ['class' => 'ui fluid button yellow']) ?>
