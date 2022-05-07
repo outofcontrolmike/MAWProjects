@@ -10,7 +10,7 @@
 <div class="ui container segment very padded relaxed raised">
     <h1><?= __('Users') ?></h1>
     <div class="">
-        <table class="ui padded collapsing celled table">
+        <table class="ui collapsing celled table">
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('user_name', ['label' => "User"]) ?></th>
