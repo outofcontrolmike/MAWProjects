@@ -14,6 +14,7 @@
         <table class="ui table celled">
             <thead>
                 <tr>
+                    <th>UserImage</th>
                     <th><?= $this->Paginator->sort('user_name') ?></th>
                     <th><?= $this->Paginator->sort('title') ?></th>
                     <th><?= $this->Paginator->sort('bio') ?></th>
@@ -26,6 +27,7 @@
             <tbody>
                 <?php foreach ($users as $user) : ?>
                     <tr>
+                        <td><img class="ui mini rounded image" id="userImage" src="<?= h($user->image) ?>"></td>
                         <td><?= h($user->user_name) ?></td>
                         <td><?= h($user->title) ?></td>
                         <td><?= h($user->bio) ?></td>
