@@ -21,32 +21,23 @@ $creator = $_SESSION["Auth"]["id"];
         </div>
     </aside> -->
 <br><br>
-<div style="height: 100vh">
+<div>
     <div class="ui very padded relaxed raised segment container">
+
+    <!-- Try out two column grid -->
+    <div class="ui two column container grid stackable very relaxed padded">
+        <div class="ui column">
+        <img class="ui image medium" src="<?= h($user->image) ?>" />
+        </div>
+        <div class="ui column ui text centered">
+            <span class="ui text centered huge"><?= h($user->user_name) ?></span>
+            <h5><?= h($user->title) ?></h5>
+            <p><?= h($user->bio) ?></p>
+        </div>
+    </div>
+    <hr>
+    <!-- End two column grid -->
         <div class="ui">
-            <img style="height: 250px" src="<?= h($user->image) ?>" />
-            <table class='ui table celled'>
-                <tr>
-                    <th><?= __('User Name') ?></th>
-                    <td><?= h($user->user_name) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Title') ?></th>
-                    <td><?= h($user->title) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Bio') ?></th>
-                    <td><?= h($user->bio) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Instagram Link') ?></th>
-                    <td><?= h($user->instagram_link) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Business Link') ?></th>
-                    <td><?= h($user->link) ?></td>
-                </tr>
-            </table>
             <div class="related">
                 <h4><?= __("User's Created Recipes") ?></h4>
                 <?php if ($creator === $user->id) : ?>
