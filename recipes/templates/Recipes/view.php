@@ -38,7 +38,7 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
             <h1>Description</h1>
             <?php foreach ($recipeBody as $bodyPart) {
                 $uppercaseFirst = ucfirst($bodyPart);
-                echo "<p>$bodyPart</p>";
+                echo "<p>$uppercaseFirst</p>";
             } ?>
         </div>
 

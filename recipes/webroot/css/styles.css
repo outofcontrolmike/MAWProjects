@@ -70,9 +70,29 @@ width: 200px;
 max-width:200px;
 }
 
-#userActions{
+#userActions, .userActions{
     text-align: center;
+}
 
+
+/* User View */
+
+
+#userSocialMedia {
+    position:absolute;
+    bottom: 0px;
+    width:100%;
+}
+
+#mediaLinks {
+    float: right;
+    padding-right: 2.5rem;
+}
+
+#mediaLinks > a > i:hover {
+    position: relative;
+    bottom:1px;
+    color:teal;
 }
 
 /* Pagination */

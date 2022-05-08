@@ -39,8 +39,8 @@
                     <i onclick="submitKeyword()" class="search link icon"></i>
                 </div> -->
                 <div class="right menu secondary">
-                    <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Account Settings</a>
-                    <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>
+                <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>
+                    <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Settings</a>
                     <a class="item" href="<?= $this->Url->build('users/logout') ?>">Logout</a>
                 </div>
             <?php } ?>
