@@ -24,19 +24,30 @@ $creator = $_SESSION["Auth"]["id"];
 <div>
     <div class="ui very padded relaxed raised segment container">
 
-    <!-- Try out two column grid -->
-    <div class="ui two column container grid stackable very relaxed padded">
-        <div class="ui column">
-        <img class="ui image medium" src="<?= h($user->image) ?>" />
+        <!-- Try out two column grid -->
+        <div class="ui two column container grid stackable very relaxed padded">
+            <div class="ui column">
+                <img class="ui image medium" src="<?= h($user->image) ?>" />
+            </div>
+            <div class="ui column ui text centered">
+                <span class="ui text centered huge"><?= h($user->user_name) ?></span>
+                <h5><?= h($user->title) ?></h5>
+                <p><?= h($user->bio) ?></p>
+                <p>Total Recipes: <?php $recipes = $user->recipes;
+                                    echo count($recipes);
+                                    ?> </p>
+                <div class="container" style="position:absolute">
+                    <span>Joined: <?php echo $user->created ?>
+                        <div style="float: right">
+                            <i class="instagram icon big"></i>
+                            <i class="user tie icon big"></i>
+                        </div>
+
+                </div>
+            </div>
         </div>
-        <div class="ui column ui text centered">
-            <span class="ui text centered huge"><?= h($user->user_name) ?></span>
-            <h5><?= h($user->title) ?></h5>
-            <p><?= h($user->bio) ?></p>
-        </div>
-    </div>
-    <hr>
-    <!-- End two column grid -->
+        <hr>
+        <!-- End two column grid -->
         <div class="ui">
             <div class="related">
                 <h4><?= __("User's Created Recipes") ?></h4>
