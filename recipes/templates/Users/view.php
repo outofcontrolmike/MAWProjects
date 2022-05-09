@@ -94,8 +94,9 @@ $uppercaseFirst = ucfirst($user->user_name);
 
                                             <?= $this->Form->postLink('<i class="ui trash  icon red "></i>', ['controller' => 'Recipes', 'action' => 'delete', $recipes->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $recipes->id), 'escape' => false, 'title' => __('Delete')]) ?> </td>
 
-                                    <?php else : null  ?>
-                                    <?php endif; ?>
+                                    <?php else :   ?>
+                                        <h1>You haven't created any recipes yet... get to it!
+                                        <?php endif; ?>
                                 </tr>
                             <?php endforeach; ?>
                         </table>
@@ -106,6 +107,7 @@ $uppercaseFirst = ucfirst($user->user_name);
                         <?php else : null  ?>
                         <?php endif; ?>
                     </div>
+                <?php else : echo "<h1>You haven't created nay recipes yet... get to it.</h1>" ?>
                 <?php endif; ?>
             </div>
         </div>
