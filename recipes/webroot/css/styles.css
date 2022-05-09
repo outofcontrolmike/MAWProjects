@@ -70,9 +70,6 @@ width: 200px;
 max-width:200px;
 }
 
-#userActions, .userActions{
-    text-align: center;
-}
 
 
 /* User View */
@@ -93,6 +90,10 @@ max-width:200px;
     position: relative;
     bottom:1px;
     color:teal;
+}
+
+#userViewIngredients {
+    word-break: break-all;
 }
 
 /* Pagination */

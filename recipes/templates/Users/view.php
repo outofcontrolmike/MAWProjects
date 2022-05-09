@@ -38,15 +38,16 @@ $uppercaseFirst = ucfirst($user->user_name);
 
                 <span class="ui text centered huge"><?= h($uppercaseFirst) ?></span>
                 <h5><?= h($user->title) ?></h5>
-                <p><?= h($user->bio) ?></p>
-                <p>Total Recipes: <?php $recipes = $user->recipes;
-                                    echo count($recipes);
-                                    ?> </p>
+                <p style="font-size:large"><?= h($user->bio) ?></p>
+                <!-- <p>Total Recipes: <?php $recipes = $user->recipes;
+                                        echo count($recipes);
+                                        ?> </p> -->
                 <div class="container" id="userSocialMedia">
                     <span class="ui text grey large"><?php echo date_format($user->created, "m/d/Y") ?> </span>
                     <span id="mediaLinks">
                         <a href="<?php echo $user->link ?>" target="_blank"><i class="user tie icon big"></i></a>
-                        <a href="<?php echo $user->instagram_link ?>" target="_blank"><i class="instagram icon big"></i></a>
+                        <a href="https://instagram.com/<?php echo $user->instagram_link ?>" target="_blank"><i class="instagram icon big"></i></a>
+                        <a href="mailto:<?php echo $user->email ?>" target="_blank"><i class="envelope icon big"></i></a>
 
                     </span>
                 </div>
@@ -56,7 +57,7 @@ $uppercaseFirst = ucfirst($user->user_name);
         <!-- End two column grid -->
         <div class="ui">
             <div class="related">
-                <h2><?= __("User's Created Recipes") ?></h2>
+                <br>
                 <?php if (!empty($user->recipes)) : ?>
                     <div class="">
                         <table class="ui celled table">
@@ -70,45 +71,40 @@ $uppercaseFirst = ucfirst($user->user_name);
                                     <th><?= __('Servings') ?></th>
                                     <th><?= __('Directions') ?></th>
                                     <th><?= __('Created') ?></th>
-                                    <th class="actions"><?= __('Actions') ?></th>
+                                    <?php if ($creator === $user->id) : ?>
+                                        <th class="actions"><?= __('Actions') ?></th>
+                                    <?php else : null  ?>
+                                    <?php endif; ?>
                                 </tr>
                             </thead>
                             <?php foreach ($user->recipes as $recipes) : ?>
                                 <tr>
-                                    <td><?= h($recipes->title) ?></td>
+                                    <td><?= $this->Html->link($recipes->title, ['controller' => 'recipes', 'action' => 'view', $recipes->slug], ['style' => "color:teal"]) ?></td>
                                     <td><?= h($recipes->body) ?></td>
-                                    <td><?= h($recipes->ingredients) ?></td>
+                                    <td id="userViewIngredients"><?= h($recipes->ingredients) ?></td>
                                     <td><?= h($recipes->prep_time) ?></td>
                                     <td><?= h($recipes->cook_time) ?></td>
                                     <td><?= h($recipes->servings) ?></td>
                                     <td><?= h($recipes->directions) ?></td>
-                                    <td><?= h($recipes->created) ?></td>
-                                    <td class="actions userActions">
-                                        <?= $this->Html->link('<i class="ui eye icon teal small"></i>' . __(''), ['controller' => 'Recipes', 'action' => 'view', $recipes->slug], ['escape' => false, 'title' => __('View')]) ?>
+                                    <td><?= h(date_format($user->created, "m/d/Y")) ?></td>
 
-                                        <!-- Todo: Make it to where these conditionally show up for logged in user -->
+                                    <!-- Todo: Make it to where these conditionally show up for logged in user -->
+                                    <?php if ($creator === $user->id) : ?>
+                                        <td class="actions"> <?= $this->Html->link('<i class="ui pencil icon teal  "></i>' . __(''), ['controller' => 'Recipes', 'action' => 'edit', $recipes->slug], ['escape' => false, 'title' => __('Edit')]) ?>
 
-                                        <?php if ($creator === $user->id) : ?>
-                                            <?= $this->Html->link('<i class="ui pencil icon yellow small "></i>' . __(''), ['controller' => 'Recipes', 'action' => 'edit', $recipes->slug], ['escape' => false, 'title' => __('Edit')]) ?>
+                                            <?= $this->Form->postLink('<i class="ui trash  icon red "></i>', ['controller' => 'Recipes', 'action' => 'delete', $recipes->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $recipes->id), 'escape' => false, 'title' => __('Delete')]) ?> </td>
 
-                                            <?= $this->Form->postLink('<i class="ui trash small icon red "></i>', ['controller' => 'Recipes', 'action' => 'delete', $recipes->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $recipes->id), 'escape' => false, 'title' => __('Delete')]) ?>
-                                        <?php else : null  ?>
-                                        <?php endif; ?>
-
-
-
-                                    </td>
+                                    <?php else : null  ?>
+                                    <?php endif; ?>
                                 </tr>
-
                             <?php endforeach; ?>
-                            
                         </table>
                         <?php if ($creator === $user->id) : ?>
-                    <br>
-                    <?= $this->Html->link('Add Recipe', ['controller' => 'recipes', 'action' => 'add'], ['class' => 'button ui button red floated right']) ?>
-            
-                <?php else : null  ?>
-                <?php endif; ?>
+                            <br>
+                            <?= $this->Html->link('Add Recipe', ['controller' => 'recipes', 'action' => 'add'], ['class' => 'button ui button red', 'style' => "float:right"]) ?>
+                            <br>
+                        <?php else : null  ?>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
             </div>
