@@ -30,7 +30,16 @@ color: black;
 
 #loginForm, #signUpForm {
 width:auto;
+}
 
+#loginPageContainer {
+    height: 100vh;
+}
+
+#loginPageFirstColumn {
+    
+    padding:10rem;
+    background-color: white;
 }
 
 /* Recipes  */
