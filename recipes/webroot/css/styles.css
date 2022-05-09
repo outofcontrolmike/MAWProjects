@@ -70,6 +70,9 @@ width: 200px;
 max-width:200px;
 }
 
+#userActions{
+    text-align: center;
+}
 
 
 /* User View */
