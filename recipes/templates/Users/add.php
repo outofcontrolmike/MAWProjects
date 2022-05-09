@@ -7,7 +7,7 @@
 ?>
 
 <div class="ui container fluid" id="signUpFormContainer">
-    <div class="ui container segment raised very padded" id="signUpForm">
+    <div class="ui container segment raised very padded stacked" id="signUpForm">
         <div class="ui form" id="">
             <?= $this->Form->create($user) ?>
             <legend style="text-align:center">

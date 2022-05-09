@@ -1,5 +1,5 @@
 <div class="ui container fluid" id="loginFormContainer">
-    <div class="ui container segment very padded relaxed raised " id="loginForm">
+    <div class="ui very padded relaxed raised column container segment stacked tall " id="loginForm">
         <?= $this->Flash->render() ?>
         <h3>Login</h3>
         <?= $this->Form->create() ?>

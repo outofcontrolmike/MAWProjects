@@ -1,6 +1,7 @@
 <!-- File: templates/Recipes/edit.php -->
 
 <?php include "templates\layout\header.php" ?>
+<br>
 <div class="ui very padded relaxed raised segment container">
     <h1>Edit Recipe</h1>
     <div class="ui form">
@@ -23,3 +24,4 @@
         ?>
     </div>
 </div>
+<br>

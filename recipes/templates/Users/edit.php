@@ -7,7 +7,7 @@
 ?>
 <?php include "templates\layout\header.php" ?>
 
-<div style="height: 100vh">
+<div>
     <!-- <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
@@ -20,7 +20,7 @@
         </div>
     </aside> -->
     <br>
-    <div class="ui very padded relaxed raised column container segment">
+    <div class="ui very padded relaxed raised column container segment stacked">
         <div class="ui form">
             <?= $this->Form->create($user) ?>
             <h1 style="text-align: center;">

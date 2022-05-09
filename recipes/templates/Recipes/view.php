@@ -15,7 +15,7 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
 ?>
 <br>
 
-<div class="ui two column container stackable grid segment raised relaxed">
+<div class="ui two column container stackable grid segment tall stacked raised relaxed">
 
     <div class="ui column container">
         <!-- img -->
