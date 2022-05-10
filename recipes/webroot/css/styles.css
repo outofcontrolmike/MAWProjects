@@ -91,7 +91,9 @@ max-width:200px;
 
 /* User View */
 
-
+#userViewImageContainer {
+    text-align: -webkit-center;
+}
 #userSocialMedia {
     position:absolute;
     bottom: 0px;

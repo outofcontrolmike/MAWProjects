@@ -31,12 +31,12 @@ $uppercaseFirst = ucfirst($user->user_name);
 
         <!-- Try out two column grid -->
         <div class="ui two column container grid stackable very relaxed padded">
-            <div class="ui column">
+            <div class="ui column" id="userViewImageContainer">
                 <img class="ui image medium" src="<?= h($user->image) ?>" />
             </div>
             <div class="ui column ui text centered">
                 <span class="ui text centered huge"><?= h($uppercaseFirst) ?></span>
-                <h5 style="color:grey"><?= h($user->title) ?></h5>
+                <h3 style="color:grey"><?= h($user->title) ?></h3>
                 <p style=" font-size:large"><?= h($user->bio) ?></p>
                 <!-- <p>Total Recipes: <?php $recipes = $user->recipes;
                                         echo count($recipes);
@@ -51,7 +51,7 @@ $uppercaseFirst = ucfirst($user->user_name);
                 </div>
             </div>
         </div>
-        <hr style="border-color: teal;">
+        <hr style="border-color: #00b5ad;">
         <!-- End two column grid -->
         <div class="ui">
             <div class="related">
@@ -77,7 +77,7 @@ $uppercaseFirst = ucfirst($user->user_name);
                             </thead>
                             <?php foreach ($user->recipes as $recipes) : ?>
                                 <tr>
-                                    <td><?= $this->Html->link($recipes->title, ['controller' => 'recipes', 'action' => 'view', $recipes->slug], ['style' => "color:teal"]) ?></td>
+                                    <td><?= $this->Html->link($recipes->title, ['controller' => 'recipes', 'action' => 'view', $recipes->slug], ['style' => "color:#00b5ad"]) ?></td>
                                     <td><?= h($recipes->body) ?></td>
                                     <td id="userViewIngredients"><?= h($recipes->ingredients) ?></td>
                                     <td><?= h($recipes->prep_time) ?></td>
@@ -90,7 +90,7 @@ $uppercaseFirst = ucfirst($user->user_name);
                                     <?php if ($creator === $user->id) : ?>
                                         <td class="actions"> <?= $this->Html->link('<i class="ui pencil icon teal  "></i>' . __(''), ['controller' => 'Recipes', 'action' => 'edit', $recipes->slug], ['escape' => false, 'title' => __('Edit')]) ?>
 
-                                            <?= $this->Form->postLink('<i class="ui trash  icon red "></i>', ['controller' => 'Recipes', 'action' => 'delete', $recipes->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $recipes->id), 'escape' => false, 'title' => __('Delete')]) ?> </td>
+                                            <?= $this->Form->postLink('<i class="ui trash icon red"></i>', ['controller' => 'Recipes', 'action' => 'delete', $recipes->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $recipes->id), 'escape' => false, 'title' => __('Delete')]) ?> </td>
 
                                     <?php else :   ?>
                                     <?php endif; ?>
@@ -99,7 +99,7 @@ $uppercaseFirst = ucfirst($user->user_name);
                         </table>
                         <?php if ($creator === $user->id) : ?>
                             <br>
-                            <?= $this->Html->link('Add Recipe', ['controller' => 'recipes', 'action' => 'add'], ['class' => 'button ui button red', 'style' => "float:right"]) ?>
+                            <?= $this->Html->link('Add Recipe', ['controller' => 'recipes', 'action' => 'add'], ['class' => 'button ui button teal circular', 'style' => "float:right"]) ?>
                             <br>
                         <?php else : null  ?>
                         <?php endif; ?>
