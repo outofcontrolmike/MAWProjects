@@ -29,16 +29,23 @@ color: black;
     }
 
 #loginForm, #signUpForm {
-width:auto;
+width:fit-content;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 #loginPageContainer {
     height: 100vh;
 }
 
-#loginPageFirstColumn {
-    
-    background-color: white;
+#loginFormInputsGroup > .input > input {
+ border-radius: 25px;
+ text-align: center;
+
+}
+
+.loginButton:hover {
+    position: relative;
+    top:2px;
 }
 
 /* Recipes  */
