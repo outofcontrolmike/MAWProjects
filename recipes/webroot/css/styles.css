@@ -11,8 +11,6 @@ color: black;
     background-color: #eef2f3;
 }
 
-
-
 /* Navigation menu */
 
 #navigationMenu {
@@ -31,6 +29,8 @@ color: black;
 #loginForm, #signUpForm {
 width:fit-content;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+padding:75px;
+
 }
 
 #loginPageContainer {
@@ -43,9 +43,8 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0
 
 }
 
-.loginButton:hover {
-    position: relative;
-    top:2px;
+#signUpButton:hover {
+    border-color: yellow;
 }
 
 /* Recipes  */

@@ -47,7 +47,6 @@ $uppercaseFirst = ucfirst($user->user_name);
                         <a href="<?php echo $user->link ?>" target="_blank"><i class="user tie icon big"></i></a>
                         <a href="https://instagram.com/<?php echo $user->instagram_link ?>" target="_blank"><i class="instagram icon big"></i></a>
                         <a href="mailto:<?php echo $user->email ?>" target="_blank"><i class="envelope icon big"></i></a>
-
                     </span>
                 </div>
             </div>
