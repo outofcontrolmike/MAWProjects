@@ -1,6 +1,6 @@
     <div class="ui fluid container center aligned" id="loginFormContainer">
         <br>
-        <div class="ui container segment very padded relaxed raised stacked" id="loginForm">
+        <div class="ui container segment very padded relaxed raised" id="loginForm">
             <?= $this->Flash->render() ?>
             <span class="ui text big teal">Account Login</span>
             <?= $this->Form->create() ?>
@@ -19,7 +19,6 @@
             </div>
             <?= $this->Form->end() ?>
             <br>
-            <hr>
             <p>No Account? No Problem, just click below.</p>
             <a href="/users/add"><i class="utensils icon big teal "></i></a>
             </i>
