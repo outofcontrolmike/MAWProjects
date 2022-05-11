@@ -99,7 +99,7 @@
                             <label>Biography</label>
                             <div class="bioContainer">
                                 <?php
-                                echo $this->Form->control('bio',  ['label' => "", 'placeholder' => "Enter a new line for each step", 'rows' => '5']);
+                                echo $this->Form->control('bio',  ['label' => "", 'placeholder' => "Enter a new line for each", 'rows' => '5']);
                                 ?>
                             </div>
                         </div>

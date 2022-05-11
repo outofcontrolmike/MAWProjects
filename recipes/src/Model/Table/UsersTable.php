@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -83,7 +84,8 @@ class UsersTable extends Table
 
         $validator
             ->scalar('bio')
-            ->maxLength('bio', 255)
+            ->minLength('bio', 100)
+            ->maxLength('bio', 1000)
             ->requirePresence('bio', 'create')
             ->notEmptyString('bio');
 

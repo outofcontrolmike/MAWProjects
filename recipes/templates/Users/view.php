@@ -16,6 +16,11 @@ $creator = $_SESSION["Auth"]["id"];
 $uppercaseFirst = ucfirst($user->user_name);
 ?>
 
+<!-- Bio text -->
+<?php
+$userBio = preg_split('#(\r\n?|\n)+#', $user->bio);
+?>
+
 <!-- <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
@@ -37,7 +42,11 @@ $uppercaseFirst = ucfirst($user->user_name);
             <div class="ui column ui text centered">
                 <span class="ui text centered big teal"><?= h($uppercaseFirst) ?></span>
                 <h3 style="color:black"><?= h($user->title) ?></h3>
-                <p style=" font-size:large"><?= h($user->bio) ?></p>
+                <p style=" font-size:large">
+                    <?php foreach ($userBio as $bioPart) {
+                        echo "<p style='font-size: large'>$bioPart</p>";
+                    } ?></p>
+
                 <!-- <p>Total Recipes: <?php $recipes = $user->recipes;
                                         echo count($recipes);
                                         ?> </p> -->
