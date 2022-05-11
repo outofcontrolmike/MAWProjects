@@ -59,8 +59,9 @@
             <?= $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
         <p>
-            <?= $this->Html->link(__('Add User'), ['action' => 'add'], ['class' => 'ui teal button', 'style' => "float:left"]) ?>
-            <?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+            <?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?>
+            <?= $this->Html->link(__('Add User'), ['action' => 'add'], ['class' => 'ui teal button circular', 'style' => "float: right"]) ?>
+        </p>
     </div>
 </div>
 <br>

@@ -20,70 +20,98 @@
         </div>
     </aside> -->
     <br>
-    <div class="ui very padded relaxed raised column container segment stacked">
-        <div class="ui form">
-            <?= $this->Form->create($user) ?>
-            <h1 style="text-align: center;">
-                <legend><?= __('Edit Your Account Details') ?></legend>
-            </h1>
-            <div class=" ui field">
-                <label>User Name</label>
-                <?php
-                echo $this->Form->control('user_name', ['label' => ""]);
-                ?>
-            </div>
+    <div class="ui fluid container" id=" editUserContainer">
+        <div class="ui relaxed raised column container segment stacked" id="editUserForm">
+            <div class="ui form large equal width">
+                <p style="text-align:center"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "75", 'height' => '75')); ?></p>
 
-            <div class="ui field">
-                <label>Your Title</label>
-                <?php
-                echo $this->Form->control('title', ['label' => ""]);
-                ?>
-            </div>
+                <p style="text-align: center">
+                    <span class="ui text large teal">
+                        Edit Your Account Details
+                    </span>
+                </p>
 
-            <div class="ui field">
-                <label>Email</label>
-                <?php
-                echo $this->Form->control('email', ['label' => ""]);
-                ?>
-            </div>
+                <div class="ui divider">
 
-            <div class="ui field">
-                <label>Password</label>
-                <?php
-                echo $this->Form->control('password', ['label' => ""]);
-                ?>
-            </div>
+                </div>
+                <?= $this->Form->create($user) ?>
 
-            <div class="ui field">
-                <label>Biography</label>
-                <?php
-                echo $this->Form->control('bio',  ['label' => "", 'placeholder' => "Enter a new line for each step", 'rows' => '3', 'class' => "ui input"]);
-                ?>
-            </div>
+                <div id="EditFormInputsGroup">
+                    <div class="fields">
+                        <div class=" ui field">
+                            <label>User Name</label>
+                            <?php
+                            echo $this->Form->control('user_name', ['label' => ""]);
+                            ?>
+                        </div>
+                        <div class="ui field">
+                            <label>Your Title</label>
+                            <?php
+                            echo $this->Form->control('title', ['label' => ""]);
+                            ?>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="ui field">
+                            <label>Email</label>
+                            <?php
+                            echo $this->Form->control('email', ['label' => ""]);
+                            ?>
+                        </div>
 
-            <div class="ui field">
-                <label>Profile Picture</label>
-                <?php
-                echo $this->Form->control('image', ['label' => ""]);
-                ?>
-            </div>
-            <div class="ui field">
-                <label>Business Link</label>
-                <?php
-                echo $this->Form->control('link', ['label' => "", 'placeholder' => "Enter your website or portfioli and we'll link to it.  example: mawportfolio.online"]);
-                ?>
-            </div>
+                        <div class="ui field">
+                            <label>Password</label>
+                            <?php
+                            echo $this->Form->control('password', ['label' => ""]);
+                            ?>
+                        </div>
+                    </div>
+                    <div class="ui divider">
 
-            <div class="ui field">
-                <label>Instagram Link</label>
-                <?php
-                echo $this->Form->control('instagram_link', ['label' => "", 'placeholder' => "Enter your Instagram user name and we'll link to it.  example: explodingsnes"]);
+                    </div>
+                    <div class="fields">
+                        <div class="ui field">
+                            <label>Profile Picture</label>
+                            <?php
+                            echo $this->Form->control('image', ['label' => ""]);
+                            ?>
+                        </div>
+                        <div class="ui field">
+                            <label>Business Link</label>
+                            <?php
+                            echo $this->Form->control('link', ['label' => "", 'placeholder' => "Enter your website or portfioli and we'll link to it.  example: mawportfolio.online"]);
+                            ?>
+                        </div>
 
-                ?>
+                        <div class="ui field">
+                            <label>Instagram Link</label>
+                            <?php
+                            echo $this->Form->control('instagram_link', ['label' => "", 'placeholder' => "Enter your Instagram user name and we'll link to it.  example: explodingsnes"]);
+
+                            ?>
+                        </div>
+                    </div>
+                    <div class="ui divider">
+
+                    </div>
+                    <div class="fields">
+                        <div class="ui field circular">
+                            <label>Biography</label>
+                            <div class="bioContainer">
+                                <?php
+                                echo $this->Form->control('bio',  ['label' => "", 'placeholder' => "Enter a new line for each step", 'rows' => '5']);
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- End -->
+                <?= $this->Form->button(__('Save Changes'), ['class' => 'ui fluid button teal circular medium']) ?>
+                <?= $this->Form->end() ?>
             </div>
-            <!-- End -->
-            <?= $this->Form->button(__('Submit'), ['class' => 'ui fluid button red']) ?>
-            <?= $this->Form->end() ?>
         </div>
     </div>
 </div>
+<br>

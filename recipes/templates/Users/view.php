@@ -35,8 +35,8 @@ $uppercaseFirst = ucfirst($user->user_name);
                 <img class="ui image medium" src="<?= h($user->image) ?>" />
             </div>
             <div class="ui column ui text centered">
-                <span class="ui text centered huge"><?= h($uppercaseFirst) ?></span>
-                <h3 style="color:grey"><?= h($user->title) ?></h3>
+                <span class="ui text centered big teal"><?= h($uppercaseFirst) ?></span>
+                <h3 style="color:black"><?= h($user->title) ?></h3>
                 <p style=" font-size:large"><?= h($user->bio) ?></p>
                 <!-- <p>Total Recipes: <?php $recipes = $user->recipes;
                                         echo count($recipes);

@@ -26,7 +26,7 @@ color: black;
     justify-content: center;
     }
 
-#loginForm, #signUpForm {
+#loginForm, #signUpForm, #editUserForm {
 width:fit-content;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 padding:75px;
@@ -40,9 +40,19 @@ padding:75px;
 #loginFormInputsGroup > .input > input {
  border-radius: 25px;
  text-align: center;
-
 }
 
+#EditFormInputsGroup  > .fields > .field > .input > input {
+    border-radius: 25px;
+   }
+
+   .bioContainer >.textarea > #bio {
+       border-radius: 12px;
+   }
+
+   #EditFormInputsGroup  > .fields > .field > .input > input:focus,  .bioContainer >.textarea > #bio:focus {
+    border-color:#00b5ad
+   }
 
 /* Recipes  */
 #recipeCardsIndex {
@@ -64,7 +74,7 @@ transition: text-decoration;
 }
 
 #recipeTitle:hover {
-    text-decoration:solid underline;
+    text-decoration:solid underline #00b5ad
    
 }
 
@@ -105,14 +115,14 @@ max-width:200px;
 #mediaLinks > a > i:hover {
     position: relative;
     bottom:1px;
-    color:teal;
+    color:#00b5ad;
 }
 
 #userViewIngredients {
     word-break: break-all;
 }
 
-/* Pagination */
+/************** Pagination ***************/
 ul.pagination li a {
     color: rgba(0, 0 ,0 , 0.54);
 }
@@ -137,7 +147,7 @@ ul.pagination .disabled:hover a {
 }
 
 .paginator p {
-    text-align: right;
+    text-align: left;
     color: rgba(0, 0 ,0 , 0.54);
 }
 
