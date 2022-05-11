@@ -45,11 +45,11 @@ padding:75px;
     border-radius: 25px;
    }
 
-   .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #directions, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body  {
+   .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #directions, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #bio  {
        border-radius: 12px;
    }
 
-   #EditFormInputsGroup  > .fields > .field > .input > input:focus,  .bioContainer >.textarea > #directions:focus, .bioContainer >.textarea > #body:focus {
+   #EditFormInputsGroup  > .fields > .field > .input > input:focus,  .bioContainer >.textarea > #directions:focus, .bioContainer >.textarea > #body:focus, .bioContainer >.textarea > #bio:focus {
     border-color:#00b5ad
    }
 
