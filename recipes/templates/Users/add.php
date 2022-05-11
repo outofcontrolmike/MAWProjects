@@ -5,26 +5,36 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-
-<div class="ui container fluid" id="signUpFormContainer">
-    <div class="ui container segment raised very padded stacked" id="signUpForm">
-        <div class="ui form" id="">
+<script>
+</script>
+<div class="ui container fluid center aligned" id="signUpFormContainer">
+    <div class="ui container segment raised very padded stacked centered" id="signUpForm">
+        <p> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></p>
+        <div class="ui form large" id="">
             <?= $this->Form->create($user) ?>
             <legend style="text-align:center">
-                <h2><?= __('Sign up to start adding recipes!') ?></h2>
+                <span class="ui text teal big"><?= __('Sign up to start adding recipes!') ?></span>
             </legend>
-            <?php
-            echo $this->Form->control('user_name', ['class' => "field"]);
-            echo $this->Form->control('title');
-            echo $this->Form->control('email');
-            echo $this->Form->control('password');
-            echo $this->Form->control('bio');
-            echo $this->Form->control('image');
-            echo $this->Form->control('link');
-            echo $this->Form->control('instagram_link');
-            echo '<br>';
-            ?>
-            <?= $this->Form->button(__('Submit'), ['class' => 'ui button red fluid']) ?>
+            <br>
+            <div id="loginFormInputsGroup">
+                <?= $this->Form->control('user_name', ['class' => "ui", 'placeholder' => "User Name", 'label' => "", 'required' => true]) ?>
+                <br>
+                <?= $this->Form->control('title', ['label' => "", 'placeholder' => "Your title.... example 'Silent Chef'", 'required' => true]) ?>
+                <br>
+                <?= $this->Form->control('email', ['class' => "ui ", 'placeholder' => "Email address", 'label' => "", 'required' => true]) ?>
+                <br>
+                <?= $this->Form->control('password', ['label' => "", 'placeholder' => "Password", 'required' => true]) ?>
+                <br>
+                <?= $this->Form->control('image', ['label' => "", 'placeholder' => "Profile Image", 'required' => true]) ?>
+                <br>
+                <?= $this->Form->control('link', ['class' => "ui ", 'placeholder' => "Professional Link, such as your website or portfolio.", 'label' => "", 'required' => false]) ?>
+                <br>
+                <?= $this->Form->control('instagram_link', ['label' => "", 'placeholder' => "Instagram UserName/Handle", 'required' => false]) ?>
+                <br>
+                <?= $this->Form->control('bio', ['class' => "ui ", 'rows' => '3','placeholder' => "Summary about yourself, about 1-2 paragraphs", 'label' => "", 'required' => true]) ?>
+                <br>
+            </div>
+            <?= $this->Form->button(__('Create Account'), ['class' => 'ui button teal fluid circular']) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

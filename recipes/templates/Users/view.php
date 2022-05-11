@@ -27,7 +27,7 @@ $uppercaseFirst = ucfirst($user->user_name);
     </aside> -->
 <br><br>
 <div>
-    <div class="ui very padded relaxed raised segment container">
+    <div class="ui very padded relaxed raised segment container stacked">
 
         <!-- Try out two column grid -->
         <div class="ui two column container grid stackable very relaxed padded">
@@ -44,7 +44,7 @@ $uppercaseFirst = ucfirst($user->user_name);
                 <div class="container" id="userSocialMedia">
                     <span class="ui text grey large"><?php echo date_format($user->created, "m/d/Y") ?> </span>
                     <span id="mediaLinks">
-                        <a href="<?php echo $user->link ?>" target="_blank"><i class="user tie icon big"></i></a>
+                        <a href="https://<?php echo $user->link ?>" target="_blank"><i class="user tie icon big"></i></a>
                         <a href="https://instagram.com/<?php echo $user->instagram_link ?>" target="_blank"><i class="instagram icon big"></i></a>
                         <a href="mailto:<?php echo $user->email ?>" target="_blank"><i class="envelope icon big"></i></a>
                     </span>
@@ -104,7 +104,7 @@ $uppercaseFirst = ucfirst($user->user_name);
                         <?php else : null  ?>
                         <?php endif; ?>
                     </div>
-                <?php else : echo "<h1>You haven't created nay recipes yet... get to it.</h1>" ?>
+                <?php else : echo "<h1>You haven't created any recipes yet... get to it.</h1>" ?>
                 <?php endif; ?>
             </div>
         </div>
