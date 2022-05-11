@@ -26,11 +26,10 @@ color: black;
     justify-content: center;
     }
 
-#loginForm, #signUpForm, #editUserForm {
+#loginForm, #signUpForm, #editUserForm, #editRecipeForm {
 width:fit-content;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 padding:75px;
-
 }
 
 #loginPageContainer {
@@ -42,15 +41,15 @@ padding:75px;
  text-align: center;
 }
 
-#EditFormInputsGroup  > .fields > .field > .input > input {
+#EditFormInputsGroup  > .fields > .field > .input > input, #editFormInputsGroup >.field > .input > input {
     border-radius: 25px;
    }
 
-   .bioContainer >.textarea > #bio {
+   .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #directions, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body  {
        border-radius: 12px;
    }
 
-   #EditFormInputsGroup  > .fields > .field > .input > input:focus,  .bioContainer >.textarea > #bio:focus {
+   #EditFormInputsGroup  > .fields > .field > .input > input:focus,  .bioContainer >.textarea > #directions:focus, .bioContainer >.textarea > #body:focus {
     border-color:#00b5ad
    }
 
@@ -74,7 +73,7 @@ transition: text-decoration;
 }
 
 #recipeTitle:hover {
-    text-decoration:solid underline #00b5ad
+    color: #00b5ad;
    
 }
 

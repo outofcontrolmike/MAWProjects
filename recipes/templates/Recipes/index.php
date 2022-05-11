@@ -33,7 +33,7 @@
                     <?php endif ?>
                 </div>
                 <div class="content">
-                    <div class="header" id="recipeTitle"><?= $this->Html->link($recipe->title, ['action' => 'view', $recipe->slug], ['style' => "color:black"], ['id' => "recipeTitle"]) ?></div>
+                    <div class="header" id="recipeTitle"><?= $this->Html->link($recipe->title, ['action' => 'view', $recipe->slug], ['id' => "recipeTitle"]) ?></div>
                     <div class="ui meta">
                         <i class="clock outline icon"></i>
                         <span class="ui date"><?php echo $totalMinutes ?> min</span>
@@ -51,7 +51,7 @@
                     </span>
                     <span>
 
-                        <a href="http://localhost:8765/users/view/<?= $recipe->user_id ?>"> <i class="user icon blue"></i></a>
+                        <a href="http://localhost:8765/users/view/<?= $recipe->user_id ?>"> <i class="user icon teal"></i></a>
                     </span>
                 </div>
             </div>

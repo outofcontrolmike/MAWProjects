@@ -95,7 +95,7 @@
 
                     </div>
                     <div class="fields">
-                        <div class="ui field circular">
+                        <div class="ui field">
                             <label>Biography</label>
                             <div class="bioContainer">
                                 <?php
@@ -105,7 +105,7 @@
                         </div>
                     </div>
 
-
+                    <br>
                 </div>
                 <!-- End -->
                 <?= $this->Form->button(__('Save Changes'), ['class' => 'ui fluid button teal circular medium']) ?>
