@@ -83,25 +83,29 @@ class TagsController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    // public function edit($id = null)
-    // {
-    //     $this->Authorization->skipAuthorization();
+    public function edit($id = null)
 
-    //     $tag = $this->Tags->get($id, [
-    //         'contain' => ['Recipes'],
-    //     ]);
-    //     if ($this->request->is(['patch', 'post', 'put'])) {
-    //         $tag = $this->Tags->patchEntity($tag, $this->request->getData());
-    //         if ($this->Tags->save($tag)) {
-    //             $this->Flash->success(__('The tag has been saved.'));
+    {
 
-    //             return $this->redirect(['action' => 'index']);
-    //         }
-    //         $this->Flash->error(__('The tag could not be saved. Please, try again.'));
-    //     }
-    //     $recipes = $this->Tags->Recipes->find('list', ['limit' => 200])->all();
-    //     $this->set(compact('tag', 'recipes'));
-    // }
+        $this->Authorization->skipAuthorization();
+        $tag = $this->Tags->get($id, [
+            'contain' => ['Recipes'],
+        ]);
+        // $tag = $this->Tags->newEmptyEntity();
+        // $this->Authorization->authorize($tag);
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $tag = $this->Tags->patchEntity($tag, $this->request->getData());
+            if ($this->Tags->save($tag)) {
+                $this->Flash->success(__('The tag has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('The tag could not be saved. Please, try again.'));
+        }
+        $recipes = $this->Tags->Recipes->find('list', ['limit' => 200])->all();
+        $this->set(compact('tag', 'recipes'));
+    }
 
     /**
     //  * Delete method

@@ -9,10 +9,9 @@
 
 
 <div class="ui container segment very padded relaxed raised ">
-    <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Tags') ?></h3>
     <div class="">
-        <table class="ui table">
+        <table class="ui table small celled">
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
@@ -41,6 +40,8 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => ' ui button floated right teal circular', 'style' => "float:right"]) ?>
+
     </div>
     <div class="paginator">
         <ul class="pagination">
