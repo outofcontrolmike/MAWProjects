@@ -1,10 +1,8 @@
-
 /********************************* Other Styles  *************************************/
 
 /* Gloabl Styles */
 * {
-color: black;
-
+    color: black;
 }
 
 #defaultView {
@@ -19,17 +17,28 @@ color: black;
 
 /*Login and Sign up Pages */
 
-#loginFormContainer, #signUpFormContainer {
+#loginFormContainer,
+#signUpFormContainer {
     display: flex;
-    align-items: center;    
+    align-items: center;
     height: 100vh;
     justify-content: center;
-    }
+}
 
-#loginForm, #signUpForm, #editUserForm, #editRecipeForm {
-width:fit-content;
-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-padding:75px;
+#loginForm,
+#signUpForm,
+#editUserForm {
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 75px;
+}
+
+#editRecipeForm {
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 50px;
 }
 
 #loginPageContainer {
@@ -37,21 +46,31 @@ padding:75px;
 }
 
 #loginFormInputsGroup > .input > input {
- border-radius: 25px;
- text-align: center;
+    border-radius: 25px;
+    text-align: center;
 }
 
-#EditFormInputsGroup  > .fields > .field > .input > input, #editFormInputsGroup >.field > .input > input {
+#EditFormInputsGroup > .fields > .field > .input > input,
+#editFormInputsGroup > .field > .input > input {
     border-radius: 25px;
-   }
+}
 
-   .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #directions, .bioContainer >.textarea > #body, .bioContainer >.textarea > #body, .bioContainer >.textarea > #bio  {
-       border-radius: 12px;
-   }
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #directions,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #bio {
+    border-radius: 12px;
+}
 
-   #EditFormInputsGroup  > .fields > .field > .input > input:focus,  .bioContainer >.textarea > #directions:focus, .bioContainer >.textarea > #body:focus, .bioContainer >.textarea > #bio:focus {
-    border-color:#00b5ad
-   }
+#EditFormInputsGroup > .fields > .field > .input > input:focus,
+.bioContainer > .textarea > #directions:focus,
+.bioContainer > .textarea > #body:focus,
+.bioContainer > .textarea > #bio:focus {
+    border-color: #00b5ad;
+}
 
 /* Recipes  */
 #recipeCardsIndex {
@@ -60,40 +79,38 @@ padding:75px;
     justify-content: center;
 }
 #recipeImage > img {
-    height:200px;
+    height: 200px;
     object-fit: fill;
 }
 
 #recipeTitle {
-color: black;
-font-size:20px;
-font-weight: 900;
-text-decoration: none;
-transition: text-decoration;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: text-decoration;
 }
 
 #recipeTitle:hover {
     color: #00b5ad;
-   
 }
 
 /* Recipe View Template styles */
 #recipeCardView {
-width:25%;
-padding:0;
+    width: 25%;
+    padding: 0;
 }
 
 /* *****USERS******** */
 
 #userIndexUserColumn {
-width: 200px;
-max-width:200px;
+    width: 200px;
+    max-width: 200px;
 }
 
-#userActions{
+#userActions {
     text-align: center;
 }
-
 
 /* User View */
 
@@ -101,9 +118,9 @@ max-width:200px;
     text-align: -webkit-center;
 }
 #userSocialMedia {
-    position:absolute;
+    position: absolute;
     bottom: 0px;
-    width:100%;
+    width: 100%;
 }
 
 #mediaLinks {
@@ -113,8 +130,8 @@ max-width:200px;
 
 #mediaLinks > a > i:hover {
     position: relative;
-    bottom:1px;
-    color:#00b5ad;
+    bottom: 1px;
+    color: #00b5ad;
 }
 
 #userViewIngredients {
@@ -123,12 +140,12 @@ max-width:200px;
 
 /************** Pagination ***************/
 ul.pagination li a {
-    color: rgba(0, 0 ,0 , 0.54);
+    color: rgba(0, 0, 0, 0.54);
 }
 
 ul.pagination li.active a {
-    background-color: #DCE47E;
-    color: #FFF;
+    background-color: #dce47e;
+    color: #fff;
     font-weight: bold;
     cursor: default;
 }
@@ -147,7 +164,7 @@ ul.pagination .disabled:hover a {
 
 .paginator p {
     text-align: left;
-    color: rgba(0, 0 ,0 , 0.54);
+    color: rgba(0, 0, 0, 0.54);
 }
 
 /* .recipeCardImage {
