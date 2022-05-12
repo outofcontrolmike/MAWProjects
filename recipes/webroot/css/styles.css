@@ -80,7 +80,7 @@
 }
 #recipeImage > img {
     height: 200px;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 #recipeTitle {

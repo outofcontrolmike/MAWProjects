@@ -76,7 +76,8 @@
                         <div class="bioContainer">
                             <?php
                             echo $this->Form->control('body', [
-                                'label' => ""
+                                'label' => "",
+                                'placeholder' => "write a few lines or a couple paragraphs about your recipe."
                             ]);
                             ?>
                         </div>
