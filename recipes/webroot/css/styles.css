@@ -51,7 +51,8 @@
 }
 
 #EditFormInputsGroup > .fields > .field > .input > input,
-#editFormInputsGroup > .field > .input > input {
+#editFormInputsGroup > .field > .input > input,
+#title {
     border-radius: 25px;
 }
 
@@ -61,14 +62,17 @@
 .bioContainer > .textarea > #directions,
 .bioContainer > .textarea > #body,
 .bioContainer > .textarea > #body,
-.bioContainer > .textarea > #bio {
+.bioContainer > .textarea > #bio,
+#tagsContainer > .input > #recipes-ids {
     border-radius: 12px;
 }
 
 #EditFormInputsGroup > .fields > .field > .input > input:focus,
 .bioContainer > .textarea > #directions:focus,
 .bioContainer > .textarea > #body:focus,
-.bioContainer > .textarea > #bio:focus {
+.bioContainer > .textarea > #bio:focus,
+#title:focus,
+#tagsContainer > .input > #recipes-ids {
     border-color: #00b5ad;
 }
 
@@ -144,9 +148,8 @@ ul.pagination li a {
 }
 
 ul.pagination li.active a {
-    background-color: #dce47e;
-    color: #fff;
-    font-weight: bold;
+    color: teal;
+    font-weight: bolder;
     cursor: default;
 }
 ul.pagination .disabled:hover a {
