@@ -1,6 +1,6 @@
-/********************************* Other Styles  *************************************/
+/********************************* Default Layout StyleSheet *************************************/
 
-/* Gloabl Styles */
+/* ------------------Global Styles------------------ */
 * {
     color: black;
 }
@@ -9,12 +9,50 @@
     background-color: #eef2f3;
 }
 
-/* -------------End Global Styles------------------ */
-
-/* Navigation menu */
+/* ------------------Navigation Menu------------------ */
 
 #navigationMenu {
     font-size: large;
+}
+
+/* ------------------Users Templates------------------ */
+
+/* *****USERS******** */
+
+/* Users Index */
+#userIndexUserColumn {
+    width: 200px;
+    max-width: 200px;
+}
+
+#userActions {
+    text-align: center;
+}
+
+/* User View */
+
+#userViewImageContainer {
+    text-align: -webkit-center;
+}
+#userSocialMedia {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+#mediaLinks {
+    float: right;
+    padding-right: 2.5rem;
+}
+
+#mediaLinks > a > i:hover {
+    position: relative;
+    bottom: 1px;
+    color: #00b5ad;
+}
+
+#userViewIngredients {
+    word-break: break-all;
 }
 
 /*Login and Sign up Pages */
@@ -78,7 +116,8 @@
     border-color: #00b5ad;
 }
 
-/* Recipes  */
+/* ------------------Start Recipes Templates------------------ */
+
 #recipeCardsIndex {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -106,45 +145,8 @@
     width: 25%;
     padding: 0;
 }
-/* ----------------------  End Recipes Styles ---------------------------- */
-/* *****USERS******** */
 
-#userIndexUserColumn {
-    width: 200px;
-    max-width: 200px;
-}
-
-#userActions {
-    text-align: center;
-}
-
-/* User View */
-
-#userViewImageContainer {
-    text-align: -webkit-center;
-}
-#userSocialMedia {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
-
-#mediaLinks {
-    float: right;
-    padding-right: 2.5rem;
-}
-
-#mediaLinks > a > i:hover {
-    position: relative;
-    bottom: 1px;
-    color: #00b5ad;
-}
-
-#userViewIngredients {
-    word-break: break-all;
-}
-
-/************ Tags ****************/
+/* ------------------Start Tags Templates------------------ */
 #tagFormContainer {
     display: flex;
     align-items: center;
@@ -165,9 +167,7 @@
     color: #00b5ad;
 }
 
-/************ End Tags ****************/
-
-/************** Pagination ***************/
+/* ------------------Pagination------------------ */
 ul.pagination li a {
     color: rgba(0, 0, 0, 0.54);
 }
