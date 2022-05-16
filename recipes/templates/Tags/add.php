@@ -34,7 +34,7 @@
                 <div class="ui fields">
                     <div class="ui field">
                         <div id="tagsContainer">
-                            <div class="ui pointing below inverted black basic label large">
+                            <div class="ui pointing below black basic label large">
                                 Hold Control Key and then click each recipe you want to tag.
                             </div>
                             <?= $this->Form->control('recipes._ids', ['label' => "", 'class' => 'recipesTextArea', 'options' => $recipes]); ?>
