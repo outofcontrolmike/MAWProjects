@@ -7,7 +7,7 @@
 ?>
 <?php include "templates\layout\header.php" ?>
 
-<div class="ui raised segment container center" style="width:fit-content">
+<div class="ui raised segment container center" style="height: 90vh;">
     <?php
     $upperCase = ucfirst($tag->title);
     ?>
