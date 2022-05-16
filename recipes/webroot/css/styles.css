@@ -9,6 +9,8 @@
     background-color: #eef2f3;
 }
 
+/* -------------End Global Styles------------------ */
+
 /* Navigation menu */
 
 #navigationMenu {
@@ -104,7 +106,7 @@
     width: 25%;
     padding: 0;
 }
-
+/* ----------------------  End Recipes Styles ---------------------------- */
 /* *****USERS******** */
 
 #userIndexUserColumn {
@@ -142,6 +144,29 @@
     word-break: break-all;
 }
 
+/************ Tags ****************/
+#tagFormContainer {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+#tagForm {
+    text-align: center;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 50px;
+}
+
+#tagTitle,
+#tagViewLink {
+    color: #00b5ad;
+}
+
+/************ End Tags ****************/
+
 /************** Pagination ***************/
 ul.pagination li a {
     color: rgba(0, 0, 0, 0.54);
@@ -170,23 +195,3 @@ ul.pagination .disabled:hover a {
     text-align: left;
     color: rgba(0, 0, 0, 0.54);
 }
-
-/************ Tags ****************/
-#tagFormContainer {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-}
-
-#tagForm {
-    text-align: center;
-    width: fit-content;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    padding: 50px;
-}
-
-/* #defaultView > div > div.paginator > ul > li:nth-child(3) > a */
-
-/************ End Tags ****************/

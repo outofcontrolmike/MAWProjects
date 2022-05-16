@@ -32,7 +32,7 @@ class TagsController extends AppController
     public function index()
     {
         $this->checkAuth();
-        $tags = $this->paginate($this->Tags);
+        $tags = $this->paginate($this->Tags, ['page' => 1, 'limit' => 12]);
         $this->set(compact('tags'));
     }
 
