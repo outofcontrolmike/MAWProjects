@@ -31,7 +31,7 @@
                 <br>
                 <?= $this->Form->control('instagram_link', ['label' => "", 'placeholder' => "Instagram UserName/Handle", 'required' => false]) ?>
                 <br>
-                <?= $this->Form->control('bio', ['class' => "ui ", 'rows' => '3','placeholder' => "Summary about yourself, about 1-2 paragraphs", 'label' => "", 'required' => true]) ?>
+                <?= $this->Form->control('bio', ['class' => "ui ", 'rows' => '3', 'placeholder' => "Summary about yourself, about 1-2 paragraphs", 'label' => "", 'required' => true]) ?>
                 <br>
             </div>
             <?= $this->Form->button(__('Create Account'), ['class' => 'ui button teal fluid circular']) ?>

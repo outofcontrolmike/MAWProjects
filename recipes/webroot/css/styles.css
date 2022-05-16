@@ -26,15 +26,15 @@
 }
 
 #loginForm,
-#signUpForm,
-#editUserForm {
+#signUpForm {
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
         rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     padding: 75px;
 }
 
-#editRecipeForm {
+#editRecipeForm,
+#addTagForm {
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
         rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -170,44 +170,20 @@ ul.pagination .disabled:hover a {
     color: rgba(0, 0, 0, 0.54);
 }
 
-/* .recipeCardImage {
-    padding: 0px;
-} */
-
-/* body {
-    font-size: 18px;
-    background-color: blue;
-} */
-/* 
-#recipeCardsIndex {
+/************ Tags ****************/
+#tagFormContainer {
     display: flex;
-    flex-wrap:wrap;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
 }
 
-#recipeCard {
-    width: 500px;
-    margin-bottom: 2rem;
-}
-
-#recipeSignUp{
-    position: relative;
-    margin-top:12.5%;
-    margin-left:25%;
-    width:fit-content;  
-}
-
-#contactForm, #loginForm {
-    position: relative;
-    top:18rem;
+#tagForm {
+    text-align: center;
     width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 50px;
 }
 
-#recipesIndex {
-    height: 80vh;
-    overflow-y: scroll;
-}
-
-.recipesTextArea {
-    height: fit-content;
-    background-color: linen;
-} */
+/************ End Tags ****************/
