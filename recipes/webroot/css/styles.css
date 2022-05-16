@@ -167,6 +167,10 @@
     color: #00b5ad;
 }
 
+.ribbon {
+    width: 25%;
+}
+
 /* ------------------Pagination------------------ */
 ul.pagination li a {
     color: rgba(0, 0, 0, 0.54);

@@ -7,7 +7,7 @@
 ?>
 <?php include "templates\layout\header.php" ?>
 
-
+<br>
 <div class="ui container segment very padded relaxed raised ">
     <p>
         <span class="ui text big">Recipe Tags</span>

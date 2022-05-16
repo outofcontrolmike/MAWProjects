@@ -94,8 +94,6 @@ $userBio = preg_split('#(\r\n?|\n)+#', $user->bio);
                                     <td><?= h($recipes->servings) ?></td>
                                     <td><?= h($recipes->directions) ?></td>
                                     <td><?= h(date_format($user->created, "m/d/Y")) ?></td>
-
-                                    <!-- Todo: Make it to where these conditionally show up for logged in user -->
                                     <?php if ($creator === $user->id) : ?>
                                         <td class="actions"> <?= $this->Html->link('<i class="ui pencil icon teal  "></i>' . __(''), ['controller' => 'Recipes', 'action' => 'edit', $recipes->slug], ['escape' => false, 'title' => __('Edit')]) ?>
 

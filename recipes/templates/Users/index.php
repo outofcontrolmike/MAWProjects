@@ -35,7 +35,7 @@
                                 </div>
                             </h4>
                         </td>
-                        <td><?= h($user->bio) ?></td>
+                        <td style="height:200px"><?= h($user->bio) ?></td>
                         <td><a target="_blank" href="https://<?= h($user->link) ?>"><?= h($user->link) ?></a></td>
                         <td><a target="_blank" href="https://instagram.com/<?= h($user->instagram_link) ?>"><?= h($user->instagram_link) ?></td>
                         <td><?= h($user->created) ?></td>
