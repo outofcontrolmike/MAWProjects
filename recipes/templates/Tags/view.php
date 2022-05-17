@@ -19,7 +19,7 @@
     <?php
     $upperCase = ucfirst($tag->title);
     ?>
-    <div class="ui top attached label big"> Tag View - <?= $upperCase ?>
+    <div class="ui top attached label big"> Tag View - <span class="ui text teal"><em><?= $upperCase ?></em></span>
         <span>
             <?= $this->Html->link(__('View All Tags'), ['action' => 'index'], ['class' => ' ui button teal circular', 'style' => "float:right"]) ?>
         </span>
@@ -29,7 +29,7 @@
         <br>
         <?php if (!empty($tag->recipes)) : ?>
             <div class="">
-                <span class="ui text big teal">Related Recipes</span>
+                <span class="ui text large teal">Related Recipes</span>
                 <table class="ui table large celled">
                     <thead>
                         <th><?= __('Title') ?></th>
@@ -48,10 +48,10 @@
                             <td width="100px"><?= h($recipes->prep_time) ?></td>
                             <td width="100px"><?= h($recipes->cook_time) ?></td>
                             <td width="100px"><?= h($recipes->servings) ?></td>
-                            <td width="100px" class="actions">
-                                <?= $this->Html->link('<i class="ui pencil icon teal large"></i>' . __(''), ['controller' => 'Recipes', 'action' => 'edit', $recipes->slug], ['escape' => false, 'title' => __('Edit Recipe')]) ?>
+                            <td width="50px" class="actions">
+                                <?= $this->Html->link('<i class="ui pencil icon teal"></i>' . __(''), ['controller' => 'Recipes', 'action' => 'edit', $recipes->slug], ['escape' => false, 'title' => __('Edit Recipe')]) ?>
 
-                                <?= $this->Form->postLink('<i class="ui trash icon red large"></i>', ['controller' => 'Recipes', 'action' => 'delete', $recipes->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $recipes->id), 'escape' => false, 'title' => __('Delete Recipe')]) ?>
+                                <?= $this->Form->postLink('<i class="ui trash icon red"></i>', ['controller' => 'Recipes', 'action' => 'delete', $recipes->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $recipes->id), 'escape' => false, 'title' => __('Delete Recipe')]) ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
