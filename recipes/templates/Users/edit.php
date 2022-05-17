@@ -20,7 +20,7 @@
         </div>
     </aside> -->
     <br>
-    <div class="ui fluid container" id=" editUserContainer">
+    <div class="ui fluid container" id="editUserContainer">
         <div class="ui relaxed raised column container segment stacked" id="editUserForm">
             <div class="ui form large equal width">
                 <p style="text-align:center"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "75", 'height' => '75')); ?></p>
@@ -108,7 +108,9 @@
                     <br>
                 </div>
                 <!-- End -->
-                <?= $this->Form->button(__('Save Changes'), ['class' => 'ui fluid button teal circular medium']) ?>
+                <p style="text-align:right">
+                    <?= $this->Form->button(__('Update Profile'), ['class' => 'ui button teal circular medium']) ?>
+                </p>
                 <?= $this->Form->end() ?>
             </div>
         </div>

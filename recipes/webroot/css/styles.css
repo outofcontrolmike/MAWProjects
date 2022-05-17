@@ -81,7 +81,8 @@
     padding: 50px;
 }
 
-#loginPageContainer {
+#loginPageContainer,
+#editUserContainer {
     height: 100vh;
 }
 
