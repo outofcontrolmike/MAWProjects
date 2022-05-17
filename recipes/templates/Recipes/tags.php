@@ -1,21 +1,106 @@
 <!-- In templates/Recipes/tags.php -->
 <?php include "templates\layout\header.php" ?>
-<div class="ui container segment very padded relaxed raised center aligned">
-    <h1>
-        Recipes tagged with
-        <?= $this->Text->toList(h($tags), 'or') ?>
-    </h1>
+<div class="ui container fluid very padded relaxed">
+    <br>
+    <!-- <div class="ui container fluid">
+        <div class="ui action input" id="recipeIndexSearch">
+            <input type="test" name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
+            <div class="ui button" onclick="submitKeyword()">Go</div>
+        </div>
+    </div> -->
 
-    <section>
-        <?php foreach ($recipes as $recipe) : ?>
-            <article>
-                <!-- Use the HtmlHelper to create a link -->
-                <h4><?= $this->Html->link(
-                        $recipe->title,
-                        ['controller' => 'Recipes', 'action' => 'view', $recipe->slug]
-                    ) ?></h4>
-                <span><?= h($recipe->created) ?></span>
-            </article>
-        <?php endforeach; ?>
-    </section>
+
+
+    <!-- Here is where we iterate through our $Recipes query object, printing out recipe info -->
+    <?php if (!empty($recipes)) : ?>
+        <div class="ui positive message container teal" id="tagMessage">
+            <i onclick=" removeMessage()" class="close icon"></i>
+            <div class="header" id="tagHeader">
+            </div>
+        </div>
+
+        <div class="ui cards container large three" id="recipeCardsIndex">
+            <!-- <?= $this->Html->link('Add Recipe', ['action' => 'add'], ['class' => 'button']) ?> -->
+            <?php
+            foreach ($recipes as $recipe) :
+                $totalMinutes = 0;
+
+                $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
+
+
+                //get cook time
+                $cookMinutes = intval($recipe->cook_time);
+                $prepMinutes = intval($recipe->prep_time);
+                $totalMinutes = $cookMinutes + $prepMinutes;
+
+            ?>
+                <div class="ui card link segment very padded raised" id="recipeCard">
+                    <!-- img -->
+                    <div class=" image" id="recipeImage">
+                        <?php if ($recipe->image != null) : ?>
+                            <?= $this->Html->image($recipe->image, ['class' => "ui image"]) ?>
+                        <?php else : ?>
+                            <?= $this->Html->image('comingSoon.jpg', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?></a>
+                        <?php endif ?>
+                    </div>
+                    <div class="content">
+                        <div class="header" id="recipeTitle"><?= $this->Html->link($recipe->title, ['action' => 'view', $recipe->slug], ['id' => "recipeTitle"]) ?></div>
+                        <div class="ui meta">
+                            <i class="clock outline icon"></i>
+                            <span class="ui date"><?php echo $totalMinutes ?> min</span>
+                        </div>
+                        <div class="description" id="recipeBody">
+                            <?php foreach ($recipeBody as $bodyPart) {
+                                $uppercaseFirst = ucfirst($bodyPart);
+                                echo "<p>$bodyPart</p>";
+                            } ?>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            <?= date_format($recipe->created, "m/d/Y") ?>
+                        </span>
+                        <span>
+
+                            <a href="http://localhost:8765/users/view/<?= $recipe->user_id ?>"> <i class="user icon teal"></i></a>
+                        </span>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <div class="ui negative message" id="tagMessage">
+                <i onclick=" removeMessage()" class="close icon"></i>
+                <div class="header">
+                    No Recipes were found for the keyword you selected.
+                </div>
+                <p>Try going to your recipes and tagging them with the above keyword.</p>
+            </div>
+        <?php endif ?>
+        </div>
 </div>
+
+<script>
+    window.onload(getTagName());
+    //Will search for whatever user entered
+    function submitKeyword() {
+        let keyword = document.getElementById('recipeKeyword');
+        if (keyword.value != "") {
+            window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
+        }
+    }
+
+
+    function removeMessage() {
+        console.log("test");
+        let tagMessage = document.getElementById('tagMessage');
+        tagMessage.remove();
+    }
+
+    function getTagName() {
+        let slug = window.location.href.substring(
+            window.location.href.lastIndexOf("/") + 1
+        );
+
+        document.getElementById('tagHeader').innerHTML = "The following items were fetched for <span class='ui text large'>" + slug + '</span>';
+    }
+</script>

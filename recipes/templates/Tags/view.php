@@ -10,7 +10,7 @@
     function removeMessage() {
         console.log("test");
         let tagMessage = document.getElementById('tagMessage');
-        tagMessage.style.visibility = "hidden";
+        tagMessage.remove();
     }
 </script>
 <?php include "templates\layout\header.php" ?>

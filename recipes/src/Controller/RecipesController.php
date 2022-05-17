@@ -146,7 +146,7 @@ class RecipesController extends AppController
         // Pass variables into the view template context.
         $this->set([
             'recipes' => $recipes,
-            'tags' => $tags
+            'tags' => $tags,
         ]);
     }
 }//End file
