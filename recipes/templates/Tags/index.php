@@ -9,9 +9,11 @@
 
 <br>
 <div class="ui container segment very padded relaxed raised ">
-    <p>
-        <span class="ui text big">Recipe Tags</span>
-    </p>
+    <div class="ui top attached label big">
+        <span class="ui text large">
+            Recipe Tags
+        </span>
+    </div>
 
     <div>
         <table class="ui table large celled center aligned">

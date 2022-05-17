@@ -1,9 +1,6 @@
 /********************************* Default Layout StyleSheet *************************************/
 
 /* ------------------Global Styles------------------ */
-* {
-    color: black;
-}
 
 #defaultView {
     background-color: #eef2f3;

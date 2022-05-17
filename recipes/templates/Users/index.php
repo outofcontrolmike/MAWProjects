@@ -8,7 +8,11 @@
 <?php include "templates\layout\header.php" ?>
 <br>
 <div class="ui container segment very padded relaxed raised">
-    <h1><?= __('Users') ?></h1>
+    <div class="ui top attached label big">
+        <span class="ui text large">
+            Users
+        </span>
+    </div>
     <div class="">
         <table class=" ui collapsing celled table large">
             <thead>
