@@ -19,7 +19,13 @@
     <?php
     $upperCase = ucfirst($tag->title);
     ?>
-    <div class="ui top attached label big"> Tag View - <span class="ui text teal"><em><?= $upperCase ?></em></span>
+    <div class="ui top attached label big"> Tag View - <span class="ui text large" data-inverted="" data-tooltip="View Recipes tagged with <?= $upperCase ?>" data-position="right center">
+
+            <?= $this->Html->link(
+                $upperCase,
+                ['controller' => 'Recipes/Tagged', 'action' =>  $tag->title],
+                ["id" => "tagTitle"]
+            ) ?></span>
         <span>
             <?= $this->Html->link(__('View All Tags'), ['action' => 'index'], ['class' => ' ui button teal circular', 'style' => "float:right"]) ?>
         </span>
