@@ -53,9 +53,9 @@ $userBio = preg_split('#(\r\n?|\n)+#', $user->bio);
                 <div class="container" id="userSocialMedia">
                     <span class="ui text grey large"><?php echo date_format($user->created, "m/d/Y") ?> </span>
                     <span id="mediaLinks">
-                        <a href="https://<?php echo $user->link ?>" target="_blank"><i class="user tie icon big"></i></a>
-                        <a href="https://instagram.com/<?php echo $user->instagram_link ?>" target="_blank"><i class="instagram icon big"></i></a>
-                        <a href="mailto:<?php echo $user->email ?>" target="_blank"><i class="envelope icon big"></i></a>
+                        <a href="https://<?php echo $user->link ?>" target="_blank"><i class="globe icon big black"></i></a>
+                        <a href="https://instagram.com/<?php echo $user->instagram_link ?>" target="_blank"><i class="instagram icon big black"></i></a>
+                        <a href="mailto:<?php echo $user->email ?>" target="_blank"><i class="envelope icon big black"></i></a>
                     </span>
                 </div>
             </div>
