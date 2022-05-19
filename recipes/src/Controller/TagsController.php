@@ -65,12 +65,13 @@ class TagsController extends AppController
         $tag = $this->Tags->newEmptyEntity();
         if ($this->request->is('post')) {
             $tag = $this->Tags->patchEntity($tag, $this->request->getData());
+            
             if ($this->Tags->save($tag)) {
                 $this->Flash->success(__('The tag has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The tag could not be saved. Please, try again.'));
+            $this->Flash->error(__($tag->name . "That tag Already exists, please try another one or go to your recipe and type in the tag."));
         }
         $recipes = $this->Tags->Recipes->find('list', ['limit' => 200])->all();
         $this->set(compact('tag', 'recipes'));
