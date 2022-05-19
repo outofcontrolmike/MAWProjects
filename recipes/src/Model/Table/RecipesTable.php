@@ -74,7 +74,7 @@ class RecipesTable extends Table
         $columns = [
             'Recipes.id', 'Recipes.user_id', 'Recipes.title',
             'Recipes.body', 'Recipes.created',
-            'Recipes.slug',
+            'Recipes.slug', 'Recipes.image', 'Recipes.cook_time', 'Recipes.prep_time',
         ];
 
         $query = $query

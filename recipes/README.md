@@ -1,3 +1,9 @@
+#If you want to run this locally
+
+Make sure you have Php and composer installed first.  Also make sure to have xamp or some type of server side software to run a database.  Then clone this repository and run cd/recipes in your favorite code editor.  Run composer install to update packages locally. Also you'll have to update config/app_local.php and config/app.php to hook up to your database.  There are tutorials to help you with that all over the internet.   After all that's done, You're welcome to test the site out by creating an account and adding recipes.  You could also use the sample database dump in the same directory as this readMe File.  
+
+Good Luck!
+
 # CakePHP Application Skeleton
 
 ![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=master)

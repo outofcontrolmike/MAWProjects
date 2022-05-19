@@ -1,112 +1,22 @@
-/********************************* Other Styles  *************************************/
+/********************************* Default Layout StyleSheet *************************************/
 
-/* Gloabl Styles */
-* {
-    color: black;
-}
+/* ------------------Global Styles------------------ */
 
 #defaultView {
     background-color: #eef2f3;
 }
 
-/* Navigation menu */
+/* ------------------Navigation Menu------------------ */
 
 #navigationMenu {
     font-size: large;
 }
 
-/*Login and Sign up Pages */
-
-#loginFormContainer,
-#signUpFormContainer {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-}
-
-#loginForm,
-#signUpForm,
-#editUserForm {
-    width: fit-content;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    padding: 75px;
-}
-
-#editRecipeForm {
-    width: fit-content;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    padding: 50px;
-}
-
-#loginPageContainer {
-    height: 100vh;
-}
-
-#loginFormInputsGroup > .input > input {
-    border-radius: 25px;
-    text-align: center;
-}
-
-#EditFormInputsGroup > .fields > .field > .input > input,
-#editFormInputsGroup > .field > .input > input,
-#title {
-    border-radius: 25px;
-}
-
-.bioContainer > .textarea > #body,
-.bioContainer > .textarea > #body,
-.bioContainer > .textarea > #body,
-.bioContainer > .textarea > #directions,
-.bioContainer > .textarea > #body,
-.bioContainer > .textarea > #body,
-.bioContainer > .textarea > #bio,
-#tagsContainer > .input > #recipes-ids {
-    border-radius: 12px;
-}
-
-#EditFormInputsGroup > .fields > .field > .input > input:focus,
-.bioContainer > .textarea > #directions:focus,
-.bioContainer > .textarea > #body:focus,
-.bioContainer > .textarea > #bio:focus,
-#title:focus,
-#tagsContainer > .input > #recipes-ids {
-    border-color: #00b5ad;
-}
-
-/* Recipes  */
-#recipeCardsIndex {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: center;
-}
-#recipeImage > img {
-    height: 200px;
-    object-fit: cover;
-}
-
-#recipeTitle {
-    color: black;
-    font-size: 20px;
-    font-weight: 900;
-    text-decoration: none;
-    transition: text-decoration;
-}
-
-#recipeTitle:hover {
-    color: #00b5ad;
-}
-
-/* Recipe View Template styles */
-#recipeCardView {
-    width: 25%;
-    padding: 0;
-}
+/* ------------------Users Templates------------------ */
 
 /* *****USERS******** */
 
+/* Users Index */
 #userIndexUserColumn {
     width: 200px;
     max-width: 200px;
@@ -142,7 +52,124 @@
     word-break: break-all;
 }
 
-/************** Pagination ***************/
+/*Login and Sign up Pages */
+
+#loginFormContainer,
+#signUpFormContainer {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+#loginForm,
+#signUpForm {
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 75px;
+}
+
+#editRecipeForm,
+#addTagForm {
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 50px;
+}
+
+#loginPageContainer,
+#editUserContainer {
+    height: 100vh;
+}
+
+#loginFormInputsGroup > .input > input {
+    border-radius: 25px;
+    text-align: center;
+}
+
+#EditFormInputsGroup > .fields > .field > .input > input,
+#editFormInputsGroup > .field > .input > input,
+#title {
+    border-radius: 25px;
+}
+
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #directions,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #body,
+.bioContainer > .textarea > #bio,
+#tagsContainer > .input > #recipes-ids {
+    border-radius: 12px;
+}
+
+#EditFormInputsGroup > .fields > .field > .input > input:focus,
+.bioContainer > .textarea > #directions:focus,
+.bioContainer > .textarea > #body:focus,
+.bioContainer > .textarea > #bio:focus,
+#title:focus,
+#tagsContainer > .input > #recipes-ids {
+    border-color: #00b5ad;
+}
+
+/* ------------------Start Recipes Templates------------------ */
+
+#recipeCardsIndex {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+#recipeImage > img {
+    height: 200px;
+    object-fit: cover;
+}
+
+#recipeTitle {
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: text-decoration;
+}
+
+#recipeTitle:hover {
+    color: #00b5ad;
+}
+
+/* Recipe View Template styles */
+#recipeCardView {
+    width: 25%;
+    padding: 0;
+}
+
+/* ------------------Start Tags Templates------------------ */
+#tagFormContainer {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+#tagForm {
+    text-align: center;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 50px;
+}
+
+#tagTitle,
+#tagViewLink {
+    color: #00b5ad;
+}
+
+.ribbon {
+    width: 25%;
+}
+
+/* ------------------Pagination------------------ */
 ul.pagination li a {
     color: rgba(0, 0, 0, 0.54);
 }
@@ -163,51 +190,10 @@ ul.pagination .disabled:hover a {
 .paginator ul.pagination li {
     float: none;
     display: inline-block;
+    padding: 4px;
 }
 
 .paginator p {
     text-align: left;
     color: rgba(0, 0, 0, 0.54);
 }
-
-/* .recipeCardImage {
-    padding: 0px;
-} */
-
-/* body {
-    font-size: 18px;
-    background-color: blue;
-} */
-/* 
-#recipeCardsIndex {
-    display: flex;
-    flex-wrap:wrap;
-}
-
-#recipeCard {
-    width: 500px;
-    margin-bottom: 2rem;
-}
-
-#recipeSignUp{
-    position: relative;
-    margin-top:12.5%;
-    margin-left:25%;
-    width:fit-content;  
-}
-
-#contactForm, #loginForm {
-    position: relative;
-    top:18rem;
-    width: fit-content;
-}
-
-#recipesIndex {
-    height: 80vh;
-    overflow-y: scroll;
-}
-
-.recipesTextArea {
-    height: fit-content;
-    background-color: linen;
-} */

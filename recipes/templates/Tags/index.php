@@ -7,11 +7,16 @@
 ?>
 <?php include "templates\layout\header.php" ?>
 
-
+<br>
 <div class="ui container segment very padded relaxed raised ">
-    <h3><?= __('Tags') ?></h3>
-    <div class="">
-        <table class="ui table small celled">
+    <div class="ui top attached label big">
+        <span class="ui text large">
+            Recipe Tags
+        </span>
+    </div>
+
+    <div>
+        <table class="ui table large celled center aligned">
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
@@ -23,16 +28,24 @@
             </thead>
             <tbody>
                 <?php foreach ($tags as $tag) : ?>
+
                     <tr>
                         <td><?= $this->Number->format($tag->id) ?></td>
-                        <td><?= $this->Html->link(
-                                $tag->title,
-                                ['controller' => 'Recipes/Tagged', 'action' =>  $tag->title]
+                        <?php
+                        $formatTitle = ucFirst($tag->title);
+                        ?>
+                        <td data-inverted="" data-tooltip="View Recipes tagged with <?= $formatTitle ?>" data-position="top center">
+
+                            <?= $this->Html->link(
+
+                                $formatTitle,
+                                ['controller' => 'Recipes/Tagged', 'action' =>  $tag->title],
+                                ["id" => "tagTitle"]
                             ) ?></td>
                         <td><?= h($tag->created) ?></td>
                         <td><?= h($tag->modified) ?></td>
-                        <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $tag->id]) ?>
+                        <td width="10px" id="tagActions">
+                            <?= $this->Html->link('<i class="ui eye icon teal large"></i>' . __(''), ['action' => 'view', $tag->id], ['escape' => false, 'title' => __('View Tag')]) ?>
                             <!-- <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tag->id]) ?> -->
                             <!-- <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?> -->
                         </td>
@@ -40,7 +53,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => ' ui button floated right teal circular', 'style' => "float:right"]) ?>
 
     </div>
     <div class="paginator">
@@ -51,7 +63,11 @@
             <?= $this->Paginator->next(__('next') . ' >') ?>
             <?= $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?>
+            <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => ' ui button floated right teal circular', 'style' => "float:right"]) ?>
+
+        </p>
+
     </div>
 </div>
 <br>

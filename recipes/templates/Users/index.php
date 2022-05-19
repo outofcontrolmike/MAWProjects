@@ -8,9 +8,13 @@
 <?php include "templates\layout\header.php" ?>
 <br>
 <div class="ui container segment very padded relaxed raised">
-    <h1><?= __('Users') ?></h1>
+    <div class="ui top attached label big">
+        <span class="ui text large">
+            Users
+        </span>
+    </div>
     <div class="">
-        <table class=" ui collapsing celled table">
+        <table class=" ui collapsing celled table large">
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('user_name', ['label' => "User"]) ?></th>
@@ -35,12 +39,12 @@
                                 </div>
                             </h4>
                         </td>
-                        <td><?= h($user->bio) ?></td>
+                        <td style="height:200px"><?= h($user->bio) ?></td>
                         <td><a target="_blank" href="https://<?= h($user->link) ?>"><?= h($user->link) ?></a></td>
                         <td><a target="_blank" href="https://instagram.com/<?= h($user->instagram_link) ?>"><?= h($user->instagram_link) ?></td>
                         <td><?= h($user->created) ?></td>
                         <td class="actions userActions" id="userActions">
-                            <?= $this->Html->link('<i class="ui eye icon teal large"></i>' . __(''), ['action' => 'view', $user->id], ['escape' => false, 'title' => __('View')]) ?>
+                            <?= $this->Html->link('<i class="ui eye icon teal large"></i>' . __(''), ['action' => 'view', $user->id], ['escape' => false, 'title' => __('View ' . $user->user_name . "'s profile")]) ?>
                             <!-- <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> -->
                         </td>
