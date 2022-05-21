@@ -74,6 +74,7 @@
                         <div class="bioContainer">
                             <?php
                             echo $this->Form->control('body', [
+                                'type' => "textarea",
                                 'label' => "",
                                 'placeholder' => "Write a few lines or a couple paragraphs about your recipe."
                             ]);
@@ -85,6 +86,7 @@
                         <div class="bioContainer">
                             <?php
                             echo $this->Form->control('directions', [
+                                'type' => "textarea",
                                 'label' => "",
                                 'placeholder' => "Enter these one by one and new lines"
                             ]);
@@ -97,7 +99,7 @@
                     <div class="field">
                         <label>Search Tags</label>
                         <?php
-                        echo $this->Form->control('tag_string', ['label' => "", 'placeholder' => "Enter tags with commas between: eg: (peanutbutter,chocolate,strawberries,yum)"], ['type' => 'text']);
+                        echo $this->Form->control('tag_string', ['label' => "", 'spellcheck' => "false",'placeholder' => "Enter tags with commas between: eg: (peanutbutter,chocolate,strawberries,yum)"], ['type' => 'text']);
                         ?>
                     </div>
                 </div>

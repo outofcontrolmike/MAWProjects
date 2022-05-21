@@ -43,9 +43,9 @@
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
                 <div class="ui text">
-                    <span class=" ui text big">Recipe Keyword Search</span>
+                    <span class=" ui text big">Recipe Search</span>
                     <h2>Try searching our user created recipes right now</h2>
-                    <div class="ui action input">
+                    <div class="ui action input" width="50%">
                         <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="...Type a keyword into here">
                         <div class="ui button" onclick="submitKeyword()">Go</div>
                     </div>
@@ -54,103 +54,90 @@
             <br>
             <!-- End first div -->
             <!-- Start 2nd section -->
-            <div class="ui two column container stackable grid" id="homeContent2" style="margin-bottom: 2rem;">
-                <div class="ui column">
-                    <span class="ui text big">A little bit about US</span>
-                    <p>Take a chance to check out neat recipes that our users have created.</p>
-                </div>
-                <div class="ui column center aligned">
-                    <div>
-                        <?= $this->Html->link(__('View Recipes'), ['controller' => "Recipes", 'action' => 'index'], ['class' => 'ui button blue big centered']) ?>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui container fluid">
-                <hr>
-                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+            <div class="row">
+                <div class="ui two column container stackable grid" id="homeContent2">
                     <div class="ui column">
-                        <span class="ui text big">Unique User Profile Information</span>
-                        <ul>
-                            <li>Can create recipes</li>
-                            <li>Can store recipes</li>
-                            <li>Create tags</li>
-                            <li>Unique Profile customization</li>
-                        </ul>
+                        <span class="ui text big">Check out user created Recipes!</span>
+                        <br></br>
+                        <p>Take a chance to check out neat recipes that our users have created.</p>
                     </div>
                     <div class="ui column center aligned">
-                        <div>
-                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipes_collection.PNG', array('alt' => 'recipes_Showcase', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
+                        </div>
+                        <div style="margin-top:2rem">
+                            <?= $this->Html->link(__('View Recipes'), ['controller' => "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular']) ?>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="ui container fluid">
+            <div class="ui divider">
+
+</div>
+                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+                    <div class="ui column center aligned">
+                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('user_profile.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
+                        </div>
+                        <div style="margin-top: 2rem">
+                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big teal circular']) ?>
+                        </div>
+                    </div>
+                    <div class="ui column center aligned">
+                        <span class="ui text big">Unique User Profile</span>
+                        <ul>
+                            <li>View Recipes upi created</li>
+                            <li>Edit Your own recipes</li>
+                            <li>Sell yourself with you want</li>
+                            <li>Not overly complicated</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!-- End second section -->
             <div class="ui container fluid">
-                <hr>
+
+                <div class="ui divider">
+
+                </div>
                 <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
                     <div class="ui column">
-                        <span class="ui text big">Create Recipes Information</span>
+                        <span class="ui text big">Create Recipes and Manage Them</span>
                         <ul>
-                            <li>Can create recipes</li>
-                            <li>Can store recipes</li>
-                            <li>Create tags</li>
-                            <li>Unique Profile customization</li>
+                            <li>Add Recipes</li>
+                            <li>Choose tags if you want</li>
+                            <li>Upload photos</li>
+                            <li></li>
                         </ul>
                     </div>
                     <div class="ui column center aligned">
-                        <div>
-                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('create_Recipe.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- End third section -->
+
             <div class="ui container fluid">
-                <hr>
+                <div class="ui divider">
+
+                </div>
                 <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
-                    <div class="ui column">
-                        <span class="ui text big">Manage Recipes</span>
-                        <ul>
-                            <li>Can create recipes</li>
-                            <li>Can store recipes</li>
-                            <li>Create tags</li>
-                            <li>Unique Profile customization</li>
-                        </ul>
-                    </div>
-                    <div class="ui column center aligned">
-                        <div>
-                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
+                <div class="ui column center aligned">
+                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipeTags.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
+                    </div>
+                    <div class="ui column">
+                        <span class="ui text big">Utilize Tags</span>
+                        <ul>
+                            <li>Create Tags for recipes</li>
+                            <li>Use already created tags</li>
+                            <li>Easily view already created tags</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- End fourth section -->
-
-            <!-- End fifth section -->
-            <div class="ui container fluid">
-                <hr>
-                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
-                    <div class="ui column">
-                        <span class="ui text big">Manage Tags</span>
-                        <ul>
-                            <li>Can create recipes</li>
-                            <li>Can store recipes</li>
-                            <li>Create tags</li>
-                            <li>Unique Profile customization</li>
-                        </ul>
-                    </div>
-                    <div class="ui column center aligned">
-                        <div>
-                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big blue']) ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            <!-- End Fourth-->
             <!-- End sections -->
         </div>
     </div>
