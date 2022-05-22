@@ -42,12 +42,10 @@
     <div class="ui vertical masthead center aligned fluid container" id="landingPage">
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
-                <div class="ui text">
-                    <span class=" ui text big">Recipe Search</span>
-                    <h2>Try searching our user created recipes right now</h2>
-                    <div class="ui action input" width="50%">
-                        <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="...Type a keyword into here">
-                        <div class="ui button" onclick="submitKeyword()">Go</div>
+                <div class="ui text">                    
+                    <div class="ui action input medium circular" style="width:600px;">
+                        <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
+                        <div class="ui button teal" onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
                     </div>
                 </div>
             </div>
@@ -86,7 +84,7 @@
                     <div class="ui column center aligned">
                         <span class="ui text big">Unique User Profile</span>
                         <ul>
-                            <li>View Recipes upi created</li>
+                            <li>View Recipes you created</li>
                             <li>Edit Your own recipes</li>
                             <li>Sell yourself with you want</li>
                             <li>Not overly complicated</li>
