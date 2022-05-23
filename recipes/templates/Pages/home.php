@@ -42,8 +42,8 @@
     <div class="ui vertical masthead center aligned fluid container" id="landingPage">
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
-                <div class="ui text">                    
-                    <div class="ui action input medium circular" style="width:600px;">
+                <div class="ui text">
+                    <div class="ui action input medium" style="width:600px;">
                         <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
                         <div class="ui button teal" onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
                     </div>
@@ -52,33 +52,30 @@
             <br>
             <!-- End first div -->
             <!-- Start 2nd section -->
-            <div class="row">
-                <div class="ui two column container stackable grid" id="homeContent2">
-                    <div class="ui column">
-                        <span class="ui text big">Check out user created Recipes!</span>
-                        <br></br>
-                        <p>Take a chance to check out neat recipes that our users have created.</p>
+            <div class="ui two column container stackable grid" id="homeContent2">
+                <div class="ui column center aligned">
+                    <span class="ui text big">Check out user created Recipes!</span>
+
+                </div>
+                <div class="ui column center aligned">
+                    <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipes_collection.PNG', array('alt' => 'recipes_Showcase', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                     </div>
-                    <div class="ui column center aligned">
-                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipes_collection.PNG', array('alt' => 'recipes_Showcase', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
-                        </div>
-                        <div style="margin-top:2rem">
-                            <?= $this->Html->link(__('View Recipes'), ['controller' => "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular']) ?>
-                        </div>
+                    <div style="margin-top:2rem">
+                        <?= $this->Html->link(__('View Recipes'), ['controller' => "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular', 'id' => "landingPageButton"]) ?>
                     </div>
                 </div>
             </div>
 
             <div class="ui container fluid">
-            <div class="ui divider">
+                <div class="ui divider">
 
-</div>
+                </div>
                 <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
                     <div class="ui column center aligned">
                         <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('user_profile.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                         <div style="margin-top: 2rem">
-                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big teal circular']) ?>
+                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big teal circular', 'id' => "landingPageButton"]) ?>
                         </div>
                     </div>
                     <div class="ui column center aligned">
@@ -121,7 +118,7 @@
 
                 </div>
                 <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
-                <div class="ui column center aligned">
+                    <div class="ui column center aligned">
                         <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipeTags.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                     </div>

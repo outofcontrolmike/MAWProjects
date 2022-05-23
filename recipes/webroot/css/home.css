@@ -1,20 +1,32 @@
 #landingPage {
-    font-size:20px;
+    font-size: 20px;
 }
 #homeRecipeSearch {
     padding: 100px;
-    background: #C9D6FF;
+    background: #c9d6ff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#homeContent2, #homeContent3 
-{
-    padding:50px;
+#homeContent2,
+#homeContent3 {
+    padding: 25px;
 }
 #navigationMenu {
     font-size: large;
+}
+
+#landingPageButton:hover,
+#landingPageButton:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(yellow, 0);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+    }
 }
