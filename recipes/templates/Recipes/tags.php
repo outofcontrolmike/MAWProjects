@@ -87,7 +87,7 @@
         let recipesLength = recipes.children.length;
 
         if (recipesLength > 0) {
-            document.getElementById('tagHeader').innerHTML = "Related Recipes fetched for the keyword -  <span> " + slug + "</span>";
+            document.getElementById('tagHeader').innerHTML = recipesLength + " Related Recipes fetched for the keyword -  <span> " + slug + "</span>";
         } else {
             document.getElementById("tagMessage").classList = "ui positive message container red";
             document.getElementById('tagHeader').innerHTML = "No Recipes have been tagged with the keyword -  " + slug + "</span>";
