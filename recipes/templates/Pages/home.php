@@ -35,6 +35,11 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body class="ui">
@@ -42,16 +47,52 @@
     <div class="ui vertical masthead center aligned fluid container" id="landingPage">
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
-                <div class="ui action input medium" style="width:600px;">
-                    <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
-                    <div class="ui button teal" onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
-                </div>
+                <h1 class="ui header center aligned icon inverted">
+                    <i class="circular utensils icon black "></i>
+
+                    <p><span style="font-weight:100;" class=" ui text large">
+                            Community Based Recipes
+                        </span></p>
+                    <p>
+                        <span id="homePageIconsList">
+                            <!-- Veggies -->
+                            <i class="large seedling olive icon"></i>
+                            <i class="large leaf olive icon"></i>
+                            <i class="large carrot icon orange inverted"></i>
+                            <i class="large pepper hot red icon"></i>
+
+                            <!-- Fruits -->
+                            <i class="large fruit-apple icon red "></i>
+                            <i class="large lemon yellow icon inverted"></i>
+
+                            <!-- Meats -->
+                            <i class="large egg icon white"></i>
+                            <i class="large fish blue icon"></i>
+                            <i class="large bacon icon pink inverted"></i>
+                            <i class="large hotdog red icon"></i>
+                            <i class="large drumstick bite icon orange inverted"></i>
+
+                            <!-- Desert -->
+                            <i class="large cookie icon white"></i>
+                            <i class="large ice cream pink icon inverted"></i>
+
+                            <!-- Prepared stuff -->
+                            <i class="large bread slice icon brown"></i>
+                            <i class="large cheese icon yellow inverted"></i>
+                            <i class="large wine bottle icon violet"></i>
+                            <i class="large pizza slice icon yellow inverted"></i>
+
+                        </span>
+                    </p>
+                </h1>
+                <!-- <div class="ui action input huge inverted transparent">
+                    <input type=" test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
+                    <div class="ui button " onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
+                </div> -->
             </div>
-            <!-- End first div -->
-            <!-- Start 2nd section -->
             <div class="ui two column stackable grid very padded relaxed">
-                <div class="ui column container vertical center" style="align-self: center;">
-                    <p><span class="ui text big">View or Create Recipes Quickly</span>
+                <div class="ui column container " id="landingPageColumn">
+                    <p><span class=" ui header big">View or Create Recipes Quickly</span>
                     </p>
                     <p>
                         Every recipe shown on this site is created by people like you. You don’t have to have an account to view any of these recipes.
@@ -77,17 +118,15 @@
                         <div class="ui image big" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('user_profile.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                     </div>
-                    <div class="ui column center aligned" style="align-self: center;">
-                        <p><span class="ui text big">Create a User Account</span></p>
+                    <div class="ui column center aligned" id="landingPageColumn"">
+                        <p><span class=" ui header big">Create a User Account</span></p>
                         <p>
                             By creating an account you can list and edit recipes along with promoting yourself.hink of this as a mini portfolio for your favorite recipes. You can also view other's users profile as well.
                         </p>
                         <p>
                             It's also possible to link to your webpage/portfolio, instagram account and your email address for others to reach out to you.
                         </p>
-                        <p>
 
-                        </p>
                         <div style="margin-top: 2rem">
                             <?= $this->Html->link(__('Create Account'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big teal circular', 'id' => "landingPageButton"]) ?>
                         </div>
@@ -99,8 +138,8 @@
                 <div class="ui divider">
                 </div>
                 <div class="ui two column stackable grid very padded relaxed">
-                    <div class="ui column style=" style="align-self: center;">
-                        <p><span class="ui text big">Customize Your Recipes</span></p>
+                    <div class="ui column style=" id="landingPageColumn"">
+                        <p><span class=" ui header big">Customize Your Recipes</span></p>
                         <p>Use our Simple Platform to list your recipes as well as customize them.</p>
                         <p>
                             Our system also allows you to edit your recipes too, incase you need to update them.
@@ -119,11 +158,11 @@
                 </div>
                 <div class="ui two column stackable grid very padded relaxed">
                     <div class="ui column center aligned">
-                        <div class="ui image big" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipeTags.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
+                        <div class="ui image big" style="background-color: white" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipeTags.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                     </div>
-                    <div class="ui column" style="align-self:center;">
-                        <p><span class="ui text big">Utilize Recipe Tags</span></p>
+                    <div class="ui column" id="landingPageColumn">
+                        <p><span class="ui header big">Utilize Recipe Tags</span></p>
                         <p>
                             If you're wondering how our recipe search works, it's based off our Recipe Tagging Feature.
                         </p>
@@ -131,7 +170,7 @@
                             Anytime a user creates a recipe, they have options to list keywords related to their recipe. The benefit to this is to have your recipes more likely to be seen by others.
                         </p>
                         <p>
-                            If you're worried a tag already has been created, there's no need to worry. Our system will not duplicate the tag.
+                            If you're worried a tag already has been created, there's no need to sweat. Our system will not duplicate the tag.
                         </p>
                     </div>
                 </div>
