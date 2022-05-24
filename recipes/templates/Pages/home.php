@@ -99,9 +99,11 @@
                                 Every recipe shown on this site is created by people like you. You don’t have to have an account to view any of these recipes.
                             </span>
                         </p>
-                        <p>
-                            If you want to be a creator, sign up for a free <a style="color:#00b5ad" href="https://localhost:8765/users/add">account</a> today.
+                        <p>  If you want to be a creator, sign up for a free
+                        <?= $this->Html->link(__(' Account'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui text teal', 'id' => "addUserLink"]) ?>
+                        Today.
                         </p>
+                     
                         <div style="margin-top:2rem">
                             <?= $this->Html->link(__('View All Recipes'), ['controller' =>  "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular', 'id' => "landingPageButton"]) ?>
                         </div>
@@ -192,5 +194,20 @@
         }
     }
 </script>
+<!-- 
+<script>
+    $('.icon')
+    .transition({
+    animation  : 'jiggle',
+    duration   : '.25s',
+    onComplete : function() {
+      return;
+    }
+  })
+
+;
+
+;
+</script> -->
 
 </html>

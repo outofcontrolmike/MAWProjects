@@ -31,7 +31,7 @@
 
 #homePageIconsList > i:hover {
     position: relative;
-    bottom: 5px;
+    bottom: 2px;
 }
 
 #navigationMenu {
@@ -49,4 +49,8 @@
     0% {
         box-shadow: 0 0 0 0 var(--hover);
     }
+}
+
+#addUserLink {
+    color:#00b5ad;
 }

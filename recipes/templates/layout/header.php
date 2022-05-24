@@ -39,19 +39,20 @@
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <?php if ($userId) { ?>
-
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
                 <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
+            
                 <!-- <div class="ui icon input centered" style="margin-left: 25%">
                     <input id="recipeKeyword" type="text" placeholder="Type in a recipe key word...">
                     <i onclick="submitKeyword()" class="search link icon"></i>
                 </div> -->
-                <div class="right menu secondary">
+                <div class="right menu secondary" id="navigationMenu">
                     <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>
                     <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Settings</a>
                     <a class="item" href="<?= $this->Url->build('users/logout') ?>">Logout</a>
                 </div>
+
             <?php } ?>
             <?php if (!$userId) { ?>
                 <div class="ui right menu secondary" id="navigationMenu">
@@ -64,6 +65,7 @@
                 </div>
             <?php } ?>
     </nav>
+    <br><br><br>
     <script>
         //Will search for whatever user entered
         function submitKeyword() {
@@ -75,3 +77,4 @@
         }
     </script>
 </body>
+

@@ -20,6 +20,7 @@
         </div>
     </aside> -->
     <br>
+    <br>
     <div class="ui fluid container" id="editUserContainer">
         <div class="ui relaxed raised column container segment stacked" id="editUserForm">
             <div class="ui form large equal width">
