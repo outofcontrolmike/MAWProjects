@@ -26,7 +26,7 @@
 
     <nav>
         <div class=" ui main menu fixed borderless inverted" id="navigationMenu">
-            <a class=" item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
+            <a class=" item" href="<?= $this->Url->build('/') ?>"> <i class="ui utensils icon teal big"?></i></a>
             <?php if ($userId) { ?>
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
