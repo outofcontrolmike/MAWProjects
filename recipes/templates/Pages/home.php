@@ -47,10 +47,10 @@
     <div class="ui vertical masthead center aligned fluid container" id="landingPage">
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
-                <h1 class="ui header center aligned icon inverted">
-                    <i class="circular utensils icon black "></i>
+                <h1 class="ui header center aligned icon">
+                    <i class="circular utensils icon inverted"></i>
 
-                    <p><span style="font-weight:100;" class=" ui text large">
+                    <p><span class=" ui text large inverted teal">
                             Community Based Recipes
                         </span></p>
                     <p>
@@ -66,14 +66,14 @@
                             <i class="large lemon yellow icon inverted"></i>
 
                             <!-- Meats -->
-                            <i class="large egg icon white"></i>
+                            <i class="large egg icon white inverted"></i>
                             <i class="large fish blue icon"></i>
                             <i class="large bacon icon pink inverted"></i>
                             <i class="large hotdog red icon"></i>
                             <i class="large drumstick bite icon orange inverted"></i>
 
                             <!-- Desert -->
-                            <i class="large cookie icon white"></i>
+                            <i class="large cookie icon white inverted"></i>
                             <i class="large ice cream pink icon inverted"></i>
 
                             <!-- Prepared stuff -->
@@ -94,14 +94,17 @@
                 <div class="ui column container " id="landingPageColumn">
                     <p><span class=" ui header big">View or Create Recipes Quickly</span>
                     </p>
-                    <p>
-                        Every recipe shown on this site is created by people like you. You don’t have to have an account to view any of these recipes.
-                    </p>
-                    <p>
-                        If you want to be a creator, sign up for a free <a style="color:#00b5ad" href="https://localhost:8765/users/add">account</a> today.
-                    </p>
-                    <div style="margin-top:2rem">
-                        <?= $this->Html->link(__('View All Recipes'), ['controller' =>  "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular', 'id' => "landingPageButton"]) ?>
+                    <div id="landingPageColumnContainer">
+                        <p><span class="ui text">
+                                Every recipe shown on this site is created by people like you. You don’t have to have an account to view any of these recipes.
+                            </span>
+                        </p>
+                        <p>
+                            If you want to be a creator, sign up for a free <a style="color:#00b5ad" href="https://localhost:8765/users/add">account</a> today.
+                        </p>
+                        <div style="margin-top:2rem">
+                            <?= $this->Html->link(__('View All Recipes'), ['controller' =>  "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular', 'id' => "landingPageButton"]) ?>
+                        </div>
                     </div>
                 </div>
                 <div class="ui column container">
