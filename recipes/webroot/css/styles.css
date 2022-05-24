@@ -2,8 +2,13 @@
 
 /* ------------------Global Styles------------------ */
 
+*,
+#loginFormText {
+    font-family: "Roboto", sans-serif;
+}
 #defaultView {
     background-color: #eef2f3;
+    font-family: "Roboto", sans-serif;
 }
 
 /* ------------------Navigation Menu------------------ */
@@ -56,6 +61,7 @@
 
 #loginFormContainer,
 #signUpFormContainer {
+    font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -64,6 +70,7 @@
 
 #loginForm,
 #signUpForm {
+    font-family: "Roboto", sans-serif;
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
         rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
