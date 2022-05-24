@@ -1,3 +1,7 @@
+            <!-- Add below to footer -->
+                    <!--               <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
+                    <a class="item" href="<?= $this->Url->build('/users/contact') ?>">Contact</a> -->
+
 <div class="ui inverted vertical footer segment">
     <div class="ui center aligned container">
         <div class="ui stackable inverted divided grid">
@@ -43,3 +47,4 @@
         </div>
     </div>
 </div>
+

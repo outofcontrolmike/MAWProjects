@@ -18,15 +18,6 @@
 ?>
 <!DOCTYPE html>
 
-<head>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-
-</head>
-
 <body>
     <!-- Grab user ID to append to account settings -->
     <?php
@@ -36,13 +27,10 @@
     <nav>
         <div class=" ui main menu fixed borderless inverted" id="navigationMenu">
             <a class=" item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
-            <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <?php if ($userId) { ?>
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
                 <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
-            
                 <!-- <div class="ui icon input centered" style="margin-left: 25%">
                     <input id="recipeKeyword" type="text" placeholder="Type in a recipe key word...">
                     <i onclick="submitKeyword()" class="search link icon"></i>
@@ -58,10 +46,6 @@
                 <div class="ui right menu secondary" id="navigationMenu">
                     <a class=" item" href="<?= $this->Url->build('/users/add') ?>">Sign Up</a>
                     <a class="item" href="<?= $this->Url->build('/users/login') ?>">Login</a>
-
-                    <!-- Add below to footer -->
-                    <!--               <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
-                    <a class="item" href="<?= $this->Url->build('/users/contact') ?>">Contact</a> -->
                 </div>
             <?php } ?>
     </nav>
