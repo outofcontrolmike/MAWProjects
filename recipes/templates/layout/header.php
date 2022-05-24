@@ -25,8 +25,8 @@
     ?>
 
     <nav>
-        <div class="ui menu stackable inverted" id="navigationMenu">
-            <a class="active item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
+        <div class=" ui main menu fixed borderless" id="navigationMenu">
+            <a class=" item" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></a>
             <!-- <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
             <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a> -->
             <?php if ($userId) { ?>
@@ -39,7 +39,7 @@
                     <i onclick="submitKeyword()" class="search link icon"></i>
                 </div> -->
                 <div class="right menu secondary">
-                <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>
+                    <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>
                     <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Settings</a>
                     <a class="item" href="<?= $this->Url->build('users/logout') ?>">Logout</a>
                 </div>

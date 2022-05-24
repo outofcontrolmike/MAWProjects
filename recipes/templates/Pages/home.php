@@ -42,93 +42,97 @@
     <div class="ui vertical masthead center aligned fluid container" id="landingPage">
         <div class="ui container fluid">
             <div class="ui container fluid" id="homeRecipeSearch">
-                <div class="ui text">
-                    <div class="ui action input medium" style="width:600px;">
-                        <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
-                        <div class="ui button teal" onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
-                    </div>
+                <div class="ui action input medium" style="width:600px;">
+                    <input type="test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
+                    <div class="ui button teal" onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
                 </div>
             </div>
-            <br>
             <!-- End first div -->
             <!-- Start 2nd section -->
-            <div class="ui two column container stackable grid" id="homeContent2">
-                <div class="ui column center aligned">
-                    <span class="ui text big">Check out user created Recipes!</span>
-
-                </div>
-                <div class="ui column center aligned">
-                    <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipes_collection.PNG', array('alt' => 'recipes_Showcase', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
-                    </div>
+            <div class="ui two column stackable grid very padded relaxed">
+                <div class="ui column container vertical center" style="align-self: center;">
+                    <p><span class="ui text big">View or Create Recipes Quickly</span>
+                    </p>
+                    <p>
+                        Every recipe shown on this site is created by people like you. You don’t have to have an account to view any of these recipes.
+                    </p>
+                    <p>
+                        If you want to be a creator, sign up for a free <a style="color:#00b5ad" href="https://localhost:8765/users/add">account</a> today.
+                    </p>
                     <div style="margin-top:2rem">
-                        <?= $this->Html->link(__('View Recipes'), ['controller' => "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular', 'id' => "landingPageButton"]) ?>
+                        <?= $this->Html->link(__('View All Recipes'), ['controller' =>  "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular', 'id' => "landingPageButton"]) ?>
                     </div>
+                </div>
+                <div class="ui column container">
+                    <div class="ui image huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipes_collection.PNG', array('alt' => 'recipes_Showcase', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
+                    </div>
+
                 </div>
             </div>
-
             <div class="ui container fluid">
                 <div class="ui divider">
-
                 </div>
-                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+                <div class="ui two column stackable grid very padded relaxed">
                     <div class="ui column center aligned">
-                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('user_profile.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
-                        </div>
-                        <div style="margin-top: 2rem">
-                            <?= $this->Html->link(__('Sign up for a profile!'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big teal circular', 'id' => "landingPageButton"]) ?>
+                        <div class="ui image big" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('user_profile.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                     </div>
-                    <div class="ui column center aligned">
-                        <span class="ui text big">Unique User Profile</span>
-                        <ul>
-                            <li>View Recipes you created</li>
-                            <li>Edit Your own recipes</li>
-                            <li>Sell yourself with you want</li>
-                            <li>Not overly complicated</li>
-                        </ul>
+                    <div class="ui column center aligned" style="align-self: center;">
+                        <p><span class="ui text big">Create a User Account</span></p>
+                        <p>
+                            By creating an account you can list and edit recipes along with promoting yourself.hink of this as a mini portfolio for your favorite recipes. You can also view other's users profile as well.
+                        </p>
+                        <p>
+                            It's also possible to link to your webpage/portfolio, instagram account and your email address for others to reach out to you.
+                        </p>
+                        <p>
+
+                        </p>
+                        <div style="margin-top: 2rem">
+                            <?= $this->Html->link(__('Create Account'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui button big teal circular', 'id' => "landingPageButton"]) ?>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- End second section -->
             <div class="ui container fluid">
-
                 <div class="ui divider">
-
                 </div>
-                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
-                    <div class="ui column">
-                        <span class="ui text big">Create Recipes and Manage Them</span>
-                        <ul>
-                            <li>Add Recipes</li>
-                            <li>Choose tags if you want</li>
-                            <li>Upload photos</li>
-                            <li></li>
-                        </ul>
+                <div class="ui two column stackable grid very padded relaxed">
+                    <div class="ui column style=" style="align-self: center;">
+                        <p><span class="ui text big">Customize Your Recipes</span></p>
+                        <p>Use our Simple Platform to list your recipes as well as customize them.</p>
+                        <p>
+                            Our system also allows you to edit your recipes too, incase you need to update them.
+                        </p>
                     </div>
                     <div class="ui column center aligned">
-                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('create_Recipe.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
+                        <div class="ui image large" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('create_Recipe.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- End third section -->
-
             <div class="ui container fluid">
                 <div class="ui divider">
 
                 </div>
-                <div class="ui two column container stackable grid vertical aligned" id="homeContent3">
+                <div class="ui two column stackable grid very padded relaxed">
                     <div class="ui column center aligned">
-                        <div class="ui image fluid huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipeTags.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
+                        <div class="ui image big" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipeTags.PNG', array('alt' => 'user_profile', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                         </div>
                     </div>
-                    <div class="ui column">
-                        <span class="ui text big">Utilize Tags</span>
-                        <ul>
-                            <li>Create Tags for recipes</li>
-                            <li>Use already created tags</li>
-                            <li>Easily view already created tags</li>
-                        </ul>
+                    <div class="ui column" style="align-self:center;">
+                        <p><span class="ui text big">Utilize Recipe Tags</span></p>
+                        <p>
+                            If you're wondering how our recipe search works, it's based off our Recipe Tagging Feature.
+                        </p>
+                        <p>
+                            Anytime a user creates a recipe, they have options to list keywords related to their recipe. The benefit to this is to have your recipes more likely to be seen by others.
+                        </p>
+                        <p>
+                            If you're worried a tag already has been created, there's no need to worry. Our system will not duplicate the tag.
+                        </p>
                     </div>
                 </div>
             </div>

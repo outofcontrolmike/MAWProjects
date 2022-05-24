@@ -3,6 +3,7 @@
 }
 #homeRecipeSearch {
     padding: 100px;
+    align-self: center;
     background: #c9d6ff;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);

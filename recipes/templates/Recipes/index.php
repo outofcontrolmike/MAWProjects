@@ -18,7 +18,6 @@
 
             $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
 
-
             //get cook time
             $cookMinutes = intval($recipe->cook_time);
             $prepMinutes = intval($recipe->prep_time);
