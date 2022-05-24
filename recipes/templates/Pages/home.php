@@ -26,9 +26,6 @@
         Recipes Project
     </title>
     <?= $this->Html->meta('icon') ?>
-
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-
     <?= $this->Html->css(['home']) ?>
 
     <!-- You MUST include jQuery before Fomantic -->
@@ -49,12 +46,12 @@
             <div class="ui container fluid" id="homeRecipeSearch">
                 <h1 class="ui header center aligned icon">
                     <i class="circular utensils icon inverted"></i>
-
                     <p><span class=" ui text large inverted teal">
                             Community Based Recipes
                         </span></p>
                     <p>
                         <span id="homePageIconsList">
+
                             <!-- Veggies -->
                             <i class="large seedling olive icon"></i>
                             <i class="large leaf olive icon"></i>
@@ -85,11 +82,13 @@
                         </span>
                     </p>
                 </h1>
+                <!-- TODO: intergrate this somewhere it belongs -->
                 <!-- <div class="ui action input huge inverted transparent">
                     <input type=" test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
                     <div class="ui button " onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
                 </div> -->
             </div>
+            <!-- First Row --> 
             <div class="ui two column stackable grid very padded relaxed">
                 <div class="ui column container " id="landingPageColumn">
                     <p><span class=" ui header big">View or Create Recipes Quickly</span>
@@ -99,11 +98,10 @@
                                 Every recipe shown on this site is created by people like you. You don’t have to have an account to view any of these recipes.
                             </span>
                         </p>
-                        <p>  If you want to be a creator, sign up for a free
-                        <?= $this->Html->link(__(' Account'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui text teal', 'id' => "addUserLink"]) ?>
-                        Today.
+                        <p> If you want to be a creator, sign up for a free
+                            <?= $this->Html->link(__(' Account'), ['controller' => "Users", 'action' => 'add'], ['class' => 'ui text teal', 'id' => "addUserLink"]) ?>
+                            Today.
                         </p>
-                     
                         <div style="margin-top:2rem">
                             <?= $this->Html->link(__('View All Recipes'), ['controller' =>  "Recipes", 'action' => 'index'], ['class' => 'ui button teal big centered circular', 'id' => "landingPageButton"]) ?>
                         </div>
@@ -112,9 +110,9 @@
                 <div class="ui column container">
                     <div class="ui image huge" href="<?= $this->Url->build('/') ?>"> <?php echo $this->Html->image('recipes_collection.PNG', array('alt' => 'recipes_Showcase', 'border' => '0', 'data-src' => 'holder.js/100%x25')); ?>
                     </div>
-
                 </div>
             </div>
+            <!-- Second Row -->
             <div class="ui container fluid">
                 <div class="ui divider">
                 </div>
@@ -138,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <!-- End second section -->
+            <!-- Third Row -->
             <div class="ui container fluid">
                 <div class="ui divider">
                 </div>
@@ -156,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            <!-- End third section -->
+            <!-- Fourth Row -->
             <div class="ui container fluid">
                 <div class="ui divider">
 
@@ -180,7 +178,6 @@
                     </div>
                 </div>
             </div>
-            <!-- End Fourth-->
             <!-- End sections -->
         </div>
     </div>
@@ -206,8 +203,6 @@
   })
 
 ;
-
 ;
 </script> -->
-
 </html>
