@@ -2,8 +2,7 @@
 
 /* ------------------Global Styles------------------ */
 
-*,
-#loginFormText {
+* #loginFormText {
     font-family: "Roboto", sans-serif;
 }
 #defaultView {

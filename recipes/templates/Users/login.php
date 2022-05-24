@@ -5,7 +5,7 @@
             <?= $this->Flash->render() ?>
             <span class="ui text big teal">Account Login</span>
             <?= $this->Form->create() ?>
-            <div class="ui form big">
+            <div class="ui form big" id="loginFormText">
                 <p style="font-size: 16px;"><span class="ui text grey"><?= __('Please enter your email and password') ?></span></p>
                 <div id="loginFormInputsGroup">
                     <?= $this->Form->control('email', ['class' => "ui ", 'placeholder' => "Email address", 'label' => "", 'required' => true]) ?>

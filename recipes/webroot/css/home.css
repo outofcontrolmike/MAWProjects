@@ -1,23 +1,47 @@
-#landingPage {
-    font-size: 20px;
+* {
+    font-family: "Roboto", sans-serif;
 }
-#homeRecipeSearch {
-    padding: 100px;
+#landingPage {
+    font-size: 18px;
+}
+#landingPageColumn {
+    padding-left: 100px;
+    padding-right: 100px;
     align-self: center;
-    background: #c9d6ff;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#homeContent2,
-#homeContent3 {
-    padding: 25px;
+#landingPageImage {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
+#homeRecipeSearch {
+    font-weight: 100;
+    padding: 100px;
+    align-self: center;
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #57c3ad,
+        #34a798
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #57c3ad,
+        #34a798
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#homeRecipeSearch > h1 > p {
+    font-family: "Roboto", sans-serif;
+}
+
+#homePageIconsList > i:hover {
+    position: relative;
+    bottom: 5px;
+}
+
 #navigationMenu {
     font-size: large;
+    font-family: "Roboto", sans-serif;
 }
 
 #landingPageButton:hover,
