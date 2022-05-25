@@ -116,15 +116,15 @@
             </hr>
 
             <h4>How can I create something similar to this?</h4>
-            <p>If you want to get started with something similar to this, you’ll want to have some php experience, especially with the MVC (Model View Controller) concept. You can dive in without experience but it will take a lot of time to get an understanding of what’s going on, especially with getting PHP set up on your local machine. I used <a href="https://www.mawportfolio.online" target="_blank">Cake PHP's CMS Tutorial</a>to get started with this project and there is still a lot I don’t know. It’s all about learning though.</p>
+            <p>If you want to get started with something similar to this, you’ll want to have some php experience, especially with the MVC (Model View Controller) concept. You can dive in without experience but it will take a lot of time to get an understanding of what’s going on, especially with getting PHP set up on your local machine. I used <a href="https://www.mawportfolio.online" target="_blank">Cake PHP's CMS Tutorial</a> to get started with this project and there is still a lot I don’t know. It’s all about learning though.</p>
             <hr>
             </hr>
             <h4>What was the hardest part of this project?</h4>
             <p>The hardest part of the project for me was designing the User Interface. Cake has a good basic UI but if you’re wanting to show this to potential clients or employers it’s going to look like what other people have unless you spruce it up.</p>
         </div>
-        <!-- End thrid -->
+        <!-- End third -->
     </div>
-    <br>
 </body>
+<br>
 
 </html>
