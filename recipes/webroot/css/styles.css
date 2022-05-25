@@ -17,13 +17,29 @@
 
 #navigationMenu {
     font-size: large;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#navigationMenu > a,
+#navRightItems > a {
+    font-size: large;
+    color: white;
 }
 
-#navigationMenu > a:hover {
+#navigationMenu > a:hover,
+#footerItems > a:hover,
+#navRightItems > a:hover {
     color: #6dffff;
     text-shadow: 1px 1px #00b5ad;
     position: relative;
     bottom: 1px;
+}
+#footerSubText {
+    line-height: 1.5;
+}
+
+#linkList > a:hover {
+    position: relative;
+    bottom: 4px;
 }
 
 /* ------------------Users Templates------------------ */
