@@ -1,50 +1,31 @@
             <!-- Add below to footer -->
-                    <!--               <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
+            <!--               <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
                     <a class="item" href="<?= $this->Url->build('/users/contact') ?>">Contact</a> -->
 
-<div class="ui inverted vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui stackable inverted divided grid">
-            <div class="three wide column">
-                <h4 class="ui inverted header">Group 1</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Link One</a>
-                    <a href="#" class="item">Link Two</a>
-                    <a href="#" class="item">Link Three</a>
-                    <a href="#" class="item">Link Four</a>
-                </div>
-            </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header">Group 2</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Link One</a>
-                    <a href="#" class="item">Link Two</a>
-                    <a href="#" class="item">Link Three</a>
-                    <a href="#" class="item">Link Four</a>
-                </div>
-            </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header">Group 3</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Link One</a>
-                    <a href="#" class="item">Link Two</a>
-                    <a href="#" class="item">Link Three</a>
-                    <a href="#" class="item">Link Four</a>
-                </div>
-            </div>
-            <div class="seven wide column">
-                <h4 class="ui inverted header">Footer Header</h4>
-                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-            </div>
-        </div>
-        <div class="ui inverted section divider"></div>
-        <img src="assets/images/logo.png" class="ui centered mini image">
-        <div class="ui horizontal inverted small divided link list">
-            <a class="item" href="#">Site Map</a>
-            <a class="item" href="#">Contact Us</a>
-            <a class="item" href="#">Terms and Conditions</a>
-            <a class="item" href="#">Privacy Policy</a>
-        </div>
-    </div>
-</div>
+            <div class="ui vertical footer segment inverted" style="background-color:black;">
+                <div style=" width: 800px;" class="ui center aligned container">
 
+                    <p><span class="ui text big white inverted" style="color:#6dffff">Recipes Project</span></p>
+                    <p><span id="footerSubText" class="ui text" style="font-size:18px;">Thank you so much for checking my website out. If you have any questions,suggestions or comments feel free to reach out to me by using any of the social links or contact form link below. You can always send me an email as well.</p>
+                    <br>
+                    <!-- Social Icons -->
+                    <div class=" ui horizontal inverted small link list" id="linkList">
+                        <a class="item" target="_blank" href="https://github.com/outofcontrolmike"><i class="github icon huge grey"></i></a>
+                        <a class="item" target="_blank" href="https://www.linkedin.com/in/wilsonmaw/"><i class="linkedin icon huge blue inverted"></i></a>
+                        <a class="item" target="_blank" href="https://www.facebook.com/profile.php?id=100000742683767"><i class="facebook icon huge blue"></i></a>
+                        <a class="item" target="_blank" href="https://www.instagram.com/explodingsnes/?hl=en"><i class="instagram icon huge pink"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ui vertical footer segment center aligned" style="background-color: black;">
+                <div class=" ui divider inverted"></div>
+                <div class=" ui horizontal big divided link list inverted" id="footerItems">
+                    <a class="item" href="<?= $this->Url->build('/') ?>">Home</a>
+                    <a class="item" href="<?= $this->Url->build('/users/contact') ?>">Contact</a>
+                    <a class="item" href="<?= $this->Url->build('/pages/faq') ?>">FAQ</a>
+                    <a class="item" target="_blank" href="https://mawportfolio.online/">Website</a>
+                </div>
+            </div>
