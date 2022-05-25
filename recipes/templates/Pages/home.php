@@ -82,6 +82,11 @@
                         </span>
                     </p>
                 </h1>
+                <br>
+                <div class="ui inverted icon input inverted" style="width:500px;">
+                            <input id="recipeTagKeyword" value="" type="text" placeholder="Try Searching for your favorite recipe by keyword...">
+                            <i  onclick="submitKeyword()"  class="search link icon teal"></i>
+                        </div>
                 <!-- TODO: intergrate this somewhere it belongs -->
                 <!-- <div class="ui action input huge inverted transparent">
                     <input type=" test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
