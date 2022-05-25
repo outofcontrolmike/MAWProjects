@@ -12,6 +12,9 @@
 
 /* ------------------Navigation Menu------------------ */
 
+#navigationMenu {
+    font-size: large;
+}
 
 #navigationMenu > a:hover {
 color:#6dffff;
