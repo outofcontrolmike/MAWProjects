@@ -25,7 +25,7 @@
     ?>
 
     <nav>
-        <div class=" ui main menu fixed borderless inverted" id="navigationMenu">
+        <div class=" ui main menu fixed borderless inverted stackable" id="navigationMenu">
             <a class=" item" href="<?= $this->Url->build('/') ?>"> <i class="ui utensils icon teal big"?></i></a>
             <?php if ($userId) { ?>
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
