@@ -25,36 +25,32 @@
     ?>
 
     <nav>
-        <div class=" ui main menu fixed borderless inverted stackable" id="navigationMenu">
+        <div class=" ui main menu fixed borderless  stackable" id="navigationMenu" style="background-color:black;">
             <a class=" item" href="<?= $this->Url->build('/') ?>"> <i class="ui utensils icon teal big" ?></i></a>
             <?php if ($userId) { ?>
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
                 <a class="item" href="<?= $this->Url->build('/users') ?>">Users</a>
-                <!-- <div class="ui icon input centered" style="margin-left: 25%">
-                    <input id="recipeKeyword" type="text" placeholder="Type in a recipe key word...">
-                    <i onclick="submitKeyword()" class="search link icon"></i>
-                </div> -->
-                <div class="right menu secondary" id="navigationMenu">
+                <div class="right menu secondary" id="navRightItems">
                     <a class="item" href="<?= $this->Url->build('/users/view/' . $userId) ?>">Profile</a>
                     <a class="item" href="<?= $this->Url->build('/users/edit/' . $userId) ?>">Settings</a>
                     <a class="item" href="<?= $this->Url->build('users/logout') ?>">Logout</a>
                 </div>
-
             <?php } ?>
             <?php if (!$userId) { ?>
-                <div class="ui right menu secondary" id="navigationMenu">
+                <div class="ui right menu secondary" id="navRightItems">
                     <a class=" item" href="<?= $this->Url->build('/users/add') ?>">Sign Up</a>
                     <a class="item" href="<?= $this->Url->build('/users/login') ?>">Login</a>
                 </div>
             <?php } ?>
-            
+        </div>
+
     </nav>
     <br><br><br>
+
     <script>
         //Will search for whatever user entered
         function submitKeyword() {
-            console.log("my god does this work in the header")
             let keyword = document.getElementById('recipeKeyword');
             if (keyword.value != "") {
                 window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
