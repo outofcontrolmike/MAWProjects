@@ -26,7 +26,7 @@
 
     <nav>
         <div class=" ui main menu fixed borderless inverted stackable" id="navigationMenu">
-            <a class=" item" href="<?= $this->Url->build('/') ?>"> <i class="ui utensils icon teal big"?></i></a>
+            <a class=" item" href="<?= $this->Url->build('/') ?>"> <i class="ui utensils icon teal big" ?></i></a>
             <?php if ($userId) { ?>
                 <a class="item" href="<?= $this->Url->build('/recipes') ?>">Recipes</a>
                 <a class="item" href="<?= $this->Url->build('/tags') ?>">Tags</a>
@@ -48,6 +48,7 @@
                     <a class="item" href="<?= $this->Url->build('/users/login') ?>">Login</a>
                 </div>
             <?php } ?>
+            
     </nav>
     <br><br><br>
     <script>
@@ -61,4 +62,3 @@
         }
     </script>
 </body>
-
