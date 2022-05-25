@@ -84,16 +84,11 @@
                 </h1>
                 <br>
                 <div class="ui inverted icon input inverted" style="width:500px;">
-                            <input id="recipeTagKeyword" value="" type="text" placeholder="Try Searching for your favorite recipe by keyword...">
-                            <i  onclick="submitKeyword()"  class="search link icon teal"></i>
-                        </div>
-                <!-- TODO: intergrate this somewhere it belongs -->
-                <!-- <div class="ui action input huge inverted transparent">
-                    <input type=" test" name="test" id="recipeTagKeyword" value="" placeholder="Try Searching for your favorite recipe by keyword...">
-                    <div class="ui button " onclick="submitKeyword()"><i class="utensils icon large black"></i></div>
-                </div> -->
+                    <input id="recipeTagKeyword" onkeypress="submitKeyword(event)" value="" type="text" placeholder="Try Searching for your favorite recipe by keyword...">
+                    <i onclick="searchIconClick()" id="searchIconButton" class="search link icon teal"></i>
+                </div>
             </div>
-            <!-- First Row --> 
+            <!-- First Row -->
             <div class="ui two column stackable grid very padded relaxed">
                 <div class="ui column container " id="landingPageColumn">
                     <p><span class=" ui header big">View or Create Recipes Quickly</span>
@@ -189,7 +184,19 @@
 </body>
 <script>
     //Will search for whatever user entered
-    function submitKeyword() {
+    function submitKeyword(event) {
+        let keyword = document.getElementById('recipeTagKeyword');
+        if (keyword.value != "") {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
+            } else {
+                // window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
+            }
+        }
+    }
+
+    function searchIconClick() {
         let keyword = document.getElementById('recipeTagKeyword');
         if (keyword.value != "") {
             window.location.assign("http://localhost:8765/recipes/tagged/" + keyword.value);
@@ -210,4 +217,5 @@
 ;
 ;
 </script> -->
+
 </html>

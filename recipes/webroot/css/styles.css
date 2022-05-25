@@ -1,6 +1,9 @@
 /********************************* Default Layout StyleSheet *************************************/
 
 /* ------------------Global Styles------------------ */
+::placeholder {
+    color: teal;
+}
 
 * #loginFormText {
     font-family: "Roboto", sans-serif;
@@ -17,10 +20,10 @@
 }
 
 #navigationMenu > a:hover {
-color:#6dffff;
-text-shadow: 1px 1px #00b5ad;
-position: relative;
-bottom: 1px;
+    color: #6dffff;
+    text-shadow: 1px 1px #00b5ad;
+    position: relative;
+    bottom: 1px;
 }
 
 /* ------------------Users Templates------------------ */
