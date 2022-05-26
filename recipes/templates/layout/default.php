@@ -15,7 +15,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'Recipes Project';
+$cakeDescription = 'Community Recipes';
 ?>
 <!DOCTYPE html>
 <html>
