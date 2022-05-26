@@ -47,7 +47,7 @@
                 <h1 class="ui header center aligned icon">
                     <i class="circular utensils icon inverted"></i>
                     <p><span class=" ui text large inverted teal">
-                            Community Recipes
+                            Community Based Recipes
                         </span></p>
                     <p>
                         <span id="homePageIconsList">

@@ -6,7 +6,9 @@
                 <div style=" width: 800px;" class="ui center aligned container">
                     <p> <i class="circular utensils icon inverted big"></i></p>
                     <p><span class="ui text big white inverted" style="color:#6dffff">Community Recipes</span></p>
-                    <p><span id="footerSubText" class="ui text" style="font-size:18px;">Thank you so much for checking my website out. If you have any questions,suggestions or comments feel free to reach out to me by using any of the social links or contact form link below. You can always send me an email as well.</p>
+                    <p><span id="footerSubText" class="ui text" style="font-size:18px;">Thank you so much for checking my website out. If you have any questions,suggestions or comments feel free to reach out to me by using any of the social links or contact form link below. You can always send me an
+                            <a style="color: #6dffff" target="_blank" href="mailto:michaelwilsona2019@gmail.com"> Email</a>
+                            as well.</p>
                     <br>
                     <!-- Social Icons -->
 
