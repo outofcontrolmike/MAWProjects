@@ -19,12 +19,15 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
     <div class="ui column container">
         <!-- img -->
         <div class="container">
+            <input type="hidden" value="" id="inputTest" />
             <?php if ($recipe->image != null) : ?>
                 <?= $this->Html->image($recipe->image, ['class' => "ui image huge centered recipeCardImage"]) ?>
             <?php else : ?>
                 <?= $this->Html->image('comingSoon.jpg', array('class' => "ui image huge recipeCardImage", 'alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'height' => "200px",)); ?></a>
             <?php endif ?>
         </div>
+        <i class="share icon teal large" onclick="shareURL();"></i>
+
         <h1 class="ui text center aligned"><?= h($recipe->title) ?></h1>
         <p>PrepTime: <?= $recipe->prep_time ?> min</p>
         <p>CookTime: <?= $recipe->cook_time ?> min</p>
@@ -73,3 +76,18 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
                 <?= $this->Html->link('Edit', ['action' => 'edit', $recipe->slug], ['class' => 'button']) ?>
             <?php else : null  ?>
             <?php endif; ?> -->
+
+<script>
+    function shareURL() {
+        let url = window.location.href;
+        let input = document.getElementById('inputTest');
+
+        //select hidden field
+        input.value = url;
+        input.select();
+
+        //copy to clipboard
+        navigator.clipboard.writeText(input.value);
+        window.alert("this url is copied! : " + input.value);
+    }
+</script>
