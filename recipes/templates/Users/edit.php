@@ -111,6 +111,8 @@
                 <!-- End -->
                 <p style="text-align:right">
                     <?= $this->Form->button(__('Update Profile'), ['class' => 'ui button teal circular medium']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['class' => "ui button red circular medium", 'action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> -->
+
                 </p>
                 <?= $this->Form->end() ?>
             </div>
