@@ -85,7 +85,8 @@
 /*Login and Sign up Pages */
 
 #loginFormContainer,
-#signUpFormContainer {
+#signUpFormContainer,
+#contactFormContainer {
     font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
@@ -228,4 +229,9 @@ ul.pagination .disabled:hover a {
 .paginator p {
     text-align: left;
     color: rgba(0, 0, 0, 0.54);
+}
+
+/* Contact Form Styles */
+#contactFormContainer {
+    height: 100vh;
 }

@@ -2,7 +2,7 @@
 ?>
 <div class="ui container fluid very padded relaxed">
     <br>
-    <div class="ui container fluid">
+    <div class="ui container center aligned">
         <div class="ui action input" id="recipeIndexSearch">
             <input type="test" name="test" id="recipeKeyword" value="" placeholder="...Type a keyword into here">
             <div class="ui button" onclick="submitKeyword()">Go</div>

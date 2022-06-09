@@ -91,10 +91,6 @@
             <!-- First Row -->
             <div class="ui two column stackable grid very padded relaxed">
                 <div class="ui column container " id="landingPageColumn">
-                    <?php $testString = "TwoStoryBuildingOutsideLivingQuartersUSDA";
-                    $parsedString =  preg_replace('/(?<!\ )[A-Z]/', ' $0', $testString);
-                    echo $parsedString;
-                    ?>
                     <p><span class=" ui header big">View or Create Recipes Quickly</span>
                     </p>
                     <div id="landingPageColumnContainer">
