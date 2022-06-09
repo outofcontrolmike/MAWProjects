@@ -56,6 +56,12 @@
     text-align: center;
 }
 
+/* User Edit */
+
+#deleteUserButton {
+    margin: 300px;
+}
+
 /* User View */
 
 #userViewImageContainer {
@@ -86,7 +92,9 @@
 
 #loginFormContainer,
 #signUpFormContainer,
-#contactFormContainer {
+#contactFormContainer,
+#editUserContainer,
+#taggedRecipesContainer {
     font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;

@@ -8,19 +8,7 @@
 <?php include "templates\layout\header.php" ?>
 
 <div>
-    <!-- <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $user->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside> -->
-    <br>
-    <br>
+
     <div class="ui fluid container" id="editUserContainer">
         <div class="ui relaxed raised column container segment stacked" id="editUserForm">
             <div class="ui form large equal width">
@@ -109,14 +97,20 @@
                     <br>
                 </div>
                 <!-- End -->
-                <p style="text-align:right">
-                    <?= $this->Form->button(__('Update Profile'), ['class' => 'ui button teal circular medium']) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['class' => "ui button red circular medium", 'action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> -->
 
+
+                <p>
+                    <span>
+                        <?= $this->Form->postLink('<i class="ui user minus icon red big"></i>', ['controller' => 'Users', 'action' => 'delete', $user->id], ['confirm' => __("Are you sure you want to delete your account?  This can not be reversed and your recipes will be deleted a long with your account.", $user->id), 'escape' => false, 'title' => __('Delete')]) ?> </td>
+                    </span>
+                    <span style="float:right">
+                        <?= $this->Form->button(__('Update Profile'), ['class' => 'ui button teal circular medium']) ?>
+
+
+                    </span>
                 </p>
                 <?= $this->Form->end() ?>
             </div>
         </div>
     </div>
 </div>
-<br>

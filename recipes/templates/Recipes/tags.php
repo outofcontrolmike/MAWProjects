@@ -1,9 +1,9 @@
 <!-- In templates/Recipes/tags.php -->
 <?php include "templates\layout\header.php" ?>
+<div class="ui container fluid" id="taggedRecipesContainer">
 <div class="ui container fluid very padded relaxed">
-    <br>
     <!--  -->
-    <div class="ui message container teal" id="tagMessage">
+    <div class=" ui message container teal" id="tagMessage">
         <i onclick=" removeMessage()" class="close icon"></i>
         <div class="header" id="tagHeader">
             <!-- Purposely empty for js onLoad function -->
@@ -57,6 +57,8 @@
         </div>
     </div>
 </div>
+</div>
+
 
 <script>
     //Set up Tag on page load
