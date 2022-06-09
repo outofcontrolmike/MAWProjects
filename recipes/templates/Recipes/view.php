@@ -15,22 +15,64 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
 ?>
 <br>
 
+<div class="ui container">
+    <div class="ui segment raised stacked tall">
+        <div class="ui items">
+            <div class="item">
+                <div class="ui image medium">
+                    <?php if ($recipe->image != null) : ?>
+                        <?= $this->Html->image($recipe->image, ['class' => "ui image medium  rounded recipeCardImage"]) ?>
+                    <?php else : ?>
+                        <?= $this->Html->image('comingSoon.jpg', array('class' => "ui big huge recipeCardImage", 'alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'height' => "200px",)); ?></a>
+                    <?php endif ?>
+                </div>
+                <div class="content" style="font-size: 20px;">
+                    <h1 class="ui text centered aligned"><?= h($recipe->title) ?></h1>
+                    <div class="">
+                        <span>
+                            <div class="row" id="recipeBody">
+                                <?php foreach ($recipeBody as $bodyPart) {
+                                    $uppercaseFirst = ucfirst($bodyPart);
+                                    echo "<p>$uppercaseFirst</p>";
+                                } ?>
+                            </div>
+                            <br>
+                            <p>PrepTime: <?= $recipe->prep_time ?> min</p>
+                            <p>CookTime: <?= $recipe->cook_time ?> min</p>
+                            <p>Servings: <?= $recipe->servings ?> </p>
+                            <p>Created: <?= date_format($recipe->created, "m/d/Y") ?></p>
+                            <p>Created By: <?= $recipe->user_id ?></p>
+                            <p><b>Tags:</b> <?= h($recipe->tag_string) ?></p>
+                            <i class="share icon teal large" onclick="shareURL();"></i>
+                        </span>
+                    </div>
+                    <div class="description">
+                        <p></p>
+                    </div>
+                    <div class="extra">
+                        Additional Details
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 
 <!-- New recipe card -->
 
 <div class="ui container">
-    <div class="ui segment raised ">
+    <div class="ui segment raised stacked tall">
         <div class="ui two column doubling stackable grid container">
             <div class="ui column">
-                <input type="hidden" value="" id="inputTest" />
                 <?php if ($recipe->image != null) : ?>
-                    <?= $this->Html->image($recipe->image, ['class' => "ui image  centered recipeCardImage"]) ?>
+                    <?= $this->Html->image($recipe->image, ['class' => "ui image medium  centered rounded recipeCardImage"]) ?>
                 <?php else : ?>
                     <?= $this->Html->image('comingSoon.jpg', array('class' => "ui big huge recipeCardImage", 'alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'height' => "200px",)); ?></a>
                 <?php endif ?>
             </div>
-            <div class="ui column center aligned">
-                <i class="share icon teal large" onclick="shareURL();"></i>
+            <div class="ui column center aligned large" style="font: 20px;">
                 <h1 class="ui text center aligned"><?= h($recipe->title) ?></h1>
                 <p>PrepTime: <?= $recipe->prep_time ?> min</p>
                 <p>CookTime: <?= $recipe->cook_time ?> min</p>
@@ -38,6 +80,7 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
                 <p>Created: <?= date_format($recipe->created, "m/d/Y") ?></p>
                 <p>Created By: <?= $recipe->user_id ?></p>
                 <p><b>Tags:</b> <?= h($recipe->tag_string) ?></p>
+                <i class="share icon teal large" onclick="shareURL();"></i>
 
             </div>
         </div>
