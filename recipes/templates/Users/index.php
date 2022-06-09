@@ -14,7 +14,7 @@
         </span>
     </div>
     <div class="">
-        <table class=" ui collapsing celled table large">
+        <table class=" ui collapsing celled table">
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('user_name', ['label' => "User"]) ?></th>
@@ -39,8 +39,10 @@
                                 </div>
                             </h4>
                         </td>
-                        <td style="height:200px"><?= h($user->bio) ?></td>
-                        <td><a target="_blank" href="https://<?= h($user->link) ?>"><?= h($user->link) ?></a></td>
+                        <td>
+                            <div style="max-height:200px; overflow:hidden; color:black"> <?= h($user->bio) . "..." ?></div>
+                        </td>
+                        <td><a target=" _blank" href="https://<?= h($user->link) ?>"><?= h($user->link) ?></a></td>
                         <td><a target="_blank" href="https://instagram.com/<?= h($user->instagram_link) ?>"><?= h($user->instagram_link) ?></td>
                         <td><?= h($user->created) ?></td>
                         <td class="actions userActions" id="userActions">
