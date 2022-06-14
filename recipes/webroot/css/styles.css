@@ -243,3 +243,15 @@ ul.pagination .disabled:hover a {
 #contactFormContainer {
     height: 100vh;
 }
+
+/* Thank You Page Styles */
+
+#thankYouBackground {
+    background-image: url("thankyouBackground.png");
+    height: 100vh;
+    background-repeat: repeat;
+    opacity: 0.75;
+}
+
+#thankyouContainer {
+}
