@@ -250,7 +250,7 @@ ul.pagination .disabled:hover a {
     background-image: url("thankyouBackground.png");
     height: 100vh;
     background-repeat: repeat;
-    opacity: 0.75;
+    opacity: 0.9;
 }
 
 #thankyouContainer {
