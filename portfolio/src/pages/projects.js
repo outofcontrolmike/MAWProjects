@@ -211,6 +211,17 @@ function Projects(props) {
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/portfolio/src/pages/projects/jokes",
     },
+    {
+      img: "img/scratch.PNG",
+      href: "/https://scratch.mit.edu/projects/706449690",
+      name: "Scratch Project",
+      meta: "Scratch, MIT.edu",
+      desc: "An interactive story made with a learning platform named Scratch.  There's no coding involved but the platform offers users to use building blocks to create functionality for their projects.",
+      created: "Created: June 22 2022",
+      lastUpdated: "Last Updated: N/A",
+      github:
+        "https://github.com/me50/outofcontrolmike/blob/cs50/problems/2022/x/scratch/Wilson_M%20Scratch%20Project.sb3",
+    },
   ];
 
   //Create Cards
