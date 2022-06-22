@@ -213,7 +213,7 @@ function Projects(props) {
     },
     {
       img: "img/scratch.PNG",
-      href: "/https://scratch.mit.edu/projects/706449690",
+      href: "https://scratch.mit.edu/projects/706449690",
       name: "Scratch Project",
       meta: "Scratch, MIT.edu",
       desc: "An interactive story made with a learning platform named Scratch.  There's no coding involved but the platform offers users to use building blocks to create functionality for their projects.",
