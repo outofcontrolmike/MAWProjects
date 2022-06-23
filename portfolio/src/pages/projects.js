@@ -224,14 +224,13 @@ function Projects(props) {
     },
     {
       img: "img/recipes.PNG",
-      href: "https://github.com/outofcontrolmike/MAWProjects/tree/master/recipes",
+      href: "https://github.com/outofcontrolmike/Community_Recipes",
       name: "Community Projects",
       meta: "Cake PHP, Fomantic, Google Fonts",
       desc: "This project is still in BETA but is totally useable if you can run a cake php project on your local machine.  This project is a CMS based on Recipes and Users.",
       created: "Work in Progress since 2022",
       lastUpdated: "Last Updated: N/A",
-      github:
-        "https://github.com/outofcontrolmike/MAWProjects/tree/master/recipes",
+      github: "https://github.com/outofcontrolmike/Community_Recipes",
     },
   ];
 
