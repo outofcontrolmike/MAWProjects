@@ -2,7 +2,7 @@
     <div class="ui container fluid center aligned " id="thankyouContainer">
         <p>
             <span class="ui text huge">
-                You have Successfully created an Account with us!
+                You Have Successfully Created An Account With Us!
             </span>
         </p>
         <br>
