@@ -185,6 +185,11 @@
     padding: 0;
 }
 
+#recipeViewActions > span > i:hover,
+#recipeViewActions > span > a > i:hover {
+    color: #00b5ad;
+}
+
 /* ------------------Start Tags Templates------------------ */
 #tagFormContainer {
     display: flex;

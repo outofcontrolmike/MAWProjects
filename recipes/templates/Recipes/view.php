@@ -25,9 +25,21 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
     <br>
     <div class="row">
         <div class="ui center aligned big">
-            <span class=" ui text big aligned header centered">
-                <p><?= h($recipe->title) ?></p>
-            </span>
+            <div class="row">
+                <span class=" ui text big header ">
+                    <?= h($recipe->title) ?>
+                </span>
+                <span style="float:right" id="recipeViewActions">
+                    <span data-tooltip="View the creator's profile" data-position="top left">
+                        <a style="color:black;" href="http://localhost:8765/users/view/<?= $recipe->user_id ?>"> <i class="user icon big"></i></a>
+
+                    </span>
+                    <span data-tooltip="Click me to copy this pages's URL" data-position="right center">
+                        <i class="share icon big" onclick="shareURL();"></i></span>
+
+                </span>
+            </div>
+
             <input type="hidden" value="" id="inputTest" />
 
             <div class="ui list large very padded">
@@ -47,13 +59,7 @@ $recipeBody = preg_split('#(\r\n?|\n)+#', $recipe->body);
                 <div class="item"><b>Tags:</b> <?= h($recipe->tag_string) ?> </div>
                 </p>
                 <p>
-                <div class="item">
-                    <i class="share icon teal big" onclick="shareURL();"></i>
-                    <i>
 
-                        <a href="http://localhost:8765/users/view/<?= $recipe->user_id ?>"> <i class="user icon teal big"></i></a>
-                    </i>
-                </div>
                 </p>
             </div>
 
