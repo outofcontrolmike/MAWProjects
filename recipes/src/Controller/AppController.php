@@ -63,6 +63,6 @@ class AppController extends Controller
         // Public recipes viewable by non-logged in users
         // for all controllers in our application, make index and view, public
         // actions public, skipping the authentication check
-        $this->Authentication->addUnauthenticatedActions(['index', 'public', 'view', 'contact', 'tags', 'thankyou']);
+        $this->Authentication->addUnauthenticatedActions(['index', 'public', 'view', 'contact', 'tags', 'thankyou', 'success']);
     }
 }

@@ -42,7 +42,7 @@
                         <td>
                             <div style="max-height:200px; overflow:hidden; color:black"> <?= h($user->bio) . "..." ?></div>
                         </td>
-                        <td><a target=" _blank" href="https://<?= h($user->link) ?>"><?= h($user->link) ?></a></td>
+                        <td><a target=" _blank" href="<?= h($user->link) ?>"><?= h($user->link) ?></a></td>
                         <td><a target="_blank" href="https://instagram.com/<?= h($user->instagram_link) ?>"><?= h($user->instagram_link) ?></td>
                         <td><?= h($user->created) ?></td>
                         <td class="actions userActions" id="userActions">

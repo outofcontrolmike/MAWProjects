@@ -62,9 +62,8 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('You have successfully created an account!'));
 
-                return $this->redirect(['controller' => "Recipes", 'action' => 'index']);
+                return $this->redirect(['controller' => "Users", 'action' => 'success']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
@@ -169,6 +168,10 @@ class UsersController extends AppController
     public function thankyou()
     {
         $this->Authorization->skipAuthorization();
-        // $this->Flash->success(__('Your Email has been sent!  Thank you!'));
+    }
+
+    public function success()
+    {
+        $this->Authorization->skipAuthorization();
     }
 }

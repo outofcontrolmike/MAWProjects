@@ -5,8 +5,7 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<script>
-</script>
+
 <div class="ui container fluid center aligned" id="signUpFormContainer">
     <div class="ui container segment raised very padded stacked centered" id="signUpForm">
         <p> <?php echo $this->Html->image('icon.png', array('alt' => 'CakePHP', 'border' => '0', 'data-src' => 'holder.js/100%x25', 'width' => "50", 'height' => '50')); ?></p>
@@ -25,13 +24,13 @@
                 <br>
                 <?= $this->Form->control('password', ['label' => "", 'placeholder' => "Password", 'required' => true]) ?>
                 <br>
-                <?= $this->Form->control('image', ['label' => "", 'placeholder' => "Profile Image", 'required' => true]) ?>
+                <?= $this->Form->control('image', ['label' => "", 'placeholder' => "Profile Image.. accepts a url for now.", 'required' => true]) ?>
                 <br>
-                <?= $this->Form->control('link', ['class' => "ui ", 'placeholder' => "Professional Link, such as your website or portfolio.", 'label' => "", 'required' => false]) ?>
+                <?= $this->Form->control('link', ['class' => "ui ", 'placeholder' => "Professional Link. example: https://www.google.com", 'label' => "", 'required' => false]) ?>
                 <br>
-                <?= $this->Form->control('instagram_link', ['label' => "", 'placeholder' => "Instagram UserName/Handle", 'required' => false]) ?>
+                <?= $this->Form->control('instagram_link', ['label' => "", 'placeholder' => "Instagram UserName/Handle: example: explodingsnes", 'required' => false]) ?>
                 <br>
-                <?= $this->Form->control('bio', ['class' => "ui ", 'rows' => '3', 'placeholder' => "Summary about yourself, about 1-2 paragraphs", 'label' => "", 'required' => true]) ?>
+                <?= $this->Form->control('bio', ['class' => "ui ", 'rows' => '3', 'placeholder' => "Summary about yourself, up to 1000 characters.", 'label' => "", 'required' => true]) ?>
                 <br>
             </div>
             <?= $this->Form->button(__('Create Account'), ['class' => 'ui button teal fluid circular']) ?>
