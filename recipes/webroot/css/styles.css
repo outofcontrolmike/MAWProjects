@@ -247,11 +247,24 @@ ul.pagination .disabled:hover a {
 /* Thank You Page Styles */
 
 #thankYouBackground {
-    background-image: url("thankyouBackground.png");
     height: 100vh;
-    background-repeat: repeat;
     opacity: 0.9;
+    background: #06beb6; /* fallback for old browsers */
 }
 
 #thankyouContainer {
+    color: white;
+    font-weight: bold;
+    margin: auto;
+    position: absolute;
+    height: 50vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#thankyouUtensils:hover {
+    color: whitesmoke;
+    background-color: black;
 }

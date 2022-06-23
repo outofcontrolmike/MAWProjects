@@ -5,8 +5,21 @@
 $userName = $_SESSION['Auth']['user_name'];
 ?>
 <div class="ui" id="thankYouBackground">
-    <div class="ui segment container" id="thankyouContainer">
-        <h1>Thank you so much! <?php echo $userName ?></h1>
+    <div class="ui container fluid center aligned " id="thankyouContainer">
+
+        <p>
+            <span class="ui text huge">Thank you for reaching out to us, <span class="ui text ">
+                    <?php if ($userName) echo $userName . "!" ?>
+                </span>
+        </p></span>
+        </p>
+        <br>
+        <p>
+            <span class="ui text big">We will reply back to you as soon as we can.</span>
+        </p>
+        <br>
+        <a class=" item" href="<?= $this->Url->build('/recipes') ?>"> <i id="thankyouUtensils" class="ui utensils icon black huge circular " ?></i></a>
+
 
     </div>
 
