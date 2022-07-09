@@ -23,7 +23,7 @@ function Projects(props) {
         "A race between Yoshi and Mario. Who will win???" +
         "<b> Fair warning</b>, this project is not supposed to be mobile friendly.",
       created: "Created: Spring 2018",
-      lastUpdated: "Last Updated: November 18th 2021",
+      lastUpdated: " Updated: Nov 18th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/great_race/GreatRace.js",
     },
@@ -35,7 +35,7 @@ function Projects(props) {
       meta: "Javascript, Bootstrap & Fomantic",
       desc: "Want to look at pokemon art and information about pokemon? Test this project out!.",
       created: "Created: September 2020",
-      lastUpdated: "Last Updated: December 5th 2021",
+      lastUpdated: " Updated: Dec 5th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/pokemon/Pokemon.js",
     },
@@ -46,7 +46,7 @@ function Projects(props) {
     //   name: "Snes Shopping Cart",
     //   meta: "Vue & Fomantic",
     //   desc: "A basic shopping cart utlizing the core concepts of vue",
-    //   created: "Reworked Early November 2020",
+    //   created: "Reworked Early Nov 2020",
     //   github:
     //     "https://github.com/outofcontrolmike/MAWProjects/tree/master/Vue-ShoppingCart",
     // },
@@ -57,8 +57,8 @@ function Projects(props) {
       name: "Beast Wars JS",
       meta: "Vanilla JS, Jquery & Fomantic UI",
       desc: "A Beast Wars web application that displays the 1st generation of transformers from the 90's TV series. Also includes sorting options for the characters.",
-      created: "Created: February 6th 2021",
-      lastUpdated: "Last Updated: November 14th 2021",
+      created: "Created: Feb 6th 2021",
+      lastUpdated: " Updated: Nov 14th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/beast_wars/BeastWars.js",
     },
@@ -69,8 +69,8 @@ function Projects(props) {
       name: "Cool Calculator",
       meta: "React,Fomantic",
       desc: "A flashy basic Calculator.",
-      created: "Created: February 10th 2021",
-      lastUpdated: "Last Updated: November 9th 2021",
+      created: "Created: Feb 10th 2021",
+      lastUpdated: " Updated: Nov 9th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/cool_calc/CoolCalc.js",
     },
@@ -104,7 +104,7 @@ function Projects(props) {
       meta: "Javascript & Fomantic",
       desc: "Heavily inspired by the Turtles in Time Character Select.",
       created: "Created: May 3rd 2021",
-      lastUpdated: "Last Updated: November 15th 2021",
+      lastUpdated: " Updated: Nov 15th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/tmnt/Tmnt.js",
     },
@@ -116,7 +116,7 @@ function Projects(props) {
       meta: "Javascript & Fomantic",
       desc: "A reference tool for determining BMI and BMR + Daily caloric Needs.",
       created: "Created: May 30th 2021",
-      lastUpdated: "Last updated: December 15th 2021",
+      lastUpdated: "Updated: Dec 15th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/bmi_calc/Bmi.js",
     },
@@ -128,7 +128,7 @@ function Projects(props) {
       meta: "Javascript & Fomantic.. some React",
       desc: "A fun little project for listing breweries based on user needs.",
       created: "Created: June 16th 2021",
-      lastUpdated: "Last Updated: December 1st 2021",
+      lastUpdated: " Updated: Dec 1st 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/breweries/Brewery.js",
     },
@@ -140,7 +140,7 @@ function Projects(props) {
       meta: "JS,Fomantic and Google Fonts",
       desc: "A system for fetching Final Fantasy Characters and game information.",
       created: "Created: June 28th 2021",
-      lastUpdated: "Last Updated: December 12th 2021",
+      lastUpdated: " Updated: Dec 12th 2021",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/final_fantasy_search/FFSearch.js",
     },
@@ -151,7 +151,7 @@ function Projects(props) {
       meta: "React JS,Fomantic and Google Fonts",
       desc: "Are you new to Springfield and happen to enjoy the outdoors? If so, check out this project that I made exclusively made for the Springfield area.",
       created: "Created: January 15th 2022",
-      lastUpdated: "Last Updated: February 1st 2022",
+      lastUpdated: " Updated: Feb 1st 2022",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/417Hikes/Hikes.js",
     },
@@ -163,7 +163,7 @@ function Projects(props) {
       meta: "React, Fomantic",
       desc: "This project provides information about Resident Evil characters that I am familiar with.  If you love profile information and character artwork, this is the project for you.",
       created: "Created: January 22nd 2022",
-      lastUpdated: "Last Updated: N/A",
+      lastUpdated: " Updated: Feb 25th 2022",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/residentevil/ResidentEvil.js",
     },
@@ -174,7 +174,7 @@ function Projects(props) {
       meta: "React, Fomantic",
       desc: "This project displays my current age and a positive for each year I've been alive.",
       created: "Created: January 23rd 2022",
-      lastUpdated: "Last Updated: N/A",
+      lastUpdated: " Updated: Feb 25th 2022",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/timeline/Timeline.js",
     },
@@ -185,7 +185,7 @@ function Projects(props) {
       meta: "React, Fomantic",
       desc: "This is an interaction with free API that provides images of random dogs.  If you love dogs, this is the project for you to view.",
       created: "Created: January 29th 2022",
-      lastUpdated: "Last Updated: N/A",
+      lastUpdated: " Updated: Feb 25th 2022",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/randomDogs/Dogs.js",
     },
@@ -195,8 +195,8 @@ function Projects(props) {
       name: "Random Cat Facts",
       meta: "React, Fomantic",
       desc: "Do you love learning about random cat facts and also having the option to view breed information about cats?  Try this project out!",
-      created: "Created: February 3rd 2022",
-      lastUpdated: "Last Updated: N/A",
+      created: "Created: Feb 3rd 2022",
+      lastUpdated: " Updated: Feb 25th 2022",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/catFacts/RandomCats.js",
     },
@@ -206,8 +206,8 @@ function Projects(props) {
       name: "Random Jokes",
       meta: "React, Fomantic, Google Fonts",
       desc: "Need some free jokes that are contained within a easter theme?  Check this project out",
-      created: "Created: February 26th 2022",
-      lastUpdated: "Last Updated: N/A",
+      created: "Created: Feb 26th 2022",
+      lastUpdated: " Updated: Feb 26th 2022",
       github:
         "https://github.com/outofcontrolmike/MAWProjects/tree/master/portfolio/src/pages/projects/jokes",
     },
@@ -218,7 +218,7 @@ function Projects(props) {
       meta: "Scratch, MIT.edu",
       desc: "An interactive story made with a learning platform named Scratch.  There's no coding involved but the platform offers users to use building blocks to create functionality for their projects.",
       created: "Created: June 22 2022",
-      lastUpdated: "Last Updated: N/A",
+      lastUpdated: " Updated: June 28th 2022",
       github:
         "https://github.com/me50/outofcontrolmike/blob/cs50/problems/2022/x/scratch/Wilson_M%20Scratch%20Project.sb3",
     },
@@ -229,7 +229,7 @@ function Projects(props) {
       meta: "Cake PHP, Fomantic, Google Fonts",
       desc: "This project is still in BETA but is totally useable if you can run a cake php project on your local machine.  This project is a CMS based on Recipes and Users.",
       created: "Work in Progress since 2022",
-      lastUpdated: "Last Updated: N/A",
+      lastUpdated: " Updated: June 26th 2022",
       github: "https://github.com/outofcontrolmike/Community_Recipes",
     },
     {
@@ -239,7 +239,7 @@ function Projects(props) {
       meta: "React, Fomantic",
       desc: "This is a project that I'm currently working on for a client. It's mostly an informative site for a Security Service Business.",
       created: "Created: May 30th, 2022",
-      lastUpdated: "Last Updated: N/A",
+      lastUpdated: "Updated: June 24th 2022",
       github: "https://github.com/outofcontrolmike/FisherProtectionServices",
     },
   ];
@@ -316,7 +316,7 @@ function Projects(props) {
   return (
     <div>
       <Navigation />
-
+  
       <div className="ui very padded relaxed grid" id="projects">
         <div
           className="ui cards centered seven horizontal"

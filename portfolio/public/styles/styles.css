@@ -258,6 +258,8 @@ color:orange;
 /*************************************Projects Page **********************************************/
 #projects {
   background-color: black;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 #list {
   font-size: 1.2rem;
@@ -269,9 +271,9 @@ color:orange;
 }
 
 .projectImage {
-  max-height: 160px;
+  max-height: 125px;
   width: 200px;
-  object-fit: cover;
+  
 }
 
 /************************************Comments Page ***********************************************/
