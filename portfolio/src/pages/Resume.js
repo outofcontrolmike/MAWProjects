@@ -7,27 +7,27 @@ function Resume() {
     <div id="resumePage">
       <Navigation />
       <div
-        className="ui two column very padded relaxed stackable grid"
+        className="ui column very padded relaxed container fluid"
         id="resumeColumnContainer"
       >
-        <div className="ui column" id="resume">
+        <br></br>
+        <div className="ui row" id="resume">
           <h1 className="mainPageh1" id="roboHeader">
             Work Experience / Education
           </h1>
           <div id="resumeSegment">
             <h2>
-              <b>Junior React Developer</b>
+              <b>Software Engineer</b>
             </h2>
             <p id="jobLocation" style={{ color: "yellow" }}>
-              Bearded Dev Ops - Willard, MO
+              Bearded Dev Ops / Karl's Technology - Willard, MO
             </p>
             <h4>
               <i style={{ color: "gray" }}>March 2021 to Present</i>
             </h4>
             <p>
               Fixing bugs and implementing features across multiple projects
-              written in the React JS Library. The main project I work on is a
-              small Point of Sale system. I use Node Package Manager to source
+              written in the React JS Library.  I mostly contribute to the front end but I work with the backend every now and then.I use Node Package Manager to source
               libraries to fulfill feature requests if needed. I have previously
               brought up questions to ask our clientele in regards to the
               implementation of their feature requests.
@@ -192,43 +192,58 @@ function Resume() {
           </div>
         </div>
         {/* End Education */}
-        <div className="ui column" id="techStack">
+        <div className="ui divider orange">
+
+        </div>
+        <div className="ui container" id="techStack" style={{paddingBottom: "2rem"}}>
           <h1 className="mainPageh1" id="roboHeader">
             Tech Stack / Certifications
           </h1>{" "}
-          <h3 style={{ color: "orange" }}>Daily Tools</h3>
-          <div className="ui list resumeList">
-            <i className="html5 icon huge"></i>
-            <i className="css3 icon huge"></i>
-            <i className="js icon huge"></i>
-            <i class="react icon huge"></i>
-            <i className="windows icon huge"></i>
-          </div>
-          <div className="ui list resumeList">
-            <i className="node js icon huge"></i>
-            <i className="npm icon huge"></i>
-            <i className="github icon huge"></i>
-          </div>
-          <h3 style={{ color: "orange" }}>Knowledgeable</h3>
-          <div className="ui list resumeList">
-            <i className="java icon huge"></i>
-            <i className="php icon huge"></i>
-            <i className="database icon huge"></i>
-          </div>
-          <div className="ui list resumeList">
-            <i className="ubuntu icon huge"></i>
-            <i className="terminal icon huge"></i>
-            <i className="bootstrap icon huge"></i>
-          </div>
-          <div className="ui list resumeList">
-            <i className="file word icon huge"></i>
-            <i className="file excel icon huge"></i>
-          </div>
+          <br></br>
+          <div className="ui container two column stackable grid fluid center aligned">
+            <div className="ui column">
+              <h3 style={{ color: "orange" }}>Daily Tools</h3>
+              <div className="ui list resumeList">
+                <i className="html5 icon huge"></i>
+                <i className="css3 icon huge"></i>
+                <i className="js icon huge"></i>
+                <i class="react icon huge"></i>
+                <i className="windows icon huge"></i>
+              </div>
+              <div className="ui list resumeList">
+                <i className="node js icon huge"></i>
+                <i className="npm icon huge"></i>
+                <i className="github icon huge"></i>
+              </div>
+            </div>
+            <div className="ui column">
+              <h3 style={{ color: "orange" }}>Knowledgeable</h3>
+              <div className="ui list resumeList">
+                <i className="java icon huge"></i>
+                <i className="php icon huge"></i>
+                <i className="database icon huge"></i>
+              </div>
+              <div className="ui list resumeList">
+                <i className="ubuntu icon huge"></i>
+                <i className="terminal icon huge"></i>
+                <i className="bootstrap icon huge"></i>
+              </div>
+              <div className="ui list resumeList">
+                <i className="file word icon huge"></i>
+                <i className="file excel icon huge"></i>
+              </div>
+            </div>
+            </div>
+
+        <br></br>
+        <div className="ui container fluid center aligned">
+      <div className="ui divider"></div>
           <h3 style={{ color: "orange" }}>Certifications</h3>
-          <div className="ui medium three list images">
+          <div className="ui">
+            <div className="ui images medium">
+
             <div
               className="ui slide masked reveal image"
-              style={{ width: "30%" }}
             >
               <div className="visible content" id="resumeVisible">
                 <h1 className="mainPageh1">HTML & CSS</h1>
@@ -242,28 +257,29 @@ function Resume() {
                 <img src={htmlPic} alt={"html Certification"} />
               </a>
             </div>
+            
 
             <div
               className="ui slide masked reveal image"
-              style={{ width: "30%" }}
             >
               <div className="visible content" id="resumeVisible">
                 <h1 className="mainPageh1">Javascript</h1>
               </div>
               <a
-                className="hidden content"
+                className="hidden content slideImage"
                 href="img/pdfs/Michael_Wilson_MTA - Programming_Javascript.pdf"
+                
               >
                 <img
-                  className=""
+                  className="slideImage"
                   src="img/javascript.JPG"
                   alt={"Javascript Certification"}
                 />
               </a>
             </div>
+
             <div
               className="ui slide masked reveal image"
-              style={{ width: "30%" }}
             >
               <div className="visible content" id="resumeVisible">
                 <h1 className="mainPageh1">SQL</h1>
@@ -279,7 +295,11 @@ function Resume() {
                 />
               </a>
             </div>
-          </div>
+            </div>
+            </div>
+
+
+            </div>
         </div>
       </div>
     </div>

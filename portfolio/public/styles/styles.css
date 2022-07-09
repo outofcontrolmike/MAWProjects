@@ -43,8 +43,6 @@ option {
 
 #landingPage,
 #about,
-#resume,
-#techStack,
 #faqsPage {
   color: white;
   background-color: black;
@@ -150,6 +148,10 @@ color:orange;
 
 /**********************************Resume Page****************************************************/
 
+#resume {
+  color: white;
+  background-color: black;
+}
 #resumeColumnContainer {
   background-color: black;
   height: fit-content;
@@ -159,10 +161,7 @@ color:orange;
   font-size: 2.5rem;
 }
 
-.slide > img {
-  height: 400px;
-  width: 400px;
-}
+
 #resume {
   height: 100vh;
   overflow-y: scroll;
@@ -186,18 +185,22 @@ color:orange;
   align-self: center;
   border: grey 2px solid;
   border-style: outset;
-  padding-top: 33%;
-  height: 200px;
+  height:225px;
+  padding:25%;
+
   font-family: "Roboto Mono", monospace;
 }
+
+.slideImage {
+  height:400px;
+ }
 
 #resumeSegment:hover,
 #faqSegment:hover {
   position: relative;
-  border: orange 2px solid;
+  border: orange 1px solid;
   padding: 1rem;
-  margin-bottom: 1rem;
-  animation: resumeBlinker 5s linear infinite;
+ 
 }
 
 @keyframes resumeBlinker {
