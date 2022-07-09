@@ -136,7 +136,6 @@ option {
 #resumeColumnContainer {
   background-color: black;
   height: fit-content;
-  padding: 2rem;
 }
 #roboHeader {
   font-family: "Roboto Mono", monospace;
@@ -332,7 +331,7 @@ option {
 
 /********************Thank you page *************************************************************/
 #thankYouContainer {
-  height:110vh;
+  height: 110vh;
   background-color: black;
 }
 
