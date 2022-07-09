@@ -33,7 +33,7 @@ function Home() {
         <h2 id="landingPageSub">Web Developer</h2>
         <div>
           <button
-            className="ui button massive inverted basic learnMore yellow"
+            className="ui button massive inverted basic learnMore yellow circular"
             style={{ marginTop: "2rem" }}
           >
             <a href="about" style={{ color: "gold" }}>

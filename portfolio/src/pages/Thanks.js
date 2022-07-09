@@ -12,18 +12,21 @@ function Thanks(props) {
     <div className="ui container fluid" id="thankYouContainer">
     <div className="ui middle aligned center aligned grid" id="thankYou">
       <div className="column thankyouText">
-        <h1 className="thankyouH1">Thank you so much!!</h1>
-        <h3 style={{ color: "white" }}>
-          I will be getting back to you as soon as I can!
+        <p>
+        <span className="ui text huge yellow">Thank you for sending me an email!!</span>
+        <h3 style={{ color: "silver" }}>
+          <br></br>
+          I will reach back out to you as soon as possible.
         </h3>
+        </p>
         <div>
           <br></br>
           <button
-            className="ui inverted orange button huge"
+            className="ui inverted yellow button huge circular"
             id="thankYouButton"
             onClick={handleClick}
           >
-            <span className="thankyouButton">Back to Home</span>
+            <span className="thankyouButton">Back to Portfolio</span>
           </button>
         </div>
       </div>
