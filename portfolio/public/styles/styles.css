@@ -79,11 +79,19 @@ option {
   font-size: 26px;
 }
 
-#aboutAvatar, .aboutAvatar{
-  background-color: white;
+.githubIcon {
+  color:white;
+  background-color: black;
 }
 
-#aboutAvatar:hover, .aboutAvatar:hover {
+#githubIcon:hover {
+  color:orange;
+}
+
+#aboutAvatar{
+  background-color: white;
+}
+#aboutAvatar:hover {
 background-color:orange;
 color:orange;
 }

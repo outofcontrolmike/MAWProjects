@@ -57,36 +57,36 @@ function About() {
             My tasks include fixing bugs and implementing feature requests among
             a few of my companies' projects. I also work with frameworks such as
             <a
-                id="reactLink"
-                style={{ fontSize: "large" }}
-                target="_blank"
-                rel="noreferrer"
-                href="https://cakephp.org/"
-              >{" "}
-                Cake PHP
-              </a>
-              {" "}and 
-              <a
-                id="reactLink"
-                style={{ fontSize: "large" }}
-                target="_blank"
-                rel="noreferrer"
-                href="https://fomantic-ui.com/"
-              >
-                {" "}
-                Fomantic CSS
-              </a>.
+              id="reactLink"
+              style={{ fontSize: "large" }}
+              target="_blank"
+              rel="noreferrer"
+              href="https://cakephp.org/"
+            >{" "}
+              Cake PHP
+            </a>
+            {" "}and
+            <a
+              id="reactLink"
+              style={{ fontSize: "large" }}
+              target="_blank"
+              rel="noreferrer"
+              href="https://fomantic-ui.com/"
+            >
+              {" "}
+              Fomantic CSS
+            </a>.
           </p>
           <p>
-           I currently work full time as a contractor and I freelance for a couple other clients.  I'm also enrolled in a Harvard University Course named <a
-                id="reactLink"
-                style={{ fontSize: "large" }}
-                target="_blank"
-                rel="noreferrer"
-                href="https://cs50.harvard.edu/x/2022/"
-              >
-                CS50
-              </a>, it's their take on an introduction to computer science and the art of it.
+            I currently work full time as a contractor and I freelance for a couple other clients.  I'm also enrolled in a Harvard University Course named <a
+              id="reactLink"
+              style={{ fontSize: "large" }}
+              target="_blank"
+              rel="noreferrer"
+              href="https://cs50.harvard.edu/x/2022/"
+            >
+              CS50
+            </a>, it's their take on an introduction to computer science and the art of it.
           </p>
           <p>
             Other than coding, I really love hiking, traveling and trying a
@@ -95,33 +95,32 @@ function About() {
             share a house that's over 100 years old.
           </p>
           <div className="center aligned author">
-            <a
-              id="aboutLink"
-              href="https://github.com/outofcontrolmike"
-              target="_blank"
-              rel="noreferrer"
-              class="aboutAvatar"
-            >
-              <img
-                className="ui avatar image"
-                id="aboutAvatar"
-                src="img/GitHub-Mark.png"
-                alt={"github"}
-              />{" "}
-            </a>
-            <a
+          <a
               href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/"
               target="_blank"
               rel="noreferrer"
+
             >
               <img
-                            id="aboutAvatar"
-
-                className="ui avatar image"
+                className="ui avatar image mini"
+                id="aboutAvatar"
                 src="img/linkedin.png"
                 alt={"Linked in icon"}
-              />{" "}
+              />
             </a>
+            <a
+              // id="aboutLink"
+              href="https://github.com/outofcontrolmike"
+              target="_blank"
+              rel="noreferrer"
+              style={{color:"white"}}
+            >
+              <i className="github icon white big" id="githubIcon" 
+              ></i>
+
+            </a>
+
+          
           </div>
         </div>
       </div>
