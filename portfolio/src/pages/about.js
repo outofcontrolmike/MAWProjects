@@ -56,13 +56,37 @@ function About() {
             </span>
             My tasks include fixing bugs and implementing feature requests among
             a few of my companies' projects. I also work with frameworks such as
-            Cake and Fomantic.
+            <a
+                id="reactLink"
+                style={{ fontSize: "large" }}
+                target="_blank"
+                rel="noreferrer"
+                href="https://cakephp.org/"
+              >{" "}
+                Cake PHP
+              </a>
+              {" "}and 
+              <a
+                id="reactLink"
+                style={{ fontSize: "large" }}
+                target="_blank"
+                rel="noreferrer"
+                href="https://fomantic-ui.com/"
+              >
+                {" "}
+                Fomantic CSS
+              </a>.
           </p>
           <p>
-            During my free time I attempt to build projects with React so I can
-            have more to offer every new day at work. I generally like to mess
-            around with API's and display information that's interesting to the
-            public and myself.
+           I currently work full time as a contractor and I freelance for a couple other clients.  I'm also enrolled in a Harvard University Course named <a
+                id="reactLink"
+                style={{ fontSize: "large" }}
+                target="_blank"
+                rel="noreferrer"
+                href="https://cs50.harvard.edu/x/2022/"
+              >
+                CS50
+              </a>, it's their take on an introduction to computer science and the art of it.
           </p>
           <p>
             Other than coding, I really love hiking, traveling and trying a
@@ -76,6 +100,7 @@ function About() {
               href="https://github.com/outofcontrolmike"
               target="_blank"
               rel="noreferrer"
+              class="aboutAvatar"
             >
               <img
                 className="ui avatar image"
@@ -85,16 +110,16 @@ function About() {
               />{" "}
             </a>
             <a
-              id="aboutAvatar"
               href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/"
               target="_blank"
               rel="noreferrer"
             >
               <img
+                            id="aboutAvatar"
+
                 className="ui avatar image"
                 src="img/linkedin.png"
                 alt={"Linked in icon"}
-                style={{ backgroundColor: "white" }}
               />{" "}
             </a>
           </div>
