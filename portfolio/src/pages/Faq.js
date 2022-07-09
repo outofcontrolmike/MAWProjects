@@ -8,6 +8,7 @@ function Contact() {
       style={{ height: "110vh" }}
     >
       <Navigation />
+      <br></br>
       <div id="faqDiv" className="ui container very padded relaxed">
         <h1
           className="mainPageh1"

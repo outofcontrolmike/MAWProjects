@@ -72,11 +72,12 @@ function NewCommentForm(props) {
             placeholder="This site has potential to be cool!"
           />
         </div>
+        <br></br>
         <button
-          className="ui button basic fluid large orange"
+          className="ui button basic fluid large yellow circular"
           id="submit"
           type="submit"
-          style={{ color: "gold", fontSize: "1.4rem", outline: "ridge" }}
+          style={{fontSize: "1.4rem", outline: "ridge" }}
         >
           Submit
         </button>

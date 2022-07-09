@@ -1,7 +1,5 @@
 //Comment Item for used for mapping
 function CommentItem(props) {
-  console.log(props);
-  console.log(props.timestamp);
 
   let firstChar = props.name.charAt(0);
   return (
@@ -18,7 +16,7 @@ function CommentItem(props) {
             - {props.timestamp}
           </div>
         </div>
-        <div className="extra text commentText" style={{ color: "white" }}>
+        <div className="extra text commentText" style={{ color: "white", maxWidth:"unset" }}>
           {props.comment}
         </div>
       </div>

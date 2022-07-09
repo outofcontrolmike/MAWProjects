@@ -5,12 +5,16 @@ export default function Contact() {
   return (
     <div id="contactPage">
       <Navigation />
+      <h1 className="mainPageh1" id="roboHeader">
+           Contact Me
+          </h1>
       <div className="ui stackable very padded relaxed container" id="contactFormSegment">
         <form
           action="https://formsubmit.co/outofcontrolmike@gmail.com"
           method="POST"
-          className="ui form large"
+          className="ui form ui raised very padded text container commentsForm"
         >
+          {/* Captcha hidden fields */}
           <input type="hidden" name="_subject" value="Email from portfolio" />
           <input
             type="hidden"
@@ -27,6 +31,7 @@ export default function Contact() {
               placeholder="Full Name"
             />
           </div>
+          <br></br>
           <div className="field">
             <input
               id="email"
@@ -36,6 +41,7 @@ export default function Contact() {
               placeholder="Preferred Email Address"
             />
           </div>
+          <br></br>
           <div className="field">
             <select
               type="text"
@@ -53,6 +59,8 @@ export default function Contact() {
               <option style={{ color: "white" }}>Compliment</option>
             </select>
           </div>
+          <br></br>
+
           <div className="field">
             <textarea
               id="message"
@@ -62,11 +70,13 @@ export default function Contact() {
               placeholder="Message"
             />
           </div>
+          <br></br>
+
           <button
-            className="ui button yellow fluid basic"
+            className="ui button yellow fluid basic circular"
             id="submit"
             type="submit"
-            style={{ color: "gold", fontSize: "1.4rem", outline: "ridge" }}
+            style={{fontSize: "1.4rem", outline: "ridge" }}
           >
             Submit
           </button>

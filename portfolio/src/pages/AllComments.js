@@ -48,16 +48,18 @@ function AllCommentsPage() {
   return (
     <div>
       <Navigation />
-
+    
       <div
         id="commentsPage"
-        className="ui two column doubling stackable grid very padded relaxed"
-        style={{ backgroundColor: "black;" }}
+        className="ui fluid container center aligned"
+        style={{ backgroundColor: "black",  }}
       >
-        <div className="ui column">
+        <div className="ui container center aligned">
           <CommentList comments={loadedComments} />
         </div>
-        <div className="column">
+    
+        <br></br>
+        <div className="ui row">
           <NewCommentForm />
         </div>
       </div>
