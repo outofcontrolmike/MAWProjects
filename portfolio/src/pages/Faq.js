@@ -5,9 +5,10 @@ function Contact() {
     <div
       id="faqsPage"
       className="ui column stackable very padded relaxed fluid container"
+      style={{ height: "110vh" }}
     >
       <Navigation />
-      <div id="faqDiv" className="ui fluid container very padded relaxed">
+      <div id="faqDiv" className="ui container very padded relaxed">
         <h1
           className="mainPageh1"
           id="roboHeader"
@@ -30,7 +31,7 @@ function Contact() {
             as a database to upload and retrieve data from. Each comment gets
             stored in a row upon upload. As far as displaying all the comments
             users have posted, my website loops through every one of the rows in
-            the database and displays them in a unique way.{" "}
+            the database table and displays them in a unique way.{" "}
           </p>
         </div>
         <div id="faqSegment">

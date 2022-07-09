@@ -13,7 +13,6 @@ function AllCommentsPage() {
     setIsLoading(true);
     fetch(url)
       .then((response) => {
-        console.log(response.json);
         return response.json();
       })
       .then((data) => {
@@ -34,8 +33,8 @@ function AllCommentsPage() {
   if (isLoading) {
     return (
       <section>
-        <div className="ui segment container inverted">
-          <div className="ui active slow blue double loader"></div>
+        <div className="ui segment container">
+          <div className="ui active slow black double loader"></div>
           <p>Loading comments :)</p>
           <br></br>
           <br></br>
@@ -50,8 +49,12 @@ function AllCommentsPage() {
     <div>
       <Navigation />
 
-      <div id="commentsPage" className="ui two column doubling stackable grid very padded relaxed">
-        <div className="ui column inverted">
+      <div
+        id="commentsPage"
+        className="ui two column doubling stackable grid very padded relaxed"
+        style={{ backgroundColor: "black;" }}
+      >
+        <div className="ui column">
           <CommentList comments={loadedComments} />
         </div>
         <div className="column">

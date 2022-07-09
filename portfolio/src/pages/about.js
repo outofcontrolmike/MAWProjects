@@ -40,8 +40,7 @@ function About() {
             front end of my company's website.
           </p>
           <p>
-            Currently I work with the Javascript coding language, specifically
-            in the{" "}
+            Currently I work with Javascript, specifically in the{" "}
             <span>
               {" "}
               <a
@@ -52,12 +51,12 @@ function About() {
                 href="https://reactjs.org/"
               >
                 React JS Library.
-              </a>
-            </span>{" "}
+              </a>{" "}
+              I also work with php from time to time.{" "}
+            </span>
             My tasks include fixing bugs and implementing feature requests among
-            a few of my companies' projects built with react. I also work with
-            frameworks such as Cake and Propel to complete back end tasks for my
-            work.
+            a few of my companies' projects. I also work with frameworks such as
+            Cake and Fomantic.
           </p>
           <p>
             During my free time I attempt to build projects with React so I can
@@ -68,8 +67,8 @@ function About() {
           <p>
             Other than coding, I really love hiking, traveling and trying a
             variety of new things. I also enjoy playing guitar, writing and
-            photography. I am married and we have two pet dogs, which we all share a
-            house that's over 100 years old.
+            photography. I am married and we have two pet dogs, which we all
+            share a house that's over 100 years old.
           </p>
           <div className="center aligned author">
             <a

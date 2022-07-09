@@ -22,9 +22,7 @@ function Home() {
           Michael A. Wilson
         </span>
 
-        <h2 id="landingPageSub">
-          Aspiring Full Stack Developer
-        </h2>
+        <h2 id="landingPageSub">Web Developer</h2>
         <div>
           <button
             className="ui button massive inverted basic learnMore yellow"
