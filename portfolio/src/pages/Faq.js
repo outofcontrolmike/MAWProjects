@@ -4,12 +4,12 @@ function Contact() {
   return (
     <div
       id="faqsPage"
-      className="ui column stackable very padded relaxed fluid container"
+      className="ui column very padded relaxed container fluid"
       style={{ height: "110vh" }}
     >
       <Navigation />
       <br></br>
-      <div id="faqDiv" className="ui container very padded relaxed">
+      <div id="faqDiv" className="ui container very padded relaxed fluid">
         <h1
           className="mainPageh1"
           id="roboHeader"

@@ -4,7 +4,7 @@ import htmlPic from "../assets/img/html.png";
 //Resume Component
 function Resume() {
   return (
-    <div id="resumePage">
+    <div id="">
       <Navigation />
       <div
         className="ui column very padded relaxed container fluid"
@@ -195,7 +195,7 @@ function Resume() {
         <div className="ui divider orange">
 
         </div>
-        <div className="ui container" id="techStack" style={{paddingBottom: "2rem"}}>
+        <div className="ui container fluid" id="techStack" style={{paddingBottom: "2rem"}}>
           <h1 className="mainPageh1" id="roboHeader">
             Tech Stack / Certifications
           </h1>{" "}

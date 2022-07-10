@@ -3,12 +3,14 @@ import Navigation from "../components/layout/Navigation";
 //Contact form , uses a emailer package to send emails - formsubmit
 export default function Contact() {
   return (
-    <div id="contactPage">
+    <div className="ui">
       <Navigation />
+      <div className="ui container fluid" id="contactPage">
+      <br></br>
       <h1 className="mainPageh1" id="roboHeader">
            Contact Me
           </h1>
-      <div className="ui stackable very padded relaxed container" id="contactFormSegment">
+      <div className="ui fluid container" id="contactFormSegment">
         <form
           action="https://formsubmit.co/outofcontrolmike@gmail.com"
           method="POST"
@@ -81,6 +83,7 @@ export default function Contact() {
             Submit
           </button>
         </form>
+      </div>
       </div>
     </div>
   );
