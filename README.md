@@ -2,7 +2,7 @@
 
 ## About
 
-This is a repository for most of my projects.  The Portfolio project is my latest project that I built, it represents my portfolio/resume.  It also has a number of personal projects within the site that might be fun for you to interact with.
+This is a repository for most of my projects. Included in this repo is my personal website. It also has a number of personal projects within the site that might be fun for you to interact with.
 
 
 ### Website Link
