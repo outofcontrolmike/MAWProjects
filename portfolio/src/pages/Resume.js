@@ -27,10 +27,12 @@ function Resume() {
             </h4>
             <p>
               Fixing bugs and implementing features across multiple projects
-              written in the React JS Library.  I mostly contribute to the front end but I work with the backend every now and then.I use Node Package Manager to source
-              libraries to fulfill feature requests if needed. I have previously
-              brought up questions to ask our clientele in regards to the
-              implementation of their feature requests.
+              written in the React JS Library. I mostly contribute to the front
+              end but I work with the backend every now and then. I use Node
+              Package Manager to source libraries to fulfill feature requests if
+              needed. I have previously brought up questions to ask our
+              clientele in regards to the implementation of their feature
+              requests.
             </p>
             <br />
           </div>
@@ -45,7 +47,7 @@ function Resume() {
               <i style={{ color: "gray" }}>November 2019 - April 2021</i>
             </h4>
             <p>
-              Mapped MLS,Multiple Listing Services, database fields to system
+              Mapped MLS, Multiple Listing Services, database fields to system
               templates, used for loading data onto client sites in conjunction
               with feed management.
             </p>
@@ -192,10 +194,12 @@ function Resume() {
           </div>
         </div>
         {/* End Education */}
-        <div className="ui divider orange">
-
-        </div>
-        <div className="ui container fluid" id="techStack" style={{paddingBottom: "2rem"}}>
+        <div className="ui divider orange"></div>
+        <div
+          className="ui container centered"
+          id="techStack"
+          style={{ paddingBottom: "2rem" }}
+        >
           <h1 className="mainPageh1" id="roboHeader">
             Tech Stack / Certifications
           </h1>{" "}
@@ -233,73 +237,61 @@ function Resume() {
                 <i className="file excel icon huge"></i>
               </div>
             </div>
-            </div>
+          </div>
+          <br></br>
+          <div className="ui container fluid center aligned">
+            <div className="ui divider"></div>
+            <h3 style={{ color: "orange" }}>Certifications</h3>
+            <div className="ui">
+              <div className="ui images medium">
+                <div className="ui slide masked reveal image">
+                  <div className="visible content" id="resumeVisible">
+                    <h1 className="mainPageh1">HTML & CSS</h1>
+                  </div>
 
-        <br></br>
-        <div className="ui container fluid center aligned">
-      <div className="ui divider"></div>
-          <h3 style={{ color: "orange" }}>Certifications</h3>
-          <div className="ui">
-            <div className="ui images medium">
+                  <a
+                    target="blank_self"
+                    className="hidden content"
+                    href="img/pdfs/Michael_Wilson_MTA - HTML_CSS.pdf"
+                  >
+                    <img src={htmlPic} alt={"html Certification"} />
+                  </a>
+                </div>
 
-            <div
-              className="ui slide masked reveal image"
-            >
-              <div className="visible content" id="resumeVisible">
-                <h1 className="mainPageh1">HTML & CSS</h1>
+                <div className="ui slide masked reveal image">
+                  <div className="visible content" id="resumeVisible">
+                    <h1 className="mainPageh1">Javascript</h1>
+                  </div>
+                  <a
+                    className="hidden content slideImage"
+                    href="img/pdfs/Michael_Wilson_MTA - Programming_Javascript.pdf"
+                  >
+                    <img
+                      className="slideImage"
+                      src="img/javascript.JPG"
+                      alt={"Javascript Certification"}
+                    />
+                  </a>
+                </div>
+
+                <div className="ui slide masked reveal image">
+                  <div className="visible content" id="resumeVisible">
+                    <h1 className="mainPageh1">SQL</h1>
+                  </div>
+                  <a
+                    className="hidden content"
+                    href="img/pdfs/Michael_Wilson_MTA_Database_Administration_Fundmentals.pdf"
+                  >
+                    <img
+                      className=""
+                      src="img/database.JPG"
+                      alt={"SQL Certification"}
+                    />
+                  </a>
+                </div>
               </div>
-
-              <a
-                target="blank_self"
-                className="hidden content"
-                href="img/pdfs/Michael_Wilson_MTA - HTML_CSS.pdf"
-              >
-                <img src={htmlPic} alt={"html Certification"} />
-              </a>
             </div>
-            
-
-            <div
-              className="ui slide masked reveal image"
-            >
-              <div className="visible content" id="resumeVisible">
-                <h1 className="mainPageh1">Javascript</h1>
-              </div>
-              <a
-                className="hidden content slideImage"
-                href="img/pdfs/Michael_Wilson_MTA - Programming_Javascript.pdf"
-                
-              >
-                <img
-                  className="slideImage"
-                  src="img/javascript.JPG"
-                  alt={"Javascript Certification"}
-                />
-              </a>
-            </div>
-
-            <div
-              className="ui slide masked reveal image"
-            >
-              <div className="visible content" id="resumeVisible">
-                <h1 className="mainPageh1">SQL</h1>
-              </div>
-              <a
-                className="hidden content"
-                href="img/pdfs/Michael_Wilson_MTA_Database_Administration_Fundmentals.pdf"
-              >
-                <img
-                  className=""
-                  src="img/database.JPG"
-                  alt={"SQL Certification"}
-                />
-              </a>
-            </div>
-            </div>
-            </div>
-
-
-            </div>
+          </div>
         </div>
       </div>
     </div>
