@@ -11,7 +11,7 @@ function Home() {
       className="ui two column stackable grid very padded relaxed"
       id="landingPage"
     >
-           <div className="ui column" style={{ backgroundColor: "black" }}>
+      <div className="ui column" style={{ backgroundColor: "black" }}>
         <img
           className="ui image big centered rounded"
           style={{ marginTop: "6rem" }}
@@ -42,7 +42,6 @@ function Home() {
           </button>
         </div>
       </div>
- 
     </div>
   );
 }

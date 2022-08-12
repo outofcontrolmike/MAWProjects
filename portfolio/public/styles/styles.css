@@ -26,17 +26,18 @@ option {
 
 /*Navigation menu */
 #portfolioNavigation {
-  padding-left: 0px;
   font-family: "Roboto Mono", monospace;
-  color: gold;
+  background-color: gold;
   margin-bottom: unset;
+  font-size: x-large;
 }
+
 #goldText:hover {
-  color: orange;
+  text-shadow: 1px 1px black;
 }
 
 .portfolioSelected {
-  border-bottom: orange 2px solid;
+  border-bottom: black 2px solid;
 }
 
 /*Landing Page */
@@ -68,30 +69,29 @@ option {
 }
 
 #goldText {
-  color: gold;
+  color: black;
 }
 
 #aboutAvatar,
-#aboutLink,
-#mainNavigationItem {
+#aboutLink {
   font-size: 26px;
 }
 
 .githubIcon {
-  color:white;
+  color: white;
   background-color: black;
 }
 
 #githubIcon:hover {
-  color:orange;
+  color: orange;
 }
 
-#aboutAvatar{
+#aboutAvatar {
   background-color: white;
 }
 #aboutAvatar:hover {
-background-color:orange;
-color:orange;
+  background-color: orange;
+  color: orange;
 }
 
 .ui.menu .item img.logo {
@@ -151,23 +151,19 @@ color:orange;
 #resume {
   color: white;
   background-color: black;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 #resumeColumnContainer {
   background-color: black;
+  height: 850px;
+  overflow-y: scroll;
 }
 #roboHeader {
   font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
-}
-
-
-#resume {
-  height: 100vh;
-  overflow-y: scroll;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
 }
 
 #resumeSegment > h2 {
@@ -184,22 +180,21 @@ color:orange;
   align-self: center;
   border: grey 2px solid;
   border-style: outset;
-  height:225px;
-  padding:25%;
+  height: 225px;
+  padding: 25%;
 
   font-family: "Roboto Mono", monospace;
 }
 
 .slideImage {
-  height:400px;
- }
+  height: 400px;
+}
 
 #resumeSegment:hover,
 #faqSegment:hover {
   position: relative;
   border: orange 1px solid;
   padding: 1rem;
- 
 }
 
 @keyframes resumeBlinker {
@@ -232,9 +227,9 @@ color:orange;
   border-color: orange;
 }
 
-#submit:hover{
+#submit:hover {
   background-color: black;
-  color: orange
+  color: orange;
 }
 
 /* Media Rules */
@@ -256,14 +251,14 @@ color:orange;
   #mainNavigationItem {
     font-size: 16px;
     letter-spacing: 15px;
-    padding-bottom:.5rem;
-    position:relative;
-   
-}
+    padding-bottom: 0.5rem;
+    position: relative;
+  }
 }
 
 /*************************************Projects Page **********************************************/
-#projects, #commentsPage {
+#projects,
+#commentsPage {
   background-color: black;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -280,7 +275,6 @@ color:orange;
 .projectImage {
   max-height: 125px;
   width: 200px;
-  
 }
 
 /************************************Comments Page ***********************************************/
@@ -319,12 +313,11 @@ color:orange;
   font-size: 1.4rem;
 }
 
-
 /* ***************Contact Page************************** */
 #contactPage {
   background-color: black;
   padding-bottom: 4rem;
-  height:100vh;
+  height: 100vh;
   padding-right: unset;
 }
 
@@ -335,7 +328,7 @@ color:orange;
 /* Media Rules */
 @media only screen and (max-width: 500px) {
   #contactPage {
-    height:fit-content;
+    height: fit-content;
   }
 }
 /********************FAQ Page *************************************************************/
