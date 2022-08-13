@@ -1,54 +1,56 @@
+import Navigation from "../components/layout/Navigation";
 function Skills() {
   return (
-    <>
-      <div className="ui divider orange"></div>
-      <div
-        className="ui container centered"
-        id="techStack"
-        style={{ paddingBottom: "2rem" }}
-      >
-        <h1 className="mainPageh1" id="roboHeader">
-          Tech Stack / Certifications
-        </h1>{" "}
-        <br></br>
-        <div className="ui container two column stackable grid fluid center aligned">
-          <div className="ui column">
-            <h3 style={{ color: "orange" }}>Daily Tools</h3>
+    <div
+      style={{
+        height: window.innerHeight,
+        backgroundColor: "black",
+      }}
+    >
+      <Navigation />
+      <div className="ui container fluid center aligned" id="techStack">
+        <div className="ui two column stackable grid very padded relaxed">
+          <div className="ui column" style={{ alignSelf: "center" }}>
+            <h1 style={{ color: "orange" }}>Daily Tools</h1>
             <div className="ui list resumeList">
-              <i className="html5 icon huge"></i>
-              <i className="css3 icon huge"></i>
-              <i className="js icon huge"></i>
-              <i class="react icon huge"></i>
-              <i className="windows icon huge"></i>
-            </div>
-            <div className="ui list resumeList">
-              <i className="node js icon huge"></i>
-              <i className="npm icon huge"></i>
-              <i className="github icon huge"></i>
+              <i className=" massive html5 icon "></i>
+              <i className="css3 icon massive"></i>
+              <i className="js icon massive"></i>
+              <i class="react icon massive"></i>
+              <div className="ui list resumeList">
+                <i className="node js icon massive"></i>
+                <i className="npm icon massive"></i>
+                <i className="github icon massive"></i>
+              </div>
+              <div className="ui list resumeList">
+                <i className="windows icon massive"></i>
+              </div>
             </div>
           </div>
-          <div className="ui column">
-            <h3 style={{ color: "orange" }}>Knowledgeable</h3>
+          <div className="ui column" style={{ color: "blue" }}>
+            <h1 style={{ color: "orange" }}>Knowledgeable</h1>
             <div className="ui list resumeList">
-              <i className="java icon huge"></i>
-              <i className="php icon huge"></i>
-              <i className="database icon huge"></i>
-            </div>
-            <div className="ui list resumeList">
-              <i className="ubuntu icon huge"></i>
-              <i className="terminal icon huge"></i>
-              <i className="bootstrap icon huge"></i>
-            </div>
-            <div className="ui list resumeList">
-              <i className="file word icon huge"></i>
-              <i className="file excel icon huge"></i>
+              <i className="python icon massive"></i>
+              <i className="java icon massive"></i>
+              <i className="php icon massive"></i>
+              <i className="database icon massive"></i>
+              <div className="ui list resumeList">
+                <i className="ubuntu icon massive"></i>
+                <i className="terminal icon massive"></i>
+                <i className="bootstrap icon massive"></i>
+              </div>
+              <div className="ui list resumeList">
+                <i className="file word icon massive"></i>
+                <i className="file excel icon massive"></i>
+              </div>
             </div>
           </div>
         </div>
         <br></br>
+        <br></br>
         <div className="ui container fluid center aligned">
-          <div className="ui divider"></div>
-          <h3 style={{ color: "orange" }}>Certifications</h3>
+          <hr style={{ borderColor: "gold" }}></hr>
+          <h1 style={{ color: "ghostwhite" }}>Certifications</h1>
           <div className="ui">
             <div className="ui images medium">
               <div className="ui slide masked reveal image">
@@ -100,7 +102,7 @@ function Skills() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

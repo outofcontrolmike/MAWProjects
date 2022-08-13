@@ -31,6 +31,15 @@ function Navigation(props) {
             Resume
           </NavLink>
         </a>
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/skills"
+          >
+            Skills
+          </NavLink>
+        </a>
 
         <a className="item" id="mainNavigationItem">
           <NavLink
@@ -59,11 +68,11 @@ function Navigation(props) {
             Contact
           </NavLink>
         </a>
-        <a className="item" id="mainNavigationItem">
+        {/* <a className="item" id="mainNavigationItem">
           <NavLink activeClassName="portfolioSelected" id="goldText" to="/faq">
             FAQ
           </NavLink>
-        </a>
+        </a> */}
       </div>
     </div>
   );

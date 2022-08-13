@@ -9,6 +9,8 @@ import Resume from "./pages/Resume";
 import Faq from "./pages/Faq";
 import Thanks from "./pages/Thanks";
 import AllCommentsPage from "./pages/AllComments";
+import Skills from "./pages/Skills";
+
 import Layout from "./components/layout/Layout";
 
 //Project Imports
@@ -27,11 +29,10 @@ import Pokemon from "./pages/projects/pokemon/Pokemon";
 import RandomDogs from "./pages/projects/randomDogs/Dogs";
 import RandomUser from "./pages/projects/randomUser/RandomUser";
 import Residentevil from "./pages/projects/residentevil/Residentevil";
-import Timeline from "./pages/projects/timeline/Timeline"
+import Timeline from "./pages/projects/timeline/Timeline";
 import TMNT from "./pages/projects/tmnt/Tmnt";
 
 //Hike Imports
-
 
 //Collection Routes
 import ProjectRoutes from "./components/routes/ProjectRoutes";
@@ -61,6 +62,9 @@ function App() {
         </Route>
         <Route path="/faq">
           <Faq />
+        </Route>
+        <Route path="/skills">
+          <Skills />
         </Route>
         <Route path="/thanks">
           <Thanks />
@@ -118,11 +122,9 @@ function App() {
         <Route path="/tmnt">
           <TMNT />
         </Route>
-      
 
         {/* Region for Hikes project */}
-      <ProjectRoutes />
-        
+        <ProjectRoutes />
       </Switch>
     </Layout>
   );

@@ -1,6 +1,7 @@
 /***********************GLOBAL Styling***********************************************************/
 
 /* simple way of showing movement on button hover*/
+
 button:hover {
   position: relative;
 }
@@ -43,7 +44,6 @@ option {
 /*Landing Page */
 
 #landingPage,
-#about,
 #faqsPage {
   color: white;
   background-color: black;
@@ -129,6 +129,7 @@ option {
   background-color: black;
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
+  color: white;
 }
 
 #aboutMe {

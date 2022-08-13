@@ -4,7 +4,10 @@ import myPicture from "../assets/img/think.png";
 //About section component
 function About() {
   return (
-    <>
+    <div
+      class="ui container fluid"
+      style={{ height: window.innerHeight, backgroundColor: "black" }}
+    >
       <Navigation />
       <div
         className="ui two column doubling stackable grid very padded relaxed "
@@ -62,10 +65,11 @@ function About() {
               target="_blank"
               rel="noreferrer"
               href="https://cakephp.org/"
-            >{" "}
+            >
+              {" "}
               Cake PHP
-            </a>
-            {" "}and
+            </a>{" "}
+            and
             <a
               id="reactLink"
               style={{ fontSize: "large" }}
@@ -75,10 +79,14 @@ function About() {
             >
               {" "}
               Fomantic CSS
-            </a>.
+            </a>
+            .
           </p>
           <p>
-            I currently work full time as a contractor and I freelance for a couple other clients.  I'm also enrolled in a Harvard University Course named <a
+            I currently work full time as a contractor and I freelance for a
+            couple other clients. I'm also enrolled in a Harvard University
+            Course named{" "}
+            <a
               id="reactLink"
               style={{ fontSize: "large" }}
               target="_blank"
@@ -86,7 +94,9 @@ function About() {
               href="https://cs50.harvard.edu/x/2022/"
             >
               CS50
-            </a>, it's their take on an introduction to computer science and the art of it.
+            </a>
+            , it's their take on an introduction to computer science and the art
+            of it.
           </p>
           <p>
             Other than coding, I really love hiking, traveling and trying a
@@ -95,11 +105,10 @@ function About() {
             share a house that's over 100 years old.
           </p>
           <div className="center aligned author">
-          <a
+            <a
               href="https://www.linkedin.com/in/michael-wilson-6a2a5b18a/"
               target="_blank"
               rel="noreferrer"
-
             >
               <img
                 className="ui avatar image mini"
@@ -113,18 +122,14 @@ function About() {
               href="https://github.com/outofcontrolmike"
               target="_blank"
               rel="noreferrer"
-              style={{color:"white"}}
+              style={{ color: "white" }}
             >
-              <i className="github icon white big" id="githubIcon" 
-              ></i>
-
+              <i className="github icon white big" id="githubIcon"></i>
             </a>
-
-          
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
