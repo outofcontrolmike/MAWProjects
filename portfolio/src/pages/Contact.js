@@ -1,13 +1,19 @@
 import Navigation from "../components/layout/Navigation";
 
+import picture from "../assets/img/chalkboard.avif";
+
 //Contact form , uses a emailer package to send emails - formsubmit
 export default function Contact() {
   return (
-    <div className="ui">
+    <div
+      className="ui"
+      id="contactPageContainer"
+      style={{ backgroundImage: picture }}
+    >
       <div className="ui container fluid" id="contactPage">
         <br></br>
         <h1 className="mainPageh1" id="roboHeader">
-          Contact Me
+          Get in Touch Today!
         </h1>
         <div className="ui fluid container" id="contactFormSegment">
           <form

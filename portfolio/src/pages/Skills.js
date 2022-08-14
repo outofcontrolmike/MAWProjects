@@ -11,37 +11,37 @@ function Skills() {
       <div className="ui container fluid center aligned" id="techStack">
         <div className="ui two column stackable grid very padded relaxed">
           <div className="ui column" style={{ alignSelf: "center" }}>
-            <h1 style={{ color: "orange" }}>Daily Tools</h1>
+            <h1 style={{ color: "whitesmoke" }}>Daily Tools</h1>
             <div className="ui list resumeList">
-              <i className=" massive html5 icon "></i>
-              <i className="css3 icon massive"></i>
-              <i className="js icon massive"></i>
-              <i class="react icon massive"></i>
+              <i className=" huge html5 icon "></i>
+              <i className="css3 icon huge"></i>
+              <i className="js icon huge"></i>
+              <i class="react icon huge"></i>
               <div className="ui list resumeList">
-                <i className="node js icon massive"></i>
-                <i className="npm icon massive"></i>
-                <i className="github icon massive"></i>
+                <i className="node js icon huge"></i>
+                <i className="npm icon huge"></i>
+                <i className="github icon huge"></i>
               </div>
               <div className="ui list resumeList">
-                <i className="windows icon massive"></i>
+                <i className="windows icon huge"></i>
               </div>
             </div>
           </div>
           <div className="ui column" style={{ color: "blue" }}>
             <h1 style={{ color: "orange" }}>Knowledgeable</h1>
             <div className="ui list resumeList">
-              <i className="python icon massive"></i>
-              <i className="java icon massive"></i>
-              <i className="php icon massive"></i>
-              <i className="database icon massive"></i>
+              <i className="python icon huge"></i>
+              <i className="java icon huge"></i>
+              <i className="php icon huge"></i>
+              <i className="database icon huge"></i>
               <div className="ui list resumeList">
-                <i className="ubuntu icon massive"></i>
-                <i className="terminal icon massive"></i>
-                <i className="bootstrap icon massive"></i>
+                <i className="ubuntu icon huge"></i>
+                <i className="terminal icon huge"></i>
+                <i className="bootstrap icon huge"></i>
               </div>
               <div className="ui list resumeList">
-                <i className="file word icon massive"></i>
-                <i className="file excel icon massive"></i>
+                <i className="file word icon huge"></i>
+                <i className="file excel icon huge"></i>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ function Skills() {
         <br></br>
         <br></br>
         <div className="ui container fluid center aligned">
-          <hr style={{ borderColor: "gold" }}></hr>
+          <hr style={{ borderColor: "smokewhite" }}></hr>
           <h1 style={{ color: "ghostwhite" }}>Certifications</h1>
           <div className="ui">
             <div className="ui images medium">

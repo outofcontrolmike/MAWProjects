@@ -34,11 +34,12 @@ option {
 }
 
 #goldText:hover {
-  text-shadow: 1px 1px black;
+  text-shadow: 0.5px 1px black;
+  font-weight: bolder;
 }
 
 .portfolioSelected {
-  border-bottom: black 2px solid;
+  border-bottom: black 4px solid;
 }
 
 /*Landing Page */
@@ -101,6 +102,7 @@ option {
 
 .resumeList > i {
   color: gold;
+  font-size: 10em;
 }
 
 .resumeList > a:hover,
@@ -315,6 +317,7 @@ option {
 }
 
 /* ***************Contact Page************************** */
+
 #contactPage {
   background-color: black;
   padding-bottom: 4rem;
