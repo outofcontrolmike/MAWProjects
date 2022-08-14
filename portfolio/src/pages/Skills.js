@@ -60,7 +60,10 @@ function Skills() {
         <br></br>
         <br></br>
         <br></br>
-        <div className="ui row" style={{ alignSelf: "center" }}>
+        <div
+          className="ui row"
+          style={{ alignSelf: "center", backgroundColor: "black" }}
+        >
           <br></br>
           <p>
             <span className="ui text orange big">Certifications</span>
