@@ -100,13 +100,13 @@ option {
   padding: 1em 0em;
 }
 
-.resumeList > i {
+.resumeList > span > i {
   color: gold;
   font-size: 10em;
 }
 
 .resumeList > a:hover,
-.resumeList > i:hover {
+.resumeList > span > i:hover {
   color: #f2711c;
 }
 

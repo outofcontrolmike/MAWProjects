@@ -18,17 +18,78 @@ function Skills() {
               <span className="ui text orange big">Daily Tools</span>
             </p>{" "}
             <div className="ui list resumeList">
-              <i className=" huge html5 icon "></i>
-              <i className="css3 icon huge"></i>
-              <i className="js icon huge"></i>
-              <i class="react icon huge"></i>
+              <span
+                data-tooltip="HTML 5"
+                data-inverted=""
+                data-variation="small"
+                data-position="left center"
+              >
+                <i className=" huge html5 icon"></i>
+              </span>
+              <span
+                data-tooltip="CSS 3"
+                data-inverted=""
+                data-variation="small"
+                data-position="top center"
+              >
+                <i className=" huge css3 icon"></i>
+              </span>
+
+              <span
+                data-tooltip="Vanilla Javascript"
+                data-inverted=""
+                data-variation="small"
+                data-position="top center"
+              >
+                <i className=" huge js icon"></i>
+              </span>
+
+              <span
+                data-tooltip="React Javascript"
+                data-inverted=""
+                data-variation="small"
+                data-position="right center"
+              >
+                <i className=" huge react icon"></i>
+              </span>
+
               <div className="ui list resumeList">
-                <i className="node js icon huge"></i>
-                <i className="npm icon huge"></i>
-                <i className="github icon huge"></i>
+                <span
+                  data-tooltip="Node JS"
+                  data-inverted=""
+                  data-variation="small"
+                  data-position="left center"
+                >
+                  <i className=" huge node js icon"></i>
+                </span>
+
+                <span
+                  data-tooltip="Node Package Manager"
+                  data-inverted=""
+                  data-variation="small"
+                  data-position="bottom center"
+                >
+                  <i className=" huge npm icon"></i>
+                </span>
+
+                <span
+                  data-tooltip="Github / GitLab"
+                  data-inverted=""
+                  data-variation="small"
+                  data-position="right center"
+                >
+                  <i className=" huge github icon"></i>
+                </span>
               </div>
               <div className="ui list resumeList">
-                <i className="windows icon huge"></i>
+                <span
+                  data-tooltip="Windows"
+                  data-inverted=""
+                  data-variation="small"
+                  data-position="left center"
+                >
+                  <i className=" huge windows icon"></i>
+                </span>
               </div>
             </div>
           </div>
@@ -37,19 +98,87 @@ function Skills() {
               <span className="ui text orange big">Knowledgeable</span>
             </p>{" "}
             <div className="ui list resumeList">
-              <i className="python icon huge"></i>
-              <i className="java icon huge"></i>
-              <i className="php icon huge"></i>
-              <i className="database icon huge"></i>
+              <span
+                data-tooltip="Python"
+                data-inverted=""
+                data-variation="small"
+                data-position="left center"
+              >
+                <i className=" huge python icon"></i>
+              </span>
+
+              <span
+                data-tooltip="Java"
+                data-inverted=""
+                data-variation="small"
+                data-position="top center"
+              >
+                <i className=" huge java icon"></i>
+              </span>
+
+              <span
+                data-tooltip="Php"
+                data-inverted=""
+                data-variation="small"
+                data-position="top center"
+              >
+                <i className=" huge php icon"></i>
+              </span>
+
+              <span
+                data-tooltip="My SQL"
+                data-inverted=""
+                data-variation="small"
+                data-position="right center"
+              >
+                <i className="database icon huge"></i>
+              </span>
             </div>
             <div className="ui list resumeList">
-              <i className="ubuntu icon huge"></i>
-              <i className="terminal icon huge"></i>
-              <i className="bootstrap icon huge"></i>
+              <span
+                data-tooltip="Linux - Ubuntu"
+                data-inverted=""
+                data-variation="small"
+                data-position="left center"
+              >
+                <i className=" huge ubuntu icon"></i>
+              </span>
+
+              <span
+                data-tooltip="Command Line"
+                data-inverted=""
+                data-variation="small"
+                data-position="bottom center"
+              >
+                <i className=" huge terminal icon"></i>
+              </span>
+
+              <span
+                data-tooltip="Bootstrap CSS"
+                data-inverted=""
+                data-variation="small"
+                data-position="right center"
+              >
+                <i className="bootstrap icon huge"></i>
+              </span>
             </div>
             <div className="ui list resumeList">
-              <i className="file word icon huge"></i>
-              <i className="file excel icon huge"></i>
+              <span
+                data-tooltip="Word Processing"
+                data-inverted=""
+                data-variation="small"
+                data-position="left center"
+              >
+                <i className="word file icon huge"></i>
+              </span>
+              <span
+                data-tooltip="Spreadsheets"
+                data-inverted=""
+                data-variation="small"
+                data-position="right center"
+              >
+                <i className="file excel icon huge"></i>
+              </span>
             </div>
           </div>
         </div>
