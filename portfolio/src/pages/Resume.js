@@ -10,7 +10,7 @@ function Resume() {
   return (
     <div
       class="container fluid"
-      style={{ backgroundColor: "black", height: window.innerHeight }}
+      style={{ backgroundColor: "black", height: "100vh" }}
     >
       <Navigation />
       <div

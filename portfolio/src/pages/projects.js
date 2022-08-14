@@ -3,6 +3,8 @@ import Navigation from "../components/layout/Navigation";
 
 //Project's information to display
 function Projects(props) {
+  //ToDO: Should be able to do an async await and use resolve promise instead of timeout
+
   //Fixes render issue - Function was mapping before the component rendered
   setTimeout(mapOver, 1);
 
@@ -314,9 +316,9 @@ function Projects(props) {
   }
 
   return (
-    <div>
+    <div style={{ height: "100vh", backgroundColor: "black" }}>
       <Navigation />
-  
+
       <div className="ui very padded relaxed grid" id="projects">
         <div
           className="ui cards centered seven horizontal"

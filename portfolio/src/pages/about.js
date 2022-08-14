@@ -6,7 +6,7 @@ function About() {
   return (
     <div
       class="ui container fluid"
-      style={{ height: window.innerHeight, backgroundColor: "black" }}
+      style={{ height: "100vh", backgroundColor: "black" }}
     >
       <Navigation />
       <div

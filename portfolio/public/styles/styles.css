@@ -107,7 +107,7 @@ option {
 
 .resumeList > a:hover,
 .resumeList > i:hover {
-  color: orange;
+  color: #f2711c;
 }
 
 .learnMore:hover {
@@ -183,14 +183,12 @@ option {
   align-self: center;
   border: grey 2px solid;
   border-style: outset;
-  height: 225px;
-  padding: 25%;
-
+  padding: 30%;
   font-family: "Roboto Mono", monospace;
 }
 
 .slideImage {
-  height: 400px;
+  height: 200px;
 }
 
 #resumeSegment:hover,
@@ -242,7 +240,6 @@ option {
   }
 
   #resume,
-  #techStack,
   #commentForm {
     border-top: solid orange 2px;
     background-color: black;
