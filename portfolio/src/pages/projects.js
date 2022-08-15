@@ -259,7 +259,7 @@ function Projects(props) {
 
     let image = document.createElement("img");
     image.src = project.img;
-    image.className = "ui image large projectImage";
+    image.className = "ui image big projectImage";
     projectLink.append(image);
     imageContainer.append(projectLink);
 
@@ -321,7 +321,7 @@ function Projects(props) {
 
       <div className="ui very padded relaxed grid" id="projects">
         <div
-          className="ui cards centered five horizontal"
+          className="ui cards centered five medium horizontal"
           id="list"
           style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>
