@@ -15,10 +15,8 @@ function ResumeInfo() {
             <span className="ui text medium">2021 - Present</span>
             </div>
             <div className="ui column">
-             <h2>Software Engineer</h2>
-             <p><span className="ui text medium">Fixing bugs and implementing features across multiple projects
-             written in the React JS Library. I mostly contribute to the front
-             end but I work with the backend every now and then. </span></p>
+             <h2>Software Engineer - Front End</h2>
+             <p><span className="ui text medium">Bug Fixes, Testing and Feature Requests, and writing documentation for software functionality.  I also dive into the backend from time to time. </span></p>
             </div>
           </div>
         {/* Job 2 */}
