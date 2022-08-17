@@ -2,18 +2,18 @@ function ResumeInfo() {
   return (
     <div className="ui container fluid very relaxed padded">
       <div className="ui column fluid" style={{ fontSize: "medium" }}>
-        <span className="ui text large orange" style={{ paddingLeft: "1rem" }}>
+        <span
+          className="ui text large"
+          style={{ paddingLeft: "1rem", color: "gold" }}
+        >
           Work Experience
         </span>
         <hr style={{ borderBottomColor: "gold" }}></hr>
 
         {/* Job 1 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div
-            className="ui column container"
-            style={{ borderRight: "gold 2px solid" }}
-          >
-            <h3 style={{ color: "gold" }}>
+          <div className="ui column container">
+            <h3 style={{ color: "orange" }}>
               Karl's Technology / Bearded Dev Ops
             </h3>
             <span className="ui text ">Willard, MO</span>
@@ -21,7 +21,7 @@ function ResumeInfo() {
             <span className="ui text ">2021 - Present</span>
           </div>
           <div className="ui column">
-            <h3 style={{ color: "gold" }}>Software Engineer - Front End</h3>
+            <h3 style={{ color: "orange" }}>Software Engineer - Front End</h3>
             <p>
               <span className="ui text ">
                 Bug Fixes, Testing and Feature Requests, and writing
@@ -31,19 +31,17 @@ function ResumeInfo() {
             </p>
           </div>
         </div>
+        <hr></hr>
         {/* Job 2 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div
-            className="ui column container"
-            style={{ borderRight: "gold 2px solid" }}
-          >
-            <h3 style={{ color: "gold" }}>Market Maker Leads</h3>
+          <div className="ui column container">
+            <h3 style={{ color: "orange" }}>Market Maker Leads</h3>
             <span className="ui text ">Springfield, MO</span>
             <br></br>
             <span className="ui text ">2019 - Present</span>
           </div>
           <div className="ui column">
-            <h3 style={{ color: "gold" }}>
+            <h3 style={{ color: "orange" }}>
               Mapper / Junior Web Developer / Contractor
             </h3>
             <p>
@@ -55,13 +53,11 @@ function ResumeInfo() {
             </p>
           </div>
         </div>
+        <hr></hr>
         {/* job 3 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div
-            className="ui column container"
-            style={{ borderRight: "gold 2px solid" }}
-          >
-            <h3 style={{ color: "gold" }}>
+          <div className="ui column container">
+            <h3 style={{ color: "orange" }}>
               Ozarks Technical Community College
             </h3>
             <span className="ui text ">Springfield, MO</span>
@@ -69,7 +65,7 @@ function ResumeInfo() {
             <span className="ui text ">2019</span>
           </div>
           <div className="ui column">
-            <h3 style={{ color: "gold" }}>
+            <h3 style={{ color: "orange" }}>
               Web Assistant Services - Work Study
             </h3>
             <p>

@@ -103,7 +103,7 @@ function Skills() {
           </div>
           <div className="ui column">
             <p style={{ paddingBottom: "10px" }}>
-              <span className="ui text orange">Knowledgeable</span>
+              <span className="ui text orange big">Knowledgeable</span>
             </p>{" "}
             <div className="ui list resumeList">
               <span

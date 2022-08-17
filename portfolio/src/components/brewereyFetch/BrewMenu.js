@@ -213,6 +213,7 @@ function BrewMenu() {
     let column1 = document.createElement("div");
     let column2 = document.createElement("div");
     let divider = document.createElement("hr");
+    divider.id = "brewHr";
     let breweryType = document.createElement("p");
     let breweryName = document.createElement("p");
     let breweryStreet = document.createElement("p");

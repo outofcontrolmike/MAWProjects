@@ -134,7 +134,7 @@
       text-overflow: clip;
     }
   
-    hr {
+    #brewHr {
       visibility: hidden;
     }
   }
