@@ -12,7 +12,7 @@ function Skills() {
       <div className="ui container fluid center aligned" id="techStack">
         <br></br>
         <br></br>
-        <div className="ui two column stackable grid very padded relaxed">
+        <div className="ui three column stackable grid very padded relaxed">
           <div className="ui column" style={{ alignSelf: "center" }}>
             <p style={{ paddingBottom: "10px" }}>
               <span className="ui text orange big">Daily Tools</span>
@@ -83,6 +83,9 @@ function Skills() {
                 </span>
               </div>
             </div>
+          </div>
+          <div className="ui column" style={{alignSelf: "center"}}>
+          <i class="laptop code icon massive purple"></i>
           </div>
           <div className="ui column">
             <p style={{ paddingBottom: "10px" }}>
