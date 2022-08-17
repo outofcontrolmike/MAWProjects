@@ -55,15 +55,6 @@ function Skills() {
 
               <div className="ui list resumeList">
                 <span
-                  data-tooltip="Node JS"
-                  data-inverted=""
-                  data-variation="small"
-                  data-position="left center"
-                >
-                  <i className=" huge node js icon"></i>
-                </span>
-
-                <span
                   data-tooltip="Node Package Manager"
                   data-inverted=""
                   data-variation="small"

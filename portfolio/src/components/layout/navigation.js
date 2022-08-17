@@ -22,15 +22,7 @@ function Navigation(props) {
             About
           </NavLink>
         </a>
-        <a className="item" id="mainNavigationItem">
-          <NavLink
-            activeClassName="portfolioSelected"
-            id="goldText"
-            to="/resume"
-          >
-            Resume
-          </NavLink>
-        </a>
+
         <a className="item" id="mainNavigationItem">
           <NavLink
             activeClassName="portfolioSelected"
@@ -38,6 +30,16 @@ function Navigation(props) {
             to="/skills"
           >
             Skills
+          </NavLink>
+        </a>
+
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/resume"
+          >
+            Resume
           </NavLink>
         </a>
 

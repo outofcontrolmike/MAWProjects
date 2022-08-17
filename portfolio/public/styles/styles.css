@@ -204,7 +204,8 @@ option {
   }
 }
 
-#myName {
+#myName,
+#contactHeader {
   color: gold;
   font-family: "Roboto Mono", monospace;
   font-weight: 900;
@@ -274,7 +275,6 @@ option {
 
 .projectImage {
   max-height: 125px;
-  
 }
 
 /************************************Comments Page ***********************************************/
@@ -318,8 +318,12 @@ option {
 #contactPage {
   background-color: black;
   padding-bottom: 4rem;
-  height: 100vh;
   padding-right: unset;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #contactFormSegment {

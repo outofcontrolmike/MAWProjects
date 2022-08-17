@@ -8,18 +8,31 @@ export default function Contact() {
     <div
       className="ui"
       id="contactPageContainer"
-      style={{ backgroundImage: picture }}
+      style={{
+        backgroundImage: picture,
+        height: "100vh",
+        backgroundColor: "black",
+      }}
     >
-      <div className="ui container fluid" id="contactPage">
+      <div
+        className="ui container fluid"
+        style={{ backgroundColor: "black" }}
+        id="contactPage"
+      >
         <br></br>
-        <h1 className="mainPageh1" id="roboHeader">
-          Get in Touch Today!
-        </h1>
-        <div className="ui fluid container" id="contactFormSegment">
+        <p id="contactHeader" style={{ textAlign: "center", color: "gold" }}>
+          <span className="ui text gold huge center aligned">Get In Touch</span>
+        </p>
+
+        <div
+          className="ui fluid container"
+          id="contactFormSegment"
+          style={{ backgroundColor: "black" }}
+        >
           <form
             action="https://formsubmit.co/3c390be336cb1bf27bb2e1a6ec97299b"
             method="POST"
-            className="ui form ui raised very padded text container commentsForm"
+            className="ui form ui raised small very padded text container commentsForm"
           >
             {/* Captcha hidden fields */}
             <input type="hidden" name="_subject" value="Email from portfolio" />
@@ -77,15 +90,15 @@ export default function Contact() {
                 placeholder="Message"
               />
             </div>
-            <br></br>
 
             <button
-              className="ui button yellow fluid basic circular"
               id="submit"
-              type="submit"
-              style={{ fontSize: "1.4rem", outline: "ridge" }}
+              className="ui button massive inverted basic learnMore yellow circular fluid"
+              style={{ marginTop: "2rem" }}
             >
-              Submit
+              <a href="thanks" style={{ color: "gold" }}>
+                Submit
+              </a>
             </button>
           </form>
         </div>
