@@ -1,7 +1,7 @@
 function ResumeInfo() {
   return (
-    <div className="ui container fluid very relaxed padded">
-      <div className="ui column fluid" style={{ fontSize: "medium" }}>
+    <div className="row" style={{backgroundColor : "black"}}>
+      <div className="ui container"       style={{ fontSize: "medium", backgroundColor: "#1b1c1d", color: "white", padding: "1rem"}} >
         <span
           className="ui text large"
           style={{ paddingLeft: "1rem", color: "gold" }}
@@ -12,7 +12,7 @@ function ResumeInfo() {
 
         {/* Job 1 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div className="ui column container">
+          <div className="ui column">
             <h3 style={{ color: "orange" }}>
               Karl's Technology / Bearded Dev Ops
             </h3>
@@ -34,7 +34,7 @@ function ResumeInfo() {
         <hr></hr>
         {/* Job 2 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div className="ui column container">
+          <div className="ui column">
             <h3 style={{ color: "orange" }}>Market Maker Leads</h3>
             <span className="ui text ">Springfield, MO</span>
             <br></br>

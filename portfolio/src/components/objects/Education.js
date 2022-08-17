@@ -1,8 +1,11 @@
 function Education() {
   return (
+    <div className="row" style={{backgroundColor : "black"}}>
+          <br></br>
+
     <div
-      className="ui container segment inverted"
-      style={{ fontSize: "medium" }}
+      className="ui container"
+      style={{ fontSize: "medium", backgroundColor: "#1b1c1d", color: "white", padding: "1rem"}} 
     >
       <span
         className="ui text large"
@@ -12,7 +15,7 @@ function Education() {
       </span>
       <hr style={{ borderBottomColor: "gold" }}></hr>
 
-      {/* Job 1 */}
+      {/* Education 1 */}
       <div className="ui two column stackable grid  very padded">
         <div className="ui column container">
           <h3 style={{ color: "orange" }}>
@@ -36,7 +39,9 @@ function Education() {
           </p>
         </div>
       </div>
-      {/* Job 2 */}
+      <hr></hr>
+
+      {/* Education 2 */}
       <div className="ui two column stackable grid fluid very padded">
         <div className="ui column container">
           <h3 style={{ color: "orange" }}>
@@ -52,14 +57,13 @@ function Education() {
           </h3>
           <p>
             <span className="ui text medium">
-              Mapped MLS, Multiple Listing Services, database fields to system
-              templates, used for loading data onto client sites in conjunction
-              with feed management.
+              I mostly took general education courses due to the possibility of transferring to Missouri State University.  I also studied Culinary Arts and Automotive Engineering for a couple semesters.
             </span>
           </p>
         </div>
       </div>
       {/* --- end */}
+    </div>
     </div>
   );
 }
