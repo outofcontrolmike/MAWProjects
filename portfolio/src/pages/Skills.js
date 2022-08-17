@@ -95,7 +95,7 @@ function Skills() {
             style={{ alignSelf: "center" }}
           >
             <img
-              className="ui image medium centered rounded"
+              className="ui image small centered rounded"
               style={{ color: "white" }}
               alt={"Me"}
               src={picture}
@@ -103,7 +103,7 @@ function Skills() {
           </div>
           <div className="ui column">
             <p style={{ paddingBottom: "10px" }}>
-              <span className="ui text orange big">Knowledgeable</span>
+              <span className="ui text orange">Knowledgeable</span>
             </p>{" "}
             <div className="ui list resumeList">
               <span
