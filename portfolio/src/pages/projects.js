@@ -321,7 +321,7 @@ function Projects(props) {
 
       <div className="ui very padded relaxed grid" id="projects">
         <div
-          className="ui cards centered five medium horizontal"
+          className="ui cards centered six medium horizontal"
           id="list"
           style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>
