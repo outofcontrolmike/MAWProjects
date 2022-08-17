@@ -7,26 +7,29 @@ import Education from "../components/objects/Education";
 function Resume() {
   return (
     <div
-      class="container"
-      style={{ backgroundColor: "black", height: "100vh",  color: "white" }}
+      class="ui container fluid  inverted"
+      id="resumePage"
+      style={{ backgroundColor: "black", height: "100vh", color: "white" }}
     >
       <Navigation />
-      <div
-        className="ui container"
-      >
+      <br></br>
+      <div className="ui container segment inverted">
         {/* End First column */}
         {/* Start 2nd column */}
-          <ResumeInfo></ResumeInfo>
-        </div>
+        <ResumeInfo></ResumeInfo>
+      </div>
+      <br></br>
+      <div className="ui container fluid" style={{ backgroundColor: "black" }}>
         <Education />
+      </div>
 
-        {/* <div
+      {/* <div
           className="ui column"
           id="ResumeOptions"
         >
           <hr></hr>
         </div> */}
-      </div>
+    </div>
   );
 }
 

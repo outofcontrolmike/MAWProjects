@@ -150,14 +150,8 @@ option {
 }
 
 /**********************************Resume Page****************************************************/
-
-#resume {
-  color: white;
-  background-color: black;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
+#resumePage {
+  font-size: 20px;
 }
 #resumeColumnContainer {
   background-color: black;
@@ -334,6 +328,9 @@ option {
 @media only screen and (max-width: 500px) {
   #contactPage {
     height: fit-content;
+  }
+  #codeIcon {
+    visibility: hidden;
   }
 }
 /********************FAQ Page *************************************************************/

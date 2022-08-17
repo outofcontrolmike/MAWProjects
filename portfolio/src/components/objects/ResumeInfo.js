@@ -1,55 +1,87 @@
 function ResumeInfo() {
   return (
     <div className="ui container fluid very relaxed padded">
-      <div className="ui column fluid">
-        <br></br>
-        <p><span className="ui text big" style={{color: "gold", paddingLeft: ".5rem"}}>Work Experience</span></p>
-        <hr></hr>
-      
+      <div className="ui column fluid" style={{ fontSize: "medium" }}>
+        <span className="ui text large orange" style={{ paddingLeft: "1rem" }}>
+          Work Experience
+        </span>
+        <hr style={{ borderBottomColor: "gold" }}></hr>
+
         {/* Job 1 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div className="ui column container" style={{borderRight: "gold 2px solid"}}>
-            <h2>Karl's Technology / Bearded Dev Ops</h2>
-            <span className="ui text medium">Willard, MO</span>
+          <div
+            className="ui column container"
+            style={{ borderRight: "gold 2px solid" }}
+          >
+            <h3 style={{ color: "gold" }}>
+              Karl's Technology / Bearded Dev Ops
+            </h3>
+            <span className="ui text ">Willard, MO</span>
             <br></br>
-            <span className="ui text medium">2021 - Present</span>
-            </div>
-            <div className="ui column">
-             <h2>Software Engineer - Front End</h2>
-             <p><span className="ui text medium">Bug Fixes, Testing and Feature Requests, and writing documentation for software functionality.  I also dive into the backend from time to time. </span></p>
-            </div>
+            <span className="ui text ">2021 - Present</span>
           </div>
+          <div className="ui column">
+            <h3 style={{ color: "gold" }}>Software Engineer - Front End</h3>
+            <p>
+              <span className="ui text ">
+                Bug Fixes, Testing and Feature Requests, and writing
+                documentation for software functionality. I also dive into the
+                backend from time to time.{" "}
+              </span>
+            </p>
+          </div>
+        </div>
         {/* Job 2 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div className="ui column container" style={{borderRight: "gold 2px solid"}}>
-            <h2>Market Maker Leads</h2>
-            <span className="ui text medium">Springfield, MO</span>
+          <div
+            className="ui column container"
+            style={{ borderRight: "gold 2px solid" }}
+          >
+            <h3 style={{ color: "gold" }}>Market Maker Leads</h3>
+            <span className="ui text ">Springfield, MO</span>
             <br></br>
-            <span className="ui text medium">2019 - Present</span>
-            </div>
-            <div className="ui column">
-             <h2>Mapper / Junior Web Developer / Contractor</h2>
-             <p><span className="ui text medium">Mapped MLS, Multiple Listing Services, database fields to system
-           templates, used for loading data onto client sites in conjunction
-           with feed management.</span></p>
-            </div>
+            <span className="ui text ">2019 - Present</span>
           </div>
+          <div className="ui column">
+            <h3 style={{ color: "gold" }}>
+              Mapper / Junior Web Developer / Contractor
+            </h3>
+            <p>
+              <span className="ui text ">
+                Mapped MLS, Multiple Listing Services, database fields to system
+                templates, used for loading data onto client sites in
+                conjunction with feed management.
+              </span>
+            </p>
+          </div>
+        </div>
         {/* job 3 */}
         <div className="ui two column stackable grid fluid very padded">
-          <div className="ui column container" style={{borderRight: "gold 2px solid"}}>
-            <h2>Ozarks Technical Community College</h2>
-            <span className="ui text medium">Springfield, MO</span>
+          <div
+            className="ui column container"
+            style={{ borderRight: "gold 2px solid" }}
+          >
+            <h3 style={{ color: "gold" }}>
+              Ozarks Technical Community College
+            </h3>
+            <span className="ui text ">Springfield, MO</span>
             <br></br>
-            <span className="ui text medium">2019</span>
-            </div>
-            <div className="ui column">
-             <h2>Web Assistant Services - Work Study</h2>
-             <p><span className="ui text medium">Assist with various word press related projects/updates for Web
-             Services requirements.</span></p>
-            </div>
+            <span className="ui text ">2019</span>
+          </div>
+          <div className="ui column">
+            <h3 style={{ color: "gold" }}>
+              Web Assistant Services - Work Study
+            </h3>
+            <p>
+              <span className="ui text ">
+                Assist with various word press related projects/updates for Web
+                Services requirements.
+              </span>
+            </p>
           </div>
         </div>
       </div>
+    </div>
   );
 }
 

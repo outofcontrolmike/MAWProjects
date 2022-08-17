@@ -1,4 +1,6 @@
 import Navigation from "../components/layout/Navigation";
+import picture from "../assets/img/codeIcon.png";
+
 function Skills() {
   return (
     <div
@@ -9,7 +11,10 @@ function Skills() {
       }}
     >
       <Navigation />
-      <div className="ui container fluid center aligned" id="techStack">
+      <div
+        className="ui container fluid center aligned"
+        style={{ backgroundColor: "black" }}
+      >
         <br></br>
         <br></br>
         <div className="ui three column stackable grid very padded relaxed">
@@ -84,8 +89,17 @@ function Skills() {
               </div>
             </div>
           </div>
-          <div className="ui column" style={{alignSelf: "center"}}>
-          <i class="laptop code icon massive purple"></i>
+          <div
+            className="ui column"
+            id="codeIcon"
+            style={{ alignSelf: "center" }}
+          >
+            <img
+              className="ui image medium centered rounded"
+              style={{ color: "white" }}
+              alt={"Me"}
+              src={picture}
+            ></img>
           </div>
           <div className="ui column">
             <p style={{ paddingBottom: "10px" }}>
