@@ -36,15 +36,28 @@ function NewCommentForm(props) {
   }
 
   return (
-    <div className="ui form" id="commentForm" style={{ alignSelf: "center" }}>
+    <div
+      className="ui form inverted segment very padded relaxed"
+      id=""
+      style={{ alignSelf: "center", height: "90vh" }}
+    >
       <form
-        style={{ fontSize: "1.5rem" }}
+        style={{ fontSize: "1.3rem" }}
         onSubmit={submitHandler}
-        className="ui form ui raised very padded text container commentsForm"
+        className="ui raised very padded text container"
       >
-        <h1 className="mainPageh1" id="roboHeader">
-          Please Leave a Comment!
-        </h1>
+        <p>
+          {" "}
+          <span className="ui text big yellow" style={{ textAlign: "center" }}>
+            Leave a Comment!
+          </span>
+          <span>
+            <i
+              class="feather alternate icon yellow big"
+              style={{ float: "right" }}
+            ></i>
+          </span>
+        </p>
         <div className="field" id="input">
           <label> Name or Alias</label>
           <input
@@ -53,7 +66,7 @@ function NewCommentForm(props) {
             max="25"
             size="50"
             required
-            id="name"
+            id=""
             ref={nameRef}
             placeholder="Name"
           />
@@ -61,22 +74,24 @@ function NewCommentForm(props) {
         <div className="field">
           <label>Comment</label>
           <textarea
-            style={{ backgroundcolor: "black" }}
             type="text"
             min="1"
             max="500"
             required
-            id="comment"
+            rows="20"
             ref={messageRef}
-            placeholder="This site has potential to be cool!"
+            placeholder="Say something nice please."
           />
         </div>
         <br></br>
         <button
-          className="ui button basic fluid large yellow circular"
-          id="submit"
+          className="ui button fluid large yellow circular"
           type="submit"
-          style={{ fontSize: "1.4rem", outline: "ridge" }}
+          style={{
+            fontSize: "1.2rem",
+            outline: "ridge",
+            outlineColor: "black",
+          }}
         >
           Submit
         </button>
