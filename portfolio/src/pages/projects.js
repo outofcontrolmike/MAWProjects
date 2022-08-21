@@ -314,7 +314,7 @@ function Projects(props) {
     let gitLink = document.createElement("a");
 
     let icon = document.createElement("i");
-    icon.className = "github icon orange";
+    icon.className = "github icon black";
     gitLink.append(icon);
     gitHub.append(gitLink);
 
