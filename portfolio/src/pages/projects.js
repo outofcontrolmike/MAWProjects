@@ -147,6 +147,17 @@ function Projects(props) {
         "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/final_fantasy_search/FFSearch.js",
     },
     {
+      img: "img/comments.PNG",
+      href: "/comments",
+      name: "Comments Feed",
+      meta: "JS, Fomantic , Google Fire Base",
+      desc: "Wanna leave a comment? Visit this project to leave me a comment. The comments are posted and fetched from a Google Firebase database.",
+      created: "Created: July 10th 2021",
+      lastUpdated: " Updated: Aug 21st 2022",
+      github:
+        "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/AllComments.js",
+    },
+    {
       img: "img/hikeProject.png",
       href: "/hikes",
       name: "Mikes Hikes Site",

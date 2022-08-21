@@ -31,13 +31,12 @@ function NewCommentForm(props) {
         "Content-Type": "application/json",
       },
     }).then(() => {
-      console.log("messageData", messageData);
       window.location.reload();
     });
   }
 
   return (
-    <div className="ui form" id="commentForm">
+    <div className="ui form" id="commentForm" style={{ alignSelf: "center" }}>
       <form
         style={{ fontSize: "1.5rem" }}
         onSubmit={submitHandler}
@@ -77,7 +76,7 @@ function NewCommentForm(props) {
           className="ui button basic fluid large yellow circular"
           id="submit"
           type="submit"
-          style={{fontSize: "1.4rem", outline: "ridge" }}
+          style={{ fontSize: "1.4rem", outline: "ridge" }}
         >
           Submit
         </button>

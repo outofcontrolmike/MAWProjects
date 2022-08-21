@@ -7,7 +7,7 @@ function CommentList(props) {
   return (
     <div
       className="ui"
-      style={{ height: "100vh", overflowY: "auto", marginLeft: "2rem" }}
+      style={{ height: "90vh", overflowY: "scroll", marginLeft: "2rem" }}
     >
       <h1 className="mainPageh1" id="roboHeader">
         Comments Feed{" "}

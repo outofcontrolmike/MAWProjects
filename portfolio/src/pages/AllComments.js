@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import CommentList from "../components/comments/CommentList";
-import Navigation from "../components/layout/Navigation";
 import NewCommentForm from "../components/comments/NewCommentForm";
 
 function AllCommentsPage() {
@@ -33,7 +32,7 @@ function AllCommentsPage() {
   if (isLoading) {
     return (
       <section>
-        <div className="ui segment container">
+        <div className="ui container">
           <div className="ui active slow black double loader"></div>
           <p>Loading comments :)</p>
           <br></br>
@@ -46,20 +45,25 @@ function AllCommentsPage() {
   }
 
   return (
-    <div>
-      <Navigation />
-    
+    <div
+      className="ui container fluid"
+      style={{ height: "100vh", backgroundColor: "black" }}
+    >
       <div
+        className="ui two column doubling stackable grid very padded relaxed"
         id="commentsPage"
-        className="ui fluid container center aligned"
-        style={{ backgroundColor: "black",  }}
+        style={{
+          backgroundColor: "black",
+          height: "100vh",
+          marginBottom: "2rem",
+        }}
       >
-        <div className="ui container center aligned">
+        <div className="ui container center aligned column">
           <CommentList comments={loadedComments} />
         </div>
-    
+
         <br></br>
-        <div className="ui row">
+        <div className="ui  column">
           <NewCommentForm />
         </div>
       </div>
