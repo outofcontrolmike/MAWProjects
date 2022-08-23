@@ -217,7 +217,7 @@ function Skills() {
                 className="hidden content"
                 href="img/pdfs/Michael_Wilson_MTA - HTML_CSS.pdf"
               >
-                <img src="img/html.PNG" alt={"html Certification"} />
+                <img src="img/html.png" alt={"html Certification"} />
               </a>
             </div>
 
