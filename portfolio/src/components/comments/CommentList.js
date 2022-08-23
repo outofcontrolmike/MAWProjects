@@ -7,9 +7,12 @@ function CommentList(props) {
   return (
     <div
       className="ui"
-      style={{ height: "90vh", overflowY: "scroll", marginLeft: "2rem" }}
+      style={{
+        overflowY: "scroll",
+        marginLeft: "2rem",
+      }}
     >
-      <div className="ui feed medium">
+      <div className="ui feed medium" style={{ height: "90vh" }}>
         {props.comments.map((comment) => (
           <CommentItem
             key={comment.id}

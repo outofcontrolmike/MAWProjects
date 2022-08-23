@@ -31,7 +31,7 @@ function AllCommentsPage() {
 
   if (isLoading) {
     return (
-      <section style={{ backgroundColor: "black", height: window.innerHeight }}>
+      <section style={{ backgroundColor: "black" }}>
         <div className="ui container">
           <div className="ui active white slow double loader"></div>
           <p>Loading comments :)</p>
@@ -45,23 +45,26 @@ function AllCommentsPage() {
   }
 
   return (
-    <div className="ui container fluid" style={{ height: "100vh" }}>
+    <div className="">
       <div
-        className="ui two column doubling stackable grid very padded relaxed"
-        id="commentsPage"
-        style={{
-          backgroundColor: "black",
-          height: "100vh",
-          marginBottom: "2rem",
-        }}
+        className="ui container fluid"
+        style={{ backgroundColor: "black", height: "100vh" }}
       >
-        <div className="ui container center aligned column">
-          <CommentList comments={loadedComments} />
-        </div>
+        <div
+          className="ui two column doubling stackable grid very padded relaxed"
+          id="commentsPage"
+          style={{
+            backgroundColor: "black",
+          }}
+        >
+          <div className="ui container center aligned column">
+            <CommentList comments={loadedComments} />
+          </div>
 
-        <br></br>
-        <div className="ui column">
-          <NewCommentForm />
+          <br></br>
+          <div className="ui column" style={{ backgroundColor: "black" }}>
+            <NewCommentForm />
+          </div>
         </div>
       </div>
     </div>

@@ -39,7 +39,7 @@ function NewCommentForm(props) {
     <div
       className="ui form inverted segment very padded relaxed"
       id=""
-      style={{ alignSelf: "center", height: "90vh" }}
+      style={{ alignSelf: "center", height: "90vh", margin: "1rem" }}
     >
       <form
         style={{ fontSize: "1.3rem" }}
