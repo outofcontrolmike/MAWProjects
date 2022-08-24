@@ -153,6 +153,10 @@ option {
 #resumePage {
   font-size: 20px;
 }
+#resumeContainer:hover {
+  background-color: rgb(27, 28, 29);
+}
+
 #resumeColumnContainer {
   background-color: black;
   height: 850px;

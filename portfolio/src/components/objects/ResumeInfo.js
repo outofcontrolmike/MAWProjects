@@ -1,7 +1,17 @@
 function ResumeInfo() {
   return (
-    <div className="row" style={{backgroundColor : "black"}}>
-      <div className="ui container"       style={{ fontSize: "medium", backgroundColor: "#1b1c1d", color: "white", padding: "1rem"}} >
+    <div className="row" style={{ backgroundColor: "black" }}>
+      <div
+        className="ui container"
+        id="resumeContainer"
+        style={{
+          fontSize: "medium",
+          border: "rgb(27, 28, 29) 5px solid",
+          borderRadius: "2rem",
+          color: "white",
+          padding: "1rem",
+        }}
+      >
         <span
           className="ui text large"
           style={{ paddingLeft: "1rem", color: "gold" }}

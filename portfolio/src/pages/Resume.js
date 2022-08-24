@@ -6,20 +6,16 @@ import Education from "../components/objects/Education";
 //Resume Component
 function Resume() {
   return (
-
     <div
-    class="ui container fluid"
-    style={{ backgroundColor: "black", height: "100vh"}}
-  >
-    <Navigation />
-    <br ></br>
-    <br></br>
+      class="ui container fluid"
+      style={{ backgroundColor: "black", height: "100vh" }}
+    >
+      <Navigation />
+      <br></br>
 
-    <ResumeInfo />
-    <Education />
-  </div>
-
-
+      <ResumeInfo />
+      <Education />
+    </div>
   );
 }
 
