@@ -44,7 +44,7 @@ export default function Contact() {
             <input
               type="hidden"
               name="_next"
-              value="http://mawportfolio.online/thanks"
+              value="http://mwportfolio.online/thanks"
             />
             <input type="hidden" name="_captcha" value="false" />
             <div className="field">
