@@ -83,22 +83,6 @@ function About() {
             .
           </p>
           <p>
-            I currently work full time as a contractor and I freelance for a
-            couple other clients. I'm also enrolled in a Harvard University
-            Course named{" "}
-            <a
-              id="reactLink"
-              style={{ fontSize: "large" }}
-              target="_blank"
-              rel="noreferrer"
-              href="https://cs50.harvard.edu/x/2022/"
-            >
-              CS50
-            </a>
-            , it's their take on an introduction to computer science and the art
-            of it.
-          </p>
-          <p>
             Other than coding, I really love hiking, traveling and trying a
             variety of new things. I also enjoy playing guitar, writing and
             photography. I am married and we have two pet dogs, which we all

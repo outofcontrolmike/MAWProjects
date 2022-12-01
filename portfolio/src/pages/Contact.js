@@ -1,7 +1,3 @@
-import Navigation from "../components/layout/Navigation";
-
-import picture from "../assets/img/chalkboard.avif";
-
 //Contact form , uses a emailer package to send emails - formsubmit
 export default function Contact() {
   return (
@@ -9,7 +5,6 @@ export default function Contact() {
       className="ui"
       id="contactPageContainer"
       style={{
-        backgroundImage: picture,
         height: "100vh",
         backgroundColor: "black",
       }}
