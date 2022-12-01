@@ -6,7 +6,7 @@ This is a repository for most of my projects. Included in this repo is my person
 
 
 ### Website Link
-www.mawportfolio.online
+www.mwportfolio.online
 
 ### Projects include - 
 
