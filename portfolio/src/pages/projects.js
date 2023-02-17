@@ -1,3 +1,4 @@
+import { event } from "jquery";
 import React from "react";
 import Navigation from "../components/layout/Navigation";
 
@@ -9,13 +10,44 @@ function Projects(props) {
   setTimeout(mapOver, 1);
 
   function mapOver() {
-    document.getElementById("list").innerHTML = "";
+    document.getElementById("projectList").innerHTML = "";
     projects.reverse();
     projects.map(createProjectCard);
   }
 
   //Projects to map through
   let projects = [
+
+    //Contracts
+      {
+          isContract: true,
+          img: "img/greatrace1.JPG",
+          href: "/great_race",
+          name: "Fisher Protection Services",
+          meta: "Register.com's Website builder",
+          desc:
+            "Blah blah blah test for Fisher Protection Services" +
+            "<b> Fair warning</b>, this project is not supposed to be mobile friendly.",
+          created: "Created: Spring 2018",
+          lastUpdated: " Updated: Nov 18th 2021",
+          github:
+            "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/great_race/GreatRace.js",
+        },
+        {
+          isContract: true,
+          img: "img/greatrace1.JPG",
+          href: "/great_race",
+          name: "SS&B Heating & Cooling",
+          meta: "Next JS, Typescript, Sanity.IO Bootstrap",
+          desc:
+            "This is a client I've helped fix SEO Issues for and Consult for as well.  I Currently Contract for them.",
+          created: "Created: Spring 2018",
+          lastUpdated: " Updated: Nov 18th 2021",
+          github:
+            "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/great_race/GreatRace.js",
+        },
+
+        // End Contracts
     {
       img: "img/greatrace1.JPG",
       href: "/great_race",
@@ -259,6 +291,7 @@ function Projects(props) {
 
   //Create Cards
   function createProjectCard(project) {
+
     let container = document.createElement("div");
     container.className = "card projectCard";
 
@@ -323,17 +356,28 @@ function Projects(props) {
     extraContent.append(contentInfo, gitHub);
 
     container.append(imageContainer, content, extraContent);
-    document.getElementById("list").append(container);
+    { project.isContract ? document.getElementById('contractList').append(container) :  document.getElementById("projectList").append(container);}
+   
   }
 
   return (
     <div style={{ height: "100vh", backgroundColor: "black" }}>
       <Navigation />
-
+      <span className="ui text orange big">Contract Work</span>
       <div className="ui very padded relaxed grid" id="projects">
+    <div
+      className="ui cards centered five medium horizontal link"
+      id="contractList"
+      style={{ marginLeft: "1rem", marginRight: "1rem" }}
+    ></div>
+  </div>
+
+      <span className="ui text orange big">Projects</span>
+      <div className="ui very padded relaxed grid" id="projects">
+    
         <div
           className="ui cards centered six medium horizontal link"
-          id="list"
+          id="projectList"
           style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>
       </div>
