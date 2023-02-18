@@ -193,7 +193,7 @@ function Skills() {
         <br></br>
         <br></br>
 
-        <hr style={{ borderColor: "smokewhite" }}></hr>
+        {/* <hr style={{ borderColor: "" }}></hr> */}
         <br></br>
         <br></br>
         <br></br>

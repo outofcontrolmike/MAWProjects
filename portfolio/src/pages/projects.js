@@ -7,10 +7,11 @@ function Projects(props) {
   //ToDO: Should be able to do an async await and use resolve promise instead of timeout
 
   //Fixes render issue - Function was mapping before the component rendered
-  setTimeout(mapOver, 1);
+  setTimeout(mapOver, 2);
 
   function mapOver() {
     document.getElementById("projectList").innerHTML = "";
+    document.getElementById("contractList").innerHTML= "";
     projects.reverse();
     projects.map(createProjectCard);
   }
@@ -21,30 +22,27 @@ function Projects(props) {
     //Contracts
       {
           isContract: true,
-          img: "img/greatrace1.JPG",
-          href: "/great_race",
+          img: "img/clients/fisher.PNG",
+          href: "https://www.fisherprotectionservices.com",
           name: "Fisher Protection Services",
           meta: "Register.com's Website builder",
-          desc:
-            "Blah blah blah test for Fisher Protection Services" +
-            "<b> Fair warning</b>, this project is not supposed to be mobile friendly.",
-          created: "Created: Spring 2018",
+          desc: "This is a project that I'm currently working on for a client. It's mostly an informative site for a Security Service Business.",
+          created: "Current",
           lastUpdated: " Updated: Nov 18th 2021",
-          github:
-            "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/great_race/GreatRace.js",
+          github: "null",
         },
         {
           isContract: true,
-          img: "img/greatrace1.JPG",
-          href: "/great_race",
+          img: "img/clients/ss&b.png",
+          href: "https://www.ssbhc.com",
           name: "SS&B Heating & Cooling",
           meta: "Next JS, Typescript, Sanity.IO Bootstrap",
           desc:
             "This is a client I've helped fix SEO Issues for and Consult for as well.  I Currently Contract for them.",
-          created: "Created: Spring 2018",
+          created: "Current",
           lastUpdated: " Updated: Nov 18th 2021",
-          github:
-            "https://github.com/outofcontrolmike/MAWProjects/blob/master/portfolio/src/pages/projects/great_race/GreatRace.js",
+          github: "null",
+
         },
 
         // End Contracts
@@ -277,16 +275,7 @@ function Projects(props) {
       lastUpdated: " Updated: June 26th 2022",
       github: "https://github.com/outofcontrolmike/Community_Recipes",
     },
-    {
-      img: "img/fisher.PNG",
-      href: "https://cozy-crisp-8f617e.netlify.app/",
-      name: "Fisher Protection Services",
-      meta: "React, Fomantic",
-      desc: "This is a project that I'm currently working on for a client. It's mostly an informative site for a Security Service Business.",
-      created: "Created: May 30th, 2022",
-      lastUpdated: "Updated: June 24th 2022",
-      github: "https://github.com/outofcontrolmike/FisherProtectionServices",
-    },
+
   ];
 
   //Create Cards
@@ -343,27 +332,37 @@ function Projects(props) {
     contentInfo.className = "right floated";
     contentInfo.innerHTML = project.lastUpdated;
 
+    
     let gitHub = document.createElement("span");
     let gitLink = document.createElement("a");
 
     let icon = document.createElement("i");
     icon.className = "github icon black";
     gitLink.append(icon);
-    gitHub.append(gitLink);
-
     gitLink.href = project.github;
 
-    extraContent.append(contentInfo, gitHub);
+    gitHub.append(gitLink);
 
+    console.log("project.github",project.github);
+
+     gitLink.href !== "https://www.mwportfolio.online/null" ? extraContent.append(contentInfo, gitHub) :   extraContent.append(contentInfo);
+
+    
     container.append(imageContainer, content, extraContent);
-    { project.isContract ? document.getElementById('contractList').append(container) :  document.getElementById("projectList").append(container);}
+
+
+    { project.isContract == true ?  document.getElementById("contractList").append(container) :   document.getElementById('projectList').append(container);}
    
   }
 
   return (
-    <div style={{ height: "100vh", backgroundColor: "black" }}>
+    <div className="" style={{ height: "100vh", backgroundColor: "black" }}>
       <Navigation />
-      <span className="ui text orange big">Contract Work</span>
+
+      {/* Contracts */}
+      <div className="ui text large centered" style={{color:"skyblue"}}>
+        <h1>Contract Work</h1>
+      </div>
       <div className="ui very padded relaxed grid" id="projects">
     <div
       className="ui cards centered five medium horizontal link"
@@ -372,11 +371,14 @@ function Projects(props) {
     ></div>
   </div>
 
-      <span className="ui text orange big">Projects</span>
+{/* Projects */}
+<div className="ui text large centered" style={{color:"skyblue", backgroundColor: "black"}} >
+        <h1>Projects</h1>
+      </div>
       <div className="ui very padded relaxed grid" id="projects">
     
         <div
-          className="ui cards centered six medium horizontal link"
+          className="ui cards centered five medium horizontal link"
           id="projectList"
           style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>

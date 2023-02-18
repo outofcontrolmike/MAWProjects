@@ -1,5 +1,4 @@
 import picture from "../assets/img/me.png";
-
 //Landing page component
 function Home() {
   let height = window.innerHeight;
@@ -8,9 +7,10 @@ function Home() {
   return (
     <div
       style={{ height: { height } }}
-      className="ui two column stackable grid very padded relaxed"
+      className="ui two column grid stackable padded"
       id="landingPage"
     >
+      <div className="row">
       <div className="ui column" style={{ backgroundColor: "black" }}>
         <img
           className="ui image big centered rounded"
@@ -21,26 +21,26 @@ function Home() {
       </div>
       <div
         className="ui column"
-        style={{ margin: "auto", textAlign: "center" }}
+        style={{ alignSelf: "center", textAlign: "center" }}
       >
-        <span
-          style={{ textAlign: "left", color: "gold" }}
-          className="ui text gold massive"
-        >
-          Michael A. Wilson
-        </span>
+           <img
+          className="ui image big centered rounded"
+          
+          alt={"Business logo"}
+          src={"/img/logo.png"}
+        ></img>
 
-        <h2 id="landingPageSub">Web Developer</h2>
         <div>
           <button
             className="ui button massive inverted basic learnMore yellow circular"
-            style={{ marginTop: "2rem" }}
+            style={{ marginTop: "1rem" }}
           >
-            <a href="about" style={{ color: "gold" }}>
+            <a href="about" style={{ color: "skyblue" }}>
               Learn More{" "}
             </a>
           </button>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -10,7 +10,8 @@ function About() {
     >
       <Navigation />
       <div
-        className="ui two column doubling stackable grid very padded relaxed "
+        className="ui two column doubling stackable grid relaxed"
+        style={{padding: "2rem"}}
         id="about"
       >
         <div className="ui column" id="pictureContainer">
@@ -25,7 +26,7 @@ function About() {
           id="aboutMe"
           style={{ backgroundColor: "black" }}
         >
-          <span id="myName" className="ui text large">
+          <span id="myName" className="ui text big" style={{color: ""}}>
             Mr. Michael Wilson
           </span>
           <br />
@@ -48,7 +49,7 @@ function About() {
               {" "}
               <a
                 id="reactLink"
-                style={{ fontSize: "large" }}
+                style={{ fontSize: "large", color: "skyblue"}}
                 target="_blank"
                 rel="noreferrer"
                 href="https://reactjs.org/"
@@ -61,7 +62,7 @@ function About() {
             a few of my companies' projects. I also work with frameworks such as
             <a
               id="reactLink"
-              style={{ fontSize: "large" }}
+              style={{ fontSize: "large", color: "skyblue"}}
               target="_blank"
               rel="noreferrer"
               href="https://cakephp.org/"
@@ -81,6 +82,7 @@ function About() {
               Fomantic CSS
             </a>
             .
+            <span>Tail Wind CSS, Next Js, TypeScript.</span>
           </p>
           <p>
             Other than coding, I really love hiking, traveling and trying a
