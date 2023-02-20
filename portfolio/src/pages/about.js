@@ -49,7 +49,7 @@ function About() {
               {" "}
               <a
                 id="reactLink"
-                style={{ fontSize: "large", color: "skyblue" }}
+                style={{ fontSize: "large", color: "#6dffff" }}
                 target="_blank"
                 rel="noreferrer"
                 href="https://reactjs.org/"
@@ -62,7 +62,7 @@ function About() {
             a few of my companies' projects. I also work with frameworks such as
             <a
               id="reactLink"
-              style={{ fontSize: "large", color: "skyblue" }}
+              style={{ fontSize: "large", color: "#6dffff" }}
               target="_blank"
               rel="noreferrer"
               href="https://cakephp.org/"
@@ -73,7 +73,7 @@ function About() {
             and
             <a
               id="reactLink"
-              style={{ fontSize: "large" }}
+              style={{ fontSize: "large", color: "#6dffff" }}
               target="_blank"
               rel="noreferrer"
               href="https://fomantic-ui.com/"

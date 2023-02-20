@@ -30,8 +30,8 @@ function Home() {
           ></img>
 
           <div>
-            <button className="ui button huge inverted basic learnMore yellow circular">
-              <a href="about" style={{ color: "skyblue" }}>
+            <button className="ui button huge inverted basic learnMore teal circular">
+              <a href="about" style={{ color: "gold" }}>
                 Learn More{" "}
               </a>
             </button>
