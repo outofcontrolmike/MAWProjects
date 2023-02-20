@@ -13,7 +13,7 @@ import Footer from "../../../components/bmiCalc/Footer";
 
 //Main component for BMI Project
 export default function Bmi() {
-  document.title = "BMi Calculator";
+  document.title = "BMI Calculator";
 
   let bmr, multiplyer, genderNumber, calorieButton;
 

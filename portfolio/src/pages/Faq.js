@@ -1,6 +1,9 @@
 import Navigation from "../components/layout/Navigation";
+import { TabTitle } from "../utils/helperFunctions";
 
-function Contact() {
+function Faq() {
+
+  TabTitle("FAQ");
   return (
     <div
       id="faqsPage"
@@ -73,4 +76,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Faq;

@@ -1,7 +1,10 @@
 import Navigation from "../components/layout/Navigation";
 import picture from "../assets/img/codeIcon.png";
+import { TabTitle } from "../utils/helperFunctions";
 
 function Skills() {
+
+  TabTitle("Skills")
   return (
     <div
       className="ui row"

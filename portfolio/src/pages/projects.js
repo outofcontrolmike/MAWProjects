@@ -1,11 +1,12 @@
 import { event } from "jquery";
 import React from "react";
 import Navigation from "../components/layout/Navigation";
+import { TabTitle } from "../utils/helperFunctions";
 
 //Project's information to display
 function Projects(props) {
-  //ToDO: Should be able to do an async await and use resolve promise instead of timeout
 
+  TabTitle("Projects");
   //Fixes render issue - Function was mapping before the component rendered
   setTimeout(mapOver, 2);
 

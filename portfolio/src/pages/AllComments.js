@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import CommentList from "../components/comments/CommentList";
 import NewCommentForm from "../components/comments/NewCommentForm";
+import { TabTitle } from "../utils/helperFunctions";
 
 function AllCommentsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedComments, setLoadedComments] = useState([]);
 
+  TabTitle("Comments");
   let url = "https://comments-8cd7f-default-rtdb.firebaseio.com/Comments.json";
 
   useEffect(() => {

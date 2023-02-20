@@ -1,8 +1,11 @@
 import Navigation from "../components/layout/Navigation";
 import myPicture from "../assets/img/me.png";
+import { TabTitle } from "../utils/helperFunctions";
 
 //About section component
 function About() {
+  TabTitle("About")
+
   return (
     <div
       class="ui container fluid"

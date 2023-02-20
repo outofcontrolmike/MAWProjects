@@ -1,10 +1,12 @@
 import picture from "../assets/img/me.png";
+import { TabTitle } from "../utils/helperFunctions";
 //Landing page component
 function Home() {
   let height = window.innerHeight;
-  console.log("height", height);
 
+  TabTitle("Home");
   return (
+    
     <div
       style={{ height: { height } }}
       className="ui one column grid stackable padded"
@@ -40,6 +42,6 @@ function Home() {
       </div>
     </div>
   );
-}
-
+  
+    }
 export default Home;

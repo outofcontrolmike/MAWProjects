@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import { TabTitle } from "../utils/helperFunctions";
 
 //Thank you Page
 function Thanks(props) {
@@ -7,6 +8,8 @@ function Thanks(props) {
   function handleClick() {
     history.push("/");
   }
+
+  TabTitle("Thank You!");
 
   return (
     <div className="ui container fluid" id="thankYouContainer">
