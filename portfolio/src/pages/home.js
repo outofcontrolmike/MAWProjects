@@ -7,40 +7,36 @@ function Home() {
   return (
     <div
       style={{ height: { height } }}
-      className="ui two column grid stackable padded"
+      className="ui one column grid stackable padded"
       id="landingPage"
     >
       <div className="row">
-      <div className="ui column" style={{ backgroundColor: "black" }}>
+        {/* <div className="ui column" style={{ backgroundColor: "black" }}>
         <img
           className="ui image big centered rounded"
           style={{ marginTop: "6rem" }}
           alt={"Me"}
           src={picture}
         ></img>
-      </div>
-      <div
-        className="ui column"
-        style={{ alignSelf: "center", textAlign: "center" }}
-      >
-           <img
-          className="ui image big centered rounded"
-          
-          alt={"Business logo"}
-          src={"/img/logo.png"}
-        ></img>
+      </div> */}
+        <div
+          className="ui column"
+          style={{ alignSelf: "center", textAlign: "center" }}
+        >
+          <img
+            className="ui image big centered rounded"
+            alt={"Business logo"}
+            src={"/img/logo.png"}
+          ></img>
 
-        <div>
-          <button
-            className="ui button massive inverted basic learnMore yellow circular"
-            style={{ marginTop: "1rem" }}
-          >
-            <a href="about" style={{ color: "skyblue" }}>
-              Learn More{" "}
-            </a>
-          </button>
+          <div>
+            <button className="ui button huge inverted basic learnMore yellow circular">
+              <a href="about" style={{ color: "skyblue" }}>
+                Learn More{" "}
+              </a>
+            </button>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import Navigation from "../components/layout/Navigation";
-import myPicture from "../assets/img/think.png";
+import myPicture from "../assets/img/me.png";
 
 //About section component
 function About() {
@@ -11,7 +11,7 @@ function About() {
       <Navigation />
       <div
         className="ui two column doubling stackable grid relaxed"
-        style={{padding: "2rem"}}
+        style={{ padding: "2rem" }}
         id="about"
       >
         <div className="ui column" id="pictureContainer">
@@ -26,7 +26,7 @@ function About() {
           id="aboutMe"
           style={{ backgroundColor: "black" }}
         >
-          <span id="myName" className="ui text big" style={{color: ""}}>
+          <span id="myName" className="ui text big" style={{ color: "" }}>
             Mr. Michael Wilson
           </span>
           <br />
@@ -49,7 +49,7 @@ function About() {
               {" "}
               <a
                 id="reactLink"
-                style={{ fontSize: "large", color: "skyblue"}}
+                style={{ fontSize: "large", color: "skyblue" }}
                 target="_blank"
                 rel="noreferrer"
                 href="https://reactjs.org/"
@@ -62,7 +62,7 @@ function About() {
             a few of my companies' projects. I also work with frameworks such as
             <a
               id="reactLink"
-              style={{ fontSize: "large", color: "skyblue"}}
+              style={{ fontSize: "large", color: "skyblue" }}
               target="_blank"
               rel="noreferrer"
               href="https://cakephp.org/"
@@ -81,8 +81,7 @@ function About() {
               {" "}
               Fomantic CSS
             </a>
-            .
-            <span>Tail Wind CSS, Next Js, TypeScript.</span>
+            .<span>Tail Wind CSS, Next Js, TypeScript.</span>
           </p>
           <p>
             Other than coding, I really love hiking, traveling and trying a

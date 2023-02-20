@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import Contracts from "./pages/Contracts";
 import Resume from "./pages/Resume";
 import Faq from "./pages/Faq";
 import Thanks from "./pages/Thanks";
@@ -47,6 +48,9 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/contracts">
+          <Contracts />
         </Route>
         <Route path="/projects">
           <Projects />

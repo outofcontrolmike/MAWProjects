@@ -11,41 +11,12 @@ function Projects(props) {
 
   function mapOver() {
     document.getElementById("projectList").innerHTML = "";
-    document.getElementById("contractList").innerHTML= "";
     projects.reverse();
     projects.map(createProjectCard);
   }
 
   //Projects to map through
   let projects = [
-
-    //Contracts
-      {
-          isContract: true,
-          img: "img/clients/fisher.PNG",
-          href: "https://www.fisherprotectionservices.com",
-          name: "Fisher Protection Services",
-          meta: "Register.com's Website builder",
-          desc: "This is a project that I'm currently working on for a client. It's mostly an informative site for a Security Service Business.",
-          created: "Current",
-          lastUpdated: " Updated: Nov 18th 2021",
-          github: "null",
-        },
-        {
-          isContract: true,
-          img: "img/clients/ss&b.png",
-          href: "https://www.ssbhc.com",
-          name: "SS&B Heating & Cooling",
-          meta: "Next JS, Typescript, Sanity.IO Bootstrap",
-          desc:
-            "This is a client I've helped fix SEO Issues for and Consult for as well.  I Currently Contract for them.",
-          created: "Current",
-          lastUpdated: " Updated: Nov 18th 2021",
-          github: "null",
-
-        },
-
-        // End Contracts
     {
       img: "img/greatrace1.JPG",
       href: "/great_race",
@@ -275,12 +246,10 @@ function Projects(props) {
       lastUpdated: " Updated: June 26th 2022",
       github: "https://github.com/outofcontrolmike/Community_Recipes",
     },
-
   ];
 
   //Create Cards
   function createProjectCard(project) {
-
     let container = document.createElement("div");
     container.className = "card projectCard";
 
@@ -332,7 +301,6 @@ function Projects(props) {
     contentInfo.className = "right floated";
     contentInfo.innerHTML = project.lastUpdated;
 
-    
     let gitHub = document.createElement("span");
     let gitLink = document.createElement("a");
 
@@ -343,42 +311,22 @@ function Projects(props) {
 
     gitHub.append(gitLink);
 
-    console.log("project.github",project.github);
+    extraContent.append(contentInfo, gitHub);
 
-     gitLink.href !== "https://www.mwportfolio.online/null" ? extraContent.append(contentInfo, gitHub) :   extraContent.append(contentInfo);
-
-    
     container.append(imageContainer, content, extraContent);
 
-
-    { project.isContract == true ?  document.getElementById("contractList").append(container) :   document.getElementById('projectList').append(container);}
-   
+    document.getElementById("projectList").append(container);
   }
 
   return (
     <div className="" style={{ height: "100vh", backgroundColor: "black" }}>
       <Navigation />
 
-      {/* Contracts */}
-      <div className="ui text large centered" style={{color:"skyblue"}}>
-        <h1>Contract Work</h1>
-      </div>
-      <div className="ui very padded relaxed grid" id="projects">
-    <div
-      className="ui cards centered five medium horizontal link"
-      id="contractList"
-      style={{ marginLeft: "1rem", marginRight: "1rem" }}
-    ></div>
-  </div>
+      {/* Projects */}
 
-{/* Projects */}
-<div className="ui text large centered" style={{color:"skyblue", backgroundColor: "black"}} >
-        <h1>Projects</h1>
-      </div>
       <div className="ui very padded relaxed grid" id="projects">
-    
         <div
-          className="ui cards centered five medium horizontal link"
+          className="ui cards centered five large horizontal link"
           id="projectList"
           style={{ marginLeft: "1rem", marginRight: "1rem" }}
         ></div>
