@@ -70,16 +70,6 @@ function Navigation(props) {
             Comments
           </NavLink>
         </a> */}
-
-        <a className="item" id="mainNavigationItem">
-          <NavLink
-            activeClassName="portfolioSelected"
-            id="goldText"
-            to="/contracts"
-          >
-            Contracts
-          </NavLink>
-        </a>
         {/* <a className="item" id="mainNavigationItem">
           <NavLink activeClassName="portfolioSelected" id="goldText" to="/faq">
             FAQ
