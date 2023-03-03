@@ -16,7 +16,7 @@ function Projects() {
       meta: "React & Fomantic",
       desc:
         "A race between Yoshi and Mario. Who will win???" +
-        "<b> Fair warning</b>, this project is not supposed to be mobile friendly.",
+        " Fair warning, this project is not supposed to be mobile friendly.",
       created: "Created: Spring 2018",
       lastUpdated: " Updated: Nov 18th 2021",
       github:
