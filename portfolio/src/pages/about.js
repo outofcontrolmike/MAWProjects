@@ -4,7 +4,7 @@ import { TabTitle } from "../utils/helperFunctions";
 
 //About section component
 function About() {
-  TabTitle("About")
+  TabTitle("Home");
 
   return (
     <div

@@ -4,7 +4,7 @@ function Education() {
       <br></br>
 
       <div
-        className="ui container"
+        className="ui container very padded relaxed"
         id="resumeContainer"
         style={{
           fontSize: "medium",
@@ -71,8 +71,9 @@ function Education() {
             </p>
           </div>
         </div>
-        {/* --- end */}
       </div>
+      <br></br>
+      <br></br>
     </div>
   );
 }

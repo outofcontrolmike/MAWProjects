@@ -33,12 +33,12 @@ option {
 }
 
 #goldText:hover {
-  text-shadow: 0.5px 1px black;
-  font-weight: bolder;
+  color: white;
+  text-shadow: 0.5px 0.5px white;
 }
 
 .portfolioSelected {
-  border-bottom: black 4px solid;
+  border-bottom: black 2px solid;
 }
 
 /*Landing Page */
@@ -83,15 +83,14 @@ option {
 }
 
 #githubIcon:hover {
-  color: orange;
+  color: rgb(109, 255, 255);
 }
 
 #aboutAvatar {
   background-color: white;
 }
 #aboutAvatar:hover {
-  background-color: orange;
-  color: orange;
+  background-color: rgb(109, 255, 255);
 }
 
 .ui.menu .item img.logo {
@@ -101,12 +100,14 @@ option {
 
 .resumeList > span > i {
   color: gold;
-  font-size: 10em;
+
+  margin: 0.5rem;
 }
 
 .resumeList > a:hover,
 .resumeList > span > i:hover {
-  color: #f2711c;
+  color: whitesmoke;
+  text-shadow: 1px 1px white;
 }
 
 .learnMore:hover {
@@ -166,6 +167,10 @@ option {
   font-size: 2.5rem;
 }
 
+/* span.ui.text {
+  color: white;
+  text-shadow: 1px 1px white;
+} */
 #resumeSegment > h2 {
   color: orange;
   font-family: "Roboto Mono", monospace;
@@ -174,25 +179,22 @@ option {
   font-family: "Roboto Mono", monospace;
 }
 
-#resumeVisible {
-  background-color: black;
-  color: yellow;
-  align-self: center;
-  border: grey 2px solid;
-  border-style: outset;
-  padding: 30%;
-  font-family: "Roboto Mono", monospace;
-}
-
-.slideImage {
-  height: 200px;
-}
-
 #resumeSegment:hover,
 #faqSegment:hover {
   position: relative;
   border: orange 1px solid;
   padding: 1rem;
+}
+
+.mtaImage {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.mtaImage:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @keyframes resumeBlinker {
@@ -214,7 +216,8 @@ option {
 }
 #myName:hover,
 #reactLink:hover {
-  color: orange;
+  color: white;
+  text-shadow: 1px 1px skyblue;
 }
 
 #name:focus,
@@ -272,6 +275,7 @@ option {
 
 .projectImage {
   max-height: 180px;
+  object-fit: cover;
 }
 
 /************************************Comments Page ***********************************************/

@@ -4,25 +4,15 @@ import { NavLink } from "react-router-dom";
 function Navigation(props) {
   return (
     <div
-      className="ui menu secondary stackable seven item"
+      className="ui menu secondary stackable five item"
       id="portfolioNavigation"
     >
       <div className="ui container navContainer" id="navContainer">
         <a className="item" id="mainNavigationItem">
-          <NavLink id="goldText" to="/">
+          <NavLink activeClassName="portfolioSelected" id="goldText" to="/home">
             Home
           </NavLink>
         </a>
-        <a className="item" id="mainNavigationItem">
-          <NavLink
-            activeClassName="portfolioSelected"
-            id="goldText"
-            to="/about"
-          >
-            About
-          </NavLink>
-        </a>
-
         <a className="item" id="mainNavigationItem">
           <NavLink
             activeClassName="portfolioSelected"
@@ -32,6 +22,16 @@ function Navigation(props) {
             Skills
           </NavLink>
         </a>
+        <a className="item" id="mainNavigationItem">
+          <NavLink
+            activeClassName="portfolioSelected"
+            id="goldText"
+            to="/projects"
+          >
+            Projects
+          </NavLink>{" "}
+        </a>
+
         <a className="item" id="mainNavigationItem">
           <NavLink
             activeClassName="portfolioSelected"
@@ -50,15 +50,6 @@ function Navigation(props) {
           >
             Contact
           </NavLink>
-        </a>
-        <a className="item" id="mainNavigationItem">
-          <NavLink
-            activeClassName="portfolioSelected"
-            id="goldText"
-            to="/projects"
-          >
-            Projects
-          </NavLink>{" "}
         </a>
 
         {/* <a className="item" id="mainNavigationItem">

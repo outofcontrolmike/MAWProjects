@@ -6,21 +6,12 @@ function Home() {
 
   TabTitle("Home");
   return (
-    
     <div
       style={{ height: { height } }}
       className="ui one column grid stackable padded"
       id="landingPage"
     >
       <div className="row">
-        {/* <div className="ui column" style={{ backgroundColor: "black" }}>
-        <img
-          className="ui image big centered rounded"
-          style={{ marginTop: "6rem" }}
-          alt={"Me"}
-          src={picture}
-        ></img>
-      </div> */}
         <div
           className="ui column"
           style={{ alignSelf: "center", textAlign: "center" }}
@@ -42,6 +33,5 @@ function Home() {
       </div>
     </div>
   );
-  
-    }
+}
 export default Home;

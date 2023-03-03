@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 //Main Website imports
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Home from "./pages/Home";
+
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Faq from "./pages/Faq";
@@ -43,11 +43,14 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact={true}>
-          <Home />
-        </Route>
-        <Route path="/about">
           <About />
         </Route>
+        <Route path="/home" exact={true}>
+          <About />
+        </Route>
+        {/* <Route path="/about">
+          <About />
+        </Route> */}
         <Route path="/projects">
           <Projects />
         </Route>

@@ -1,4 +1,3 @@
-import { event } from "jquery";
 import React from "react";
 import Navigation from "../components/layout/Navigation";
 import { TabTitle } from "../utils/helperFunctions";
@@ -234,10 +233,31 @@ function Projects() {
       href: "https://github.com/outofcontrolmike/Community_Recipes",
       name: "Community Recipes",
       meta: "Cake PHP, Fomantic, Google Fonts",
-      desc: "This project is still in BETA but is totally useable if you can run a cake php project on your local machine.  This project is a CMS based on Recipes and Users.",
-      created: "Work in Progress since 2022",
+      desc: "This project is deprecated and was my first attempt deploying a PHP project to a web server. You're welcome to check out repo, since it's useable if you can run a cake php project on your local machine.  This project is a CMS based on Recipes and Users.",
+      created: "Created in Progress since 2022",
       lastUpdated: " Updated: June 26th 2022",
       github: "https://github.com/outofcontrolmike/Community_Recipes",
+    },
+
+    {
+      img: "img/recipes_next.jpg",
+      href: "https://mawrecipes.netlify.app",
+      name: "MAW Recipes",
+      meta: "Next JS, Typescript, Sanity.IO, Tailwind",
+      desc: "MAW Recipes is my first project that I've built using a headless CMS and is currently in the works.  It's a website that offers users the abillity to view recipes by categories, sub categories and view chef profiles. Eventually there will be a request form users can fill out, if they want to submit a recipe to the website.",
+      created: "Work in Progress since February 1st 2023",
+      lastUpdated: " N/A",
+      github: "https://github.com/outofcontrolmike/recipes-nextjs",
+    },
+
+    {
+      img: "img/business.jpg",
+      href: "https://mawwebservices.netlify.app",
+      name: "MAW Web Services LLC",
+      meta: "React JS, Fomantic UI",
+      desc: "This is my actual business website. If you're needing someone to help you, but not as a full time job of course, please feel free to checkout this project.",
+      lastUpdated: "03/03/2023",
+      github: "https://github.com/outofcontrolmike/mawwebservices",
     },
   ];
 
