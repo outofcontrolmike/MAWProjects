@@ -2,7 +2,7 @@ import { TabTitle } from "../utils/helperFunctions";
 
 //Contact form , uses a emailer package to send emails - formsubmit
 export default function Contact() {
-  TabTitle("Contact")
+  TabTitle("Contact");
   return (
     <div
       className="ui"
@@ -73,7 +73,7 @@ export default function Contact() {
                 className="ui fluid dropdown"
                 style={{ color: "gold" }}
               >
-                <option style={{ color: "grey" }} default value="">
+                <option default disabled style={{ color: "grey" }} selected>
                   Category
                 </option>
                 <option style={{ color: "white" }}>General</option>
