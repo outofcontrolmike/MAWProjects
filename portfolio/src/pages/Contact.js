@@ -21,7 +21,7 @@ export default function Contact() {
         <p id="contactHeader" style={{ textAlign: "center", color: "gold" }}>
           <span
             className="ui text gold center aligned"
-            style={{ fontSize: "xxx-large" }}
+            style={{ fontSize: "3rem" }}
           >
             Get In Touch
           </span>
