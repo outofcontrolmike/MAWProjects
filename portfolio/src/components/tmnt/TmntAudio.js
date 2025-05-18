@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import AudioPlayer from "react-audio-element";
 
 //Audio Component
 export default class TmntAudio extends Component {
@@ -15,11 +14,11 @@ export default class TmntAudio extends Component {
           id="audio"
           style={{ display: "none" }}
         ></iframe>
-        <AudioPlayer
+        {/* <AudioPlayer
           id="tmntAudio"
           src="img/tmnt/TMNT4Select.mp3"
           colors={{ sliderTrack: "black", slider: "green", timestamps: "red" }}
-        />
+        /> */}
       </div>
     );
   }
